@@ -1,0 +1,102 @@
+{
+  "license": "Original procedural geometry, CC0 dedication. No external geometry/photo textures.",
+  "axes": "Blender X forward,Y left,Z up; GLB X forward,Y up,-Z left.",
+  "assets": {
+    "HighlandShadeTree": {
+      "file": "HighlandShadeTree.glb",
+      "triangles": 1128,
+      "draws": 2,
+      "bytes": 28136,
+      "bounds_blender": {
+        "min": [
+          -4.857903480529785,
+          -4.582431793212891,
+          -0.005244962405413389
+        ],
+        "max": [
+          4.917470932006836,
+          4.858595371246338,
+          11.449999809265137
+        ]
+      },
+      "description": "Original tall shade tree for tea estates, branching trunk and irregular umbrella crowns.",
+      "collision_boxes_blender": [
+        {
+          "center_blender": [
+            0,
+            0,
+            4.9
+          ],
+          "size_blender": [
+            0.6,
+            0.6,
+            9.8
+          ],
+          "kind": "tree_trunk"
+        }
+      ],
+      "sha256": "d296a0d3bbee7882d416692cfddb16db8d5358b678ad1273aaf865ba5547d887"
+    },
+    "HighlandGateway": {
+      "file": "HighlandGateway.glb",
+      "triangles": 952,
+      "draws": 3,
+      "bytes": 44588,
+      "bounds_blender": {
+        "min": [
+          -0.19800008833408356,
+          -6.449999809265137,
+          0.0
+        ],
+        "max": [
+          0.1599999964237213,
+          6.449999809265137,
+          7.400000095367432
+        ]
+      },
+      "description": "Original unbranded highway exit gantry, front faces local -X.",
+      "collision_boxes_blender": [
+        {
+          "center_blender": [
+            0,
+            -6.3,
+            3.7
+          ],
+          "size_blender": [
+            0.3,
+            0.3,
+            7.4
+          ],
+          "kind": "sign_post"
+        },
+        {
+          "center_blender": [
+            0,
+            6.3,
+            3.7
+          ],
+          "size_blender": [
+            0.3,
+            0.3,
+            7.4
+          ],
+          "kind": "sign_post"
+        },
+        {
+          "center_blender": [
+            0,
+            0,
+            6.2
+          ],
+          "size_blender": [
+            0.32,
+            11.8,
+            1.55
+          ],
+          "kind": "sign_board"
+        }
+      ],
+      "sha256": "ae28c1b8aa25caa114394f1521b233137b3e93db6a8d669fcd9b810d45d6727b"
+    }
+  }
+}

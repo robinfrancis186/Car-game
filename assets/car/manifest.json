@@ -1,0 +1,3344 @@
+{
+  "asset": "Original 2017 Roadster-inspired fan concept",
+  "unit": "meter",
+  "forward": "+X",
+  "left": "+Y",
+  "up": "+Z",
+  "created_with": "Blender 4.3.2",
+  "license": "Original geometry and procedural materials supplied for this project. Tesla trademarks/design rights remain with their owners; no endorsement.",
+  "visual_revision": "user-red-reference-2",
+  "police_lightbar_mount_height_m": 1.232,
+  "fictional_rear_fx_sockets_blender_m": [
+    [
+      -2.3,
+      -0.56,
+      0.415
+    ],
+    [
+      -2.3,
+      0.56,
+      0.415
+    ]
+  ],
+  "visual_reference": "User-supplied red Roadster photograph: triangular projector lamps, pronounced front haunches, concave flanks. Original approximation, not a scan.",
+  "production_claims": "Not Tesla CAD or an engineering model. Thrusters are fictional gameplay hardware.",
+  "fbx_export": {
+    "axis_forward": "X",
+    "axis_up": "Z",
+    "apply_unit_scale": true,
+    "body_origin_m": [
+      0,
+      0,
+      0
+    ],
+    "wheel_exports_centered": true
+  },
+  "wheel_radius_m": 0.366,
+  "wheelbase_m": 2.7,
+  "wheel_centers": {
+    "Front_Left": [
+      1.35,
+      0.924,
+      0.368
+    ],
+    "Front_Right": [
+      1.35,
+      -0.924,
+      0.368
+    ],
+    "Rear_Left": [
+      -1.35,
+      0.924,
+      0.368
+    ],
+    "Rear_Right": [
+      -1.35,
+      -0.924,
+      0.368
+    ]
+  },
+  "wheel_controls": {
+    "steer_axis": "local Z",
+    "spin_axis": "local Y",
+    "steer_names": [
+      "Steer_Front_Left",
+      "Steer_Front_Right",
+      "Steer_Rear_Left",
+      "Steer_Rear_Right"
+    ],
+    "spin_names": [
+      "Spin_Front_Left",
+      "Spin_Front_Right",
+      "Spin_Rear_Left",
+      "Spin_Rear_Right"
+    ]
+  },
+  "objects": [
+    {
+      "name": "A_Pillar_-1",
+      "vertices": 26,
+      "polygons": 12,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "A_Pillar_1",
+      "vertices": 26,
+      "polygons": 12,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Body_SculptedShell",
+      "vertices": 11021,
+      "polygons": 10555,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Brake_Caliper_Front_Left",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Steer_Front_Left"
+    },
+    {
+      "name": "Brake_Caliper_Front_Right",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Steer_Front_Right"
+    },
+    {
+      "name": "Brake_Caliper_Rear_Left",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Steer_Rear_Left"
+    },
+    {
+      "name": "Brake_Caliper_Rear_Right",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Steer_Rear_Right"
+    },
+    {
+      "name": "Brake_Rotor_Front_Left",
+      "vertices": 1588,
+      "polygons": 934,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Brake_Rotor_Front_Right",
+      "vertices": 1588,
+      "polygons": 934,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Brake_Rotor_Rear_Left",
+      "vertices": 1588,
+      "polygons": 934,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Brake_Rotor_Rear_Right",
+      "vertices": 1588,
+      "polygons": 934,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Carbon_SideSill_-1",
+      "vertices": 390,
+      "polygons": 376,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Carbon_SideSill_1",
+      "vertices": 390,
+      "polygons": 376,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Center_Cap_Front_Left",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Center_Cap_Front_Right",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Center_Cap_Rear_Left",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Center_Cap_Rear_Right",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Center_Console",
+      "vertices": 257,
+      "polygons": 182,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Center_Hub_Front_Left",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Center_Hub_Front_Right",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Center_Hub_Rear_Left",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Center_Hub_Rear_Right",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Cockpit_Floor",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_Face",
+      "vertices": 102,
+      "polygons": 80,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_Seam",
+      "vertices": 1950,
+      "polygons": 1936,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_Top",
+      "vertices": 153,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_Vent_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_Vent_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_VentFin_-1_0",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_VentFin_-1_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_VentFin_-1_2",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_VentFin_-1_3",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_VentFin_1_0",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_VentFin_1_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_VentFin_1_2",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Dashboard_VentFin_1_3",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Diffuser_Fin_-0.32",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Diffuser_Fin_-0.61",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Diffuser_Fin_0",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Diffuser_Fin_0.32",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Diffuser_Fin_0.61",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Cluster_Face",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Cluster_Housing",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Grid_StreetH_0",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Grid_StreetH_1",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Grid_StreetH_2",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Grid_StreetH_3",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Grid_StreetV_0",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Grid_StreetV_1",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Grid_StreetV_2",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Grid_StreetV_3",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Main_Face",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Main_Housing",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Map_Position",
+      "vertices": 3,
+      "polygons": 1,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Map_Route",
+      "vertices": 510,
+      "polygons": 496,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Text_Charge",
+      "vertices": 720,
+      "polygons": 532,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Text_Map_ETA",
+      "vertices": 1308,
+      "polygons": 953,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Text_Map_Title",
+      "vertices": 1244,
+      "polygons": 905,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Text_Ready",
+      "vertices": 412,
+      "polygons": 301,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Text_Speed",
+      "vertices": 480,
+      "polygons": 360,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Display_Text_Units",
+      "vertices": 376,
+      "polygons": 262,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Door_Seam_-1",
+      "vertices": 630,
+      "polygons": 616,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Door_Seam_1",
+      "vertices": 630,
+      "polygons": 616,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "FICTIONAL_Thruster_Aperture_-1",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "FICTIONAL_Thruster_Aperture_1",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "FICTIONAL_Thruster_Dark_Core_-1",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "FICTIONAL_Thruster_Dark_Core_1",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "FICTIONAL_Thruster_Outer_-1",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "FICTIONAL_Thruster_Outer_1",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Flush_Door_Handle_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Flush_Door_Handle_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Forged_Spoke_Front_Left_0_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Forged_Spoke_Front_Left_0_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Forged_Spoke_Front_Left_1_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Forged_Spoke_Front_Left_1_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Forged_Spoke_Front_Left_2_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Forged_Spoke_Front_Left_2_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Forged_Spoke_Front_Left_3_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Forged_Spoke_Front_Left_3_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Forged_Spoke_Front_Left_4_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Forged_Spoke_Front_Left_4_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Forged_Spoke_Front_Right_0_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Forged_Spoke_Front_Right_0_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Forged_Spoke_Front_Right_1_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Forged_Spoke_Front_Right_1_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Forged_Spoke_Front_Right_2_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Forged_Spoke_Front_Right_2_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Forged_Spoke_Front_Right_3_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Forged_Spoke_Front_Right_3_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Forged_Spoke_Front_Right_4_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Forged_Spoke_Front_Right_4_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Left_0_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Left_0_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Left_1_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Left_1_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Left_2_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Left_2_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Left_3_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Left_3_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Left_4_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Left_4_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Right_0_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Right_0_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Right_1_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Right_1_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Right_2_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Right_2_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Right_3_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Right_3_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Right_4_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Forged_Spoke_Rear_Right_4_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Front_Corner_Intake_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Front_Corner_Intake_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Front_Haunch_Vent_-1",
+      "vertices": 3,
+      "polygons": 1,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Front_Haunch_Vent_1",
+      "vertices": 3,
+      "polygons": 1,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Front_Lower_Intake",
+      "vertices": 66,
+      "polygons": 32,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Front_Splitter",
+      "vertices": 6,
+      "polygons": 2,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Glass_Rear",
+      "vertices": 325,
+      "polygons": 288,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Glass_Side_-1",
+      "vertices": 225,
+      "polygons": 192,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Glass_Side_1",
+      "vertices": 225,
+      "polygons": 192,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Glass_Targa_Roof",
+      "vertices": 525,
+      "polygons": 480,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Glass_Windshield",
+      "vertices": 425,
+      "polygons": 384,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Headlamp_Inset_-1",
+      "vertices": 91,
+      "polygons": 144,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Headlamp_Inset_1",
+      "vertices": 91,
+      "polygons": 144,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Hood_Shutline_-1",
+      "vertices": 390,
+      "polygons": 376,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Hood_Shutline_1",
+      "vertices": 390,
+      "polygons": 376,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Intake_Fin_-1_0",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Intake_Fin_-1_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Intake_Fin_-1_2",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Intake_Fin_1_0",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Intake_Fin_1_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Intake_Fin_1_2",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Interior_Cup_Rim_-0.12",
+      "vertices": 384,
+      "polygons": 384,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Interior_Cup_Rim_-0.33",
+      "vertices": 384,
+      "polygons": 384,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Interior_Door_Card_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Interior_Door_Card_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Interior_Door_Pull_-1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Interior_Door_Pull_1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "LampSignature_-1",
+      "vertices": 390,
+      "polygons": 376,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "LampSignature_1",
+      "vertices": 390,
+      "polygons": 376,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Lug_Front_Left_0",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Lug_Front_Left_1",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Lug_Front_Left_2",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Lug_Front_Left_3",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Lug_Front_Left_4",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Lug_Front_Right_0",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Lug_Front_Right_1",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Lug_Front_Right_2",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Lug_Front_Right_3",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Lug_Front_Right_4",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Lug_Rear_Left_0",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Lug_Rear_Left_1",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Lug_Rear_Left_2",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Lug_Rear_Left_3",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Lug_Rear_Left_4",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Lug_Rear_Right_0",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Lug_Rear_Right_1",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Lug_Rear_Right_2",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Lug_Rear_Right_3",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Lug_Rear_Right_4",
+      "vertices": 24,
+      "polygons": 14,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Mirror_Glass_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Mirror_Glass_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Mirror_Housing_-1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Mirror_Housing_1",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Mirror_Stalk_-1",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Mirror_Stalk_1",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Projector_LED_-1_0",
+      "vertices": 114,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Projector_LED_-1_1",
+      "vertices": 114,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Projector_LED_-1_2",
+      "vertices": 114,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Projector_LED_1_0",
+      "vertices": 114,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Projector_LED_1_1",
+      "vertices": 114,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Projector_LED_1_2",
+      "vertices": 114,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Rear_Buttress_-1",
+      "vertices": 26,
+      "polygons": 12,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Rear_Buttress_1",
+      "vertices": 26,
+      "polygons": 12,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Rear_Deck_Seam_-1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Rear_Deck_Seam_1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Rear_Deck_Spoiler",
+      "vertices": 6,
+      "polygons": 2,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Rear_Diffuser",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Rim_Inner_Lip_Front_Left",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Rim_Inner_Lip_Front_Right",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Rim_Inner_Lip_Rear_Left",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Rim_Inner_Lip_Rear_Right",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Rim_Outer_Lip_Front_Left",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Rim_Outer_Lip_Front_Right",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Rim_Outer_Lip_Rear_Left",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Rim_Outer_Lip_Rear_Right",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Roof_Rail_-1",
+      "vertices": 2910,
+      "polygons": 2896,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Roof_Rail_1",
+      "vertices": 2910,
+      "polygons": 2896,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_BackPad_-1",
+      "vertices": 1312,
+      "polygons": 1248,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_BackPad_1",
+      "vertices": 1312,
+      "polygons": 1248,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_BackShell_-1",
+      "vertices": 1536,
+      "polygons": 1480,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_BackShell_1",
+      "vertices": 1536,
+      "polygons": 1480,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_BasePad_-1",
+      "vertices": 357,
+      "polygons": 320,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_BasePad_1",
+      "vertices": 357,
+      "polygons": 320,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_BaseShell_-1",
+      "vertices": 441,
+      "polygons": 400,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_BaseShell_1",
+      "vertices": 441,
+      "polygons": 400,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_ShoulderBolster_-1_-1",
+      "vertices": 225,
+      "polygons": 192,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_ShoulderBolster_-1_1",
+      "vertices": 225,
+      "polygons": 192,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_ShoulderBolster_1_-1",
+      "vertices": 225,
+      "polygons": 192,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_ShoulderBolster_1_1",
+      "vertices": 225,
+      "polygons": 192,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_Stitch_Back_-1_-1",
+      "vertices": 2190,
+      "polygons": 2176,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_Stitch_Back_-1_1",
+      "vertices": 2190,
+      "polygons": 2176,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_Stitch_Back_1_-1",
+      "vertices": 2190,
+      "polygons": 2176,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_Stitch_Back_1_1",
+      "vertices": 2190,
+      "polygons": 2176,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_Stitch_Base_-1_-1",
+      "vertices": 1710,
+      "polygons": 1696,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_Stitch_Base_-1_1",
+      "vertices": 1710,
+      "polygons": 1696,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_Stitch_Base_1_-1",
+      "vertices": 1710,
+      "polygons": 1696,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_Stitch_Base_1_1",
+      "vertices": 1710,
+      "polygons": 1696,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_ThighBolster_-1_-1",
+      "vertices": 153,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_ThighBolster_-1_1",
+      "vertices": 153,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_ThighBolster_1_-1",
+      "vertices": 153,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Seat_ThighBolster_1_1",
+      "vertices": 153,
+      "polygons": 128,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Sidewall_Ring_Front_Left",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Sidewall_Ring_Front_Right",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Sidewall_Ring_Rear_Left",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Sidewall_Ring_Rear_Right",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Steering_Column",
+      "vertices": 128,
+      "polygons": 66,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Steering_Hub",
+      "vertices": 8,
+      "polygons": 6,
+      "parent": "Interior_Steering_Pivot"
+    },
+    {
+      "name": "Steering_Lower_Spoke",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "Interior_Steering_Pivot"
+    },
+    {
+      "name": "Steering_Spoke_-1",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "Interior_Steering_Pivot"
+    },
+    {
+      "name": "Steering_Spoke_1",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "Interior_Steering_Pivot"
+    },
+    {
+      "name": "Steering_Wheel_RHD",
+      "vertices": 768,
+      "polygons": 768,
+      "parent": "Interior_Steering_Pivot"
+    },
+    {
+      "name": "Tail_Light_Housing",
+      "vertices": 510,
+      "polygons": 496,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Tail_Light_LED",
+      "vertices": 510,
+      "polygons": 496,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Tail_Light_Sweep_-1",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Tail_Light_Sweep_1",
+      "vertices": 150,
+      "polygons": 136,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Tire_Front_Left",
+      "vertices": 1056,
+      "polygons": 960,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Front_Right",
+      "vertices": 1056,
+      "polygons": 960,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Rear_Left",
+      "vertices": 1056,
+      "polygons": 960,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Rear_Right",
+      "vertices": 1056,
+      "polygons": 960,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_0",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_10",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_11",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_12",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_13",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_14",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_15",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_16",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_17",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_18",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_19",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_2",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_20",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_21",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_22",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_23",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_24",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_25",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_26",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_27",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_28",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_29",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_3",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_30",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_31",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_4",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_5",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_6",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_7",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_8",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_-1_9",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_0",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_10",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_11",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_12",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_13",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_14",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_15",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_16",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_17",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_18",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_19",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_2",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_20",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_21",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_22",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_23",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_24",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_25",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_26",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_27",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_28",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_29",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_3",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_30",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_31",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_4",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_5",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_6",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_7",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_8",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Left_1_9",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_0",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_10",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_11",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_12",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_13",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_14",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_15",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_16",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_17",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_18",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_19",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_2",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_20",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_21",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_22",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_23",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_24",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_25",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_26",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_27",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_28",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_29",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_3",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_30",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_31",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_4",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_5",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_6",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_7",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_8",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_-1_9",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_0",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_10",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_11",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_12",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_13",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_14",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_15",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_16",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_17",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_18",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_19",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_2",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_20",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_21",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_22",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_23",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_24",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_25",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_26",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_27",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_28",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_29",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_3",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_30",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_31",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_4",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_5",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_6",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_7",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_8",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Front_Right_1_9",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_0",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_10",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_11",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_12",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_13",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_14",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_15",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_16",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_17",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_18",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_19",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_2",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_20",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_21",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_22",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_23",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_24",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_25",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_26",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_27",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_28",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_29",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_3",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_30",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_31",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_4",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_5",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_6",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_7",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_8",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_-1_9",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_0",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_10",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_11",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_12",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_13",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_14",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_15",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_16",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_17",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_18",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_19",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_2",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_20",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_21",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_22",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_23",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_24",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_25",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_26",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_27",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_28",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_29",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_3",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_30",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_31",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_4",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_5",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_6",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_7",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_8",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Left_1_9",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_0",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_10",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_11",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_12",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_13",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_14",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_15",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_16",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_17",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_18",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_19",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_2",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_20",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_21",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_22",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_23",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_24",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_25",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_26",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_27",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_28",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_29",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_3",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_30",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_31",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_4",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_5",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_6",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_7",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_8",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_-1_9",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_0",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_1",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_10",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_11",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_12",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_13",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_14",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_15",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_16",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_17",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_18",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_19",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_2",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_20",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_21",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_22",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_23",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_24",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_25",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_26",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_27",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_28",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_29",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_3",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_30",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_31",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_4",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_5",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_6",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_7",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_8",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tire_Sipe_Rear_Right_1_9",
+      "vertices": 270,
+      "polygons": 256,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tread_Groove_Front_Left_-0.074",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tread_Groove_Front_Left_0",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tread_Groove_Front_Left_0.074",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Tread_Groove_Front_Right_-0.074",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tread_Groove_Front_Right_0",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tread_Groove_Front_Right_0.074",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Tread_Groove_Rear_Left_-0.074",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tread_Groove_Rear_Left_0",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tread_Groove_Rear_Left_0.074",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Tread_Groove_Rear_Right_-0.074",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tread_Groove_Rear_Right_0",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Tread_Groove_Rear_Right_0.074",
+      "vertices": 1120,
+      "polygons": 1120,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Undertray",
+      "vertices": 192,
+      "polygons": 146,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Wheel_Barrel_Front_Left",
+      "vertices": 128,
+      "polygons": 64,
+      "parent": "Spin_Front_Left"
+    },
+    {
+      "name": "Wheel_Barrel_Front_Right",
+      "vertices": 128,
+      "polygons": 64,
+      "parent": "Spin_Front_Right"
+    },
+    {
+      "name": "Wheel_Barrel_Rear_Left",
+      "vertices": 128,
+      "polygons": 64,
+      "parent": "Spin_Rear_Left"
+    },
+    {
+      "name": "Wheel_Barrel_Rear_Right",
+      "vertices": 128,
+      "polygons": 64,
+      "parent": "Spin_Rear_Right"
+    },
+    {
+      "name": "Window_Front_Seal_-1",
+      "vertices": 1470,
+      "polygons": 1456,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Window_Front_Seal_1",
+      "vertices": 1470,
+      "polygons": 1456,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Window_Lower_Belt_-1",
+      "vertices": 2910,
+      "polygons": 2896,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Window_Lower_Belt_1",
+      "vertices": 2910,
+      "polygons": 2896,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Window_Rear_Seal_-1",
+      "vertices": 1470,
+      "polygons": 1456,
+      "parent": "CAR_ROOT"
+    },
+    {
+      "name": "Window_Rear_Seal_1",
+      "vertices": 1470,
+      "polygons": 1456,
+      "parent": "CAR_ROOT"
+    }
+  ],
+  "materials": [
+    {
+      "name": "Brake caliper red",
+      "base_color": [
+        0.6000000238418579,
+        0.012000000104308128,
+        0.00800000037997961,
+        1.0
+      ],
+      "metallic": 0.4000000059604645,
+      "roughness": 0.30000001192092896,
+      "transmission": 0.0,
+      "emission_strength": 0.0
+    },
+    {
+      "name": "Carbon ceramic rotor",
+      "base_color": [
+        0.14000000059604645,
+        0.14499999582767487,
+        0.15000000596046448,
+        1.0
+      ],
+      "metallic": 0.6499999761581421,
+      "roughness": 0.5,
+      "transmission": 0.0,
+      "emission_strength": 0.0
+    },
+    {
+      "name": "Carbon satin",
+      "base_color": [
+        0.012000000104308128,
+        0.014999999664723873,
+        0.01899999938905239,
+        1.0
+      ],
+      "metallic": 0.36000001430511475,
+      "roughness": 0.30000001192092896,
+      "transmission": 0.0,
+      "emission_strength": 0.0
+    },
+    {
+      "name": "Cockpit black display",
+      "base_color": [
+        0.012000000104308128,
+        0.02800000086426735,
+        0.03799999877810478,
+        1.0
+      ],
+      "metallic": 0.30000001192092896,
+      "roughness": 0.18000000715255737,
+      "transmission": 0.0,
+      "emission_strength": 0.4000000059604645
+    },
+    {
+      "name": "Crimson multi-coat | original fan concept",
+      "base_color": [
+        0.41999998688697815,
+        0.00800000037997961,
+        0.01899999938905239,
+        1.0
+      ],
+      "metallic": 0.699999988079071,
+      "roughness": 0.2199999988079071,
+      "transmission": 0.0,
+      "emission_strength": 0.0
+    },
+    {
+      "name": "Diamond cut rim edges",
+      "base_color": [
+        0.6200000047683716,
+        0.6700000166893005,
+        0.7200000286102295,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.1899999976158142,
+      "transmission": 0.0,
+      "emission_strength": 0.0
+    },
+    {
+      "name": "Display cyan",
+      "base_color": [
+        0.05999999865889549,
+        0.5799999833106995,
+        0.75,
+        1.0
+      ],
+      "metallic": 0.25,
+      "roughness": 0.25,
+      "transmission": 0.0,
+      "emission_strength": 2.0
+    },
+    {
+      "name": "Graphite leather",
+      "base_color": [
+        0.03500000014901161,
+        0.03999999910593033,
+        0.04699999839067459,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6200000047683716,
+      "transmission": 0.0,
+      "emission_strength": 0.0
+    },
+    {
+      "name": "Instrument soft white",
+      "base_color": [
+        0.550000011920929,
+        0.7200000286102295,
+        0.7799999713897705,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "transmission": 0.0,
+      "emission_strength": 0.800000011920929
+    },
+    {
+      "name": "LED ice white",
+      "base_color": [
+        0.699999988079071,
+        0.9100000262260437,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.25,
+      "roughness": 0.17000000178813934,
+      "transmission": 0.0,
+      "emission_strength": 5.0
+    },
+    {
+      "name": "LED ruby red",
+      "base_color": [
+        0.800000011920929,
+        0.007000000216066837,
+        0.017999999225139618,
+        1.0
+      ],
+      "metallic": 0.15000000596046448,
+      "roughness": 0.18000000715255737,
+      "transmission": 0.0,
+      "emission_strength": 4.0
+    },
+    {
+      "name": "Machined graphite aluminum",
+      "base_color": [
+        0.1599999964237213,
+        0.1899999976158142,
+        0.2199999988079071,
+        1.0
+      ],
+      "metallic": 0.9200000166893005,
+      "roughness": 0.1899999976158142,
+      "transmission": 0.0,
+      "emission_strength": 0.0
+    },
+    {
+      "name": "Seat center microsuede",
+      "base_color": [
+        0.01899999938905239,
+        0.02199999988079071,
+        0.026000000536441803,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8799999952316284,
+      "transmission": 0.0,
+      "emission_strength": 0.0
+    },
+    {
+      "name": "Smoked panoramic glass",
+      "base_color": [
+        0.008999999612569809,
+        0.017000000923871994,
+        0.019999999552965164,
+        1.0
+      ],
+      "metallic": 0.10000000149011612,
+      "roughness": 0.11999999731779099,
+      "transmission": 0.2800000011920929,
+      "emission_strength": 0.0
+    },
+    {
+      "name": "Tire rubber",
+      "base_color": [
+        0.010999999940395355,
+        0.014000000432133675,
+        0.017999999225139618,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.699999988079071,
+      "transmission": 0.0,
+      "emission_strength": 0.0
+    },
+    {
+      "name": "Warm contrast stitching",
+      "base_color": [
+        0.3799999952316284,
+        0.3700000047683716,
+        0.3400000035762787,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.7200000286102295,
+      "transmission": 0.0,
+      "emission_strength": 0.0
+    }
+  ],
+  "mesh_count": 509,
+  "polygon_count": 171677
+}

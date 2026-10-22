@@ -1,0 +1,327 @@
+{
+  "generator": "blender/build_transit_infrastructure.py",
+  "blender": "4.3.2",
+  "license": "Original procedural geometry, CC0 dedication; no third-party model/texture data. Architectural cues from official sources in research/KERALA_INFRASTRUCTURE_REFERENCES.md. Generic names, no affiliation.",
+  "axes": "Source Blender X forward,Y left,Z up. GLB X forward,Y up,-Z left; root transforms identity.",
+  "assets": {
+    "MetroViaductSpan": {
+      "file": "MetroViaductSpan.glb",
+      "triangles": 624,
+      "materials": 4,
+      "bytes": 39728,
+      "bounds_blender": {
+        "min": [
+          -12.5,
+          -2.700000047683716,
+          -13.039999961853027
+        ],
+        "max": [
+          12.5,
+          2.700000047683716,
+          0.6899999976158142
+        ]
+      },
+      "pivot": "rail-contact center; local Z=0",
+      "description": "25 m original single-track urban viaduct; rail-contact pivot; pier foot at world -0.04 m when placed at rail height 13 m.",
+      "collision_boxes_blender": [
+        {
+          "center_blender": [
+            0,
+            0,
+            -7.14
+          ],
+          "size_blender": [
+            1.6,
+            1.9,
+            11.8
+          ],
+          "kind": "metro_pier"
+        },
+        {
+          "center_blender": [
+            0,
+            0,
+            -1.25
+          ],
+          "size_blender": [
+            3.3,
+            5.4,
+            0.9
+          ],
+          "kind": "metro_pier_cap"
+        },
+        {
+          "center_blender": [
+            0,
+            0,
+            -0.65
+          ],
+          "size_blender": [
+            25,
+            5.4,
+            1.0
+          ],
+          "kind": "metro_deck"
+        }
+      ],
+      "sha256": "e926f137d5f9f7442bdd75672a5827714b737aa3ba846195bec2787156eee517"
+    },
+    "MetroStation": {
+      "file": "MetroStation.glb",
+      "triangles": 6028,
+      "materials": 5,
+      "bytes": 316972,
+      "bounds_blender": {
+        "min": [
+          -43.13999938964844,
+          -4.690000057220459,
+          -13.013333320617676
+        ],
+        "max": [
+          52.099998474121094,
+          10.6899995803833,
+          8.039885520935059
+        ]
+      },
+      "pivot": "rail-contact center; local Z=0",
+      "description": "Original elevated Kerala-inspired station: ivory panels, teal fascia, covered platform, full-height piers and switchback stair. No official logos.",
+      "collision_boxes_blender": [
+        {
+          "center_blender": [
+            -29,
+            5.1,
+            -6.3
+          ],
+          "size_blender": [
+            1.5,
+            1.6,
+            13.4
+          ],
+          "kind": "station_pier"
+        },
+        {
+          "center_blender": [
+            -10,
+            5.1,
+            -6.3
+          ],
+          "size_blender": [
+            1.5,
+            1.6,
+            13.4
+          ],
+          "kind": "station_pier"
+        },
+        {
+          "center_blender": [
+            10,
+            5.1,
+            -6.3
+          ],
+          "size_blender": [
+            1.5,
+            1.6,
+            13.4
+          ],
+          "kind": "station_pier"
+        },
+        {
+          "center_blender": [
+            29,
+            5.1,
+            -6.3
+          ],
+          "size_blender": [
+            1.5,
+            1.6,
+            13.4
+          ],
+          "kind": "station_pier"
+        },
+        {
+          "center_blender": [
+            0,
+            4.8,
+            0.5
+          ],
+          "size_blender": [
+            84,
+            6.5,
+            1.0
+          ],
+          "kind": "station_platform"
+        },
+        {
+          "center_blender": [
+            48,
+            5.4,
+            -6
+          ],
+          "size_blender": [
+            8.8,
+            6.0,
+            14
+          ],
+          "kind": "station_staircase"
+        },
+        {
+          "center_blender": [
+            0,
+            3.0,
+            7.1
+          ],
+          "size_blender": [
+            86,
+            15.2,
+            1.6
+          ],
+          "kind": "station_roof"
+        }
+      ],
+      "sha256": "bbfaf1e07ef93750ee8e2264294b900cd262b7b977d2a318931625d81698cf45"
+    },
+    "WaterTransitTerminal": {
+      "file": "WaterTransitTerminal.glb",
+      "triangles": 2557,
+      "materials": 5,
+      "bytes": 143584,
+      "bounds_blender": {
+        "min": [
+          -24.0,
+          -13.069999694824219,
+          -1.5
+        ],
+        "max": [
+          24.0,
+          26.5,
+          7.350737571716309
+        ]
+      },
+      "pivot": "shore-side ground origin; shoreline should cross local Y=+8m",
+      "description": "Original low Kerala waterfront transit terminal, pitched canopy, cream walls, blue fascia, forecourt and floating boarding pontoon. Water direction is local +Y.",
+      "collision_boxes_blender": [
+        {
+          "center_blender": [
+            0,
+            -3,
+            2.15
+          ],
+          "size_blender": [
+            40,
+            14,
+            4.3
+          ],
+          "kind": "terminal_building"
+        },
+        {
+          "center_blender": [
+            0,
+            23,
+            0.5
+          ],
+          "size_blender": [
+            24,
+            7,
+            0.7
+          ],
+          "kind": "floating_dock"
+        }
+      ],
+      "sha256": "c7cf660eb9714723f8324092d5a3185c910e2805cd335b212de482a1081cdebf"
+    },
+    "PromenadeSegment": {
+      "file": "PromenadeSegment.glb",
+      "triangles": 1144,
+      "materials": 5,
+      "bytes": 74016,
+      "bounds_blender": {
+        "min": [
+          -10.03031063079834,
+          -4.65500020980835,
+          0.0
+        ],
+        "max": [
+          10.03031063079834,
+          3.5,
+          7.009976387023926
+        ]
+      },
+      "pivot": "ground-center",
+      "description": "20 m original pedestrian waterfront promenade with rail, repeated pavers, benches, planters and lamps; water is +Y.",
+      "collision_boxes_blender": [
+        {
+          "center_blender": [
+            0,
+            3.35,
+            0.75
+          ],
+          "size_blender": [
+            20,
+            0.12,
+            1.1
+          ],
+          "kind": "promenade_railing"
+        }
+      ],
+      "sha256": "69ff431f082bb13908106ee7e23da458bf2017b039aa2e5eea0b8ce249680e55"
+    },
+    "Streetlight": {
+      "file": "Streetlight.glb",
+      "triangles": 116,
+      "materials": 3,
+      "bytes": 9496,
+      "bounds_blender": {
+        "min": [
+          -0.3100000023841858,
+          -1.8550000190734863,
+          0.0
+        ],
+        "max": [
+          0.3100000023841858,
+          0.23999999463558197,
+          8.809976577758789
+        ]
+      },
+      "pivot": "ground-center",
+      "description": "Original warm LED streetlight with slim bent arm.",
+      "collision_boxes_blender": [
+        {
+          "center_blender": [
+            0,
+            0,
+            4.25
+          ],
+          "size_blender": [
+            0.22,
+            0.22,
+            8.5
+          ],
+          "kind": "streetlight"
+        }
+      ],
+      "sha256": "0893ae036935c10039743600f68bd1c4e512df9a33a857f31daa7dee548172be"
+    },
+    "SideStreetSegment": {
+      "file": "SideStreetSegment.glb",
+      "triangles": 108,
+      "materials": 3,
+      "bytes": 8580,
+      "bounds_blender": {
+        "min": [
+          -12.5,
+          -5.0,
+          0.0
+        ],
+        "max": [
+          12.5,
+          5.0,
+          0.25999999046325684
+        ]
+      },
+      "pivot": "road center; top at local Z=.18",
+      "description": "25 m original access street with raised sidewalks and lane markings, for dense district blocks.",
+      "collision_boxes_blender": [],
+      "sha256": "1506de80718b9e26a4ec61d89afabda8de32ca896c766761fcea7df47e0c2283"
+    }
+  }
+}

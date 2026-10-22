@@ -1,0 +1,27 @@
+{
+  "name": "CheckpointGate",
+  "source": "blender/build_checkpoint_gate.py",
+  "triangles": 232,
+  "materials": 2,
+  "draw_primitives": 2,
+  "bytes": 18420,
+  "sha256": "ec6cac7fd5719511c55cb9486e203259706b278adf4415f03e489912c24ea5eb",
+  "axes": "Three/glTF +X forward,+Y up; road spans Z; already converted",
+  "pivot": "Road center at road surface",
+  "collision": false,
+  "road_clear_width_m": 7.2,
+  "flag_poles_lateral_m": 4.16,
+  "height_m": 3.9149999618530273,
+  "license": "Original generated asset; same original-asset provenance as environment library",
+  "validation": {
+    "under_500_triangles": true,
+    "two_materials": true,
+    "reimport_meshes": 2,
+    "degenerate_polygons": 0,
+    "finite_coordinates": true,
+    "clear_road_width_m": 7.979999542236328,
+    "height_m": 3.9149999618530273,
+    "pass": true
+  },
+  "actual_unobstructed_width_m": 7.979999542236328
+}

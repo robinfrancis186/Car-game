@@ -1,0 +1,108 @@
+{
+  "reference": "7A8EA1B8: broad reclining bird, layered wings and rock summit; original stylized sculpture, not exact replica.",
+  "collision_proxies": [
+    {
+      "type": "obb",
+      "center_local_m": [
+        0.48386096954345703,
+        4.849700927734375,
+        -0.42852306365966797
+      ],
+      "half_extents_m": [
+        28.920645713806152,
+        4.849700927734375,
+        24.48520565032959
+      ],
+      "part": "conservative rocky pedestal envelope; computed from exported rock vertices"
+    },
+    {
+      "type": "obb",
+      "center_local_m": [
+        -1,
+        11.2,
+        0
+      ],
+      "half_extents_m": [
+        9.0,
+        4.2,
+        5.8
+      ],
+      "part": "solid central bird body"
+    },
+    {
+      "type": "capsule",
+      "a_local_m": [
+        4,
+        11.8,
+        0
+      ],
+      "b_local_m": [
+        14.4,
+        17.7,
+        0
+      ],
+      "radius_m": 2.7,
+      "part": "upright neck and head"
+    },
+    {
+      "type": "capsule",
+      "a_local_m": [
+        16.1,
+        17.85,
+        0
+      ],
+      "b_local_m": [
+        19.1,
+        15.6,
+        0
+      ],
+      "radius_m": 1.25,
+      "part": "hooked beak"
+    }
+  ],
+  "solid_note": "Conservative solid rock/body/head proxies; outer thin feather tips are scenic. Keep viewpoint traffic outside rocky footprint.",
+  "asset": "BirdRockLookout",
+  "file": "assets/web/BirdRockLookout.glb",
+  "root": "BirdRockLookout",
+  "source": "assets/landscape_reference_kit/BirdRockLookout.blend",
+  "generator": "blender/build_landscape_reference_kit.py",
+  "coordinates": "meters: Blender +X forward +Y left +Z up; GLB +X forward +Y up -Z left",
+  "root_pivot": "ground Y=0",
+  "bounds_local_m": {
+    "min": [
+      -28.436784744262695,
+      0.0,
+      -24.913728713989258
+    ],
+    "max": [
+      29.40450668334961,
+      20.100000381469727,
+      24.056682586669922
+    ]
+  },
+  "dimensions_xyz_m": [
+    57.841291427612305,
+    20.100000381469727,
+    48.97041130065918
+  ],
+  "triangles": 17550,
+  "draw_calls": 3,
+  "bytes": 851348,
+  "sha256": "fc56f83750391acd9130c1ff6fb174863c53d617faf176bbe90ec755a9936c29",
+  "materials": [
+    "BirdRockLookout_Stone",
+    "BirdRockLookout_Accent",
+    "BirdRockLookout_Rock"
+  ],
+  "images": 1,
+  "license_note": "Original geometry and palette authored for this project; reference photograph not embedded or redistributed. Stylized interpretation, not measured replica.",
+  "procedural_normal": {
+    "image": "original_stone_normal.png",
+    "resolution": [
+      256,
+      256
+    ],
+    "origin": "Original periodic multiscale stochastic micro-relief generated with fixed NumPy seed92714; no photograph input",
+    "embedded_in_glb": true
+  }
+}

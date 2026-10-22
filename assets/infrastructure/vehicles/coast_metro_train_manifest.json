@@ -1,0 +1,58 @@
+{
+  "file": "assets/web/coast_metro_train.glb",
+  "root": "CoastMetroTrain",
+  "coordinates": "meters; glTF +X forward, +Y up, -Z left",
+  "triangles": 13500,
+  "draw_calls_per_instance": 9,
+  "bytes": 782076,
+  "sha256": "328cef4fe7116c07ab59b80acc44357702b0273bde1a44a666858d43af7ee8d8",
+  "bounds_blender_m": {
+    "min": [
+      -28.829999923706055,
+      -1.4810004234313965,
+      -3.4969109830029765e-09
+    ],
+    "max": [
+      28.829998016357422,
+      1.481000542640686,
+      4.2139997482299805
+    ]
+  },
+  "dimensions_three_m": [
+    57.65999794006348,
+    4.213999751726892,
+    2.9620009660720825
+  ],
+  "materials": [
+    "Transit_Surface",
+    "Transit_Glazing",
+    "Transit_Lamps"
+  ],
+  "geometry": "Original procedural mesh, no photo textures or logos. Scenic vehicle, not physics or operator CAD.",
+  "pivot": "rail contact at Three Y=0",
+  "gauge_m": 1.435,
+  "wheel_center_lateral_m": 0.7175,
+  "wheel_contact_width_m": 0.16,
+  "wheel_radius_m": 0.39,
+  "carriages": [
+    {
+      "node": "TrainCar_0",
+      "center_offset_x_m": 19.4,
+      "local_rotation_y_rad": 0,
+      "length_m": 19.4
+    },
+    {
+      "node": "TrainCar_1",
+      "center_offset_x_m": 0,
+      "local_rotation_y_rad": 0,
+      "length_m": 19.4
+    },
+    {
+      "node": "TrainCar_2",
+      "center_offset_x_m": -19.4,
+      "local_rotation_y_rad": -3.141592653589793,
+      "length_m": 19.4
+    }
+  ],
+  "path_contract": "Place TrainCar_i at path(position + center_offset_x_m). Preserve car2 local facing reversal: rotation.y = pathHeading - PI. Root identity, path is Three XZ plane. Bellows are split static collars, no runtime deformation."
+}

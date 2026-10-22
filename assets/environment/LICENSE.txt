@@ -1,0 +1,7 @@
+CC0 1.0 Universal — public-domain dedication
+
+To the extent possible under law, the creator waives copyright and related rights in the original generated environment geometry, material definitions, generator script and rendered environment previews in this directory and its generator `blender/build_environment.py`.
+
+This dedication does not grant trademark, patent, privacy or publicity rights. No warranty is provided. Formal CC0 legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+All assets were procedurally modeled for this project; no external mesh or texture is included.

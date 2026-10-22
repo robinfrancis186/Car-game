@@ -1,0 +1,61 @@
+{
+  "reference": "2D597ABA: small narrow open boats under curved pale woven canopies, original scenic shikara interpretation.",
+  "collision_proxies": [
+    {
+      "type": "obb",
+      "center_local_m": [
+        0.07418680191040039,
+        0.9645000100135803,
+        0.07744085788726807
+      ],
+      "half_extents_m": [
+        4.171014308929443,
+        1.5945000052452087,
+        1.3074296712875366
+      ],
+      "part": "conservative whole boat including canopy and stowed oar"
+    }
+  ],
+  "pivot": "waterline Y=0",
+  "wake_socket_local_m": [
+    -4.05,
+    0,
+    0
+  ],
+  "motion": "Rigid scenic root; no articulated riders or marine dynamics.",
+  "asset": "CanalShikara",
+  "file": "assets/web/CanalShikara.glb",
+  "root": "CanalShikara",
+  "source": "assets/landscape_reference_kit/CanalShikara.blend",
+  "generator": "blender/build_landscape_reference_kit.py",
+  "coordinates": "meters: Blender +X forward +Y left +Z up; GLB +X forward +Y up -Z left",
+  "root_pivot": "waterline Y=0",
+  "bounds_local_m": {
+    "min": [
+      -4.096827507019043,
+      -0.6299999952316284,
+      -1.2299888134002686
+    ],
+    "max": [
+      4.245201110839844,
+      2.559000015258789,
+      1.3848705291748047
+    ]
+  },
+  "dimensions_xyz_m": [
+    8.342028617858887,
+    3.1890000104904175,
+    2.6148593425750732
+  ],
+  "triangles": 7320,
+  "draw_calls": 3,
+  "bytes": 388464,
+  "sha256": "2b4dc502eb3556a9a242843b08e1296903bd2d0c20a20584ebfb1eeebbc01f9d",
+  "materials": [
+    "CanalShikara_Textile",
+    "CanalShikara_Wood",
+    "CanalShikara_Hull"
+  ],
+  "images": 0,
+  "license_note": "Original geometry and palette authored for this project; reference photograph not embedded or redistributed. Stylized interpretation, not measured replica."
+}

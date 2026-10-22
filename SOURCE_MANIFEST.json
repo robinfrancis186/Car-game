@@ -1,0 +1,462 @@
+{
+  "version": "V10 / 0.10.0",
+  "frozen_web_tree_sha256": "79e6121d272b273cb959417ba82359ce0c33b646f742a836bd8c2ce48ba6dbe8",
+  "note": "Original frozen-web-tree identity includes development files; listed runtime/build files below are independently verified byte-identical in this public source copy. Native authoring metadata sanitation is recorded separately.",
+  "files": [
+    {
+      "path": "web/build-standalone.mjs",
+      "bytes": 1991,
+      "sha256": "c85296543edf4c1043d83c7ee6b8610a8798484b903306d2bb64960a00052528"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 22989,
+      "sha256": "e7a442c2880bf7b1debcb1707d96faf24cfdc52fcb3c68ef58f5fd73fed58cd1"
+    },
+    {
+      "path": "web/package-lock.json",
+      "bytes": 16941,
+      "sha256": "cc41c3f1fea68d380b8eee3c370496ea4a526a0063e738a94c82927b8bf453ab"
+    },
+    {
+      "path": "web/package.json",
+      "bytes": 988,
+      "sha256": "5095cfa4f2101af6ca9abfd87cc43c1247784255f229d5c7b55ddeafa0d5d46b"
+    },
+    {
+      "path": "web/public/assets/BeachSandPatch.glb",
+      "bytes": 6008,
+      "sha256": "e245aeb570e66e2b102a87ebada2875088405d15f1b6ad6272d83e01e27786a6"
+    },
+    {
+      "path": "web/public/assets/BirdRockLookout.glb",
+      "bytes": 851348,
+      "sha256": "fc56f83750391acd9130c1ff6fb174863c53d617faf176bbe90ec755a9936c29"
+    },
+    {
+      "path": "web/public/assets/CanalRainTree.glb",
+      "bytes": 896688,
+      "sha256": "eeeb6fa9b3daa71a96544b8509e83bd41da156da0c50697ea232d0d048c7840c"
+    },
+    {
+      "path": "web/public/assets/CanalRainTreeFar.glb",
+      "bytes": 343648,
+      "sha256": "03514da6bf2bde6a411a96447087eb5dc77c050fd409792773023b3e68207b83"
+    },
+    {
+      "path": "web/public/assets/CanalShikara.glb",
+      "bytes": 388464,
+      "sha256": "2b4dc502eb3556a9a242843b08e1296903bd2d0c20a20584ebfb1eeebbc01f9d"
+    },
+    {
+      "path": "web/public/assets/CheckpointGate.glb",
+      "bytes": 18420,
+      "sha256": "ec6cac7fd5719511c55cb9486e203259706b278adf4415f03e489912c24ea5eb"
+    },
+    {
+      "path": "web/public/assets/CheckpointGate_manifest.json",
+      "bytes": 888,
+      "sha256": "e975931a99c9f84cea48cebfecc28b3fcf47e935c83d075e03035d911db98f48"
+    },
+    {
+      "path": "web/public/assets/ChineseFishingNet.glb",
+      "bytes": 50592,
+      "sha256": "06bd5c254021ea19de75425a1bd9a04bf2fc1188b629df917ed29dd0438966da"
+    },
+    {
+      "path": "web/public/assets/CoconutPalm_A.glb",
+      "bytes": 224516,
+      "sha256": "951687c70bf508edd8ce8e18a92dfaf940f1c4f812a58a85342a29787450b756"
+    },
+    {
+      "path": "web/public/assets/CoconutPalm_A_LOD1.glb",
+      "bytes": 80596,
+      "sha256": "0e1a429bcf97354b8e75bd89f6391c4f79b773232abf7a09685535ce1889b2c0"
+    },
+    {
+      "path": "web/public/assets/CoconutPalm_B.glb",
+      "bytes": 224520,
+      "sha256": "194f42c0bd580d560f161fcc212653c811f742846e2916af973ae60638c97929"
+    },
+    {
+      "path": "web/public/assets/CoconutPalm_B_LOD1.glb",
+      "bytes": 80448,
+      "sha256": "1877656fb8483aff4f5e24fbd57dbaa7b42282026142121ef3f441074620aa08"
+    },
+    {
+      "path": "web/public/assets/Course_Furniture.glb",
+      "bytes": 2463984,
+      "sha256": "d669e76ebdb97d0c7d54afbd22120ad0691e3f42e349357adb419a08eea0b419"
+    },
+    {
+      "path": "web/public/assets/Course_Road.glb",
+      "bytes": 587484,
+      "sha256": "b738a94a13a3092f1bb3f38692d7095b5ebf2d3b806d49e4f83d72d14768d0d4"
+    },
+    {
+      "path": "web/public/assets/Course_Terrain.glb",
+      "bytes": 46800,
+      "sha256": "8316812e396a0037f31e8939c2b032f62f3baed2ade821aa9c0fb579a1751ef5"
+    },
+    {
+      "path": "web/public/assets/Course_Water.glb",
+      "bytes": 101696,
+      "sha256": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678"
+    },
+    {
+      "path": "web/public/assets/FishingBoat.glb",
+      "bytes": 82276,
+      "sha256": "5f2324b7d85b119c6be6075aceba39a60a8d01d300fb72b33c3bc2fcf5a06815"
+    },
+    {
+      "path": "web/public/assets/HighlandGateway.glb",
+      "bytes": 44588,
+      "sha256": "ae28c1b8aa25caa114394f1521b233137b3e93db6a8d669fcd9b810d45d6727b"
+    },
+    {
+      "path": "web/public/assets/HighlandShadeTree.glb",
+      "bytes": 28136,
+      "sha256": "d296a0d3bbee7882d416692cfddb16db8d5358b678ad1273aaf865ba5547d887"
+    },
+    {
+      "path": "web/public/assets/HighlandShadeTreeNear.glb",
+      "bytes": 603220,
+      "sha256": "bc3424361b0a3c9049d28d7ef87f0faa892f38de99b110f8b14dc3659f20b640"
+    },
+    {
+      "path": "web/public/assets/Highlands_Furniture.glb",
+      "bytes": 1997244,
+      "sha256": "cf42589d69f7f84dada88aeb114bf14444b4e4fef86e430e9c29d7a6e7ccb33a"
+    },
+    {
+      "path": "web/public/assets/Highlands_Road.glb",
+      "bytes": 1349040,
+      "sha256": "3d16cf6fb9258002e81b35015beca7fe5195a2324a3e7114360acdb6a13bffd1"
+    },
+    {
+      "path": "web/public/assets/Highlands_Tea.glb",
+      "bytes": 5242768,
+      "sha256": "776d39a52fe9a44d439ee58bf117f5d763a5bbb0041ba7bb5c556bf08622fbdc"
+    },
+    {
+      "path": "web/public/assets/Highlands_Terrain.glb",
+      "bytes": 4205060,
+      "sha256": "72485921b4ec72da499fc1d2b0bdda8ebac5678d2ad92c4574d93c0e3a9ad5c8"
+    },
+    {
+      "path": "web/public/assets/KeralaApartment_A.glb",
+      "bytes": 115304,
+      "sha256": "69513c6040528422e9ac31004c1186d539059a5184dc90ee8a26d374ccc046e6"
+    },
+    {
+      "path": "web/public/assets/KeralaHouse.glb",
+      "bytes": 382716,
+      "sha256": "ac29c493be0079ae4fa548dcbb14e29e9f7d262b0341826b98fb030f84178eef"
+    },
+    {
+      "path": "web/public/assets/KeralaHouseboat.glb",
+      "bytes": 260220,
+      "sha256": "2153db39d79b9738f7c5dfb0caa79a9e2d92ccdec6ffa415354de2ce791f54b5"
+    },
+    {
+      "path": "web/public/assets/KeralaOffice_A.glb",
+      "bytes": 65980,
+      "sha256": "d05616e4d0d35fb804d8502f3e02298b03aba52e8dba9b9e4b65297a0f807756"
+    },
+    {
+      "path": "web/public/assets/KeralaShopRow_A.glb",
+      "bytes": 66532,
+      "sha256": "a44bb678067c14b0184426f0b546dbddc8155dced337805c41308e5f8b20b819"
+    },
+    {
+      "path": "web/public/assets/KeralaShopRow_B.glb",
+      "bytes": 32180,
+      "sha256": "3c4184ea08cdf010b19260bc21c340c8d4d66f534d6844089f59ac60d37556da"
+    },
+    {
+      "path": "web/public/assets/KeralaTeaStall.glb",
+      "bytes": 24584,
+      "sha256": "2897ac5ced8aac9ebbd583ae70bceb4bec3560a99b6b87fc600e777bf1caf8c0"
+    },
+    {
+      "path": "web/public/assets/MetroStation.glb",
+      "bytes": 316972,
+      "sha256": "bbfaf1e07ef93750ee8e2264294b900cd262b7b977d2a318931625d81698cf45"
+    },
+    {
+      "path": "web/public/assets/MetroViaductSpan.glb",
+      "bytes": 39728,
+      "sha256": "e926f137d5f9f7442bdd75672a5827714b737aa3ba846195bec2787156eee517"
+    },
+    {
+      "path": "web/public/assets/OceanPatch.glb",
+      "bytes": 24260,
+      "sha256": "823886f06af807fb3d63155d3c9073d7aa36a9b3e5694f109812aa338bec4f33"
+    },
+    {
+      "path": "web/public/assets/PromenadeSegment.glb",
+      "bytes": 74016,
+      "sha256": "69ff431f082bb13908106ee7e23da458bf2017b039aa2e5eea0b8ce249680e55"
+    },
+    {
+      "path": "web/public/assets/RoadReflector.glb",
+      "bytes": 13640,
+      "sha256": "af64fdca0e4fe52a03a8efc6444cc114675fb290b60f0fff24891e8c1ea914fa"
+    },
+    {
+      "path": "web/public/assets/RoadSegment.glb",
+      "bytes": 20376,
+      "sha256": "c30b0208c4d39ce72f00de222fb8e8cf749ff109733acac8cbd9477c86c3ccc1"
+    },
+    {
+      "path": "web/public/assets/SeaWallRock.glb",
+      "bytes": 13060,
+      "sha256": "4ce4fd41e4db6a30b7192b6e82e2cf395ca4760af5eb7b774d218d7d9c261bf1"
+    },
+    {
+      "path": "web/public/assets/ServiceShowroomBay.glb",
+      "bytes": 585896,
+      "sha256": "6b32547cd521f44f50956281aa8cb82eb6448f00321e29937bde9352488e9bc9"
+    },
+    {
+      "path": "web/public/assets/SideStreetSegment.glb",
+      "bytes": 8580,
+      "sha256": "1506de80718b9e26a4ec61d89afabda8de32ca896c766761fcea7df47e0c2283"
+    },
+    {
+      "path": "web/public/assets/Streetlight.glb",
+      "bytes": 9496,
+      "sha256": "0893ae036935c10039743600f68bd1c4e512df9a33a857f31daa7dee548172be"
+    },
+    {
+      "path": "web/public/assets/TeaLeafCluster.glb",
+      "bytes": 13024,
+      "sha256": "2331f29f75e1ad9e3ef7cabc0e3c2321bed9628a919feef1961abe985d33eed6"
+    },
+    {
+      "path": "web/public/assets/TropicalGrass.glb",
+      "bytes": 15628,
+      "sha256": "1b0baf9d212e943943ad7391a4cf6d876e298b881c1d2cbbd1e560687bf91e01"
+    },
+    {
+      "path": "web/public/assets/WaterTransitTerminal.glb",
+      "bytes": 143584,
+      "sha256": "c7cf660eb9714723f8324092d5a3185c910e2805cd335b212de482a1081cdebf"
+    },
+    {
+      "path": "web/public/assets/canal_far_manifest.json",
+      "bytes": 766,
+      "sha256": "b991af8446611bd0758a915a6f4bc0affdbdeaf7e1c827a5e079c64c00e0891b"
+    },
+    {
+      "path": "web/public/assets/car.glb",
+      "bytes": 904716,
+      "sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9"
+    },
+    {
+      "path": "web/public/assets/car_manifest.json",
+      "bytes": 21079,
+      "sha256": "a1cf2aae4798254f5e3c1c6c163a5634a5806c7772d3f69cc4ce1db85c26988c"
+    },
+    {
+      "path": "web/public/assets/car_silver.glb",
+      "bytes": 1332188,
+      "sha256": "3bec86298c9c22a7e1e91deeff4ef2a614744cadf170e9abea2855f2ec82a749"
+    },
+    {
+      "path": "web/public/assets/coast_metro_train.glb",
+      "bytes": 782076,
+      "sha256": "328cef4fe7116c07ab59b80acc44357702b0273bde1a44a666858d43af7ee8d8"
+    },
+    {
+      "path": "web/public/assets/coastal_map_data.json",
+      "bytes": 254232,
+      "sha256": "6c1e134884013b8663ca1564cfb7d523621893c104dccc205248353d8086cf1c"
+    },
+    {
+      "path": "web/public/assets/course_runtime.json",
+      "bytes": 441750,
+      "sha256": "379fec9a4c35d876653d012ba7addf18badeec629948c9d93ec300f591aa51bc"
+    },
+    {
+      "path": "web/public/assets/course_runtime_highlands.json",
+      "bytes": 920149,
+      "sha256": "08e6bdac59f00f61010f99eb840bca87998b57fad613b01cea1835a7f6d0e0a3"
+    },
+    {
+      "path": "web/public/assets/environment_web_manifest.json",
+      "bytes": 11254,
+      "sha256": "0fcb86cc5622f352e34252f478ebcea0514eeb381d0d7054c46c5aecad21e730"
+    },
+    {
+      "path": "web/public/assets/foliage_detail_manifest.json",
+      "bytes": 1833,
+      "sha256": "3078eed8ff826de472c8c47175983cae17e05c3fa0dd4a68aa374ca16eda4c62"
+    },
+    {
+      "path": "web/public/assets/fonts/OFL.txt",
+      "bytes": 4377,
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "path": "web/public/assets/fonts/display.ttf",
+      "bytes": 112592,
+      "sha256": "e1ed5d7e50c6a4498454d40509ce2362384a2c7870df3418fdbd010f81dffad3"
+    },
+    {
+      "path": "web/public/assets/furniture_colliders.json",
+      "bytes": 31824,
+      "sha256": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611"
+    },
+    {
+      "path": "web/public/assets/highland_prop_manifest.json",
+      "bytes": 2369,
+      "sha256": "1e3c42f169a938ff2db95f03b2cb0c0a50551d99f53416f475d64b4f44b94440"
+    },
+    {
+      "path": "web/public/assets/highlands_furniture_colliders.json",
+      "bytes": 240829,
+      "sha256": "037b9ebc166d6f56d2cc5a665f7943f42d69934dfbf37ce3ea8dd4d645722d90"
+    },
+    {
+      "path": "web/public/assets/highlands_infrastructure_colliders.json",
+      "bytes": 148239,
+      "sha256": "0ea2af907864a962533bebece1e0e8305469a98b944ecd1e245b949454b10c01"
+    },
+    {
+      "path": "web/public/assets/highlands_manifest.json",
+      "bytes": 1372,
+      "sha256": "03120cc56ef489217bdffe707575536a9c8a359e77ca73fea6996d0cd555f6ee"
+    },
+    {
+      "path": "web/public/assets/highlands_terrain_grid.json",
+      "bytes": 787942,
+      "sha256": "4d23bd2b1a7fcf26883298c3c5791fec71d44f52d90b38b2270c753ce891e52b"
+    },
+    {
+      "path": "web/public/assets/houseboat_manifest.json",
+      "bytes": 1521,
+      "sha256": "5ad733c820dccf52674b3681af392ae9970b6e0d6150a30953166c58daa1e8d7"
+    },
+    {
+      "path": "web/public/assets/infrastructure_colliders.json",
+      "bytes": 159803,
+      "sha256": "76d163a8411d8cf84d79ee97e0b0402ea7713dd3716001cfad7a4e49a5a90a75"
+    },
+    {
+      "path": "web/public/assets/police_lightbar.glb",
+      "bytes": 18356,
+      "sha256": "9c1ca73f4b5f110ac6a72a8b03d41c3504d922b96bc6c9cee5ba5b598865a10c"
+    },
+    {
+      "path": "web/public/assets/showroom_manifest.json",
+      "bytes": 1345,
+      "sha256": "b053f48202df16a8a692a5b1aff33084e5a8f2808ea4d017187f4d5544fc8934"
+    },
+    {
+      "path": "web/public/assets/tea_detail_rows.json",
+      "bytes": 320544,
+      "sha256": "4b840eb67cd9ccdf8caac780bf84c66982a23251e96ca834cb658089cbbd2c1a"
+    },
+    {
+      "path": "web/public/assets/transit_infrastructure_manifest.json",
+      "bytes": 7867,
+      "sha256": "da68834b751dacb20756ad4e5eedb468ca0b30fd26744ad8cfa039c527c3a840"
+    },
+    {
+      "path": "web/public/assets/transit_vehicle_manifest.json",
+      "bytes": 2521,
+      "sha256": "d436ee11a86021300df43b2dcca29002c091e21dd06a8ec10ad486b413038524"
+    },
+    {
+      "path": "web/public/assets/urban_assets_manifest.json",
+      "bytes": 9123,
+      "sha256": "0dc9557f19f9d8e8ca4baa0d77632c918c2df38523b9b0e8c9c6de3c4d955c17"
+    },
+    {
+      "path": "web/public/assets/water_transit_ferry.glb",
+      "bytes": 567392,
+      "sha256": "b160cffaacf1a753d144bc71fb6bbfbcb749d585855fdcce9a6c6a185f0904c2"
+    },
+    {
+      "path": "web/public/vendor/THREE_LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+    },
+    {
+      "path": "web/public/vendor/addons/environments/RoomEnvironment.js",
+      "bytes": 3606,
+      "sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014"
+    },
+    {
+      "path": "web/public/vendor/addons/loaders/GLTFLoader.js",
+      "bytes": 110273,
+      "sha256": "45139faddd5aaf48ed2d62203d976e5cbd703db1a592de40527f9f6cf58abd44"
+    },
+    {
+      "path": "web/public/vendor/addons/utils/BufferGeometryUtils.js",
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    },
+    {
+      "path": "web/public/vendor/three.module.js",
+      "bytes": 691648,
+      "sha256": "08fd7545d13d2c7fb65ab691530a802dafefd638596501854f267d0fb13c39e7"
+    },
+    {
+      "path": "web/src/audio.js",
+      "bytes": 18431,
+      "sha256": "19b1a273114c1ae3eab826a06fac960c92729416a5b9614c13d8428939161895"
+    },
+    {
+      "path": "web/src/detail-lod.js",
+      "bytes": 5995,
+      "sha256": "b7f74f6850fd76454b22b7593452036f9e0b9a0f53de7fcc1d2b708d5a45bb9d"
+    },
+    {
+      "path": "web/src/finish-fx.js",
+      "bytes": 12965,
+      "sha256": "a8c11f92b406746c574a8b82bf1b031765e60ce5abe10c949bf2a789b8913f7c"
+    },
+    {
+      "path": "web/src/gameplay.js",
+      "bytes": 53211,
+      "sha256": "b8f035d367e56f4b7c6f9007d2d99685c9de305bb3360120547afbf464bb4ae9"
+    },
+    {
+      "path": "web/src/garage.js",
+      "bytes": 3787,
+      "sha256": "27cd455700be829c9fea4dcbcb88320be667425d82ca972b4b3ae785f9736bf7"
+    },
+    {
+      "path": "web/src/main.js",
+      "bytes": 31498,
+      "sha256": "8f24bb29f26c49cae1a9b85a690e627516292994fc65999550138fdc48a0096a"
+    },
+    {
+      "path": "web/src/scene.js",
+      "bytes": 33547,
+      "sha256": "d0392220a9eb657d9cb1993248eddeffeadc124d24303a6673d4fbaff56fb8e7"
+    },
+    {
+      "path": "web/src/style.css",
+      "bytes": 58335,
+      "sha256": "8d77e4bec3391bb3e3add7a7dbab9c58747fffd95fbd6ed4a3b0f11ccd07442d"
+    },
+    {
+      "path": "web/src/tea-placement.js",
+      "bytes": 4110,
+      "sha256": "110799212574b2c42c976585f625d24ab59d0a5129cb5be2a0fafaa10e70d84f"
+    },
+    {
+      "path": "web/src/tracks.js",
+      "bytes": 1848,
+      "sha256": "ac0a8659be0d96f209a44ad5d93671d57c75a7200d53f4d357de57ba57f49d6f"
+    },
+    {
+      "path": "web/src/transit.js",
+      "bytes": 7832,
+      "sha256": "b89f7a545514b5f34b5a62d3f6f684d58aea30a714903adb7b2b3a28a095714d"
+    }
+  ]
+}

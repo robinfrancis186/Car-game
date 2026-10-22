@@ -1,0 +1,26 @@
+{
+  "name": "malabar-hot-coast",
+  "version": "0.10.0",
+  "description": "Original Blender-built Kerala coastal arcade racing prototype",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "serve": "python3 -m http.server 8080 --bind 127.0.0.1",
+    "test": "node tests/gameplay.test.mjs && node tests/scene-contract.test.mjs && node tests/audio.test.mjs && node tests/transit.test.mjs && node tests/world-load.test.mjs && node tests/tracks.test.mjs && node tests/controller.test.mjs && node tests/controller.test.mjs --track=highlands && node tests/garage.test.mjs && node tests/detail-lod.test.mjs && node tests/finish-fx.test.mjs && node tests/ui-controller.test.mjs",
+    "build": "node build-standalone.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "esbuild": "0.25.11"
+  },
+  "private": true
+}

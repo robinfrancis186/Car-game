@@ -1,0 +1,46 @@
+{
+  "name": "KeralaHouseboat",
+  "source": "blender/build_houseboat.py",
+  "native": "assets/infrastructure/backwater/KeralaHouseboat.blend",
+  "native_collection": "KeralaHouseboat",
+  "root_object": "KeralaHouseboat",
+  "preview": "assets/infrastructure/backwater/KeralaHouseboat_preview.png",
+  "file": "assets/web/KeralaHouseboat.glb",
+  "triangles": 4812,
+  "materials": 4,
+  "draw_primitives": 4,
+  "bytes": 260220,
+  "sha256": "2153db39d79b9738f7c5dfb0caa79a9e2d92ccdec6ffa415354de2ce791f54b5",
+  "bounds_gltf_xyz_m": {
+    "min": [
+      -9.038233757019043,
+      -0.75,
+      -2.6189653873443604
+    ],
+    "max": [
+      9.03456974029541,
+      5.815999984741211,
+      2.6189653873443604
+    ]
+  },
+  "dimensions_gltf_xyz_m": [
+    18.072803497314453,
+    6.565999984741211,
+    5.237930774688721
+  ],
+  "axes_blender": "+X forward, +Z up",
+  "axes_gltf": "+X forward, +Y up",
+  "pivot": "Waterline at zero, hull extends below; longitudinal and transverse center at origin",
+  "provenance": "Original procedural Blender geometry/materials. User reference photos visually studied only; no source photos, logos, models or textures included. Fictional Kerala-inspired houseboat, not exact vessel reproduction.",
+  "reference_files_study_only": [
+    "D741BBC2-9AFD-40B0-AC01-784FF1A92D99.png",
+    "2D597ABA-5859-4E77-B6F6-1F2F563923F6.png"
+  ],
+  "qa": {
+    "under_5000_triangles": true,
+    "max_4_draws": true,
+    "max_4_materials": true,
+    "no_texture_images": true,
+    "waterline_straddled": true
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "version": "urban-kit-v8-1",
+  "source": "blender/build_urban_props.py",
+  "provenance": "Original procedural Blender geometry. No external models, photos, image textures, trademarks or logos bundled.",
+  "reference_note": "Reference silhouettes only: official Kerala Tourism, KMRL and Kochi Water Metro. Fictional Kerala-inspired district, not accurate Kappil geography.",
+  "reference_urls": [
+    "https://kochimetro.org/completed-projects/",
+    "https://www.keralatourism.org/kochi/backwaters-kochi.php",
+    "https://www.keralatourism.org/kochi/chinese-fishing-nets-kochi"
+  ],
+  "axes_blender": {
+    "front": "-Y",
+    "up": "+Z",
+    "frontage": "+X"
+  },
+  "axes_gltf": {
+    "front": "+Z",
+    "up": "+Y",
+    "frontage": "+X"
+  },
+  "origin": "Ground-centre of planned footprint. No parent transforms; metre scale.",
+  "collision_note": "Visual meshes only; caller should use separate simplified building AABBs. Fishing net is waterfront scenery, not a drive-through mesh.",
+  "assets": [
+    {
+      "name": "KeralaShopRow_A",
+      "native_collection": "KeralaShopRow_A",
+      "root_object": "KeralaShopRow_A",
+      "file": "assets/web/KeralaShopRow_A.glb",
+      "native": "assets/infrastructure/urban/native/KeralaShopRow_A.blend",
+      "preview": "assets/infrastructure/urban/previews/KeralaShopRow_A.png",
+      "triangles": 1206,
+      "triangle_budget": 3000,
+      "draw_primitives": 5,
+      "materials": 5,
+      "bytes": 66532,
+      "sha256": "a44bb678067c14b0184426f0b546dbddc8155dced337805c41308e5f8b20b819",
+      "dimensions_blender_xyz_m": [
+        12,
+        10,
+        10
+      ],
+      "bounds_blender": {
+        "min": [
+          -6.0,
+          -5.0,
+          0
+        ],
+        "max": [
+          6.0,
+          5.0,
+          10
+        ]
+      },
+      "bounds_gltf_xyz_m": {
+        "min": [
+          -6,
+          0,
+          -5
+        ],
+        "max": [
+          6,
+          10,
+          5
+        ]
+      },
+      "raw_dimensions_before_envelope_normalization": [
+        12.062000274658203,
+        10.135000228881836,
+        10.0
+      ],
+      "qa": {
+        "triangles_within_budget": true,
+        "materials_at_most_5": true,
+        "draws_at_most_5": true,
+        "no_image_textures": true,
+        "positive_y_up_height": true,
+        "finite_positions": true
+      }
+    },
+    {
+      "name": "KeralaShopRow_B",
+      "native_collection": "KeralaShopRow_B",
+      "root_object": "KeralaShopRow_B",
+      "file": "assets/web/KeralaShopRow_B.glb",
+      "native": "assets/infrastructure/urban/native/KeralaShopRow_B.blend",
+      "preview": "assets/infrastructure/urban/previews/KeralaShopRow_B.png",
+      "triangles": 554,
+      "triangle_budget": 3000,
+      "draw_primitives": 5,
+      "materials": 5,
+      "bytes": 32180,
+      "sha256": "3c4184ea08cdf010b19260bc21c340c8d4d66f534d6844089f59ac60d37556da",
+      "dimensions_blender_xyz_m": [
+        10,
+        9,
+        7
+      ],
+      "bounds_blender": {
+        "min": [
+          -5.0,
+          -4.5,
+          0
+        ],
+        "max": [
+          5.0,
+          4.5,
+          7
+        ]
+      },
+      "bounds_gltf_xyz_m": {
+        "min": [
+          -5,
+          0,
+          -4.5
+        ],
+        "max": [
+          5,
+          7,
+          4.5
+        ]
+      },
+      "raw_dimensions_before_envelope_normalization": [
+        10.062000274658203,
+        9.0,
+        7.0
+      ],
+      "qa": {
+        "triangles_within_budget": true,
+        "materials_at_most_5": true,
+        "draws_at_most_5": true,
+        "no_image_textures": true,
+        "positive_y_up_height": true,
+        "finite_positions": true
+      }
+    },
+    {
+      "name": "KeralaApartment_A",
+      "native_collection": "KeralaApartment_A",
+      "root_object": "KeralaApartment_A",
+      "file": "assets/web/KeralaApartment_A.glb",
+      "native": "assets/infrastructure/urban/native/KeralaApartment_A.blend",
+      "preview": "assets/infrastructure/urban/previews/KeralaApartment_A.png",
+      "triangles": 2048,
+      "triangle_budget": 3000,
+      "draw_primitives": 5,
+      "materials": 5,
+      "bytes": 115304,
+      "sha256": "69513c6040528422e9ac31004c1186d539059a5184dc90ee8a26d374ccc046e6",
+      "dimensions_blender_xyz_m": [
+        16,
+        14,
+        25
+      ],
+      "bounds_blender": {
+        "min": [
+          -8.0,
+          -7.0,
+          0
+        ],
+        "max": [
+          8.0,
+          7.0,
+          25
+        ]
+      },
+      "bounds_gltf_xyz_m": {
+        "min": [
+          -8,
+          0,
+          -7
+        ],
+        "max": [
+          8,
+          25,
+          7
+        ]
+      },
+      "raw_dimensions_before_envelope_normalization": [
+        16.062000274658203,
+        13.97599983215332,
+        25.0
+      ],
+      "qa": {
+        "triangles_within_budget": true,
+        "materials_at_most_5": true,
+        "draws_at_most_5": true,
+        "no_image_textures": true,
+        "positive_y_up_height": true,
+        "finite_positions": true
+      }
+    },
+    {
+      "name": "KeralaOffice_A",
+      "native_collection": "KeralaOffice_A",
+      "root_object": "KeralaOffice_A",
+      "file": "assets/web/KeralaOffice_A.glb",
+      "native": "assets/infrastructure/urban/native/KeralaOffice_A.blend",
+      "preview": "assets/infrastructure/urban/previews/KeralaOffice_A.png",
+      "triangles": 1179,
+      "triangle_budget": 3000,
+      "draw_primitives": 4,
+      "materials": 4,
+      "bytes": 65980,
+      "sha256": "d05616e4d0d35fb804d8502f3e02298b03aba52e8dba9b9e4b65297a0f807756",
+      "dimensions_blender_xyz_m": [
+        22,
+        16,
+        18
+      ],
+      "bounds_blender": {
+        "min": [
+          -11.0,
+          -8.0,
+          0
+        ],
+        "max": [
+          11.0,
+          8.0,
+          18
+        ]
+      },
+      "bounds_gltf_xyz_m": {
+        "min": [
+          -11,
+          0,
+          -8
+        ],
+        "max": [
+          11,
+          18,
+          8
+        ]
+      },
+      "raw_dimensions_before_envelope_normalization": [
+        22.062000274658203,
+        16.017000198364258,
+        18.0
+      ],
+      "qa": {
+        "triangles_within_budget": true,
+        "materials_at_most_5": true,
+        "draws_at_most_5": true,
+        "no_image_textures": true,
+        "positive_y_up_height": true,
+        "finite_positions": true
+      }
+    },
+    {
+      "name": "KeralaTeaStall",
+      "native_collection": "KeralaTeaStall",
+      "root_object": "KeralaTeaStall",
+      "file": "assets/web/KeralaTeaStall.glb",
+      "native": "assets/infrastructure/urban/native/KeralaTeaStall.blend",
+      "preview": "assets/infrastructure/urban/previews/KeralaTeaStall.png",
+      "triangles": 417,
+      "triangle_budget": 3000,
+      "draw_primitives": 5,
+      "materials": 5,
+      "bytes": 24584,
+      "sha256": "2897ac5ced8aac9ebbd583ae70bceb4bec3560a99b6b87fc600e777bf1caf8c0",
+      "dimensions_blender_xyz_m": [
+        4,
+        3,
+        3.2
+      ],
+      "bounds_blender": {
+        "min": [
+          -2.0,
+          -1.5,
+          0
+        ],
+        "max": [
+          2.0,
+          1.5,
+          3.2
+        ]
+      },
+      "bounds_gltf_xyz_m": {
+        "min": [
+          -2,
+          0,
+          -1.5
+        ],
+        "max": [
+          2,
+          3.200000047683716,
+          1.5
+        ]
+      },
+      "raw_dimensions_before_envelope_normalization": [
+        4.0,
+        3.0,
+        3.200000047683716
+      ],
+      "qa": {
+        "triangles_within_budget": true,
+        "materials_at_most_5": true,
+        "draws_at_most_5": true,
+        "no_image_textures": true,
+        "positive_y_up_height": true,
+        "finite_positions": true
+      }
+    },
+    {
+      "name": "ChineseFishingNet",
+      "native_collection": "ChineseFishingNet",
+      "root_object": "ChineseFishingNet",
+      "file": "assets/web/ChineseFishingNet.glb",
+      "native": "assets/infrastructure/urban/native/ChineseFishingNet.blend",
+      "preview": "assets/infrastructure/urban/previews/ChineseFishingNet.png",
+      "triangles": 900,
+      "triangle_budget": 2000,
+      "draw_primitives": 2,
+      "materials": 2,
+      "bytes": 50592,
+      "sha256": "06bd5c254021ea19de75425a1bd9a04bf2fc1188b629df917ed29dd0438966da",
+      "dimensions_blender_xyz_m": [
+        14,
+        18,
+        12
+      ],
+      "bounds_blender": {
+        "min": [
+          -7.0,
+          -9.0,
+          0
+        ],
+        "max": [
+          7.0,
+          9.0,
+          12
+        ]
+      },
+      "bounds_gltf_xyz_m": {
+        "min": [
+          -7,
+          0,
+          -9
+        ],
+        "max": [
+          7,
+          12,
+          9
+        ]
+      },
+      "raw_dimensions_before_envelope_normalization": [
+        14.04995059967041,
+        18.022000312805176,
+        12.0
+      ],
+      "qa": {
+        "triangles_within_budget": true,
+        "materials_at_most_5": true,
+        "draws_at_most_5": true,
+        "no_image_textures": true,
+        "positive_y_up_height": true,
+        "finite_positions": true
+      }
+    }
+  ],
+  "all_numeric_qa_passed": true
+}

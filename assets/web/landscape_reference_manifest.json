@@ -1,0 +1,266 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "reference": "7A8EA1B8: broad reclining bird, layered wings and rock summit; original stylized sculpture, not exact replica.",
+      "collision_proxies": [
+        {
+          "type": "obb",
+          "center_local_m": [
+            0.48386096954345703,
+            4.849700927734375,
+            -0.42852306365966797
+          ],
+          "half_extents_m": [
+            28.920645713806152,
+            4.849700927734375,
+            24.48520565032959
+          ],
+          "part": "conservative rocky pedestal envelope; computed from exported rock vertices"
+        },
+        {
+          "type": "obb",
+          "center_local_m": [
+            -1,
+            11.2,
+            0
+          ],
+          "half_extents_m": [
+            9.0,
+            4.2,
+            5.8
+          ],
+          "part": "solid central bird body"
+        },
+        {
+          "type": "capsule",
+          "a_local_m": [
+            4,
+            11.8,
+            0
+          ],
+          "b_local_m": [
+            14.4,
+            17.7,
+            0
+          ],
+          "radius_m": 2.7,
+          "part": "upright neck and head"
+        },
+        {
+          "type": "capsule",
+          "a_local_m": [
+            16.1,
+            17.85,
+            0
+          ],
+          "b_local_m": [
+            19.1,
+            15.6,
+            0
+          ],
+          "radius_m": 1.25,
+          "part": "hooked beak"
+        }
+      ],
+      "solid_note": "Conservative solid rock/body/head proxies; outer thin feather tips are scenic. Keep viewpoint traffic outside rocky footprint.",
+      "asset": "BirdRockLookout",
+      "file": "assets/web/BirdRockLookout.glb",
+      "root": "BirdRockLookout",
+      "source": "assets/landscape_reference_kit/BirdRockLookout.blend",
+      "generator": "blender/build_landscape_reference_kit.py",
+      "coordinates": "meters: Blender +X forward +Y left +Z up; GLB +X forward +Y up -Z left",
+      "root_pivot": "ground Y=0",
+      "bounds_local_m": {
+        "min": [
+          -28.436784744262695,
+          0.0,
+          -24.913728713989258
+        ],
+        "max": [
+          29.40450668334961,
+          20.100000381469727,
+          24.056682586669922
+        ]
+      },
+      "dimensions_xyz_m": [
+        57.841291427612305,
+        20.100000381469727,
+        48.97041130065918
+      ],
+      "triangles": 17550,
+      "draw_calls": 3,
+      "bytes": 851348,
+      "sha256": "fc56f83750391acd9130c1ff6fb174863c53d617faf176bbe90ec755a9936c29",
+      "materials": [
+        "BirdRockLookout_Stone",
+        "BirdRockLookout_Accent",
+        "BirdRockLookout_Rock"
+      ],
+      "images": 1,
+      "license_note": "Original geometry and palette authored for this project; reference photograph not embedded or redistributed. Stylized interpretation, not measured replica.",
+      "procedural_normal": {
+        "image": "original_stone_normal.png",
+        "resolution": [
+          256,
+          256
+        ],
+        "origin": "Original periodic multiscale stochastic micro-relief generated with fixed NumPy seed92714; no photograph input",
+        "embedded_in_glb": true
+      }
+    },
+    {
+      "reference": "2D597ABA: dense spreading rain-tree-like broadleaf canopy and low arching gnarled limbs, not coconut palms.",
+      "collision_proxies": [
+        {
+          "type": "capsule",
+          "a_local_m": [
+            0,
+            0,
+            0
+          ],
+          "b_local_m": [
+            1.4,
+            5.2,
+            -0.05
+          ],
+          "radius_m": 0.96,
+          "part": "lower primary trunk"
+        },
+        {
+          "type": "capsule",
+          "a_local_m": [
+            1.4,
+            5.2,
+            -0.05
+          ],
+          "b_local_m": [
+            5.8,
+            9.1,
+            -0.35
+          ],
+          "radius_m": 0.65,
+          "part": "upper primary trunk"
+        },
+        {
+          "type": "obb",
+          "center_local_m": [
+            0,
+            0.22,
+            0
+          ],
+          "half_extents_m": [
+            2.2,
+            0.35,
+            1.8
+          ],
+          "part": "flared root buttresses"
+        }
+      ],
+      "foliage_collision": false,
+      "leaf_material": "RainTree_Leaf",
+      "wind_contract": "Existing /leaf|frond|grass/i material match; material vertex heights are root-local, crown starts ~8m. Strength .07m is suitable. No whole-trunk sway.",
+      "placement_note": "Set trunk at canal bank, rotate +X arch toward water; broad crown overlaps opposite tree visually, not road collider.",
+      "asset": "CanalRainTree",
+      "file": "assets/web/CanalRainTree.glb",
+      "root": "CanalRainTree",
+      "source": "assets/landscape_reference_kit/CanalRainTree.blend",
+      "generator": "blender/build_landscape_reference_kit.py",
+      "coordinates": "meters: Blender +X forward +Y left +Z up; GLB +X forward +Y up -Z left",
+      "root_pivot": "ground Y=0",
+      "bounds_local_m": {
+        "min": [
+          -12.208428382873535,
+          -0.11411195993423462,
+          -14.467047691345215
+        ],
+        "max": [
+          16.44404411315918,
+          14.207056999206543,
+          13.840168952941895
+        ]
+      },
+      "dimensions_xyz_m": [
+        28.652472496032715,
+        14.321168959140778,
+        28.30721664428711
+      ],
+      "triangles": 13856,
+      "draw_calls": 2,
+      "bytes": 896688,
+      "sha256": "eeeb6fa9b3daa71a96544b8509e83bd41da156da0c50697ea232d0d048c7840c",
+      "materials": [
+        "RainTree_Bark",
+        "RainTree_Leaf"
+      ],
+      "images": 0,
+      "license_note": "Original geometry and palette authored for this project; reference photograph not embedded or redistributed. Stylized interpretation, not measured replica."
+    },
+    {
+      "reference": "2D597ABA: small narrow open boats under curved pale woven canopies, original scenic shikara interpretation.",
+      "collision_proxies": [
+        {
+          "type": "obb",
+          "center_local_m": [
+            0.07418680191040039,
+            0.9645000100135803,
+            0.07744085788726807
+          ],
+          "half_extents_m": [
+            4.171014308929443,
+            1.5945000052452087,
+            1.3074296712875366
+          ],
+          "part": "conservative whole boat including canopy and stowed oar"
+        }
+      ],
+      "pivot": "waterline Y=0",
+      "wake_socket_local_m": [
+        -4.05,
+        0,
+        0
+      ],
+      "motion": "Rigid scenic root; no articulated riders or marine dynamics.",
+      "asset": "CanalShikara",
+      "file": "assets/web/CanalShikara.glb",
+      "root": "CanalShikara",
+      "source": "assets/landscape_reference_kit/CanalShikara.blend",
+      "generator": "blender/build_landscape_reference_kit.py",
+      "coordinates": "meters: Blender +X forward +Y left +Z up; GLB +X forward +Y up -Z left",
+      "root_pivot": "waterline Y=0",
+      "bounds_local_m": {
+        "min": [
+          -4.096827507019043,
+          -0.6299999952316284,
+          -1.2299888134002686
+        ],
+        "max": [
+          4.245201110839844,
+          2.559000015258789,
+          1.3848705291748047
+        ]
+      },
+      "dimensions_xyz_m": [
+        8.342028617858887,
+        3.1890000104904175,
+        2.6148593425750732
+      ],
+      "triangles": 7320,
+      "draw_calls": 3,
+      "bytes": 388464,
+      "sha256": "2b4dc502eb3556a9a242843b08e1296903bd2d0c20a20584ebfb1eeebbc01f9d",
+      "materials": [
+        "CanalShikara_Textile",
+        "CanalShikara_Wood",
+        "CanalShikara_Hull"
+      ],
+      "images": 0,
+      "license_note": "Original geometry and palette authored for this project; reference photograph not embedded or redistributed. Stylized interpretation, not measured replica."
+    }
+  ],
+  "source_references": [
+    "reference-image-not-distributed",
+    "reference-image-not-distributed"
+  ],
+  "reference_note": "User pixels inspected directly. Photographs are visual study only and excluded from shipped assets."
+}

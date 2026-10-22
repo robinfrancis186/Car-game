@@ -1,0 +1,72 @@
+{
+  "asset": "ServiceShowroomBay",
+  "file": "ServiceShowroomBay.glb",
+  "native_source": "assets/showroom/ServiceShowroomBay.blend",
+  "native_collection": "ServiceShowroomBay",
+  "triangles": 8562,
+  "draws": 6,
+  "bytes": 585896,
+  "sha256": "6b32547cd521f44f50956281aa8cb82eb6448f00321e29937bde9352488e9bc9",
+  "axes": "glTF X forward, Y up; open front +Z; native Blender open front -Y",
+  "footprint_m": [
+    18,
+    14
+  ],
+  "floor_y": 0,
+  "stage_y": 0,
+  "stage_radius_m": 3.35,
+  "back_wall_z": -6.88,
+  "roof_beam_y": [
+    5.68,
+    6.02
+  ],
+  "lamp_anchors_three": [
+    [
+      1,
+      4.8,
+      2
+    ],
+    [
+      -3,
+      3,
+      -4
+    ],
+    [
+      -5.5,
+      5.3,
+      0
+    ],
+    [
+      0,
+      5.3,
+      0
+    ],
+    [
+      5.5,
+      5.3,
+      0
+    ]
+  ],
+  "safe_hero_cameras_three": [
+    [
+      7.5,
+      2.4,
+      8.2
+    ],
+    [
+      12.4,
+      3.5,
+      13.5
+    ]
+  ],
+  "materials": [
+    "Bay_Concrete",
+    "Bay_Steel",
+    "Bay_Teal",
+    "Bay_DarkFinish",
+    "Bay_LightStrip",
+    "Bay_SafetyAmber"
+  ],
+  "purpose": "Menu-only isolated car inspection bay. No race placement, physics or colliders. Emissive strips need scene lights to illuminate the car.",
+  "license": "Original procedural geometry/materials; no reference photos, downloaded textures or third-party model geometry."
+}
