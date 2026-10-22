@@ -1,1 +1,0 @@
-Original procedural geometry authored for this project, dedicated to CC0 1.0 Universal. No third-party model or texture data is included. Architectural inspiration does not imply operator affiliation. Keep OSM attribution separately for route-derived placement data.

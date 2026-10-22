@@ -1,26 +1,12 @@
-# Dependencies, builds, caches and local/private configuration
 node_modules
-dist/
-deliverables/
-__pycache__/
-*.py[cod]
 .env
 .env.*
-!.env.example
-.openai/
-.DS_Store
-*.blend1
-*.blend2
+coverage/
 *.log
-*.npz
-# Locally generated evidence and preview output
-previews/
-renders/
-web/tests/*metrics.json
-web/tests/ui-screenshots/
-web/tests/mac_screenshots/
-logs/
-# Reference media is not distributable source
-references/user_*/
-references/user_reference_library_ids.json
-research/
+*.tmp
+.DS_Store
+.openai/
+docs/network_evidence.json
+docs/v10_physics_metrics.json
+docs/water_validation.json
+docs/remote-smoke-receipt.json

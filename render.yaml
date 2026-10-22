@@ -1,0 +1,19 @@
+# Optional reviewed configuration; creating a service still requires authorized workspace and $0 cost guard.
+services:
+  - type: web
+    name: kerala-roadster-mp-alpha
+    runtime: node
+    region: singapore
+    plan: free
+    branch: multiplayer-public-alpha
+    buildCommand: npm ci --omit=dev --ignore-scripts
+    startCommand: npm start
+    autoDeployTrigger: 'off'
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 24.19.0
+      - key: PUBLIC_ALPHA
+        value: 'true'
