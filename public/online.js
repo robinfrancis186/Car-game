@@ -26842,7 +26842,8 @@ void main(){
   }
   var CoastRenderer = class {
     constructor(canvas, { onProgress = () => {
-    }, worldFile = "course_runtime.json" } = {}) {
+    }, worldFile = "course_runtime.json", collectibles = true } = {}) {
+      this.collectiblesEnabled = collectibles;
       this.worldFile = worldFile;
       this.canvas = canvas;
       this.onProgress = onProgress;
@@ -26914,7 +26915,7 @@ void main(){
       if (hasHighlandDetail) this.teaDetail = await (await fetch(assetURL("tea_detail_rows.json"))).json();
       const propNames = [...new Set(this.world.prop_instances.map((p) => p.asset))];
       const hasCanalDetail = propNames.includes("CanalRainTree");
-      const files = [.../* @__PURE__ */ new Set([...this.world.course_meshes.map((p) => p.file), ...propNames.map((n) => n + ".glb"), "car.glb", "car_silver.glb", "car_touring.glb", "police_lightbar.glb", "CheckpointGate.glb", "ServiceShowroomBay.glb", "ArcadeBoostNozzle.glb", "ArcadeCoin.glb", ...hasCanalDetail ? ["CanalRainTreeFar.glb"] : [], ...hasHighlandDetail ? ["HighlandShadeTreeNear.glb", "TeaLeafCluster.glb"] : [], ...(this.world.transit_routes || []).map((r) => r.asset + ".glb")])];
+      const files = [.../* @__PURE__ */ new Set([...this.world.course_meshes.map((p) => p.file), ...propNames.map((n) => n + ".glb"), "car.glb", "car_silver.glb", "car_touring.glb", "police_lightbar.glb", "CheckpointGate.glb", "ServiceShowroomBay.glb", "ArcadeBoostNozzle.glb", ...this.collectiblesEnabled ? ["ArcadeCoin.glb"] : [], ...hasCanalDetail ? ["CanalRainTreeFar.glb"] : [], ...hasHighlandDetail ? ["HighlandShadeTreeNear.glb", "TeaLeafCluster.glb"] : [], ...(this.world.transit_routes || []).map((r) => r.asset + ".glb")])];
       const loads = await Promise.all(files.map(async (file) => [file, (await loader.loadAsync(assetURL(file))).scene]));
       this.models = Object.fromEntries(loads);
       for (const entry of this.world.course_meshes) {
@@ -27022,7 +27023,7 @@ void main(){
       this.transit = (this.world.transit_routes || []).map((config) => new ScenicTransit(this.models[config.asset + ".glb"], config, this.scene));
       this.makeEffects();
       this.presentation = new RacingPresentation(this.scene);
-      this.collectibles = new RaceCollectibles(this.scene, this.models["ArcadeCoin.glb"]);
+      this.collectibles = this.collectiblesEnabled ? new RaceCollectibles(this.scene, this.models["ArcadeCoin.glb"]) : null;
       this.onProgress(1, "Ready. The road is yours.");
     }
     styleMaterial(m, course = false) {
@@ -29476,7 +29477,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
   }
   async function boot() {
     try {
-      renderer = new CoastRenderer($("game"), { worldFile: "course_runtime.json", onProgress: (_p, label) => text("loading", label) });
+      renderer = new CoastRenderer($("game"), { worldFile: "course_runtime.json", collectibles: false, onProgress: (_p, label) => text("loading", label) });
       await Promise.all([renderer.load(), validateWorldAssets(EXPECTED.assetHashes, (name) => new URL("/public/assets/" + name, location.origin).href)]);
       configureOnlineRenderer(renderer);
       if (endpoint) {

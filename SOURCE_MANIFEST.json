@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "identity": "v11.1-joint-reconstruction2-exact-origin-activation",
-  "createdUtc": "2026-10-23T07:38:15.444883+00:00",
+  "identity": "v11.1-joint-reconstruction2-bounded-runtime-warmup-patch",
+  "createdUtc": "2026-10-23T08:00:05.777025+00:00",
   "rootHashAlgorithm": "SHA256 sorted UTF8 path + NUL + decimal bytes + NUL + SHA256 + LF",
-  "sourceRootHash": "f7d693393676ff9523db2e1ec88eaf18ecfebdf9f105962e95b9cdfc92d3c49b",
+  "sourceRootHash": "4139078af382056f151bc31621a9d87d4d972c9a305c866326bc56d8715af382",
   "excludesSelf": "SOURCE_MANIFEST.json",
   "files": [
     {
@@ -23,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4503,
-      "sha256": "9003482aceeb7e396be96019f4523ba7c5bd39e7420920a216e4627b54cd10b4"
+      "bytes": 4656,
+      "sha256": "872356ff22e41f1e8e4d73e650649979bde13ae193a6eb5b088c2a77d7e7406e"
     },
     {
       "path": "client/client.mjs",
@@ -43,8 +43,8 @@
     },
     {
       "path": "client/main.mjs",
-      "bytes": 11487,
-      "sha256": "367fe5e4807541d65b955357398d8b290f9566985c1338e3efce9caf60e4e1d6"
+      "bytes": 11506,
+      "sha256": "6a18872872726bc950837a007083d44b90abb168ac58eb6d7ee881119b26e095"
     },
     {
       "path": "client/manifest-pin.mjs",
@@ -93,8 +93,8 @@
     },
     {
       "path": "docs/acceptance.md",
-      "bytes": 2354,
-      "sha256": "d76a436da7b10c10dbc83b8afcace987d41f592813d2d5d6a2be1c9d67b28fd0"
+      "bytes": 3693,
+      "sha256": "676e05d9afd0d3de3da31c99e29d6a8052be49abec16cb353231e68928e8b858"
     },
     {
       "path": "docs/activation-receipt.json",
@@ -108,18 +108,18 @@
     },
     {
       "path": "docs/client-module-evidence.json",
-      "bytes": 938,
-      "sha256": "2491cce8385e406dd194203bc1508a313c0e9094824c7ebf9b85d4aa81a82ee3"
+      "bytes": 937,
+      "sha256": "5615948a2deb445749162e0bc7c14d83605838cfbc2609f651c13d9ccd37fdd0"
     },
     {
       "path": "docs/handling_recovery_metrics.json",
       "bytes": 71078,
-      "sha256": "4ebeee7b7d72d5639d2d367819691e2238331c76ed9caffa2322f0ba5496af3c"
+      "sha256": "9bdf82cfb9c59993d27b188e438dafc4d7337ee581aefb66384acf4dc78415ae"
     },
     {
       "path": "docs/network_evidence.json",
-      "bytes": 1563,
-      "sha256": "7efdbb9cd806abef946156040b06349261db7c85251713878e17ed64624ea148"
+      "bytes": 1600,
+      "sha256": "505d09a89cda0c00bce359016d5349213e3dd5f535230df24448afc3efd09e23"
     },
     {
       "path": "docs/reconstruction-receipt.json",
@@ -130,6 +130,26 @@
       "path": "docs/reverse_crawl_metrics.json",
       "bytes": 17148,
       "sha256": "471973c1f36f49e3a5a11c760bf1065d2eecde216a82135bb75f3d4503ade1d1"
+    },
+    {
+      "path": "docs/runtime-cold-warm-profile.json",
+      "bytes": 5272,
+      "sha256": "f26df16cd8ec99557747395e61b3fdc38f2b63abe94b851d8ccd6477779e32ed"
+    },
+    {
+      "path": "docs/runtime-patch-receipt.json",
+      "bytes": 3293,
+      "sha256": "f56632fd4246c92dfaf118ab9076f7cef3759d6c90ab3cdfe7daf983a037f095"
+    },
+    {
+      "path": "docs/runtime-production-smoke.json",
+      "bytes": 395,
+      "sha256": "e2808abec361863b1104283f62c2c2941953fb390a543dc19ba1011403872eb7"
+    },
+    {
+      "path": "docs/runtime-warmup-local.json",
+      "bytes": 231,
+      "sha256": "0c9c600eab0c55702ce32b94981c1db98e3cad96ca01c35b976fc32d148a9431"
     },
     {
       "path": "docs/water_validation.json",
@@ -168,8 +188,8 @@
     },
     {
       "path": "game/scene.js",
-      "bytes": 36116,
-      "sha256": "925a9c376812ac22a1451045cbb924ea438cc9c2021c0ea777788f19f317ed95"
+      "bytes": 36237,
+      "sha256": "16655a11444a4bfd62e27cf45f317925315451a11f49d47a4030dadaac47d429"
     },
     {
       "path": "game/tea-placement.js",
@@ -199,7 +219,7 @@
     {
       "path": "public-manifest.json",
       "bytes": 10064,
-      "sha256": "36cb4578b374ef98b0cef5b615f60fc80f1c82793d5f757bc6076e19c18a9408"
+      "sha256": "8652c07aa458ad4295cec6dab7de44d8652cae73eddf07fa43a8ee4622ee0af4"
     },
     {
       "path": "public/assets/ArcadeBoostNozzle.glb",
@@ -438,8 +458,8 @@
     },
     {
       "path": "public/online.js",
-      "bytes": 1316719,
-      "sha256": "8f168e7b651c79d761b466ed8cf199bf390a92e8d8ceae73648b4aa262a8a2d8"
+      "bytes": 1316879,
+      "sha256": "f3e79cf97de11e2606017e07a80f5ead6a689f6daa7e45aaf96e05dc1f434c61"
     },
     {
       "path": "server/data.mjs",
@@ -448,8 +468,8 @@
     },
     {
       "path": "server/index.mjs",
-      "bytes": 510,
-      "sha256": "8716ab4722fd85b648c99efd4087b7a0978fb713a31bdd3553a43642618778fb"
+      "bytes": 649,
+      "sha256": "6e3eff220a079fb58bd65033c0c2fb8632b064896d6fe3b82845032a9fb219fa"
     },
     {
       "path": "server/ingress.mjs",
@@ -458,13 +478,18 @@
     },
     {
       "path": "server/service.mjs",
-      "bytes": 14155,
-      "sha256": "5461824185e3fd9d7b8c8a94d427591774b28f75b652519db57b8483c6b9de83"
+      "bytes": 15037,
+      "sha256": "aa887000bbe978ab3709609a07c3596191786632c99151fc237cbb9e9bb38c5e"
     },
     {
       "path": "server/static-assets.mjs",
       "bytes": 5779,
       "sha256": "771fe68f37ed9cf9dabb53a526085e22f7e401146fbece724ded140401b881fc"
+    },
+    {
+      "path": "server/warmup.mjs",
+      "bytes": 1549,
+      "sha256": "961024a907caed1ede46868942f6d011f6d28bd7231316b0730be26ce84476be"
     },
     {
       "path": "shared/gameplay.js",
@@ -552,6 +577,11 @@
       "sha256": "569aee8ae0c38e563fca0623b3d4464b3eafba71ecb6e9dd37a20f5f16b514e3"
     },
     {
+      "path": "test/runtime-warmup.test.mjs",
+      "bytes": 3719,
+      "sha256": "e2d99b0f725c67209cdd62f099fd25114c7bd57d2ae02b8b65c9dcb75adcaa7d"
+    },
+    {
       "path": "test/security.test.mjs",
       "bytes": 2694,
       "sha256": "d311d4e36c539c51e062269d583333a7365fe73627760380bb7f519fdf3a5766"
@@ -610,6 +640,11 @@
       "path": "tests/joint-parity.test.mjs",
       "bytes": 5419,
       "sha256": "29124432835533defb33ed87a409687bc9e3bca94d908f8ff4d9a602803410f8"
+    },
+    {
+      "path": "tests/online-assets.test.mjs",
+      "bytes": 2397,
+      "sha256": "c7714d66a0edba445b48c0c563c39646ac1159c2be7d3221a5b0960719eb27ef"
     },
     {
       "path": "tests/parity-fixture.mjs",

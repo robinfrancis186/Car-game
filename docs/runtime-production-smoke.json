@@ -1,0 +1,16 @@
+{
+  "scope": "Production-only install and actual startup entrypoint loopback smoke",
+  "root": 200,
+  "health": 200,
+  "protocol": 2,
+  "physics": "v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50",
+  "warmupBeforeReady": true,
+  "startup": {
+    "event": "runtime-warmup-complete",
+    "steps": 600,
+    "drivers": 2,
+    "wallMs": 505.197,
+    "cpuMs": 739.512,
+    "maxBatchMs": 33.156
+  }
+}

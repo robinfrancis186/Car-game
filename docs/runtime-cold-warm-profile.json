@@ -1,0 +1,264 @@
+{
+  "scope": "Local CPU benchmark of identical full-course stock two-seat physics and snapshot serialization, ten1-second batches per world; 3 worlds sequentially in one Node process. Not Render hardware evidence. No live room or token data.",
+  "driver": "Each step follows route7m ahead with throttle below13m/s, brake above15m/s; no boost/recover. Same driver script before/after.",
+  "measurements": [
+    {
+      "run": 0,
+      "batch": 0,
+      "simulatedSeconds": 1,
+      "wallMs": 58.572,
+      "cpuMs": 111.637,
+      "peakStepMs": 7.924
+    },
+    {
+      "run": 0,
+      "batch": 1,
+      "simulatedSeconds": 1,
+      "wallMs": 41.861,
+      "cpuMs": 54.993,
+      "peakStepMs": 1.557
+    },
+    {
+      "run": 0,
+      "batch": 2,
+      "simulatedSeconds": 1,
+      "wallMs": 38.188,
+      "cpuMs": 55.043,
+      "peakStepMs": 1.444
+    },
+    {
+      "run": 0,
+      "batch": 3,
+      "simulatedSeconds": 1,
+      "wallMs": 46.154,
+      "cpuMs": 50.689,
+      "peakStepMs": 1.789
+    },
+    {
+      "run": 0,
+      "batch": 4,
+      "simulatedSeconds": 1,
+      "wallMs": 44.646,
+      "cpuMs": 62.419,
+      "peakStepMs": 1.111
+    },
+    {
+      "run": 0,
+      "batch": 5,
+      "simulatedSeconds": 1,
+      "wallMs": 43.543,
+      "cpuMs": 50.111,
+      "peakStepMs": 1.183
+    },
+    {
+      "run": 0,
+      "batch": 6,
+      "simulatedSeconds": 1,
+      "wallMs": 43.638,
+      "cpuMs": 54.374,
+      "peakStepMs": 1.039
+    },
+    {
+      "run": 0,
+      "batch": 7,
+      "simulatedSeconds": 1,
+      "wallMs": 85.809,
+      "cpuMs": 97.509,
+      "peakStepMs": 19.926
+    },
+    {
+      "run": 0,
+      "batch": 8,
+      "simulatedSeconds": 1,
+      "wallMs": 59.917,
+      "cpuMs": 104.875,
+      "peakStepMs": 1.711
+    },
+    {
+      "run": 0,
+      "batch": 9,
+      "simulatedSeconds": 1,
+      "wallMs": 49.933,
+      "cpuMs": 50.081,
+      "peakStepMs": 1.396
+    },
+    {
+      "run": 0,
+      "constructorWallMs": 12.030390000000011,
+      "cpuMs": 739.533,
+      "totalWallMs": 577.774716
+    },
+    {
+      "run": 1,
+      "batch": 0,
+      "simulatedSeconds": 1,
+      "wallMs": 42.299,
+      "cpuMs": 80.724,
+      "peakStepMs": 2.405
+    },
+    {
+      "run": 1,
+      "batch": 1,
+      "simulatedSeconds": 1,
+      "wallMs": 31.029,
+      "cpuMs": 31.403,
+      "peakStepMs": 1.223
+    },
+    {
+      "run": 1,
+      "batch": 2,
+      "simulatedSeconds": 1,
+      "wallMs": 32.668,
+      "cpuMs": 46.058,
+      "peakStepMs": 0.91
+    },
+    {
+      "run": 1,
+      "batch": 3,
+      "simulatedSeconds": 1,
+      "wallMs": 37.354,
+      "cpuMs": 37.45,
+      "peakStepMs": 0.876
+    },
+    {
+      "run": 1,
+      "batch": 4,
+      "simulatedSeconds": 1,
+      "wallMs": 39.352,
+      "cpuMs": 44.185,
+      "peakStepMs": 1.607
+    },
+    {
+      "run": 1,
+      "batch": 5,
+      "simulatedSeconds": 1,
+      "wallMs": 43.567,
+      "cpuMs": 43.656,
+      "peakStepMs": 1.321
+    },
+    {
+      "run": 1,
+      "batch": 6,
+      "simulatedSeconds": 1,
+      "wallMs": 49.728,
+      "cpuMs": 49.823,
+      "peakStepMs": 2.728
+    },
+    {
+      "run": 1,
+      "batch": 7,
+      "simulatedSeconds": 1,
+      "wallMs": 45.74,
+      "cpuMs": 46.06,
+      "peakStepMs": 1.364
+    },
+    {
+      "run": 1,
+      "batch": 8,
+      "simulatedSeconds": 1,
+      "wallMs": 49.606,
+      "cpuMs": 49.732,
+      "peakStepMs": 1.382
+    },
+    {
+      "run": 1,
+      "batch": 9,
+      "simulatedSeconds": 1,
+      "wallMs": 52.423,
+      "cpuMs": 52.514,
+      "peakStepMs": 3.146
+    },
+    {
+      "run": 1,
+      "constructorWallMs": 5.852937999999995,
+      "cpuMs": 492.802,
+      "totalWallMs": 483.525626
+    },
+    {
+      "run": 2,
+      "batch": 0,
+      "simulatedSeconds": 1,
+      "wallMs": 39.414,
+      "cpuMs": 41.25,
+      "peakStepMs": 2.484
+    },
+    {
+      "run": 2,
+      "batch": 1,
+      "simulatedSeconds": 1,
+      "wallMs": 31.836,
+      "cpuMs": 31.946,
+      "peakStepMs": 0.999
+    },
+    {
+      "run": 2,
+      "batch": 2,
+      "simulatedSeconds": 1,
+      "wallMs": 30.315,
+      "cpuMs": 32.103,
+      "peakStepMs": 0.746
+    },
+    {
+      "run": 2,
+      "batch": 3,
+      "simulatedSeconds": 1,
+      "wallMs": 37.836,
+      "cpuMs": 38.706,
+      "peakStepMs": 0.952
+    },
+    {
+      "run": 2,
+      "batch": 4,
+      "simulatedSeconds": 1,
+      "wallMs": 40.2,
+      "cpuMs": 40.288,
+      "peakStepMs": 1.564
+    },
+    {
+      "run": 2,
+      "batch": 5,
+      "simulatedSeconds": 1,
+      "wallMs": 41.472,
+      "cpuMs": 41.605,
+      "peakStepMs": 1.08
+    },
+    {
+      "run": 2,
+      "batch": 6,
+      "simulatedSeconds": 1,
+      "wallMs": 43.14,
+      "cpuMs": 43.251,
+      "peakStepMs": 1.146
+    },
+    {
+      "run": 2,
+      "batch": 7,
+      "simulatedSeconds": 1,
+      "wallMs": 45.21,
+      "cpuMs": 45.36,
+      "peakStepMs": 1.181
+    },
+    {
+      "run": 2,
+      "batch": 8,
+      "simulatedSeconds": 1,
+      "wallMs": 47.682,
+      "cpuMs": 47.782,
+      "peakStepMs": 1.104
+    },
+    {
+      "run": 2,
+      "batch": 9,
+      "simulatedSeconds": 1,
+      "wallMs": 46.04,
+      "cpuMs": 46.077,
+      "peakStepMs": 1.05
+    },
+    {
+      "run": 2,
+      "constructorWallMs": 4.53429600000004,
+      "cpuMs": 418.871,
+      "totalWallMs": 459.47665800000004
+    }
+  ]
+}

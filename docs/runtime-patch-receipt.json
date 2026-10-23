@@ -1,0 +1,56 @@
+{
+  "identity": "v11.1-joint-reconstruction2-bounded-runtime-warmup-patch",
+  "createdUtc": "2026-10-23T07:59:24.045266+00:00",
+  "baseCommit": "b8855dc2ef29ddefe9405355902ddd8b0fe2a613",
+  "baseSourceRootHash": "f7d693393676ff9523db2e1ec88eaf18ecfebdf9f105962e95b9cdfc92d3c49b",
+  "observedFailure": {
+    "scope": "Second public two-process RaceClient attempt only; first attempt discarded diagnostic state and its exact reason is unknown.",
+    "sharedStart": true,
+    "bothAck": 23,
+    "bothS": 2209.5414715675915,
+    "bothSpeed": 5.867358189619307,
+    "elapsed": 0.75,
+    "result": "both DNF / server-overload",
+    "causeEstablished": "Existing250ms accumulator fail-safe triggered after accepted controls and real car movement.",
+    "underlyingCause": "Unproven. Local cold/warm CPU reduction supports startup JIT as one plausible source; Free-provider scheduling/GC remains possible."
+  },
+  "changes": [
+    "600 discarded two-driver fixed simulation steps, yielding every12, before service timer/listener; 30s fail-closed startup bound",
+    "Allowlisted numeric startup and overload diagnostics only; overload logging max once/minute while active; public health still private",
+    "Renderer option collectibles:false used only online; original default true preserved, no coin loading online, all37GLBs scanned and only coin has embedded image"
+  ],
+  "unchanged": [
+    "250ms overload DNF fail-safe and60Hz fixed timestep",
+    "all Host/Origin/control-frame/payload/message/HTTP/static-byte/concurrency/room quotas",
+    "exact CSP (no new blob/data connect source)",
+    "all shared physics/model/data/asset bytes and protocol/physics/track pins",
+    "stock/noncontact/no-economy/no-solo-save behavior",
+    "existing endpoint singleton and credentials policy",
+    "all licences and third-party notices"
+  ],
+  "protocolVersion": 2,
+  "physicsVersion": "v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50",
+  "trackHash": "1b3bdbf06de3bb91414b00f6e62b524c4141c34febbd5e0b2bc9adf9f844720d",
+  "tests": {
+    "clientJointOriginAndAsset": 17,
+    "authorityHostingAndRuntime": 23,
+    "failed": 0,
+    "handlingRecovery": 175,
+    "reverseRateCases": 27,
+    "obstacleApproaches": 66,
+    "contactedReverseEscapes": 54,
+    "jointStockReverseCases": 9,
+    "waterRaycasts": 21229,
+    "waterMismatches": 0,
+    "productionOnlyInstallSmoke": "docs/runtime-production-smoke.json",
+    "runtimeGuardTest": "Injected290ms block causes both server-overload DNF, never a fake finish",
+    "noSoloStorageRegression": "passed"
+  },
+  "browserEvidence": {
+    "url": "https://kerala-roadster-multiplayer-alpha.onrender.com/",
+    "title": "Kerala Roadster \u00b7 Online Alpha",
+    "cloudChrome": "Actual page reached. WebGL context could not be created (GL_VENDOR/GL_RENDERER Disabled, BindToCurrentSequence failed); UI fails closed before asset load. No room entered.",
+    "coinCsp": "Static/source-confirmed blob fetch path; no reproduced CSP violation because cloud browser cannot createWebGL. Unused online texture dependency now skipped without broadening CSP."
+  },
+  "remaining": "Patch publication/manual deployment and real internet results still required. No claim warmup fixes Render until measured there. Browser/GPU/mobile/touch/two-human acceptance remain pending."
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "Local executor only. Not proof of Free Render timing; live acceptance pending.",
+  "event": "runtime-warmup-complete",
+  "steps": 600,
+  "drivers": 2,
+  "wallMs": 551.503,
+  "cpuMs": 781.563,
+  "maxBatchMs": 35.799
+}

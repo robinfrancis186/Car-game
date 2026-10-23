@@ -24,8 +24,8 @@ function groundOrientation(state){
  return new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().makeBasis(forward,up,right));
 }
 export class CoastRenderer{
- constructor(canvas,{onProgress=()=>{},worldFile='course_runtime.json'}={}){
-  this.worldFile=worldFile;this.canvas=canvas;this.onProgress=onProgress;this.scene=new THREE.Scene();this.scene.background=new THREE.Color('#aabec3');this.scene.fog=new THREE.FogExp2('#bac2bc',.00145);
+ constructor(canvas,{onProgress=()=>{},worldFile='course_runtime.json',collectibles=true}={}){
+  this.collectiblesEnabled=collectibles;this.worldFile=worldFile;this.canvas=canvas;this.onProgress=onProgress;this.scene=new THREE.Scene();this.scene.background=new THREE.Color('#aabec3');this.scene.fog=new THREE.FogExp2('#bac2bc',.00145);
   this.renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance'});
   this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.05;
   this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=THREE.PCFSoftShadowMap;
@@ -53,7 +53,7 @@ export class CoastRenderer{
   const hasHighlandDetail=this.world.id==='highlands';
   if(hasHighlandDetail)this.teaDetail=await(await fetch(assetURL('tea_detail_rows.json'))).json();
   const propNames=[...new Set(this.world.prop_instances.map(p=>p.asset))];const hasCanalDetail=propNames.includes('CanalRainTree');
-  const files=[...new Set([...this.world.course_meshes.map(p=>p.file),...propNames.map(n=>n+'.glb'),'car.glb','car_silver.glb','car_touring.glb','police_lightbar.glb','CheckpointGate.glb','ServiceShowroomBay.glb','ArcadeBoostNozzle.glb','ArcadeCoin.glb',...(hasCanalDetail?['CanalRainTreeFar.glb']:[]),...(hasHighlandDetail?['HighlandShadeTreeNear.glb','TeaLeafCluster.glb']:[]),...(this.world.transit_routes||[]).map(r=>r.asset+'.glb')])];
+  const files=[...new Set([...this.world.course_meshes.map(p=>p.file),...propNames.map(n=>n+'.glb'),'car.glb','car_silver.glb','car_touring.glb','police_lightbar.glb','CheckpointGate.glb','ServiceShowroomBay.glb','ArcadeBoostNozzle.glb',...(this.collectiblesEnabled?['ArcadeCoin.glb']:[]),...(hasCanalDetail?['CanalRainTreeFar.glb']:[]),...(hasHighlandDetail?['HighlandShadeTreeNear.glb','TeaLeafCluster.glb']:[]),...(this.world.transit_routes||[]).map(r=>r.asset+'.glb')])];
   const loads=await Promise.all(files.map(async file=>[file,(await loader.loadAsync(assetURL(file))).scene]));
   this.models=Object.fromEntries(loads);
   for(const entry of this.world.course_meshes){
@@ -87,7 +87,7 @@ export class CoastRenderer{
   ['#f3b83e','#e6e8de','#229ca9'].forEach(c=>this.addCar(c,false));this.addCar('#edf0ee',true);this.addCar('#23394b',true);
   this.waterSurface=[];for(const entry of this.world.course_meshes.filter(e=>/Water/i.test(e.file)))this.models[entry.file].traverse(o=>{if(o.isMesh&&materialList(o.material).some(m=>/ocean|water/i.test(m.name)))this.waterSurface.push(o);});this.scene.updateMatrixWorld(true);this.waterRay=new THREE.Raycaster();
   this.transit=(this.world.transit_routes||[]).map(config=>new ScenicTransit(this.models[config.asset+'.glb'],config,this.scene));
-  this.makeEffects();this.presentation=new RacingPresentation(this.scene);this.collectibles=new RaceCollectibles(this.scene,this.models['ArcadeCoin.glb']);this.onProgress(1,'Ready. The road is yours.');
+  this.makeEffects();this.presentation=new RacingPresentation(this.scene);this.collectibles=this.collectiblesEnabled?new RaceCollectibles(this.scene,this.models['ArcadeCoin.glb']):null;this.onProgress(1,'Ready. The road is yours.');
  }
  styleMaterial(m,course=false){
   if(m.userData.styled)return;m.userData.styled=true;

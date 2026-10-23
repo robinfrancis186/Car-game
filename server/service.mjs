@@ -13,6 +13,8 @@ const matchToken=(a,b)=>typeof b==='string'&&/^[A-Za-z0-9_-]{32}$/.test(b)&&timi
 export async function createService(options={}){
  const config={port:0,countdownTicks:180,reconnectMs:20000,inputTimeoutTicks:15,raceLimitTicks:60*180,roomIdleMs:15*60_000,resultRetentionMs:60_000,...options};
  const policy=ingress(options);let closing=false;
+ // Aggregate diagnostics only: no seat, room, input, token or address data.
+ let diagnosticAt=performance.now(),diagnosticCpu=process.cpuUsage(),lastOverloadLog=-Infinity;
  const packageRoot=new URL('../',import.meta.url);const publicAssets=await loadStaticAssets(packageRoot,await readStaticAllowlist(packageRoot));
  const manifest=getManifest(options.raceSlice),data=loadData(),rooms=new Map(),metrics={ticks:0,maxTickMs:0,invalidMessages:0,overloads:0,connections:0};let lastWall=performance.now(),accumulator=0;
  const httpServer=http.createServer({maxHeaderSize:8192,headersTimeout:10000,requestTimeout:10000,keepAliveTimeout:5000},(req,res)=>{
@@ -112,10 +114,14 @@ export async function createService(options={}){
    if(room.world.ticks>=config.raceLimitTicks||[...room.seats.values()].every(s=>s.dnf||['finished','failed'].includes(room.world.snapshot(s.id).state)))endRoom(room);
   }
   if(room.tick%3===0)broadcast(room);
- }metrics.maxTickMs=Math.max(metrics.maxTickMs,performance.now()-began);}
+ }metrics.lastTickMs=performance.now()-began;metrics.maxTickMs=Math.max(metrics.maxTickMs,metrics.lastTickMs);}
  const timer=setInterval(()=>{const now=performance.now(),delta=now-lastWall;lastWall=now;accumulator+=delta;
-  if(accumulator>250){metrics.overloads++;for(const room of rooms.values())if(['countdown','racing'].includes(room.status)){for(const s of room.seats.values())s.dnf||='server-overload';endRoom(room);}accumulator=0;return;}
+  if(accumulator>250){metrics.overloads++;
+   const activeRaces=[...rooms.values()].filter(room=>['countdown','racing'].includes(room.status)).length;
+   if(policy.publicMode&&activeRaces&&now-lastOverloadLog>=60000){const cpu=process.cpuUsage(diagnosticCpu),round=n=>Math.round(n*1000)/1000;lastOverloadLog=now;console.warn(JSON.stringify({event:'runtime-overload',loopDeltaMs:round(delta),backlogMs:round(accumulator),lastStepMs:round(metrics.lastTickMs||0),maxStepMs:round(metrics.maxTickMs),sampleWindowMs:round(now-diagnosticAt),cpuUserMs:round(cpu.user/1000),cpuSystemMs:round(cpu.system/1000),activeRaces,guardMs:250}));}
+   for(const room of rooms.values())if(['countdown','racing'].includes(room.status)){for(const s of room.seats.values())s.dnf||='server-overload';endRoom(room);}accumulator=0;return;}
   while(accumulator>=1000/60){accumulator-=1000/60;step();}
+  if(now-diagnosticAt>=1000){diagnosticAt=now;diagnosticCpu=process.cpuUsage();}
  },4);
  const heartbeat=setInterval(()=>{for(const ws of wss.clients){if(!ws.context.room&&performance.now()-ws.context.joinedAt>10000||policy.publicMode&&performance.now()-ws.context.joinedAt>20*60_000||!ws.alive){ws.terminate();continue;}ws.alive=false;ws.ping();}},5000);
  await new Promise((resolve,reject)=>{httpServer.once('error',reject);httpServer.listen(config.port,policy.host,()=>{httpServer.removeListener('error',reject);resolve();});}).catch(error=>{clearInterval(timer);clearInterval(heartbeat);wss.close();throw error;});
