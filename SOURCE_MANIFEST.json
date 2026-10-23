@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "identity": "v11.1-joint-reconstruction2-bounded-interruption-protocol3",
-  "createdUtc": "2026-10-23T09:36:04.442791+00:00",
+  "identity": "v11.1-protocol3-startup-diagnostics1",
+  "createdUtc": "2026-10-23T14:13:20.762915+00:00",
   "rootHashAlgorithm": "SHA256 sorted UTF8 path + NUL + decimal bytes + NUL + SHA256 + LF",
-  "sourceRootHash": "bb562a793b71921de935a77a26c72f03082c93fcc106acf04b64450442a37ea7",
+  "sourceRootHash": "4ae23df685a6f778a0ee2b653a668204302aad048b7915821262cce0a363460d",
   "excludesSelf": "SOURCE_MANIFEST.json",
   "files": [
     {
@@ -23,13 +23,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 5887,
-      "sha256": "16926f476c6effb7269d5832a63b845287b4108510d944d8348e0b92390b298e"
+      "bytes": 6728,
+      "sha256": "1d7b708d585aa19e37df4d562aa331be678f81638caa43f9f336213537452509"
     },
     {
       "path": "client/client.mjs",
-      "bytes": 10675,
-      "sha256": "2d141f82bf7f956aee5c717cfcc50ac02daac81240c555ecd422a0a95d3f7f57"
+      "bytes": 10719,
+      "sha256": "3e1621796383898abd3e7d0fd852363084491f8b777cc9769467901b77b47b04"
     },
     {
       "path": "client/deployment.mjs",
@@ -43,8 +43,8 @@
     },
     {
       "path": "client/main.mjs",
-      "bytes": 13488,
-      "sha256": "2c019d14a432bd042cceb94f6fc4021dc237e1c9ffa6580fcf0b98e0283e5307"
+      "bytes": 14408,
+      "sha256": "078de9e53b17edf9b777a09e95f20fa59778e60dba421b4d34a1b0af9a39c58e"
     },
     {
       "path": "client/manifest-pin.mjs",
@@ -57,14 +57,19 @@
       "sha256": "71b5d308b71a7fb2f70e4e0f2f1859844086847a6b60dca9da1a3b61e5ae32c9"
     },
     {
+      "path": "client/startup-diagnostics.mjs",
+      "bytes": 2131,
+      "sha256": "7fe0a427f735869f30afbae49dd9d3fb25ee4acd532de9bc1eff68dcd113ee2e"
+    },
+    {
       "path": "client/validation.mjs",
       "bytes": 7291,
       "sha256": "3a787f6c4d3188932e69f6db1c219c25a48fe660dfa34d7403723fb536b9f215"
     },
     {
       "path": "client/world-assets.mjs",
-      "bytes": 322,
-      "sha256": "41389671d7b7eb1c590e0ebdabc18d56f72a3c1743d36902b390a668010a53d4"
+      "bytes": 397,
+      "sha256": "121e986d7bfff8156e0000c42e4e351fd689747e3adff46de651cfdf7b943404"
     },
     {
       "path": "data/coastal_map_data.json",
@@ -182,6 +187,11 @@
       "sha256": "0c9c600eab0c55702ce32b94981c1db98e3cad96ca01c35b976fc32d148a9431"
     },
     {
+      "path": "docs/startup-diagnostic-receipt.json",
+      "bytes": 3186,
+      "sha256": "e8c24545bb84cfceff0dbb52de47a3db6b3aacc6578a5a9994d195393d1d9391"
+    },
+    {
       "path": "docs/water_validation.json",
       "bytes": 382,
       "sha256": "d2c9434b73ba5eedf1f627818dc1785d406f4257cb60bfcf58d7bcf83163847f"
@@ -245,11 +255,6 @@
       "path": "package.json",
       "bytes": 502,
       "sha256": "4313540ee33de1c45e0ef58131ee53b101fc6c03a369af28e62d3777def1c366"
-    },
-    {
-      "path": "public-manifest.json",
-      "bytes": 10064,
-      "sha256": "1de2c6265520ee087db7dbfe74b316c8bd12515a394901d340f039bf74f6315b"
     },
     {
       "path": "public/assets/ArcadeBoostNozzle.glb",
@@ -462,11 +467,6 @@
       "sha256": "b160cffaacf1a753d144bc71fb6bbfbcb749d585855fdcce9a6c6a185f0904c2"
     },
     {
-      "path": "public/licenses.html",
-      "bytes": 1208,
-      "sha256": "9582b7824c6a2e88fe95ebbbd576efa363a4bde4d29a75bfa9aa8220028550b9"
-    },
-    {
       "path": "public/licenses/THREE_LICENSE.txt",
       "bytes": 1081,
       "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
@@ -475,6 +475,11 @@
       "path": "public/licenses/WS-LICENSE.txt",
       "bytes": 1183,
       "sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef"
+    },
+    {
+      "path": "public/licenses.html",
+      "bytes": 1208,
+      "sha256": "9582b7824c6a2e88fe95ebbbd576efa363a4bde4d29a75bfa9aa8220028550b9"
     },
     {
       "path": "public/online.css",
@@ -488,8 +493,13 @@
     },
     {
       "path": "public/online.js",
-      "bytes": 1323263,
-      "sha256": "c186b7a6e88c3cba1108e4d1e2e8aa67b6878d7bf162b6c01b0c9f082eded535"
+      "bytes": 1326782,
+      "sha256": "8c8b9863874eb7cff419f2cb35ceebad811012f5a3c0b61aa08bb12d4fa080f8"
+    },
+    {
+      "path": "public-manifest.json",
+      "bytes": 10064,
+      "sha256": "f1baa47c47eab748c76a95aaf5861139ce2929c31c11534c301b6fa56fbf80b9"
     },
     {
       "path": "server/data.mjs",
@@ -710,6 +720,16 @@
       "path": "tests/scene-adapter.test.mjs",
       "bytes": 4348,
       "sha256": "9c82f1345abe508210c0ece870ffc232f372a5267ad2ceb84db49ffa838ee8ee"
+    },
+    {
+      "path": "tests/startup-diagnostics.test.mjs",
+      "bytes": 1703,
+      "sha256": "cf81f11857cff235fec2c4e6be6ade70d099bfea6df7f3dcdf17a1b7a790da5a"
+    },
+    {
+      "path": "tests/startup-entry.test.mjs",
+      "bytes": 8630,
+      "sha256": "a84c6d2eb1ba9b4d7b6c685efc4ccf2ec4a6a5ffd9615cfdfba2887cd1dc5cf3"
     },
     {
       "path": "tests/two-client.test.mjs",

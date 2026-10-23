@@ -1,4 +1,27 @@
 (() => {
+  // client/startup-diagnostics.mjs
+  var stages = /* @__PURE__ */ new Set(["renderer-create", "renderer-load", "asset-integrity", "renderer-config", "client-create", "manifest", "route", "adapter", "preview", "session-restore", "ready"]);
+  var codes = /* @__PURE__ */ new Set(["PROTOCOL_MISMATCH", "PHYSICS_MISMATCH", "TRACK_MISMATCH", "ROUTE_MISMATCH", "RACE_SLICE_MISMATCH", "WORLD_ASSET_MISMATCH", "RULES_MISMATCH", "CONNECTION_FAILED", "INVALID_ROUTE", "ENDPOINT_NOT_APPROVED"]);
+  var labels = { "renderer-create": "graphics setup", "renderer-load": "scene loading", "asset-integrity": "asset verification", "renderer-config": "online scene setup", "client-create": "network setup", manifest: "server manifest", route: "route verification", adapter: "online scene setup", preview: "coast preview", "session-restore": "session recovery", ready: "client setup" };
+  function startupFailure(stage, error) {
+    const phase = stages.has(error?.startupStage) ? error.startupStage : stages.has(stage) ? stage : "ready";
+    const code = codes.has(error?.message) ? error.message : error?.name === "TimeoutError" || error?.name === "AbortError" ? "TIMEOUT" : error?.name === "SyntaxError" ? "INVALID_JSON" : /WebGL|graphics context/i.test(String(error?.message || "")) ? "WEBGL_UNAVAILABLE" : error?.name === "TypeError" && /fetch|network|load failed/i.test(String(error?.message || "")) ? "NETWORK_ERROR" : "PREPARATION_ERROR";
+    const failure = { stage: phase, code };
+    if (Number.isSafeInteger(error?.httpStatus) && error.httpStatus >= 100 && error.httpStatus <= 599) failure.httpStatus = error.httpStatus;
+    return Object.freeze(failure);
+  }
+  function stageError(stage, error) {
+    const wrapped = new Error(error?.message || "PREPARATION_ERROR");
+    wrapped.name = error?.name || "Error";
+    wrapped.startupStage = stage;
+    if (Number.isSafeInteger(error?.httpStatus)) wrapped.httpStatus = error.httpStatus;
+    return wrapped;
+  }
+  function startupFailureText(failure) {
+    const code = failure.code + (failure.httpStatus ? " / HTTP " + failure.httpStatus : "");
+    return `${failure.code === "WEBGL_UNAVAILABLE" ? "WebGL2 unavailable" : "Client preparation failed"} at ${labels[failure.stage]} (${code}). No race has started. Reload to try again.`;
+  }
+
   // node_modules/three/build/three.module.js
   var REVISION = "170";
   var CullFaceNone = 0;
@@ -2171,10 +2194,10 @@
     angleTo(q) {
       return 2 * Math.acos(Math.abs(clamp(this.dot(q), -1, 1)));
     }
-    rotateTowards(q, step) {
+    rotateTowards(q, step2) {
       const angle3 = this.angleTo(q);
       if (angle3 === 0) return this;
-      const t = Math.min(1, step / angle3);
+      const t = Math.min(1, step2 / angle3);
       this.slerp(q, t);
       return this;
     }
@@ -19148,14 +19171,14 @@ void main() {
       _ray$1.copy(raycaster.ray).applyMatrix4(_inverseMatrix$1);
       const localThreshold = threshold / ((this.scale.x + this.scale.y + this.scale.z) / 3);
       const localThresholdSq = localThreshold * localThreshold;
-      const step = this.isLineSegments ? 2 : 1;
+      const step2 = this.isLineSegments ? 2 : 1;
       const index = geometry.index;
       const attributes = geometry.attributes;
       const positionAttribute = attributes.position;
       if (index !== null) {
         const start = Math.max(0, drawRange.start);
         const end = Math.min(index.count, drawRange.start + drawRange.count);
-        for (let i = start, l = end - 1; i < l; i += step) {
+        for (let i = start, l = end - 1; i < l; i += step2) {
           const a = index.getX(i);
           const b = index.getX(i + 1);
           const intersect2 = checkIntersection(this, raycaster, _ray$1, localThresholdSq, a, b);
@@ -19174,7 +19197,7 @@ void main() {
       } else {
         const start = Math.max(0, drawRange.start);
         const end = Math.min(positionAttribute.count, drawRange.start + drawRange.count);
-        for (let i = start, l = end - 1; i < l; i += step) {
+        for (let i = start, l = end - 1; i < l; i += step2) {
           const intersect2 = checkIntersection(this, raycaster, _ray$1, localThresholdSq, i, i + 1);
           if (intersect2) {
             intersects2.push(intersect2);
@@ -26352,8 +26375,8 @@ void main() {
         this.lastEvent = e.id;
         this.state.emit({ ...e, groundY: model.player.groundY });
       }
-      const step = menu || model.paused ? 0 : dt;
-      this.state.update(step);
+      const step2 = menu || model.paused ? 0 : dt;
+      this.state.update(step2);
       let si = 0, mi = 0, di = 0;
       for (const p2 of this.state.particles) {
         const fade = 1 - p2.age / p2.life;
@@ -26382,8 +26405,8 @@ void main() {
       this.debris.instanceMatrix.needsUpdate = true;
       const p = model.player, ground = effectBasis(p), body = effectBasis(p, false), { forward, side, position: now } = ground;
       const prev = this.previous;
-      if (step > 0 && !menu) {
-        const decel = prev ? (Math.abs(prev.speed) - Math.abs(p.speed)) / step : 0;
+      if (step2 > 0 && !menu) {
+        const decel = prev ? (Math.abs(prev.speed) - Math.abs(p.speed)) / step2 : 0;
         if (prev && p.grounded && !p.offRoad && Math.abs(p.speed) > 7 && (Math.abs(p.lateralSpeed) > 2.4 || decel > 6)) {
           for (const sign2 of [-1, 1]) {
             const a = prev.position.clone().addScaledVector(prev.side, 0.88 * sign2).addScaledVector(prev.forward, -1.3), b = now.clone().addScaledVector(side, 0.88 * sign2).addScaledVector(forward, -1.3), delta = b.clone().sub(a), length = delta.length();
@@ -26406,7 +26429,7 @@ void main() {
           const b = body.position.clone().addScaledVector(body.side, 0.65 * sign2).addScaledVector(body.forward, -2.2).addScaledVector(body.up, 0.55);
           this.trails.push({ a, b, age: 0 });
         }
-        for (const t of this.trails) t.age += step;
+        for (const t of this.trails) t.age += step2;
         this.trails = this.trails.filter((t) => t.age < 0.6).slice(-120);
         this.previous = { position: now, forward, side, body, speed: p.speed };
       }
@@ -26676,11 +26699,11 @@ void main(){
       if (this.disposed) return;
       const stopped = paused || menu || !active;
       const requested = !stopped && !!(state?.boosting || state?.ultraBoosting);
-      const step = Number.isFinite(dt) ? Math.max(0, Math.min(0.1, dt)) : 0;
+      const step2 = Number.isFinite(dt) ? Math.max(0, Math.min(0.1, dt)) : 0;
       if (stopped) this.strength = 0;
-      else this.strength += (Number(requested) - this.strength) * (1 - Math.exp(-step * (requested ? 28 : 25)));
+      else this.strength += (Number(requested) - this.strength) * (1 - Math.exp(-step2 * (requested ? 28 : 25)));
       if (this.strength < 1e-3) this.strength = 0;
-      if (!paused) this.clock = Number.isFinite(time2) ? time2 : this.clock + step;
+      if (!paused) this.clock = Number.isFinite(time2) ? time2 : this.clock + step2;
       if (requested) this.mode = state.ultraBoosting ? "ultra" : "regular";
       const colors = BOOST_FIRE_COLORS[this.mode], ultra = this.mode === "ultra", speed = Math.min(1, Math.abs(state?.speed || 0) / 90);
       const pulse = 0.94 + 0.06 * Math.sin(this.clock * 37), length = (ultra ? 1.45 + 0.3 * speed : 0.72 + 0.24 * speed) * pulse;
@@ -27633,10 +27656,10 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
   };
   var normalizeTerrainGrid = (g) => {
     if (!g) return null;
-    const origin = g.origin, step = g.step || [g.cell_size_m, g.cell_size_m], count = g.count || [g.columns, g.rows];
-    if (!Array.isArray(origin) || !origin.every(Number.isFinite) || origin.length !== 2 || !Array.isArray(step) || step.length !== 2 || !step.every((v) => Number.isFinite(v) && v > 0) || !Array.isArray(count) || count.length !== 2 || !count.every((v) => Number.isInteger(v) && v >= 2) || !Array.isArray(g.heights) || g.heights.length !== count[0] * count[1] || !g.heights.every(Number.isFinite)) throw new TypeError("Invalid terrain grid: finite origin/step, integer count and row-major heights required");
+    const origin = g.origin, step2 = g.step || [g.cell_size_m, g.cell_size_m], count = g.count || [g.columns, g.rows];
+    if (!Array.isArray(origin) || !origin.every(Number.isFinite) || origin.length !== 2 || !Array.isArray(step2) || step2.length !== 2 || !step2.every((v) => Number.isFinite(v) && v > 0) || !Array.isArray(count) || count.length !== 2 || !count.every((v) => Number.isInteger(v) && v >= 2) || !Array.isArray(g.heights) || g.heights.length !== count[0] * count[1] || !g.heights.every(Number.isFinite)) throw new TypeError("Invalid terrain grid: finite origin/step, integer count and row-major heights required");
     if (g.diagonal && !["sw-ne", "v00-v11", "00-11"].includes(g.diagonal)) throw new TypeError("Terrain grid must use the v00-v11 diagonal");
-    return { origin: [...origin], step: [...step], count: [...count], heights: g.heights, diagonal: "v00-v11" };
+    return { origin: [...origin], step: [...step2], count: [...count], heights: g.heights, diagonal: "v00-v11" };
   };
   var sampleTerrainGrid = (g, x, z) => {
     const [nx, nz] = g.count, [dx, dz] = g.step, ux = (x - g.origin[0]) / dx, vz = (z - g.origin[1]) / dz, inside = ux >= 0 && vz >= 0 && ux <= nx - 1 && vz <= nz - 1;
@@ -28965,7 +28988,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
     }
     async prepare() {
       const response = await this.fetch(this.endpoint.origin + "/manifest", { cache: "no-store", signal: AbortSignal.timeout(15e3) });
-      if (!response.ok) throw Error("CONNECTION_FAILED");
+      if (!response.ok) throw Object.assign(Error("CONNECTION_FAILED"), { httpStatus: response.status });
       const raw = await response.text();
       if (raw.length > 2e6) throw Error("INVALID_ROUTE");
       this.manifest = await validateManifest(JSON.parse(raw), this.expected);
@@ -29344,7 +29367,8 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
   async function validateWorldAssets(hashes, url) {
     for (const [name, expected] of Object.entries(hashes)) {
       const r = await fetch(url(name), { cache: "no-store", signal: AbortSignal.timeout(2e4) });
-      if (!r.ok || await sha256(await r.arrayBuffer()) !== expected) throw Error("WORLD_ASSET_MISMATCH");
+      if (!r.ok) throw Object.assign(Error("WORLD_ASSET_MISMATCH"), { httpStatus: r.status });
+      if (await sha256(await r.arrayBuffer()) !== expected) throw Error("WORLD_ASSET_MISMATCH");
     }
   }
 
@@ -29357,6 +29381,15 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
     $(id).hidden = !v;
   };
   var time = (n) => `${String(Math.floor(Math.max(0, n) / 60)).padStart(2, "0")}:${(Math.max(0, n) % 60).toFixed(2).padStart(5, "0")}`;
+  var startup = { stage: "renderer-create", status: "preparing", failure: null };
+  var step = async (stage, task) => {
+    startup.stage = stage;
+    try {
+      return await task();
+    } catch (error) {
+      throw stageError(stage, error);
+    }
+  };
   var endpoint = endpointForPage(location);
   var keys = /* @__PURE__ */ new Set();
   var held = /* @__PURE__ */ new Set();
@@ -29531,16 +29564,18 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
   }
   async function boot() {
     try {
-      renderer = new CoastRenderer($("game"), { worldFile: "course_runtime.json", collectibles: false, onProgress: (_p, label) => text("loading", label) });
-      await Promise.all([renderer.load(), validateWorldAssets(EXPECTED.assetHashes, (name) => new URL("/public/assets/" + name, location.origin).href)]);
-      configureOnlineRenderer(renderer);
+      renderer = await step("renderer-create", () => new CoastRenderer($("game"), { worldFile: "course_runtime.json", collectibles: false, onProgress: (_p, label) => {
+        if (startup.status === "preparing") text("loading", label);
+      } }));
+      await Promise.all([step("renderer-load", () => renderer.load()), step("asset-integrity", () => validateWorldAssets(EXPECTED.assetHashes, (name) => new URL("/public/assets/" + name, location.origin).href))]);
+      await step("renderer-config", () => configureOnlineRenderer(renderer));
       if (endpoint) {
         let storage = null;
         try {
           storage = sessionStorage;
         } catch {
         }
-        client = new RaceClient({ endpoint, storage });
+        client = await step("client-create", () => new RaceClient({ endpoint, storage }));
         client.on((e) => {
           if (e.type === "neutralize") clear();
           if (e.type === "status") {
@@ -29598,33 +29633,48 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
             buttons();
           }
         });
-        await client.prepare();
-        if (JSON.stringify(renderer.route.map((p) => [p.x, p.y, p.z])) !== JSON.stringify(client.manifest.route)) throw Error("ROUTE_MISMATCH");
+        await step("manifest", () => client.prepare());
+        await step("route", () => {
+          if (JSON.stringify(renderer.route.map((p) => [p.x, p.y, p.z])) !== JSON.stringify(client.manifest.route)) throw Error("ROUTE_MISMATCH");
+        });
         notify(location.protocol === "https:" ? "Approved endpoint and matching build verified. Experimental stock racing." : "Local developer server verified. Production activation is separately gated.");
       } else {
         text("connection", "PUBLIC ENDPOINT NOT APPROVED");
         notify("No approved endpoint here. Create/Join stay disabled; this preview is not an online race.");
       }
-      adapter = new OnlineRenderAdapter(renderer.route, EXPECTED.raceSlice);
-      preview = new GameModel(renderer.route);
+      adapter = await step("adapter", () => new OnlineRenderAdapter(renderer.route, EXPECTED.raceSlice));
+      preview = await step("preview", () => new GameModel(renderer.route));
       assetsReady = true;
       show("loading", false);
       $("camera").disabled = false;
       $("quality").disabled = false;
       client?.setLoaded(true);
       buttons();
-      client?.resumeStored();
+      await step("session-restore", () => client?.resumeStored());
+      startup.stage = "ready";
+      startup.status = "ready";
       requestAnimationFrame(frame);
     } catch (e) {
-      text("loading", /WebGL|graphics context/i.test(String(e)) ? "WebGL2 unavailable. No race has started." : "Client preparation failed. No race has started.");
-      notify(messages[e.message] || "Check matching build and browser graphics support.");
+      assetsReady = false;
+      startup.failure = startupFailure(startup.stage, e);
+      startup.stage = startup.failure.stage;
+      startup.status = "failed";
       client?.close();
+      buttons();
+      $("camera").disabled = true;
+      $("quality").disabled = true;
+      text("connection", "STARTUP FAILED");
+      const failureText = startupFailureText(startup.failure);
+      text("loading", failureText);
+      show("loading", true);
+      notify(messages[startup.failure.code] || failureText);
+      console.error("[Kerala startup]", { ...startup.failure });
     }
   }
   Object.defineProperty(window, "__KERALA_ONLINE__", { value: Object.freeze({ get ready() {
     return assetsReady;
   }, get diagnostics() {
-    return { assetsReady, endpointApproved: !!endpoint, network: client?.diagnostics || null, renderedHumanCars: adapter?.buffer.length ? 1 + adapter.model.rivals.length : 0 };
+    return { assetsReady, startup: { ...startup, failure: startup.failure ? { ...startup.failure } : null }, endpointApproved: !!endpoint, network: client?.diagnostics || null, renderedHumanCars: adapter?.buffer.length ? 1 + adapter.model.rivals.length : 0 };
   } }) });
   boot();
 })();

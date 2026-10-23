@@ -1,0 +1,72 @@
+{
+  "identity": "v11.1-protocol3-startup-diagnostics1",
+  "createdUtc": "2026-10-23T14:13:20.762915+00:00",
+  "kind": "diagnostic-only; not a confirmed root-cause fix",
+  "baseCommit": "afdfdb93006c9cdc448487cdf04184b4a7c59196",
+  "baseTree": "b317c98ea0aa843ee073fcf3837c780056058048",
+  "origin": "https://kerala-roadster-multiplayer-alpha.onrender.com",
+  "publication": "not published by this task",
+  "verifiedFindings": [
+    "Original catch renders a failure then client.close emits left/status and overwrites the failure notice with Left room / Offline.",
+    "Baseline regression is red on original entry, green on diagnostic patch.",
+    "Live /manifest at 2026-10-23T14:04:15Z was HTTP200 no-store/DYNAMIC; exact current validator and pins pass.",
+    "Live route equals renderer route; real adapter and preview construction pass.",
+    "CPU actual-entry harness with real RaceClient/validators/adapter/model reaches AVAILABLE/ready when matching manifest is supplied."
+  ],
+  "notEstablished": [
+    "Original native-browser startup exception, failing request/status and stack were not captured.",
+    "No confirmed root-cause startup correction.",
+    "No browser/GPU/human/public multiplayer acceptance for this patch."
+  ],
+  "servedManifest": {
+    "bytes": 90030,
+    "sha256": "8ce01c3bbdde950a265c4fd350760fa92a1364d1aca102a2048a9aa2b04eea6e",
+    "routePoints": 1525,
+    "validation": "passed exact EXPECTED and renderer route equality"
+  },
+  "changes": [
+    "Retain safe fixed startup phase/code plus bounded HTTP status after cleanup.",
+    "Expose a copy through existing diagnostics getter and a token-free console record.",
+    "Failure overlay contains diagnostic even when other UI is obscured.",
+    "Keep all join and graphics controls disabled on failure; prevent late scene progress from overwriting it."
+  ],
+  "tests": {
+    "build": "passed;48 public files",
+    "client": {
+      "passed": 37,
+      "failed": 0
+    },
+    "authority": {
+      "passed": 32,
+      "failed": 0
+    },
+    "handlingRecovery": {
+      "passed": 175,
+      "failed": 0
+    },
+    "reverseCrawl": "passed 27 car/surface/grade cases at 30/60/120Hz and 66 authored obstacle approaches",
+    "water": {
+      "samples": 21229,
+      "mismatches": 0
+    },
+    "baselineRed": "Original entry timeout regression fails OFFLINE != STARTUP FAILED; same scenario passes patched entry."
+  },
+  "review": {
+    "result": "no blocking findings for diagnostic-only patch",
+    "reviewerScope": "independent implementation reviewer authored the new actual-entry regression tests, not implementation",
+    "minorFinding": "client constructor phase was labeled preceding scene stage; corrected with client-create step and regression"
+  },
+  "unchangedProtectedFiles": 79,
+  "preserved": [
+    "physics",
+    "coins/solo saves",
+    "CSP",
+    "endpoint approval",
+    "manifest pins",
+    "validation rules",
+    "server authority and interruption/reconnect deadlines",
+    "assets",
+    "historical receipts"
+  ],
+  "remainingStep": "Publish only with coordinated parent approval; capture retained stage/code in native Chrome and diagnose that actual failure before claiming fixed."
+}

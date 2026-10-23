@@ -1,6 +1,12 @@
-# Kerala Roadster — V11.1 joint multiplayer / bounded interruption candidate
+# Kerala Roadster — V11.1 joint multiplayer / startup diagnostics candidate
 
 Actual Three.js client + authoritative two-driver WebSocket races. Not the old Canvas demo and not the seven-car solo app.
+
+## Startup diagnostic patch — not a root-cause fix
+
+The prior native-browser startup failure remains unexplained. This patch preserves a safe failure stage/code (and HTTP status when available) after cleanup instead of replacing it with Offline / Left room. It also prevents later asset progress from hiding the error. Diagnostics never include raw exceptions, response bodies, URLs, or session tokens. Create/Join remain disabled after failure; validation, graphics requirements, CSP, physics, server timing rules, and all existing deadlines are unchanged.
+
+Exact live manifest validation and CPU bootstrap passed; the cloud browser cannot create WebGL2 and cannot reproduce the later native-browser failure. This candidate is **diagnostic-only, not yet published or native-browser accepted**. See `docs/startup-diagnostic-receipt.json`.
 
 ## Provenance and status
 
