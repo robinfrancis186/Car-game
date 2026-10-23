@@ -1,0 +1,49 @@
+{
+  "scope": "Production RaceClient using deterministic monotonic clock and test sockets; real250ms watchdog and600ms retry timers. No remote room.",
+  "baseCommit": "6ad43ec4c2553e4d5086473b7fa6c7cb649fcbbc",
+  "before": {
+    "tests": 2,
+    "passed": 0,
+    "failed": 2,
+    "agedDisconnectNewSocketAttempts": 0,
+    "timedOutHandshakeNewSocketAttempts": 0,
+    "logSha256": "181563ca569e99b942c21d974376ba63983d089025f27d8e57b200435fdc1cfb",
+    "sanitizedTestOutput": [
+      "\u2716 old connected socket disconnect starts one backoff retry, not watchdog starvation (1121.535139ms)",
+      "\u2716 5s handshake timeout retries once after600ms, retaining original20s overall deadline (1764.920327ms)",
+      "\u2139 tests 2",
+      "\u2139 suites 0",
+      "\u2139 pass 0",
+      "\u2139 fail 2",
+      "\u2139 cancelled 0",
+      "\u2139 skipped 0",
+      "\u2139 todo 0",
+      "\u2139 duration_ms 3005.985743",
+      "\u2716 old connected socket disconnect starts one backoff retry, not watchdog starvation (1121.535139ms)",
+      "\u2716 5s handshake timeout retries once after600ms, retaining original20s overall deadline (1764.920327ms)"
+    ]
+  },
+  "after": {
+    "tests": 2,
+    "passed": 2,
+    "failed": 0,
+    "agedDisconnectNewSocketAttempts": 1,
+    "timedOutHandshakeNewSocketAttempts": 1,
+    "original20sDeadlineStillExpires": true,
+    "logSha256": "4a2aa1ac434948124ef2f1c859711af09ebbe9691818cb80e642325c3daade32",
+    "sanitizedTestOutput": [
+      "\u2714 old connected socket disconnect starts one backoff retry, not watchdog starvation (1126.793598ms)",
+      "\u2714 5s handshake timeout retries once after600ms, retaining original20s overall deadline (2716.438283ms)",
+      "\u2139 tests 2",
+      "\u2139 suites 0",
+      "\u2139 pass 2",
+      "\u2139 fail 0",
+      "\u2139 cancelled 0",
+      "\u2139 skipped 0",
+      "\u2139 todo 0",
+      "\u2139 duration_ms 3945.115258"
+    ]
+  },
+  "independentProcesses": "Existing actual two-process RaceClient/adapter lifecycle test additionally waits5200ms after movement before forced drop; same-seat reconnect, advancing clock, matching finished results and rematch pass.",
+  "runtimeDiff": "Only this.#socket&& added before connecting/reconnecting handshake timeout condition. No timeout values changed."
+}

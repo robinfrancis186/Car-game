@@ -6,7 +6,7 @@ Actual Three.js client + authoritative two-driver WebSocket races. Not the old C
 
 This is a **new reconstruction**, not a recovered copy of either lost unpublished candidate. Stable engine/renderer/assets originate from exact Sites19 V11.1 commit `0a5f07447719117a0084cffb9a525a1cd1e54ea3`; hardened authority originates from verified public-alpha commit `55067c6dc71f299bf9e35fee80b54dfc2d7ee8e1`. New source hashes and receipts are recorded separately. No frozen history is rewritten.
 
-**Runtime patch candidate:** exact-origin activation `b8855dc2ef29ddefe9405355902ddd8b0fe2a613` was deployed, but public acceptance exposed a server-overload DNF shortly after racing began. This separate patch prewarms discarded physics before readiness, adds aggregate diagnostics, and skips unused online coin rendering without changing CSP or the250ms fail-safe. It is **not yet verified to fix Free-host timing**. Only `https://kerala-roadster-multiplayer-alpha.onrender.com` is approved; arbitrary query/manifest endpoints remain rejected. See `docs/runtime-patch-receipt.json`.
+**Reconnect patch candidate:** prior runtime patch `6ad43ec4c2553e4d5086473b7fa6c7cb649fcbbc` completed a full public two-process race with matching finished results. Forced disconnect exposed a reproducible client watchdog bug that repeatedly cancelled the retry timer. This narrow patch applies the handshake watchdog only when a socket exists; all deadlines/backoff/security rules are unchanged. Local regressions pass; **this patch still needs public reconnect acceptance**. Only `https://kerala-roadster-multiplayer-alpha.onrender.com` is approved. See `docs/reconnect-patch-receipt.json`; historical runtime and activation receipts remain separate.
 
 ## Online rules
 

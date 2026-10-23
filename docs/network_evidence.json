@@ -1,31 +1,31 @@
 {
   "scope": "Loopback, automated independent Node client processes; not human/browser/GPU/internet acceptance",
-  "serverPid": 219,
+  "serverPid": 283,
   "clientPids": [
-    247,
-    255,
-    275
+    315,
+    323,
+    343
   ],
-  "sharedStartTick": 25,
+  "sharedStartTick": 28,
   "trackHash": "1b3bdbf06de3bb91414b00f6e62b524c4141c34febbd5e0b2bc9adf9f844720d",
   "physicsVersion": "v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50",
   "results": [
     {
-      "playerId": "dff02a36-21bb-4082-9adc-4647464fad07",
+      "playerId": "74381b14-614d-427f-a0a9-947c1113e51a",
       "name": "Network test A",
       "status": "finished",
       "reason": null,
-      "time": 8.70833333333348,
+      "time": 8.725000000000145,
       "penalties": 0,
       "checkpoints": 5,
       "rank": 1
     },
     {
-      "playerId": "5201fe27-4c81-473d-bfa2-ab38fe1b324c",
+      "playerId": "b35001c7-2245-4b89-888a-98ff9791def5",
       "name": "Network test B",
       "status": "finished",
       "reason": null,
-      "time": 8.841666666666805,
+      "time": 8.88333333333347,
       "penalties": 0,
       "checkpoints": 5,
       "rank": 2
@@ -35,12 +35,12 @@
   "metrics": {
     "status": "local-alpha",
     "rooms": 1,
-    "ticks": 656,
-    "maxTickMs": 6.908855000000017,
+    "ticks": 662,
+    "maxTickMs": 8.825133000000278,
     "invalidMessages": 17,
     "overloads": 0,
     "connections": 4,
-    "lastTickMs": 0.7074200000006385
+    "lastTickMs": 0.6917350000003353
   },
   "passed": [
     "both clients saw both moving authoritative cars",

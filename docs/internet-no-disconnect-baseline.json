@@ -1,0 +1,42 @@
+{
+  "scope": "Actual production RaceClient and OnlineRenderAdapter in two independent Node processes over public HTTPS/WSS. Automated acceptance controls, not browser/GPU/mobile/human driving.",
+  "began": "2026-10-23T08:42:11.519Z",
+  "completed": "2026-10-23T08:44:09.102Z",
+  "origin": "https://kerala-roadster-multiplayer-alpha.onrender.com",
+  "protocolVersion": 2,
+  "physicsVersion": "v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50",
+  "trackHash": "1b3bdbf06de3bb91414b00f6e62b524c4141c34febbd5e0b2bc9adf9f844720d",
+  "serverResults": [
+    {
+      "status": "finished",
+      "time": 91.55833333335227,
+      "checkpoints": 10,
+      "rank": 1,
+      "reason": null
+    },
+    {
+      "status": "finished",
+      "time": 92.03333333335264,
+      "checkpoints": 10,
+      "rank": 2,
+      "reason": null
+    }
+  ],
+  "checks": [
+    "TLS certificate verification",
+    "two distinct seats",
+    "shared authoritative start/epoch",
+    "remote car movement and acknowledged controls",
+    "no coins/police/pause/local simulation",
+    "regressive state rejection",
+    "token-free events",
+    "same server results",
+    "rematch epoch reset"
+  ],
+  "roomCleanup": "clients close in waiting lobby; disconnected seats expire within20 seconds",
+  "commit": "6ad43ec4c2553e4d5086473b7fa6c7cb649fcbbc",
+  "forcedReconnectTested": false,
+  "reconnectStatus": "Failed separate forced-drop attempt; production watchdog starvation independently reproduced. No reconnect acceptance claim.",
+  "baseCommit": "6ad43ec4c2553e4d5086473b7fa6c7cb649fcbbc",
+  "explicitLimitation": "No forced disconnect in this run. Does not validate reconnect or this new client patch; browser/GPU/human driving remain separate."
+}

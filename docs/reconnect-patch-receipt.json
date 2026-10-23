@@ -1,0 +1,44 @@
+{
+  "identity": "v11.1-joint-reconstruction2-reconnect-watchdog-patch",
+  "createdUtc": "2026-10-23T08:46:37.083559+00:00",
+  "baseCommit": "6ad43ec4c2553e4d5086473b7fa6c7cb649fcbbc",
+  "baseSourceRootHash": "4139078af382056f151bc31621a9d87d4d972c9a305c866326bc56d8715af382",
+  "reproducedCause": "After a connection older than5s drops, reconnecting status plus old attemptAt makes250ms watchdog reset600ms retry despite no socket. No new socket is attempted before20s deadline. Same starvation follows a timed-out handshake.",
+  "fix": "Run5s handshake timeout only while an actual pending socket exists. Backoff is no longer mistaken for a pending handshake.",
+  "unchanged": [
+    "5s per-handshake timeout",
+    "600ms retry delay",
+    "20s overall reconnect deadline and server seat window",
+    "3s stalled-snapshot detection and500ms input stale gate",
+    "all authority/server/ingress/CSP/quota/overload/warmup/physics/asset bytes",
+    "stock2seat noncontact/no-economy/solo-profile isolation",
+    "protocol/physics/track and exact-origin pins",
+    "private session/token boundaries, rotated tokens and rejected stale state",
+    "licenses and third-party notices"
+  ],
+  "protocolVersion": 2,
+  "physicsVersion": "v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50",
+  "trackHash": "1b3bdbf06de3bb91414b00f6e62b524c4141c34febbd5e0b2bc9adf9f844720d",
+  "tests": {
+    "redBefore": {
+      "failed": 2,
+      "passed": 0
+    },
+    "greenAfter": {
+      "failed": 0,
+      "passed": 2
+    },
+    "allClientJointOriginAssetReconnect": 19,
+    "authorityHostingRuntime": 23,
+    "failures": 0,
+    "handlingRecovery": 175,
+    "reverseRateCases": 27,
+    "obstacleApproaches": 66,
+    "contactedReverseEscapes": 54,
+    "waterRaycasts": 21229,
+    "waterMismatches": 0,
+    "agedConnectionIndependentProcesses": "passed with additional5200ms delay before disconnect"
+  },
+  "remoteStatus": "Prior runtime patch full no-disconnect race passed with both10gate finishes91.558/92.033s and same results/rematch. This reconnect patch requires new exact publication/manual deployment and public reconnect acceptance. Original failing remote attempt lacked per-socket timeline; source regression is proven, incident match is an inference.",
+  "browserStatus": "Cloud Chrome WebGL disabled before asset load. Browser/GPU/mobile/touch/human acceptance remains pending."
+}

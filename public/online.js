@@ -28900,7 +28900,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
           this.fail("RECONNECT_EXPIRED");
           return;
         }
-        if (["connecting", "reconnecting"].includes(this.status) && this.now() - this.#attemptAt > 5e3) {
+        if (this.#socket && ["connecting", "reconnecting"].includes(this.status) && this.now() - this.#attemptAt > 5e3) {
           this.#detach();
           this.#recover();
           return;

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "identity": "v11.1-joint-reconstruction2-bounded-runtime-warmup-patch",
-  "createdUtc": "2026-10-23T08:00:05.777025+00:00",
+  "identity": "v11.1-joint-reconstruction2-reconnect-watchdog-patch",
+  "createdUtc": "2026-10-23T08:47:13.821645+00:00",
   "rootHashAlgorithm": "SHA256 sorted UTF8 path + NUL + decimal bytes + NUL + SHA256 + LF",
-  "sourceRootHash": "4139078af382056f151bc31621a9d87d4d972c9a305c866326bc56d8715af382",
+  "sourceRootHash": "ae9fb608e6f2bb6708d9f705cc369758213fa20bdda1aff9c4ef7d131e06abfa",
   "excludesSelf": "SOURCE_MANIFEST.json",
   "files": [
     {
@@ -23,13 +23,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4656,
-      "sha256": "872356ff22e41f1e8e4d73e650649979bde13ae193a6eb5b088c2a77d7e7406e"
+      "bytes": 4727,
+      "sha256": "57b65fc56ee70c52534fefc4c7b499044875ee893ebe85aae551c08db39d8d42"
     },
     {
       "path": "client/client.mjs",
-      "bytes": 9750,
-      "sha256": "df5154eff260d240a94a54bd33300d18544b605e33faba121b7b354b0c67221f"
+      "bytes": 9764,
+      "sha256": "e98940e7f01ca7c44b337cb7ad71822becb320e00d792a06eb0a51a12d169f25"
     },
     {
       "path": "client/deployment.mjs",
@@ -93,8 +93,8 @@
     },
     {
       "path": "docs/acceptance.md",
-      "bytes": 3693,
-      "sha256": "676e05d9afd0d3de3da31c99e29d6a8052be49abec16cb353231e68928e8b858"
+      "bytes": 4824,
+      "sha256": "f0fc576609d9dcc76a149511589814143864a4f6baa63174a902bdb0d6cfa3ec"
     },
     {
       "path": "docs/activation-receipt.json",
@@ -108,18 +108,33 @@
     },
     {
       "path": "docs/client-module-evidence.json",
-      "bytes": 937,
-      "sha256": "5615948a2deb445749162e0bc7c14d83605838cfbc2609f651c13d9ccd37fdd0"
+      "bytes": 938,
+      "sha256": "1d7ad6f9916f11572dc3952d0a418eb07f66a3e077b16f3660e5bbbbab31a5eb"
     },
     {
       "path": "docs/handling_recovery_metrics.json",
       "bytes": 71078,
-      "sha256": "9bdf82cfb9c59993d27b188e438dafc4d7337ee581aefb66384acf4dc78415ae"
+      "sha256": "dbb46dd0c8ba06a1bdc4630d58f63b69bd74cf6a947204f8555cee702d46b4d7"
+    },
+    {
+      "path": "docs/internet-no-disconnect-baseline.json",
+      "bytes": 1710,
+      "sha256": "14c2b0e377fd981d7c1a8f0b1ecefd1d6f5ddc777f2f2f60b5e8a6940809ace3"
     },
     {
       "path": "docs/network_evidence.json",
       "bytes": 1600,
-      "sha256": "505d09a89cda0c00bce359016d5349213e3dd5f535230df24448afc3efd09e23"
+      "sha256": "24c078e3f23a31449dd8dc8d1b877c2a91af12cbd8c2cd27252ca734a5f7f256"
+    },
+    {
+      "path": "docs/reconnect-patch-receipt.json",
+      "bytes": 2370,
+      "sha256": "63e6139e493c6b48f68b8a9300b5a5935e132b1743ee25e6aa7df701241e7eb4"
+    },
+    {
+      "path": "docs/reconnect-regression-evidence.json",
+      "bytes": 2288,
+      "sha256": "e75c7b65c1f05241516dbc26a170487cbf25a136dc47de121b4da4c33d219459"
     },
     {
       "path": "docs/reconstruction-receipt.json",
@@ -219,7 +234,7 @@
     {
       "path": "public-manifest.json",
       "bytes": 10064,
-      "sha256": "8652c07aa458ad4295cec6dab7de44d8652cae73eddf07fa43a8ee4622ee0af4"
+      "sha256": "0c8faa9ae39bf87b7526a415f29ac8080a699789e08d00dccd93ee7af63a32a9"
     },
     {
       "path": "public/assets/ArcadeBoostNozzle.glb",
@@ -458,8 +473,8 @@
     },
     {
       "path": "public/online.js",
-      "bytes": 1316879,
-      "sha256": "f3e79cf97de11e2606017e07a80f5ead6a689f6daa7e45aaf96e05dc1f434c61"
+      "bytes": 1316895,
+      "sha256": "1c8870a14be8ffb6fe62cca0ae0b416453d59d8da8ecee42fabdc284f25f7b8d"
     },
     {
       "path": "server/data.mjs",
@@ -652,14 +667,19 @@
       "sha256": "73068f039e97e3884cf4eab04a3a38dd10f760a7e3bdca1a90b34e570f1590e7"
     },
     {
+      "path": "tests/reconnect-timing.test.mjs",
+      "bytes": 2215,
+      "sha256": "71ce4f3da3cd890412bc8464de000e7937f10588ced108526c217df334b4f537"
+    },
+    {
       "path": "tests/scene-adapter.test.mjs",
       "bytes": 4348,
       "sha256": "9c82f1345abe508210c0ece870ffc232f372a5267ad2ceb84db49ffa838ee8ee"
     },
     {
       "path": "tests/two-client.test.mjs",
-      "bytes": 4593,
-      "sha256": "582008319ba72db65bf70f420f3db40fd39eb25259a65493c00b9ebde989a29a"
+      "bytes": 4701,
+      "sha256": "dd4861205cbadbc8eabca1eb4ad4fae01243d49d114ec7f4f54e9be6928b2e51"
     },
     {
       "path": "tools/build.mjs",
