@@ -1,17 +1,17 @@
 {
   "scope": "Actual RaceClient and OnlineRenderAdapter in independent Node processes against separate local authority; automated test controls, not browser/GPU/human/internet acceptance.",
-  "protocolVersion": 2,
-  "physicsVersion": "v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50",
-  "serverPid": 143,
+  "protocolVersion": 3,
+  "physicsVersion": "v11.1-stock-noncontact-interruption1-510edd401e103b23",
+  "serverPid": 94,
   "clientPids": [
-    171,
-    183
+    126,
+    138
   ],
-  "sharedStartTick": 14,
+  "sharedStartTick": 15,
   "finished": [
     {
       "status": "finished",
-      "time": 8.258333333333505,
+      "time": 8.225000000000174,
       "checkpoints": 5,
       "rank": 1
     },
@@ -22,7 +22,15 @@
       "rank": 2
     }
   ],
+  "interruption": {
+    "generation": 2,
+    "phase": "active",
+    "count": 1,
+    "totalMs": 994.69,
+    "currentMs": 0
+  },
   "passed": [
+    "synchronized484ms host stall freezes both cars and clock, resumes without catchup",
     "same start/epoch/results",
     "remote car movement",
     "two genuine seat identities",

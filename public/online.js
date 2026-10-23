@@ -28766,8 +28766,8 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
 
   // client/manifest-pin.mjs
   var EXPECTED = Object.freeze({
-    "protocolVersion": 2,
-    "physicsVersion": "v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50",
+    "protocolVersion": 3,
+    "physicsVersion": "v11.1-stock-noncontact-interruption1-510edd401e103b23",
     "trackHash": "1b3bdbf06de3bb91414b00f6e62b524c4141c34febbd5e0b2bc9adf9f844720d",
     "raceSlice": {
       "startS": 2200,
@@ -28776,6 +28776,12 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
     "tickRate": 60,
     "snapshotRate": 20,
     "rules": {
+      "serverInterruption": "bounded-v1",
+      "stallDetectMs": 250,
+      "resyncStableMs": 500,
+      "maxInterruptionMs": 2e3,
+      "maxInterruptions": 3,
+      "maxInterruptedMs": 5e3,
       "maxPlayers": 2,
       "stock": true,
       "contact": false,
@@ -28842,9 +28848,33 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
   function validJoined(m) {
     return plain(m) && validCode(m.roomCode) && validId(m.playerId) && validId(m.epoch) && typeof m.reconnectToken === "string" && /^[A-Za-z0-9_-]{32}$/.test(m.reconnectToken) && integer(m.lastSeq) && typeof m.reconnected === "boolean";
   }
+  function validInterruption(i) {
+    return only(i, ["generation", "phase", "count", "totalMs", "currentMs"]) && Object.keys(i).length === 5 && integer(i.generation) && integer(i.count) && ["active", "holding"].includes(i.phase) && i.generation === 2 * i.count - (i.phase === "holding" ? 1 : 0) && finite2(i.totalMs, 0) && finite2(i.currentMs, 0, i.totalMs) && (i.phase !== "active" || i.currentMs === 0) && (i.generation !== 0 || i.phase === "active" && i.totalMs === 0);
+  }
+  function initialInterruption(i) {
+    return validInterruption(i) && i.generation === 0;
+  }
+  function validInterruptionTransition(previous, next) {
+    if (!validInterruption(next)) return false;
+    if (!previous) return true;
+    if (next.generation < previous.generation || next.count < previous.count || next.totalMs < previous.totalMs) return false;
+    if (next.generation === previous.generation) {
+      if (previous.phase === "active" && next.phase === "holding") return false;
+      if (previous.phase === "holding" && next.phase === "holding" && next.currentMs < previous.currentMs) return false;
+    }
+    return true;
+  }
   var POSE = ["x", "y", "z", "s", "heading", "speed", "velocityX", "velocityZ", "steer", "groundY", "groundHeading", "groundPitch", "roadPitch", "groundNormalX", "groundNormalY", "groundNormalZ", "altitude"];
+  function validInterruptionState(previous, next) {
+    if (!validInterruptionTransition(previous?.interruption, next.interruption)) return false;
+    if (previous?.interruption.phase !== "holding" || next.interruption.phase !== "holding" || previous.interruption.generation !== next.interruption.generation) return true;
+    return next.tick === previous.tick && next.elapsed === previous.elapsed && next.status === previous.status && next.players.every((p) => {
+      const q = previous.players.find((old) => old.id === p.id);
+      return q && [...POSE, "energy", "damage", "offRoad", "grounded", "state", "nextCheckpoint", "totalCheckpoints", "penalties", "recoveries", "time"].every((k) => p[k] === q[k]);
+    });
+  }
   function validSnapshot(s) {
-    if (!only(s, ["type", "roomCode", "epoch", "status", "tick", "startTick", "elapsed", "hostId", "players", "results"]) || s.type !== "snapshot" || !validCode(s.roomCode) || !validId(s.epoch) || !["waiting", "countdown", "racing", "results"].includes(s.status) || !integer(s.tick) || !finite2(s.elapsed, 0) || !(s.startTick === null || integer(s.startTick)) || !validId(s.hostId) || !Array.isArray(s.players) || s.players.length < 1 || s.players.length > 2 || s.players.some((p) => !plain(p))) return false;
+    if (!only(s, ["type", "roomCode", "epoch", "status", "tick", "startTick", "elapsed", "hostId", "players", "results", "interruption"]) || s.type !== "snapshot" || !validCode(s.roomCode) || !validId(s.epoch) || !["waiting", "countdown", "racing", "results"].includes(s.status) || !integer(s.tick) || !finite2(s.elapsed, 0) || !(s.startTick === null || integer(s.startTick)) || !validId(s.hostId) || !validInterruption(s.interruption) || s.status === "waiting" && !initialInterruption(s.interruption) || s.status === "results" && s.interruption.phase !== "active" || !Array.isArray(s.players) || s.players.length < 1 || s.players.length > 2 || s.players.some((p) => !plain(p))) return false;
     if (new Set(s.players.map((p) => p.id)).size !== s.players.length || !s.players.some((p) => p.id === s.hostId)) return false;
     for (const p of s.players) {
       if (!only(p, ["id", ...POSE, "energy", "damage", "offRoad", "grounded", "state", "nextCheckpoint", "totalCheckpoints", "penalties", "recoveries", "time", "result", "events", "name", "connected", "ready", "ack", "inputStale", "dnf"]) || !validId(p.id) || !validName(p.name) || !["racing", "finished", "failed"].includes(p.state) || !["connected", "ready", "inputStale", "offRoad", "grounded"].every((k) => typeof p[k] === "boolean") || !(p.dnf === null || typeof p.dnf === "string" && p.dnf.length <= 64)) return false;
@@ -28862,7 +28892,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
 
   // client/client.mjs
   var order = { waiting: 0, countdown: 1, racing: 2, results: 3 };
-  var knownErrors = /* @__PURE__ */ new Set(["NOT_READY", "ROOM_NOT_FOUND", "ROOM_FULL", "CAPACITY", "RACE_ALREADY_STARTED", "INVALID_JOIN", "HOST_REQUIRED", "RATE_LIMIT", "RECONNECT_DENIED", "PROTOCOL_MISMATCH", "PHYSICS_MISMATCH", "TRACK_MISMATCH", "INVALID_INPUT", "STALE_INPUT", "FUTURE_INPUT", "EPOCH_MISMATCH", "ALREADY_JOINED", "INVALID_MESSAGE", "SERVER_BUSY", "STALE_SEQUENCE"]);
+  var knownErrors = /* @__PURE__ */ new Set(["NOT_READY", "ROOM_NOT_FOUND", "ROOM_FULL", "CAPACITY", "RACE_ALREADY_STARTED", "INVALID_JOIN", "HOST_REQUIRED", "RATE_LIMIT", "RECONNECT_DENIED", "PROTOCOL_MISMATCH", "PHYSICS_MISMATCH", "TRACK_MISMATCH", "INVALID_INPUT", "STALE_INPUT", "FUTURE_INPUT", "EPOCH_MISMATCH", "ALREADY_JOINED", "INVALID_MESSAGE", "SERVER_BUSY", "STALE_SEQUENCE", "RESYNC_REQUIRED", "FUTURE_GENERATION"]);
   var RaceClient = class {
     #session = null;
     #pending = null;
@@ -28878,6 +28908,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
     #hello = false;
     #watchdog;
     #attemptAt = 0;
+    #resyncGeneration = null;
     constructor({ endpoint: endpoint2, expected = EXPECTED, WebSocket = globalThis.WebSocket, fetch: fetch2 = globalThis.fetch, storage = null, now = () => performance.now(), wallNow = () => Date.now() } = {}) {
       this.endpoint = validateEndpoint(endpoint2);
       this.expected = expected;
@@ -28930,7 +28961,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
       return this.snapshot ? Math.max(0, this.now() - this.#seen) : Infinity;
     }
     get diagnostics() {
-      return { status: this.status, hasSeat: !!this.#session, tick: this.snapshot?.tick ?? null, snapshotAgeMs: Number.isFinite(this.snapshotAge) ? this.snapshotAge : null, rejectedSnapshots: this.rejectedSnapshots, protocolVersion: this.expected.protocolVersion };
+      return { status: this.status, hasSeat: !!this.#session, tick: this.snapshot?.tick ?? null, snapshotAgeMs: Number.isFinite(this.snapshotAge) ? this.snapshotAge : null, rejectedSnapshots: this.rejectedSnapshots, protocolVersion: this.expected.protocolVersion, interruption: this.snapshot ? { ...this.snapshot.interruption } : null };
     }
     async prepare() {
       const response = await this.fetch(this.endpoint.origin + "/manifest", { cache: "no-store", signal: AbortSignal.timeout(15e3) });
@@ -29022,13 +29053,13 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
           this.fail("INVALID_JOIN");
           return;
         }
-        if (this.epoch && this.epoch !== m.epoch) {
-          this.#retired.add(this.epoch);
-          this.snapshot = null;
+        if (this.epoch && this.epoch !== m.epoch && this.snapshot?.status !== "results") {
+          this.fail("INVALID_JOIN");
+          return;
         }
         this.#session = { roomCode: m.roomCode, playerId: m.playerId, token: m.reconnectToken };
         this.playerId = m.playerId;
-        this.epoch = m.epoch;
+        if (!this.epoch) this.epoch = m.epoch;
         this.sequence = m.lastSeq;
         this.#deadline = 0;
         this.#pending = null;
@@ -29046,7 +29077,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
           return;
         }
         if (m.epoch !== this.epoch) {
-          if (m.status !== "waiting" || this.snapshot?.status !== "results" || m.startTick !== null || m.elapsed !== 0 || m.players.some((p) => p.ready || p.ack !== 0)) {
+          if (m.status !== "waiting" || this.snapshot?.status !== "results" || m.startTick !== null || m.elapsed !== 0 || !initialInterruption(m.interruption) || m.players.some((p) => p.ready || p.ack !== 0)) {
             reject();
             return;
           }
@@ -29054,22 +29085,30 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
           this.epoch = m.epoch;
           this.sequence = 0;
           this.snapshot = null;
+          this.#resyncGeneration = null;
           this.#emit("neutralize");
         }
         const old = this.snapshot;
-        if (old && (m.tick < old.tick || m.elapsed < old.elapsed || order[m.status] < order[old.status] || old.startTick !== null && m.startTick !== old.startTick || m.players.some((p) => {
+        if (old && (!validInterruptionState(old, m) || m.tick < old.tick || m.elapsed < old.elapsed || order[m.status] < order[old.status] || old.startTick !== null && m.startTick !== old.startTick || m.players.some((p) => {
           const q = old.players.find((x) => x.id === p.id);
           return q && ["ack", "nextCheckpoint", "time", "penalties", "recoveries"].some((k) => p[k] < q[k]);
         }))) {
           reject();
           return;
         }
+        const interruptionChanged = old && (m.interruption.generation !== old.interruption.generation || m.interruption.phase !== old.interruption.phase);
         this.snapshot = m;
         this.#seen = this.now();
+        if (this.#resyncGeneration !== null && m.interruption.generation >= this.#resyncGeneration) this.#resyncGeneration = null;
+        if (interruptionChanged || !old && m.interruption.phase === "holding") this.#emit("neutralize");
         if (this.wallNow() - this.#stored >= 1e3) this.#save();
         this.#emit("snapshot", { snapshot: m, receivedAt: this.#seen });
       } else if (m.type === "error") {
         const code = knownErrors.has(m.code) ? m.code : "SERVER_ERROR";
+        if (code === "RESYNC_REQUIRED") {
+          this.#resyncGeneration = this.snapshot?.interruption.generation ?? -1;
+          this.#emit("neutralize");
+        }
         this.#emit("notice", { code });
         if (this.#pending?.type === "reconnect") {
           this.#detach();
@@ -29088,10 +29127,10 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
     }
     input(controls2) {
       if (!validControls(controls2)) throw Error("INVALID_CONTROLS");
-      if (!this.connected || !this.snapshot || this.snapshotAge > 500 || !["countdown", "racing"].includes(this.snapshot.status)) return false;
+      if (!this.connected || !this.snapshot || this.#resyncGeneration !== null || this.snapshot.interruption.phase === "holding" || this.snapshotAge > 500 || !["countdown", "racing"].includes(this.snapshot.status)) return false;
       const own = this.snapshot.players.find((p) => p.id === this.playerId);
       if (own?.dnf || own?.state !== "racing") return false;
-      return this.#send({ type: "input", epoch: this.epoch, seq: ++this.sequence, clientTick: this.snapshot.tick, controls: controls2 });
+      return this.#send({ type: "input", epoch: this.epoch, generation: this.snapshot.interruption.generation, seq: ++this.sequence, clientTick: this.snapshot.tick, controls: controls2 });
     }
     neutralize() {
       this.#emit("neutralize");
@@ -29142,6 +29181,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
       this.snapshot = null;
       this.epoch = null;
       this.sequence = 0;
+      this.#resyncGeneration = null;
       try {
         this.storage?.removeItem(this.storageKey);
       } catch {
@@ -29217,17 +29257,23 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
       this.buffer = [];
       this.playerId = null;
       this.epoch = null;
+      this.retiredEpochs = /* @__PURE__ */ new Set();
       this.wheels = /* @__PURE__ */ new Map();
       this.interpolationMs = interpolationMs;
     }
     accept(s, id, at) {
-      if (!validSnapshot(s) || s.players.some((p) => p.totalCheckpoints !== this.model.checkpoints.length - 1) || !s.players.some((p) => p.id === id) || !Number.isFinite(at)) return false;
+      if (!validSnapshot(s) || this.retiredEpochs.has(s.epoch) || s.players.some((p) => p.totalCheckpoints !== this.model.checkpoints.length - 1) || !s.players.some((p) => p.id === id) || !Number.isFinite(at)) return false;
+      const previous = this.buffer.at(-1)?.snapshot;
       if (s.epoch !== this.epoch) {
+        if (previous && (previous.status !== "results" || s.status !== "waiting" || s.startTick !== null || s.elapsed !== 0 || !initialInterruption(s.interruption) || s.players.some((p) => p.ready || p.ack !== 0))) return false;
+        if (this.epoch) this.retiredEpochs.add(this.epoch);
         this.buffer = [];
         this.wheels.clear();
         this.epoch = s.epoch;
+      } else if (previous) {
+        if (s.tick < previous.tick || !validInterruptionState(previous, s)) return false;
+        if (s.interruption.generation !== previous.interruption.generation || s.interruption.phase !== previous.interruption.phase || s.interruption.phase === "holding") this.buffer = [];
       }
-      if (this.buffer.length && s.tick < this.buffer.at(-1).snapshot.tick) return false;
       this.playerId = id;
       this.buffer.push({ snapshot: s, at });
       if (this.buffer.length > 12) this.buffer.shift();
@@ -29235,7 +29281,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
     }
     frame(now, dt = 1 / 60) {
       if (!this.buffer.length) return null;
-      const last = this.buffer.at(-1), s = last.snapshot, age = Math.max(0, now - last.at), stale = age > 500, target = Math.min(s.tick, s.tick + age * 0.06 - this.interpolationMs * 0.06);
+      const last = this.buffer.at(-1), s = last.snapshot, age = Math.max(0, now - last.at), stale = age > 500, holding = s.interruption.phase === "holding", target = Math.min(s.tick, s.tick + age * 0.06 - this.interpolationMs * 0.06);
       let a = this.buffer[0].snapshot, b = s;
       for (const e of this.buffer) {
         if (e.snapshot.tick <= target) a = e.snapshot;
@@ -29246,11 +29292,11 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
       }
       const ratio = b.tick === a.tick ? 1 : Math.max(0, Math.min(1, (target - a.tick) / (b.tick - a.tick)));
       const cars = s.players.map((latest) => {
-        const from = a.players.find((p2) => p2.id === latest.id) || latest, to = b.players.find((p2) => p2.id === latest.id) || latest, snap = from.recoveries !== to.recoveries || Math.hypot(to.x - from.x, to.z - from.z) > 15 || s.status === "results";
+        const from = a.players.find((p2) => p2.id === latest.id) || latest, to = b.players.find((p2) => p2.id === latest.id) || latest, snap = from.recoveries !== to.recoveries || Math.hypot(to.x - from.x, to.z - from.z) > 15 || s.status === "results" || holding;
         const p = Object.fromEntries(["id", "name", "connected", "ready", "inputStale", "dnf", ...POSE, "energy", "damage", "offRoad", "grounded", "state"].map((k) => [k, latest[k]]));
         for (const k of ["x", "y", "z", "s", "speed", "steer", "velocityX", "velocityZ", "groundY", "groundPitch", "roadPitch", "altitude"]) p[k] = snap ? latest[k] : mix2(from[k], to[k], ratio);
         for (const k of ["heading", "groundHeading"]) p[k] = snap ? latest[k] : angleMix(from[k], to[k], ratio);
-        const wheelAngle = (this.wheels.get(p.id) || 0) + (stale ? 0 : p.speed * Math.max(0, Math.min(0.1, dt)) / 0.36);
+        const wheelAngle = (this.wheels.get(p.id) || 0) + (stale || holding ? 0 : p.speed * Math.max(0, Math.min(0.1, dt)) / 0.36);
         this.wheels.set(p.id, wheelAngle);
         return { ...this.defaults, ...p, onlineHuman: true, visible: true, wheelAngle, bodyRoll: 0, bodyPitch: 0, suspension: 0, flying: false, flipActive: false, thrusting: false, boosting: false, ultraBoosting: false, lateralSpeed: -Math.sin(p.heading) * p.velocityX + Math.cos(p.heading) * p.velocityZ };
       });
@@ -29267,13 +29313,14 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
       for (const k of ["nextCheckpoint", "totalCheckpoints", "penalties", "recoveries"]) m[k] = own[k];
       m.events = own.events.filter((e) => !["contact", "obstacle-contact", "landing"].includes(e.type) || [e.x, e.y, e.z].every(Number.isFinite)).map((e) => ({ id: e.id, type: e.type, x: e.x, y: e.y, z: e.z, intensity: Number.isFinite(e.intensity) ? Math.max(0, Math.min(1, e.intensity)) : 0, normalX: Number.isFinite(e.normalX) ? e.normalX : 0, normalZ: Number.isFinite(e.normalZ) ? e.normalZ : 0 }));
       m.result = s.results?.find((r) => r.playerId === this.playerId) || null;
-      m.network = { tick: s.tick, status: s.status, stale, ageMs: age, stock: true, contact: false, payouts: false };
+      m.network = { tick: s.tick, status: s.status, stale, ageMs: age, stock: true, contact: false, payouts: false, interruption: { ...s.interruption } };
       return m;
     }
     reset() {
       this.buffer = [];
       this.playerId = null;
       this.epoch = null;
+      this.retiredEpochs.clear();
       this.wheels.clear();
     }
   };
@@ -29324,7 +29371,9 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
   var lastFrame = 0;
   var menuTime = 0;
   var previousStatus = null;
-  var messages = { PROTOCOL_MISMATCH: "Protocol mismatch. Use the matching client and server.", PHYSICS_MISMATCH: "Physics mismatch. Joining blocked.", TRACK_MISMATCH: "Track/collider mismatch. Joining blocked.", ROUTE_MISMATCH: "Route mismatch. Joining blocked.", RACE_SLICE_MISMATCH: "The server course does not match this client.", WORLD_ASSET_MISMATCH: "World assets do not match this build.", RULES_MISMATCH: "Server rules do not match stock / non-contact / no payouts.", CONNECTION_STALLED: "Snapshots stopped. Reconnecting; race continues.", INVALID_SNAPSHOT: "Invalid or stale state discarded. Last valid positions retained.", RECONNECT_EXPIRED: "Reconnect window ended. The server may record DNF; no finish was invented.", ROOM_CLOSED: "Room closed or server restarted.", CONNECTION_FAILED: "Could not connect. The free host may be waking or restarting; wait and try again.", CAPACITY: "One public room is available in this alpha. Try again when it is free.", ROOM_FULL: "That private room has two drivers.", ROOM_NOT_FOUND: "Room not found. Check the exact code.", NOT_READY: "Both drivers must load and ready.", INVALID_NAME: "Use 1\u201324 characters, no control characters or angle brackets.", INVALID_JOIN: "Check name and exact 16-character room code.", ASSETS_NOT_READY: "Wait for matching assets and manifest.", SESSION_STORAGE_UNAVAILABLE: "Reload recovery unavailable because session storage is blocked." };
+  var previousInterruption = null;
+  var resyncedUntil = 0;
+  var messages = { PROTOCOL_MISMATCH: "Protocol mismatch. Use the matching client and server.", PHYSICS_MISMATCH: "Physics mismatch. Joining blocked.", TRACK_MISMATCH: "Track/collider mismatch. Joining blocked.", ROUTE_MISMATCH: "Route mismatch. Joining blocked.", RACE_SLICE_MISMATCH: "The server course does not match this client.", WORLD_ASSET_MISMATCH: "World assets do not match this build.", RULES_MISMATCH: "Server rules do not match stock / non-contact / no payouts.", CONNECTION_STALLED: "Snapshots stopped. Reconnecting; waiting for authoritative server state.", RESYNC_REQUIRED: "Server resync required. Controls cleared; waiting for current authoritative state.", INVALID_SNAPSHOT: "Invalid or stale state discarded. Last valid positions retained.", RECONNECT_EXPIRED: "Reconnect window ended. The server may record DNF; no finish was invented.", ROOM_CLOSED: "Room closed or server restarted.", CONNECTION_FAILED: "Could not connect. The free host may be waking or restarting; wait and try again.", CAPACITY: "One public room is available in this alpha. Try again when it is free.", ROOM_FULL: "That private room has two drivers.", ROOM_NOT_FOUND: "Room not found. Check the exact code.", NOT_READY: "Both drivers must load and ready.", INVALID_NAME: "Use 1\u201324 characters, no control characters or angle brackets.", INVALID_JOIN: "Check name and exact 16-character room code.", ASSETS_NOT_READY: "Wait for matching assets and manifest.", SESSION_STORAGE_UNAVAILABLE: "Reload recovery unavailable because session storage is blocked." };
   var notify = (value) => text("notice", value);
   function clear() {
     keys.clear();
@@ -29354,7 +29403,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
       const name = document.createElement("strong");
       name.textContent = p.name + (p.id === client.playerId ? " \xB7 YOU" : " \xB7 LIVE HUMAN");
       const sub = document.createElement("small");
-      sub.textContent = `${p.connected ? "connected" : "disconnected \xB7 seat reserved"} \xB7 ${p.dnf ? "DNF" : s.status === "waiting" ? p.ready ? "READY" : "not ready" : p.state === "finished" ? "finished" : p.inputStale ? "safe brake" : "driving"}${p.id === s.hostId ? " \xB7 host" : ""}`;
+      sub.textContent = `${p.connected ? "connected" : "disconnected \xB7 seat reserved"} \xB7 ${p.dnf ? "DNF" : s.status === "waiting" ? p.ready ? "READY" : "not ready" : p.state === "finished" ? "finished" : p.inputStale ? "safe brake" : s.interruption.phase === "holding" ? "server frozen" : "driving"}${p.id === s.hostId ? " \xB7 host" : ""}`;
       row.append(name, sub);
       return row;
     }));
@@ -29370,11 +29419,12 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
       const li = document.createElement("li");
       li.textContent = `${r.rank ? r.rank + ". " : ""}${r.name} \xB7 ${r.status === "finished" ? time(r.time) : "DNF"}`;
       const small = document.createElement("small");
-      small.textContent = `${r.checkpoints} gates \xB7 ${r.penalties.toFixed(1)} s penalty${r.reason ? " \xB7 " + r.reason : ""}`;
+      small.textContent = `${r.checkpoints} gates \xB7 ${r.penalties.toFixed(1)} s penalty${r.reason ? " \xB7 " + (r.reason === "server-interrupted" ? "server interruption limit reached" : r.reason) : ""}`;
       li.append(small);
       return li;
     }));
-    text("race-state", { waiting: "WAITING", countdown: "SHARED COUNTDOWN", racing: "LIVE / NO PAUSE", results: "SERVER RESULTS" }[s.status]);
+    text("interruption-results", `${s.interruption.count} server interruption${s.interruption.count === 1 ? "" : "s"} \xB7 ${(s.interruption.totalMs / 1e3).toFixed(2)} s interrupted \xB7 excluded from race time`);
+    text("race-state", s.interruption.phase === "holding" ? "SERVER INTERRUPTED" : { waiting: "WAITING", countdown: "SHARED COUNTDOWN", racing: "LIVE / NO PAUSE", results: "SERVER RESULTS" }[s.status]);
     text("clock", time(s.elapsed));
     text("speed", Math.round(Math.abs(own.speed) * 3.6) + " KM/H");
     text("checkpoint", `${Math.min(own.nextCheckpoint - 1, own.totalCheckpoints)} / ${own.totalCheckpoints} GATES`);
@@ -29411,7 +29461,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
     }
     if (!client?.playerId || !driving.has(e.code)) return;
     e.preventDefault();
-    if (panelOpen) return;
+    if (panelOpen || client?.snapshot?.interruption.phase === "holding" || e.repeat) return;
     if (e.code === "KeyR" && !e.repeat) recover = true;
     keys.add(e.code);
   });
@@ -29427,7 +29477,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
   });
   for (const b of document.querySelectorAll("[data-control]")) {
     b.addEventListener("pointerdown", (e) => {
-      if (panelOpen) return;
+      if (panelOpen || client?.snapshot?.interruption.phase === "holding") return;
       e.preventDefault();
       b.setPointerCapture(e.pointerId);
       held.add(b.dataset.control);
@@ -29440,7 +29490,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
     });
   }
   function controls() {
-    if (panelOpen || document.hidden || !document.hasFocus()) return { ...NEUTRAL };
+    if (panelOpen || client?.snapshot?.interruption.phase === "holding" || document.hidden || !document.hasFocus()) return { ...NEUTRAL };
     return { throttle: Number(keys.has("KeyW") || keys.has("ArrowUp") || held.has("throttle")) - Number(keys.has("KeyS") || keys.has("ArrowDown") || held.has("reverse")), steer: Number(keys.has("KeyD") || keys.has("ArrowRight") || held.has("right")) - Number(keys.has("KeyA") || keys.has("ArrowLeft") || held.has("left")), brake: keys.has("Space") || held.has("brake"), boost: keys.has("ShiftLeft") || keys.has("ShiftRight") || held.has("boost"), recover };
   }
   setInterval(() => {
@@ -29454,7 +29504,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
     menuTime += dt;
     if (assetsReady) {
       const m = adapter.frame(now, dt);
-      renderer.update(m || preview, dt, { menu: !m, menuTime });
+      renderer.update(m || preview, m?.network.interruption.phase === "holding" ? 0 : dt, { menu: !m, menuTime });
       const remote = m?.rivals[0];
       if (remote) {
         projected.set(remote.x, remote.y + 2.1, remote.z).project(renderer.camera);
@@ -29467,11 +29517,15 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
       let overlay = "";
       if (s) {
         text("age", Math.round(client.snapshotAge) + " MS SNAPSHOT");
-        overlay = !client.connected ? "Connection lost \xB7 reconnecting \xB7 race continues" : client.snapshotAge > 500 ? "Snapshots delayed \xB7 positions frozen" : s.status === "waiting" ? "WAITING FOR TWO READY DRIVERS" : s.status === "countdown" ? `START IN ${Math.max(0, (s.startTick - s.tick) / 60).toFixed(1)}` : s.status === "results" ? "RACE COMPLETE \xB7 SERVER RESULTS" : own.dnf ? "DNF \xB7 race continues" : own.state === "finished" ? "FINISHED \xB7 waiting for other driver" : panelOpen ? "LOBBY OPEN \xB7 RACE CONTINUES \xB7 SAFE BRAKE" : "";
+        overlay = !client.connected ? "Connection lost \xB7 last valid positions retained \xB7 reconnecting" : client.snapshotAge > 500 ? "Snapshots delayed \xB7 positions frozen" : s.interruption.phase === "holding" ? "" : s.status === "waiting" ? "WAITING FOR TWO READY DRIVERS" : s.status === "countdown" ? `START IN ${Math.max(0, (s.startTick - s.tick) / 60).toFixed(1)}` : s.status === "results" ? "RACE COMPLETE \xB7 SERVER RESULTS" : own.dnf ? "DNF \xB7 race continues" : own.state === "finished" ? "FINISHED \xB7 waiting for other driver" : panelOpen ? "LOBBY OPEN \xB7 RACE CONTINUES \xB7 SAFE BRAKE" : "";
       }
+      const holding = s?.interruption.phase === "holding", resynced = !!s && s.status !== "results" && now < resyncedUntil;
+      show("interruption-banner", !!holding || resynced);
+      text("interruption-title", holding ? "Server interrupted \u2014 both cars and race clock frozen" : "Server resynced \u2014 press controls again");
+      text("interruption-duration", holding ? `${(s.interruption.currentMs / 1e3).toFixed(2)} s interrupted (server-confirmed)${!client.connected || client.snapshotAge > 500 ? " \xB7 awaiting server update" : ""}` : resynced ? `${s.interruption.count} interruption${s.interruption.count === 1 ? "" : "s"} \xB7 ${(s.interruption.totalMs / 1e3).toFixed(2)} s excluded from race time` : "");
       text("race-notice", overlay);
       show("race-notice", !!overlay && !panelOpen);
-      show("touch", !!s && !panelOpen && matchMedia("(pointer:coarse)").matches && ["countdown", "racing"].includes(s.status));
+      show("touch", !!s && s.interruption.phase !== "holding" && !panelOpen && matchMedia("(pointer:coarse)").matches && ["countdown", "racing"].includes(s.status));
     }
     requestAnimationFrame(frame);
   }
@@ -29490,7 +29544,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
         client.on((e) => {
           if (e.type === "neutralize") clear();
           if (e.type === "status") {
-            text("connection", e.status.toUpperCase() + (e.status === "reconnecting" ? " \xB7 RACE CONTINUES" : ""));
+            text("connection", e.status.toUpperCase() + (e.status === "reconnecting" ? " \xB7 AWAITING SERVER" : ""));
             buttons();
             room();
           }
@@ -29498,6 +29552,9 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
             notify(messages[e.code] || "Server notice: " + e.code);
             if (client.status === "error") {
               adapter?.reset();
+              previousInterruption = null;
+              resyncedUntil = 0;
+              show("interruption-banner", false);
               show("entry", true);
               show("room", false);
               show("hud", false);
@@ -29509,9 +29566,13 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
             show("entry", false);
             show("room", true);
             show("hud", true);
-            notify(e.reconnected ? "Same seat restored. The server clock never paused." : "Share this private code. Both human drivers must click Ready.");
+            notify(e.reconnected ? "Same seat restored. Waiting for current server race and interruption state." : "Share this private code. Both human drivers must click Ready.");
           }
           if (e.type === "snapshot") {
+            const i = e.snapshot.interruption;
+            if (previousInterruption?.epoch !== e.snapshot.epoch) resyncedUntil = 0;
+            else if (i.phase === "active" && (previousInterruption.phase === "holding" || i.generation > previousInterruption.generation) && e.snapshot.status !== "results") resyncedUntil = performance.now() + 5e3;
+            previousInterruption = { ...i, epoch: e.snapshot.epoch };
             if (!adapter.accept(e.snapshot, client.playerId, e.receivedAt)) {
               client.fail("RACE_SLICE_MISMATCH");
               return;
@@ -29526,11 +29587,14 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
           if (e.type === "left") {
             adapter?.reset();
             previousStatus = null;
+            previousInterruption = null;
+            resyncedUntil = 0;
+            show("interruption-banner", false);
             show("entry", true);
             show("room", false);
             show("hud", false);
             panel(true);
-            notify("Left room. Active races continue; your solo save is unchanged.");
+            notify("Left room. No player pause was requested; your solo save is unchanged.");
             buttons();
           }
         });

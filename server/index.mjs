@@ -5,6 +5,6 @@ import {warmRuntime} from './warmup.mjs';
 const options=renderOptions();
 console.log(JSON.stringify(await warmRuntime(loadData())));
 const app=await createService(options);
-console.log(`Kerala Roadster ${options.publicOrigin?'PUBLIC EXPERIMENTAL':'LOCAL'} V11.1 JOINT REBUILD2 ALPHA ready on port ${app.port}; 2 stock cars, no contact, no accounts or payouts`);
+console.log(`Kerala Roadster ${options.publicOrigin?'PUBLIC EXPERIMENTAL':'LOCAL'} V11.1 JOINT PROTOCOL3 ALPHA ready on port ${app.port}; 2 stock cars, no contact, no accounts or payouts`);
 let stopping=false;
 for(const signal of ['SIGINT','SIGTERM'])process.on(signal,async()=>{if(stopping)return;stopping=true;await app.close();process.exit(0);});

@@ -1,0 +1,26 @@
+{
+  "scope": "Single bounded local sample. Same V11.1 physics, 2 stock drivers, 600 fixed steps/10 simulated seconds, 20Hz serialization; no sockets, GPU, host quota or provider timing emulation. Hold cost excludes serialization.",
+  "startup": {
+    "event": "runtime-warmup-complete",
+    "steps": 600,
+    "drivers": 2,
+    "wallMs": 570.194,
+    "cpuMs": 792.949,
+    "maxBatchMs": 41.079
+  },
+  "simulation": {
+    "steps": 600,
+    "drivers": 2,
+    "cpuMs": 486.986,
+    "wallMs": 418.985,
+    "cpuMsPerSimulatedSecond": 48.699,
+    "maxStepMs": 5.948
+  },
+  "holdingPolicy": {
+    "checks": 100000,
+    "cpuMs": 4.855,
+    "wallMs": 2.803,
+    "worldSteps": 0
+  },
+  "providerConstraint": "Observed Render Free CPU limit 0.15 core; roughly 150 CPU-ms per wall-second available on average. This workspace measurement does not establish provider capacity. Bounded interruption may recover isolated stalls but sustained quota starvation still ends honestly."
+}

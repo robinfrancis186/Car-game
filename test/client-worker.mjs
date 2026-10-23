@@ -2,7 +2,7 @@
 import WebSocket from 'ws';
 let ws,manifest,joined,snapshot,seq=0,driver=null,controls=null,timer;
 const send=m=>ws?.readyState===WebSocket.OPEN&&ws.send(JSON.stringify(m));
-const controlsMessage=c=>({type:'input',seq:++seq,epoch:snapshot?.epoch,clientTick:snapshot?.tick??0,controls:c});
+const controlsMessage=c=>({type:'input',seq:++seq,epoch:snapshot?.epoch,clientTick:snapshot?.tick??0,generation:snapshot?.interruption.generation??0,controls:c});
 const angle=x=>Math.atan2(Math.sin(x),Math.cos(x));
 process.on('message',async m=>{
  if(m.type==='connect'){
@@ -17,7 +17,7 @@ process.on('message',async m=>{
  else if(m.type==='input')send(controlsMessage(m.controls));
  else if(m.type==='drive'){
   driver=m.mode;controls=m.controls;clearInterval(timer);timer=setInterval(()=>{
-   if(!snapshot||!['racing','countdown'].includes(snapshot.status))return;
+   if(!snapshot||snapshot.interruption.phase==='holding'||!['racing','countdown'].includes(snapshot.status))return;
    const p=snapshot.players.find(p=>p.id===joined?.playerId);if(!p)return;
    if(driver==='follow'){
     const route=manifest.route;let s=0,target=route.at(-1);for(let i=1;i<route.length;i++){s+=Math.hypot(route[i][0]-route[i-1][0],route[i][2]-route[i-1][2]);if(s>p.s+7){target=route[i];break;}}

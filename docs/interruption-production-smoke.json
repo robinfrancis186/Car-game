@@ -1,0 +1,31 @@
+{
+  "scope": "Clean offline production-only npm ci and actual startup entrypoint loopback smoke; not public acceptance",
+  "root": 200,
+  "health": 200,
+  "protocol": 3,
+  "physics": "v11.1-stock-noncontact-interruption1-510edd401e103b23",
+  "rules": {
+    "serverInterruption": "bounded-v1",
+    "stallDetectMs": 250,
+    "resyncStableMs": 500,
+    "maxInterruptionMs": 2000,
+    "maxInterruptions": 3,
+    "maxInterruptedMs": 5000,
+    "maxPlayers": 2,
+    "stock": true,
+    "contact": false,
+    "traffic": false,
+    "flight": false,
+    "ultraBoost": false,
+    "payouts": false
+  },
+  "warmupBeforeReady": true,
+  "startup": {
+    "event": "runtime-warmup-complete",
+    "steps": 600,
+    "drivers": 2,
+    "wallMs": 557.204,
+    "cpuMs": 812.991,
+    "maxBatchMs": 40.293
+  }
+}

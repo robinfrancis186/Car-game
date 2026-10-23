@@ -17,8 +17,8 @@ test('actual production transport derives only exact approved same-origin WSS an
  await c.prepare();c.setLoaded(true);c.create('Activation check');
  assert.equal(calls[0].url,origin+'/manifest');
  assert.equal(Socket.instances.at(-1).url,'wss://kerala-roadster-multiplayer-alpha.onrender.com/room');
- assert.equal(c.expected.protocolVersion,2);
- assert.equal(c.expected.physicsVersion,'v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50');
+ assert.equal(c.expected.protocolVersion,3);
+ assert.equal(c.expected.physicsVersion,'v11.1-stock-noncontact-interruption1-510edd401e103b23');
  assert.equal(c.expected.trackHash,'1b3bdbf06de3bb91414b00f6e62b524c4141c34febbd5e0b2bc9adf9f844720d');
  assert.deepEqual(c.expected,EXPECTED);
 });

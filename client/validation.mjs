@@ -6,9 +6,24 @@ export function compatibilityError(m,e){for(const[k,code]of[['protocolVersion','
 export async function sha256(buffer,crypto=globalThis.crypto){return[...new Uint8Array(await crypto.subtle.digest('SHA-256',buffer))].map(n=>n.toString(16).padStart(2,'0')).join('');}
 export async function validateManifest(m,e,crypto=globalThis.crypto){const err=compatibilityError(m,e);if(err)throw Error(err);if(!Array.isArray(m.route)||m.route.length<100||m.route.length>10000||m.route.some(p=>!Array.isArray(p)||p.length!==3||p.some(n=>!finite(n))))throw Error('INVALID_ROUTE');if(await sha256(new TextEncoder().encode(JSON.stringify(m.route)),crypto)!==e.routeHash)throw Error('ROUTE_MISMATCH');return m;}
 export function validJoined(m){return plain(m)&&validCode(m.roomCode)&&validId(m.playerId)&&validId(m.epoch)&&typeof m.reconnectToken==='string'&&/^[A-Za-z0-9_-]{32}$/.test(m.reconnectToken)&&integer(m.lastSeq)&&typeof m.reconnected==='boolean';}
+/** Interruption is server-owned wall time, never part of the simulated race clock. */
+export function validInterruption(i){return only(i,['generation','phase','count','totalMs','currentMs'])&&Object.keys(i).length===5&&integer(i.generation)&&integer(i.count)&&['active','holding'].includes(i.phase)&&i.generation===2*i.count-(i.phase==='holding'?1:0)&&finite(i.totalMs,0)&&finite(i.currentMs,0,i.totalMs)&&(i.phase!=='active'||i.currentMs===0)&&(i.generation!==0||(i.phase==='active'&&i.totalMs===0));}
+export function initialInterruption(i){return validInterruption(i)&&i.generation===0;}
+export function validInterruptionTransition(previous,next){
+ if(!validInterruption(next))return false;if(!previous)return true;
+ if(next.generation<previous.generation||next.count<previous.count||next.totalMs<previous.totalMs)return false;
+ if(next.generation===previous.generation){if(previous.phase==='active'&&next.phase==='holding')return false;if(previous.phase==='holding'&&next.phase==='holding'&&next.currentMs<previous.currentMs)return false;}
+ return true;
+}
 export const POSE=['x','y','z','s','heading','speed','velocityX','velocityZ','steer','groundY','groundHeading','groundPitch','roadPitch','groundNormalX','groundNormalY','groundNormalZ','altitude'];
+/** A repeated holding generation cannot advance authoritative simulation state. */
+export function validInterruptionState(previous,next){
+ if(!validInterruptionTransition(previous?.interruption,next.interruption))return false;
+ if(previous?.interruption.phase!=='holding'||next.interruption.phase!=='holding'||previous.interruption.generation!==next.interruption.generation)return true;
+ return next.tick===previous.tick&&next.elapsed===previous.elapsed&&next.status===previous.status&&next.players.every(p=>{const q=previous.players.find(old=>old.id===p.id);return q&&[...POSE,'energy','damage','offRoad','grounded','state','nextCheckpoint','totalCheckpoints','penalties','recoveries','time'].every(k=>p[k]===q[k]);});
+}
 export function validSnapshot(s){
- if(!only(s,['type','roomCode','epoch','status','tick','startTick','elapsed','hostId','players','results'])||s.type!=='snapshot'||!validCode(s.roomCode)||!validId(s.epoch)||!['waiting','countdown','racing','results'].includes(s.status)||!integer(s.tick)||!finite(s.elapsed,0)||!(s.startTick===null||integer(s.startTick))||!validId(s.hostId)||!Array.isArray(s.players)||s.players.length<1||s.players.length>2||s.players.some(p=>!plain(p)))return false;
+ if(!only(s,['type','roomCode','epoch','status','tick','startTick','elapsed','hostId','players','results','interruption'])||s.type!=='snapshot'||!validCode(s.roomCode)||!validId(s.epoch)||!['waiting','countdown','racing','results'].includes(s.status)||!integer(s.tick)||!finite(s.elapsed,0)||!(s.startTick===null||integer(s.startTick))||!validId(s.hostId)||!validInterruption(s.interruption)||(s.status==='waiting'&&!initialInterruption(s.interruption))||(s.status==='results'&&s.interruption.phase!=='active')||!Array.isArray(s.players)||s.players.length<1||s.players.length>2||s.players.some(p=>!plain(p)))return false;
  if(new Set(s.players.map(p=>p.id)).size!==s.players.length||!s.players.some(p=>p.id===s.hostId))return false;
  for(const p of s.players){if(!only(p,['id',...POSE,'energy','damage','offRoad','grounded','state','nextCheckpoint','totalCheckpoints','penalties','recoveries','time','result','events','name','connected','ready','ack','inputStale','dnf'])||!validId(p.id)||!validName(p.name)||!['racing','finished','failed'].includes(p.state)||!['connected','ready','inputStale','offRoad','grounded'].every(k=>typeof p[k]==='boolean')||!(p.dnf===null||typeof p.dnf==='string'&&p.dnf.length<=64))return false;
   if(!POSE.every(k=>finite(p[k]))||!finite(p.energy,0,1.0001)||!finite(p.damage,0,1.0001)||!finite(p.penalties,0)||!finite(p.time,0)||!integer(p.ack)||!integer(p.recoveries,0,100000)||!integer(p.totalCheckpoints,1,10000)||!integer(p.nextCheckpoint,1,p.totalCheckpoints+1))return false;

@@ -15,7 +15,7 @@ test('exact stable V11.1 engine anchors, shared world bytes, stock stats and pro
  const anchors={'gameplay.js':'f1464350b943632dffeb321b50632e3524e03f356018c5005392de1fda89620f','garage.js':'4337626adb45efa08238e2f52896269d8e8303baf4aaacf28f499bb25d646386','tracks.js':'ac0a8659be0d96f209a44ad5d93671d57c75a7200d53f4d357de57ba57f49d6f'};
  for(const[f,h]of Object.entries(anchors)){assert.equal(sha(read('shared/'+f)),h);assert.deepEqual(read('game/'+f),read('shared/'+f));}
  for(const f of ['course_runtime.json','furniture_colliders.json','infrastructure_colliders.json','coastal_map_data.json'])assert.deepEqual(read('public/assets/'+f),read('data/'+f));
- const manifest=getManifest();for(const k of ['protocolVersion','physicsVersion','trackHash','rules','raceSlice'])assert.deepEqual(manifest[k],EXPECTED[k]);assert.equal(manifest.protocolVersion,2);assert.equal(sha(Buffer.from(JSON.stringify(data.world.route_points))),EXPECTED.routeHash);
+ const manifest=getManifest();for(const k of ['protocolVersion','physicsVersion','trackHash','rules','raceSlice'])assert.deepEqual(manifest[k],EXPECTED[k]);assert.equal(manifest.protocolVersion,3);assert.equal(sha(Buffer.from(JSON.stringify(data.world.route_points))),EXPECTED.routeHash);
  const w=new RaceWorld(data);assert.equal(w.model.obstacles.length,buildCourseObstacles(data.world,data.furniture.colliders).length+data.infrastructure.colliders.length);assert.equal(w.model.vehicleStats.vehicleId,'red');assert.equal(w.model.vehicleStats.topSpeedMps,68);assert.equal(w.model.maxSteer,.57);assert.deepEqual(w.model.upgrades,{speed:0,acceleration:0,handling:0,boost:0});
 });
 

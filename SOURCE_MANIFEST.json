@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "identity": "v11.1-joint-reconstruction2-reconnect-watchdog-patch",
-  "createdUtc": "2026-10-23T08:47:13.821645+00:00",
+  "identity": "v11.1-joint-reconstruction2-bounded-interruption-protocol3",
+  "createdUtc": "2026-10-23T09:36:04.442791+00:00",
   "rootHashAlgorithm": "SHA256 sorted UTF8 path + NUL + decimal bytes + NUL + SHA256 + LF",
-  "sourceRootHash": "ae9fb608e6f2bb6708d9f705cc369758213fa20bdda1aff9c4ef7d131e06abfa",
+  "sourceRootHash": "bb562a793b71921de935a77a26c72f03082c93fcc106acf04b64450442a37ea7",
   "excludesSelf": "SOURCE_MANIFEST.json",
   "files": [
     {
@@ -23,13 +23,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4727,
-      "sha256": "57b65fc56ee70c52534fefc4c7b499044875ee893ebe85aae551c08db39d8d42"
+      "bytes": 5887,
+      "sha256": "16926f476c6effb7269d5832a63b845287b4108510d944d8348e0b92390b298e"
     },
     {
       "path": "client/client.mjs",
-      "bytes": 9764,
-      "sha256": "e98940e7f01ca7c44b337cb7ad71822becb320e00d792a06eb0a51a12d169f25"
+      "bytes": 10675,
+      "sha256": "2d141f82bf7f956aee5c717cfcc50ac02daac81240c555ecd422a0a95d3f7f57"
     },
     {
       "path": "client/deployment.mjs",
@@ -43,23 +43,23 @@
     },
     {
       "path": "client/main.mjs",
-      "bytes": 11506,
-      "sha256": "6a18872872726bc950837a007083d44b90abb168ac58eb6d7ee881119b26e095"
+      "bytes": 13488,
+      "sha256": "2c019d14a432bd042cceb94f6fc4021dc237e1c9ffa6580fcf0b98e0283e5307"
     },
     {
       "path": "client/manifest-pin.mjs",
-      "bytes": 1063,
-      "sha256": "795574538d3ee9d20dab2618363049bac4e709147bbc774517c9c835c129fcd7"
+      "bytes": 1249,
+      "sha256": "57adf8e9f7c1cfee4f547219ef8693292702e5eb9ac12c8478b03bd7bad1065a"
     },
     {
       "path": "client/render-adapter.mjs",
-      "bytes": 4362,
-      "sha256": "0a324c1801ea10e78b30148b16648a1f5b5ec97f9a16b6d2d137fb3f3f8d134f"
+      "bytes": 5051,
+      "sha256": "71b5d308b71a7fb2f70e4e0f2f1859844086847a6b60dca9da1a3b61e5ae32c9"
     },
     {
       "path": "client/validation.mjs",
-      "bytes": 5338,
-      "sha256": "129e77ceca3d27169cfab72edaf9f15b82b359d1975dc1f3b531fe6701ce94f9"
+      "bytes": 7291,
+      "sha256": "3a787f6c4d3188932e69f6db1c219c25a48fe660dfa34d7403723fb536b9f215"
     },
     {
       "path": "client/world-assets.mjs",
@@ -93,8 +93,8 @@
     },
     {
       "path": "docs/acceptance.md",
-      "bytes": 4824,
-      "sha256": "f0fc576609d9dcc76a149511589814143864a4f6baa63174a902bdb0d6cfa3ec"
+      "bytes": 7149,
+      "sha256": "cece59899792cfe0ded696ca7dfaf5fa7e83779d987ce41a8d9c951af342cf8d"
     },
     {
       "path": "docs/activation-receipt.json",
@@ -108,8 +108,8 @@
     },
     {
       "path": "docs/client-module-evidence.json",
-      "bytes": 938,
-      "sha256": "1d7ad6f9916f11572dc3952d0a418eb07f66a3e077b16f3660e5bbbbab31a5eb"
+      "bytes": 1158,
+      "sha256": "087c72d930215d2a87b4fa288c7d629eb972167286122aaa237eec29a68a5c5b"
     },
     {
       "path": "docs/handling_recovery_metrics.json",
@@ -122,9 +122,24 @@
       "sha256": "14c2b0e377fd981d7c1a8f0b1ecefd1d6f5ddc777f2f2f60b5e8a6940809ace3"
     },
     {
+      "path": "docs/interruption-cpu-evidence.json",
+      "bytes": 966,
+      "sha256": "d4d06fdb8ad635dbf0a1d57587b54cb16999f2f291419184d4003ad47c0de41d"
+    },
+    {
+      "path": "docs/interruption-patch-receipt.json",
+      "bytes": 7399,
+      "sha256": "8345e6d6c01aa6422b42e714fefbb80f2a722dcffddb2406b7395b563283e58b"
+    },
+    {
+      "path": "docs/interruption-production-smoke.json",
+      "bytes": 786,
+      "sha256": "34e2158079dd2d865a520aea632990aaaeec2a8e084ca23b30697c3c9db16237"
+    },
+    {
       "path": "docs/network_evidence.json",
-      "bytes": 1600,
-      "sha256": "24c078e3f23a31449dd8dc8d1b877c2a91af12cbd8c2cd27252ca734a5f7f256"
+      "bytes": 1607,
+      "sha256": "c2e16f5dae839aa7376193549a1711b255a06dbe82968d62493af50fd4fafe1f"
     },
     {
       "path": "docs/reconnect-patch-receipt.json",
@@ -234,7 +249,7 @@
     {
       "path": "public-manifest.json",
       "bytes": 10064,
-      "sha256": "0c8faa9ae39bf87b7526a415f29ac8080a699789e08d00dccd93ee7af63a32a9"
+      "sha256": "1de2c6265520ee087db7dbfe74b316c8bd12515a394901d340f039bf74f6315b"
     },
     {
       "path": "public/assets/ArcadeBoostNozzle.glb",
@@ -463,28 +478,28 @@
     },
     {
       "path": "public/online.css",
-      "bytes": 5442,
-      "sha256": "10a1bf623394e94c1a97be37d0d601fd24bafaa10ceb0cbf3fbd760b8476a908"
+      "bytes": 6190,
+      "sha256": "7cd98fde74ed9bfea56fe222c7104c535fa9a42a786188f1acd097381adcc63e"
     },
     {
       "path": "public/online.html",
-      "bytes": 3624,
-      "sha256": "70d66ed8fde06e42b79c180b8006f8090136fa5fb07c60c6778c02cb5c6bb268"
+      "bytes": 4096,
+      "sha256": "7fca9d88b372fc909111095e8c10e72c30b76ae16038a944eeaaf87312d4ec16"
     },
     {
       "path": "public/online.js",
-      "bytes": 1316895,
-      "sha256": "1c8870a14be8ffb6fe62cca0ae0b416453d59d8da8ecee42fabdc284f25f7b8d"
+      "bytes": 1323263,
+      "sha256": "c186b7a6e88c3cba1108e4d1e2e8aa67b6878d7bf162b6c01b0c9f082eded535"
     },
     {
       "path": "server/data.mjs",
-      "bytes": 1195,
-      "sha256": "0d2eb492982ccbb0c7c1bb342f5f1e09551d9f7a5e96581d9f78b8453564ba34"
+      "bytes": 1303,
+      "sha256": "05ec649e2e637dbb35bd3ba7700d85a23224bd87f414d7578de5d7b3625bba3a"
     },
     {
       "path": "server/index.mjs",
-      "bytes": 649,
-      "sha256": "6e3eff220a079fb58bd65033c0c2fb8632b064896d6fe3b82845032a9fb219fa"
+      "bytes": 650,
+      "sha256": "eb61c87eeae1f58093f6d065d1fda1fec22bd07e9a67ce583bfb95ef0c5a4ef9"
     },
     {
       "path": "server/ingress.mjs",
@@ -492,9 +507,14 @@
       "sha256": "d0d1181dea3da0655f518228669ed7cc0a0e2ec93c2d0356fb78ca7fc262ba1c"
     },
     {
+      "path": "server/interruption.mjs",
+      "bytes": 1102,
+      "sha256": "7403e0dea4d40d9cd9f7760e2481ee1cd295b1b8f7255138588cd81c6998caef"
+    },
+    {
       "path": "server/service.mjs",
-      "bytes": 15037,
-      "sha256": "aa887000bbe978ab3709609a07c3596191786632c99151fc237cbb9e9bb38c5e"
+      "bytes": 16786,
+      "sha256": "96b20827caf1a7fc56833b6470a0b52bc2160b9fa8e128ffe9fbcaac38aeca7a"
     },
     {
       "path": "server/static-assets.mjs",
@@ -522,6 +542,11 @@
       "sha256": "30531e0e5abf4d57ff6e37a48534b84aa426ada4d63a84cba07faef0b30e789f"
     },
     {
+      "path": "shared/timing-policy.mjs",
+      "bytes": 264,
+      "sha256": "356ad9615f015efcd77cad3ce323bd9e0677dbd151a7bfcf138685b977294ea8"
+    },
+    {
       "path": "shared/tracks.js",
       "bytes": 1848,
       "sha256": "ac0a8659be0d96f209a44ad5d93671d57c75a7200d53f4d357de57ba57f49d6f"
@@ -538,8 +563,8 @@
     },
     {
       "path": "test/client-worker.mjs",
-      "bytes": 2750,
-      "sha256": "deb5ae7d3d6d185bea6a7403d8257a1d9b18040bdebdba29fddaab1a5013f21f"
+      "bytes": 2839,
+      "sha256": "4c80fa794702d6e636beb05fe5905e7ad7f704f713eb15a3b7e7bdf68880ab75"
     },
     {
       "path": "test/fixtures/course_runtime.json",
@@ -577,14 +602,19 @@
       "sha256": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48"
     },
     {
+      "path": "test/interruption.test.mjs",
+      "bytes": 20834,
+      "sha256": "80b034933b983b6a50daa7df8d7f6a1213761031933e0e1c73ced05a89434e80"
+    },
+    {
       "path": "test/network.test.mjs",
-      "bytes": 8464,
-      "sha256": "547d6927df20778034a41844a562c27c431131d7e7561f405874879e528c6ef0"
+      "bytes": 8730,
+      "sha256": "d3547625c0b8d8d795b17ea0f15eb7c2077f5257c8a02df329f9d37ae09d4c21"
     },
     {
       "path": "test/packaged-hosting.test.mjs",
       "bytes": 2079,
-      "sha256": "7fe109e87475473a824273d8cf26fa606ea23a1b0dd0649a93fa264c5e30a7fd"
+      "sha256": "0e57d0c19004ef064dc7a10067bf3ed0ca63eaaadfbd433a0a45c3a340e0a0d8"
     },
     {
       "path": "test/public.test.mjs",
@@ -593,8 +623,8 @@
     },
     {
       "path": "test/runtime-warmup.test.mjs",
-      "bytes": 3719,
-      "sha256": "e2d99b0f725c67209cdd62f099fd25114c7bd57d2ae02b8b65c9dcb75adcaa7d"
+      "bytes": 3923,
+      "sha256": "700648e03c131490c9c9b45f0a6aacb211129c7b592c690f5c51022004dbbe4a"
     },
     {
       "path": "test/security.test.mjs",
@@ -603,8 +633,8 @@
     },
     {
       "path": "test/server-worker.mjs",
-      "bytes": 358,
-      "sha256": "754c63e1bdb423ffb816cc28bf8aac130b3dd24818305105d9ffb44bbeb809a9"
+      "bytes": 496,
+      "sha256": "20704095f925f2ac1b5ac2401e982c44bd97f4bd26ef5c9224919b2f908d6325"
     },
     {
       "path": "test/static-assets.test.mjs",
@@ -623,8 +653,8 @@
     },
     {
       "path": "tests/activation-origin.test.mjs",
-      "bytes": 2094,
-      "sha256": "21252c97cdf8bd34cdcd7efa7381abab27f7b00703b031ab9a44b701b4e6ed99"
+      "bytes": 2099,
+      "sha256": "3d30763a3bd2140d57e1a6a59dcd560556a97c7d07da7f08fed6b916651003eb"
     },
     {
       "path": "tests/baseline-handling-recovery.mjs",
@@ -638,8 +668,8 @@
     },
     {
       "path": "tests/client-contract.test.mjs",
-      "bytes": 7675,
-      "sha256": "4a7e5571cf8dc740e59d28f71891d2618f455927e53c26af4e1551f6d6dddd41"
+      "bytes": 7688,
+      "sha256": "a53ea38fe85f2535d29a0f1a5f9d5e45ebf16394de8683fced01102daf8ccaa3"
     },
     {
       "path": "tests/client-worker.mjs",
@@ -648,13 +678,18 @@
     },
     {
       "path": "tests/fixture.mjs",
-      "bytes": 1719,
-      "sha256": "d8fa175d379d5ae26764f720a336e26fd79f01dcd4377aebecb4a06f92330710"
+      "bytes": 1792,
+      "sha256": "8a437e70e6ad06e935f68990c072abb27b9c707d448a2af1c4bd60353f8cf551"
+    },
+    {
+      "path": "tests/interruption-client.test.mjs",
+      "bytes": 10503,
+      "sha256": "d2d8709b334f07c4059666ea6ec2b8f4f2c1b6373d9df030b7b3b92c92553270"
     },
     {
       "path": "tests/joint-parity.test.mjs",
       "bytes": 5419,
-      "sha256": "29124432835533defb33ed87a409687bc9e3bca94d908f8ff4d9a602803410f8"
+      "sha256": "68ad14499c9b031e8e1836c9c637f136b4b8cd1dd336b7bab66349415459eb30"
     },
     {
       "path": "tests/online-assets.test.mjs",
@@ -663,8 +698,8 @@
     },
     {
       "path": "tests/parity-fixture.mjs",
-      "bytes": 715,
-      "sha256": "73068f039e97e3884cf4eab04a3a38dd10f760a7e3bdca1a90b34e570f1590e7"
+      "bytes": 788,
+      "sha256": "0c3db5b65bc6ad7e098ce57629b8bd5b6f6055264d2a96b8ad85d3545b9bd9c3"
     },
     {
       "path": "tests/reconnect-timing.test.mjs",
@@ -678,8 +713,8 @@
     },
     {
       "path": "tests/two-client.test.mjs",
-      "bytes": 4701,
-      "sha256": "dd4861205cbadbc8eabca1eb4ad4fae01243d49d114ec7f4f54e9be6928b2e51"
+      "bytes": 5743,
+      "sha256": "6c41e7315ca2a49559ae24f5fa24fec98d1712260357265d628022f8bdcb35d5"
     },
     {
       "path": "tools/build.mjs",
@@ -695,6 +730,11 @@
       "path": "tools/pin.mjs",
       "bytes": 795,
       "sha256": "fdce9ce39f9842046d0c4f48b13e03bbbf0346be899984c39374b6953096bbcf"
+    },
+    {
+      "path": "tools/profile-interruption.mjs",
+      "bytes": 2257,
+      "sha256": "e0e766477855e086998f01757ede1f15e665ef15c38755d180a6d64c00a54eee"
     },
     {
       "path": "tools/verify_water_raycast.mjs",

@@ -6,6 +6,8 @@ import {WebSocketServer,WebSocket} from 'ws';
 import {RaceWorld} from '../shared/world.mjs';
 import {loadData,getManifest} from './data.mjs';
 import {ingress,bucket} from './ingress.mjs';
+import {TIMING_POLICY} from '../shared/timing-policy.mjs';
+import {newInterruption,interruptionView,beginInterruption,updateInterruption} from './interruption.mjs';
 import {NEUTRAL,exact,validControls,versionError,JOIN_KEYS,validName} from '../shared/protocol.mjs';
 const validRoomCode=value=>typeof value==='string'&&/^[A-Za-z0-9_-]{16}$/.test(value);
 const token=()=>randomBytes(24).toString('base64url');
@@ -45,8 +47,8 @@ export async function createService(options={}){
  const send=(ws,msg)=>{if(ws?.readyState!==WebSocket.OPEN)return;if(ws.bufferedAmount>128*1024){ws.terminate();return;}ws.send(JSON.stringify(msg));};
  const fail=(ws,code)=>{metrics.invalidMessages++;send(ws,{type:'error',code});if(++ws.context.invalidCount>=20)ws.close(1008,'Invalid messages');};
  const repairHost=room=>{if(room.status==='waiting'&&!room.seats.get(room.hostId)?.ws)room.hostId=[...room.seats.values()].find(seat=>seat.ws)?.id||[...room.seats.keys()][0]||null;};
- const summary=room=>({type:'snapshot',roomCode:room.code,epoch:room.epoch,status:room.status,tick:room.tick,startTick:room.startTick,elapsed:room.world.ticks/60,hostId:room.hostId,players:[...room.seats.values()].map(s=>({...room.world.snapshot(s.id),name:s.name,connected:!!s.ws,ready:s.ready,ack:s.lastSeq,inputStale:room.tick-s.lastInputTick>config.inputTimeoutTicks,dnf:s.dnf})),results:room.results});
- const broadcast=room=>{const m=summary(room);for(const s of room.seats.values())send(s.ws,m);};
+ const summary=room=>({type:'snapshot',roomCode:room.code,epoch:room.epoch,status:room.status,tick:room.tick,startTick:room.startTick,elapsed:room.world.ticks/60,hostId:room.hostId,players:[...room.seats.values()].map(s=>({...room.world.snapshot(s.id),name:s.name,connected:!!s.ws,ready:s.ready,ack:s.lastSeq,inputStale:room.tick-s.lastInputTick>config.inputTimeoutTicks,dnf:s.dnf})),results:room.results,interruption:interruptionView(room.interruption)});
+ const broadcast=room=>{room.lastBroadcastAt=performance.now();const m=summary(room);for(const s of room.seats.values())send(s.ws,m);};
  const endRoom=room=>{room.status='results';room.endedAt=performance.now();room.results=[...room.seats.values()].map(s=>{const p=room.world.snapshot(s.id);return {playerId:s.id,name:s.name,status:s.dnf?'dnf':p.state==='finished'?'finished':'dnf',reason:s.dnf|| (p.state==='finished'?null:p.state==='failed'?'vehicle-disabled':'race-timeout'),time:p.state==='finished'?p.result.time:null,penalties:p.penalties,checkpoints:p.nextCheckpoint-1};}).sort((a,b)=>(a.time??Infinity)-(b.time??Infinity)||a.playerId.localeCompare(b.playerId));let rank=0;room.results.forEach((r,i)=>{r.rank=r.status==='finished'?++rank:null;});broadcast(room);};
  wss.on('connection',ws=>{
   metrics.connections++;ws.context={room:null,seat:null,windowStart:performance.now(),count:0,joinedAt:performance.now(),invalidCount:0,controlBudget:bucket(8,2)};ws.alive=true;
@@ -70,7 +72,7 @@ export async function createService(options={}){
     let room;
     if(m.type==='create'){
      if(rooms.size>=policy.maxRooms)return fail(ws,'CAPACITY');if(policy.publicMode&&!policy.createBudget())return fail(ws,'RATE_LIMIT');const code=randomBytes(12).toString('base64url');
-     room={code,epoch:randomUUID(),status:'waiting',seats:new Map(),world:new RaceWorld(data,config.raceSlice),tick:0,startTick:null,hostId:null,createdAt:now,endedAt:null,results:null};rooms.set(code,room);
+     room={code,epoch:randomUUID(),status:'waiting',seats:new Map(),world:new RaceWorld(data,config.raceSlice),tick:0,startTick:null,hostId:null,createdAt:now,endedAt:null,results:null,interruption:newInterruption(),lastBroadcastAt:now};rooms.set(code,room);
     }else{room=rooms.get(m.roomCode);if(!room)return fail(ws,'ROOM_NOT_FOUND');if(room.status!=='waiting')return fail(ws,'RACE_ALREADY_STARTED');if(room.seats.size>=2)return fail(ws,'ROOM_FULL');}
     const id=randomUUID(),seat={id,name:m.name,ws,token:token(),ready:false,lastSeq:0,lastInputTick:-Infinity,controls:NEUTRAL,disconnectAt:null,dnf:null};room.seats.set(id,seat);room.world.add(id);if(!room.hostId)room.hostId=id;repairHost(room);c.room=room;c.seat=seat;
     send(ws,{type:'joined',roomCode:room.code,playerId:id,reconnectToken:seat.token,reconnected:false,epoch:room.epoch,lastSeq:0});broadcast(room);return;
@@ -85,28 +87,33 @@ export async function createService(options={}){
     room.status='countdown';room.startTick=room.tick+config.countdownTicks;broadcast(room);return;
    }
    if(m.type==='input'){
-    if(!exact(m,['type','epoch','seq','clientTick','controls'])||!validControls(m.controls)||!Number.isSafeInteger(m.seq)||m.seq<1||m.seq>2147483647||!Number.isSafeInteger(m.clientTick))return fail(ws,'INVALID_INPUT');
+    if(!exact(m,['type','epoch','seq','clientTick','controls','generation'])||!validControls(m.controls)||!Number.isSafeInteger(m.seq)||m.seq<1||m.seq>2147483647||!Number.isSafeInteger(m.clientTick)||!Number.isSafeInteger(m.generation)||m.generation<0||m.generation>2147483647)return fail(ws,'INVALID_INPUT');
     if(m.epoch!==room.epoch)return fail(ws,'EPOCH_MISMATCH');if(!['countdown','racing'].includes(room.status)||seat.dnf)return fail(ws,'NOT_RACING');
+    if(m.generation!==room.interruption.generation){if(m.generation<room.interruption.generation){if(seat.resyncNotifiedGen!==room.interruption.generation){seat.resyncNotifiedGen=room.interruption.generation;send(ws,{type:'error',code:'RESYNC_REQUIRED'});}return;}return fail(ws,'FUTURE_GENERATION');}
+    if(room.interruption.phase==='holding')return;
     if(m.seq<=seat.lastSeq)return fail(ws,'STALE_SEQUENCE');if(m.seq>seat.lastSeq+4096)return fail(ws,'SEQUENCE_GAP');
     if(m.clientTick<room.tick-120)return fail(ws,'STALE_INPUT');if(m.clientTick>room.tick+6)return fail(ws,'FUTURE_INPUT');
     seat.lastSeq=m.seq;seat.lastInputTick=room.tick;seat.controls=m.controls;return;
    }
    if(m.type==='rematch'){
     if(!exact(m,['type'])||seat.id!==room.hostId)return fail(ws,'HOST_REQUIRED');if(room.status!=='results'||[...room.seats.values()].some(s=>!s.ws))return fail(ws,'INVALID_REMATCH');
-    room.epoch=randomUUID();room.world=new RaceWorld(data,config.raceSlice);room.status='waiting';room.startTick=null;room.results=null;room.endedAt=null;room.createdAt=now;
-    for(const s of room.seats.values()){room.world.add(s.id);s.ready=false;s.lastSeq=0;s.lastInputTick=-Infinity;s.controls=NEUTRAL;s.dnf=null;}broadcast(room);return;
+    room.epoch=randomUUID();room.world=new RaceWorld(data,config.raceSlice);room.status='waiting';room.startTick=null;room.results=null;room.endedAt=null;room.createdAt=now;room.interruption=newInterruption();
+    for(const s of room.seats.values()){room.world.add(s.id);s.ready=false;s.lastSeq=0;s.lastInputTick=-Infinity;s.controls=NEUTRAL;s.dnf=null;s.resyncNotifiedGen=-1;}broadcast(room);return;
    }
    fail(ws,'UNKNOWN_MESSAGE');
   });
   ws.on('close',()=>{const {room,seat}=ws.context;if(!room||!seat||seat.ws!==ws)return;seat.ws=null;seat.controls=NEUTRAL;seat.disconnectAt=performance.now();if(room.status==='waiting'){seat.ready=false;repairHost(room);}broadcast(room);});
  });
- function step(){const began=performance.now();metrics.ticks++;for(const [code,room] of rooms){room.tick++;
+ const neutralizeRoom=room=>{for(const s of room.seats.values()){s.controls=NEUTRAL;s.lastInputTick=-Infinity;const driver=room.world.drivers.get(s.id);if(driver)driver.lastRecover=false;}};
+ const failInterruption=room=>{for(const s of room.seats.values())if(room.world.snapshot(s.id).state!=='finished')s.dnf||='server-interrupted';endRoom(room);};
+ function step(){const began=performance.now();metrics.ticks++;for(const [code,room] of rooms){if(room.interruption.phase!=='holding')room.tick++;
   for(const seat of room.seats.values())if(!seat.ws&&seat.disconnectAt&&began-seat.disconnectAt>config.reconnectMs&&!seat.dnf){
    if(room.status==='waiting'){room.seats.delete(seat.id);room.world.drivers.delete(seat.id);repairHost(room);}else if(!['finished','failed'].includes(room.world.snapshot(seat.id).state))seat.dnf='disconnect-timeout';
   }
   if(!room.seats.size||(room.status==='waiting'&&began-room.createdAt>config.roomIdleMs)||(room.status==='results'&&began-room.endedAt>config.resultRetentionMs)){
    for(const seat of room.seats.values()){send(seat.ws,{type:'closed',reason:'room-expired'});seat.ws?.close(1000,'Room expired');}rooms.delete(code);continue;
   }
+  if(room.interruption.phase==='holding'){if(began-room.lastBroadcastAt>=50)broadcast(room);continue;}
   if(room.status==='countdown'&&room.tick>=room.startTick)room.status='racing';
   if(room.status==='racing'){
    const inputs=new Map([...room.seats.values()].map(s=>[s.id,!s.ws||s.dnf||room.tick-s.lastInputTick>config.inputTimeoutTicks?NEUTRAL:s.controls]));
@@ -116,10 +123,11 @@ export async function createService(options={}){
   if(room.tick%3===0)broadcast(room);
  }metrics.lastTickMs=performance.now()-began;metrics.maxTickMs=Math.max(metrics.maxTickMs,metrics.lastTickMs);}
  const timer=setInterval(()=>{const now=performance.now(),delta=now-lastWall;lastWall=now;accumulator+=delta;
-  if(accumulator>250){metrics.overloads++;
+  if(accumulator>TIMING_POLICY.stallDetectMs){metrics.overloads++;
    const activeRaces=[...rooms.values()].filter(room=>['countdown','racing'].includes(room.status)).length;
-   if(policy.publicMode&&activeRaces&&now-lastOverloadLog>=60000){const cpu=process.cpuUsage(diagnosticCpu),round=n=>Math.round(n*1000)/1000;lastOverloadLog=now;console.warn(JSON.stringify({event:'runtime-overload',loopDeltaMs:round(delta),backlogMs:round(accumulator),lastStepMs:round(metrics.lastTickMs||0),maxStepMs:round(metrics.maxTickMs),sampleWindowMs:round(now-diagnosticAt),cpuUserMs:round(cpu.user/1000),cpuSystemMs:round(cpu.system/1000),activeRaces,guardMs:250}));}
-   for(const room of rooms.values())if(['countdown','racing'].includes(room.status)){for(const s of room.seats.values())s.dnf||='server-overload';endRoom(room);}accumulator=0;return;}
+   if(policy.publicMode&&activeRaces&&now-lastOverloadLog>=60000){const cpu=process.cpuUsage(diagnosticCpu),round=n=>Math.round(n*1000)/1000;lastOverloadLog=now;console.warn(JSON.stringify({event:'runtime-interruption',loopDeltaMs:round(delta),backlogMs:round(accumulator),lastStepMs:round(metrics.lastTickMs||0),maxStepMs:round(metrics.maxTickMs),sampleWindowMs:round(now-diagnosticAt),cpuUserMs:round(cpu.user/1000),cpuSystemMs:round(cpu.system/1000),activeRaces,guardMs:TIMING_POLICY.stallDetectMs}));}
+   for(const room of rooms.values())if(['countdown','racing'].includes(room.status)){neutralizeRoom(room);const phase=beginInterruption(room.interruption,now,accumulator);if(phase==='failed')failInterruption(room);else broadcast(room);}accumulator=0;return;}
+  for(const room of rooms.values())if(room.interruption.phase==='holding'&&['countdown','racing'].includes(room.status)){const phase=updateInterruption(room.interruption,now);if(phase==='failed'){neutralizeRoom(room);failInterruption(room);}else if(phase==='resumed'){neutralizeRoom(room);accumulator=0;broadcast(room);}}
   while(accumulator>=1000/60){accumulator-=1000/60;step();}
   if(now-diagnosticAt>=1000){diagnosticAt=now;diagnosticCpu=process.cpuUsage();}
  },4);

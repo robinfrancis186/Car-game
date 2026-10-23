@@ -274,20 +274,20 @@
     {
       "path": "online.css",
       "url": "/online.css",
-      "bytes": 5442,
-      "sha256": "10a1bf623394e94c1a97be37d0d601fd24bafaa10ceb0cbf3fbd760b8476a908"
+      "bytes": 6190,
+      "sha256": "7cd98fde74ed9bfea56fe222c7104c535fa9a42a786188f1acd097381adcc63e"
     },
     {
       "path": "online.html",
       "url": "/online.html",
-      "bytes": 3624,
-      "sha256": "70d66ed8fde06e42b79c180b8006f8090136fa5fb07c60c6778c02cb5c6bb268"
+      "bytes": 4096,
+      "sha256": "7fca9d88b372fc909111095e8c10e72c30b76ae16038a944eeaaf87312d4ec16"
     },
     {
       "path": "online.js",
       "url": "/online.js",
-      "bytes": 1316895,
-      "sha256": "1c8870a14be8ffb6fe62cca0ae0b416453d59d8da8ecee42fabdc284f25f7b8d"
+      "bytes": 1323263,
+      "sha256": "c186b7a6e88c3cba1108e4d1e2e8aa67b6878d7bf162b6c01b0c9f082eded535"
     }
   ]
 }

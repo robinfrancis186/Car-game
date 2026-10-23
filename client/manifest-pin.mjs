@@ -1,7 +1,7 @@
 // Explicit paired build pin. Never learned from an untrusted endpoint.
 export const EXPECTED=Object.freeze({
-  "protocolVersion": 2,
-  "physicsVersion": "v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50",
+  "protocolVersion": 3,
+  "physicsVersion": "v11.1-stock-noncontact-interruption1-510edd401e103b23",
   "trackHash": "1b3bdbf06de3bb91414b00f6e62b524c4141c34febbd5e0b2bc9adf9f844720d",
   "raceSlice": {
     "startS": 2200,
@@ -10,6 +10,12 @@ export const EXPECTED=Object.freeze({
   "tickRate": 60,
   "snapshotRate": 20,
   "rules": {
+    "serverInterruption": "bounded-v1",
+    "stallDetectMs": 250,
+    "resyncStableMs": 500,
+    "maxInterruptionMs": 2000,
+    "maxInterruptions": 3,
+    "maxInterruptedMs": 5000,
     "maxPlayers": 2,
     "stock": true,
     "contact": false,
