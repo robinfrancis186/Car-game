@@ -1,5 +1,5 @@
 import http from 'node:http';
-import {readFile} from 'node:fs/promises';
+import {loadStaticAssets,readStaticAllowlist} from './static-assets.mjs';
 import {randomBytes,randomUUID,timingSafeEqual} from 'node:crypto';
 import {performance} from 'node:perf_hooks';
 import {WebSocketServer,WebSocket} from 'ws';
@@ -13,8 +13,8 @@ const matchToken=(a,b)=>typeof b==='string'&&/^[A-Za-z0-9_-]{32}$/.test(b)&&timi
 export async function createService(options={}){
  const config={port:0,countdownTicks:180,reconnectMs:20000,inputTimeoutTicks:15,raceLimitTicks:60*180,roomIdleMs:15*60_000,resultRetentionMs:60_000,...options};
  const policy=ingress(options);let closing=false;
- const publicAssets=new Map(await Promise.all([['/','../client/index.html','text/html; charset=utf-8'],['/app.mjs','../client/app.mjs','text/javascript; charset=utf-8'],['/map-data','../data/coastal_map_data.json','application/json']].map(async([url,path,type])=>[url,{body:await readFile(new URL(path,import.meta.url)),type}])));
- const manifest=getManifest(),data=loadData(),rooms=new Map(),metrics={ticks:0,maxTickMs:0,invalidMessages:0,overloads:0,connections:0};let lastWall=performance.now(),accumulator=0;
+ const packageRoot=new URL('../',import.meta.url);const publicAssets=await loadStaticAssets(packageRoot,await readStaticAllowlist(packageRoot));
+ const manifest=getManifest(options.raceSlice),data=loadData(),rooms=new Map(),metrics={ticks:0,maxTickMs:0,invalidMessages:0,overloads:0,connections:0};let lastWall=performance.now(),accumulator=0;
  const httpServer=http.createServer({maxHeaderSize:8192,headersTimeout:10000,requestTimeout:10000,keepAliveTimeout:5000},(req,res)=>{
   const host=req.headers.host;
   if(!policy.validHost(host,httpServer.address()?.port)){res.writeHead(403);return res.end('Host denied');}
@@ -23,14 +23,14 @@ export async function createService(options={}){
   res.setHeader('Referrer-Policy','no-referrer');res.setHeader('Cross-Origin-Resource-Policy','same-origin');
   res.setHeader('Permissions-Policy','camera=(), microphone=(), geolocation=()');
   if(policy.publicMode)res.setHeader('Strict-Transport-Security','max-age=31536000');
-  res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'");
+  const socketOrigin=policy.publicMode?policy.origin.replace(/^https:/,'wss:'):'ws://'+host;
+  res.setHeader('Content-Security-Policy',`default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' ${socketOrigin}; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'`);
   if(req.method!=='GET'||req.headers['transfer-encoding']||Number(req.headers['content-length']||0)!==0){res.writeHead(405,{Connection:'close'});return res.end();}
   if(req.url==='/health'){res.setHeader('Content-Type','application/json');return res.end(JSON.stringify(policy.publicMode?{status:'experimental-alpha',capacity:2,persistent:false}:{status:'local-alpha',rooms:rooms.size,...metrics}));}
   if(policy.publicMode&&!policy.httpBudget()){res.writeHead(429,{'Retry-After':'1'});return res.end('Try again later');}
   if(req.url==='/manifest'){res.setHeader('Content-Type','application/json');return res.end(JSON.stringify({...manifest,route:data.world.route_points}));}
   if(req.url==='/robots.txt'){res.setHeader('Content-Type','text/plain');return res.end('User-agent: *\nDisallow: /\n');}
-  const asset=publicAssets.get(req.url);if(!asset){res.writeHead(404);return res.end();}
-  res.setHeader('Content-Type',asset.type);res.end(asset.body);
+  if(publicAssets.serve(req,res))return;res.writeHead(404);res.end();
  });
  httpServer.maxConnections=40;httpServer.maxRequestsPerSocket=60;httpServer.setTimeout(15000);
  httpServer.on('clientError',(_error,socket)=>socket.destroy());

@@ -1,0 +1,47 @@
+{
+  "identity": "v11.1-joint-reconstruction2-disabled-production",
+  "createdUtc": "2026-10-23T06:21:00.365243+00:00",
+  "priorUnpublishedCandidatesRecovered": false,
+  "sourceCommits": {
+    "stableV11_1": "0a5f07447719117a0084cffb9a525a1cd1e54ea3",
+    "hardenedAlpha": "55067c6dc71f299bf9e35fee80b54dfc2d7ee8e1"
+  },
+  "stableEngineSha256": {
+    "gameplay.js": "f1464350b943632dffeb321b50632e3524e03f356018c5005392de1fda89620f",
+    "garage.js": "4337626adb45efa08238e2f52896269d8e8303baf4aaacf28f499bb25d646386",
+    "tracks.js": "ac0a8659be0d96f209a44ad5d93671d57c75a7200d53f4d357de57ba57f49d6f"
+  },
+  "stableRendererSha256": "925a9c376812ac22a1451045cbb924ea438cc9c2021c0ea777788f19f317ed95",
+  "protocolVersion": 2,
+  "physicsVersion": "v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50",
+  "trackHash": "1b3bdbf06de3bb91414b00f6e62b524c4141c34febbd5e0b2bc9adf9f844720d",
+  "publicFiles": 48,
+  "publicManifestSha256": "5d89d73007f3800b249b9da0a24fff87814e82313b25bc1b46b89a1966278267",
+  "approvedProductionOrigins": [],
+  "soloEntryBundled": false,
+  "soloProfileAccessed": false,
+  "tests": {
+    "clientJointPassed": 14,
+    "authorityHostingPassed": 21,
+    "failed": 0,
+    "baselineHandlingRecovery": 175,
+    "baselineReverseCasesAt30_60_120Hz": 27,
+    "baselineObstacleApproaches": 66,
+    "contactedReverseEscapes": 54,
+    "jointStockReverseCases": 9,
+    "waterRaycastSamples": 21229,
+    "waterMismatches": 0,
+    "actualGLBThreeSceneGraph": true,
+    "productionOnlyInstallSmoke": {
+      "root": 200,
+      "health": 200,
+      "protocol": 2
+    },
+    "browserGPU": "pending",
+    "humanDriving": "pending",
+    "publicInternet": "pending"
+  },
+  "retainedSecurity": "All alpha WebSocket/room/lifecycle/control-frame/payload/backpressure/heartbeat guards unchanged; strict static allowlist/bounded streaming/CSP added.",
+  "licence": "Original owner decision pending; unauthorized assistant CC0 descriptions corrected only forward; actual MIT/ODbL notices preserved.",
+  "privacy": "No private reference photos/IDs, authoring audit notes, credentials, old solo entry, logs or node_modules included."
+}

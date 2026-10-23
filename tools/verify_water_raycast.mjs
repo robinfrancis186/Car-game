@@ -1,6 +1,7 @@
-/** Optional source-parity check. Uses the existing frozen V10 Three installation.
- * Run from alpha: node tools/verify_water_raycast.mjs ../kerala_racing_v10/web
- * Not part of the dependency-light server or npm test. CPU raycast only.
+/** Stable V11.1 renderer-source parity check. Run from this package:
+ * node tools/verify_water_raycast.mjs .
+ * Uses the installed Three module and packaged water GLB; CPU raycast only.
+ * This is not WebGL, browser, GPU, human-driving or internet acceptance.
  */
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
@@ -8,7 +9,7 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
 import { createWaterQuery } from '../shared/water.js';
-const root=resolve(process.argv[2]||'../kerala_racing_v10/web');
+const root=resolve(process.argv[2]||'.');
 const THREE=await import(pathToFileURL(root+'/node_modules/three/build/three.module.js'));
 const {GLTFLoader}=await import(pathToFileURL(root+'/node_modules/three/examples/jsm/loaders/GLTFLoader.js'));
 const b=await readFile(root+'/public/assets/Course_Water.glb');

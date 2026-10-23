@@ -1,0 +1,15 @@
+{
+  "paint_material": "Crimson multi-coat | original fan concept",
+  "steer_nodes": [
+    "Steer_Front_Left",
+    "Steer_Front_Right",
+    "Steer_Rear_Left",
+    "Steer_Rear_Right"
+  ],
+  "spin_nodes": [
+    "Spin_Front_Left",
+    "Spin_Front_Right",
+    "Spin_Rear_Left",
+    "Spin_Rear_Right"
+  ]
+}

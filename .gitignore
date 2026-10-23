@@ -1,12 +1,8 @@
-node_modules
+node_modules/
 .env
 .env.*
-coverage/
 *.log
-*.tmp
+*.zip
+*.tar*
+coverage/
 .DS_Store
-.openai/
-docs/network_evidence.json
-docs/v10_physics_metrics.json
-docs/water_validation.json
-docs/remote-smoke-receipt.json

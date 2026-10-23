@@ -1,0 +1,1 @@
+import{sha256}from'./validation.mjs';export async function validateWorldAssets(hashes,url){for(const[name,expected]of Object.entries(hashes)){const r=await fetch(url(name),{cache:'no-store',signal:AbortSignal.timeout(20000)});if(!r.ok||await sha256(await r.arrayBuffer())!==expected)throw Error('WORLD_ASSET_MISMATCH');}}

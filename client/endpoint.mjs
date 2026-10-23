@@ -1,0 +1,3 @@
+import{APPROVED_PRODUCTION_ORIGINS}from'./deployment.mjs';
+export function validateEndpoint(endpoint){if(!endpoint||typeof endpoint.origin!=='string')throw Error('ENDPOINT_NOT_APPROVED');const u=new URL(endpoint.origin),loopback=u.protocol==='http:'&&['127.0.0.1','localhost'].includes(u.hostname);if(u.origin!==endpoint.origin||u.username||u.password||u.search||u.hash||u.pathname!=='/'||(!loopback&&!APPROVED_PRODUCTION_ORIGINS.includes(u.origin)))throw Error('ENDPOINT_NOT_APPROVED');return Object.freeze({origin:u.origin,manifestPath:'/manifest',socketPath:'/room'});}
+export function endpointForPage(page){try{return validateEndpoint({origin:page.origin});}catch{return null;}}

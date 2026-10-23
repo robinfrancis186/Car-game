@@ -1,0 +1,640 @@
+{
+  "schemaVersion": 1,
+  "identity": "v11.1-joint-reconstruction2-disabled-production",
+  "createdUtc": "2026-10-23T06:21:00.365243+00:00",
+  "rootHashAlgorithm": "SHA256 sorted UTF8 path + NUL + decimal bytes + NUL + SHA256 + LF",
+  "sourceRootHash": "1dc10e740ab89685d8b64ca070f9692460a5cadb5c05aca85f65a24dbba3aa32",
+  "excludesSelf": "SOURCE_MANIFEST.json",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 65,
+      "sha256": "5f633acd58b6a347e7f98f4e650e8c5a57f319d75fc7e49ed33430984571a666"
+    },
+    {
+      "path": ".node-version",
+      "bytes": 8,
+      "sha256": "7e8a2fa94951112b894a3dbe3d05efef5e9263741fa49125f0a70f40fedab4cc"
+    },
+    {
+      "path": "LICENSES.md",
+      "bytes": 1479,
+      "sha256": "e36b03262b36465863a9d2b13b3835cfc153b53a2caf996d59c8469b78c10816"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4269,
+      "sha256": "57596bfa07d55874d4d609d3d535476c4a77815fc30ae05c21e75dc0d5a8d0f0"
+    },
+    {
+      "path": "client/client.mjs",
+      "bytes": 9750,
+      "sha256": "df5154eff260d240a94a54bd33300d18544b605e33faba121b7b354b0c67221f"
+    },
+    {
+      "path": "client/deployment.mjs",
+      "bytes": 145,
+      "sha256": "90251101a2279b275068df3480a3f59103765282d69ca80608d53c6818846ef6"
+    },
+    {
+      "path": "client/endpoint.mjs",
+      "bytes": 683,
+      "sha256": "e86e94c454c5cd97ba68a0b47dca50d2b82ac3b2c7ecc97d5eae8aeda2780f9c"
+    },
+    {
+      "path": "client/main.mjs",
+      "bytes": 11487,
+      "sha256": "367fe5e4807541d65b955357398d8b290f9566985c1338e3efce9caf60e4e1d6"
+    },
+    {
+      "path": "client/manifest-pin.mjs",
+      "bytes": 1063,
+      "sha256": "795574538d3ee9d20dab2618363049bac4e709147bbc774517c9c835c129fcd7"
+    },
+    {
+      "path": "client/render-adapter.mjs",
+      "bytes": 4362,
+      "sha256": "0a324c1801ea10e78b30148b16648a1f5b5ec97f9a16b6d2d137fb3f3f8d134f"
+    },
+    {
+      "path": "client/validation.mjs",
+      "bytes": 5338,
+      "sha256": "129e77ceca3d27169cfab72edaf9f15b82b359d1975dc1f3b531fe6701ce94f9"
+    },
+    {
+      "path": "client/world-assets.mjs",
+      "bytes": 322,
+      "sha256": "41389671d7b7eb1c590e0ebdabc18d56f72a3c1743d36902b390a668010a53d4"
+    },
+    {
+      "path": "data/coastal_map_data.json",
+      "bytes": 254232,
+      "sha256": "6c1e134884013b8663ca1564cfb7d523621893c104dccc205248353d8086cf1c"
+    },
+    {
+      "path": "data/course_runtime.json",
+      "bytes": 442536,
+      "sha256": "fcc41f7e987267e8c8d5cad81330b8be7819a783ef1065cd8e956a76eae2d9b6"
+    },
+    {
+      "path": "data/furniture_colliders.json",
+      "bytes": 31824,
+      "sha256": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611"
+    },
+    {
+      "path": "data/infrastructure_colliders.json",
+      "bytes": 163022,
+      "sha256": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48"
+    },
+    {
+      "path": "data/water.json",
+      "bytes": 215282,
+      "sha256": "ded934a0ab51bcd8bed037317166edf6ba3964525ee99f20ef9024d2a6741af1"
+    },
+    {
+      "path": "docs/acceptance.md",
+      "bytes": 2161,
+      "sha256": "faf3959cb6d7814ad424300816722abbac2c7a76a61ca2e0a1eb0330ef7807e3"
+    },
+    {
+      "path": "docs/asset-audit.json",
+      "bytes": 8602,
+      "sha256": "3e638121952b25a5042b49a298a3e2dfb3e215a1a78cd35f34607e66807d7e02"
+    },
+    {
+      "path": "docs/client-module-evidence.json",
+      "bytes": 937,
+      "sha256": "ed9aa4361da0097fdac3e29837f14ef199b5604756685d3aaf2311ca552cfe3e"
+    },
+    {
+      "path": "docs/handling_recovery_metrics.json",
+      "bytes": 71078,
+      "sha256": "d2209f8dbe3ee604aa1c089c749f5e8aa782e1c51d43a50dd1b3ffa83535a435"
+    },
+    {
+      "path": "docs/network_evidence.json",
+      "bytes": 1563,
+      "sha256": "ae517f190f018efd6ae82e449dd61c12fac4defe81551193727372756236410c"
+    },
+    {
+      "path": "docs/reconstruction-receipt.json",
+      "bytes": 2127,
+      "sha256": "c629beffcb5354be40de8d7caf173f6c64a873f2c7331352dbe304b264eccce8"
+    },
+    {
+      "path": "docs/reverse_crawl_metrics.json",
+      "bytes": 17148,
+      "sha256": "471973c1f36f49e3a5a11c760bf1065d2eecde216a82135bb75f3d4503ade1d1"
+    },
+    {
+      "path": "docs/water_validation.json",
+      "bytes": 382,
+      "sha256": "d2c9434b73ba5eedf1f627818dc1785d406f4257cb60bfcf58d7bcf83163847f"
+    },
+    {
+      "path": "game/boost-fire.js",
+      "bytes": 5233,
+      "sha256": "0a1fd79a3407ac2b1b3ef374a6d1eda8cc18ce6f43f09f7c1e762b16178ce214"
+    },
+    {
+      "path": "game/collectibles.js",
+      "bytes": 1590,
+      "sha256": "9dcf84d22f58a083fc262bee704bbb4b5692fdfb33a3d98af08e46fd78cac3e1"
+    },
+    {
+      "path": "game/detail-lod.js",
+      "bytes": 5995,
+      "sha256": "b7f74f6850fd76454b22b7593452036f9e0b9a0f53de7fcc1d2b708d5a45bb9d"
+    },
+    {
+      "path": "game/finish-fx.js",
+      "bytes": 12965,
+      "sha256": "a8c11f92b406746c574a8b82bf1b031765e60ce5abe10c949bf2a789b8913f7c"
+    },
+    {
+      "path": "game/gameplay.js",
+      "bytes": 62551,
+      "sha256": "f1464350b943632dffeb321b50632e3524e03f356018c5005392de1fda89620f"
+    },
+    {
+      "path": "game/garage.js",
+      "bytes": 6190,
+      "sha256": "4337626adb45efa08238e2f52896269d8e8303baf4aaacf28f499bb25d646386"
+    },
+    {
+      "path": "game/scene.js",
+      "bytes": 36116,
+      "sha256": "925a9c376812ac22a1451045cbb924ea438cc9c2021c0ea777788f19f317ed95"
+    },
+    {
+      "path": "game/tea-placement.js",
+      "bytes": 4110,
+      "sha256": "110799212574b2c42c976585f625d24ab59d0a5129cb5be2a0fafaa10e70d84f"
+    },
+    {
+      "path": "game/tracks.js",
+      "bytes": 1848,
+      "sha256": "ac0a8659be0d96f209a44ad5d93671d57c75a7200d53f4d357de57ba57f49d6f"
+    },
+    {
+      "path": "game/transit.js",
+      "bytes": 7832,
+      "sha256": "b89f7a545514b5f34b5a62d3f6f684d58aea30a714903adb7b2b3a28a095714d"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 15670,
+      "sha256": "05ce973c0fad2662c9709c02edb37d7dac3d3c5e3f273092d20f322be131ed77"
+    },
+    {
+      "path": "package.json",
+      "bytes": 502,
+      "sha256": "4313540ee33de1c45e0ef58131ee53b101fc6c03a369af28e62d3777def1c366"
+    },
+    {
+      "path": "public-manifest.json",
+      "bytes": 10064,
+      "sha256": "5d89d73007f3800b249b9da0a24fff87814e82313b25bc1b46b89a1966278267"
+    },
+    {
+      "path": "public/assets/ArcadeBoostNozzle.glb",
+      "bytes": 20100,
+      "sha256": "e8abbd20c0f3f58aa19362a46e24a3304d3c489cad0ded8a748eb45a58e7373a"
+    },
+    {
+      "path": "public/assets/ArcadeCoin.glb",
+      "bytes": 78592,
+      "sha256": "f8bc943f206e8d65df4b76ce7e3bdf682b4ea8d4262cca739994e3822bb8219d"
+    },
+    {
+      "path": "public/assets/CanalRainTree.glb",
+      "bytes": 896688,
+      "sha256": "eeeb6fa9b3daa71a96544b8509e83bd41da156da0c50697ea232d0d048c7840c"
+    },
+    {
+      "path": "public/assets/CanalRainTreeFar.glb",
+      "bytes": 343648,
+      "sha256": "03514da6bf2bde6a411a96447087eb5dc77c050fd409792773023b3e68207b83"
+    },
+    {
+      "path": "public/assets/CanalShikara.glb",
+      "bytes": 388464,
+      "sha256": "2b4dc502eb3556a9a242843b08e1296903bd2d0c20a20584ebfb1eeebbc01f9d"
+    },
+    {
+      "path": "public/assets/CheckpointGate.glb",
+      "bytes": 18420,
+      "sha256": "ec6cac7fd5719511c55cb9486e203259706b278adf4415f03e489912c24ea5eb"
+    },
+    {
+      "path": "public/assets/ChineseFishingNet.glb",
+      "bytes": 50592,
+      "sha256": "06bd5c254021ea19de75425a1bd9a04bf2fc1188b629df917ed29dd0438966da"
+    },
+    {
+      "path": "public/assets/CoconutPalm_A.glb",
+      "bytes": 224516,
+      "sha256": "951687c70bf508edd8ce8e18a92dfaf940f1c4f812a58a85342a29787450b756"
+    },
+    {
+      "path": "public/assets/CoconutPalm_B.glb",
+      "bytes": 224520,
+      "sha256": "194f42c0bd580d560f161fcc212653c811f742846e2916af973ae60638c97929"
+    },
+    {
+      "path": "public/assets/Course_Furniture.glb",
+      "bytes": 2463984,
+      "sha256": "d669e76ebdb97d0c7d54afbd22120ad0691e3f42e349357adb419a08eea0b419"
+    },
+    {
+      "path": "public/assets/Course_Road.glb",
+      "bytes": 587484,
+      "sha256": "b738a94a13a3092f1bb3f38692d7095b5ebf2d3b806d49e4f83d72d14768d0d4"
+    },
+    {
+      "path": "public/assets/Course_Terrain.glb",
+      "bytes": 46800,
+      "sha256": "8316812e396a0037f31e8939c2b032f62f3baed2ade821aa9c0fb579a1751ef5"
+    },
+    {
+      "path": "public/assets/Course_Water.glb",
+      "bytes": 101696,
+      "sha256": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678"
+    },
+    {
+      "path": "public/assets/FishingBoat.glb",
+      "bytes": 82276,
+      "sha256": "5f2324b7d85b119c6be6075aceba39a60a8d01d300fb72b33c3bc2fcf5a06815"
+    },
+    {
+      "path": "public/assets/KeralaApartment_A.glb",
+      "bytes": 115304,
+      "sha256": "69513c6040528422e9ac31004c1186d539059a5184dc90ee8a26d374ccc046e6"
+    },
+    {
+      "path": "public/assets/KeralaHouse.glb",
+      "bytes": 382716,
+      "sha256": "ac29c493be0079ae4fa548dcbb14e29e9f7d262b0341826b98fb030f84178eef"
+    },
+    {
+      "path": "public/assets/KeralaHouseboat.glb",
+      "bytes": 260220,
+      "sha256": "2153db39d79b9738f7c5dfb0caa79a9e2d92ccdec6ffa415354de2ce791f54b5"
+    },
+    {
+      "path": "public/assets/KeralaOffice_A.glb",
+      "bytes": 65980,
+      "sha256": "d05616e4d0d35fb804d8502f3e02298b03aba52e8dba9b9e4b65297a0f807756"
+    },
+    {
+      "path": "public/assets/KeralaShopRow_A.glb",
+      "bytes": 66532,
+      "sha256": "a44bb678067c14b0184426f0b546dbddc8155dced337805c41308e5f8b20b819"
+    },
+    {
+      "path": "public/assets/KeralaShopRow_B.glb",
+      "bytes": 32180,
+      "sha256": "3c4184ea08cdf010b19260bc21c340c8d4d66f534d6844089f59ac60d37556da"
+    },
+    {
+      "path": "public/assets/KeralaTeaStall.glb",
+      "bytes": 24584,
+      "sha256": "2897ac5ced8aac9ebbd583ae70bceb4bec3560a99b6b87fc600e777bf1caf8c0"
+    },
+    {
+      "path": "public/assets/MetroStation.glb",
+      "bytes": 316972,
+      "sha256": "bbfaf1e07ef93750ee8e2264294b900cd262b7b977d2a318931625d81698cf45"
+    },
+    {
+      "path": "public/assets/MetroViaductSpan.glb",
+      "bytes": 39728,
+      "sha256": "e926f137d5f9f7442bdd75672a5827714b737aa3ba846195bec2787156eee517"
+    },
+    {
+      "path": "public/assets/PromenadeSegment.glb",
+      "bytes": 74016,
+      "sha256": "69ff431f082bb13908106ee7e23da458bf2017b039aa2e5eea0b8ce249680e55"
+    },
+    {
+      "path": "public/assets/RoadReflector.glb",
+      "bytes": 13640,
+      "sha256": "af64fdca0e4fe52a03a8efc6444cc114675fb290b60f0fff24891e8c1ea914fa"
+    },
+    {
+      "path": "public/assets/RouteEndMarker.glb",
+      "bytes": 19136,
+      "sha256": "f4e90d1d2c76bf09164ae55f5843ab9db37dce838506c8b3236d5d957c2c4faa"
+    },
+    {
+      "path": "public/assets/ServiceShowroomBay.glb",
+      "bytes": 585896,
+      "sha256": "6b32547cd521f44f50956281aa8cb82eb6448f00321e29937bde9352488e9bc9"
+    },
+    {
+      "path": "public/assets/SideStreetSegment.glb",
+      "bytes": 8580,
+      "sha256": "1506de80718b9e26a4ec61d89afabda8de32ca896c766761fcea7df47e0c2283"
+    },
+    {
+      "path": "public/assets/Streetlight.glb",
+      "bytes": 9496,
+      "sha256": "0893ae036935c10039743600f68bd1c4e512df9a33a857f31daa7dee548172be"
+    },
+    {
+      "path": "public/assets/TropicalGrass.glb",
+      "bytes": 15628,
+      "sha256": "1b0baf9d212e943943ad7391a4cf6d876e298b881c1d2cbbd1e560687bf91e01"
+    },
+    {
+      "path": "public/assets/WaterTransitTerminal.glb",
+      "bytes": 143584,
+      "sha256": "c7cf660eb9714723f8324092d5a3185c910e2805cd335b212de482a1081cdebf"
+    },
+    {
+      "path": "public/assets/car.glb",
+      "bytes": 904716,
+      "sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9"
+    },
+    {
+      "path": "public/assets/car_manifest.json",
+      "bytes": 301,
+      "sha256": "55ffc09a4b09fadca29e4ceca71ce02f6b98d07bd2f6723a91bd7d90e3651c7c"
+    },
+    {
+      "path": "public/assets/car_silver.glb",
+      "bytes": 1332188,
+      "sha256": "3bec86298c9c22a7e1e91deeff4ef2a614744cadf170e9abea2855f2ec82a749"
+    },
+    {
+      "path": "public/assets/car_touring.glb",
+      "bytes": 2402740,
+      "sha256": "dc6d4bc67ad61ef7c9f74ce4f5e92bf64cf491373c19b75b998a8ccc889bc8d7"
+    },
+    {
+      "path": "public/assets/coast_metro_train.glb",
+      "bytes": 782076,
+      "sha256": "328cef4fe7116c07ab59b80acc44357702b0273bde1a44a666858d43af7ee8d8"
+    },
+    {
+      "path": "public/assets/coastal_map_data.json",
+      "bytes": 254232,
+      "sha256": "6c1e134884013b8663ca1564cfb7d523621893c104dccc205248353d8086cf1c"
+    },
+    {
+      "path": "public/assets/course_runtime.json",
+      "bytes": 442536,
+      "sha256": "fcc41f7e987267e8c8d5cad81330b8be7819a783ef1065cd8e956a76eae2d9b6"
+    },
+    {
+      "path": "public/assets/furniture_colliders.json",
+      "bytes": 31824,
+      "sha256": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611"
+    },
+    {
+      "path": "public/assets/infrastructure_colliders.json",
+      "bytes": 163022,
+      "sha256": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48"
+    },
+    {
+      "path": "public/assets/police_lightbar.glb",
+      "bytes": 18356,
+      "sha256": "9c1ca73f4b5f110ac6a72a8b03d41c3504d922b96bc6c9cee5ba5b598865a10c"
+    },
+    {
+      "path": "public/assets/water_transit_ferry.glb",
+      "bytes": 567392,
+      "sha256": "b160cffaacf1a753d144bc71fb6bbfbcb749d585855fdcce9a6c6a185f0904c2"
+    },
+    {
+      "path": "public/licenses.html",
+      "bytes": 1208,
+      "sha256": "9582b7824c6a2e88fe95ebbbd576efa363a4bde4d29a75bfa9aa8220028550b9"
+    },
+    {
+      "path": "public/licenses/THREE_LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+    },
+    {
+      "path": "public/licenses/WS-LICENSE.txt",
+      "bytes": 1183,
+      "sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef"
+    },
+    {
+      "path": "public/online.css",
+      "bytes": 5442,
+      "sha256": "10a1bf623394e94c1a97be37d0d601fd24bafaa10ceb0cbf3fbd760b8476a908"
+    },
+    {
+      "path": "public/online.html",
+      "bytes": 3624,
+      "sha256": "70d66ed8fde06e42b79c180b8006f8090136fa5fb07c60c6778c02cb5c6bb268"
+    },
+    {
+      "path": "public/online.js",
+      "bytes": 1316663,
+      "sha256": "eea0b2b52c88f43c59f54d65716a2aba325ea997f0fe3783f487fd5013d207a6"
+    },
+    {
+      "path": "server/data.mjs",
+      "bytes": 1195,
+      "sha256": "0d2eb492982ccbb0c7c1bb342f5f1e09551d9f7a5e96581d9f78b8453564ba34"
+    },
+    {
+      "path": "server/index.mjs",
+      "bytes": 510,
+      "sha256": "8716ab4722fd85b648c99efd4087b7a0978fb713a31bdd3553a43642618778fb"
+    },
+    {
+      "path": "server/ingress.mjs",
+      "bytes": 2419,
+      "sha256": "d0d1181dea3da0655f518228669ed7cc0a0e2ec93c2d0356fb78ca7fc262ba1c"
+    },
+    {
+      "path": "server/service.mjs",
+      "bytes": 14155,
+      "sha256": "5461824185e3fd9d7b8c8a94d427591774b28f75b652519db57b8483c6b9de83"
+    },
+    {
+      "path": "server/static-assets.mjs",
+      "bytes": 5779,
+      "sha256": "771fe68f37ed9cf9dabb53a526085e22f7e401146fbece724ded140401b881fc"
+    },
+    {
+      "path": "shared/gameplay.js",
+      "bytes": 62551,
+      "sha256": "f1464350b943632dffeb321b50632e3524e03f356018c5005392de1fda89620f"
+    },
+    {
+      "path": "shared/garage.js",
+      "bytes": 6190,
+      "sha256": "4337626adb45efa08238e2f52896269d8e8303baf4aaacf28f499bb25d646386"
+    },
+    {
+      "path": "shared/protocol.mjs",
+      "bytes": 986,
+      "sha256": "30531e0e5abf4d57ff6e37a48534b84aa426ada4d63a84cba07faef0b30e789f"
+    },
+    {
+      "path": "shared/tracks.js",
+      "bytes": 1848,
+      "sha256": "ac0a8659be0d96f209a44ad5d93671d57c75a7200d53f4d357de57ba57f49d6f"
+    },
+    {
+      "path": "shared/water.js",
+      "bytes": 1560,
+      "sha256": "bfc37e47f6ea7b694f971bbcd98d360c0a5a99567f32586f9d2969ce11fc536d"
+    },
+    {
+      "path": "shared/world.mjs",
+      "bytes": 2756,
+      "sha256": "6abcbc9fef3dc478ed3516fcce5e53c7fd457b9b141072e471cbbd558e0bffe9"
+    },
+    {
+      "path": "test/client-worker.mjs",
+      "bytes": 2750,
+      "sha256": "deb5ae7d3d6d185bea6a7403d8257a1d9b18040bdebdba29fddaab1a5013f21f"
+    },
+    {
+      "path": "test/fixtures/course_runtime.json",
+      "bytes": 442536,
+      "sha256": "fcc41f7e987267e8c8d5cad81330b8be7819a783ef1065cd8e956a76eae2d9b6"
+    },
+    {
+      "path": "test/fixtures/course_runtime_highlands.json",
+      "bytes": 920745,
+      "sha256": "8fe09f1bf01855bc897c7024d46c26c720791e413e0c9eee91e68f9be5765e24"
+    },
+    {
+      "path": "test/fixtures/furniture_colliders.json",
+      "bytes": 31824,
+      "sha256": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611"
+    },
+    {
+      "path": "test/fixtures/highlands_furniture_colliders.json",
+      "bytes": 240829,
+      "sha256": "037b9ebc166d6f56d2cc5a665f7943f42d69934dfbf37ce3ea8dd4d645722d90"
+    },
+    {
+      "path": "test/fixtures/highlands_infrastructure_colliders.json",
+      "bytes": 150902,
+      "sha256": "4a9f3d72101cac639fdba0583eabe4cfa05e4b9501553b2ef90b7eef2b3c0975"
+    },
+    {
+      "path": "test/fixtures/highlands_terrain_grid.json",
+      "bytes": 787942,
+      "sha256": "4d23bd2b1a7fcf26883298c3c5791fec71d44f52d90b38b2270c753ce891e52b"
+    },
+    {
+      "path": "test/fixtures/infrastructure_colliders.json",
+      "bytes": 163022,
+      "sha256": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48"
+    },
+    {
+      "path": "test/network.test.mjs",
+      "bytes": 8464,
+      "sha256": "547d6927df20778034a41844a562c27c431131d7e7561f405874879e528c6ef0"
+    },
+    {
+      "path": "test/packaged-hosting.test.mjs",
+      "bytes": 2079,
+      "sha256": "7fe109e87475473a824273d8cf26fa606ea23a1b0dd0649a93fa264c5e30a7fd"
+    },
+    {
+      "path": "test/public.test.mjs",
+      "bytes": 7702,
+      "sha256": "569aee8ae0c38e563fca0623b3d4464b3eafba71ecb6e9dd37a20f5f16b514e3"
+    },
+    {
+      "path": "test/security.test.mjs",
+      "bytes": 2694,
+      "sha256": "d311d4e36c539c51e062269d583333a7365fe73627760380bb7f519fdf3a5766"
+    },
+    {
+      "path": "test/server-worker.mjs",
+      "bytes": 358,
+      "sha256": "754c63e1bdb423ffb816cc28bf8aac130b3dd24818305105d9ffb44bbeb809a9"
+    },
+    {
+      "path": "test/static-assets.test.mjs",
+      "bytes": 5241,
+      "sha256": "c120fc7b72254737166ba66b3dd74256451026a67bd5929d5b85656c2ceef1d0"
+    },
+    {
+      "path": "test/water.test.mjs",
+      "bytes": 1901,
+      "sha256": "3f89dfdc6ac5ae61275dfd317062ead46c038610cbd1150a07d457d9ff0b0ec1"
+    },
+    {
+      "path": "test/world.test.mjs",
+      "bytes": 2726,
+      "sha256": "f0aeaa6109ee0c94d34ea246181f67a6325ee8e2320e01e3084a246a0c20b740"
+    },
+    {
+      "path": "tests/baseline-handling-recovery.mjs",
+      "bytes": 13763,
+      "sha256": "cc5a05332bcfd1718df8ef8a09176f3bf80f2d3592401d8b80af6564afb067b7"
+    },
+    {
+      "path": "tests/baseline-reverse-crawl.mjs",
+      "bytes": 4302,
+      "sha256": "1500dd9c5594ecc362d94c9baf044683d9f6e6410e925e3ad9cf3c5f9707ca2f"
+    },
+    {
+      "path": "tests/client-contract.test.mjs",
+      "bytes": 7675,
+      "sha256": "4a7e5571cf8dc740e59d28f71891d2618f455927e53c26af4e1551f6d6dddd41"
+    },
+    {
+      "path": "tests/client-worker.mjs",
+      "bytes": 2591,
+      "sha256": "6c772435c4c851714b517635bbcccef9b0bd8deb7d09b4f891b1f65cdbdbc09c"
+    },
+    {
+      "path": "tests/fixture.mjs",
+      "bytes": 1719,
+      "sha256": "d8fa175d379d5ae26764f720a336e26fd79f01dcd4377aebecb4a06f92330710"
+    },
+    {
+      "path": "tests/joint-parity.test.mjs",
+      "bytes": 5419,
+      "sha256": "29124432835533defb33ed87a409687bc9e3bca94d908f8ff4d9a602803410f8"
+    },
+    {
+      "path": "tests/parity-fixture.mjs",
+      "bytes": 715,
+      "sha256": "73068f039e97e3884cf4eab04a3a38dd10f760a7e3bdca1a90b34e570f1590e7"
+    },
+    {
+      "path": "tests/scene-adapter.test.mjs",
+      "bytes": 4348,
+      "sha256": "9c82f1345abe508210c0ece870ffc232f372a5267ad2ceb84db49ffa838ee8ee"
+    },
+    {
+      "path": "tests/two-client.test.mjs",
+      "bytes": 4593,
+      "sha256": "582008319ba72db65bf70f420f3db40fd39eb25259a65493c00b9ebde989a29a"
+    },
+    {
+      "path": "tools/build.mjs",
+      "bytes": 1049,
+      "sha256": "763c4ee8c74ed2f5f9c2ffe079b85cac1b86d7f79f4a127a8dde25c0a5c27f9b"
+    },
+    {
+      "path": "tools/export_water.py",
+      "bytes": 6954,
+      "sha256": "b6e85f0c6fb78e90bfb6cbbd0617e212979aee4aab8f27e7502f6cddb8f011bc"
+    },
+    {
+      "path": "tools/pin.mjs",
+      "bytes": 795,
+      "sha256": "fdce9ce39f9842046d0c4f48b13e03bbbf0346be899984c39374b6953096bbcf"
+    },
+    {
+      "path": "tools/verify_water_raycast.mjs",
+      "bytes": 2400,
+      "sha256": "7db2c27e944c44be425845166608d030c45f9ba1ec9fd7f8d9031c1c1dd41ba0"
+    }
+  ]
+}

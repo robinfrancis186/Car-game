@@ -1,0 +1,13 @@
+{
+  "comparison": "Three 0.170.0 CPU Raycaster vs headless authored water query",
+  "sourceSha256": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678",
+  "waterTriangles": 1229,
+  "centroidSamples": 1229,
+  "seededRandomSamples": 20000,
+  "randomSeed": 31969,
+  "samples": 21229,
+  "mismatches": 0,
+  "meshCount": 1,
+  "gpu": false,
+  "internetMultiplayer": false
+}

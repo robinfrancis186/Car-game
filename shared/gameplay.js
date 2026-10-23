@@ -5,7 +5,7 @@
  * Original game mechanics, not a Tesla engineering/production simulation.
  *
  * API: new GameModel(route, {startS, endS, seed, obstacles, elevatedCorridors,
- * terrainGrid, roadSections, upgrades}).start(scenarioId)
+ * terrainGrid, roadSections, upgrades, vehicleId}).start(scenarioId)
  * update(elapsedSeconds, {throttle, steer, brake, boost, ultraBoost, flight, lift}).
  * Throttle/steer/lift are -1..1; the other controls are booleans.
  * Obstacles support circles, capsules and oriented boxes with world Y/height.
@@ -54,7 +54,13 @@ const closestSegments=(a,b,c,d)=>{
  return {a:pa,b:pb,distance:Math.hypot(pa.x-pb.x,pa.z-pb.z)};
 };
 const carSegment=p=>{const x=Math.cos(p.heading)*1.25,z=Math.sin(p.heading)*1.25;return [{x:p.x-x,z:p.z-z},{x:p.x+x,z:p.z+z}];};
-const steeringEnvelope=(speed,maxSteer=.57,grip=14.5)=>Math.min(maxSteer,Math.atan(2.7*grip/(speed*speed+16)));
+// Comfort envelope is separate from available tire grip: binary arrow keys must
+// not command the full lateral grip limit on every long press. Keep parking
+// authority, blend road-speed authority continuously, never snap to road heading.
+const steeringEnvelope=(speed,maxSteer=.57,grip=14.5)=>{
+ const smooth=v=>v*v*(3-2*v),park=smooth(clamp(Math.abs(speed)/10,0,1)),road=smooth(clamp((Math.abs(speed)-3)/15,0,1));
+ return Math.min(maxSteer*(1-.28*park),Math.atan(2.7*grip*(1-.28*road)/(speed*speed+16)));
+};
 const normalizeTerrainGrid=g=>{
  if(!g)return null;const origin=g.origin,step=g.step||[g.cell_size_m,g.cell_size_m],count=g.count||[g.columns,g.rows];
  if(!Array.isArray(origin)||!origin.every(Number.isFinite)||origin.length!==2||!Array.isArray(step)||step.length!==2||!step.every(v=>Number.isFinite(v)&&v>0)||!Array.isArray(count)||count.length!==2||!count.every(v=>Number.isInteger(v)&&v>=2)||!Array.isArray(g.heights)||g.heights.length!==count[0]*count[1]||!g.heights.every(Number.isFinite))throw new TypeError('Invalid terrain grid: finite origin/step, integer count and row-major heights required');
@@ -93,8 +99,8 @@ export class GameModel {
   this.length=this.endS-this.startS;
   this.terrainY=finite(options.terrainY,-.04);this.terrainGrid=normalizeTerrainGrid(options.terrainGrid||options.terrainHeightfield);this.roadSections=Array.isArray(options.roadSections||options.roadWidthSegments)?(options.roadSections||options.roadWidthSegments):[];this.elevatedCorridors=Array.isArray(options.elevatedCorridors)?options.elevatedCorridors:[];
   this.seed=(options.seed??1337)>>>0;this._randomState=this.seed;
-  this.upgrades=sanitizeUpgrades(options.upgrades);this.vehicleStats=getUpgradeStats(this.upgrades);
-  this.roadHalfWidth=3.6;this.maxSteer=clamp(finite(options.maxSteer,.57),.2,.65);this.scenario=SCENARIOS[0];this.state='menu';this.paused=false;
+  this.upgrades=sanitizeUpgrades(options.upgrades);this.vehicleStats=getUpgradeStats(this.upgrades,options.vehicleId);
+  this.roadHalfWidth=3.6;this.maxSteer=clamp(finite(options.maxSteer,this.vehicleStats.maxSteer),.2,.65);this.scenario=SCENARIOS[0];this.state='menu';this.paused=false;
   this.obstacles=(Array.isArray(options.obstacles)?options.obstacles:[]).filter(o=>o&&Number.isFinite(o.x)&&Number.isFinite(o.z)&&Number.isFinite(o.radius)&&o.radius>0).map((o,i)=>({...o,id:o.id??'obstacle-'+i,radius:o.shape==='box'?Math.hypot(finite(o.halfLength,1),finite(o.halfWidth,1)):Math.min(120,o.radius)}));
   this._dynamicObstacles=[];this._obstacleGrid=new Map();
   for(const o of this.obstacles){const b=obstacleBounds(o);for(let gx=Math.floor(b.minX/32);gx<=Math.floor(b.maxX/32);gx++)for(let gz=Math.floor(b.minZ/32);gz<=Math.floor(b.maxZ/32);gz++){const key=gx+','+gz;if(!this._obstacleGrid.has(key))this._obstacleGrid.set(key,[]);this._obstacleGrid.get(key).push(o);}}
@@ -137,11 +143,11 @@ export class GameModel {
  }
  _vehicle(id,s,lane,color){
   const p=this.sampleRoute(s),bounds=this._aiRoadBounds(p,p.heading);if(bounds)lane=clamp(lane,bounds.min,bounds.max);
-  const v={id,x:p.x+p.nx*lane,z:p.z+p.nz*lane,y:p.y,heading:p.heading,s,roadPitch:p.roadPitch,roadRoll:0,groundPitch:p.roadPitch,groundHeading:p.heading,groundNormalX:-p.grade*p.tx/Math.hypot(1,p.grade),groundNormalY:1/Math.hypot(1,p.grade),groundNormalZ:-p.grade*p.tz/Math.hypot(1,p.grade),groundY:p.y,grounded:true,onRoadDeck:true,flightCeiling:p.y+7.5,speed:0,steer:0,steerInput:0,yawRate:0,collisionYaw:0,velocityX:0,velocityZ:0,lateralSpeed:0,lateralVelocity:0,impactShake:0,mass:id==='player'?1450:1550,wheelAngle:0,energy:1,ultraCharge:1,ultraCooldown:0,ultraRemaining:0,ultraBoosting:false,damage:0,lane,targetLane:lane,color,active:true,visible:true,finished:false,finishTime:null,altitude:0,vz:0,offRoad:false,boosting:false,flying:false,thrusting:false,flipActive:false,flipTime:0,stuntRoll:0,stuntPhase:null,landingAssist:false,bodyRoll:0,bodyPitch:0,suspension:0};
+  const v={id,x:p.x+p.nx*lane,z:p.z+p.nz*lane,y:p.y,heading:p.heading,s,roadPitch:p.roadPitch,roadRoll:0,groundPitch:p.roadPitch,groundHeading:p.heading,groundNormalX:-p.grade*p.tx/Math.hypot(1,p.grade),groundNormalY:1/Math.hypot(1,p.grade),groundNormalZ:-p.grade*p.tz/Math.hypot(1,p.grade),groundY:p.y,grounded:true,onRoadDeck:true,flightCeiling:p.y+7.5,speed:0,steer:0,steerInput:0,yawRate:0,collisionYaw:0,velocityX:0,velocityZ:0,lateralSpeed:0,lateralVelocity:0,impactShake:0,mass:id==='player'?this.vehicleStats.mass:1550,wheelAngle:0,energy:1,ultraCharge:1,ultraCooldown:0,ultraRemaining:0,ultraBoosting:false,damage:0,lane,targetLane:lane,color,active:true,visible:true,finished:false,finishTime:null,altitude:0,vz:0,offRoad:false,boosting:false,flying:false,thrusting:false,flipActive:false,flipTime:0,stuntRoll:0,stuntPhase:null,landingAssist:false,bodyRoll:0,bodyPitch:0,suspension:0};
   if(id!=='player')this._supportOffRouteAI(v);return v;
  }
  _initialize(){
-  this._randomState=this.seed;this._accumulator=0;this._flightLocked=false;this._boostLocked=false;this._ultraLocked=false;this._ultraSpeedCarry=false;this._flipLocked=false;this._collisionCooldowns=new Map();
+  this._randomState=this.seed;this._accumulator=0;this._flightLocked=false;this._boostLocked=false;this.recoveryWarning=null;this.recoveryCooldown=0;this.automaticRecoveries=0;this._recoveryReason=null;this._recoveryElapsed=0;this._stuckAnchor=null;this._lastSolidContactAt=-Infinity;this._damageAssistRetryAt=0;this._ultraLocked=false;this._ultraSpeedCarry=false;this._flipLocked=false;this._collisionCooldowns=new Map();
   this.player=this._vehicle('player',this.startS+8,-1.65,'#b82632');this.player.name='YOU';
   const rivalNames=['NILA','RAHUL','DEV'];const colors=['#e2bb52','#499cbd','#e6e7dc'];
   this.rivals=Array.from({length:this.scenario.rivals},(_,i)=>{
@@ -160,6 +166,11 @@ export class GameModel {
   this._detectionAfter=Math.min(30,this.length/55);this._offRoadTime=0;this._allGatesPassed=false;this._terminalAnnounced=false;
   this.timeLimit=this.scenario.id==='time-attack'?Math.max(35,this.length/22+25):Infinity;
   this.timeRemaining=this.timeLimit;this.result=null;this.wrongWay=false;this.paused=false;
+  this.coinsCollected=0;this.collectedCoinIds=new Set();this.coins=[];
+  if(this.scenario.id!=='free-drive')for(let group=this.startS+80;group<=this.endS-40&&this.coins.length<120;group+=180)for(let n=0;n<3&&group+n*8<=this.endS-40&&this.coins.length<120;n++){
+   const q=this.sampleRoute(group+n*8),section=this._roadSection(q.s),strips=section?.driveableStrips||[{centerOffset:0,halfWidth:section?.halfWidth??3.6}],strip=strips.reduce((a,b)=>Math.abs(finite(b.centerOffset))<Math.abs(finite(a.centerOffset))?b:a),lane=finite(strip.centerOffset)+clamp(-1.65,-finite(strip.halfWidth,3.6)+1,finite(strip.halfWidth,3.6)-1);
+   this.coins.push({id:'coin-'+this.coins.length,s:q.s,x:q.x+q.nx*lane,y:q.y+.65,z:q.z+q.nz*lane,value:5,collected:false});
+  }
   this.events=[];this.message='READY';this.messageUntil=0;this._eventSequence=0;
  }
  start(id='coast-sprint'){
@@ -175,14 +186,73 @@ export class GameModel {
   this.message=text;this.messageUntil=this.timer+4;return e;
  }
  consumeEvents(){const e=this.events.slice();this.events.length=0;return e;}
- recover(){
+ _recoveryPose(baseS,{reverse=false}={}){
+  // Search behind the eligible position; never skip a gate to find empty asphalt.
+  // Check the full car capsule against pavement, solid proxies and nearby cars.
+  for(const back of [0,5,10,18,28,42,60])for(const lane of (reverse?[1.65,-1.65,0]:[-1.65,1.65,0])){
+   const q=this.sampleRoute(clamp(baseS-back,Math.min(3,this.routeLength/3),this.routeLength-3));
+   const pose={...q,x:q.x+q.nx*lane,z:q.z+q.nz*lane,lane,heading:angle(q.heading+(reverse?PI:0)),groundHeading:q.heading,groundPitch:q.roadPitch,roadPitch:reverse?-q.roadPitch:q.roadPitch,flipActive:false};
+   if(carSegment(pose).some(point=>{const zone=this._roadZone(this.projectToRoute(point.x,point.z,q.s));return zone.distance+.98>zone.halfWidth-.025;}))continue;
+   const gx=Math.floor(pose.x/32),gz=Math.floor(pose.z/32),near=[...this._dynamicObstacles],seen=new Set();
+   for(let x=gx-1;x<=gx+1;x++)for(let z=gz-1;z<=gz+1;z++)near.push(...(this._obstacleGrid.get(x+','+z)||[]));
+   let blocked=false;
+   for(const o of near){if(seen.has(o.id))continue;seen.add(o.id);const bottom=finite(o.y,.18),top=bottom+finite(o.height,1.2);if(pose.y+1.2>bottom&&pose.y<top&&this._obstacleContact(o,pose).depth>-.12){blocked=true;break;}}
+   if(blocked)continue;
+   if([...this.rivals,...this.police].some(v=>v.visible&&pose.y+1.2>v.y&&pose.y<v.y+1.2&&closestSegments(...carSegment(pose),...carSegment(v)).distance<2.26))continue;
+   return pose;
+  }
+  return null;
+ }
+ _clearRecoveryWarning(){this.recoveryWarning=null;this._recoveryReason=null;this._recoveryElapsed=0;}
+ _updateAutoRecovery(dt,input){
+  this.recoveryCooldown=Math.max(0,this.recoveryCooldown-dt);
+  const p=this.player;
+  // An intentional flight/flip must never be mistaken for leaving the road.
+  // Ground-only world-boundary recovery also waits for a real touchdown.
+  if(this.state!=='racing'||this.recoveryCooldown>0||!p.grounded||p.altitude>.15||p.flying||p.flipActive||input.flight||p.damage>=1){this._clearRecoveryWarning();this._stuckAnchor=null;return;}
+  const local=this.projectToRoute(p.x,p.z,p.s),localZone=this._roadZone(local),nearest=localZone.distance<=localZone.shoulderHalfWidth+8?local:this.projectToRoute(p.x,p.z),zone=this._roadZone(nearest),beyond=Math.max(0,zone.distance-zone.shoulderHalfWidth),free=this.scenario.id==='free-drive';
+  const boxed=this.wanted&&this.police.some(v=>v.visible&&v.active&&Math.abs(v.y-p.y)<1.5&&distance(v,p)<12);
+  if(boxed||this.arrestProgress>.05){this._clearRecoveryWarning();this._stuckAnchor=null;return;}
+  const outside=this.terrainGrid&&this.sampleTerrain(p.x,p.z).outsideDistance>100;
+  const wantsMotion=Math.abs(input.throttle)>.35&&!input.brake;
+  const impeded=this.timer-this._lastSolidContactAt<.3||beyond>.5;
+  const slow=Math.hypot(p.velocityX,p.velocityZ)<1.0;
+  let stuck=false;
+  if(wantsMotion&&impeded&&slow){if(!this._stuckAnchor||distance(p,this._stuckAnchor)>.75)this._stuckAnchor={x:p.x,z:p.z,time:this.timer};stuck=this.timer-this._stuckAnchor.time>1.5;}
+  else this._stuckAnchor=null;
+  const first=this.sampleRoute(0),last=this.sampleRoute(this.routeLength);
+  const pastStart=-((p.x-first.x)*first.tx+(p.z-first.z)*first.tz),pastEnd=(p.x-last.x)*last.tx+(p.z-last.z)*last.tz;
+  const outwardEnd=p.velocityX*last.tx+p.velocityZ*last.tz,outwardStart=-(p.velocityX*first.tx+p.velocityZ*first.tz);
+  const endpoint=free&&((nearest.s<1&&pastStart>8&&outwardStart>-.8)?'start':(nearest.s>this.routeLength-1&&pastEnd>8&&outwardEnd>-.8)?'end':null);
+  const approaching=free&&((nearest.s<45&&Math.cos(p.heading-first.heading)<-.35)?'start':(nearest.s>this.routeLength-45&&Math.cos(p.heading-last.heading)>.35)?'end':null);
+  const far=beyond>(free?60:25),reason=outside?'world-boundary':endpoint?'route-end':far?'far-offroad':stuck?'stuck':null;
+  if(!reason&&approaching){
+   if(this._recoveryReason!=='approach-'+approaching)this._emit('recovery-warning','ROAD ENDS AHEAD / TURN BACK',{reason:'route-end',endpoint:approaching,warningOnly:true});
+   this._recoveryReason='approach-'+approaching;this._recoveryElapsed=0;this.recoveryWarning={reason:'route-end',endpoint:approaching,warningOnly:true,secondsRemaining:null,distanceMetres:approaching==='end'?Math.max(0,this.routeLength-nearest.s):Math.max(0,nearest.s)};return;
+  }
+  if(!reason){this._clearRecoveryWarning();return;}
+  const grace=outside||endpoint?2:reason==='stuck'?2.5:free?5:3;
+  if(reason!==this._recoveryReason){this._recoveryReason=reason;this._recoveryElapsed=0;this._emit('recovery-warning',reason==='stuck'?'STUCK / ROADSIDE ASSIST SOON':endpoint?'ROAD ENDS / RETURNING TO FACE BACK':'RETURN TO THE ROAD / AUTO RETURN SOON',{reason});}
+  this._recoveryElapsed+=dt;this.recoveryWarning={reason,endpoint,warningOnly:false,secondsRemaining:Math.max(0,grace-this._recoveryElapsed),distanceMetres:zone.distance};
+  if(this._recoveryElapsed>=grace-1e-8){if(!this.recover({automatic:true,reason})){this.recoveryCooldown=2;this._clearRecoveryWarning();}}
+ }
+ recover({automatic=false,reason='manual'}={}){
   if(this.paused||!['racing','countdown'].includes(this.state))return false;
   const free=this.scenario.id==='free-drive',gate=this.checkpoints[clamp(this.nextCheckpoint-1,0,this.checkpoints.length-2)];
-  const p=this.sampleRoute(free?clamp(this.projectToRoute(this.player.x,this.player.z).s,0,this.routeLength-5):Math.min(gate.s+4,this.endS-5));
+  const nearest=free?this.projectToRoute(this.player.x,this.player.z):null;
+  const travelReverse=free&&Math.cos(this.player.heading-nearest.heading)<0;
+  const first=free?this.sampleRoute(0):null,last=free?this.sampleRoute(this.routeLength):null;
+  const beyondEnd=free&&((this.player.x-last.x)*last.tx+(this.player.z-last.z)*last.tz)>0;
+  const beyondStart=free&&((this.player.x-first.x)*first.tx+(this.player.z-first.z)*first.tz)<0;
+  const fromEnd=free&&nearest.s>this.routeLength-6&&(beyondEnd||!travelReverse),fromStart=free&&nearest.s<6&&(beyondStart||travelReverse);
+  const reverse=fromEnd?true:fromStart?false:travelReverse;
+  const baseS=free?(fromEnd?this.routeLength-14:fromStart?14:clamp(nearest.s,0,this.routeLength-5)):Math.min(gate.s+4,this.endS-5);
+  const p=this._recoveryPose(baseS,{reverse});
+  if(!p){this._emit('recovery-blocked','RETURN BLOCKED / BRAKE OR REVERSE',{automatic,reason});return false;}
   this._stopUltra('recovery');this._ultraSpeedCarry=false;
-  Object.assign(this.player,{x:p.x-p.nx*1.65,z:p.z-p.nz*1.65,y:p.y,heading:p.heading,s:p.s,roadPitch:p.roadPitch,roadRoll:0,groundPitch:p.roadPitch,groundHeading:p.heading,groundNormalX:-p.grade*p.tx/Math.hypot(1,p.grade),groundNormalY:1/Math.hypot(1,p.grade),groundNormalZ:-p.grade*p.tz/Math.hypot(1,p.grade),groundY:p.y,grounded:true,onRoadDeck:true,flightCeiling:p.y+7.5,speed:0,steer:0,steerInput:0,yawRate:0,collisionYaw:0,velocityX:0,velocityZ:0,lateralSpeed:0,lane:-1.65,altitude:0,vz:0,offRoad:false,boosting:false,flying:false,thrusting:false,flipActive:false,flipTime:0,stuntRoll:0,stuntPhase:null,landingAssist:false,bodyRoll:0,bodyPitch:0,suspension:0});
-  this._offRoadTime=0;this._flightLocked=true;this.arrestProgress=0;
-  if(this.state==='racing'){this.recoveries++;if(free){this.player.damage=0;this.damage=0;this._emit('recovery','BACK ON THE ROAD / REPAIRED');}else{this.timer+=5;this.penalties+=5;this._emit('recovery','BACK ON THE ROAD  +5 SEC');}}
+  Object.assign(this.player,{x:p.x,z:p.z,y:p.y,heading:p.heading,s:p.s,roadPitch:p.roadPitch,roadRoll:0,groundPitch:p.groundPitch??p.roadPitch,groundHeading:p.groundHeading??p.heading,groundNormalX:-p.grade*p.tx/Math.hypot(1,p.grade),groundNormalY:1/Math.hypot(1,p.grade),groundNormalZ:-p.grade*p.tz/Math.hypot(1,p.grade),groundY:p.y,grounded:true,onRoadDeck:true,flightCeiling:p.y+7.5,speed:0,steer:0,steerInput:0,yawRate:0,collisionYaw:0,velocityX:0,velocityZ:0,lateralSpeed:0,lane:p.lane,altitude:0,vz:0,offRoad:false,boosting:false,flying:false,thrusting:false,flipActive:false,flipTime:0,stuntRoll:0,stuntPhase:null,landingAssist:false,bodyRoll:0,bodyPitch:0,suspension:0});
+  this._offRoadTime=0;this._flightLocked=true;this.arrestProgress=0;this.recoveryCooldown=6;this._clearRecoveryWarning();this._stuckAnchor=null;if(automatic)this.automaticRecoveries++;
+  if(this.state==='racing'){this.recoveries++;if(free){this.player.damage=0;this.damage=0;this._emit('recovery',automatic?'ROADSIDE ASSIST / BACK ON THE ROAD':'BACK ON THE ROAD / REPAIRED',{automatic,reason});}else{this.timer+=5;this.penalties+=5;this._emit('recovery',automatic?'AUTO RETURN / +5 SEC':'BACK ON THE ROAD  +5 SEC',{automatic,reason});}}
   this.timeRemaining=Math.max(0,this.timeLimit-this.timer);this.progress=clamp(free?p.s/this.routeLength:(p.s-this.startS)/this.length,0,1);this.distanceRemaining=Math.max(0,(free?this.routeLength:this.endS)-p.s);this.position=1+this.rivals.filter(v=>v.finished||v.s>p.s).length;this.wrongWay=false;
   if(this.state==='racing'&&this.timeRemaining<=0)this._end('failed','TIME EXPIRED');
   return true;
@@ -205,10 +275,14 @@ export class GameModel {
    return;
   }
   this.timer+=dt;this.timeRemaining=Math.max(0,this.timeLimit-this.timer);
-  const old={x:this.player.x,z:this.player.z,y:this.player.y,heading:this.player.heading,height:this.player.flipActive?3:1.2,flipActive:this.player.flipActive};
+  const old={x:this.player.x,z:this.player.z,y:this.player.y,heading:this.player.heading,height:this.player.flipActive?3:1.2,flipActive:this.player.flipActive,grounded:this.player.grounded,altitude:this.player.altitude,s:this.player.s};
   this._drivePlayer(dt,input);this._updateRivals(dt);this._updatePolice(dt);this._vehicleContacts(dt);this._obstacleContacts(dt,old);this._deckContacts();
-  this._updateRace(old,dt);
-  if(this.player.damage>=1&&this.state==='racing'){if(this.scenario.id==='free-drive'){this.recover();this._emit('roadside-assist','ROADSIDE ASSIST / REPAIRED');}else this._end('failed','VEHICLE DISABLED');}
+  this._updateCoins(old);this._updateRace(old,dt);this._updateAutoRecovery(dt,input);
+  if(this.player.damage>=1&&this.state==='racing'){
+   if(this.scenario.id==='free-drive'){
+    if(this.timer>=this._damageAssistRetryAt){if(this.recover())this._emit('roadside-assist','ROADSIDE ASSIST / REPAIRED');else this._damageAssistRetryAt=this.timer+2;}
+   }else this._end('failed','VEHICLE DISABLED');
+  }
   if(this.timeRemaining<=0&&this.state==='racing')this._end('failed','TIME EXPIRED');
  }
  _stopUltra(reason='depleted'){
@@ -255,14 +329,21 @@ export class GameModel {
   // Rack travel is rate-limited in normalized space. The speed envelope is derived
   // from tire grip, so a 10% input remains 10%-ish curvature, not instant full yaw.
   const shaped=Math.sign(input.steer)*Math.pow(Math.abs(input.steer),1.35);
-  p.steerInput=approach(p.steerInput,shaped,dt*(Math.abs(shaped)>Math.abs(p.steerInput)?2.7:4.6));
+  p.steerInput=approach(p.steerInput,shaped,dt*(p.steerInput*shaped<0||Math.abs(shaped)<Math.abs(p.steerInput)?6.5:2.7));
   const grip=p.offRoad&&p.altitude<.5?8.5:14.5*this.vehicleStats.gripMultiplier;
   p.steer=p.steerInput*steeringEnvelope(speedAbs,this.maxSteer,grip);
   let acceleration=input.throttle*(input.throttle>=0?11.7*this.vehicleStats.accelerationMultiplier:5.8)*(p.ultraBoosting?2.1:p.boosting?1.5:1);
   if(input.throttle<0&&p.speed>.5)acceleration=-21;
   if(input.throttle>0&&p.speed<-.5)acceleration=19;
   if(input.brake)acceleration=0;
-  if(p.offRoad&&p.altitude<.5)acceleration*=deepOffroad?.38:.65;
+  if(p.offRoad&&p.altitude<.5){
+   // A low reverse crawl gear must overcome the 3.2 m/s² rough-ground rolling
+   // loss: the old deep-grass factor made full reverse weaker than drag and
+   // pinned an otherwise free car at rest. Preserve forward traction, braking
+   // from forward speed, airborne motion and lateral grip unchanged.
+   const terrainScale=deepOffroad?.38:.65,reverseCrawl=wasGrounded&&input.throttle<0&&p.speed<=.5&&!input.brake;
+   acceleration*=reverseCrawl?Math.max(terrainScale,.85):terrainScale;
+  }
   if(wasGrounded)acceleration-=9.81*.85*Math.sin(Math.atan(surfaceBefore.gradientX*Math.cos(p.heading)+surfaceBefore.gradientZ*Math.sin(p.heading)));
   const drag=.00165*p.speed*Math.abs(p.speed);
   let longitudinal=p.speed+(acceleration-drag)*dt;
@@ -273,7 +354,7 @@ export class GameModel {
   if(!p.ultraBoosting&&p.speed<=normalHardLimit)this._ultraSpeedCarry=false;
   longitudinal=clamp(longitudinal,-10,this._ultraSpeedCarry?this.vehicleStats.ultraBoostMaxSpeedMps+5:normalHardLimit);
   const desiredYaw=longitudinal/2.7*Math.tan(p.steer)*(p.flipActive?.2:p.altitude>.45?.72:1);
-  p.yawRate=lerp(p.yawRate,desiredYaw,1-Math.exp(-8*dt));
+  p.yawRate=lerp(p.yawRate,desiredYaw,1-Math.exp(-(shaped*p.yawRate<=0?14:10)*dt));
   p.collisionYaw*=Math.exp(-3.7*dt);p.impactShake*=Math.exp(-5*dt);
   const yaw=p.yawRate+p.collisionYaw,previousHeading=p.heading;
   p.heading=angle(p.heading+yaw*dt);
@@ -282,7 +363,9 @@ export class GameModel {
   const vx=Math.cos(previousHeading)*longitudinal-Math.sin(previousHeading)*lateral;
   const vz=Math.sin(previousHeading)*longitudinal+Math.cos(previousHeading)*lateral;
   const fx=Math.cos(p.heading),fz=Math.sin(p.heading);
-  const forward=vx*fx+vz*fz,slip=(-vx*fz+vz*fx)*Math.exp(-(p.altitude>.45?.45:p.offRoad?4.2:10.5*this.vehicleStats.gripMultiplier)*dt);
+  // Tire relaxation is faster near zero slip, but its per-step correction is
+  // bounded by available lateral acceleration so impact momentum is not erased.
+  const forward=vx*fx+vz*fz,rawSlip=-vx*fz+vz*fx,slipDecay=1-Math.exp(-(p.altitude>.45?.45:p.offRoad?6:12.5*this.vehicleStats.gripMultiplier)*dt),sideDelta=rawSlip*slipDecay,slip=rawSlip-(p.altitude>.45?sideDelta:clamp(sideDelta,-grip*dt,grip*dt));
   p.velocityX=fx*forward-fz*slip;p.velocityZ=fz*forward+fx*slip;p.speed=forward;p.lateralSpeed=slip;
   p.x+=p.velocityX*dt;p.z+=p.velocityZ*dt;
   this._deckContacts();
@@ -320,9 +403,6 @@ export class GameModel {
   p.suspension=p.altitude>.05?0:Math.sin(this.timer*(p.offRoad?28:18))*Math.min(p.offRoad?.018:.006,Math.abs(p.speed)*.0004);
   const after=this.projectToRoute(p.x,p.z,p.s);p.s=after.s;p.lane=after.offset;
   this.wrongWay=p.speed>3&&Math.abs(angle(p.heading-after.heading))>PI*.6;
-  const outsideWorld=this.terrainGrid&&this.sampleTerrain(p.x,p.z).outsideDistance>100;
-  this._offRoadTime=outsideWorld||(this.scenario.id!=='free-drive'&&after.distance>65)?this._offRoadTime+dt:0;
-  if(this._offRoadTime>(outsideWorld?1.5:4))this.recover();
  }
  _curveSpeed(s,base,cornerGrip=9.5){
   let limit=base;
@@ -510,6 +590,7 @@ export class GameModel {
  _resolveContact(other,contact,key){
   const a=this.player,b=other,invA=1/a.mass,invB=b?1/b.mass:0,total=invA+invB;
   const {nx,nz,depth,cx,cz}=contact;
+  if(!b&&depth>=-.001)this._lastSolidContactAt=this.timer;
   if(depth>0){const correction=Math.min(.38,Math.max(0,depth-.003)*.78);this._translateBody(a,nx*correction*invA/total,nz*correction*invA/total);if(b)this._translateBody(b,-nx*correction*invB/total,-nz*correction*invB/total);}
   const va=this._bodyVelocity(a),vb=b?this._bodyVelocity(b):{x:finite(contact.velocityX),z:finite(contact.velocityZ)};
   const closing=-((va.x-vb.x)*nx+(va.z-vb.z)*nz);if(closing<=.02)return;
@@ -586,6 +667,20 @@ export class GameModel {
   for(let pass=0;pass<4;pass++)for(const o of near){const c=this._obstacleContact(o);if(c.depth>0)this._resolveContact(null,{...c,velocityX:o.velocityX,velocityZ:o.velocityZ},'static-'+o.id);}
   this.damage=p.damage;
  }
+ _updateCoins(old){
+  const p=this.player;
+  // Only normal, grounded travel can sweep a pickup. Recovery does not call this
+  // routine; the run ledger survives all returns and pays only after race finish.
+  if(this.state!=='racing'||this.scenario.id==='free-drive'||!old.grounded||!p.grounded||old.altitude>.15||p.altitude>.15||p.flipActive||p.flying||distance(old,p)>2||Math.abs(p.s-old.s)>4)return;
+  const zone=this._roadZone(this.projectToRoute(p.x,p.z,p.s));if(zone.distance>zone.halfWidth+.1)return;
+  for(const coin of this.coins){
+   if(coin.collected||Math.abs(coin.s-p.s)>5||Math.abs(p.y-(coin.y-.65))>.4||!this._checkpointCarriageway(this.sampleRoute(coin.s),old))continue;
+   if(segmentNear(old.x,old.z,p.x,p.z,coin.x,coin.z,1.85)){
+    coin.collected=true;this.collectedCoinIds.add(coin.id);this.coinsCollected+=coin.value;
+    this._emit('coin-collected','+'+coin.value+' COINS / BANK ON FINISH',{coinId:coin.id,value:coin.value,total:this.coinsCollected,x:coin.x,y:coin.y,z:coin.z});
+   }
+  }
+ }
  _checkpointCarriageway(gate,old){
   const section=this._roadSection(gate.s);if(!section)return true;
   const strips=section.driveableStrips||[{centerOffset:0,halfWidth:section.halfWidth??3.6}],raceStrip=strips.reduce((a,b)=>Math.abs(finite(b.centerOffset))<Math.abs(finite(a.centerOffset))?b:a);
@@ -613,7 +708,7 @@ export class GameModel {
  _end(state,title){
   if(this.state!=='racing')return;
   if(state==='finished'){this.progress=1;this.distanceRemaining=0;}
-  this._stopUltra('event-ended');this.state=state;this.result={state,title,time:this.timer,position:this.position,totalCars:1+this.rivals.length,penalties:this.penalties,damage:this.player.damage,escaped:this.escaped,scenario:this.scenario.id};
+  this._stopUltra('event-ended');this.state=state;this.result={state,title,time:this.timer,position:this.position,totalCars:1+this.rivals.length,penalties:this.penalties,damage:this.player.damage,escaped:this.escaped,scenario:this.scenario.id,collectedCoins:this.coinsCollected};
   this._emit(state,title);
  }
 }

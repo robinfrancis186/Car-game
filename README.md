@@ -1,56 +1,47 @@
-# Kerala Roadster — two-driver network alpha
+# Kerala Roadster — V11.1 joint multiplayer reconstruction 2
 
-**Experimental Canvas 2D diagnostic, not integrated multiplayer for the V10/V11 3D game.** This isolated `multiplayer-public-alpha` branch has a Node-authoritative, private two-driver room and manual browser/CLI clients. The `main` branch retains the original V10 game unchanged.
+Actual Three.js client + authoritative two-driver WebSocket races. Not the old Canvas demo and not the seven-car solo app.
 
-Cars use equal stock physics: no car-to-car contact, traffic, flight, upgrades, accounts, coins, purchases or payouts. Manual clients contain no bots/ghosts; test automation is explicitly separate. Rooms and results are in memory only.
+## Provenance and status
 
-## Run locally
+This is a **new reconstruction**, not a recovered copy of either lost unpublished candidate. Stable engine/renderer/assets originate from exact Sites19 V11.1 commit `0a5f07447719117a0084cffb9a525a1cd1e54ea3`; hardened authority originates from verified public-alpha commit `55067c6dc71f299bf9e35fee80b54dfc2d7ee8e1`. New source hashes and receipts are recorded separately. No frozen history is rewritten.
 
-Node **22+** is required (tested with 24.19.0). The only pinned runtime dependency is `ws` 8.22.0. No credentials are needed.
+**Production Create/Join is deliberately disabled** until one verified exact service HTTPS origin is pinned in `client/deployment.mjs`. Loopback works for development. Query parameters and remote manifests cannot choose or authorize arbitrary endpoints.
+
+## Online rules
+
+One public room, two real connected seats, equal stock red-model physics, non-contact. No traffic, flight, ultra boost, accounts, coins, upgrades or payouts. Both drivers load matching assets and ready; the host starts. Server owns clock, checkpoints, recovery penalties and results. Client sends only validated bounded controls and interpolates authoritative poses; no prediction, local finishing or result submission.
+
+Online never pauses. Lobby, blur and background neutralize controls; server race continues. Stale inputs brake, stale snapshots freeze and stop inputs, reconnect is bounded to20 seconds with rotated private tokens. Expired disconnected seats receive DNF, never a fabricated finish. Server restart loses temporary rooms; free hosting may sleep or restart.
+
+The entry reads/writes **no solo garage or currency save** and invokes no seven-car migration. Optional reload recovery uses only its own endpoint/build-scoped sessionStorage key. No old solo entry is bundled. Automated test driving modules are test-only and never offered as online AI opponents.
+
+## Local commands
+
+Tested Node24.19.0:
 
 ```sh
-git clone --branch multiplayer-public-alpha --single-branch https://github.com/robinfrancis186/Car-game.git
-cd Car-game
-npm ci --ignore-scripts --omit=dev
+npm ci --ignore-scripts
+npm run build
 npm test
-npm run test:regression
-npm start
+npm run test:authority
+npm run test:physics
+node tools/verify_water_raycast.mjs .
+PORT=8787 npm start
 ```
 
-Open **http://127.0.0.1:8787** in separate browser profiles. Create a room, share only the invite code, join, mark both players Ready, then Start as host. **WASD/arrows** drive; **Space** brakes; **Shift** boosts; **R** recovers with a five-second penalty. The diagnostic displays server snapshots without local prediction/interpolation. Separate profiles/devices keep reconnect credentials independent.
+Open http://127.0.0.1:8787 in independent browser profiles. Node tests are not real browser/GPU/human acceptance.
 
-Default mode binds only to loopback. **Do not tunnel local mode.**
+## Deployment gates
 
-Manual CLI:
+Prebuilt exact package, one Node service. Build `npm ci --omit=dev --ignore-scripts`, start `npm start`. Public bind requires explicit PUBLIC_ALPHA=true plus Render-provided RENDER=true, RENDER_EXTERNAL_HOSTNAME and PORT. No arbitrary origin configuration or credentials are introduced.
 
-```sh
-npm run client -- --name DriverA
-npm run client -- --name DriverB --join PRIVATE_INVITE_FROM_A
-# For an approved deployed server, append --url https://<actual-service>.onrender.com
-```
+Use only the owner-approved free plan/region, autoDeploy:no. First publish/deploy disabled package. Verify exact initial commit, service origin, free plan and region before preparing an origin-pinned activation build. Hold activation branch changes until the initial deployment revision is confirmed (prefer terminal/live), then publish and manually deploy the exact activation revision. Verify remote HTTP/WSS and independent clients before claiming playable public multiplayer. This code creates no services, accounts or paid resources.
 
-CLI commands persist until changed; `brake` stops input. Keep room invitations private. Reconnect bearer tokens are not printed or placed in URLs; browser reconnect state stays in tab session storage.
+Static content is a startup size/hash/URL allowlist with bounded streaming, exact CSP,16 concurrent streams maximum,64MiB burst/128KiB per second shared byte budget,304 revalidation and no backend/source fallback. Existing alpha Host/Origin, room, connection, message, control-frame, heartbeat, payload and backpressure guards remain. Origin checks are not authentication. This is a small experimental alpha, not production anti-cheat or durable persistence.
 
-## Optional public experiment
+## Acceptance and rights
 
-See [docs/HOSTING.md](docs/HOSTING.md). `render.yaml` is a passive **Free / Singapore / one-instance / manual-deploy** configuration, with no database. Committing it does not create a service or enable deployment. Verify workspace billing/overage conditions before provisioning; a free instance alone is not a guarantee of zero charges.
+See docs/acceptance.md and docs/reconstruction-receipt.json. Stable V11.1 reverse/steering/recovery is preserved; world/collider bytes match client and authority. Actual GLB CPU scene/water tests do not imply GPU rendering. Browser, GPU, physical human driving and public-internet acceptance remain pending.
 
-Public mode is opt-in and accepts only its exact Render HTTPS origin. It allows **one room, two seats, six open WebSockets and 40 TCP connections**, with bounded message/HTTP/control-frame quotas, 2 KiB messages, schema/version checks and reconnect-token rotation. Origin checks are not authentication; a non-browser client can forge them. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
-
-The Free service can sleep, take time to wake, restart and lose all rooms/results. No uptime, persistence or production DDoS guarantee is made. No keep-awake traffic, paid service or automatic deployment is included.
-
-## Verification and source
-
-Local verification passed **15 security/network/world tests** and **128 unchanged V10 gameplay regressions**. These tests do not establish a live public deployment, internet latency, real human/device play, mobile/GPU performance or 3D integration. See [docs/TESTING.md](docs/TESTING.md).
-
-- `server/`: authority, lifecycle and ingress guards.
-- `client/`: manual Canvas browser and CLI clients.
-- `shared/`, `data/`: frozen V10-derived headless physics/world data and authored water triangles.
-- `test/`, `tools/`: automated checks, optional source-water parity tools and a labeled remote smoke harness.
-- `SOURCE_FREEZE.json`: public-source hashes and upstream reviewed-freeze identity.
-
-Runtime, clients, data, tests and deployment configuration are byte-identical to the reviewed public-alpha freeze. Public documentation is sanitized; internal reports/logs, reference media, credentials and dependency caches are omitted. Test-generated reports remain local and ignored.
-
-## Attribution and rights
-
-© OpenStreetMap contributors. Coastal map data is available under [ODbL](https://www.openstreetmap.org/copyright) in `data/coastal_map_data.json` and via `/map-data`; preserve this database offer. Original project code has no new blanket open-source license (`UNLICENSED`). `ws` is MIT-licensed; see [LICENSES.md](LICENSES.md) and [docs/WS-LICENSE.txt](docs/WS-LICENSE.txt).
+LICENSES.md corrects unauthorized assistant CC0 descriptions for original work without granting a licence or rewriting history. Genuine MIT and ODbL notices/provenance are preserved. Public package excludes private references, IDs, notes, credentials and old solo entry. A tested source archive is saved to Library before publication handoff.

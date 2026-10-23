@@ -1,0 +1,790 @@
+{
+  "scope": "Model-only reverse crawling/escape regression, not human driving or browser evidence",
+  "flatAndGrades": [
+    {
+      "id": "red",
+      "grade": -0.15,
+      "z": 0,
+      "distance": 28.180649525815,
+      "speed": -10
+    },
+    {
+      "id": "red",
+      "grade": -0.15,
+      "z": 5.4,
+      "distance": 3.9441947553829095,
+      "speed": -1.9637656628167108
+    },
+    {
+      "id": "red",
+      "grade": -0.15,
+      "z": 20,
+      "distance": 3.9441947553829095,
+      "speed": -1.9637656628167108
+    },
+    {
+      "id": "red",
+      "grade": 0,
+      "z": 0,
+      "distance": 30.87162208741421,
+      "speed": -10
+    },
+    {
+      "id": "red",
+      "grade": 0,
+      "z": 5.4,
+      "distance": 13.764743429831526,
+      "speed": -6.816851689827719
+    },
+    {
+      "id": "red",
+      "grade": 0,
+      "z": 20,
+      "distance": 13.764743429831526,
+      "speed": -6.816851689827719
+    },
+    {
+      "id": "red",
+      "grade": 0.15,
+      "z": 0,
+      "distance": 32.567334670818695,
+      "speed": -10
+    },
+    {
+      "id": "red",
+      "grade": 0.15,
+      "z": 5.4,
+      "distance": 23.030254122578583,
+      "speed": -10
+    },
+    {
+      "id": "red",
+      "grade": 0.15,
+      "z": 20,
+      "distance": 23.030254122578583,
+      "speed": -10
+    },
+    {
+      "id": "silver",
+      "grade": -0.15,
+      "z": 0,
+      "distance": 28.180649525815,
+      "speed": -10
+    },
+    {
+      "id": "silver",
+      "grade": -0.15,
+      "z": 5.4,
+      "distance": 3.9441947553829095,
+      "speed": -1.9637656628167108
+    },
+    {
+      "id": "silver",
+      "grade": -0.15,
+      "z": 20,
+      "distance": 3.9441947553829095,
+      "speed": -1.9637656628167108
+    },
+    {
+      "id": "silver",
+      "grade": 0,
+      "z": 0,
+      "distance": 30.87162208741421,
+      "speed": -10
+    },
+    {
+      "id": "silver",
+      "grade": 0,
+      "z": 5.4,
+      "distance": 13.764743429831526,
+      "speed": -6.816851689827719
+    },
+    {
+      "id": "silver",
+      "grade": 0,
+      "z": 20,
+      "distance": 13.764743429831526,
+      "speed": -6.816851689827719
+    },
+    {
+      "id": "silver",
+      "grade": 0.15,
+      "z": 0,
+      "distance": 32.567334670818695,
+      "speed": -10
+    },
+    {
+      "id": "silver",
+      "grade": 0.15,
+      "z": 5.4,
+      "distance": 23.030254122578583,
+      "speed": -10
+    },
+    {
+      "id": "silver",
+      "grade": 0.15,
+      "z": 20,
+      "distance": 23.030254122578583,
+      "speed": -10
+    },
+    {
+      "id": "touring",
+      "grade": -0.15,
+      "z": 0,
+      "distance": 28.180649525815,
+      "speed": -10
+    },
+    {
+      "id": "touring",
+      "grade": -0.15,
+      "z": 5.4,
+      "distance": 3.9441947553829095,
+      "speed": -1.9637656628167108
+    },
+    {
+      "id": "touring",
+      "grade": -0.15,
+      "z": 20,
+      "distance": 3.9441947553829095,
+      "speed": -1.9637656628167108
+    },
+    {
+      "id": "touring",
+      "grade": 0,
+      "z": 0,
+      "distance": 30.87162208741421,
+      "speed": -10
+    },
+    {
+      "id": "touring",
+      "grade": 0,
+      "z": 5.4,
+      "distance": 13.764743429831526,
+      "speed": -6.816851689827719
+    },
+    {
+      "id": "touring",
+      "grade": 0,
+      "z": 20,
+      "distance": 13.764743429831526,
+      "speed": -6.816851689827719
+    },
+    {
+      "id": "touring",
+      "grade": 0.15,
+      "z": 0,
+      "distance": 32.567334670818695,
+      "speed": -10
+    },
+    {
+      "id": "touring",
+      "grade": 0.15,
+      "z": 5.4,
+      "distance": 23.030254122578583,
+      "speed": -10
+    },
+    {
+      "id": "touring",
+      "grade": 0.15,
+      "z": 20,
+      "distance": 23.030254122578583,
+      "speed": -10
+    }
+  ],
+  "contacts": [
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-0",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 13.775901233572732,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-0",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 13.556515755054201,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-0",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 13.707937765952199,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-0",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 13.775901233572732,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-0",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 13.775859983979991,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-0",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 13.775859983979203,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-1",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 10.482555404300367,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-1",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 10.56032952983773,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-1",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 12.411552681535664,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-1",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 10.482555404300367,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-1",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 10.525546513556646,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-1",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 10.876544475485083,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-2",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 13.775901233572732,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-2",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 12.364091493229083,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-2",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 13.707937765952199,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-2",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 13.775901233572732,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-2",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 13.755307130485102,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-2",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 13.775859983979203,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-3",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 13.775901233572732,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-3",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 13.707937765952968,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-3",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 13.707937765952199,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-3",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 13.775901233572732,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-3",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 13.775859983979991,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-MetroStation-12-3",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 13.775859983979203,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-building-50",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 12.892570605771247,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-building-50",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 12.940592419220906,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-building-50",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 12.940592419220954,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-building-50",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 12.892570605771247,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-building-50",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 12.915910498449314,
+      "returns": 0
+    },
+    {
+      "track": "coast",
+      "id": "v8-building-50",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 12.915910498449355,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-484",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 0,
+      "displacement": 109.76128752424535,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-484",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 0,
+      "displacement": 109.76123455383949,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-484",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 0,
+      "displacement": 109.76133779632168,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-484",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 0,
+      "displacement": 109.76128752424535,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-484",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 0,
+      "displacement": 109.76125075410403,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-484",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 0,
+      "displacement": 109.7613229741482,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-485",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 0,
+      "displacement": 88.52943886302438,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-485",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 0,
+      "displacement": 88.11069234409992,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-485",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 0,
+      "displacement": 88.37971449401111,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-485",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 0,
+      "displacement": 88.52943886302438,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-485",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 0,
+      "displacement": 88.23969868547493,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-bird-485",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 0,
+      "displacement": 88.41963351157383,
+      "returns": 1
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-0",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 30.87139112515026,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-0",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 30.871322116931637,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-0",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 18.848791948249826,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-0",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 30.87139112515026,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-0",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 30.871357294406852,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-0",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 24.502440869924087,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-1",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 7.4591139071799635,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-1",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 7.47726220932518,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-1",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 7.4772622093251835,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-1",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 7.4591139071799635,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-1",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 7.4678752104029495,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-1",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 7.4678752104029495,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-2",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 7.4591139071799635,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-2",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 7.47726220932518,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-2",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 7.4772622093251835,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-2",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 7.4591139071799635,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-2",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 7.4678752104029495,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-2",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 7.4678752104029495,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-3",
+      "vehicleId": "red",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 7.4591139071799635,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-3",
+      "vehicleId": "red",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 7.477262209325178,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-3",
+      "vehicleId": "red",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 7.4772622093251835,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-3",
+      "vehicleId": "silver",
+      "steer": 0,
+      "contacts": 1,
+      "displacement": 7.4591139071799635,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-3",
+      "vehicleId": "silver",
+      "steer": 0.35,
+      "contacts": 1,
+      "displacement": 7.467875210402948,
+      "returns": 0
+    },
+    {
+      "track": "highlands",
+      "id": "highlands-median-3",
+      "vehicleId": "silver",
+      "steer": -0.35,
+      "contacts": 1,
+      "displacement": 7.4678752104029495,
+      "returns": 0
+    }
+  ]
+}

@@ -1,0 +1,2681 @@
+{
+  "generatedAt": "2026-10-23T06:19:42.920Z",
+  "scope": "V11 pure-model comfort/recovery regression; not real-device feel or rendered QA",
+  "tests": [
+    {
+      "name": "finite red paved 0km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 0km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 0km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 0km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 20km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 20km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 20km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 20km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 50km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 50km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 50km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 50km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 90km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 90km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 90km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 90km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 140km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 140km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 140km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 140km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 220km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 220km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 220km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red paved 220km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 0km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 0km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 0km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 0km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 20km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 20km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 20km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 20km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 50km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 50km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 50km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 50km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 90km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 90km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 90km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 90km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 140km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 140km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 140km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 140km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 220km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 220km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 220km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite red grass 220km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 0km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 0km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 0km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 0km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 20km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 20km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 20km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 20km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 50km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 50km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 50km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 50km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 90km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 90km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 90km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 90km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 140km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 140km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 140km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 140km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 220km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 220km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 220km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver paved 220km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 0km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 0km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 0km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 0km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 20km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 20km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 20km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 20km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 50km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 50km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 50km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 50km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 90km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 90km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 90km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 90km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 140km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 140km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 140km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 140km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 220km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 220km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 220km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite silver grass 220km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 0km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 0km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 0km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 0km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 20km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 20km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 20km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 20km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 50km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 50km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 50km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 50km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 90km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 90km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 90km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 90km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 140km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 140km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 140km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 140km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 220km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 220km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 220km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring paved 220km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 0km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 0km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 0km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 0km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 20km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 20km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 20km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 20km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 50km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 50km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 50km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 50km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 90km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 90km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 90km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 90km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 140km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 140km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 140km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 140km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 220km/h tap response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 220km/h hold response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 220km/h ramp response",
+      "status": "pass"
+    },
+    {
+      "name": "finite touring grass 220km/h reversal response",
+      "status": "pass"
+    },
+    {
+      "name": "available tire correction is force-bounded after a lateral impulse",
+      "status": "pass"
+    },
+    {
+      "name": "comfort response remains identical at30/60/120Hz",
+      "status": "pass"
+    },
+    {
+      "name": "Explore warns then automatically returns a grounded far-offroad car for no penalty",
+      "status": "pass"
+    },
+    {
+      "name": "race auto-return preserves ordered checkpoints and applies the existing penalty",
+      "status": "pass"
+    },
+    {
+      "name": "intentional flight and flips are exempt until a real landing",
+      "status": "pass"
+    },
+    {
+      "name": "leaving the recovery zone cancels warning rather than scheduling a delayed teleport",
+      "status": "pass"
+    },
+    {
+      "name": "automatic return cooldown prevents repeat teleports and is frozen by pause",
+      "status": "pass"
+    },
+    {
+      "name": "a solid-wall throttle trap receives assistance, but idle parking does not",
+      "status": "pass"
+    },
+    {
+      "name": "police boxing cannot be escaped by automatic stuck assistance",
+      "status": "pass"
+    },
+    {
+      "name": "recovery chooses a clear lane or a pose behind its eligible gate",
+      "status": "pass"
+    },
+    {
+      "name": "a completely blocked recovery region does not teleport or spend time",
+      "status": "pass"
+    },
+    {
+      "name": "blocked disabled-car assistance is truthful, rate-limited and retries when space clears",
+      "status": "pass"
+    },
+    {
+      "name": "repeated recovery cannot advance checkpoint order or produce a completed result",
+      "status": "pass"
+    },
+    {
+      "name": "endpoint approach warns without steering or teleporting a valid-road car",
+      "status": "pass"
+    },
+    {
+      "name": "beyond start returns inward and does not loop forward off the same endpoint",
+      "status": "pass"
+    },
+    {
+      "name": "beyond end returns inward and does not loop forward off the same endpoint",
+      "status": "pass"
+    },
+    {
+      "name": "manual reverse travel survives recovery, including correct graded endpoint orientation",
+      "status": "pass"
+    },
+    {
+      "name": "manual movement back toward pavement cancels endpoint auto-return",
+      "status": "pass"
+    },
+    {
+      "name": "world-boundary return waits for ground contact even beyond the terrain grid",
+      "status": "pass"
+    },
+    {
+      "name": "actual coast start automatic return / red",
+      "status": "pass"
+    },
+    {
+      "name": "actual coast start automatic return / silver",
+      "status": "pass"
+    },
+    {
+      "name": "actual coast start automatic return / touring",
+      "status": "pass"
+    },
+    {
+      "name": "actual coast end automatic return / red",
+      "status": "pass"
+    },
+    {
+      "name": "actual coast end automatic return / silver",
+      "status": "pass"
+    },
+    {
+      "name": "actual coast end automatic return / touring",
+      "status": "pass"
+    },
+    {
+      "name": "actual highlands start automatic return / red",
+      "status": "pass"
+    },
+    {
+      "name": "actual highlands start automatic return / silver",
+      "status": "pass"
+    },
+    {
+      "name": "actual highlands start automatic return / touring",
+      "status": "pass"
+    },
+    {
+      "name": "actual highlands end automatic return / red",
+      "status": "pass"
+    },
+    {
+      "name": "actual highlands end automatic return / silver",
+      "status": "pass"
+    },
+    {
+      "name": "actual highlands end automatic return / touring",
+      "status": "pass"
+    }
+  ],
+  "responses": [
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "tap",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "hold",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": 0,
+      "slipSettle": 0,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "ramp",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "reversal",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.008333333333333304,
+      "positionResidual": 0
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "tap",
+      "headingAt1": 2.0970019407424907,
+      "lateralAt1": 0.14421353177856752,
+      "movingPeakSlip": 0.6757228184245927,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.678790866342031e-14
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "hold",
+      "headingAt1": 42.03119204600183,
+      "lateralAt1": 1.1369420226896314,
+      "movingPeakSlip": 4.411724664403926,
+      "yawSettle": 0.375,
+      "slipSettle": 0.2749999999999999,
+      "reversal": null,
+      "positionResidual": 5.676839730350589e-14
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "ramp",
+      "headingAt1": 32.029281082042736,
+      "lateralAt1": 0.7000264905267215,
+      "movingPeakSlip": 4.358037872499662,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.6781289451362614e-14
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "reversal",
+      "headingAt1": 42.03119204600183,
+      "lateralAt1": 1.1369420226896314,
+      "movingPeakSlip": 4.411724664403926,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 5.679832887197784e-14
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "tap",
+      "headingAt1": 1.5888329173605877,
+      "lateralAt1": 0.27697255007399907,
+      "movingPeakSlip": 0.5114721715864741,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1346479661836823e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "hold",
+      "headingAt1": 32.10358890831854,
+      "lateralAt1": 2.2288428567251715,
+      "movingPeakSlip": 3.4912497580544852,
+      "yawSettle": 0.3666666666666667,
+      "slipSettle": 0.3500000000000001,
+      "reversal": null,
+      "positionResidual": 1.1341223766478992e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "ramp",
+      "headingAt1": 24.632156567715484,
+      "lateralAt1": 1.3810502902513455,
+      "movingPeakSlip": 3.4258380617691158,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.134648866847851e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "reversal",
+      "headingAt1": 32.10358890831854,
+      "lateralAt1": 2.2288428567251715,
+      "movingPeakSlip": 3.8139918388231964,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1324275111597703e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "tap",
+      "headingAt1": 0.8742147633873384,
+      "lateralAt1": 0.2730677808985792,
+      "movingPeakSlip": 0.28150077768870885,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1352030426875065e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "hold",
+      "headingAt1": 17.373840576514755,
+      "lateralAt1": 2.2288897651574118,
+      "movingPeakSlip": 1.860853969855518,
+      "yawSettle": 0.31666666666666665,
+      "slipSettle": 0.3500000000000001,
+      "reversal": null,
+      "positionResidual": 1.1363230621459288e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "ramp",
+      "headingAt1": 13.382152248987442,
+      "lateralAt1": 1.3692445575980055,
+      "movingPeakSlip": 1.8393795452189259,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1318741623514119e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "reversal",
+      "headingAt1": 17.373840576514755,
+      "lateralAt1": 2.2288897651574118,
+      "movingPeakSlip": 1.958626701330581,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1363325878548857e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "tap",
+      "headingAt1": 0.571802326518555,
+      "lateralAt1": 0.2747837738385256,
+      "movingPeakSlip": 0.18428585643984094,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1357582353427534e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "hold",
+      "headingAt1": 11.434024002945756,
+      "lateralAt1": 2.2602434836250707,
+      "movingPeakSlip": 1.2298497964374124,
+      "yawSettle": 0.29166666666666674,
+      "slipSettle": 0.3500000000000001,
+      "reversal": null,
+      "positionResidual": 1.1329840330242965e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "ramp",
+      "headingAt1": 8.823825446019203,
+      "lateralAt1": 1.386473979584199,
+      "movingPeakSlip": 1.2175255543706738,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1346687260164576e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "reversal",
+      "headingAt1": 11.434024002945756,
+      "lateralAt1": 2.2602434836250707,
+      "movingPeakSlip": 1.3104273416934937,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1329840330242965e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "tap",
+      "headingAt1": 0.36750021083094775,
+      "lateralAt1": 0.2720240115898444,
+      "movingPeakSlip": 0.11863338559772876,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1352030983804393e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "hold",
+      "headingAt1": 7.445343983265865,
+      "lateralAt1": 2.2528769745755284,
+      "movingPeakSlip": 0.8089410825613039,
+      "yawSettle": 0.2583333333333333,
+      "slipSettle": 0.3500000000000001,
+      "reversal": null,
+      "positionResidual": 1.1346501038126275e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "ramp",
+      "headingAt1": 5.759805136004357,
+      "lateralAt1": 1.3823079328943961,
+      "movingPeakSlip": 0.801792008230123,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1291094575358102e-13
+    },
+    {
+      "variant": "red",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "reversal",
+      "headingAt1": 7.445343983265865,
+      "lateralAt1": 2.2528769745755284,
+      "movingPeakSlip": 0.8840263447890241,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1307627214566666e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "tap",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "hold",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": 0,
+      "slipSettle": 0,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "ramp",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "reversal",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.008333333333333304,
+      "positionResidual": 0
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "tap",
+      "headingAt1": 1.9715780237684493,
+      "lateralAt1": 0.07496919685505077,
+      "movingPeakSlip": 0.9936069320894249,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.799442799084288e-14
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "hold",
+      "headingAt1": 31.829909455780555,
+      "lateralAt1": 0.42742998169072166,
+      "movingPeakSlip": 7.8007575871134245,
+      "yawSettle": 0.32499999999999996,
+      "slipSettle": 0.2666666666666666,
+      "reversal": null,
+      "positionResidual": 5.750274452255317e-14
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "ramp",
+      "headingAt1": 23.219691588478657,
+      "lateralAt1": 0.23651514757744962,
+      "movingPeakSlip": 6.914368945302584,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.759468415140128e-14
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "reversal",
+      "headingAt1": 31.829909455780555,
+      "lateralAt1": 0.42742998169072166,
+      "movingPeakSlip": 7.8007575871134245,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2583333333333333,
+      "positionResidual": 5.825689121439205e-14
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "tap",
+      "headingAt1": 0.9617904644101359,
+      "lateralAt1": 0.126356559350711,
+      "movingPeakSlip": 0.47164577168982563,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1377554573698527e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "hold",
+      "headingAt1": 21.792090775384743,
+      "lateralAt1": 0.9760295239772745,
+      "movingPeakSlip": 5.5296806405034795,
+      "yawSettle": 0.3500000000000001,
+      "slipSettle": 0.55,
+      "reversal": null,
+      "positionResidual": 1.1351586027746093e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "ramp",
+      "headingAt1": 17.07012347149552,
+      "lateralAt1": 0.589854475850359,
+      "movingPeakSlip": 5.375469947649167,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.135296937066352e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "reversal",
+      "headingAt1": 21.792090775384743,
+      "lateralAt1": 0.9760295239772745,
+      "movingPeakSlip": 8.038130307226245,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1382428742445584e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "tap",
+      "headingAt1": 0.5499925900240086,
+      "lateralAt1": 0.11983165920534589,
+      "movingPeakSlip": 0.2770375504874776,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1367663403764424e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "hold",
+      "headingAt1": 12.281046004956345,
+      "lateralAt1": 0.9689532342066514,
+      "movingPeakSlip": 2.9295628505743587,
+      "yawSettle": 0.30000000000000004,
+      "slipSettle": 0.5416666666666667,
+      "reversal": null,
+      "positionResidual": 1.138806363089159e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "ramp",
+      "headingAt1": 9.570484419245709,
+      "lateralAt1": 0.5827979469651154,
+      "movingPeakSlip": 2.8413641388587827,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1367697576572119e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "reversal",
+      "headingAt1": 12.281046004956345,
+      "lateralAt1": 0.9689532342066514,
+      "movingPeakSlip": 3.6649025191131543,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.138806363089159e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "tap",
+      "headingAt1": 0.3510222590989262,
+      "lateralAt1": 0.10362090134080404,
+      "movingPeakSlip": 0.1755790860277739,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1346548170783971e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "hold",
+      "headingAt1": 8.816284326596541,
+      "lateralAt1": 0.8069927850378633,
+      "movingPeakSlip": 2.438967140679387,
+      "yawSettle": 0.29166666666666674,
+      "slipSettle": 0.5333333333333332,
+      "reversal": null,
+      "positionResidual": 1.1379792095093552e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "ramp",
+      "headingAt1": 7.056413763564881,
+      "lateralAt1": 0.4859656739376703,
+      "movingPeakSlip": 2.380916431325842,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1358570719390708e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "reversal",
+      "headingAt1": 8.816284326596541,
+      "lateralAt1": 0.8069927850378633,
+      "movingPeakSlip": 3.0019219091493317,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1398289095834e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "tap",
+      "headingAt1": 0.22186755769386582,
+      "lateralAt1": 0.11658977520036728,
+      "movingPeakSlip": 0.10981128972147684,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1385966795582721e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "hold",
+      "headingAt1": 5.147500227080071,
+      "lateralAt1": 0.9083526638755188,
+      "movingPeakSlip": 1.3499925569881481,
+      "yawSettle": 0.2416666666666667,
+      "slipSettle": 0.5416666666666667,
+      "reversal": null,
+      "positionResidual": 1.134963329163892e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "ramp",
+      "headingAt1": 4.069785707506888,
+      "lateralAt1": 0.5455898321773702,
+      "movingPeakSlip": 1.3274561843801524,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1334116113893373e-13
+    },
+    {
+      "variant": "red",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "reversal",
+      "headingAt1": 5.147500227080071,
+      "lateralAt1": 0.9083526638755188,
+      "movingPeakSlip": 2.3438521733094997,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1300971635030172e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "tap",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "hold",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": 0,
+      "slipSettle": 0,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "ramp",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "reversal",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.008333333333333304,
+      "positionResidual": 0
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "tap",
+      "headingAt1": 1.4670553446670307,
+      "lateralAt1": 0.10092082297382003,
+      "movingPeakSlip": 0.4726028754885356,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.67254578472142e-14
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "hold",
+      "headingAt1": 28.58456975130728,
+      "lateralAt1": 0.8021994152566524,
+      "movingPeakSlip": 2.9846328885454616,
+      "yawSettle": 0.3500000000000001,
+      "slipSettle": 0.2333333333333334,
+      "reversal": null,
+      "positionResidual": 5.682954109947644e-14
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "ramp",
+      "headingAt1": 21.835149635449458,
+      "lateralAt1": 0.49002965865009956,
+      "movingPeakSlip": 2.9464639929563545,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.663525204392429e-14
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "reversal",
+      "headingAt1": 28.58456975130728,
+      "lateralAt1": 0.8021994152566524,
+      "movingPeakSlip": 2.9846328885454616,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 5.682954109947644e-14
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "tap",
+      "headingAt1": 1.5888329173605877,
+      "lateralAt1": 0.27697255007399907,
+      "movingPeakSlip": 0.5114721715864741,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1346479661836823e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "hold",
+      "headingAt1": 32.10358890831854,
+      "lateralAt1": 2.2288428567251715,
+      "movingPeakSlip": 3.4912497580544852,
+      "yawSettle": 0.3666666666666667,
+      "slipSettle": 0.3500000000000001,
+      "reversal": null,
+      "positionResidual": 1.1341223766478992e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "ramp",
+      "headingAt1": 24.632156567715484,
+      "lateralAt1": 1.3810502902513455,
+      "movingPeakSlip": 3.4258380617691158,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.134648866847851e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "reversal",
+      "headingAt1": 32.10358890831854,
+      "lateralAt1": 2.2288428567251715,
+      "movingPeakSlip": 3.8139918388231964,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1324275111597703e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "tap",
+      "headingAt1": 0.8742147633873384,
+      "lateralAt1": 0.2730677808985792,
+      "movingPeakSlip": 0.28150077768870885,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1352030426875065e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "hold",
+      "headingAt1": 17.373840576514755,
+      "lateralAt1": 2.2288897651574118,
+      "movingPeakSlip": 1.860853969855518,
+      "yawSettle": 0.31666666666666665,
+      "slipSettle": 0.3500000000000001,
+      "reversal": null,
+      "positionResidual": 1.1363230621459288e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "ramp",
+      "headingAt1": 13.382152248987442,
+      "lateralAt1": 1.3692445575980055,
+      "movingPeakSlip": 1.8393795452189259,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1318741623514119e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "reversal",
+      "headingAt1": 17.373840576514755,
+      "lateralAt1": 2.2288897651574118,
+      "movingPeakSlip": 1.958626701330581,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1363325878548857e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "tap",
+      "headingAt1": 0.571802326518555,
+      "lateralAt1": 0.2747837738385256,
+      "movingPeakSlip": 0.18428585643984094,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1357582353427534e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "hold",
+      "headingAt1": 11.434024002945756,
+      "lateralAt1": 2.2602434836250707,
+      "movingPeakSlip": 1.2298497964374124,
+      "yawSettle": 0.29166666666666674,
+      "slipSettle": 0.3500000000000001,
+      "reversal": null,
+      "positionResidual": 1.1329840330242965e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "ramp",
+      "headingAt1": 8.823825446019203,
+      "lateralAt1": 1.386473979584199,
+      "movingPeakSlip": 1.2175255543706738,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1346687260164576e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "reversal",
+      "headingAt1": 11.434024002945756,
+      "lateralAt1": 2.2602434836250707,
+      "movingPeakSlip": 1.3104273416934937,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1329840330242965e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "tap",
+      "headingAt1": 0.36750021083094775,
+      "lateralAt1": 0.2720240115898444,
+      "movingPeakSlip": 0.11863338559772876,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1352030983804393e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "hold",
+      "headingAt1": 7.445343983265865,
+      "lateralAt1": 2.2528769745755284,
+      "movingPeakSlip": 0.8089410825613039,
+      "yawSettle": 0.2583333333333333,
+      "slipSettle": 0.3500000000000001,
+      "reversal": null,
+      "positionResidual": 1.1346501038126275e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "ramp",
+      "headingAt1": 5.759805136004357,
+      "lateralAt1": 1.3823079328943961,
+      "movingPeakSlip": 0.801792008230123,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1291094575358102e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "reversal",
+      "headingAt1": 7.445343983265865,
+      "lateralAt1": 2.2528769745755284,
+      "movingPeakSlip": 0.8840263447890241,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1307627214566666e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "tap",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "hold",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": 0,
+      "slipSettle": 0,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "ramp",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "reversal",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.008333333333333304,
+      "positionResidual": 0
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "tap",
+      "headingAt1": 1.3960197966836774,
+      "lateralAt1": 0.05317760593734988,
+      "movingPeakSlip": 0.7028445351993766,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.812389505589213e-14
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "hold",
+      "headingAt1": 21.631196472115775,
+      "lateralAt1": 0.3012069388531131,
+      "movingPeakSlip": 5.225634902587076,
+      "yawSettle": 0.30000000000000004,
+      "slipSettle": 0.19999999999999996,
+      "reversal": null,
+      "positionResidual": 5.722251958967739e-14
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "ramp",
+      "headingAt1": 15.782159025805736,
+      "lateralAt1": 0.16520314500874633,
+      "movingPeakSlip": 4.626292220671603,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.703759774563867e-14
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "reversal",
+      "headingAt1": 21.631196472115775,
+      "lateralAt1": 0.3012069388531131,
+      "movingPeakSlip": 5.225634902587076,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2583333333333333,
+      "positionResidual": 5.78982271545701e-14
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "tap",
+      "headingAt1": 0.9617904644101359,
+      "lateralAt1": 0.126356559350711,
+      "movingPeakSlip": 0.47164577168982563,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1377554573698527e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "hold",
+      "headingAt1": 21.792090775384743,
+      "lateralAt1": 0.9760295239772745,
+      "movingPeakSlip": 5.5296806405034795,
+      "yawSettle": 0.3500000000000001,
+      "slipSettle": 0.55,
+      "reversal": null,
+      "positionResidual": 1.1351586027746093e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "ramp",
+      "headingAt1": 17.07012347149552,
+      "lateralAt1": 0.589854475850359,
+      "movingPeakSlip": 5.375469947649167,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.135296937066352e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "reversal",
+      "headingAt1": 21.792090775384743,
+      "lateralAt1": 0.9760295239772745,
+      "movingPeakSlip": 7.74274925353435,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1382428742445584e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "tap",
+      "headingAt1": 0.5499925900240086,
+      "lateralAt1": 0.11983165920534589,
+      "movingPeakSlip": 0.2770375504874776,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1367663403764424e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "hold",
+      "headingAt1": 12.281046004956345,
+      "lateralAt1": 0.9689532342066514,
+      "movingPeakSlip": 2.9295628505743587,
+      "yawSettle": 0.30000000000000004,
+      "slipSettle": 0.5416666666666667,
+      "reversal": null,
+      "positionResidual": 1.138806363089159e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "ramp",
+      "headingAt1": 9.570484419245709,
+      "lateralAt1": 0.5827979469651154,
+      "movingPeakSlip": 2.8413641388587827,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1367697576572119e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "reversal",
+      "headingAt1": 12.281046004956345,
+      "lateralAt1": 0.9689532342066514,
+      "movingPeakSlip": 3.6649025191131543,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.138806363089159e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "tap",
+      "headingAt1": 0.3510222590989262,
+      "lateralAt1": 0.10362090134080404,
+      "movingPeakSlip": 0.1755790860277739,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1346548170783971e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "hold",
+      "headingAt1": 8.816284326596541,
+      "lateralAt1": 0.8069927850378633,
+      "movingPeakSlip": 2.438967140679387,
+      "yawSettle": 0.29166666666666674,
+      "slipSettle": 0.5333333333333332,
+      "reversal": null,
+      "positionResidual": 1.1379792095093552e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "ramp",
+      "headingAt1": 7.056413763564881,
+      "lateralAt1": 0.4859656739376703,
+      "movingPeakSlip": 2.380916431325842,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1358570719390708e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "reversal",
+      "headingAt1": 8.816284326596541,
+      "lateralAt1": 0.8069927850378633,
+      "movingPeakSlip": 3.0019219091493317,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1398289095834e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "tap",
+      "headingAt1": 0.22186755769386582,
+      "lateralAt1": 0.11658977520036728,
+      "movingPeakSlip": 0.10981128972147684,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1385966795582721e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "hold",
+      "headingAt1": 5.147500227080071,
+      "lateralAt1": 0.9083526638755188,
+      "movingPeakSlip": 1.3499925569881481,
+      "yawSettle": 0.2416666666666667,
+      "slipSettle": 0.5416666666666667,
+      "reversal": null,
+      "positionResidual": 1.134963329163892e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "ramp",
+      "headingAt1": 4.069785707506888,
+      "lateralAt1": 0.5455898321773702,
+      "movingPeakSlip": 1.3274561843801524,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1334116113893373e-13
+    },
+    {
+      "variant": "silver",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "reversal",
+      "headingAt1": 5.147500227080071,
+      "lateralAt1": 0.9083526638755188,
+      "movingPeakSlip": 2.3438521733094997,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1300971635030172e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "tap",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "hold",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": 0,
+      "slipSettle": 0,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "ramp",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 0,
+      "pattern": "reversal",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.008333333333333304,
+      "positionResidual": 0
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "tap",
+      "headingAt1": 1.6517449465188403,
+      "lateralAt1": 0.11444402600693297,
+      "movingPeakSlip": 0.5081181539622942,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.6531171165314257e-14
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "hold",
+      "headingAt1": 32.425085271026816,
+      "lateralAt1": 0.9142883394883555,
+      "movingPeakSlip": 3.1571034180241684,
+      "yawSettle": 0.3583333333333334,
+      "slipSettle": 0.2333333333333334,
+      "reversal": null,
+      "positionResidual": 5.648262365600524e-14
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "ramp",
+      "headingAt1": 24.749580536581803,
+      "lateralAt1": 0.5606356285967093,
+      "movingPeakSlip": 3.1186506830916527,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.6787908133507225e-14
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 20,
+      "pattern": "reversal",
+      "headingAt1": 32.425085271026816,
+      "lateralAt1": 0.9142883394883555,
+      "movingPeakSlip": 3.1571034180241684,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 5.648277549730971e-14
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "tap",
+      "headingAt1": 1.6984684793418137,
+      "lateralAt1": 0.2982066480727171,
+      "movingPeakSlip": 0.5220458527044096,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1333989847016552e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "hold",
+      "headingAt1": 34.378650636056626,
+      "lateralAt1": 2.40655922877925,
+      "movingPeakSlip": 3.4875798406109655,
+      "yawSettle": 0.3666666666666667,
+      "slipSettle": 0.34166666666666656,
+      "reversal": null,
+      "positionResidual": 1.132172928354566e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "ramp",
+      "headingAt1": 26.364525206939557,
+      "lateralAt1": 1.4968982995184608,
+      "movingPeakSlip": 3.422624619385609,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1367600958378661e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 50,
+      "pattern": "reversal",
+      "headingAt1": 34.378650636056626,
+      "lateralAt1": 2.40655922877925,
+      "movingPeakSlip": 3.8244647484485044,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1296522344358837e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "tap",
+      "headingAt1": 0.9353281568917419,
+      "lateralAt1": 0.2942644114251107,
+      "movingPeakSlip": 0.28755272344261934,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1352030429774443e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "hold",
+      "headingAt1": 18.593628328489558,
+      "lateralAt1": 2.4141933144723287,
+      "movingPeakSlip": 1.8553180500915285,
+      "yawSettle": 0.32499999999999996,
+      "slipSettle": 0.34166666666666656,
+      "reversal": null,
+      "positionResidual": 1.1321521068009876e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "ramp",
+      "headingAt1": 14.32036573994949,
+      "lateralAt1": 1.4871918465957084,
+      "movingPeakSlip": 1.8355474707669694,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1343706322024307e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 90,
+      "pattern": "reversal",
+      "headingAt1": 18.593628328489558,
+      "lateralAt1": 2.4141933144723287,
+      "movingPeakSlip": 1.9553867624624273,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.135211194577877e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "tap",
+      "headingAt1": 0.6118191046731023,
+      "lateralAt1": 0.2961528581724978,
+      "movingPeakSlip": 0.18825303049606593,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1263212916204542e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "hold",
+      "headingAt1": 12.235503636295467,
+      "lateralAt1": 2.4501138450919773,
+      "movingPeakSlip": 1.2258435314182132,
+      "yawSettle": 0.29166666666666674,
+      "slipSettle": 0.34166666666666656,
+      "reversal": null,
+      "positionResidual": 1.1368745520695765e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "ramp",
+      "headingAt1": 9.441985953754939,
+      "lateralAt1": 1.506681100832282,
+      "movingPeakSlip": 1.2147541329539553,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.130762286837835e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 140,
+      "pattern": "reversal",
+      "headingAt1": 12.235503636295467,
+      "lateralAt1": 2.4501138450919773,
+      "movingPeakSlip": 1.3074392647139381,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1335378440657616e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "tap",
+      "headingAt1": 0.3932242358284008,
+      "lateralAt1": 0.29321220632892686,
+      "movingPeakSlip": 0.12118717614369261,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1363132657783303e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "hold",
+      "headingAt1": 7.966827346491713,
+      "lateralAt1": 2.4432005507498715,
+      "movingPeakSlip": 0.8062026173168608,
+      "yawSettle": 0.2666666666666666,
+      "slipSettle": 0.34166666666666656,
+      "reversal": null,
+      "positionResidual": 1.1324312351754354e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "ramp",
+      "headingAt1": 6.16313672300608,
+      "lateralAt1": 1.5026254987943268,
+      "movingPeakSlip": 0.799822164811166,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1357603247134584e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "paved",
+      "entryKmh": 220,
+      "pattern": "reversal",
+      "headingAt1": 7.966827346491713,
+      "lateralAt1": 2.4432005507498715,
+      "movingPeakSlip": 0.8817592430735397,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1346704403386469e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "tap",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "hold",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": 0,
+      "slipSettle": 0,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "ramp",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 0
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 0,
+      "pattern": "reversal",
+      "headingAt1": 0,
+      "lateralAt1": 0,
+      "movingPeakSlip": 0,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.008333333333333304,
+      "positionResidual": 0
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "tap",
+      "headingAt1": 1.5718043450933852,
+      "lateralAt1": 0.059866961235996996,
+      "movingPeakSlip": 0.7913778048756074,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.833278274224089e-14
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "hold",
+      "headingAt1": 24.538177673563943,
+      "lateralAt1": 0.33877942880710066,
+      "movingPeakSlip": 5.947765603987948,
+      "yawSettle": 0.30833333333333335,
+      "slipSettle": 0.2250000000000001,
+      "reversal": null,
+      "positionResidual": 5.689815642080496e-14
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "ramp",
+      "headingAt1": 17.899089167759954,
+      "lateralAt1": 0.18613065742388812,
+      "movingPeakSlip": 5.266973912766381,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 5.799654550790002e-14
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 20,
+      "pattern": "reversal",
+      "headingAt1": 24.538177673563943,
+      "lateralAt1": 0.33877942880710066,
+      "movingPeakSlip": 5.947765603987948,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2583333333333333,
+      "positionResidual": 5.733861787111551e-14
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "tap",
+      "headingAt1": 0.9617904644101359,
+      "lateralAt1": 0.126356559350711,
+      "movingPeakSlip": 0.47164577168982563,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1377554573698527e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "hold",
+      "headingAt1": 21.792090775384743,
+      "lateralAt1": 0.9760295239772745,
+      "movingPeakSlip": 5.5296806405034795,
+      "yawSettle": 0.3500000000000001,
+      "slipSettle": 0.55,
+      "reversal": null,
+      "positionResidual": 1.1351586027746093e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "ramp",
+      "headingAt1": 17.07012347149552,
+      "lateralAt1": 0.589854475850359,
+      "movingPeakSlip": 5.375469947649167,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.135296937066352e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 50,
+      "pattern": "reversal",
+      "headingAt1": 21.792090775384743,
+      "lateralAt1": 0.9760295239772745,
+      "movingPeakSlip": 8.025639461361306,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1382428742445584e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "tap",
+      "headingAt1": 0.5499925900240086,
+      "lateralAt1": 0.11983165920534589,
+      "movingPeakSlip": 0.2770375504874776,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1367663403764424e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "hold",
+      "headingAt1": 12.281046004956345,
+      "lateralAt1": 0.9689532342066514,
+      "movingPeakSlip": 2.9295628505743587,
+      "yawSettle": 0.30000000000000004,
+      "slipSettle": 0.5416666666666667,
+      "reversal": null,
+      "positionResidual": 1.138806363089159e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "ramp",
+      "headingAt1": 9.570484419245709,
+      "lateralAt1": 0.5827979469651154,
+      "movingPeakSlip": 2.8413641388587827,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1367697576572119e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 90,
+      "pattern": "reversal",
+      "headingAt1": 12.281046004956345,
+      "lateralAt1": 0.9689532342066514,
+      "movingPeakSlip": 3.6649025191131543,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.138806363089159e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "tap",
+      "headingAt1": 0.3510222590989262,
+      "lateralAt1": 0.10362090134080404,
+      "movingPeakSlip": 0.1755790860277739,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1346548170783971e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "hold",
+      "headingAt1": 8.816284326596541,
+      "lateralAt1": 0.8069927850378633,
+      "movingPeakSlip": 2.438967140679387,
+      "yawSettle": 0.29166666666666674,
+      "slipSettle": 0.5333333333333332,
+      "reversal": null,
+      "positionResidual": 1.1379792095093552e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "ramp",
+      "headingAt1": 7.056413763564881,
+      "lateralAt1": 0.4859656739376703,
+      "movingPeakSlip": 2.380916431325842,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1358570719390708e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 140,
+      "pattern": "reversal",
+      "headingAt1": 8.816284326596541,
+      "lateralAt1": 0.8069927850378633,
+      "movingPeakSlip": 3.0019219091493317,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1398289095834e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "tap",
+      "headingAt1": 0.22186755769386582,
+      "lateralAt1": 0.11658977520036728,
+      "movingPeakSlip": 0.10981128972147684,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1385966795582721e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "hold",
+      "headingAt1": 5.147500227080071,
+      "lateralAt1": 0.9083526638755188,
+      "movingPeakSlip": 1.3499925569881481,
+      "yawSettle": 0.2416666666666667,
+      "slipSettle": 0.5416666666666667,
+      "reversal": null,
+      "positionResidual": 1.134963329163892e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "ramp",
+      "headingAt1": 4.069785707506888,
+      "lateralAt1": 0.5455898321773702,
+      "movingPeakSlip": 1.3274561843801524,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": null,
+      "positionResidual": 1.1334116113893373e-13
+    },
+    {
+      "variant": "touring",
+      "surface": "grass",
+      "entryKmh": 220,
+      "pattern": "reversal",
+      "headingAt1": 5.147500227080071,
+      "lateralAt1": 0.9083526638755188,
+      "movingPeakSlip": 2.3438521733094997,
+      "yawSettle": null,
+      "slipSettle": null,
+      "reversal": 0.2416666666666667,
+      "positionResidual": 1.1300971635030172e-13
+    }
+  ],
+  "endpoints": [
+    {
+      "track": "coast",
+      "end": "start",
+      "variant": "red",
+      "returnS": 14,
+      "afterDepartureS": 26.766970745612362,
+      "damage": 0
+    },
+    {
+      "track": "coast",
+      "end": "start",
+      "variant": "silver",
+      "returnS": 14,
+      "afterDepartureS": 26.766970745612362,
+      "damage": 0
+    },
+    {
+      "track": "coast",
+      "end": "start",
+      "variant": "touring",
+      "returnS": 14,
+      "afterDepartureS": 27.027986241771703,
+      "damage": 0
+    },
+    {
+      "track": "coast",
+      "end": "end",
+      "variant": "red",
+      "returnS": 4525.752264868523,
+      "afterDepartureS": 4512.97272111145,
+      "damage": 0
+    },
+    {
+      "track": "coast",
+      "end": "end",
+      "variant": "silver",
+      "returnS": 4525.752264868523,
+      "afterDepartureS": 4512.97272111145,
+      "damage": 0
+    },
+    {
+      "track": "coast",
+      "end": "end",
+      "variant": "touring",
+      "returnS": 4525.752264868523,
+      "afterDepartureS": 4512.711692948476,
+      "damage": 0
+    },
+    {
+      "track": "highlands",
+      "end": "start",
+      "variant": "red",
+      "returnS": 14,
+      "afterDepartureS": 26.7844709842428,
+      "damage": 0
+    },
+    {
+      "track": "highlands",
+      "end": "start",
+      "variant": "silver",
+      "returnS": 14,
+      "afterDepartureS": 26.7844709842428,
+      "damage": 0
+    },
+    {
+      "track": "highlands",
+      "end": "start",
+      "variant": "touring",
+      "returnS": 14,
+      "afterDepartureS": 27.04550029173838,
+      "damage": 0
+    },
+    {
+      "track": "highlands",
+      "end": "end",
+      "variant": "red",
+      "returnS": 3744.1266753456357,
+      "afterDepartureS": 3731.3422043613923,
+      "damage": 0
+    },
+    {
+      "track": "highlands",
+      "end": "end",
+      "variant": "silver",
+      "returnS": 3744.1266753456357,
+      "afterDepartureS": 3731.3422043613923,
+      "damage": 0
+    },
+    {
+      "track": "highlands",
+      "end": "end",
+      "variant": "touring",
+      "returnS": 3744.1266753456357,
+      "afterDepartureS": 3731.081175053898,
+      "damage": 0
+    }
+  ],
+  "passed": 175,
+  "failed": 0,
+  "gameplaySha256": "f1464350b943632dffeb321b50632e3524e03f356018c5005392de1fda89620f"
+}

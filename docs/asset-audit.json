@@ -1,0 +1,233 @@
+{
+  "scope": "Selected original runtime GLBs unchanged from exact V11.1; no private-reference metadata or original CC0 grants embedded. OSM warning/provenance preserved; original authoring manifests excluded.",
+  "privateMetadataMatches": [],
+  "runtimeCarManifestKeys": [
+    "paint_material",
+    "steer_nodes",
+    "spin_nodes"
+  ],
+  "files": [
+    {
+      "path": "public/assets/KeralaShopRow_A.glb",
+      "sha256": "a44bb678067c14b0184426f0b546dbddc8155dced337805c41308e5f8b20b819",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/coast_metro_train.glb",
+      "sha256": "328cef4fe7116c07ab59b80acc44357702b0273bde1a44a666858d43af7ee8d8",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/car_silver.glb",
+      "sha256": "3bec86298c9c22a7e1e91deeff4ef2a614744cadf170e9abea2855f2ec82a749",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/TropicalGrass.glb",
+      "sha256": "1b0baf9d212e943943ad7391a4cf6d876e298b881c1d2cbbd1e560687bf91e01",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/police_lightbar.glb",
+      "sha256": "9c1ca73f4b5f110ac6a72a8b03d41c3504d922b96bc6c9cee5ba5b598865a10c",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/CheckpointGate.glb",
+      "sha256": "ec6cac7fd5719511c55cb9486e203259706b278adf4415f03e489912c24ea5eb",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/CanalRainTreeFar.glb",
+      "sha256": "03514da6bf2bde6a411a96447087eb5dc77c050fd409792773023b3e68207b83",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/ArcadeCoin.glb",
+      "sha256": "f8bc943f206e8d65df4b76ce7e3bdf682b4ea8d4262cca739994e3822bb8219d",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/Course_Furniture.glb",
+      "sha256": "d669e76ebdb97d0c7d54afbd22120ad0691e3f42e349357adb419a08eea0b419",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/ArcadeBoostNozzle.glb",
+      "sha256": "e8abbd20c0f3f58aa19362a46e24a3304d3c489cad0ded8a748eb45a58e7373a",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/KeralaApartment_A.glb",
+      "sha256": "69513c6040528422e9ac31004c1186d539059a5184dc90ee8a26d374ccc046e6",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/car_touring.glb",
+      "sha256": "dc6d4bc67ad61ef7c9f74ce4f5e92bf64cf491373c19b75b998a8ccc889bc8d7",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/CanalRainTree.glb",
+      "sha256": "eeeb6fa9b3daa71a96544b8509e83bd41da156da0c50697ea232d0d048c7840c",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/ServiceShowroomBay.glb",
+      "sha256": "6b32547cd521f44f50956281aa8cb82eb6448f00321e29937bde9352488e9bc9",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/KeralaOffice_A.glb",
+      "sha256": "d05616e4d0d35fb804d8502f3e02298b03aba52e8dba9b9e4b65297a0f807756",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/ChineseFishingNet.glb",
+      "sha256": "06bd5c254021ea19de75425a1bd9a04bf2fc1188b629df917ed29dd0438966da",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/CanalShikara.glb",
+      "sha256": "2b4dc502eb3556a9a242843b08e1296903bd2d0c20a20584ebfb1eeebbc01f9d",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/KeralaTeaStall.glb",
+      "sha256": "2897ac5ced8aac9ebbd583ae70bceb4bec3560a99b6b87fc600e777bf1caf8c0",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/CoconutPalm_A.glb",
+      "sha256": "951687c70bf508edd8ce8e18a92dfaf940f1c4f812a58a85342a29787450b756",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/RouteEndMarker.glb",
+      "sha256": "f4e90d1d2c76bf09164ae55f5843ab9db37dce838506c8b3236d5d957c2c4faa",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/MetroStation.glb",
+      "sha256": "bbfaf1e07ef93750ee8e2264294b900cd262b7b977d2a318931625d81698cf45",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/water_transit_ferry.glb",
+      "sha256": "b160cffaacf1a753d144bc71fb6bbfbcb749d585855fdcce9a6c6a185f0904c2",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/KeralaHouse.glb",
+      "sha256": "ac29c493be0079ae4fa548dcbb14e29e9f7d262b0341826b98fb030f84178eef",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/WaterTransitTerminal.glb",
+      "sha256": "c7cf660eb9714723f8324092d5a3185c910e2805cd335b212de482a1081cdebf",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/SideStreetSegment.glb",
+      "sha256": "1506de80718b9e26a4ec61d89afabda8de32ca896c766761fcea7df47e0c2283",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/KeralaShopRow_B.glb",
+      "sha256": "3c4184ea08cdf010b19260bc21c340c8d4d66f534d6844089f59ac60d37556da",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/Streetlight.glb",
+      "sha256": "0893ae036935c10039743600f68bd1c4e512df9a33a857f31daa7dee548172be",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/Course_Terrain.glb",
+      "sha256": "8316812e396a0037f31e8939c2b032f62f3baed2ade821aa9c0fb579a1751ef5",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/MetroViaductSpan.glb",
+      "sha256": "e926f137d5f9f7442bdd75672a5827714b737aa3ba846195bec2787156eee517",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/FishingBoat.glb",
+      "sha256": "5f2324b7d85b119c6be6075aceba39a60a8d01d300fb72b33c3bc2fcf5a06815",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/KeralaHouseboat.glb",
+      "sha256": "2153db39d79b9738f7c5dfb0caa79a9e2d92ccdec6ffa415354de2ce791f54b5",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/RoadReflector.glb",
+      "sha256": "af64fdca0e4fe52a03a8efc6444cc114675fb290b60f0fff24891e8c1ea914fa",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/CoconutPalm_B.glb",
+      "sha256": "194f42c0bd580d560f161fcc212653c811f742846e2916af973ae60638c97929",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/Course_Road.glb",
+      "sha256": "b738a94a13a3092f1bb3f38692d7095b5ebf2d3b806d49e4f83d72d14768d0d4",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/Course_Water.glb",
+      "sha256": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/car.glb",
+      "sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    },
+    {
+      "path": "public/assets/PromenadeSegment.glb",
+      "sha256": "69ff431f082bb13908106ee7e23da458bf2017b039aa2e5eea0b8ce249680e55",
+      "geometryChanged": false,
+      "embeddedOriginalLicenseGrant": false
+    }
+  ]
+}

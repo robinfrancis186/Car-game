@@ -5,7 +5,7 @@ import {loadData} from '../server/data.mjs';
 import {GameModel,buildCourseObstacles} from '../shared/gameplay.js';
 import {worldPhysicsOptions} from '../shared/tracks.js';
 const data=loadData(),slice={startS:2200,endS:2320};
-test('one world, two independent driver contexts preserve unchanged V10 stock integration',()=>{
+test('one world, two independent driver contexts preserve stable V11.1 stock integration',()=>{
  const world=new RaceWorld(data,slice);world.add('A');world.add('B');const baseline=new GameModel(data.world.route_points.map(p=>({x:p[0],y:p[1],z:p[2]})),{...slice,...worldPhysicsOptions(data.world),obstacles:[...buildCourseObstacles(data.world,data.furniture.colliders),...data.infrastructure.colliders],seed:267,upgrades:{},maxSteer:.57}).start('time-attack');baseline.state='racing';baseline.countdown=0;baseline.timeLimit=Infinity;baseline.timeRemaining=Infinity;
  for(let i=0;i<90;i++){const input={throttle:1,steer:0,boost:false};world.step(new Map([['A',input],['B',{brake:true}]]));baseline.update(1/60,input);assert.deepEqual(world.drivers.get('A').state.player,baseline.player);}
  assert(world.snapshot('A').s>world.snapshot('B').s);assert.equal(world.snapshot('B').speed,0);assert.equal(world.model.rivals.length,0);assert.equal(world.model.police.length,0);assert.equal(world.model.vehicleStats.topSpeedMps,68);

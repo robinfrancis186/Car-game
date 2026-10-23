@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Extract the frozen coast's renderer-selected water triangles without a GPU.
 
-Usage: python3 tools/export_water.py ../kerala_racing_v10/web/public/assets/Course_Water.glb data/water.json
+Usage: python3 tools/export_water.py public/assets/Course_Water.glb data/water.json
 No third-party Python package is required. Only GLB v2 internal-buffer triangle
 meshes are accepted. Unsupported sparse/compressed/normalized data fails closed.
 """
