@@ -1,2 +1,2 @@
-// Deliberately disabled until the actual approved HTTPS service origin is verified.
-export const APPROVED_PRODUCTION_ORIGINS=Object.freeze([]);
+// Exact verified Free Singapore service origin. No arbitrary endpoint overrides.
+export const APPROVED_PRODUCTION_ORIGINS=Object.freeze(["https://kerala-roadster-multiplayer-alpha.onrender.com"]);

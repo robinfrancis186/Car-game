@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "identity": "v11.1-joint-reconstruction2-disabled-production",
-  "createdUtc": "2026-10-23T06:21:00.365243+00:00",
+  "identity": "v11.1-joint-reconstruction2-exact-origin-activation",
+  "createdUtc": "2026-10-23T07:38:15.444883+00:00",
   "rootHashAlgorithm": "SHA256 sorted UTF8 path + NUL + decimal bytes + NUL + SHA256 + LF",
-  "sourceRootHash": "1dc10e740ab89685d8b64ca070f9692460a5cadb5c05aca85f65a24dbba3aa32",
+  "sourceRootHash": "f7d693393676ff9523db2e1ec88eaf18ecfebdf9f105962e95b9cdfc92d3c49b",
   "excludesSelf": "SOURCE_MANIFEST.json",
   "files": [
     {
@@ -23,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4269,
-      "sha256": "57596bfa07d55874d4d609d3d535476c4a77815fc30ae05c21e75dc0d5a8d0f0"
+      "bytes": 4503,
+      "sha256": "9003482aceeb7e396be96019f4523ba7c5bd39e7420920a216e4627b54cd10b4"
     },
     {
       "path": "client/client.mjs",
@@ -33,8 +33,8 @@
     },
     {
       "path": "client/deployment.mjs",
-      "bytes": 145,
-      "sha256": "90251101a2279b275068df3480a3f59103765282d69ca80608d53c6818846ef6"
+      "bytes": 198,
+      "sha256": "4ea98d072dfcc2e18aa0d7a3e69865c44c970f3b76bf6546e20a74caafd73a61"
     },
     {
       "path": "client/endpoint.mjs",
@@ -93,8 +93,13 @@
     },
     {
       "path": "docs/acceptance.md",
-      "bytes": 2161,
-      "sha256": "faf3959cb6d7814ad424300816722abbac2c7a76a61ca2e0a1eb0330ef7807e3"
+      "bytes": 2354,
+      "sha256": "d76a436da7b10c10dbc83b8afcace987d41f592813d2d5d6a2be1c9d67b28fd0"
+    },
+    {
+      "path": "docs/activation-receipt.json",
+      "bytes": 2776,
+      "sha256": "1f9c6029d20ad552cb42aa9fbc5574b4f14145ed0cc729a91b01741a1d839e13"
     },
     {
       "path": "docs/asset-audit.json",
@@ -103,18 +108,18 @@
     },
     {
       "path": "docs/client-module-evidence.json",
-      "bytes": 937,
-      "sha256": "ed9aa4361da0097fdac3e29837f14ef199b5604756685d3aaf2311ca552cfe3e"
+      "bytes": 938,
+      "sha256": "2491cce8385e406dd194203bc1508a313c0e9094824c7ebf9b85d4aa81a82ee3"
     },
     {
       "path": "docs/handling_recovery_metrics.json",
       "bytes": 71078,
-      "sha256": "d2209f8dbe3ee604aa1c089c749f5e8aa782e1c51d43a50dd1b3ffa83535a435"
+      "sha256": "4ebeee7b7d72d5639d2d367819691e2238331c76ed9caffa2322f0ba5496af3c"
     },
     {
       "path": "docs/network_evidence.json",
       "bytes": 1563,
-      "sha256": "ae517f190f018efd6ae82e449dd61c12fac4defe81551193727372756236410c"
+      "sha256": "7efdbb9cd806abef946156040b06349261db7c85251713878e17ed64624ea148"
     },
     {
       "path": "docs/reconstruction-receipt.json",
@@ -194,7 +199,7 @@
     {
       "path": "public-manifest.json",
       "bytes": 10064,
-      "sha256": "5d89d73007f3800b249b9da0a24fff87814e82313b25bc1b46b89a1966278267"
+      "sha256": "36cb4578b374ef98b0cef5b615f60fc80f1c82793d5f757bc6076e19c18a9408"
     },
     {
       "path": "public/assets/ArcadeBoostNozzle.glb",
@@ -433,8 +438,8 @@
     },
     {
       "path": "public/online.js",
-      "bytes": 1316663,
-      "sha256": "eea0b2b52c88f43c59f54d65716a2aba325ea997f0fe3783f487fd5013d207a6"
+      "bytes": 1316719,
+      "sha256": "8f168e7b651c79d761b466ed8cf199bf390a92e8d8ceae73648b4aa262a8a2d8"
     },
     {
       "path": "server/data.mjs",
@@ -570,6 +575,11 @@
       "path": "test/world.test.mjs",
       "bytes": 2726,
       "sha256": "f0aeaa6109ee0c94d34ea246181f67a6325ee8e2320e01e3084a246a0c20b740"
+    },
+    {
+      "path": "tests/activation-origin.test.mjs",
+      "bytes": 2094,
+      "sha256": "21252c97cdf8bd34cdcd7efa7381abab27f7b00703b031ab9a44b701b4e6ed99"
     },
     {
       "path": "tests/baseline-handling-recovery.mjs",

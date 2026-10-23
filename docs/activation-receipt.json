@@ -1,0 +1,69 @@
+{
+  "identity": "v11.1-joint-reconstruction2-exact-origin-activation",
+  "createdUtc": "2026-10-23T07:38:15.444883+00:00",
+  "approvedProductionOrigins": [
+    "https://kerala-roadster-multiplayer-alpha.onrender.com"
+  ],
+  "approvedWebSocketOrigin": "wss://kerala-roadster-multiplayer-alpha.onrender.com",
+  "deploymentStatus": "Activation source prepared and locally verified; publication/manual activation/remote acceptance still required.",
+  "initialDisabledDeployment": {
+    "commit": "2eaa87a4f367272eeaad9306b8949dbe5336fd25",
+    "status": "live",
+    "finishedAt": "2026-10-23T07:32:40Z",
+    "plan": "free",
+    "region": "singapore",
+    "autoDeploy": "off",
+    "verifiedBy": "deployment worker provider status; exact origin and commit also supplied by owner task"
+  },
+  "baseSourceRootHash": "1dc10e740ab89685d8b64ca070f9692460a5cadb5c05aca85f65a24dbba3aa32",
+  "baseReceiptRetained": "docs/reconstruction-receipt.json",
+  "protocolVersion": 2,
+  "physicsVersion": "v11.1-stock-noncontact-rebuild2-dc74ca61a9d4fc50",
+  "trackHash": "1b3bdbf06de3bb91414b00f6e62b524c4141c34febbd5e0b2bc9adf9f844720d",
+  "unchanged": [
+    "all server authority/ingress/static code",
+    "all shared/game engine and renderer code",
+    "client protocol/validation/storage/control/interpolation modules and manifest pins",
+    "all world/collider/water data",
+    "all runtime GLBs and other asset bytes",
+    "stock non-contact no-economy rules and no solo-save access",
+    "third-party notices and owner-pending original-work licence"
+  ],
+  "runtimeDiff": "Only APPROVED_PRODUCTION_ORIGINS changes from [] to one exact verified HTTPS origin; generated browser bundle differs by that same one line.",
+  "changedOriginalPaths": [
+    "README.md",
+    "client/deployment.mjs",
+    "docs/acceptance.md",
+    "docs/client-module-evidence.json",
+    "docs/handling_recovery_metrics.json",
+    "docs/network_evidence.json",
+    "public-manifest.json",
+    "public/online.js"
+  ],
+  "newSourcePaths": [
+    "tests/activation-origin.test.mjs",
+    "docs/activation-receipt.json"
+  ],
+  "publicManifestSha256": "36cb4578b374ef98b0cef5b615f60fc80f1c82793d5f757bc6076e19c18a9408",
+  "tests": {
+    "clientJointAndOriginPassed": 16,
+    "authorityHostingPassed": 21,
+    "failed": 0,
+    "baselineHandlingRecovery": 175,
+    "baselineReverseAt30_60_120Hz": 27,
+    "baselineObstacleApproaches": 66,
+    "contactedReverseEscapes": 54,
+    "waterRaycastSamples": 21229,
+    "waterMismatches": 0,
+    "productionOnlyInstallSmoke": {
+      "root": 200,
+      "health": 200,
+      "protocol": 2
+    },
+    "exactProductionHTTPSWSSPin": true,
+    "arbitraryQueryEndpointRejected": true,
+    "browserGPU": "pending",
+    "humanDriving": "pending",
+    "activationPublicInternet": "pending"
+  }
+}

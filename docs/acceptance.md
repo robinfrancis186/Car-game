@@ -12,4 +12,4 @@ Authority/hosting tests retain input/version/room/host permissions, rejoin-token
 
 **Pending, not claimed:** current-browser DOM/layout/accessibility, real WebGL/GPU, desktop/mobile performance, physical keyboard/touch/human driving, adverse internet conditions/cold-start UX, exact endpoint activation and remote HTTP/WSS/two-human acceptance. Earlier Chromium probe in the prior executor was blocked before page load; that does not establish current-browser acceptance. No sandbox bypass is used.
 
-Initial approved production origins are empty. Owner licence decision remains pending. This standalone alpha does not overwrite or migrate solo V12.
+This activation candidate approves only `https://kerala-roadster-multiplayer-alpha.onrender.com`; all other public origins remain disabled. Initial disabled deployment and activation deployment require separate exact-revision verification. Owner licence decision remains pending. This standalone alpha does not overwrite or migrate solo V12.

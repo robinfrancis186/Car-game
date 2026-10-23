@@ -6,7 +6,7 @@ Actual Three.js client + authoritative two-driver WebSocket races. Not the old C
 
 This is a **new reconstruction**, not a recovered copy of either lost unpublished candidate. Stable engine/renderer/assets originate from exact Sites19 V11.1 commit `0a5f07447719117a0084cffb9a525a1cd1e54ea3`; hardened authority originates from verified public-alpha commit `55067c6dc71f299bf9e35fee80b54dfc2d7ee8e1`. New source hashes and receipts are recorded separately. No frozen history is rewritten.
 
-**Production Create/Join is deliberately disabled** until one verified exact service HTTPS origin is pinned in `client/deployment.mjs`. Loopback works for development. Query parameters and remote manifests cannot choose or authorize arbitrary endpoints.
+**Activation candidate:** production Create/Join is permitted only on `https://kerala-roadster-multiplayer-alpha.onrender.com`, the verified Free Singapore service origin pinned in `client/deployment.mjs`. This source pin alone does not prove the activation revision is deployed or remotely accepted. Loopback remains available for development. Query parameters and remote manifests cannot choose or authorize arbitrary endpoints.
 
 ## Online rules
 
@@ -42,6 +42,6 @@ Static content is a startup size/hash/URL allowlist with bounded streaming, exac
 
 ## Acceptance and rights
 
-See docs/acceptance.md and docs/reconstruction-receipt.json. Stable V11.1 reverse/steering/recovery is preserved; world/collider bytes match client and authority. Actual GLB CPU scene/water tests do not imply GPU rendering. Browser, GPU, physical human driving and public-internet acceptance remain pending.
+See docs/acceptance.md and docs/activation-receipt.json (the original reconstruction receipt is retained separately). Stable V11.1 reverse/steering/recovery is preserved; world/collider bytes match client and authority. Actual GLB CPU scene/water tests do not imply GPU rendering. Browser, GPU, physical human driving and public-internet acceptance remain pending.
 
 LICENSES.md corrects unauthorized assistant CC0 descriptions for original work without granting a licence or rewriting history. Genuine MIT and ODbL notices/provenance are preserved. Public package excludes private references, IDs, notes, credentials and old solo entry. A tested source archive is saved to Library before publication handoff.

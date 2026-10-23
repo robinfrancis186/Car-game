@@ -28793,7 +28793,7 @@ float crown=clamp((position.y-${grass ? 0 : 4}.)/${grass ? 1 : 5}.,0.,1.);transf
   });
 
   // client/deployment.mjs
-  var APPROVED_PRODUCTION_ORIGINS = Object.freeze([]);
+  var APPROVED_PRODUCTION_ORIGINS = Object.freeze(["https://kerala-roadster-multiplayer-alpha.onrender.com"]);
 
   // client/endpoint.mjs
   function validateEndpoint(endpoint2) {
