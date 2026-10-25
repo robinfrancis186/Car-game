@@ -1,3 +1,3 @@
 # Current status
 
-**V17 R3.4 is live** at https://malabar-hot-coast.vercel.app/ . See `README.md`, `deployment/release.json` and `deployment/production-verification.json` for current release identity and acceptance limits. Older status/changelog documents are historical, not statements that the current release is unpublished.
+**V17 R3.5** corrects the duplicate Home/setup flow with one showroom Home and its setup drawer. The verified source is being synchronized to https://malabar-hot-coast.vercel.app/ . See `SOURCE_MANIFEST.json` for the final deployment identity and `deployment/release.json` for acceptance scope. Historical documents describe earlier snapshots.

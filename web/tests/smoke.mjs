@@ -9,7 +9,7 @@ await page.waitForFunction(()=>window.__MALABAR__?.ready||window.__MALABAR__?.er
 await page.waitForTimeout(2500);console.log('INITIAL',JSON.stringify(await page.evaluate(()=>({ready:window.__MALABAR__.ready,error:window.__MALABAR__.error,snapshot:window.__MALABAR__.snapshot()}))));
 await page.screenshot({path:'../renders/browser/menu-desktop.png'});
 if(await page.evaluate(()=>window.__MALABAR__.ready)){
- await page.locator('#start-button').click();await page.waitForTimeout(4000);await page.keyboard.down('KeyW');await page.waitForTimeout(5000);await page.keyboard.up('KeyW');
+ await page.locator('#home-ride').click();await page.waitForTimeout(4000);await page.keyboard.down('KeyW');await page.waitForTimeout(5000);await page.keyboard.up('KeyW');
  console.log('DRIVE',JSON.stringify(await page.evaluate(()=>window.__MALABAR__.snapshot())));await page.screenshot({path:'../renders/browser/first-drive.png'});
 }
 await browser.close();

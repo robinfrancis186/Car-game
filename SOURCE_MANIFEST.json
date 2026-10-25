@@ -1,15 +1,15 @@
 {
-  "version": "V17 R3.4",
-  "runtime_tree_sha256": "65d21cf993666bf931573e72804cafd83998c6757c449788a1995277ed0845d7",
+  "version": "V17 R3.5",
+  "runtime_tree_sha256": "a86e40c673ef18e1876af39cfc48e42a4599559a98a9b7161646ef69c1e5e6e1",
   "production_url": "https://malabar-hot-coast.vercel.app/",
-  "deployment_id": "dpl_6aAJF7N3FiLGiQwxe4dD5pqyqigf",
-  "rollback_deployment_id": "dpl_C796omDW9J2RYrrcfkEhU8FKXzpD",
-  "note": "Exact frozen runtime; source commit is the commit containing this manifest. Production byte identity is independently verified; no redeployment required.",
+  "deployment_id": null,
+  "rollback_deployment_id": "dpl_6aAJF7N3FiLGiQwxe4dD5pqyqigf",
+  "publication_state": "Verified source committed before deployment; final deployment receipt is added after publication.",
   "runtime_files": [
     {
       "path": "web/index.html",
-      "bytes": 40205,
-      "sha256": "700477d243ebac847696c5d7eb3a93f88ed8aed8b04bb7890a25296f9cdc4988"
+      "bytes": 39438,
+      "sha256": "2f89e4dc6548e3bfd16e5495af3184eb8ffba39203d4edb22cbd24d310ce3097"
     },
     {
       "path": "web/public/assets/ArcadeBoostNozzle.glb",
@@ -638,8 +638,8 @@
     },
     {
       "path": "web/src/main.js",
-      "bytes": 71951,
-      "sha256": "8105f44c6322c29a8b8866c271e9c7cc5cac4aef32b684462c77fc50648f0f48"
+      "bytes": 73872,
+      "sha256": "64fe3bfbec5f07ca12a56d8f71e98c7e38c6c012ed9e00c0e7212ffb47e9c09d"
     },
     {
       "path": "web/src/police-air-support.js",
@@ -698,8 +698,8 @@
     },
     {
       "path": "web/src/style.css",
-      "bytes": 108521,
-      "sha256": "107af465404cf61eef08b7adb6117b1a99a6bafaadfab1c694b9a4747e5198e9"
+      "bytes": 111237,
+      "sha256": "d76594411168d36787ea464418fdb1ed58acd4d55a4462a71474b0e40bc90737"
     },
     {
       "path": "web/src/surface-camera.js",

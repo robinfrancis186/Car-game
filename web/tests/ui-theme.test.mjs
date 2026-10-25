@@ -17,7 +17,7 @@ test('one reference-derived primary gradient and one secondary gradient family',
  for(const name of ['primary-border','primary-color','secondary-border','secondary-color','selected-bg','selected-border','selected-shadow','disabled-bg','disabled-color','disabled-border'])token('control-'+name);
  assert.equal(token('control-radius'),'8px');assert.equal(token('control-target'),'44px');
 });
-test('generic Start Story Pause and Results primary use the same role as Home',()=>{
+test('generic Play Story Pause and Results primary use the same role as Home',()=>{
  assert.match(css,/\.primary-button\{background:var\(--control-primary-bg\);color:var\(--control-primary-color\);border-color:var\(--control-primary-border\)/);
  assert.match(css,/\.home-primary\{background:var\(--control-primary-bg\);border-color:var\(--control-primary-border\)/);
  assert(!css.includes('.primary-button{background:var(--orange)'));assert(!/\.result-card \.primary-button\{/.test(css),'Results must not define a separate primary palette');
@@ -41,8 +41,8 @@ test('generic modal Story shell and leaderboard inherit the reference panel pale
  assert.equal(token('panel-bg'),'linear-gradient(145deg,#172a35f2,#07131bf5)');
  for(const selector of ['.modal-panel','.story-shell']){const body=css.match(new RegExp(selector.replaceAll('.','\\.')+'\\{([^}]*)\\}'))?.[1];assert(body?.includes('background:var(--panel-bg)'),selector);assert(body.includes('border:1px solid var(--panel-border)'));}
 });
-test('44px minimum survives portrait landscape and Events utility overrides',()=>{
- assert(roles.includes(':is(.home-view,.garage-view,.events-view) .utilities .utility-button{min-width:var(--control-target);min-height:var(--control-target)}'));
+test('44px minimum survives portrait landscape and Home utility overrides',()=>{
+ assert(roles.includes(':is(.home-view,.garage-view) .utilities .utility-button{min-width:var(--control-target);min-height:var(--control-target)}'));
  assert(roles.includes('.collection-filters button){min-height:var(--control-target)}'));
  assert(normalized.includes('.home-view.home-shortcuts.home-tile{min-height:44px;'));
 });
@@ -50,7 +50,7 @@ test('confirmed driving HUD containment remains unchanged',()=>{
  assert.match(css,/\.vehicle-bars\{[^}]*width:232px;max-width:100%;/);
 });
 
-const dock=css.slice(css.indexOf('/* Dock-aware scroll bounds:'));
+const dock=css.slice(css.indexOf('/* Dock-aware scroll bounds:'),css.indexOf('/* R3.5 one showroom Home flow.'));
 const compact=dock.replace(/\s+/g,'');
 test('both scroll panels use the exact dock metrics rather than independent percentages',()=>{
  assert(compact.includes('.main-navigation{height:var(--dock-height);bottom:var(--dock-bottom)}'));

@@ -18,14 +18,14 @@ assert(patch.includes('.garage-back { width: 44px; height: 44px; min-height: 44p
 assert(!patch.includes('url('),'Target correction does not introduce image/network assets');
 const source=await fs.readFile(new URL('index.html',root),'utf8');
 for(const id of ['audio-button','help-button','home-leaderboard','garage-close','collection-sort'])assert(source.includes('id="'+id+'"'),'Current required control exists: '+id);
-for(const id of ['settings-button','home-menu','garage-open'])assert(!source.includes('id="'+id+'"'),'Removed duplicate control stays absent: '+id);
+for(const id of ['settings-button','home-menu','garage-open','event-content','event-tabs','start-button','event-car-choices'])assert(!source.includes('id="'+id+'"'),'Removed duplicate control stays absent: '+id);
 const review=await fs.readFile(new URL('../tools/ui-review-r3-1/build-review.mjs',root),'utf8');
 assert(review.includes("auditTarget($('collection-sort'),'collection-sort',page)"),'Audit inspects select, not label');
 assert(review.includes("auditTarget(filter,'filter:'+filter.dataset.carFilter,page)"));
 for(const id of ['audio-button','help-button','home-leaderboard','garage-close'])assert(review.includes("'"+id+"'"));
 assert(review.includes("if(visible($('collection-sort')))auditTarget"),'Select audit respects hidden ancestors/computed visibility');
 assert(!review.includes("$('settings-button')")&&!review.includes("$('home-menu')")&&!review.includes("'garage-open'"),'Removed controls have no stale preview binding or audit selector');
-assert(review.includes("page==='garage'?'owned':page"),'Dock Garage and Home Garage both open Owned');
+assert(review.includes("page==='garage'?'owned':page==='events'?'setup':page"),'Dock Garage and Home Garage both open Owned');
 assert(review.includes('if(visible(filter))auditTarget'),'Filter audit respects hidden ancestors/computed visibility');
 const fn=review.match(/function auditTarget\(e,label,page\)\{[^\n]+\}/)?.[0];assert(fn,'Browser audit target function is extractable');
 const context={failures:[],touchTargetChecks:[],inside:r=>r.left>=0&&r.top>=0&&r.right<=844&&r.bottom<=390,getComputedStyle:()=>({pointerEvents:'auto'})};vm.createContext(context);vm.runInContext(fn,context);
@@ -47,3 +47,8 @@ context.failures.length=0;const button=element('BUTTON',80,44);button.contains=(
 assert(review.includes("auditReachablePart(footer,'collection footer '+b.dataset.car,page,b)"));assert(review.includes('auditReachablePart(button,button.id,page)'));
 console.log('PASS inherited 44px actual-target guards, consolidated control inventory/routes, and dock-occlusion negative fixtures.');
 console.log('V17_TARGET_SOURCE_PASS — source and synthetic audit logic only; actual rendered bounds and occlusion require browser review.');
+
+for(const id of ['home-ride','home-race-setup','home-setup-summary','district-start'])assert(source.includes('id="'+id+'"'),'Current Home setup target exists: '+id);
+assert(review.includes("auditTarget(summary,'home-setup-summary',page)"),'Audit measures native summary itself');assert(review.includes("auditTarget(district,'district-start',page)"),'Audit measures actual Explore select');assert(review.includes("auditTarget(play,'home-ride',page)"),'Audit checks sole Play after expanded drawer scrolling');assert(review.includes('home: closed setup exposes'),'Closed native details visibility is audited');
+context.failures.length=0;context.auditTarget(element('SUMMARY',180,36),'home-setup-summary','setup');assert.equal(context.failures.length,1,'Undersized drawer summary fails');context.failures.length=0;context.auditTarget(element('SUMMARY',180,44),'home-setup-summary','setup');assert.equal(context.failures.length,0);context.auditTarget(element('SELECT',120,36),'district-start','setup');assert.equal(context.failures.length,1,'Undersized district select fails');
+console.log('PASS single Home/setup controls and collapsed/expanded drawer audit negative fixtures; actual browser dimensions not run.');

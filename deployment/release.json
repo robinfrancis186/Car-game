@@ -1,12 +1,12 @@
 {
   "game": "MALABAR: Hot Coast",
-  "version": "V17 R3.4",
-  "change": "Unified desktop/mobile UI and button theme; type a name to save a completed score in the device-local leaderboard.",
+  "version": "V17 R3.5",
+  "change": "One golden showroom Home with a compact setup drawer above the only quick-race Play button; redundant full-screen Events/setup and second Start Race removed.",
   "leaderboard_scope": "This device/browser only; not an online global leaderboard.",
-  "runtime_tree_sha256": "65d21cf993666bf931573e72804cafd83998c6757c449788a1995277ed0845d7",
-  "tested_standalone_sha256": "e6a4c07ddb440a00b99840d337395a8678394a117389cb0a44b4b7f7c9405cdc",
-  "runtime_format": "Original byte-identical split runtime from frozen tested R3.4 source",
-  "local_checks": "53 full command stages, 93 JavaScript syntax checks, 106 embedded assets verified, all 138 protected baseline files exact.",
-  "native_menu_acceptance": "Passed isolated exact-artifact desktop 1222x619 and mobile 390x844 review; menu/navigation/theme/dock clearance checks.",
-  "limitations": "Completed-race name saving/persistence passed automated controller/model tests, not an actual completed native race. Actual GPU loss/restore, performance, audio listening and mobile driving acceptance remain unverified."
+  "runtime_tree_sha256": "a86e40c673ef18e1876af39cfc48e42a4599559a98a9b7161646ef69c1e5e6e1",
+  "tested_standalone_sha256": "469b60c814defbe41f314ac8ea30eb4edfd0889b42b51cce094a42e7a523529c",
+  "runtime_format": "Original byte-identical split runtime from frozen tested R3.5 source",
+  "local_checks": "55 full command stages, 119 JavaScript syntax checks, 106 embedded assets verified, all 499 protected files including 45 native Blender scenes exact.",
+  "native_menu_acceptance": "Passed exact-artifact desktop 1222x619, mobile 390x844 and compact 320x568 review: single Home/setup drawer, Map/districts, Garage/Shop/Workshop/Back, compact scrolling and bounded Play/countdown/pause/Home; no console errors.",
+  "limitations": "Actual completed native race, leaderboard name persistence and held Enter across a native transition were not verified. Actual GPU loss/restore, performance, audio listening and full mobile driving acceptance remain unverified."
 }

@@ -41,40 +41,30 @@
       <div id="home-car-view" class="home-car-view" aria-hidden="true"></div>
       <div class="home-car-caption" role="group" aria-label="Choose an owned car"><button id="home-car-prev" type="button" aria-label="Previous owned car">‹</button><div><p id="home-car-name" class="home-car-name">CRIMSON ROADSTER</p><small>CUSTOM BUILD</small></div><button id="home-car-next" type="button" aria-label="Next owned car">›</button></div>
       <nav class="home-actions" aria-label="Drive and explore">
-        <button id="home-ride" class="home-tile home-primary" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="m5 3 15 9-15 9V3Z"/></svg><span class="tile-copy"><strong>PLAY</strong></span><span class="home-arrow" aria-hidden="true">→</span></button>
+        <details id="home-race-setup" class="home-race-setup">
+          <summary id="home-setup-summary"><span id="home-setup-label">HOT COAST · COAST SPRINT</span><span class="setup-change">Change</span></summary>
+          <div class="home-setup-body">
+      <nav class="track-picker" aria-label="Choose Kerala course">
+        <button data-track="coast" class="track-choice active" type="button" aria-pressed="true"><strong>HOT COAST</strong><small>Metro · Flyover · Backwaters</small></button>
+        <button data-track="highlands" class="track-choice" type="button" aria-pressed="false"><strong>HIGHLAND RUN</strong><small>Highway · Tea Hills · Hairpins</small></button>
+      </nav>
+    <nav class="home-mode-picker" aria-label="Choose race mode">
+      <button data-scenario="coast-sprint" class="scenario-tab active" type="button" aria-pressed="true"><span class="event-number">01</span><span id="sprint-tab-label">COAST SPRINT</span></button>
+      <button data-scenario="hot-pursuit" class="scenario-tab" type="button" aria-pressed="false"><span class="event-number">02</span><span>HOT PURSUIT</span></button>
+      <button data-scenario="time-attack" class="scenario-tab" type="button" aria-pressed="false"><span class="event-number">03</span><span>TIME ATTACK</span></button>
+      <button data-scenario="free-drive" class="scenario-tab" type="button" aria-pressed="false"><span class="event-number">04</span><span>EXPLORE</span></button>
+    </nav>
+      <label id="district-start-wrap" class="district-start" hidden><span>EXPLORE START</span><select id="district-start" aria-label="Explore start destination"><option value="0">First district</option></select></label>
+            <section class="home-event-summary" aria-label="Selected event"><strong id="scenario-title">COAST SPRINT</strong><span id="scenario-distance">1.15 KM</span><p id="scenario-description">Three rivals. One coastal road. Patrols watch the bridge.</p><p id="scenario-risk">POLICE RISK</p></section>
+          </div>
+        </details>
+        <button id="home-ride" class="home-tile home-primary" type="button" aria-describedby="home-setup-label"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="m5 3 15 9-15 9V3Z"/></svg><span class="tile-copy"><strong>PLAY</strong></span><span class="home-arrow" aria-hidden="true">→</span></button>
         <button id="home-garage" class="home-tile home-secondary" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="m3 9 9-6 9 6v12h-3V10H6v11H3V9ZM6 14h12M6 18h12"/></svg><span class="tile-copy"><strong>GARAGE</strong><small>CARS / CUSTOMIZE</small></span></button>
         <button id="home-locations" class="home-tile home-secondary" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M15 7c0-6 8-6 8 0 0 3-4 7-4 7s-4-4-4-7ZM19 6h.01M15 12l-2 8-6-3-5 2 3-11 5-2 3 2"/></svg><span class="tile-copy"><strong>MAP</strong><small>EXPLORE MALABAR</small></span></button>
         <div class="home-shortcuts"><button id="home-shop" class="home-tile" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M2 3h3l3 13h11l3-10H6M9 20h.1M18 20h.1"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span class="tile-copy"><strong>SHOP</strong><small>CARS / UPGRADES</small></span></button><button id="home-story" class="home-tile" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M12 5c-4-3-8-2-9-1v15c3-1 6-1 9 2 3-3 6-3 9-2V4c-3-1-6-1-9 1ZM12 5v16M6 8h3m-3 4h3m6-4h3m-3 4h3"/></svg><span class="tile-copy"><strong>STORY</strong><small>YOUR JOURNEY</small></span></button><button id="home-upgrades" class="home-tile" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="m3 19 8-8M8 5l11 14M4 3l5 5-2 2-5-5 2-2ZM15 3a5 5 0 0 0-2 8l-9 9 2 2 9-9a5 5 0 0 0 7-6l-4 3-3-3 3-4h-3Z"/></svg><span class="tile-copy"><strong>WORKSHOP</strong><small>BUILD / TUNE</small></span></button></div>
       </nav>
     </section>
 
-    <div id="event-content" class="menu-content" hidden>
-      <div class="brand-lockup">
-        <h1>MALABAR</h1>
-        <p id="track-subtitle">HOT COAST</p>
-      </div>
-      <nav class="track-picker" aria-label="Choose Kerala course">
-        <button data-track="coast" class="track-choice active" type="button" aria-pressed="true"><strong>HOT COAST</strong><small>Metro · Flyover · Backwaters</small></button>
-        <button data-track="highlands" class="track-choice" type="button" aria-pressed="false"><strong>HIGHLAND RUN</strong><small>Highway · Tea Hills · Hairpins</small></button>
-      </nav>
-      <section class="scenario-details" aria-label="Selected event">
-        <h2 id="scenario-title">COAST SPRINT</h2>
-        <p id="scenario-description" hidden>Three rivals. One coast. No second chances.</p>
-        <div class="scenario-meta">
-          <span class="route-stat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 21 5-18h8l5 18M12 3v4m0 4v4m0 4v2"/></svg><span id="scenario-distance">1.15 KM</span></span>
-          <span class="risk-stat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 3v6c0 4-4 7-8 9-4-2-8-5-8-9V6l8-3Z"/><path d="M12 8v5m0 3v.1"/></svg><span id="scenario-risk">POLICE RISK</span><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i></span>
-        </div>
-      </section>
-      <label id="district-start-wrap" class="district-start" hidden><span>EXPLORE START</span><select id="district-start" aria-label="Explore start destination"><option value="0">First district</option></select></label>
-      <button id="start-button" class="primary-button" type="button"><span id="start-label">START RACE</span><svg viewBox="0 0 28 24" aria-hidden="true"><path d="M2 12h23m-8-8 8 8-8 8"/></svg></button>
-      <details class="event-vehicle-picker"><summary><span id="event-car-label">Crimson Roadster</span><span>Change car</span></summary><div id="event-car-choices" class="vehicle-choice" role="group" aria-label="Choose race car"></div></details>
-    </div>
-    <nav id="event-tabs" class="scenario-tabs" aria-label="Choose race mode">
-      <button data-scenario="coast-sprint" class="scenario-tab active" type="button" aria-pressed="true"><span class="event-number">01</span><span id="sprint-tab-label">COAST SPRINT</span></button>
-      <button data-scenario="hot-pursuit" class="scenario-tab" type="button" aria-pressed="false"><span class="event-number">02</span><span>HOT PURSUIT</span></button>
-      <button data-scenario="time-attack" class="scenario-tab" type="button" aria-pressed="false"><span class="event-number">03</span><span>TIME ATTACK</span></button>
-      <button data-scenario="free-drive" class="scenario-tab" type="button" aria-pressed="false"><span class="event-number">04</span><span>EXPLORE</span></button>
-    </nav>
   </main>
 
 
@@ -94,7 +84,7 @@
     <button id="garage-close" class="garage-back" type="button" aria-label="Back to Home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4-8 8 8 8"/></svg></button>
   </section>
 
-  <nav id="main-navigation" class="main-navigation" aria-label="Main navigation"><button id="nav-home" type="button" aria-current="page"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="m3 11 9-8 9 8M6 10v11h4v-7h4v7h4V10"/></svg><span>HOME</span></button><button id="nav-garage" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="m3 9 9-6 9 6v12h-3V10H6v11H3V9ZM6 14h12M6 18h12"/></svg><span>GARAGE</span></button><button id="nav-events" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4m8-4v4M4 11h16m-11 4h2m2 0h2"/></svg><span>EVENTS</span></button><button id="nav-shop" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M2 3h3l3 13h11l3-10H6M9 20h.1M18 20h.1"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>SHOP</span></button><div class="nav-wordmark" aria-hidden="true">MALABAR<small>HOT COAST</small></div></nav>
+  <nav id="main-navigation" class="main-navigation" aria-label="Main navigation"><button id="nav-home" type="button" aria-current="page"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="m3 11 9-8 9 8M6 10v11h4v-7h4v7h4V10"/></svg><span>HOME</span></button><button id="nav-garage" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="m3 9 9-6 9 6v12h-3V10H6v11H3V9ZM6 14h12M6 18h12"/></svg><span>GARAGE</span></button><button id="nav-events" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4m8-4v4M4 11h16m-11 4h2m2 0h2"/></svg><span>SETUP</span></button><button id="nav-shop" type="button"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M2 3h3l3 13h11l3-10H6M9 20h.1M18 20h.1"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>SHOP</span></button><div class="nav-wordmark" aria-hidden="true">MALABAR<small>HOT COAST</small></div></nav>
 
   <section id="hud" class="race-hud" aria-label="Race information" hidden>
     <div class="race-position"><span class="hud-label">POSITION</span><strong id="position">1 / 4</strong><div id="run-coins" class="run-coins" hidden><span aria-hidden="true">◈</span> <strong id="run-coin-value">0</strong><span class="sr-only"> coins collected this race</span></div><div class="race-timer" aria-label="Race clock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6M12 2v3m6 1 2 2"/><circle cx="12" cy="14" r="8"/><path d="M12 9v5l3 2"/></svg><span id="race-time" class="race-time">00:00.00</span></div></div>

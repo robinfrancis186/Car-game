@@ -40,7 +40,7 @@ function interrupted(h){
  assert.match(h.els.get('loading-title').textContent,/graphics interrupted/i);
  assert.match(h.els.get('loading-label').textContent,/reload/i);
  assert.equal(h.els.get('loading-retry').hidden,false);
- assert.equal(h.els.get('start-button').disabled,true);
+ assert.equal(h.els.get('home-ride').disabled,true);
  assert.equal(h.els.get('menu').inert,true,'Background page remains inert behind the error dialog');
  assert(h.controls.every(b=>!b.classList.contains('pressed')),'Held touch input is cleared');
 }
