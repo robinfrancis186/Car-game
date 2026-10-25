@@ -1,765 +1,1226 @@
 {
   "version": "V17 R3.5",
-  "publication_state": "Expected exact file manifest; awaiting publication and HTTP verification.",
+  "publication_state": "READY production; exact public file verification",
+  "checked_utc": "2026-10-25T01:36:05.494061+00:00",
+  "source_commit": "a164a05e515ee9fcb6b8f58b9151b13ffd108815",
   "url": "https://malabar-hot-coast.vercel.app/",
-  "deployment_id": null,
+  "deployment_id": "dpl_4w3s2tzYtKpaJMrdL6dvbx7iEmkD",
   "rollback_deployment_id": "dpl_6aAJF7N3FiLGiQwxe4dD5pqyqigf",
   "expected_runtime_sha256": "a86e40c673ef18e1876af39cfc48e42a4599559a98a9b7161646ef69c1e5e6e1",
+  "runtime_files": 147,
+  "matched_expected": 151,
+  "http_200": 151,
+  "failed": [],
   "files": [
     {
       "path": "index.html",
+      "status": 200,
       "bytes": 39438,
-      "expected_sha256": "2f89e4dc6548e3bfd16e5495af3184eb8ffba39203d4edb22cbd24d310ce3097"
+      "sha256": "2f89e4dc6548e3bfd16e5495af3184eb8ffba39203d4edb22cbd24d310ce3097",
+      "expected_sha256": "2f89e4dc6548e3bfd16e5495af3184eb8ffba39203d4edb22cbd24d310ce3097",
+      "match": true
     },
     {
       "path": "public/assets/ArcadeBoostNozzle.glb",
+      "status": 200,
       "bytes": 20100,
-      "expected_sha256": "e8abbd20c0f3f58aa19362a46e24a3304d3c489cad0ded8a748eb45a58e7373a"
+      "sha256": "e8abbd20c0f3f58aa19362a46e24a3304d3c489cad0ded8a748eb45a58e7373a",
+      "expected_sha256": "e8abbd20c0f3f58aa19362a46e24a3304d3c489cad0ded8a748eb45a58e7373a",
+      "match": true
     },
     {
       "path": "public/assets/ArcadeCoin.glb",
+      "status": 200,
       "bytes": 78592,
-      "expected_sha256": "f8bc943f206e8d65df4b76ce7e3bdf682b4ea8d4262cca739994e3822bb8219d"
+      "sha256": "f8bc943f206e8d65df4b76ce7e3bdf682b4ea8d4262cca739994e3822bb8219d",
+      "expected_sha256": "f8bc943f206e8d65df4b76ce7e3bdf682b4ea8d4262cca739994e3822bb8219d",
+      "match": true
     },
     {
       "path": "public/assets/BeachSandPatch.glb",
+      "status": 200,
       "bytes": 6008,
-      "expected_sha256": "e245aeb570e66e2b102a87ebada2875088405d15f1b6ad6272d83e01e27786a6"
+      "sha256": "e245aeb570e66e2b102a87ebada2875088405d15f1b6ad6272d83e01e27786a6",
+      "expected_sha256": "e245aeb570e66e2b102a87ebada2875088405d15f1b6ad6272d83e01e27786a6",
+      "match": true
     },
     {
       "path": "public/assets/BirdRockLookout.glb",
+      "status": 200,
       "bytes": 851348,
-      "expected_sha256": "fc56f83750391acd9130c1ff6fb174863c53d617faf176bbe90ec755a9936c29"
+      "sha256": "fc56f83750391acd9130c1ff6fb174863c53d617faf176bbe90ec755a9936c29",
+      "expected_sha256": "fc56f83750391acd9130c1ff6fb174863c53d617faf176bbe90ec755a9936c29",
+      "match": true
     },
     {
       "path": "public/assets/CanalRainTree.glb",
+      "status": 200,
       "bytes": 896688,
-      "expected_sha256": "eeeb6fa9b3daa71a96544b8509e83bd41da156da0c50697ea232d0d048c7840c"
+      "sha256": "eeeb6fa9b3daa71a96544b8509e83bd41da156da0c50697ea232d0d048c7840c",
+      "expected_sha256": "eeeb6fa9b3daa71a96544b8509e83bd41da156da0c50697ea232d0d048c7840c",
+      "match": true
     },
     {
       "path": "public/assets/CanalRainTreeFar.glb",
+      "status": 200,
       "bytes": 343648,
-      "expected_sha256": "03514da6bf2bde6a411a96447087eb5dc77c050fd409792773023b3e68207b83"
+      "sha256": "03514da6bf2bde6a411a96447087eb5dc77c050fd409792773023b3e68207b83",
+      "expected_sha256": "03514da6bf2bde6a411a96447087eb5dc77c050fd409792773023b3e68207b83",
+      "match": true
     },
     {
       "path": "public/assets/CanalShikara.glb",
+      "status": 200,
       "bytes": 388464,
-      "expected_sha256": "2b4dc502eb3556a9a242843b08e1296903bd2d0c20a20584ebfb1eeebbc01f9d"
+      "sha256": "2b4dc502eb3556a9a242843b08e1296903bd2d0c20a20584ebfb1eeebbc01f9d",
+      "expected_sha256": "2b4dc502eb3556a9a242843b08e1296903bd2d0c20a20584ebfb1eeebbc01f9d",
+      "match": true
     },
     {
       "path": "public/assets/CheckpointGate.glb",
+      "status": 200,
       "bytes": 18420,
-      "expected_sha256": "ec6cac7fd5719511c55cb9486e203259706b278adf4415f03e489912c24ea5eb"
+      "sha256": "ec6cac7fd5719511c55cb9486e203259706b278adf4415f03e489912c24ea5eb",
+      "expected_sha256": "ec6cac7fd5719511c55cb9486e203259706b278adf4415f03e489912c24ea5eb",
+      "match": true
     },
     {
       "path": "public/assets/CheckpointGate_manifest.json",
+      "status": 200,
       "bytes": 888,
-      "expected_sha256": "e975931a99c9f84cea48cebfecc28b3fcf47e935c83d075e03035d911db98f48"
+      "sha256": "e975931a99c9f84cea48cebfecc28b3fcf47e935c83d075e03035d911db98f48",
+      "expected_sha256": "e975931a99c9f84cea48cebfecc28b3fcf47e935c83d075e03035d911db98f48",
+      "match": true
     },
     {
       "path": "public/assets/ChineseFishingNet.glb",
+      "status": 200,
       "bytes": 50592,
-      "expected_sha256": "06bd5c254021ea19de75425a1bd9a04bf2fc1188b629df917ed29dd0438966da"
+      "sha256": "06bd5c254021ea19de75425a1bd9a04bf2fc1188b629df917ed29dd0438966da",
+      "expected_sha256": "06bd5c254021ea19de75425a1bd9a04bf2fc1188b629df917ed29dd0438966da",
+      "match": true
     },
     {
       "path": "public/assets/Coast_AirtimeRamp.glb",
+      "status": 200,
       "bytes": 20620,
-      "expected_sha256": "2f7e266c7e06462e0fcdd411425417ae7f508fc79cd989740cfd1b824fd13663"
+      "sha256": "2f7e266c7e06462e0fcdd411425417ae7f508fc79cd989740cfd1b824fd13663",
+      "expected_sha256": "2f7e266c7e06462e0fcdd411425417ae7f508fc79cd989740cfd1b824fd13663",
+      "match": true
     },
     {
       "path": "public/assets/CoconutPalm_A.glb",
+      "status": 200,
       "bytes": 224516,
-      "expected_sha256": "951687c70bf508edd8ce8e18a92dfaf940f1c4f812a58a85342a29787450b756"
+      "sha256": "951687c70bf508edd8ce8e18a92dfaf940f1c4f812a58a85342a29787450b756",
+      "expected_sha256": "951687c70bf508edd8ce8e18a92dfaf940f1c4f812a58a85342a29787450b756",
+      "match": true
     },
     {
       "path": "public/assets/CoconutPalm_A_LOD1.glb",
+      "status": 200,
       "bytes": 80596,
-      "expected_sha256": "0e1a429bcf97354b8e75bd89f6391c4f79b773232abf7a09685535ce1889b2c0"
+      "sha256": "0e1a429bcf97354b8e75bd89f6391c4f79b773232abf7a09685535ce1889b2c0",
+      "expected_sha256": "0e1a429bcf97354b8e75bd89f6391c4f79b773232abf7a09685535ce1889b2c0",
+      "match": true
     },
     {
       "path": "public/assets/CoconutPalm_B.glb",
+      "status": 200,
       "bytes": 224520,
-      "expected_sha256": "194f42c0bd580d560f161fcc212653c811f742846e2916af973ae60638c97929"
+      "sha256": "194f42c0bd580d560f161fcc212653c811f742846e2916af973ae60638c97929",
+      "expected_sha256": "194f42c0bd580d560f161fcc212653c811f742846e2916af973ae60638c97929",
+      "match": true
     },
     {
       "path": "public/assets/CoconutPalm_B_LOD1.glb",
+      "status": 200,
       "bytes": 80448,
-      "expected_sha256": "1877656fb8483aff4f5e24fbd57dbaa7b42282026142121ef3f441074620aa08"
+      "sha256": "1877656fb8483aff4f5e24fbd57dbaa7b42282026142121ef3f441074620aa08",
+      "expected_sha256": "1877656fb8483aff4f5e24fbd57dbaa7b42282026142121ef3f441074620aa08",
+      "match": true
     },
     {
       "path": "public/assets/Course_Furniture.glb",
+      "status": 200,
       "bytes": 2463984,
-      "expected_sha256": "d669e76ebdb97d0c7d54afbd22120ad0691e3f42e349357adb419a08eea0b419"
+      "sha256": "d669e76ebdb97d0c7d54afbd22120ad0691e3f42e349357adb419a08eea0b419",
+      "expected_sha256": "d669e76ebdb97d0c7d54afbd22120ad0691e3f42e349357adb419a08eea0b419",
+      "match": true
     },
     {
       "path": "public/assets/Course_Road.glb",
+      "status": 200,
       "bytes": 587484,
-      "expected_sha256": "b738a94a13a3092f1bb3f38692d7095b5ebf2d3b806d49e4f83d72d14768d0d4"
+      "sha256": "b738a94a13a3092f1bb3f38692d7095b5ebf2d3b806d49e4f83d72d14768d0d4",
+      "expected_sha256": "b738a94a13a3092f1bb3f38692d7095b5ebf2d3b806d49e4f83d72d14768d0d4",
+      "match": true
     },
     {
       "path": "public/assets/Course_Terrain.glb",
+      "status": 200,
       "bytes": 46800,
-      "expected_sha256": "8316812e396a0037f31e8939c2b032f62f3baed2ade821aa9c0fb579a1751ef5"
+      "sha256": "8316812e396a0037f31e8939c2b032f62f3baed2ade821aa9c0fb579a1751ef5",
+      "expected_sha256": "8316812e396a0037f31e8939c2b032f62f3baed2ade821aa9c0fb579a1751ef5",
+      "match": true
     },
     {
       "path": "public/assets/Course_Water.glb",
+      "status": 200,
       "bytes": 101696,
-      "expected_sha256": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678"
+      "sha256": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678",
+      "expected_sha256": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678",
+      "match": true
     },
     {
       "path": "public/assets/FishingBoat.glb",
+      "status": 200,
       "bytes": 82276,
-      "expected_sha256": "5f2324b7d85b119c6be6075aceba39a60a8d01d300fb72b33c3bc2fcf5a06815"
+      "sha256": "5f2324b7d85b119c6be6075aceba39a60a8d01d300fb72b33c3bc2fcf5a06815",
+      "expected_sha256": "5f2324b7d85b119c6be6075aceba39a60a8d01d300fb72b33c3bc2fcf5a06815",
+      "match": true
     },
     {
       "path": "public/assets/HighlandGateway.glb",
+      "status": 200,
       "bytes": 44588,
-      "expected_sha256": "ae28c1b8aa25caa114394f1521b233137b3e93db6a8d669fcd9b810d45d6727b"
+      "sha256": "ae28c1b8aa25caa114394f1521b233137b3e93db6a8d669fcd9b810d45d6727b",
+      "expected_sha256": "ae28c1b8aa25caa114394f1521b233137b3e93db6a8d669fcd9b810d45d6727b",
+      "match": true
     },
     {
       "path": "public/assets/HighlandShadeTree.glb",
+      "status": 200,
       "bytes": 28136,
-      "expected_sha256": "d296a0d3bbee7882d416692cfddb16db8d5358b678ad1273aaf865ba5547d887"
+      "sha256": "d296a0d3bbee7882d416692cfddb16db8d5358b678ad1273aaf865ba5547d887",
+      "expected_sha256": "d296a0d3bbee7882d416692cfddb16db8d5358b678ad1273aaf865ba5547d887",
+      "match": true
     },
     {
       "path": "public/assets/HighlandShadeTreeNear.glb",
+      "status": 200,
       "bytes": 603220,
-      "expected_sha256": "bc3424361b0a3c9049d28d7ef87f0faa892f38de99b110f8b14dc3659f20b640"
+      "sha256": "bc3424361b0a3c9049d28d7ef87f0faa892f38de99b110f8b14dc3659f20b640",
+      "expected_sha256": "bc3424361b0a3c9049d28d7ef87f0faa892f38de99b110f8b14dc3659f20b640",
+      "match": true
     },
     {
       "path": "public/assets/Highland_AirtimeRamp.glb",
+      "status": 200,
       "bytes": 17968,
-      "expected_sha256": "aff8209e164208548b2a20354da49938508a9fbf3c10b669cc9b76a5ffb48c8d"
+      "sha256": "aff8209e164208548b2a20354da49938508a9fbf3c10b669cc9b76a5ffb48c8d",
+      "expected_sha256": "aff8209e164208548b2a20354da49938508a9fbf3c10b669cc9b76a5ffb48c8d",
+      "match": true
     },
     {
       "path": "public/assets/Highlands_Furniture.glb",
+      "status": 200,
       "bytes": 1997244,
-      "expected_sha256": "cf42589d69f7f84dada88aeb114bf14444b4e4fef86e430e9c29d7a6e7ccb33a"
+      "sha256": "cf42589d69f7f84dada88aeb114bf14444b4e4fef86e430e9c29d7a6e7ccb33a",
+      "expected_sha256": "cf42589d69f7f84dada88aeb114bf14444b4e4fef86e430e9c29d7a6e7ccb33a",
+      "match": true
     },
     {
       "path": "public/assets/Highlands_Road.glb",
+      "status": 200,
       "bytes": 1349040,
-      "expected_sha256": "3d16cf6fb9258002e81b35015beca7fe5195a2324a3e7114360acdb6a13bffd1"
+      "sha256": "3d16cf6fb9258002e81b35015beca7fe5195a2324a3e7114360acdb6a13bffd1",
+      "expected_sha256": "3d16cf6fb9258002e81b35015beca7fe5195a2324a3e7114360acdb6a13bffd1",
+      "match": true
     },
     {
       "path": "public/assets/Highlands_Tea.glb",
+      "status": 200,
       "bytes": 5242768,
-      "expected_sha256": "776d39a52fe9a44d439ee58bf117f5d763a5bbb0041ba7bb5c556bf08622fbdc"
+      "sha256": "776d39a52fe9a44d439ee58bf117f5d763a5bbb0041ba7bb5c556bf08622fbdc",
+      "expected_sha256": "776d39a52fe9a44d439ee58bf117f5d763a5bbb0041ba7bb5c556bf08622fbdc",
+      "match": true
     },
     {
       "path": "public/assets/Highlands_Terrain.glb",
+      "status": 200,
       "bytes": 4205060,
-      "expected_sha256": "72485921b4ec72da499fc1d2b0bdda8ebac5678d2ad92c4574d93c0e3a9ad5c8"
+      "sha256": "72485921b4ec72da499fc1d2b0bdda8ebac5678d2ad92c4574d93c0e3a9ad5c8",
+      "expected_sha256": "72485921b4ec72da499fc1d2b0bdda8ebac5678d2ad92c4574d93c0e3a9ad5c8",
+      "match": true
     },
     {
       "path": "public/assets/KeralaApartment_A.glb",
+      "status": 200,
       "bytes": 115304,
-      "expected_sha256": "69513c6040528422e9ac31004c1186d539059a5184dc90ee8a26d374ccc046e6"
+      "sha256": "69513c6040528422e9ac31004c1186d539059a5184dc90ee8a26d374ccc046e6",
+      "expected_sha256": "69513c6040528422e9ac31004c1186d539059a5184dc90ee8a26d374ccc046e6",
+      "match": true
     },
     {
       "path": "public/assets/KeralaHouse.glb",
+      "status": 200,
       "bytes": 382716,
-      "expected_sha256": "ac29c493be0079ae4fa548dcbb14e29e9f7d262b0341826b98fb030f84178eef"
+      "sha256": "ac29c493be0079ae4fa548dcbb14e29e9f7d262b0341826b98fb030f84178eef",
+      "expected_sha256": "ac29c493be0079ae4fa548dcbb14e29e9f7d262b0341826b98fb030f84178eef",
+      "match": true
     },
     {
       "path": "public/assets/KeralaHouseboat.glb",
+      "status": 200,
       "bytes": 260220,
-      "expected_sha256": "2153db39d79b9738f7c5dfb0caa79a9e2d92ccdec6ffa415354de2ce791f54b5"
+      "sha256": "2153db39d79b9738f7c5dfb0caa79a9e2d92ccdec6ffa415354de2ce791f54b5",
+      "expected_sha256": "2153db39d79b9738f7c5dfb0caa79a9e2d92ccdec6ffa415354de2ce791f54b5",
+      "match": true
     },
     {
       "path": "public/assets/KeralaOffice_A.glb",
+      "status": 200,
       "bytes": 65980,
-      "expected_sha256": "d05616e4d0d35fb804d8502f3e02298b03aba52e8dba9b9e4b65297a0f807756"
+      "sha256": "d05616e4d0d35fb804d8502f3e02298b03aba52e8dba9b9e4b65297a0f807756",
+      "expected_sha256": "d05616e4d0d35fb804d8502f3e02298b03aba52e8dba9b9e4b65297a0f807756",
+      "match": true
     },
     {
       "path": "public/assets/KeralaShopRow_A.glb",
+      "status": 200,
       "bytes": 66532,
-      "expected_sha256": "a44bb678067c14b0184426f0b546dbddc8155dced337805c41308e5f8b20b819"
+      "sha256": "a44bb678067c14b0184426f0b546dbddc8155dced337805c41308e5f8b20b819",
+      "expected_sha256": "a44bb678067c14b0184426f0b546dbddc8155dced337805c41308e5f8b20b819",
+      "match": true
     },
     {
       "path": "public/assets/KeralaShopRow_B.glb",
+      "status": 200,
       "bytes": 32180,
-      "expected_sha256": "3c4184ea08cdf010b19260bc21c340c8d4d66f534d6844089f59ac60d37556da"
+      "sha256": "3c4184ea08cdf010b19260bc21c340c8d4d66f534d6844089f59ac60d37556da",
+      "expected_sha256": "3c4184ea08cdf010b19260bc21c340c8d4d66f534d6844089f59ac60d37556da",
+      "match": true
     },
     {
       "path": "public/assets/KeralaTeaStall.glb",
+      "status": 200,
       "bytes": 24584,
-      "expected_sha256": "2897ac5ced8aac9ebbd583ae70bceb4bec3560a99b6b87fc600e777bf1caf8c0"
+      "sha256": "2897ac5ced8aac9ebbd583ae70bceb4bec3560a99b6b87fc600e777bf1caf8c0",
+      "expected_sha256": "2897ac5ced8aac9ebbd583ae70bceb4bec3560a99b6b87fc600e777bf1caf8c0",
+      "match": true
     },
     {
       "path": "public/assets/MetroStation.glb",
+      "status": 200,
       "bytes": 316972,
-      "expected_sha256": "bbfaf1e07ef93750ee8e2264294b900cd262b7b977d2a318931625d81698cf45"
+      "sha256": "bbfaf1e07ef93750ee8e2264294b900cd262b7b977d2a318931625d81698cf45",
+      "expected_sha256": "bbfaf1e07ef93750ee8e2264294b900cd262b7b977d2a318931625d81698cf45",
+      "match": true
     },
     {
       "path": "public/assets/MetroViaductSpan.glb",
+      "status": 200,
       "bytes": 39728,
-      "expected_sha256": "e926f137d5f9f7442bdd75672a5827714b737aa3ba846195bec2787156eee517"
+      "sha256": "e926f137d5f9f7442bdd75672a5827714b737aa3ba846195bec2787156eee517",
+      "expected_sha256": "e926f137d5f9f7442bdd75672a5827714b737aa3ba846195bec2787156eee517",
+      "match": true
     },
     {
       "path": "public/assets/OceanPatch.glb",
+      "status": 200,
       "bytes": 24260,
-      "expected_sha256": "823886f06af807fb3d63155d3c9073d7aa36a9b3e5694f109812aa338bec4f33"
+      "sha256": "823886f06af807fb3d63155d3c9073d7aa36a9b3e5694f109812aa338bec4f33",
+      "expected_sha256": "823886f06af807fb3d63155d3c9073d7aa36a9b3e5694f109812aa338bec4f33",
+      "match": true
     },
     {
       "path": "public/assets/PromenadeSegment.glb",
+      "status": 200,
       "bytes": 74016,
-      "expected_sha256": "69ff431f082bb13908106ee7e23da458bf2017b039aa2e5eea0b8ce249680e55"
+      "sha256": "69ff431f082bb13908106ee7e23da458bf2017b039aa2e5eea0b8ce249680e55",
+      "expected_sha256": "69ff431f082bb13908106ee7e23da458bf2017b039aa2e5eea0b8ce249680e55",
+      "match": true
     },
     {
       "path": "public/assets/RoadReflector.glb",
+      "status": 200,
       "bytes": 13640,
-      "expected_sha256": "af64fdca0e4fe52a03a8efc6444cc114675fb290b60f0fff24891e8c1ea914fa"
+      "sha256": "af64fdca0e4fe52a03a8efc6444cc114675fb290b60f0fff24891e8c1ea914fa",
+      "expected_sha256": "af64fdca0e4fe52a03a8efc6444cc114675fb290b60f0fff24891e8c1ea914fa",
+      "match": true
     },
     {
       "path": "public/assets/RoadSegment.glb",
+      "status": 200,
       "bytes": 20376,
-      "expected_sha256": "c30b0208c4d39ce72f00de222fb8e8cf749ff109733acac8cbd9477c86c3ccc1"
+      "sha256": "c30b0208c4d39ce72f00de222fb8e8cf749ff109733acac8cbd9477c86c3ccc1",
+      "expected_sha256": "c30b0208c4d39ce72f00de222fb8e8cf749ff109733acac8cbd9477c86c3ccc1",
+      "match": true
     },
     {
       "path": "public/assets/RouteEndMarker.glb",
+      "status": 200,
       "bytes": 19136,
-      "expected_sha256": "f4e90d1d2c76bf09164ae55f5843ab9db37dce838506c8b3236d5d957c2c4faa"
+      "sha256": "f4e90d1d2c76bf09164ae55f5843ab9db37dce838506c8b3236d5d957c2c4faa",
+      "expected_sha256": "f4e90d1d2c76bf09164ae55f5843ab9db37dce838506c8b3236d5d957c2c4faa",
+      "match": true
     },
     {
       "path": "public/assets/SeaWallRock.glb",
+      "status": 200,
       "bytes": 13060,
-      "expected_sha256": "4ce4fd41e4db6a30b7192b6e82e2cf395ca4760af5eb7b774d218d7d9c261bf1"
+      "sha256": "4ce4fd41e4db6a30b7192b6e82e2cf395ca4760af5eb7b774d218d7d9c261bf1",
+      "expected_sha256": "4ce4fd41e4db6a30b7192b6e82e2cf395ca4760af5eb7b774d218d7d9c261bf1",
+      "match": true
     },
     {
       "path": "public/assets/ServiceShowroomBay.glb",
+      "status": 200,
       "bytes": 585896,
-      "expected_sha256": "6b32547cd521f44f50956281aa8cb82eb6448f00321e29937bde9352488e9bc9"
+      "sha256": "6b32547cd521f44f50956281aa8cb82eb6448f00321e29937bde9352488e9bc9",
+      "expected_sha256": "6b32547cd521f44f50956281aa8cb82eb6448f00321e29937bde9352488e9bc9",
+      "match": true
     },
     {
       "path": "public/assets/ServiceShowroomLoft.glb",
+      "status": 200,
       "bytes": 2571276,
-      "expected_sha256": "c456852c1ea395381f133777affc2c1685938b2d434c02b191cc2da19b2b0fef"
+      "sha256": "c456852c1ea395381f133777affc2c1685938b2d434c02b191cc2da19b2b0fef",
+      "expected_sha256": "c456852c1ea395381f133777affc2c1685938b2d434c02b191cc2da19b2b0fef",
+      "match": true
     },
     {
       "path": "public/assets/SideStreetSegment.glb",
+      "status": 200,
       "bytes": 8580,
-      "expected_sha256": "1506de80718b9e26a4ec61d89afabda8de32ca896c766761fcea7df47e0c2283"
+      "sha256": "1506de80718b9e26a4ec61d89afabda8de32ca896c766761fcea7df47e0c2283",
+      "expected_sha256": "1506de80718b9e26a4ec61d89afabda8de32ca896c766761fcea7df47e0c2283",
+      "match": true
     },
     {
       "path": "public/assets/Streetlight.glb",
+      "status": 200,
       "bytes": 9496,
-      "expected_sha256": "0893ae036935c10039743600f68bd1c4e512df9a33a857f31daa7dee548172be"
+      "sha256": "0893ae036935c10039743600f68bd1c4e512df9a33a857f31daa7dee548172be",
+      "expected_sha256": "0893ae036935c10039743600f68bd1c4e512df9a33a857f31daa7dee548172be",
+      "match": true
     },
     {
       "path": "public/assets/SurfaceTest_Furniture.glb",
+      "status": 200,
       "bytes": 170164,
-      "expected_sha256": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d"
+      "sha256": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d",
+      "expected_sha256": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d",
+      "match": true
     },
     {
       "path": "public/assets/SurfaceTest_Road.glb",
+      "status": 200,
       "bytes": 2621360,
-      "expected_sha256": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32"
+      "sha256": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32",
+      "expected_sha256": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32",
+      "match": true
     },
     {
       "path": "public/assets/SurfaceTest_Terrain.glb",
+      "status": 200,
       "bytes": 8056,
-      "expected_sha256": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986"
+      "sha256": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986",
+      "expected_sha256": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986",
+      "match": true
     },
     {
       "path": "public/assets/TeaLeafCluster.glb",
+      "status": 200,
       "bytes": 13024,
-      "expected_sha256": "2331f29f75e1ad9e3ef7cabc0e3c2321bed9628a919feef1961abe985d33eed6"
+      "sha256": "2331f29f75e1ad9e3ef7cabc0e3c2321bed9628a919feef1961abe985d33eed6",
+      "expected_sha256": "2331f29f75e1ad9e3ef7cabc0e3c2321bed9628a919feef1961abe985d33eed6",
+      "match": true
     },
     {
       "path": "public/assets/TropicalGrass.glb",
+      "status": 200,
       "bytes": 15628,
-      "expected_sha256": "1b0baf9d212e943943ad7391a4cf6d876e298b881c1d2cbbd1e560687bf91e01"
+      "sha256": "1b0baf9d212e943943ad7391a4cf6d876e298b881c1d2cbbd1e560687bf91e01",
+      "expected_sha256": "1b0baf9d212e943943ad7391a4cf6d876e298b881c1d2cbbd1e560687bf91e01",
+      "match": true
     },
     {
       "path": "public/assets/WaterTransitTerminal.glb",
+      "status": 200,
       "bytes": 143584,
-      "expected_sha256": "c7cf660eb9714723f8324092d5a3185c910e2805cd335b212de482a1081cdebf"
+      "sha256": "c7cf660eb9714723f8324092d5a3185c910e2805cd335b212de482a1081cdebf",
+      "expected_sha256": "c7cf660eb9714723f8324092d5a3185c910e2805cd335b212de482a1081cdebf",
+      "match": true
     },
     {
       "path": "public/assets/boost_nozzle_manifest.json",
+      "status": 200,
       "bytes": 2133,
-      "expected_sha256": "be36d71ef98519363ddb89fb257cecf05f90d5c0ed84e409e8ce01c7b573ac6f"
+      "sha256": "be36d71ef98519363ddb89fb257cecf05f90d5c0ed84e409e8ce01c7b573ac6f",
+      "expected_sha256": "be36d71ef98519363ddb89fb257cecf05f90d5c0ed84e409e8ce01c7b573ac6f",
+      "match": true
     },
     {
       "path": "public/assets/canal_far_manifest.json",
+      "status": 200,
       "bytes": 895,
-      "expected_sha256": "3b2c74b10b31a8d8b1ebceae1bb5f87855ca6818b05ea53d7a7542f7b437a39e"
+      "sha256": "3b2c74b10b31a8d8b1ebceae1bb5f87855ca6818b05ea53d7a7542f7b437a39e",
+      "expected_sha256": "3b2c74b10b31a8d8b1ebceae1bb5f87855ca6818b05ea53d7a7542f7b437a39e",
+      "match": true
     },
     {
       "path": "public/assets/car.glb",
+      "status": 200,
       "bytes": 904716,
-      "expected_sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9"
+      "sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9",
+      "expected_sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9",
+      "match": true
     },
     {
       "path": "public/assets/car_bronze.glb",
+      "status": 200,
       "bytes": 2446632,
-      "expected_sha256": "7d18612a3a01c4cbbbbe2cbc6a61a671efeec152c71a0427591c967f8a3dba0c"
+      "sha256": "7d18612a3a01c4cbbbbe2cbc6a61a671efeec152c71a0427591c967f8a3dba0c",
+      "expected_sha256": "7d18612a3a01c4cbbbbe2cbc6a61a671efeec152c71a0427591c967f8a3dba0c",
+      "match": true
     },
     {
       "path": "public/assets/car_manifest.json",
+      "status": 200,
       "bytes": 21079,
-      "expected_sha256": "a1cf2aae4798254f5e3c1c6c163a5634a5806c7772d3f69cc4ce1db85c26988c"
+      "sha256": "a1cf2aae4798254f5e3c1c6c163a5634a5806c7772d3f69cc4ce1db85c26988c",
+      "expected_sha256": "a1cf2aae4798254f5e3c1c6c163a5634a5806c7772d3f69cc4ce1db85c26988c",
+      "match": true
     },
     {
       "path": "public/assets/car_midnight.glb",
+      "status": 200,
       "bytes": 3151648,
-      "expected_sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00"
+      "sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+      "expected_sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+      "match": true
     },
     {
       "path": "public/assets/car_midnight_manifest.json",
+      "status": 200,
       "bytes": 5294,
-      "expected_sha256": "749a49aa882da135658d6819b59b89e9daf2f649af775ae5404845bf0a2bb734"
+      "sha256": "749a49aa882da135658d6819b59b89e9daf2f649af775ae5404845bf0a2bb734",
+      "expected_sha256": "749a49aa882da135658d6819b59b89e9daf2f649af775ae5404845bf0a2bb734",
+      "match": true
     },
     {
       "path": "public/assets/car_silver.glb",
+      "status": 200,
       "bytes": 1398528,
-      "expected_sha256": "5a9cfbd45b85378bbacabd6a191556cb2b6ce950e6fdb5b1d9ac4cbe0d0b192f"
+      "sha256": "5a9cfbd45b85378bbacabd6a191556cb2b6ce950e6fdb5b1d9ac4cbe0d0b192f",
+      "expected_sha256": "5a9cfbd45b85378bbacabd6a191556cb2b6ce950e6fdb5b1d9ac4cbe0d0b192f",
+      "match": true
     },
     {
       "path": "public/assets/car_silver_manifest.json",
+      "status": 200,
       "bytes": 6035,
-      "expected_sha256": "6a091dc60b722ca7fcc41e373695250a9cb4875d2a0fb20dc2542a657269b75d"
+      "sha256": "6a091dc60b722ca7fcc41e373695250a9cb4875d2a0fb20dc2542a657269b75d",
+      "expected_sha256": "6a091dc60b722ca7fcc41e373695250a9cb4875d2a0fb20dc2542a657269b75d",
+      "match": true
     },
     {
       "path": "public/assets/car_thumb_bronze.png",
+      "status": 200,
       "bytes": 190341,
-      "expected_sha256": "51a4ab6f0cee153ab4f2c11237a4a07c3aceac8475fd2804e862c78aa6035b4f"
+      "sha256": "51a4ab6f0cee153ab4f2c11237a4a07c3aceac8475fd2804e862c78aa6035b4f",
+      "expected_sha256": "51a4ab6f0cee153ab4f2c11237a4a07c3aceac8475fd2804e862c78aa6035b4f",
+      "match": true
     },
     {
       "path": "public/assets/car_thumb_midnight.png",
+      "status": 200,
       "bytes": 192976,
-      "expected_sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae"
+      "sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae",
+      "expected_sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae",
+      "match": true
     },
     {
       "path": "public/assets/car_thumb_red.png",
+      "status": 200,
       "bytes": 158866,
-      "expected_sha256": "2568e2b053637b1b76155cf4956f36815366db8b7d7f4e0f42a0c764d5d5356c"
+      "sha256": "2568e2b053637b1b76155cf4956f36815366db8b7d7f4e0f42a0c764d5d5356c",
+      "expected_sha256": "2568e2b053637b1b76155cf4956f36815366db8b7d7f4e0f42a0c764d5d5356c",
+      "match": true
     },
     {
       "path": "public/assets/car_thumb_silver.png",
+      "status": 200,
       "bytes": 176648,
-      "expected_sha256": "83fd0745355fbbb4d2fe13bae308464ddb3fb6255dfa10fb7fa8bf86391e16c2"
+      "sha256": "83fd0745355fbbb4d2fe13bae308464ddb3fb6255dfa10fb7fa8bf86391e16c2",
+      "expected_sha256": "83fd0745355fbbb4d2fe13bae308464ddb3fb6255dfa10fb7fa8bf86391e16c2",
+      "match": true
     },
     {
       "path": "public/assets/car_thumb_touring.png",
+      "status": 200,
       "bytes": 197014,
-      "expected_sha256": "d2b128c488340110ab8c58624352a49a89afdf4fed8af7a2f671e61a82569617"
+      "sha256": "d2b128c488340110ab8c58624352a49a89afdf4fed8af7a2f671e61a82569617",
+      "expected_sha256": "d2b128c488340110ab8c58624352a49a89afdf4fed8af7a2f671e61a82569617",
+      "match": true
     },
     {
       "path": "public/assets/car_thumb_verdant.png",
+      "status": 200,
       "bytes": 179941,
-      "expected_sha256": "cf69c2e16656c42e04dd8debc492db896ca58155f61a2f1d5e9efc28cb059a3e"
+      "sha256": "cf69c2e16656c42e04dd8debc492db896ca58155f61a2f1d5e9efc28cb059a3e",
+      "expected_sha256": "cf69c2e16656c42e04dd8debc492db896ca58155f61a2f1d5e9efc28cb059a3e",
+      "match": true
     },
     {
       "path": "public/assets/car_thumb_vermilion.png",
+      "status": 200,
       "bytes": 185767,
-      "expected_sha256": "196827a272434fc89b16166ab59dd75d5a846f704edaf520780d3f66160a4571"
+      "sha256": "196827a272434fc89b16166ab59dd75d5a846f704edaf520780d3f66160a4571",
+      "expected_sha256": "196827a272434fc89b16166ab59dd75d5a846f704edaf520780d3f66160a4571",
+      "match": true
     },
     {
       "path": "public/assets/car_touring.glb",
+      "status": 200,
       "bytes": 2402740,
-      "expected_sha256": "dc6d4bc67ad61ef7c9f74ce4f5e92bf64cf491373c19b75b998a8ccc889bc8d7"
+      "sha256": "dc6d4bc67ad61ef7c9f74ce4f5e92bf64cf491373c19b75b998a8ccc889bc8d7",
+      "expected_sha256": "dc6d4bc67ad61ef7c9f74ce4f5e92bf64cf491373c19b75b998a8ccc889bc8d7",
+      "match": true
     },
     {
       "path": "public/assets/car_verdant.glb",
+      "status": 200,
       "bytes": 2978272,
-      "expected_sha256": "3673317b5c67c99dab5c8797de58ab3431af2edb13b393e70110c49903175b29"
+      "sha256": "3673317b5c67c99dab5c8797de58ab3431af2edb13b393e70110c49903175b29",
+      "expected_sha256": "3673317b5c67c99dab5c8797de58ab3431af2edb13b393e70110c49903175b29",
+      "match": true
     },
     {
       "path": "public/assets/car_vermilion.glb",
+      "status": 200,
       "bytes": 2784412,
-      "expected_sha256": "dd0b4111fd14951c995365dd89ed0adf5ee5857dabcfd84ccc864d27d34f9efe"
+      "sha256": "dd0b4111fd14951c995365dd89ed0adf5ee5857dabcfd84ccc864d27d34f9efe",
+      "expected_sha256": "dd0b4111fd14951c995365dd89ed0adf5ee5857dabcfd84ccc864d27d34f9efe",
+      "match": true
     },
     {
       "path": "public/assets/coast_metro_train.glb",
+      "status": 200,
       "bytes": 782076,
-      "expected_sha256": "328cef4fe7116c07ab59b80acc44357702b0273bde1a44a666858d43af7ee8d8"
+      "sha256": "328cef4fe7116c07ab59b80acc44357702b0273bde1a44a666858d43af7ee8d8",
+      "expected_sha256": "328cef4fe7116c07ab59b80acc44357702b0273bde1a44a666858d43af7ee8d8",
+      "match": true
     },
     {
       "path": "public/assets/coastal_map_data.json",
+      "status": 200,
       "bytes": 254232,
-      "expected_sha256": "6c1e134884013b8663ca1564cfb7d523621893c104dccc205248353d8086cf1c"
+      "sha256": "6c1e134884013b8663ca1564cfb7d523621893c104dccc205248353d8086cf1c",
+      "expected_sha256": "6c1e134884013b8663ca1564cfb7d523621893c104dccc205248353d8086cf1c",
+      "match": true
     },
     {
       "path": "public/assets/course_runtime.json",
+      "status": 200,
       "bytes": 670451,
-      "expected_sha256": "3c327a4ca3445d2dbf583168dc06162e2c18c80f6093394d00e98d9bac07aed6"
+      "sha256": "3c327a4ca3445d2dbf583168dc06162e2c18c80f6093394d00e98d9bac07aed6",
+      "expected_sha256": "3c327a4ca3445d2dbf583168dc06162e2c18c80f6093394d00e98d9bac07aed6",
+      "match": true
     },
     {
       "path": "public/assets/course_runtime_highlands.json",
+      "status": 200,
       "bytes": 1762484,
-      "expected_sha256": "1e395296596d5053716cff73ebffbff64b1466cc32ec50351685667aad50b225"
+      "sha256": "1e395296596d5053716cff73ebffbff64b1466cc32ec50351685667aad50b225",
+      "expected_sha256": "1e395296596d5053716cff73ebffbff64b1466cc32ec50351685667aad50b225",
+      "match": true
     },
     {
       "path": "public/assets/course_runtime_surface_test.json",
+      "status": 200,
       "bytes": 44657,
-      "expected_sha256": "697cf6b2065d7490a269e511bd75beb0ccad296e9fc4467f459f2659cc9bf671"
+      "sha256": "697cf6b2065d7490a269e511bd75beb0ccad296e9fc4467f459f2659cc9bf671",
+      "expected_sha256": "697cf6b2065d7490a269e511bd75beb0ccad296e9fc4467f459f2659cc9bf671",
+      "match": true
     },
     {
       "path": "public/assets/environment_web_manifest.json",
+      "status": 200,
       "bytes": 11254,
-      "expected_sha256": "0fcb86cc5622f352e34252f478ebcea0514eeb381d0d7054c46c5aecad21e730"
+      "sha256": "0fcb86cc5622f352e34252f478ebcea0514eeb381d0d7054c46c5aecad21e730",
+      "expected_sha256": "0fcb86cc5622f352e34252f478ebcea0514eeb381d0d7054c46c5aecad21e730",
+      "match": true
     },
     {
       "path": "public/assets/foliage_detail_manifest.json",
+      "status": 200,
       "bytes": 1960,
-      "expected_sha256": "d797a6c4c731e169e40e8af28e678825f9fde4b3b7fd02643857390d55a2bc6b"
+      "sha256": "d797a6c4c731e169e40e8af28e678825f9fde4b3b7fd02643857390d55a2bc6b",
+      "expected_sha256": "d797a6c4c731e169e40e8af28e678825f9fde4b3b7fd02643857390d55a2bc6b",
+      "match": true
     },
     {
       "path": "public/assets/fonts/OFL.txt",
+      "status": 200,
       "bytes": 4377,
-      "expected_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+      "expected_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+      "match": true
     },
     {
       "path": "public/assets/fonts/display.ttf",
+      "status": 200,
       "bytes": 112592,
-      "expected_sha256": "e1ed5d7e50c6a4498454d40509ce2362384a2c7870df3418fdbd010f81dffad3"
+      "sha256": "e1ed5d7e50c6a4498454d40509ce2362384a2c7870df3418fdbd010f81dffad3",
+      "expected_sha256": "e1ed5d7e50c6a4498454d40509ce2362384a2c7870df3418fdbd010f81dffad3",
+      "match": true
     },
     {
       "path": "public/assets/furniture_colliders.json",
+      "status": 200,
       "bytes": 31824,
-      "expected_sha256": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611"
+      "sha256": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611",
+      "expected_sha256": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611",
+      "match": true
     },
     {
       "path": "public/assets/gameplay_props_manifest.json",
+      "status": 200,
       "bytes": 2818,
-      "expected_sha256": "02091b460c8a9da54577102f1769c75869bbfe04ee09de03c14cf832fd65d63b"
+      "sha256": "02091b460c8a9da54577102f1769c75869bbfe04ee09de03c14cf832fd65d63b",
+      "expected_sha256": "02091b460c8a9da54577102f1769c75869bbfe04ee09de03c14cf832fd65d63b",
+      "match": true
     },
     {
       "path": "public/assets/helicopter_civilian.glb",
+      "status": 200,
       "bytes": 1183288,
-      "expected_sha256": "4531ce2759904352ed0ee4f976c5ddaaeb5a49073789ca588b0838c4d95a022b"
+      "sha256": "4531ce2759904352ed0ee4f976c5ddaaeb5a49073789ca588b0838c4d95a022b",
+      "expected_sha256": "4531ce2759904352ed0ee4f976c5ddaaeb5a49073789ca588b0838c4d95a022b",
+      "match": true
     },
     {
       "path": "public/assets/helicopter_civilian_manifest.json",
+      "status": 200,
       "bytes": 4905,
-      "expected_sha256": "e3f5fbb778b85fadb653f563e9072102dfa9978a2d26713b9d353793d88aad26"
+      "sha256": "e3f5fbb778b85fadb653f563e9072102dfa9978a2d26713b9d353793d88aad26",
+      "expected_sha256": "e3f5fbb778b85fadb653f563e9072102dfa9978a2d26713b9d353793d88aad26",
+      "match": true
     },
     {
       "path": "public/assets/helicopter_kit_manifest.json",
+      "status": 200,
       "bytes": 7196,
-      "expected_sha256": "8348804b4ce6a25a3230e4a50b93517c5561a3d12f0c923c83a88aaad42aa093"
+      "sha256": "8348804b4ce6a25a3230e4a50b93517c5561a3d12f0c923c83a88aaad42aa093",
+      "expected_sha256": "8348804b4ce6a25a3230e4a50b93517c5561a3d12f0c923c83a88aaad42aa093",
+      "match": true
     },
     {
       "path": "public/assets/helicopter_police.glb",
+      "status": 200,
       "bytes": 1180800,
-      "expected_sha256": "7f8cdcb032c8f1f9fb08fc19a5b785b2957596aae7532bc7cc84d7e9f96b999b"
+      "sha256": "7f8cdcb032c8f1f9fb08fc19a5b785b2957596aae7532bc7cc84d7e9f96b999b",
+      "expected_sha256": "7f8cdcb032c8f1f9fb08fc19a5b785b2957596aae7532bc7cc84d7e9f96b999b",
+      "match": true
     },
     {
       "path": "public/assets/helicopter_police_manifest.json",
+      "status": 200,
       "bytes": 4923,
-      "expected_sha256": "c1d1c1c64a899b9f6a755609d3f5e3403d6ffe513fdbde156a1e08bc65c1a4ce"
+      "sha256": "c1d1c1c64a899b9f6a755609d3f5e3403d6ffe513fdbde156a1e08bc65c1a4ce",
+      "expected_sha256": "c1d1c1c64a899b9f6a755609d3f5e3403d6ffe513fdbde156a1e08bc65c1a4ce",
+      "match": true
     },
     {
       "path": "public/assets/helicopter_rotor_blur.glb",
+      "status": 200,
       "bytes": 10180,
-      "expected_sha256": "6bd44d31943050364b82f882bac602c29cc613a46923d7b2a9300c75be38e127"
+      "sha256": "6bd44d31943050364b82f882bac602c29cc613a46923d7b2a9300c75be38e127",
+      "expected_sha256": "6bd44d31943050364b82f882bac602c29cc613a46923d7b2a9300c75be38e127",
+      "match": true
     },
     {
       "path": "public/assets/helicopter_rotor_blur_manifest.json",
+      "status": 200,
       "bytes": 1298,
-      "expected_sha256": "1b4f5c4be27c78ea393d5e3f1825a3f2b9b40c7dd8d2358d3cba8270c09d4b4b"
+      "sha256": "1b4f5c4be27c78ea393d5e3f1825a3f2b9b40c7dd8d2358d3cba8270c09d4b4b",
+      "expected_sha256": "1b4f5c4be27c78ea393d5e3f1825a3f2b9b40c7dd8d2358d3cba8270c09d4b4b",
+      "match": true
     },
     {
       "path": "public/assets/highland_prop_manifest.json",
+      "status": 200,
       "bytes": 2485,
-      "expected_sha256": "19a3f9db9c6ec5560c4abb06a15fd8e5f7a551f54081615f4ef4619644ee7e55"
+      "sha256": "19a3f9db9c6ec5560c4abb06a15fd8e5f7a551f54081615f4ef4619644ee7e55",
+      "expected_sha256": "19a3f9db9c6ec5560c4abb06a15fd8e5f7a551f54081615f4ef4619644ee7e55",
+      "match": true
     },
     {
       "path": "public/assets/highlands_furniture_colliders.json",
+      "status": 200,
       "bytes": 240829,
-      "expected_sha256": "037b9ebc166d6f56d2cc5a665f7943f42d69934dfbf37ce3ea8dd4d645722d90"
+      "sha256": "037b9ebc166d6f56d2cc5a665f7943f42d69934dfbf37ce3ea8dd4d645722d90",
+      "expected_sha256": "037b9ebc166d6f56d2cc5a665f7943f42d69934dfbf37ce3ea8dd4d645722d90",
+      "match": true
     },
     {
       "path": "public/assets/highlands_infrastructure_colliders.json",
+      "status": 200,
       "bytes": 150902,
-      "expected_sha256": "4a9f3d72101cac639fdba0583eabe4cfa05e4b9501553b2ef90b7eef2b3c0975"
+      "sha256": "4a9f3d72101cac639fdba0583eabe4cfa05e4b9501553b2ef90b7eef2b3c0975",
+      "expected_sha256": "4a9f3d72101cac639fdba0583eabe4cfa05e4b9501553b2ef90b7eef2b3c0975",
+      "match": true
     },
     {
       "path": "public/assets/highlands_manifest.json",
+      "status": 200,
       "bytes": 1489,
-      "expected_sha256": "e7d50b09e73a2fe88fec881d6354e9778d1293df5c9940ec642094b9fa3e626b"
+      "sha256": "e7d50b09e73a2fe88fec881d6354e9778d1293df5c9940ec642094b9fa3e626b",
+      "expected_sha256": "e7d50b09e73a2fe88fec881d6354e9778d1293df5c9940ec642094b9fa3e626b",
+      "match": true
     },
     {
       "path": "public/assets/highlands_terrain_grid.json",
+      "status": 200,
       "bytes": 787942,
-      "expected_sha256": "4d23bd2b1a7fcf26883298c3c5791fec71d44f52d90b38b2270c753ce891e52b"
+      "sha256": "4d23bd2b1a7fcf26883298c3c5791fec71d44f52d90b38b2270c753ce891e52b",
+      "expected_sha256": "4d23bd2b1a7fcf26883298c3c5791fec71d44f52d90b38b2270c753ce891e52b",
+      "match": true
     },
     {
       "path": "public/assets/houseboat_manifest.json",
+      "status": 200,
       "bytes": 1521,
-      "expected_sha256": "5ad733c820dccf52674b3681af392ae9970b6e0d6150a30953166c58daa1e8d7"
+      "sha256": "5ad733c820dccf52674b3681af392ae9970b6e0d6150a30953166c58daa1e8d7",
+      "expected_sha256": "5ad733c820dccf52674b3681af392ae9970b6e0d6150a30953166c58daa1e8d7",
+      "match": true
     },
     {
       "path": "public/assets/infrastructure_colliders.json",
+      "status": 200,
       "bytes": 163022,
-      "expected_sha256": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48"
+      "sha256": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48",
+      "expected_sha256": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48",
+      "match": true
     },
     {
       "path": "public/assets/police_lightbar.glb",
+      "status": 200,
       "bytes": 18356,
-      "expected_sha256": "9c1ca73f4b5f110ac6a72a8b03d41c3504d922b96bc6c9cee5ba5b598865a10c"
+      "sha256": "9c1ca73f4b5f110ac6a72a8b03d41c3504d922b96bc6c9cee5ba5b598865a10c",
+      "expected_sha256": "9c1ca73f4b5f110ac6a72a8b03d41c3504d922b96bc6c9cee5ba5b598865a10c",
+      "match": true
     },
     {
       "path": "public/assets/showroom_loft_manifest.json",
+      "status": 200,
       "bytes": 2343,
-      "expected_sha256": "56a802a36ccf5c876013a16fb28f270b7c99ab780e6e51cbcec23ef16b37f42c"
+      "sha256": "56a802a36ccf5c876013a16fb28f270b7c99ab780e6e51cbcec23ef16b37f42c",
+      "expected_sha256": "56a802a36ccf5c876013a16fb28f270b7c99ab780e6e51cbcec23ef16b37f42c",
+      "match": true
     },
     {
       "path": "public/assets/showroom_manifest.json",
+      "status": 200,
       "bytes": 1345,
-      "expected_sha256": "b053f48202df16a8a692a5b1aff33084e5a8f2808ea4d017187f4d5544fc8934"
+      "sha256": "b053f48202df16a8a692a5b1aff33084e5a8f2808ea4d017187f4d5544fc8934",
+      "expected_sha256": "b053f48202df16a8a692a5b1aff33084e5a8f2808ea4d017187f4d5544fc8934",
+      "match": true
     },
     {
       "path": "public/assets/surface_test_colliders.json",
+      "status": 200,
       "bytes": 17973,
-      "expected_sha256": "153ef23c924feb3ea00427e3eb8c997b7c5e141ba5cf84b3562260f8d7009a55"
+      "sha256": "153ef23c924feb3ea00427e3eb8c997b7c5e141ba5cf84b3562260f8d7009a55",
+      "expected_sha256": "153ef23c924feb3ea00427e3eb8c997b7c5e141ba5cf84b3562260f8d7009a55",
+      "match": true
     },
     {
       "path": "public/assets/surface_test_furniture_colliders.json",
+      "status": 200,
       "bytes": 126,
-      "expected_sha256": "1f7a7ef979a25eb33e4d3d12276a5264484307c363ee5594dc747852c237a577"
+      "sha256": "1f7a7ef979a25eb33e4d3d12276a5264484307c363ee5594dc747852c237a577",
+      "expected_sha256": "1f7a7ef979a25eb33e4d3d12276a5264484307c363ee5594dc747852c237a577",
+      "match": true
     },
     {
       "path": "public/assets/surface_test_profile.json",
+      "status": 200,
       "bytes": 719,
-      "expected_sha256": "4ff76000113099638215844dcae2f12cc634821895a05f9cdeffbda0b0f8e658"
+      "sha256": "4ff76000113099638215844dcae2f12cc634821895a05f9cdeffbda0b0f8e658",
+      "expected_sha256": "4ff76000113099638215844dcae2f12cc634821895a05f9cdeffbda0b0f8e658",
+      "match": true
     },
     {
       "path": "public/assets/tea_detail_rows.json",
+      "status": 200,
       "bytes": 320544,
-      "expected_sha256": "4b840eb67cd9ccdf8caac780bf84c66982a23251e96ca834cb658089cbbd2c1a"
+      "sha256": "4b840eb67cd9ccdf8caac780bf84c66982a23251e96ca834cb658089cbbd2c1a",
+      "expected_sha256": "4b840eb67cd9ccdf8caac780bf84c66982a23251e96ca834cb658089cbbd2c1a",
+      "match": true
     },
     {
       "path": "public/assets/transit_infrastructure_manifest.json",
+      "status": 200,
       "bytes": 7984,
-      "expected_sha256": "7b37fb1794fa4891d8a2f1c01d219b9964893807036b4bdfe241b60395911cc8"
+      "sha256": "7b37fb1794fa4891d8a2f1c01d219b9964893807036b4bdfe241b60395911cc8",
+      "expected_sha256": "7b37fb1794fa4891d8a2f1c01d219b9964893807036b4bdfe241b60395911cc8",
+      "match": true
     },
     {
       "path": "public/assets/transit_vehicle_manifest.json",
+      "status": 200,
       "bytes": 2521,
-      "expected_sha256": "d436ee11a86021300df43b2dcca29002c091e21dd06a8ec10ad486b413038524"
+      "sha256": "d436ee11a86021300df43b2dcca29002c091e21dd06a8ec10ad486b413038524",
+      "expected_sha256": "d436ee11a86021300df43b2dcca29002c091e21dd06a8ec10ad486b413038524",
+      "match": true
     },
     {
       "path": "public/assets/urban_assets_manifest.json",
+      "status": 200,
       "bytes": 9123,
-      "expected_sha256": "0dc9557f19f9d8e8ca4baa0d77632c918c2df38523b9b0e8c9c6de3c4d955c17"
+      "sha256": "0dc9557f19f9d8e8ca4baa0d77632c918c2df38523b9b0e8c9c6de3c4d955c17",
+      "expected_sha256": "0dc9557f19f9d8e8ca4baa0d77632c918c2df38523b9b0e8c9c6de3c4d955c17",
+      "match": true
     },
     {
       "path": "public/assets/water_transit_ferry.glb",
+      "status": 200,
       "bytes": 567392,
-      "expected_sha256": "b160cffaacf1a753d144bc71fb6bbfbcb749d585855fdcce9a6c6a185f0904c2"
+      "sha256": "b160cffaacf1a753d144bc71fb6bbfbcb749d585855fdcce9a6c6a185f0904c2",
+      "expected_sha256": "b160cffaacf1a753d144bc71fb6bbfbcb749d585855fdcce9a6c6a185f0904c2",
+      "match": true
     },
     {
       "path": "public/vendor/THREE_LICENSE.txt",
+      "status": 200,
       "bytes": 1081,
-      "expected_sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "expected_sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "match": true
     },
     {
       "path": "public/vendor/addons/environments/RoomEnvironment.js",
+      "status": 200,
       "bytes": 3606,
-      "expected_sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014"
+      "sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014",
+      "expected_sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014",
+      "match": true
     },
     {
       "path": "public/vendor/addons/loaders/GLTFLoader.js",
+      "status": 200,
       "bytes": 110273,
-      "expected_sha256": "45139faddd5aaf48ed2d62203d976e5cbd703db1a592de40527f9f6cf58abd44"
+      "sha256": "45139faddd5aaf48ed2d62203d976e5cbd703db1a592de40527f9f6cf58abd44",
+      "expected_sha256": "45139faddd5aaf48ed2d62203d976e5cbd703db1a592de40527f9f6cf58abd44",
+      "match": true
     },
     {
       "path": "public/vendor/addons/utils/BufferGeometryUtils.js",
+      "status": 200,
       "bytes": 31768,
-      "expected_sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6",
+      "expected_sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6",
+      "match": true
     },
     {
       "path": "public/vendor/three.module.js",
+      "status": 200,
       "bytes": 691648,
-      "expected_sha256": "08fd7545d13d2c7fb65ab691530a802dafefd638596501854f267d0fb13c39e7"
+      "sha256": "08fd7545d13d2c7fb65ab691530a802dafefd638596501854f267d0fb13c39e7",
+      "expected_sha256": "08fd7545d13d2c7fb65ab691530a802dafefd638596501854f267d0fb13c39e7",
+      "match": true
     },
     {
       "path": "src/air-traffic.js",
+      "status": 200,
       "bytes": 7040,
-      "expected_sha256": "3751b1a941a9ed7592fd305838095d7eaaf9fb8cf2dd15aea12b329dda7737f7"
+      "sha256": "3751b1a941a9ed7592fd305838095d7eaaf9fb8cf2dd15aea12b329dda7737f7",
+      "expected_sha256": "3751b1a941a9ed7592fd305838095d7eaaf9fb8cf2dd15aea12b329dda7737f7",
+      "match": true
     },
     {
       "path": "src/airtime-rewards.js",
+      "status": 200,
       "bytes": 2677,
-      "expected_sha256": "73f619b5d9e048793a1f5087572cab2aeb514b669a73561cf8ae8571dfaf9b80"
+      "sha256": "73f619b5d9e048793a1f5087572cab2aeb514b669a73561cf8ae8571dfaf9b80",
+      "expected_sha256": "73f619b5d9e048793a1f5087572cab2aeb514b669a73561cf8ae8571dfaf9b80",
+      "match": true
     },
     {
       "path": "src/audio.js",
+      "status": 200,
       "bytes": 26597,
-      "expected_sha256": "693737b09576816ae56bae9cc86507e8e4678aebb0b6221adeb80c6de5427d43"
+      "sha256": "693737b09576816ae56bae9cc86507e8e4678aebb0b6221adeb80c6de5427d43",
+      "expected_sha256": "693737b09576816ae56bae9cc86507e8e4678aebb0b6221adeb80c6de5427d43",
+      "match": true
     },
     {
       "path": "src/boost-fire.js",
+      "status": 200,
       "bytes": 5579,
-      "expected_sha256": "5bb3009ca6ba451ffaf31ff99231427c3d0a762cd1987e245f6438a5b2f71c85"
+      "sha256": "5bb3009ca6ba451ffaf31ff99231427c3d0a762cd1987e245f6438a5b2f71c85",
+      "expected_sha256": "5bb3009ca6ba451ffaf31ff99231427c3d0a762cd1987e245f6438a5b2f71c85",
+      "match": true
     },
     {
       "path": "src/cinematic-camera.js",
+      "status": 200,
       "bytes": 2814,
-      "expected_sha256": "cadd2815c1ad4bb1155d30b04a8e537cad57c56fe6e8906bc7dc16c196a747ea"
+      "sha256": "cadd2815c1ad4bb1155d30b04a8e537cad57c56fe6e8906bc7dc16c196a747ea",
+      "expected_sha256": "cadd2815c1ad4bb1155d30b04a8e537cad57c56fe6e8906bc7dc16c196a747ea",
+      "match": true
     },
     {
       "path": "src/collectibles.js",
+      "status": 200,
       "bytes": 1590,
-      "expected_sha256": "9dcf84d22f58a083fc262bee704bbb4b5692fdfb33a3d98af08e46fd78cac3e1"
+      "sha256": "9dcf84d22f58a083fc262bee704bbb4b5692fdfb33a3d98af08e46fd78cac3e1",
+      "expected_sha256": "9dcf84d22f58a083fc262bee704bbb4b5692fdfb33a3d98af08e46fd78cac3e1",
+      "match": true
     },
     {
       "path": "src/detail-lod.js",
+      "status": 200,
       "bytes": 5995,
-      "expected_sha256": "b7f74f6850fd76454b22b7593452036f9e0b9a0f53de7fcc1d2b708d5a45bb9d"
+      "sha256": "b7f74f6850fd76454b22b7593452036f9e0b9a0f53de7fcc1d2b708d5a45bb9d",
+      "expected_sha256": "b7f74f6850fd76454b22b7593452036f9e0b9a0f53de7fcc1d2b708d5a45bb9d",
+      "match": true
     },
     {
       "path": "src/finish-fx.js",
+      "status": 200,
       "bytes": 12965,
-      "expected_sha256": "a8c11f92b406746c574a8b82bf1b031765e60ce5abe10c949bf2a789b8913f7c"
+      "sha256": "a8c11f92b406746c574a8b82bf1b031765e60ce5abe10c949bf2a789b8913f7c",
+      "expected_sha256": "a8c11f92b406746c574a8b82bf1b031765e60ce5abe10c949bf2a789b8913f7c",
+      "match": true
     },
     {
       "path": "src/gameplay.js",
+      "status": 200,
       "bytes": 74247,
-      "expected_sha256": "990eb8f21b199e943ccd00bd33de6bf36b7cf484f30a903fe3258d87351ec809"
+      "sha256": "990eb8f21b199e943ccd00bd33de6bf36b7cf484f30a903fe3258d87351ec809",
+      "expected_sha256": "990eb8f21b199e943ccd00bd33de6bf36b7cf484f30a903fe3258d87351ec809",
+      "match": true
     },
     {
       "path": "src/garage.js",
+      "status": 200,
       "bytes": 8166,
-      "expected_sha256": "e971705a77df3f3d58f846ab8ff14a510ba17acc14249b65b0181e7f5f0ee6b6"
+      "sha256": "e971705a77df3f3d58f846ab8ff14a510ba17acc14249b65b0181e7f5f0ee6b6",
+      "expected_sha256": "e971705a77df3f3d58f846ab8ff14a510ba17acc14249b65b0181e7f5f0ee6b6",
+      "match": true
     },
     {
       "path": "src/leaderboard-store.js",
+      "status": 200,
       "bytes": 1962,
-      "expected_sha256": "61ec5d277c59de1f10b759920e0d9597b487cf1314f98b446c57605b1d3906b2"
+      "sha256": "61ec5d277c59de1f10b759920e0d9597b487cf1314f98b446c57605b1d3906b2",
+      "expected_sha256": "61ec5d277c59de1f10b759920e0d9597b487cf1314f98b446c57605b1d3906b2",
+      "match": true
     },
     {
       "path": "src/leaderboard.js",
+      "status": 200,
       "bytes": 5881,
-      "expected_sha256": "b8b7c0ee0a54d1a67b488036b3817ecbc276ca84e9409ec4437b9c49f6c247d9"
+      "sha256": "b8b7c0ee0a54d1a67b488036b3817ecbc276ca84e9409ec4437b9c49f6c247d9",
+      "expected_sha256": "b8b7c0ee0a54d1a67b488036b3817ecbc276ca84e9409ec4437b9c49f6c247d9",
+      "match": true
     },
     {
       "path": "src/main.js",
+      "status": 200,
       "bytes": 73872,
-      "expected_sha256": "64fe3bfbec5f07ca12a56d8f71e98c7e38c6c012ed9e00c0e7212ffb47e9c09d"
+      "sha256": "64fe3bfbec5f07ca12a56d8f71e98c7e38c6c012ed9e00c0e7212ffb47e9c09d",
+      "expected_sha256": "64fe3bfbec5f07ca12a56d8f71e98c7e38c6c012ed9e00c0e7212ffb47e9c09d",
+      "match": true
     },
     {
       "path": "src/police-air-support.js",
+      "status": 200,
       "bytes": 6490,
-      "expected_sha256": "443c88e24d1450dd0a11aba522cda76394ee4182f18358e16ed4f1f537f61ef6"
+      "sha256": "443c88e24d1450dd0a11aba522cda76394ee4182f18358e16ed4f1f537f61ef6",
+      "expected_sha256": "443c88e24d1450dd0a11aba522cda76394ee4182f18358e16ed4f1f537f61ef6",
+      "match": true
     },
     {
       "path": "src/profile-storage.js",
+      "status": 200,
       "bytes": 3291,
-      "expected_sha256": "31388e106082522905c832f3ba4db02345e55a0800fbdadd28b9948e48facb4d"
+      "sha256": "31388e106082522905c832f3ba4db02345e55a0800fbdadd28b9948e48facb4d",
+      "expected_sha256": "31388e106082522905c832f3ba4db02345e55a0800fbdadd28b9948e48facb4d",
+      "match": true
     },
     {
       "path": "src/ramp-surfaces.js",
+      "status": 200,
       "bytes": 1942,
-      "expected_sha256": "e3032720f52c0b13a02d1a757e48d1af67fe096c4b7ee428d35bf999137d2b19"
+      "sha256": "e3032720f52c0b13a02d1a757e48d1af67fe096c4b7ee428d35bf999137d2b19",
+      "expected_sha256": "e3032720f52c0b13a02d1a757e48d1af67fe096c4b7ee428d35bf999137d2b19",
+      "match": true
     },
     {
       "path": "src/render-metrics.js",
+      "status": 200,
       "bytes": 1955,
-      "expected_sha256": "e0645ed661dacdd4e1beba7e75c4a5e562219edccf7fcaa8fa8f5e1f90e8083c"
+      "sha256": "e0645ed661dacdd4e1beba7e75c4a5e562219edccf7fcaa8fa8f5e1f90e8083c",
+      "expected_sha256": "e0645ed661dacdd4e1beba7e75c4a5e562219edccf7fcaa8fa8f5e1f90e8083c",
+      "match": true
     },
     {
       "path": "src/rotor-audio-targets.js",
+      "status": 200,
       "bytes": 3092,
-      "expected_sha256": "daf1f51b91ec9770a3a36917a13759a2ceca85428d743aeca7e71692ca8370ce"
+      "sha256": "daf1f51b91ec9770a3a36917a13759a2ceca85428d743aeca7e71692ca8370ce",
+      "expected_sha256": "daf1f51b91ec9770a3a36917a13759a2ceca85428d743aeca7e71692ca8370ce",
+      "match": true
     },
     {
       "path": "src/scene.js",
+      "status": 200,
       "bytes": 41825,
-      "expected_sha256": "2b3c55f12e79ac300498a8553cb1d1020a1c7d6f5b406e5b8e6933d1e4d3e651"
+      "sha256": "2b3c55f12e79ac300498a8553cb1d1020a1c7d6f5b406e5b8e6933d1e4d3e651",
+      "expected_sha256": "2b3c55f12e79ac300498a8553cb1d1020a1c7d6f5b406e5b8e6933d1e4d3e651",
+      "match": true
     },
     {
       "path": "src/showroom-reflector.js",
+      "status": 200,
       "bytes": 7135,
-      "expected_sha256": "ccbf620792e6a348ddbb7b38b4a9c3aa1eb38a11f33f493c70915333211ee2e8"
+      "sha256": "ccbf620792e6a348ddbb7b38b4a9c3aa1eb38a11f33f493c70915333211ee2e8",
+      "expected_sha256": "ccbf620792e6a348ddbb7b38b4a9c3aa1eb38a11f33f493c70915333211ee2e8",
+      "match": true
     },
     {
       "path": "src/showroom-scene.js",
+      "status": 200,
       "bytes": 12650,
-      "expected_sha256": "691d96f1c4a5f5d7365f1c475e78d82eaba742c39e123b09e44cc51a64585634"
+      "sha256": "691d96f1c4a5f5d7365f1c475e78d82eaba742c39e123b09e44cc51a64585634",
+      "expected_sha256": "691d96f1c4a5f5d7365f1c475e78d82eaba742c39e123b09e44cc51a64585634",
+      "match": true
     },
     {
       "path": "src/story-store.js",
+      "status": 200,
       "bytes": 1794,
-      "expected_sha256": "d122f884a0724798eddf30ae311a58e8bdd4e349814319e6eb98a0e7c9d4252f"
+      "sha256": "d122f884a0724798eddf30ae311a58e8bdd4e349814319e6eb98a0e7c9d4252f",
+      "expected_sha256": "d122f884a0724798eddf30ae311a58e8bdd4e349814319e6eb98a0e7c9d4252f",
+      "match": true
     },
     {
       "path": "src/story.js",
+      "status": 200,
       "bytes": 6325,
-      "expected_sha256": "9852ad5748f1ef201cbef177c387f4eaf5546d05e4122d419238963150050d91"
+      "sha256": "9852ad5748f1ef201cbef177c387f4eaf5546d05e4122d419238963150050d91",
+      "expected_sha256": "9852ad5748f1ef201cbef177c387f4eaf5546d05e4122d419238963150050d91",
+      "match": true
     },
     {
       "path": "src/stunt-model.js",
+      "status": 200,
       "bytes": 3811,
-      "expected_sha256": "499bb2cc905a816509dbc70e989bb84623cc381f698ef6ba7ab2ee489ec2920b"
+      "sha256": "499bb2cc905a816509dbc70e989bb84623cc381f698ef6ba7ab2ee489ec2920b",
+      "expected_sha256": "499bb2cc905a816509dbc70e989bb84623cc381f698ef6ba7ab2ee489ec2920b",
+      "match": true
     },
     {
       "path": "src/style.css",
+      "status": 200,
       "bytes": 111237,
-      "expected_sha256": "d76594411168d36787ea464418fdb1ed58acd4d55a4462a71474b0e40bc90737"
+      "sha256": "d76594411168d36787ea464418fdb1ed58acd4d55a4462a71474b0e40bc90737",
+      "expected_sha256": "d76594411168d36787ea464418fdb1ed58acd4d55a4462a71474b0e40bc90737",
+      "match": true
     },
     {
       "path": "src/surface-camera.js",
+      "status": 200,
       "bytes": 2885,
-      "expected_sha256": "f5297cabb6965c53a7d955b8d6519bbf83f5efe3c9b9b7a33be67ea5ec6fe3af"
+      "sha256": "f5297cabb6965c53a7d955b8d6519bbf83f5efe3c9b9b7a33be67ea5ec6fe3af",
+      "expected_sha256": "f5297cabb6965c53a7d955b8d6519bbf83f5efe3c9b9b7a33be67ea5ec6fe3af",
+      "match": true
     },
     {
       "path": "src/surface-drive.js",
+      "status": 200,
       "bytes": 14995,
-      "expected_sha256": "05d9517e469778f572615c7816dd8dcd5bd08705c28c3759eb53f3261e785549"
+      "sha256": "05d9517e469778f572615c7816dd8dcd5bd08705c28c3759eb53f3261e785549",
+      "expected_sha256": "05d9517e469778f572615c7816dd8dcd5bd08705c28c3759eb53f3261e785549",
+      "match": true
     },
     {
       "path": "src/surface-materials.js",
+      "status": 200,
       "bytes": 2779,
-      "expected_sha256": "e60bf4469e4436675308830f901e963504c3c0d86b69463fa4ba2f132f1556f0"
+      "sha256": "e60bf4469e4436675308830f901e963504c3c0d86b69463fa4ba2f132f1556f0",
+      "expected_sha256": "e60bf4469e4436675308830f901e963504c3c0d86b69463fa4ba2f132f1556f0",
+      "match": true
     },
     {
       "path": "src/surface-ribbon.js",
+      "status": 200,
       "bytes": 3979,
-      "expected_sha256": "d3722764ee3a334cf00654f371d8e5405a9ba452cd5c59cc573301e811414780"
+      "sha256": "d3722764ee3a334cf00654f371d8e5405a9ba452cd5c59cc573301e811414780",
+      "expected_sha256": "d3722764ee3a334cf00654f371d8e5405a9ba452cd5c59cc573301e811414780",
+      "match": true
     },
     {
       "path": "src/tea-placement.js",
+      "status": 200,
       "bytes": 4110,
-      "expected_sha256": "110799212574b2c42c976585f625d24ab59d0a5129cb5be2a0fafaa10e70d84f"
+      "sha256": "110799212574b2c42c976585f625d24ab59d0a5129cb5be2a0fafaa10e70d84f",
+      "expected_sha256": "110799212574b2c42c976585f625d24ab59d0a5129cb5be2a0fafaa10e70d84f",
+      "match": true
     },
     {
       "path": "src/tracks.js",
+      "status": 200,
       "bytes": 2356,
-      "expected_sha256": "1fdf792479f5455fcd36bb75c544add8bd8019150506806e173f28f48a1dd6b7"
+      "sha256": "1fdf792479f5455fcd36bb75c544add8bd8019150506806e173f28f48a1dd6b7",
+      "expected_sha256": "1fdf792479f5455fcd36bb75c544add8bd8019150506806e173f28f48a1dd6b7",
+      "match": true
     },
     {
       "path": "src/transit.js",
+      "status": 200,
       "bytes": 7832,
-      "expected_sha256": "b89f7a545514b5f34b5a62d3f6f684d58aea30a714903adb7b2b3a28a095714d"
+      "sha256": "b89f7a545514b5f34b5a62d3f6f684d58aea30a714903adb7b2b3a28a095714d",
+      "expected_sha256": "b89f7a545514b5f34b5a62d3f6f684d58aea30a714903adb7b2b3a28a095714d",
+      "match": true
     },
     {
       "path": "src/upgrade-visuals.js",
+      "status": 200,
       "bytes": 2347,
-      "expected_sha256": "8d2b838796cdcbf577b706ddb80ced1cdfd4fed4e5dce8f05319bfaadeff90e3"
+      "sha256": "8d2b838796cdcbf577b706ddb80ced1cdfd4fed4e5dce8f05319bfaadeff90e3",
+      "expected_sha256": "8d2b838796cdcbf577b706ddb80ced1cdfd4fed4e5dce8f05319bfaadeff90e3",
+      "match": true
     },
     {
       "path": "LICENSES.md",
+      "status": 200,
       "bytes": 5990,
-      "expected_sha256": "652955ae86c850bdd33c6bee046cbf4102cd45bb4b2c45927ecd9026c61d5512"
+      "sha256": "652955ae86c850bdd33c6bee046cbf4102cd45bb4b2c45927ecd9026c61d5512",
+      "expected_sha256": "652955ae86c850bdd33c6bee046cbf4102cd45bb4b2c45927ecd9026c61d5512",
+      "match": true
     },
     {
       "path": "licenses/OFL.txt",
+      "status": 200,
       "bytes": 4377,
-      "expected_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+      "expected_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+      "match": true
     },
     {
       "path": "licenses/THREE_LICENSE.txt",
+      "status": 200,
       "bytes": 1081,
-      "expected_sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "expected_sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "match": true
     },
     {
       "path": "release.json",
+      "status": 200,
       "bytes": 1279,
-      "expected_sha256": "6ff00d9870736b067ed193b601fc28a489f72ee91dd67fe128531fb48a997ec2"
+      "sha256": "6ff00d9870736b067ed193b601fc28a489f72ee91dd67fe128531fb48a997ec2",
+      "expected_sha256": "6ff00d9870736b067ed193b601fc28a489f72ee91dd67fe128531fb48a997ec2",
+      "match": true
     }
-  ]
+  ],
+  "prior_release_retained_state": "READY",
+  "rollback_eligibility_note": "Prior release retained unchanged; a fresh rollback-candidate enumeration was unavailable with current listing permissions."
 }

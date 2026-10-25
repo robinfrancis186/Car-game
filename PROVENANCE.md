@@ -6,7 +6,7 @@ The coast route derives from OpenStreetMap near Kappil–Edava; the highland rou
 
 ## Source/deployment traceability
 
-`SOURCE_MANIFEST.json` identifies the exact frozen runtime and deployment. The 151-file production verification receipt and release metadata are under `deployment/`. The changed, verified R3.5 runtime is deployed without changing hosting settings. The previous R3.4 deployment remains available as a rollback candidate.
+`SOURCE_MANIFEST.json` identifies the exact frozen runtime and deployment. The 151-file production verification receipt and release metadata are under `deployment/`. The changed, verified R3.5 runtime is deployed without changing hosting settings. The previous R3.4 deployment is retained unchanged in READY state as the previous release.
 
 All intended current source, runtime assets, editable Blender scenes, generator/test scripts, essential fixtures and authoring documentation are included. No file exceeds GitHub's individual-file limit. The full historical source archives remain separate backups; this repository intentionally omits node_modules/caches, generated standalone bundles, packaging archives, redundant preview renders/screenshots/logs, private references and Library/executor receipt metadata. A few historical non-runtime documents have private delivery identifiers replaced with neutral placeholders; runtime and native scene bytes are unchanged.
 

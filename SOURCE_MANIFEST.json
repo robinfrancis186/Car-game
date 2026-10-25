@@ -2,9 +2,9 @@
   "version": "V17 R3.5",
   "runtime_tree_sha256": "a86e40c673ef18e1876af39cfc48e42a4599559a98a9b7161646ef69c1e5e6e1",
   "production_url": "https://malabar-hot-coast.vercel.app/",
-  "deployment_id": null,
+  "deployment_id": "dpl_4w3s2tzYtKpaJMrdL6dvbx7iEmkD",
   "rollback_deployment_id": "dpl_6aAJF7N3FiLGiQwxe4dD5pqyqigf",
-  "publication_state": "Verified source committed before deployment; final deployment receipt is added after publication.",
+  "publication_state": "READY production; all151 public file hashes verified",
   "runtime_files": [
     {
       "path": "web/index.html",
@@ -741,5 +741,8 @@
       "bytes": 2347,
       "sha256": "8d2b838796cdcbf577b706ddb80ced1cdfd4fed4e5dce8f05319bfaadeff90e3"
     }
-  ]
+  ],
+  "source_commit": "a164a05e515ee9fcb6b8f58b9151b13ffd108815",
+  "checked_utc": "2026-10-25T01:36:05.494061+00:00",
+  "prior_release_retained_state": "READY"
 }

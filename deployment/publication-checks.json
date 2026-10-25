@@ -19,5 +19,11 @@
   "native_source_files_byte_identical": 45,
   "native_privacy_audit": "Native scenes unchanged from audited R3.4 source.",
   "native_menu_acceptance": "Passed exact-artifact desktop 1222x619, mobile 390x844 and compact 320x568 review: single Home/setup drawer, Map/districts, Garage/Shop/Workshop/Back, compact scrolling and bounded Play/countdown/pause/Home; no console errors.",
-  "limitations": "Actual completed native race, leaderboard name persistence and held Enter across a native transition were not verified. Actual GPU loss/restore, performance, audio listening and full mobile driving acceptance remain unverified."
+  "limitations": "Actual completed native race, leaderboard name persistence and held Enter across a native transition were not verified. Actual GPU loss/restore, performance, audio listening and full mobile driving acceptance remain unverified.",
+  "production_deployment_id": "dpl_4w3s2tzYtKpaJMrdL6dvbx7iEmkD",
+  "source_commit": "a164a05e515ee9fcb6b8f58b9151b13ffd108815",
+  "public_file_sha256_matches": 151,
+  "public_http_200": 151,
+  "public_verification_utc": "2026-10-25T01:36:05.494061+00:00",
+  "native_acceptance_provenance": "Reported exact-artifact Mac review; raw local review receipt is not archived in this repository."
 }
