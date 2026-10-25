@@ -1,6 +1,6 @@
 # V10 bounded foliage detail
 
-Original procedural geometry and vertex colors, CC0. No photos, downloaded geometry, alpha-cutout textures or new collisions. This is stylized geometry, not a photogrammetric tree/tea scan.
+Original procedural geometry and vertex colors. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. No photos, downloaded geometry, alpha-cutout textures or new collisions. This is stylized geometry, not a photogrammetric tree/tea scan.
 
 ## Runtime contracts
 - `HighlandShadeTreeNear.glb`: 5,688 triangles, two materials/draws. Replace the full old HighlandShadeTree at the exact existing transform. Its 168 original bark/trunk/structural-branch triangles are preserved exactly. All new leaves/twigs are visual only. Materials: `Highlands_Tree_Bark`, `Highlands_Shade_Leaf_Detail`.

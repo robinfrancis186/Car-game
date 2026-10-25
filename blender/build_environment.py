@@ -304,7 +304,7 @@ for v in o.data.vertices:v.co.x*=random.uniform(.8,1.2)*.8;v.co.y*=random.unifor
 reg(o,'Granite_Boulder','rock');mod=o.modifiers.new('Soft_Boulder_Edges','BEVEL');mod.width=.035;mod.segments=2
 
 # Export originals at clean root transforms. Only geometry and root nodes.
-manifest={'asset_version':1,'generator':'blender/build_environment.py','blender':bpy.app.version_string,'units':'meters','axes':'X forward, Y left, Z up. FBX export uses -Z forward/Y up conversion.','license':'Original generated geometry and textures: CC0-1.0 dedication. No third-party meshes.','materials_note':'GLB carries Principled base PBR values; Blender procedural noise and bump are not baked. Recreate procedural surfaces or use the included material palette in Unreal.','assets':{}}
+manifest={'asset_version':1,'generator':'blender/build_environment.py','blender':bpy.app.version_string,'units':'meters','axes':'X forward, Y left, Z up. FBX export uses -Z forward/Y up conversion.','license':'Original generated geometry and textures. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. No third-party meshes.','materials_note':'GLB carries Principled base PBR values; Blender procedural noise and bump are not baked. Recreate procedural surfaces or use the included material palette in Unreal.','assets':{}}
 for name,a in ASSETS.items():
     bpy.ops.object.select_all(action='DESELECT');a['root'].select_set(True)
     for o in a['objects']:o.select_set(True)

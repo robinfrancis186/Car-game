@@ -1,0 +1,63 @@
+{
+  "result": "PASS",
+  "actual_GLTFLoader": true,
+  "no_WebGL_claim": true,
+  "sha256": "7f8cdcb032c8f1f9fb08fc19a5b785b2957596aae7532bc7cc84d7e9f96b999b",
+  "bytes": 1180800,
+  "triangles": 31846,
+  "draws": 17,
+  "materials": 9,
+  "nonfinite": 0,
+  "degenerate": 0,
+  "max_normal_unit_error": 1.1565698354587539e-7,
+  "bounds_three": {
+    "min": [
+      -7.639999866485596,
+      0,
+      -4.790948390960693
+    ],
+    "max": [
+      4.440948396921158,
+      3.515000104904175,
+      4.790948390960693
+    ]
+  },
+  "rotor_motion_checks": [
+    {
+      "rotor": "main",
+      "pivot": [
+        -0.3499999940395355,
+        3.3499999046325684,
+        0
+      ],
+      "measured_radius": 5.1160557526529145,
+      "quarter_turn_tip_motion": 7.235195431258643,
+      "other_rotor_and_airframe_unchanged": true
+    },
+    {
+      "rotor": "tail",
+      "pivot": [
+        -6.75,
+        2,
+        0
+      ],
+      "measured_radius": 0.6384798343676051,
+      "quarter_turn_tip_motion": 0.9029468410643946,
+      "other_rotor_and_airframe_unchanged": true
+    }
+  ],
+  "searchlight": {
+    "position_three": [
+      1.4500000476837158,
+      0.3500000238418579,
+      0
+    ],
+    "forward_pitch_point6_direction": [
+      0.5646424733950354,
+      -0.8253356149096783,
+      0
+    ],
+    "real_spotlight_not_baked": true
+  },
+  "staged_public_identical": true
+}

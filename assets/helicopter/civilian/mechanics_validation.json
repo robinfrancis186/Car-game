@@ -1,0 +1,856 @@
+{
+  "result": "PASS",
+  "source_glb_sha256": "4531ce2759904352ed0ee4f976c5ddaaeb5a49073789ca588b0838c4d95a022b",
+  "rotor_samples": 144,
+  "rotor_checks": [
+    {
+      "rotor": "main",
+      "degrees": 0,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 5,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 10,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 15,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 20,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 25,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 30,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 35,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 40,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 45,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 50,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 55,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 60,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 65,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 70,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 75,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 80,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 85,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 90,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 95,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 100,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 105,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 110,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 115,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 120,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 125,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 130,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 135,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 140,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 145,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 150,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 155,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 160,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 165,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 170,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 175,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 180,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 185,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 190,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 195,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 200,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 205,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 210,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 215,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 220,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 225,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 230,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 235,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 240,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 245,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 250,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 255,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 260,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 265,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 270,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 275,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 280,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 285,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 290,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 295,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 300,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 305,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 310,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 315,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 320,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 325,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 330,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 335,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 340,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 345,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 350,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "main",
+      "degrees": 355,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 0,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 5,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 10,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 15,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 20,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 25,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 30,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 35,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 40,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 45,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 50,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 55,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 60,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 65,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 70,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 75,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 80,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 85,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 90,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 95,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 100,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 105,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 110,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 115,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 120,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 125,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 130,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 135,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 140,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 145,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 150,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 155,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 160,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 165,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 170,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 175,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 180,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 185,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 190,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 195,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 200,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 205,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 210,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 215,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 220,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 225,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 230,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 235,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 240,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 245,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 250,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 255,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 260,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 265,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 270,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 275,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 280,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 285,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 290,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 295,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 300,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 305,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 310,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 315,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 320,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 325,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 330,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 335,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 340,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 345,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 350,
+      "intersection_pairs": 0
+    },
+    {
+      "rotor": "tail",
+      "degrees": 355,
+      "intersection_pairs": 0
+    }
+  ],
+  "pod_samples": 25,
+  "pod_checks": [
+    {
+      "yaw_rad": -3.141592653589793,
+      "forward_pitch_rad": -0.7,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": -3.141592653589793,
+      "forward_pitch_rad": -0.5,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": -3.141592653589793,
+      "forward_pitch_rad": 0,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": -3.141592653589793,
+      "forward_pitch_rad": 0.5,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": -3.141592653589793,
+      "forward_pitch_rad": 0.7,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": -1.5707963267948966,
+      "forward_pitch_rad": -0.7,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": -1.5707963267948966,
+      "forward_pitch_rad": -0.5,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": -1.5707963267948966,
+      "forward_pitch_rad": 0,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": -1.5707963267948966,
+      "forward_pitch_rad": 0.5,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": -1.5707963267948966,
+      "forward_pitch_rad": 0.7,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 0,
+      "forward_pitch_rad": -0.7,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 0,
+      "forward_pitch_rad": -0.5,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 0,
+      "forward_pitch_rad": 0,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 0,
+      "forward_pitch_rad": 0.5,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 0,
+      "forward_pitch_rad": 0.7,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 1.5707963267948966,
+      "forward_pitch_rad": -0.7,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 1.5707963267948966,
+      "forward_pitch_rad": -0.5,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 1.5707963267948966,
+      "forward_pitch_rad": 0,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 1.5707963267948966,
+      "forward_pitch_rad": 0.5,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 1.5707963267948966,
+      "forward_pitch_rad": 0.7,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 3.141592653589793,
+      "forward_pitch_rad": -0.7,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 3.141592653589793,
+      "forward_pitch_rad": -0.5,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 3.141592653589793,
+      "forward_pitch_rad": 0,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 3.141592653589793,
+      "forward_pitch_rad": 0.5,
+      "intersection_pairs": 0
+    },
+    {
+      "yaw_rad": 3.141592653589793,
+      "forward_pitch_rad": 0.7,
+      "intersection_pairs": 0
+    }
+  ],
+  "scope": "Actual GLB reimport: composite blades versus entire fixed airframe every5degrees. Main metallic bearing/hub intentional attachment excluded. Pod25discrete yaw/pitch combinations versus skin/glazing; gimbal bearing attachment excluded. Not continuous or flightworthy engineering proof."
+}

@@ -1,0 +1,69 @@
+{
+  "result": "PASS",
+  "file": "car_bronze.glb",
+  "sha256": "7d18612a3a01c4cbbbbe2cbc6a61a671efeec152c71a0427591c967f8a3dba0c",
+  "checks": [
+    {
+      "name": "root and distinct body part hierarchy",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Front_Left",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Front_Right",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Rear_Left",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Rear_Right",
+      "result": "PASS"
+    },
+    {
+      "name": "finite geometry and model budget",
+      "result": "PASS"
+    },
+    {
+      "name": "every indexed triangle nondegenerate; normals finite/unit length",
+      "result": "PASS"
+    },
+    {
+      "name": "metre bounds and ground contact",
+      "result": "PASS"
+    }
+  ],
+  "triangles": 62002,
+  "draw_calls": 24,
+  "material_names": [
+    "Bronze Apex | brushed gunmetal alloy",
+    "Crimson multi-coat | original fan concept",
+    "Bronze Apex | graphite aerodynamic composite",
+    "Bronze Apex | charcoal cockpit leather",
+    "Bronze Apex | smoked transparent glass",
+    "Bronze Apex | ice white LED",
+    "LED ruby red | Bronze Apex rear lamps",
+    "Bronze Apex | Tire rubber"
+  ],
+  "nondegenerate_triangles_checked": 62002,
+  "bounds": {
+    "min": [
+      -2.4620001316070557,
+      0.001896888017654419,
+      -1.1775000095367432
+    ],
+    "max": [
+      2.4750001430511475,
+      1.3049999475479126,
+      1.1775000095367432
+    ],
+    "size": [
+      4.937000274658203,
+      1.3031030595302582,
+      2.3550000190734863
+    ]
+  }
+}

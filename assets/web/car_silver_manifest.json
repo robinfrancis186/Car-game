@@ -1,10 +1,16 @@
 {
   "result": "PASS",
   "file": "car_silver.glb",
-  "bytes": 1332188,
-  "triangles": 29571,
-  "material_draw_calls": 29,
+  "bytes": 1398528,
+  "triangles": 34460,
+  "material_draw_calls": 30,
   "mesh_nodes": 10,
+  "sha256": "5a9cfbd45b85378bbacabd6a191556cb2b6ce950e6fdb5b1d9ac4cbe0d0b192f",
+  "revision": "V13 bounded Silver surface/glazing refinement",
+  "editable_source": "assets/cars/silver_refinement/silver_editable.blend",
+  "glazing_material": "Silver concept | neutral smoked glazing",
+  "glazing_runtime_note": "Authored neutral tinted glazing; no Silver-specific brown color override should be applied.",
+  "max_visual_steer_rad": 0.4,
   "car_root": "CAR_ROOT",
   "body_mesh": "CarBody",
   "paint_material": "Crimson multi-coat | original fan concept",
@@ -58,38 +64,119 @@
     "Thruster_Down_RL",
     "Thruster_Down_RR"
   ],
-  "rights": "Original Blender geometry; no photograph textures, downloaded CAD, or manufacturer logos. Reuses original project wheel assemblies.",
+  "rights": "No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. Original project geometry; no photograph textures, downloaded CAD or manufacturer logos.",
   "limitations": [
     "Approximate fan concept based on user-supplied visual references; not an accurate manufacturer model.",
-    "Opaque bronze-black PBR glazing for web performance; no detailed interior in this optional variant.",
+    "Neutral smoked alpha glazing with a compact original cockpit; not a separately validated interior-camera experience.",
     "Flight, active aero behavior and nozzle arrangement are fictional game mechanics, not production claims.",
     "Materials use compact PBR values rather than photographic textures."
   ],
+  "native_source": "assets/web/car_silver.blend",
+  "native_source_sha256": "4e12170bafc5d6e9e3b158f40e052910ac4d56d589b2f6a64381adca8415ecea",
+  "editable_source_sha256": "d92172cfc86575c38c5d21c5a69a42770c17379eefec25aebdf89068a86e42fa",
+  "status": "FROZEN V13 Silver geometry/material refinement; actual GLB and sampled rig/clearance regressions PASS; front/side/thumb studio pixels inspected. Not browser acceptance.",
+  "baseline_glb_sha256": "3bec86298c9c22a7e1e91deeff4ef2a614744cadf170e9abea2855f2ec82a749",
+  "preserved_wheel_vertex_coordinates": true,
+  "preserved_footprint_bounds": true,
+  "boost_mounts_three": [
+    [
+      -2.3,
+      0.26,
+      -0.56
+    ],
+    [
+      -2.3,
+      0.26,
+      0.56
+    ]
+  ],
   "recommended_cosmetic_visual_limits": {
-    "body_roll_rad": [
-      -0.01,
-      0.01
+    "roll_rad": 0.008,
+    "pitch_rad": 0.005,
+    "heave_m": 0.002,
+    "front_steer_rad": 0.4,
+    "validated_active_wing_three_z_rad": [
+      0,
+      -0.1,
+      -0.2,
+      -0.236
     ],
-    "body_pitch_rad": [
-      -0.006,
-      0.006
+    "scope": "756 sampled whole-wheel/body intersections plus four active-wing/body checks, all zero. Not continuous dynamics proof."
+  },
+  "degenerate_cleanup": {
+    "removed_zero_area_triangles": 348,
+    "details": [
+      {
+        "mesh": "Wedge_Body_Shell_Geometry.001",
+        "material": "Silver concept | satin carbon aero",
+        "removed": 96
+      },
+      {
+        "mesh": "Wedge_Body_Shell_Geometry.001",
+        "material": "Silver concept | shadow panel gaps",
+        "removed": 64
+      },
+      {
+        "mesh": "Wedge_Body_Shell_Geometry.001",
+        "material": "Silver concept | neutral smoked glazing",
+        "removed": 96
+      },
+      {
+        "mesh": "Cube.001",
+        "material": "Brake caliper red",
+        "removed": 23
+      },
+      {
+        "mesh": "Cube.049",
+        "material": "Brake caliper red",
+        "removed": 23
+      },
+      {
+        "mesh": "Cube.050",
+        "material": "Brake caliper red",
+        "removed": 23
+      },
+      {
+        "mesh": "Cube.051",
+        "material": "Brake caliper red",
+        "removed": 23
+      }
     ],
-    "scope": "216 discrete tire/body checks passed: 27 combinations of negative/zero/positive roll, pitch and heave, front steering 0/\u00b10.4 rad and rear zero. Wheels vertically fixed. Not a suspension/physics guarantee or proof over continuous configurations.",
-    "visual_group_children": [
-      "CarBody",
-      "AeroWing_Hinge",
-      "Thruster_Rear_0",
-      "Thruster_Rear_1",
-      "Thruster_Rear_2",
-      "Thruster_Rear_3",
-      "Thruster_Down_RL",
-      "Thruster_Down_RR"
+    "scope": "Only degenerate index triples removed after float32 export; positions/normals/materials/rig are unmodified."
+  },
+  "thumbnail": "car_thumb_silver.png",
+  "thumbnail_sha256": "83fd0745355fbbb4d2fe13bae308464ddb3fb6255dfa10fb7fa8bf86391e16c2",
+  "thumbnail_bytes": 176648,
+  "preview_images": {
+    "front": {
+      "path": "assets/cars/silver_refinement/preview_front.png",
+      "sha256": "e9845409215cda1ccd6ec8d25ade13ec3787991662ff3dfbe0400145a5335140"
+    },
+    "side": {
+      "path": "assets/cars/silver_refinement/preview_side.png",
+      "sha256": "eaae825a8ba83c51ac2d7ece8c92e7725903d53a8a9c3208c3428fe470aca51d"
+    },
+    "thumb": {
+      "path": "assets/gallery_thumbnails/car_thumb_silver.png",
+      "sha256": "83fd0745355fbbb4d2fe13bae308464ddb3fb6255dfa10fb7fa8bf86391e16c2"
+    }
+  },
+  "source_sha256": "4e12170bafc5d6e9e3b158f40e052910ac4d56d589b2f6a64381adca8415ecea",
+  "generator_sha256": "d1a4a221d57c074c72bbc49e309979e80853ce01f25c882a8390f90fdcf3c381",
+  "validation": {
+    "actual_three_loader": "PASS",
+    "exact_existing_wheel_coordinate_set": "PASS",
+    "exact_documented_node_transforms": "PASS",
+    "same_overall_bounds": "PASS",
+    "unit_normals_no_degenerate_float32_triangles": "PASS",
+    "body_full_wheel_pose_checks": 756,
+    "wing_runtime_angles_rad": [
+      0,
+      -0.1,
+      -0.2,
+      -0.236
     ],
-    "body_only_heave_m": [
-      -0.002,
-      0.002
-    ],
-    "validation_file": "car_silver_combined_pose_validation.json",
-    "verified_asset_sha256": "3bec86298c9c22a7e1e91deeff4ef2a614744cadf170e9abea2855f2ec82a749"
+    "runtime_source_scene_contract": "PASS",
+    "scope": "Sampled actual mesh/source scene-graph only; no GPU/browser/continuous dynamics claim."
   }
 }

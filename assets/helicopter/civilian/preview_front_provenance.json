@@ -1,0 +1,25 @@
+{
+  "scope": "Actual GLB imported into Blender CPU Cycles; studio render, not gameplay. No reference pixels.",
+  "image": {
+    "file": "assets/helicopter/civilian/preview_front.png",
+    "sha256": "7f899cd338ece5b664f1e989c2377ce9d0e4a711f514b86cc799c07b5ddfeb0d",
+    "source_glb_sha256": "4531ce2759904352ed0ee4f976c5ddaaeb5a49073789ca588b0838c4d95a022b",
+    "samples": 64,
+    "denoising": false,
+    "camera_native": [
+      11,
+      13,
+      6.7
+    ],
+    "target_native": [
+      -1.6,
+      0,
+      1.7
+    ],
+    "lens_mm": 46,
+    "resolution": [
+      1200,
+      800
+    ]
+  }
+}

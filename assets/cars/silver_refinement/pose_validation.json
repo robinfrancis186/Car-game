@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "sha256": "5a9cfbd45b85378bbacabd6a191556cb2b6ce950e6fdb5b1d9ac4cbe0d0b192f",
+  "whole_wheel_body_checks": 756,
+  "failed_checks": 0,
+  "failures": [],
+  "active_wing_checks": [
+    {
+      "runtime_three_z_rad": 0,
+      "body_overlap_pairs": 0
+    },
+    {
+      "runtime_three_z_rad": -0.1,
+      "body_overlap_pairs": 0
+    },
+    {
+      "runtime_three_z_rad": -0.2,
+      "body_overlap_pairs": 0
+    },
+    {
+      "runtime_three_z_rad": -0.236,
+      "body_overlap_pairs": 0
+    }
+  ],
+  "scope": "Actual exported body versus full wheel meshes, 27 body cosmetic poses and seven steering samples per wheel; fixed wheels. Discrete surface tests, not continuous dynamics/engineering proof."
+}

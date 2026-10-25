@@ -1,0 +1,8 @@
+"""Actual original loft/car portrait for UI composition preview, not shipped runtime artwork."""
+import bpy,math,json,hashlib
+from pathlib import Path
+from mathutils import Vector
+R=Path(__file__).resolve().parents[1];O=R/'assets/showroom';bpy.ops.wm.open_mainfile(filepath=str(O/'ServiceShowroomLoft_Preview.blend'));s=bpy.context.scene;car=bpy.data.objects.get('CAR_ROOT');car.rotation_euler.z=.18
+s.camera.location=(8.30,-9.07,1.86);s.camera.rotation_euler=(Vector((0,0,.65))-s.camera.location).to_track_quat('-Z','Y').to_euler();s.camera.data.sensor_fit='VERTICAL';s.camera.data.sensor_height=36;s.camera.data.lens=36/(2*math.tan(math.radians(55)/2));s.camera.data.shift_y=-.035
+s.render.resolution_x=857;s.render.resolution_y=1536;s.render.resolution_percentage=100;s.cycles.samples=64;s.cycles.use_denoising=False;s.render.filepath=str(O/'ServiceShowroomLoft_home_portrait.png');bpy.ops.wm.save_as_mainfile(filepath=str(O/'ServiceShowroomLoft_home_portrait.blend'));bpy.ops.render.render(write_still=True)
+(O/'home_portrait_provenance.json').write_text(json.dumps({'scope':'Original Blender rendered composition preview; NOT gameplay/WebGL. No reference pixels or UI overlay. Do not ship as replacement for interactive runtime.','resolution':[857,1536],'samples':64,'denoising':False,'camera_three':[8.30,1.86,9.07],'look_at_three':[0,.65,0],'vertical_FOV_deg':55,'sensor_fit':'VERTICAL','camera_shift_y':-.035,'car_yaw_blender_rad':.18,'source_loft_glb_sha256':hashlib.sha256((R/'assets/web/ServiceShowroomLoft.glb').read_bytes()).hexdigest(),'source_car_glb_sha256':hashlib.sha256((R/'web/public/assets/car.glb').read_bytes()).hexdigest()},indent=2));print('HOME_PORTRAIT_READY',s.render.filepath,flush=True)

@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "source_glb_sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+  "checks": [
+    {
+      "wheel": "Front_Left",
+      "minimum_sampled_caliper_vertex_to_alloy_m": 0.006475027650594711,
+      "spin_degrees_at_minimum": 48,
+      "sampled_spins": 31,
+      "sampled_caliper_vertices": 1040
+    },
+    {
+      "wheel": "Front_Right",
+      "minimum_sampled_caliper_vertex_to_alloy_m": 0.006475027650594711,
+      "spin_degrees_at_minimum": 48,
+      "sampled_spins": 31,
+      "sampled_caliper_vertices": 1040
+    },
+    {
+      "wheel": "Rear_Left",
+      "minimum_sampled_caliper_vertex_to_alloy_m": 0.006474894471466541,
+      "spin_degrees_at_minimum": 168,
+      "sampled_spins": 31,
+      "sampled_caliper_vertices": 1040
+    },
+    {
+      "wheel": "Rear_Right",
+      "minimum_sampled_caliper_vertex_to_alloy_m": 0.006474865134805441,
+      "spin_degrees_at_minimum": 168,
+      "sampled_spins": 31,
+      "sampled_caliper_vertices": 1040
+    }
+  ],
+  "scope": "Caliper vertex distances to actual wheel alloy/rotor triangle surfaces at12degree intervals, separate from4degree triangle intersection test. Not continuous exact mechanical clearance."
+}

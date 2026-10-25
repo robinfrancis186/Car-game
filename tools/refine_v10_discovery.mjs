@@ -5,9 +5,9 @@ import path from 'node:path';
 const root=path.resolve(new URL('..',import.meta.url).pathname);
 const settings={
  'course_runtime.json':[
-  {s:5,label:'COASTAL VILLAGE',position:[30,3,-70],camera_offset:[25,14,30]},
-  {s:2000,label:'ELEVATED METRO',position:[-897.886,15,-1630.970],camera_offset:[-30,1,3],camera_fov:40,transit_id:'coast_metro_shuttle'},
-  {s:2415,label:'SHIKARA LANDING',position:[-1193.823,1.5,-1727.367],camera_offset:[23,9,18]},
+  {s:165,label:'COASTAL VILLAGE',position:[30,3,-70],camera_offset:[25,14,30]},
+  {s:2008,label:'ELEVATED METRO',position:[-897.886,15,-1630.970],camera_offset:[-30,1,3],camera_fov:40,transit_id:'coast_metro_shuttle'},
+  {s:2430,label:'SHIKARA LANDING',position:[-1193.823,1.5,-1727.367],camera_offset:[23,9,18]},
   {s:2530,label:'SKYLINE FLYOVER',route_s:2730,camera_offset:[45,24,30]},
   {s:3180,label:'WATER TRANSIT FERRY',position:[-1530,2.5,-2380],camera_offset:[32,16,24],transit_id:'backwater_ferry_shuttle'},
   {s:4035,label:'HARBOUR AVENUE',route_s:4090,camera_offset:[22,15,28]}

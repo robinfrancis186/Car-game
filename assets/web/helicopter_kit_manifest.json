@@ -1,0 +1,287 @@
+{
+  "status": "asset_authoring_frozen",
+  "date": "2026-10-23",
+  "variants": [
+    {
+      "id": "helicopter_civilian",
+      "display_name": "Coastal Twin Civilian",
+      "file": "helicopter_civilian.glb",
+      "sha256": "4531ce2759904352ed0ee4f976c5ddaaeb5a49073789ca588b0838c4d95a022b",
+      "bytes": 1183288,
+      "triangles": 31728,
+      "draw_calls": 16,
+      "materials": 8,
+      "native_source": "assets/helicopter/civilian/Coastal_Twin_Civilian.blend",
+      "coordinate_contract": {
+        "forward": "+X",
+        "up": "+Y",
+        "left": "-Z",
+        "units": "metres",
+        "root": "HELICOPTER_ROOT",
+        "root_ground_y": 0
+      },
+      "rotors": {
+        "main": {
+          "node": "MainRotor",
+          "pivot_three": [
+            -0.35,
+            3.35,
+            0
+          ],
+          "axis_three": [
+            0,
+            1,
+            0
+          ],
+          "blade_count": 4,
+          "nominal_radius_m": 5.1,
+          "measured_swept_radius_m": 5.1160557526529145
+        },
+        "tail": {
+          "node": "TailRotor",
+          "pivot_three": [
+            -6.75,
+            2,
+            0
+          ],
+          "axis_three": [
+            0,
+            0,
+            -1
+          ],
+          "blade_count": 10,
+          "nominal_radius_m": 0.62,
+          "measured_swept_radius_m": 0.6384798343676051
+        }
+      },
+      "searchlight": {
+        "yaw_node": "SearchlightYaw",
+        "pitch_node": "SearchlightPitch",
+        "socket_node": "SearchlightSocket",
+        "socket_three": [
+          1.45,
+          0.35,
+          0
+        ],
+        "default_direction_three": [
+          0,
+          -1,
+          0
+        ],
+        "yaw_axis_three": [
+          0,
+          1,
+          0
+        ],
+        "pitch_forward_axis_three": [
+          0,
+          0,
+          1
+        ],
+        "recommended_pitch_limit_rad": 0.7,
+        "socket_emits_light": false,
+        "note": "Runtime must attach real spotlight at socket and aim at car; geometric lens emission is not a projected beam."
+      },
+      "navigation_sockets": {
+        "NavPortSocket": [
+          -1.25,
+          1.52,
+          -1.03
+        ],
+        "NavStarboardSocket": [
+          -1.25,
+          1.52,
+          1.03
+        ],
+        "NavTailSocket": [
+          -7.18,
+          3.47,
+          0
+        ],
+        "BeaconSocket": [
+          -0.97,
+          2.96,
+          0
+        ]
+      },
+      "swept_bounds_three_m": {
+        "min": [
+          -7.64,
+          0,
+          -5.1160557526529145
+        ],
+        "max": [
+          4.766055752652915,
+          3.515,
+          5.1160557526529145
+        ]
+      }
+    },
+    {
+      "id": "helicopter_police",
+      "display_name": "Coastal Twin Police",
+      "file": "helicopter_police.glb",
+      "sha256": "7f8cdcb032c8f1f9fb08fc19a5b785b2957596aae7532bc7cc84d7e9f96b999b",
+      "bytes": 1180800,
+      "triangles": 31846,
+      "draw_calls": 17,
+      "materials": 9,
+      "native_source": "assets/helicopter/police/Coastal_Twin_Police.blend",
+      "coordinate_contract": {
+        "forward": "+X",
+        "up": "+Y",
+        "left": "-Z",
+        "units": "metres",
+        "root": "HELICOPTER_ROOT",
+        "root_ground_y": 0
+      },
+      "rotors": {
+        "main": {
+          "node": "MainRotor",
+          "pivot_three": [
+            -0.35,
+            3.35,
+            0
+          ],
+          "axis_three": [
+            0,
+            1,
+            0
+          ],
+          "blade_count": 4,
+          "nominal_radius_m": 5.1,
+          "measured_swept_radius_m": 5.1160557526529145
+        },
+        "tail": {
+          "node": "TailRotor",
+          "pivot_three": [
+            -6.75,
+            2,
+            0
+          ],
+          "axis_three": [
+            0,
+            0,
+            -1
+          ],
+          "blade_count": 10,
+          "nominal_radius_m": 0.62,
+          "measured_swept_radius_m": 0.6384798343676051
+        }
+      },
+      "searchlight": {
+        "yaw_node": "SearchlightYaw",
+        "pitch_node": "SearchlightPitch",
+        "socket_node": "SearchlightSocket",
+        "socket_three": [
+          1.45,
+          0.35,
+          0
+        ],
+        "default_direction_three": [
+          0,
+          -1,
+          0
+        ],
+        "yaw_axis_three": [
+          0,
+          1,
+          0
+        ],
+        "pitch_forward_axis_three": [
+          0,
+          0,
+          1
+        ],
+        "recommended_pitch_limit_rad": 0.7,
+        "socket_emits_light": false,
+        "note": "Runtime must attach real spotlight at socket and aim at car; geometric lens emission is not a projected beam."
+      },
+      "navigation_sockets": {
+        "NavPortSocket": [
+          -1.25,
+          1.52,
+          -1.03
+        ],
+        "NavStarboardSocket": [
+          -1.25,
+          1.52,
+          1.03
+        ],
+        "NavTailSocket": [
+          -7.18,
+          3.47,
+          0
+        ],
+        "BeaconSocket": [
+          -0.97,
+          2.96,
+          0
+        ]
+      },
+      "swept_bounds_three_m": {
+        "min": [
+          -7.64,
+          0,
+          -5.1160557526529145
+        ],
+        "max": [
+          4.766055752652915,
+          3.515,
+          5.1160557526529145
+        ]
+      }
+    }
+  ],
+  "optional_rotor_blur": {
+    "id": "helicopter_rotor_blur",
+    "purpose": "Optional transparent main/tail rotor annuli, no motion or default visibility baked. Align root with base helicopter.",
+    "native_source": "assets/helicopter/Rotor_Blur_LOD.blend",
+    "provenance": "Original project geometry; reuse license not selected by owner.",
+    "file": "helicopter_rotor_blur.glb",
+    "sha256": "6bd44d31943050364b82f882bac602c29cc613a46923d7b2a9300c75be38e127",
+    "bytes": 10180,
+    "triangles": 192,
+    "draw_calls": 2,
+    "materials": 1,
+    "material_names": [
+      "Helicopter optional rotor blur"
+    ],
+    "rigid_groups": {
+      "HelicopterBlurRoot": {
+        "source_parts": 0,
+        "triangles": 0,
+        "draw_calls": 0
+      },
+      "MainRotorBlur": {
+        "source_parts": 1,
+        "triangles": 128,
+        "draw_calls": 1
+      },
+      "TailRotorBlur": {
+        "source_parts": 1,
+        "triangles": 64,
+        "draw_calls": 1
+      }
+    },
+    "degenerate_triangles_removed": 0,
+    "bounds_three_m": {
+      "min": [
+        -7.389999866485596,
+        1.3600000143051147,
+        -5.119999885559082
+      ],
+      "max": [
+        4.769999980926514,
+        3.3499999046325684,
+        5.119999885559082
+      ]
+    },
+    "float32_degenerate_triangles_removed": 0,
+    "invalid_runtime_corner_normals_repaired_from_incident_faces": 0,
+    "unused_normal_repairs": 0
+  },
+  "provenance": "Original project geometry/materials; reuse license not selected by owner. No reference images, logos or third-party meshes in outputs.",
+  "scope": "Blender-native and actual-GLB asset delivery only. Flight paths, pursuit, spotlight, audio and WebGL performance are separate runtime integration.",
+  "preview_scope": "Actual GLBs imported in CPU Blender Cycles, 64 samples, no denoising. Studio renders, not gameplay."
+}

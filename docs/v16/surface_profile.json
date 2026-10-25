@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "harbour-wall-run",
+  "label": "HARBOUR WALL RUN / SOLO SURFACE PROOF",
+  "length": 900,
+  "baseY": 8,
+  "halfWidth": 6,
+  "bankKnots": [
+    {"s": 0, "degrees": 0},
+    {"s": 160, "degrees": 0},
+    {"s": 360, "degrees": 90},
+    {"s": 540, "degrees": 90},
+    {"s": 740, "degrees": 0},
+    {"s": 900, "degrees": 0}
+  ],
+  "interpolation": "quintic-smoothstep",
+  "sign": "positive-right-rises",
+  "mesh": {"longitudinalStep": 2, "lateralStep": 0.75, "diagonal": "sw-ne"},
+  "limits": "Original upright-to-90-degree wall proof; no ceiling, tube or full loop."
+}

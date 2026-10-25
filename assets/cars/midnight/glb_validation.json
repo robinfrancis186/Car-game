@@ -1,0 +1,94 @@
+{
+  "result": "PASS",
+  "actual_GLTFLoader": true,
+  "no_WebGL_claim": true,
+  "sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+  "bytes": 3151648,
+  "triangles": 75670,
+  "draws": 30,
+  "materials": [
+    "Midnight champagne forged alloy",
+    "Midnight satin carbon structure",
+    "Crimson multi-coat | original fan concept",
+    "Midnight espresso leather",
+    "Midnight clear smoke glazing",
+    "Midnight coastal cyan lower accents",
+    "Midnight cool running lights",
+    "Midnight rear vermilion lights",
+    "Tire rubber | original project"
+  ],
+  "nonfinite": 0,
+  "degenerate": 0,
+  "maximum_unit_normal_error": 1.1590798099092581e-7,
+  "bounds_three": {
+    "min": [
+      -2.4200000762939453,
+      0.001896888017654419,
+      -1.160000041127205
+    ],
+    "max": [
+      2.440000057220459,
+      1.2701785564422607,
+      1.160000041127205
+    ]
+  },
+  "rigs": [
+    {
+      "key": "Front_Left",
+      "hub": [
+        1.350000023841858,
+        0.36800000071525574,
+        -0.9240000247955322
+      ],
+      "radius": 0.3661031452107275,
+      "minTireY": 0.001896888017654419,
+      "spinMovesVertex": 0.25107193159060637,
+      "fixedCaliperMatrixDelta": 0,
+      "hierarchy": true
+    },
+    {
+      "key": "Front_Right",
+      "hub": [
+        1.350000023841858,
+        0.36800000071525574,
+        0.9240000247955322
+      ],
+      "radius": 0.36610314505076064,
+      "minTireY": 0.001896888017654419,
+      "spinMovesVertex": 0.2510719314809018,
+      "fixedCaliperMatrixDelta": 0,
+      "hierarchy": true
+    },
+    {
+      "key": "Rear_Left",
+      "hub": [
+        -1.350000023841858,
+        0.36800000071525574,
+        -0.9240000247955322
+      ],
+      "radius": 0.3661031452107275,
+      "minTireY": 0.001896888017654419,
+      "spinMovesVertex": 0.25107193159060637,
+      "fixedCaliperMatrixDelta": 0,
+      "hierarchy": true
+    },
+    {
+      "key": "Rear_Right",
+      "hub": [
+        -1.350000023841858,
+        0.36800000071525574,
+        0.9240000247955322
+      ],
+      "radius": 0.36610314505076064,
+      "minTireY": 0.001896888017654419,
+      "spinMovesVertex": 0.2510719314809018,
+      "fixedCaliperMatrixDelta": 0,
+      "hierarchy": true
+    }
+  ],
+  "has_Hood": true,
+  "has_fixed_RearWing": true,
+  "has_active_wing": false,
+  "external_images": 0,
+  "manifest_hash_matches": true
+}

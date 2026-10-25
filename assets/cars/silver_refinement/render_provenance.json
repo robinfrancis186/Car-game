@@ -1,0 +1,19 @@
+{
+  "source_glb_sha256": "5a9cfbd45b85378bbacabd6a191556cb2b6ce950e6fdb5b1d9ac4cbe0d0b192f",
+  "engine": "Cycles CPU, no denoising",
+  "scope": "Direct actual exported car, studio only; not gameplay",
+  "images": {
+    "front": {
+      "path": "assets/cars/silver_refinement/preview_front.png",
+      "sha256": "e9845409215cda1ccd6ec8d25ade13ec3787991662ff3dfbe0400145a5335140"
+    },
+    "side": {
+      "path": "assets/cars/silver_refinement/preview_side.png",
+      "sha256": "eaae825a8ba83c51ac2d7ece8c92e7725903d53a8a9c3208c3428fe470aca51d"
+    },
+    "thumb": {
+      "path": "assets/gallery_thumbnails/car_thumb_silver.png",
+      "sha256": "83fd0745355fbbb4d2fe13bae308464ddb3fb6255dfa10fb7fa8bf86391e16c2"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "result": "PASS",
+  "source_sha256": "6f52b61fb2b18663a49618041f0bd7d08285050d8fc342f2918bb2e8dbeaaa6f",
+  "editable_mesh_parts": 3810,
+  "palm_trunks": 4,
+  "palm_rachises": 68,
+  "individual_folded_palm_leaflets": 3264,
+  "stage_floor_slab_top_m": 0.0,
+  "floor_uv_max_error_to_metres_divided_by_point38": 9.03480930958267e-07,
+  "packed_original_images": [
+    {
+      "name": "Loft_Basalt_Micro_Normal",
+      "size": [
+        128,
+        128
+      ],
+      "packed": true,
+      "source_path": "//materials/Loft_Basalt_Micro_Normal.png"
+    },
+    {
+      "name": "Loft_Basalt_Roughness",
+      "size": [
+        128,
+        128
+      ],
+      "packed": true,
+      "source_path": "//materials/Loft_Basalt_Roughness.png"
+    }
+  ],
+  "images_are_original_math_maps_not_references": true,
+  "car_baked_in_native": false,
+  "provenance": "Original project geometry and mathematical microstructure maps; reuse license not selected by owner."
+}

@@ -1,0 +1,75 @@
+{
+  "result": "PASS",
+  "unchanged_actual_triangle_positions_by_material": {
+    "Loft_Polished_Basalt": true,
+    "Loft_Graphite_Steel": true,
+    "Loft_Warm_Timber": true,
+    "Loft_Clear_Coastal_Glass": true,
+    "Loft_Warm_Luminous_Strips": true,
+    "Loft_Brushed_Brass": true
+  },
+  "normal_max_unit_error": 1.3479021965245863e-07,
+  "embedded_original_maps": [
+    {
+      "name": "Loft_Basalt_Micro_Normal",
+      "dimensions": [
+        128,
+        128
+      ],
+      "bytes": 17553,
+      "sha256": "4c7d517a64f07494b566d06a3aac00496045adc8fab71cc29f750f247adc5230",
+      "channel_extrema": [
+        [
+          119,
+          137
+        ],
+        [
+          116,
+          137
+        ],
+        [
+          254,
+          255
+        ]
+      ],
+      "decoded_by_Pillow": true
+    },
+    {
+      "name": "Loft_Basalt_Roughness",
+      "dimensions": [
+        128,
+        128
+      ],
+      "bytes": 9753,
+      "sha256": "95f282a7e0738c810d9e202b0f4aa0430d79c14ece96253036e31c8af83832c6",
+      "channel_extrema": [
+        [
+          255,
+          255
+        ],
+        [
+          80,
+          95
+        ],
+        [
+          255,
+          255
+        ]
+      ],
+      "decoded_by_Pillow": true
+    }
+  ],
+  "floor_pbr": {
+    "roughness_factor": 1,
+    "metallic_factor": 0.07000000029802322,
+    "normal_scale": 0.30000001192092896,
+    "roughness_tex_G_range": [
+      0.3137254901960784,
+      0.37254901960784315
+    ],
+    "metallic_tex_B": 1
+  },
+  "baseline_glb_sha256": "20a0fd0d15743da3b92de1d91bb5bc3834995af3ff7d0f4049afbab907899b2f",
+  "final_glb_sha256": "c456852c1ea395381f133777affc2c1685938b2d434c02b191cc2da19b2b0fef",
+  "scope": "Decoded original PNG data, numerical GLB mesh normals and exact inner stage/structure triangle-position comparison ignoring UV-driven vertex splits. No GPU rendering claim."
+}

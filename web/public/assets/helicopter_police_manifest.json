@@ -1,0 +1,214 @@
+{
+  "id": "helicopter_police",
+  "display_name": "Coastal Twin Police",
+  "original_fictional_design": true,
+  "native_source": "assets/helicopter/police/Coastal_Twin_Police.blend",
+  "generator": "blender/build_helicopter.py",
+  "coordinate_contract": {
+    "forward": "+X",
+    "up": "+Y",
+    "left": "-Z",
+    "units": "metres",
+    "root": "HELICOPTER_ROOT",
+    "root_ground_y": 0
+  },
+  "rotors": {
+    "main": {
+      "node": "MainRotor",
+      "pivot_three": [
+        -0.35,
+        3.35,
+        0
+      ],
+      "axis_three": [
+        0,
+        1,
+        0
+      ],
+      "blade_count": 4,
+      "nominal_radius_m": 5.1,
+      "measured_swept_radius_m": 5.1160557526529145
+    },
+    "tail": {
+      "node": "TailRotor",
+      "pivot_three": [
+        -6.75,
+        2,
+        0
+      ],
+      "axis_three": [
+        0,
+        0,
+        -1
+      ],
+      "blade_count": 10,
+      "nominal_radius_m": 0.62,
+      "measured_swept_radius_m": 0.6384798343676051
+    }
+  },
+  "searchlight": {
+    "yaw_node": "SearchlightYaw",
+    "pitch_node": "SearchlightPitch",
+    "socket_node": "SearchlightSocket",
+    "socket_three": [
+      1.45,
+      0.35,
+      0
+    ],
+    "default_direction_three": [
+      0,
+      -1,
+      0
+    ],
+    "yaw_axis_three": [
+      0,
+      1,
+      0
+    ],
+    "pitch_forward_axis_three": [
+      0,
+      0,
+      1
+    ],
+    "recommended_pitch_limit_rad": 0.7,
+    "socket_emits_light": false,
+    "note": "Runtime must attach real spotlight at socket and aim at car; geometric lens emission is not a projected beam."
+  },
+  "navigation_sockets": {
+    "NavPortSocket": [
+      -1.25,
+      1.52,
+      -1.03
+    ],
+    "NavStarboardSocket": [
+      -1.25,
+      1.52,
+      1.03
+    ],
+    "NavTailSocket": [
+      -7.18,
+      3.47,
+      0
+    ],
+    "BeaconSocket": [
+      -0.97,
+      2.96,
+      0
+    ]
+  },
+  "native_editable_mesh_parts": 153,
+  "provenance": "Original project geometry; reuse license not selected by owner. Primary Airbus references for general proportions only; no logos/photos/downloaded mesh in outputs.",
+  "limitations": [
+    "Fictional cinematic game helicopter, not airworthy CAD or verified manufacturer replica.",
+    "No physics, AI pursuit, spotlight projection, audio or motion is baked; runtime integration is separate."
+  ],
+  "swept_bounds_three_m": {
+    "min": [
+      -7.64,
+      0,
+      -5.1160557526529145
+    ],
+    "max": [
+      4.766055752652915,
+      3.515,
+      5.1160557526529145
+    ]
+  },
+  "optional_blur_asset": {
+    "file": "helicopter_rotor_blur.glb",
+    "root": "HelicopterBlurRoot",
+    "main_node": "MainRotorBlur",
+    "tail_node": "TailRotorBlur",
+    "note": "Optional separate transparent geometry. Add at identical root transform; hide at stopped rotor and choose solid/blur visibility in runtime. No automatic animation."
+  },
+  "file": "helicopter_police.glb",
+  "sha256": "7f8cdcb032c8f1f9fb08fc19a5b785b2957596aae7532bc7cc84d7e9f96b999b",
+  "bytes": 1180800,
+  "triangles": 31846,
+  "draw_calls": 17,
+  "materials": 9,
+  "material_names": [
+    "Helicopter brushed titanium",
+    "Helicopter graphite composite",
+    "Helicopter ceramic white airframe",
+    "Helicopter police blue beacon",
+    "Helicopter police navy",
+    "Helicopter smoke canopy glazing",
+    "Helicopter red navigation lamp",
+    "Helicopter green navigation lamp",
+    "Helicopter white optical lens"
+  ],
+  "rigid_groups": {
+    "HELICOPTER_ROOT": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Airframe": {
+      "source_parts": 126,
+      "triangles": 29998,
+      "draw_calls": 9
+    },
+    "MainRotor": {
+      "source_parts": 13,
+      "triangles": 1076,
+      "draw_calls": 2
+    },
+    "TailRotor": {
+      "source_parts": 11,
+      "triangles": 116,
+      "draw_calls": 2
+    },
+    "SearchlightYaw": {
+      "source_parts": 2,
+      "triangles": 88,
+      "draw_calls": 1
+    },
+    "SearchlightPitch": {
+      "source_parts": 3,
+      "triangles": 568,
+      "draw_calls": 3
+    },
+    "SearchlightSocket": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "NavPortSocket": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "NavStarboardSocket": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "NavTailSocket": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "BeaconSocket": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    }
+  },
+  "degenerate_triangles_removed": 176,
+  "bounds_three_m": {
+    "min": [
+      -7.639999866485596,
+      0.0,
+      -4.790948390960693
+    ],
+    "max": [
+      4.440948486328125,
+      3.515000104904175,
+      4.790948390960693
+    ]
+  },
+  "float32_degenerate_triangles_removed": 8,
+  "invalid_runtime_corner_normals_repaired_from_incident_faces": 0,
+  "unused_normal_repairs": 0
+}

@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "sha256": "6bd44d31943050364b82f882bac602c29cc613a46923d7b2a9300c75be38e127",
+  "triangles": 192,
+  "draws": 2,
+  "optional_only": true,
+  "no_automatic_motion": true
+}

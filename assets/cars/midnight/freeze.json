@@ -1,0 +1,113 @@
+{
+  "id": "midnight",
+  "status": "FROZEN",
+  "utc": "2026-10-23T04:37:13.552890+00:00",
+  "geometry_sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+  "thumbnail_sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae",
+  "staged_public_geometry_and_manifest_and_thumbnail_identical": true,
+  "all_derived_qa_match_final_source": true,
+  "triangles": 75670,
+  "draw_calls": 30,
+  "editable_mesh_parts": 317,
+  "mechanical_scope": "756 combined body/tire poses;364 alloy/rotor/caliper rotations; sampled hood/door articulation; fixed wing; additional31 spin samples per wheel for caliper vertex distances. Not continuous mechanical proof.",
+  "render_scope": "CPU Blender actual-GLB front/rear/thumbnail visually inspected. Runtime browser integration tested separately by parent. No denoising backend available.",
+  "provenance": "Original reconstructed project geometry; reuse license not selected by owner. No manufacturer logos, reference photos, or downloaded geometry shipped.",
+  "files": {
+    "assets/cars/midnight/Midnight_Meridian_GT.blend": {
+      "sha256": "512166ed11291e920538d18eecfb3190cb2f891aee002fdfa742cd95f5a72bcd",
+      "bytes": 4368272
+    },
+    "assets/cars/midnight/car_midnight.glb": {
+      "sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+      "bytes": 3151648
+    },
+    "assets/cars/midnight/manifest.json": {
+      "sha256": "749a49aa882da135658d6819b59b89e9daf2f649af775ae5404845bf0a2bb734",
+      "bytes": 5294
+    },
+    "assets/cars/midnight/README.md": {
+      "sha256": "b28822b998ee4e958d0b4a9a29c3cf2b75d3c790701f18d755e1a6e7b4331491",
+      "bytes": 3248
+    },
+    "assets/cars/midnight/clean_export.py": {
+      "sha256": "8d105a2bcec47b2ca17de1e67d2a0bf9c8cf42ecc5239b8868917712fb9204a0",
+      "bytes": 3496
+    },
+    "assets/cars/midnight/validate_glb.mjs": {
+      "sha256": "45b64a9aa5123141342aa3a8dafd75c1c335a08656eaa366352899765bc492e4",
+      "bytes": 4051
+    },
+    "assets/cars/midnight/preview_front.png": {
+      "sha256": "20752a567daa488679e6f2575c74634fafa43b2d53ab85826898bb0608a82441",
+      "bytes": 1533506
+    },
+    "assets/cars/midnight/preview_rear.png": {
+      "sha256": "090f02ad466a2b7918eb4e718e53bade1368d887c369c013aae1d4f013b4e771",
+      "bytes": 1383396
+    },
+    "assets/cars/midnight/car_thumb_midnight.png": {
+      "sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae",
+      "bytes": 192976
+    },
+    "assets/cars/midnight/thumbnail_manifest.json": {
+      "sha256": "4041944d60eb5d869dd331317690ad7bcd721b226b8f6a34c9841b9c4db2cfbf",
+      "bytes": 800
+    },
+    "assets/cars/midnight/render_provenance.json": {
+      "sha256": "8460b84b90109e2d65ba73567b9f02df312c7ebfa480fcb564cb90cc69c72174",
+      "bytes": 1003
+    },
+    "blender/build_midnight.py": {
+      "sha256": "5305ff06c5587b738738df15674f8cd3ec40750e9ce0c12fbe0552c3938b4d51",
+      "bytes": 14273
+    },
+    "blender/rebuild_car_helpers.py": {
+      "sha256": "4d3a06f5e4e30e2dee38d54c21ca462b32c163c32943ba04fdba52d47b505ddb",
+      "bytes": 16775
+    },
+    "blender/test_rebuilt_car.py": {
+      "sha256": "50dfe552d0b5c5c88e67e14807ba010e658558340326aea65dcf8dfb6a2efa59",
+      "bytes": 5747
+    },
+    "blender/test_midnight_inspection.py": {
+      "sha256": "644cf441405e5d44234941eb0c1aa444a190fc4a1778bedbb9cf72a0d6ac34ed",
+      "bytes": 3329
+    },
+    "blender/measure_midnight_brake_gap.py": {
+      "sha256": "b4459d975e267fa0fbb3663ebafcf0f362ace376017bebd70ab50a240a0a6059",
+      "bytes": 1734
+    },
+    "blender/render_rebuilt_car.py": {
+      "sha256": "cf0ee66db6a489b673436b1bf0cf6630c60ce79c6c37c011208d6a408c10aab2",
+      "bytes": 3633
+    },
+    "assets/cars/midnight/brake_distance_validation.json": {
+      "sha256": "9b40cf210fc510e0f3f8dce5c338f52c7e8ce9e6f742ca680f3909de690f5161",
+      "bytes": 1204
+    },
+    "assets/cars/midnight/brake_validation.json": {
+      "sha256": "521ac6de98ea27253569a4ea4ae2deb557a554bfb0d4bc027e10763d0c1dab6c",
+      "bytes": 269
+    },
+    "assets/cars/midnight/glb_validation.json": {
+      "sha256": "8467377876d83825b4652b30dd2fc9ab68ef2b8d8800bd6cff574a10e3510010",
+      "bytes": 2367
+    },
+    "assets/cars/midnight/inspection_validation.json": {
+      "sha256": "4e9648618e6fcafeb6332acd1e6cb38a4ccbc93a0ebdeca84c11d25175a8b53f",
+      "bytes": 4827
+    },
+    "assets/cars/midnight/pose_validation.json": {
+      "sha256": "c60fd3ee935b1cd48c31bb1a5facb93d932b7147e1278e71ba06a78e03aa0826",
+      "bytes": 332
+    },
+    "assets/cars/midnight/source_validation.json": {
+      "sha256": "da146c6c5babfd2e4951f7af0c3737e25d5d3bb629b101079afbaf9df2d1027a",
+      "bytes": 766
+    },
+    "assets/cars/midnight/wing_validation.json": {
+      "sha256": "a884a1383ad2ad782377306a5434c1a6f162173b65c5a53138921e878403ed3d",
+      "bytes": 285
+    }
+  }
+}

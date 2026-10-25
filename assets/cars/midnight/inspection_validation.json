@@ -1,0 +1,189 @@
+{
+  "result": "PASS",
+  "source_glb_sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+  "articulation": [
+    {
+      "part": "Hood",
+      "angle_rad": 0,
+      "intersection_pairs": 70,
+      "intentional_closed_seal_contact": true,
+      "fixed_parts": [
+        "CarBody/Midnight satin carbon structure"
+      ]
+    },
+    {
+      "part": "Hood",
+      "angle_rad": 0.1,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "Hood",
+      "angle_rad": 0.2,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "Hood",
+      "angle_rad": 0.35,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "Hood",
+      "angle_rad": 0.5,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "Hood",
+      "angle_rad": 0.6,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "DoorHinge_Left",
+      "angle_rad": 0,
+      "intersection_pairs": 131,
+      "intentional_closed_seal_contact": true,
+      "fixed_parts": [
+        "CarBody/Crimson multi-coat | original fan concept"
+      ]
+    },
+    {
+      "part": "DoorHinge_Left",
+      "angle_rad": 0.1,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "DoorHinge_Left",
+      "angle_rad": 0.2,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "DoorHinge_Left",
+      "angle_rad": 0.35,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "DoorHinge_Left",
+      "angle_rad": 0.5,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "DoorHinge_Left",
+      "angle_rad": 0.7,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "DoorHinge_Right",
+      "angle_rad": 0,
+      "intersection_pairs": 131,
+      "intentional_closed_seal_contact": true,
+      "fixed_parts": [
+        "CarBody/Crimson multi-coat | original fan concept"
+      ]
+    },
+    {
+      "part": "DoorHinge_Right",
+      "angle_rad": 0.1,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "DoorHinge_Right",
+      "angle_rad": 0.2,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "DoorHinge_Right",
+      "angle_rad": 0.35,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "DoorHinge_Right",
+      "angle_rad": 0.5,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    },
+    {
+      "part": "DoorHinge_Right",
+      "angle_rad": 0.7,
+      "intersection_pairs": 0,
+      "intentional_closed_seal_contact": false,
+      "fixed_parts": []
+    }
+  ],
+  "vertex_clearances": [
+    {
+      "wheel": "Front_Left",
+      "steer_rad": -0.45,
+      "sampled_vertices": 1328,
+      "minimum_sampled_vertex_to_body_m": 0.05749978870153427
+    },
+    {
+      "wheel": "Front_Left",
+      "steer_rad": 0,
+      "sampled_vertices": 1328,
+      "minimum_sampled_vertex_to_body_m": 0.06848985701799393
+    },
+    {
+      "wheel": "Front_Left",
+      "steer_rad": 0.45,
+      "sampled_vertices": 1328,
+      "minimum_sampled_vertex_to_body_m": 0.05749969929456711
+    },
+    {
+      "wheel": "Front_Right",
+      "steer_rad": -0.45,
+      "sampled_vertices": 1328,
+      "minimum_sampled_vertex_to_body_m": 0.05749969929456711
+    },
+    {
+      "wheel": "Front_Right",
+      "steer_rad": 0,
+      "sampled_vertices": 1328,
+      "minimum_sampled_vertex_to_body_m": 0.06848987936973572
+    },
+    {
+      "wheel": "Front_Right",
+      "steer_rad": 0.45,
+      "sampled_vertices": 1328,
+      "minimum_sampled_vertex_to_body_m": 0.05749978870153427
+    },
+    {
+      "wheel": "Rear_Left",
+      "steer_rad": 0,
+      "sampled_vertices": 1328,
+      "minimum_sampled_vertex_to_body_m": 0.03361573442816734
+    },
+    {
+      "wheel": "Rear_Right",
+      "steer_rad": 0,
+      "sampled_vertices": 1328,
+      "minimum_sampled_vertex_to_body_m": 0.03361571207642555
+    }
+  ],
+  "scope": "Discrete exported-mesh angles and tire vertex distances; closed panel seals may intentionally meet. Not a continuous mechanical proof."
+}

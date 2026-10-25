@@ -1,0 +1,12 @@
+{
+  "game": "MALABAR: Hot Coast",
+  "version": "V17 R3.4",
+  "change": "Unified desktop/mobile UI and button theme; type a name to save a completed score in the device-local leaderboard.",
+  "leaderboard_scope": "This device/browser only; not an online global leaderboard.",
+  "runtime_tree_sha256": "65d21cf993666bf931573e72804cafd83998c6757c449788a1995277ed0845d7",
+  "tested_standalone_sha256": "e6a4c07ddb440a00b99840d337395a8678394a117389cb0a44b4b7f7c9405cdc",
+  "runtime_format": "Original byte-identical split runtime from frozen tested R3.4 source",
+  "local_checks": "53 full command stages, 93 JavaScript syntax checks, 106 embedded assets verified, all 138 protected baseline files exact.",
+  "native_menu_acceptance": "Passed isolated exact-artifact desktop 1222x619 and mobile 390x844 review; menu/navigation/theme/dock clearance checks.",
+  "limitations": "Completed-race name saving/persistence passed automated controller/model tests, not an actual completed native race. Actual GPU loss/restore, performance, audio listening and mobile driving acceptance remain unverified."
+}

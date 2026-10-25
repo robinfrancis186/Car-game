@@ -1,0 +1,104 @@
+{
+  "asset": "ServiceShowroomLoft",
+  "file": "ServiceShowroomLoft.glb",
+  "reconstructed": true,
+  "sha256": "c456852c1ea395381f133777affc2c1685938b2d434c02b191cc2da19b2b0fef",
+  "bytes": 2571276,
+  "triangles": 33802,
+  "draws": 13,
+  "native_source": "assets/showroom/ServiceShowroomLoft.blend",
+  "native_collection": "ServiceShowroomLoft",
+  "native_parts": 3810,
+  "degenerate_bevel_triangles_removed": 72,
+  "floor_y": 0,
+  "stage_y": 0,
+  "interior_footprint_m": [
+    20,
+    16
+  ],
+  "roof_y_m": [
+    6.25,
+    6.65
+  ],
+  "open_front_axis": "+Z",
+  "car_forward": "+X",
+  "car_included": false,
+  "hero_camera_three": [
+    7.5,
+    2.5,
+    8.5
+  ],
+  "hero_target_three": [
+    0,
+    0.75,
+    0
+  ],
+  "portrait_camera_three": [
+    8,
+    2.7,
+    9.2
+  ],
+  "lamp_anchors_three": [
+    {
+      "position": [
+        1,
+        5.6,
+        2
+      ],
+      "color": "#ffd2a0",
+      "intensity_hint": 1500
+    },
+    {
+      "position": [
+        -4,
+        4.7,
+        -3
+      ],
+      "color": "#d8edff",
+      "intensity_hint": 1700
+    },
+    {
+      "position": [
+        5,
+        5.5,
+        -4
+      ],
+      "color": "#fff2dc",
+      "intensity_hint": 1100
+    }
+  ],
+  "materials": [
+    "Loft_Polished_Basalt",
+    "Loft_Graphite_Steel",
+    "Loft_Pale_Limestone",
+    "Loft_Warm_Timber",
+    "Loft_Clear_Coastal_Glass",
+    "Loft_Warm_Luminous_Strips",
+    "Loft_Brushed_Brass",
+    "Loft_Palm_Leaf",
+    "Loft_Palm_Trunk",
+    "Loft_Coastal_Grass",
+    "Loft_Arabian_Sea",
+    "Loft_Coastal_Bank",
+    "Loft_Distant_Headland"
+  ],
+  "purpose": "Menu-only coastal loft with modeled exterior. No gameplay collision. Strip emission is decorative; runtime needs scene lights. Actual interactive car must be loaded independently.",
+  "provenance": "Original project geometry and original mathematical microstructure maps; reuse license not selected by owner. No downloaded geometry or reference pixels embedded.",
+  "revision": "V13 bounded believable-material and coastal-foliage refinement",
+  "pbr_microstructure": {
+    "material": "Loft_Polished_Basalt",
+    "original_maps_px": [
+      128,
+      128
+    ],
+    "uv_period_m": 0.38,
+    "roughness_range": [
+      0.308,
+      0.372
+    ],
+    "metallic": 0.07,
+    "normal_scale": 0.3,
+    "images_embedded": true
+  },
+  "camera_volume_preserved": true
+}

@@ -1,0 +1,70 @@
+{
+  "result": "PASS",
+  "file": "car_verdant.glb",
+  "sha256": "3673317b5c67c99dab5c8797de58ab3431af2edb13b393e70110c49903175b29",
+  "checks": [
+    {
+      "name": "root and distinct body part hierarchy",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Front_Left",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Front_Right",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Rear_Left",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Rear_Right",
+      "result": "PASS"
+    },
+    {
+      "name": "finite geometry and model budget",
+      "result": "PASS"
+    },
+    {
+      "name": "every indexed triangle nondegenerate; normals finite/unit length",
+      "result": "PASS"
+    },
+    {
+      "name": "metre bounds and ground contact",
+      "result": "PASS"
+    }
+  ],
+  "triangles": 80162,
+  "draw_calls": 30,
+  "material_names": [
+    "Verdant | dark champagne forged alloy",
+    "Verdant | curved smoke canopy glazing",
+    "Verdant | satin exposed aero carbon",
+    "Verdant | forest charcoal suede",
+    "Crimson multi-coat | original fan concept",
+    "Verdant | white projector light guides",
+    "LED ruby red | verdant rear lamps",
+    "Verdant | projector optical cover",
+    "Tire rubber | verdant compound"
+  ],
+  "nondegenerate_triangles_checked": 80162,
+  "bounds": {
+    "min": [
+      -2.4056291580200195,
+      0.001896888017654419,
+      -1.1306406259536743
+    ],
+    "max": [
+      2.4000000953674316,
+      1.231824517250061,
+      1.1306406259536743
+    ],
+    "size": [
+      4.805629253387451,
+      1.2299276292324066,
+      2.2612812519073486
+    ]
+  }
+}

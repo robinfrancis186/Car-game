@@ -43,4 +43,4 @@ This particular Blender build has no OpenImageDenoise support, so CPU renders di
 
 ## License
 
-Original environment geometry and generated material definitions are dedicated under CC0 1.0 (`LICENSE.txt`). No Tesla marks or third-party licensed content occur in this library.
+Original environment geometry and generated material definitions were created for this project. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. See `LICENSE.txt`. No Tesla marks or third-party licensed content occur in this library.

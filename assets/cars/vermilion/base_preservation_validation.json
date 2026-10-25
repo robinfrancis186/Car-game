@@ -1,0 +1,23 @@
+{
+  "scope": "Known prior frozen runtime car bytes versus recovered base files; no whole-source recovery claim.",
+  "checks": [
+    {
+      "path": "web/public/assets/car.glb",
+      "expected_prior_frozen_sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9",
+      "actual_sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9",
+      "match": true
+    },
+    {
+      "path": "web/public/assets/car_silver.glb",
+      "expected_prior_frozen_sha256": "3bec86298c9c22a7e1e91deeff4ef2a614744cadf170e9abea2855f2ec82a749",
+      "actual_sha256": "3bec86298c9c22a7e1e91deeff4ef2a614744cadf170e9abea2855f2ec82a749",
+      "match": true
+    },
+    {
+      "path": "web/public/assets/car_touring.glb",
+      "expected_prior_frozen_sha256": "dc6d4bc67ad61ef7c9f74ce4f5e92bf64cf491373c19b75b998a8ccc889bc8d7",
+      "actual_sha256": "dc6d4bc67ad61ef7c9f74ce4f5e92bf64cf491373c19b75b998a8ccc889bc8d7",
+      "match": true
+    }
+  ]
+}

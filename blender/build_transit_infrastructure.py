@@ -175,7 +175,7 @@ for a in assets.values():
 # Source library stores every architectural part, not only merged runtime meshes.
 scene.world.color=(.35,.42,.45)
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'Kerala_Transit_Infrastructure.blend'))
-manifest={'generator':'blender/build_transit_infrastructure.py','blender':bpy.app.version_string,'license':'Original procedural geometry, CC0 dedication; no third-party model/texture data. Architectural cues from official sources in research/KERALA_INFRASTRUCTURE_REFERENCES.md. Generic names, no affiliation.','axes':'Source Blender X forward,Y left,Z up. GLB X forward,Y up,-Z left; root transforms identity.','assets':{}}
+manifest={'generator':'blender/build_transit_infrastructure.py','blender':bpy.app.version_string,'license':'Original procedural geometry. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses.  no third-party model/texture data. Architectural cues from official sources in research/KERALA_INFRASTRUCTURE_REFERENCES.md. Generic names, no affiliation.','axes':'Source Blender X forward,Y left,Z up. GLB X forward,Y up,-Z left; root transforms identity.','assets':{}}
 # Convert copies, apply edge bevels, then merge exactly per material.
 for name,a in assets.items():
  bpy.ops.object.select_all(action='DESELECT');temps=[]
@@ -204,7 +204,7 @@ for name,a in assets.items():
  for o in merged:bpy.data.objects.remove(o,do_unlink=True)
  print('TRANSIT_INFRA',name,tris,'triangles',len(groups),'materials')
 for p in [OUT/'manifest.json',WEB/'transit_infrastructure_manifest.json',PUBLIC/'transit_infrastructure_manifest.json']:p.write_text(json.dumps(manifest,indent=2))
-(OUT/'LICENSE.txt').write_text('Original procedural geometry authored for this project, dedicated to CC0 1.0 Universal. No third-party model or texture data is included. Architectural inspiration does not imply operator affiliation. Keep OSM attribution separately for route-derived placement data.\n')
+(OUT/'LICENSE.txt').write_text('Original procedural geometry authored for this project. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. No third-party model or texture data is included. Architectural inspiration does not imply operator affiliation. Keep OSM attribution separately for route-derived placement data.\n')
 # Optional individual CPU previews; preserve native source before preview setup.
 if '--render' in sys.argv:
  world=bpy.data.worlds.new('TransitPreviewWorld');world.use_nodes=True;world.node_tree.nodes.get('Background').inputs[0].default_value=(.45,.57,.65,1);world.node_tree.nodes.get('Background').inputs[1].default_value=.45;scene.world=world

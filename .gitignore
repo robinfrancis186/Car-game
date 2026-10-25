@@ -24,3 +24,15 @@ logs/
 references/user_*/
 references/user_reference_library_ids.json
 research/
+# Additional reproducible outputs and local tooling
+.npm-cache/
+.vercel/
+*.zip
+web/tests/*_metrics.json
+tests/v17/preservation-report.json
+tools/ui-review-r3-1/source-anchors.json
+tools/ui-review-r3-1/v17-ui-preview.html
+tools/scene-proof-r3/menu-isolation-results.json
+tests/STORY_MODEL_RESULTS.json
+tests/ui_audit_v14_1/play_hero_projection.json
+tests/**/*metrics.json

@@ -1,33 +1,58 @@
-/** Original local-only progression. No accounts, paid currency or server economy. */
-export const STARTER_CREDITS=1200,MAX_UPGRADE_LEVEL=3;
+/** Original device-local progression. No accounts, paid currency or online authority. */
+export const STARTER_CREDITS=0,MAX_UPGRADE_LEVEL=3;
 export const UPGRADE_COSTS=Object.freeze([300,600,1000]);
-export const CAR_IDS=Object.freeze(['red','silver']);
+export const BRAKE_CALIPER_COLORS=Object.freeze(['#d63232','#d63232','#ff8b2f','#9c65ff']);
+export const CAR_CATALOG=Object.freeze({
+ red:Object.freeze({asset:'car.glb',thumbnail:'car_thumb_red.png',displayColor:'#b61920',audioProfile:'electric',name:'CRIMSON ROADSTER',price:0,maxSteer:.57,topSpeedMps:68,acceleration:1,grip:1,mass:1450,statsLabel:'BALANCED ELECTRIC'}),
+ silver:Object.freeze({asset:'car_silver.glb',thumbnail:'car_thumb_silver.png',displayColor:'#c8ccce',audioProfile:'electric',name:'SILVER ROADSTER',price:0,maxSteer:.4,topSpeedMps:68,acceleration:1,grip:1,mass:1450,statsLabel:'THRUSTER CONCEPT'}),
+ touring:Object.freeze({asset:'car_touring.glb',thumbnail:'car_thumb_touring.png',displayColor:'#a8afb6',audioProfile:'touring',name:'AZURE TOURING GT',price:5000,maxSteer:.45,topSpeedMps:66.5,acceleration:1.02,grip:1.07,mass:1380,statsLabel:'GRIP-FOCUSED COUPE'}),
+ vermilion:Object.freeze({asset:'car_vermilion.glb',thumbnail:'car_thumb_vermilion.png',displayColor:'#bd1723',audioProfile:'vermilion',boostMounts:[[-2.4,.255,-.56],[-2.4,.255,.56]],name:'VERMILION BUTTERFLY GT',price:8000,maxSteer:.45,topSpeedMps:72.5,acceleration:1.06,grip:1.03,mass:1380,statsLabel:'AGILE HYPERCAR'}),
+ bronze:Object.freeze({asset:'car_bronze.glb',thumbnail:'car_thumb_bronze.png',displayColor:'#b57d3f',audioProfile:'bronze',boostMounts:[[-2.4,.26,-.56],[-2.4,.26,.56]],name:'BRONZE APEX',price:9500,maxSteer:.45,topSpeedMps:74.5,acceleration:1.12,grip:.97,mass:1550,statsLabel:'HIGH-TORQUE COUPE'}),
+ verdant:Object.freeze({asset:'car_verdant.glb',thumbnail:'car_thumb_verdant.png',displayColor:'#6c975b',audioProfile:'verdant',boostMounts:[[-2.4,.255,-.56],[-2.4,.255,.56]],name:'VERDANT CANOPY GT',price:12000,maxSteer:.45,topSpeedMps:70.5,acceleration:1.04,grip:1.13,mass:1250,statsLabel:'LIGHTWEIGHT CORNERING'}),
+ midnight:Object.freeze({asset:'car_midnight.glb',thumbnail:'car_thumb_midnight.png',displayColor:'#293a51',audioProfile:'midnight',boostMounts:[[-2.4,.255,-.56],[-2.4,.255,.56]],name:'MIDNIGHT MERIDIAN GT',price:14500,maxSteer:.45,topSpeedMps:77,acceleration:1.08,grip:1.05,mass:1500,statsLabel:'HIGH-SPEED GRAND TOURER'})
+});
+export const CAR_IDS=Object.freeze(Object.keys(CAR_CATALOG));
 export const UPGRADE_CATALOG=Object.freeze({
  speed:Object.freeze({label:'TOP SPEED',description:'+3% speed limits per level'}),
  acceleration:Object.freeze({label:'ACCELERATION',description:'+5% forward motor acceleration per level'}),
  handling:Object.freeze({label:'CORNER GRIP',description:'+3% paved-road grip and lateral damping per level'}),
- boost:Object.freeze({label:'BOOST SYSTEM',description:'More efficient regular boost and quicker ultra recharge'})
+ boost:Object.freeze({label:'BOOST SYSTEM',description:'More efficient regular boost and quicker ultra recharge'}),
+ braking:Object.freeze({label:'BRAKING',description:'+8% grounded service-brake strength per level · L0/1 red · L2 orange · L3 violet'})
 });
 const bounded=(v,lo,hi,fallback=0)=>typeof v==='number'&&Number.isFinite(v)?Math.max(lo,Math.min(hi,Math.floor(v))):fallback;
 const validRunId=id=>typeof id==='string'&&/^[A-Za-z0-9_.:-]{1,128}$/.test(id);
+const validCar=id=>CAR_IDS.includes(id);
 export function sanitizeUpgrades(raw={}){const result={};for(const key of Object.keys(UPGRADE_CATALOG))result[key]=bounded(raw&&Object.hasOwn(raw,key)?raw[key]:0,0,MAX_UPGRADE_LEVEL);return result;}
-export function getUpgradeStats(raw={}){const u=sanitizeUpgrades(raw),speed=1+u.speed*.03,boost=1+u.boost*.1;return{
- topSpeedMps:68*speed,regularBoostMaxSpeedMps:83*speed,ultraBoostMaxSpeedMps:97*speed,
- accelerationMultiplier:1+u.acceleration*.05,gripMultiplier:1+u.handling*.03,
- boostEfficiency:boost,boostRechargeMultiplier:1+u.boost*.08,
- ultraDuration:1.25*(1+u.boost*.08),ultraCooldownSeconds:8/boost,ultraRechargePerSecond:.06*boost
-};}
-export function createProfile(){return{schemaVersion:1,credits:STARTER_CREDITS,cars:{red:sanitizeUpgrades(),silver:sanitizeUpgrades()},awardedRuns:[]};}
+export function getUpgradeStats(raw={},carId='red'){
+ const vehicleId=validCar(carId)?carId:'red',base=CAR_CATALOG[vehicleId],u=sanitizeUpgrades(raw),speed=(1+u.speed*.03)*base.topSpeedMps/68,boost=1+u.boost*.1;
+ return {vehicleId,maxSteer:base.maxSteer,mass:base.mass,topSpeedMps:68*speed,regularBoostMaxSpeedMps:83*speed,ultraBoostMaxSpeedMps:97*speed,
+ accelerationMultiplier:base.acceleration*(1+u.acceleration*.05),gripMultiplier:base.grip*(1+u.handling*.03),
+ brakingLevel:u.braking,brakingMultiplier:1+u.braking*.08,brakeDecelerationMps2:24*(1+u.braking*.08),brakeCaliperColor:BRAKE_CALIPER_COLORS[u.braking],aeroTrimLevel:u.handling,
+ boostEfficiency:boost,boostRechargeMultiplier:1+u.boost*.08,ultraDuration:1.25*(1+u.boost*.08),ultraCooldownSeconds:8/boost,ultraRechargePerSecond:.06*boost};
+}
+export function createProfile(){return{schemaVersion:2,credits:STARTER_CREDITS,cars:Object.fromEntries(CAR_IDS.map(id=>[id,sanitizeUpgrades()])),ownedCars:['red','silver'],selectedCar:'red',awardedRuns:[]};}
 export const resetProfile=createProfile;
 export function validateProfile(raw){
  const p=createProfile();if(!raw||typeof raw!=='object'||Array.isArray(raw))return p;
+ // Version-one saves retain every earned/starter coin and both existing cars.
  p.credits=bounded(raw.credits,0,999999,STARTER_CREDITS);
- for(const id of CAR_IDS)p.cars[id]=sanitizeUpgrades(raw.cars&&Object.hasOwn(raw.cars,id)?raw.cars[id]:{});
+ if(Array.isArray(raw.ownedCars))for(const id of raw.ownedCars)if(validCar(id)&&!p.ownedCars.includes(id))p.ownedCars.push(id);
+ for(const id of CAR_IDS)p.cars[id]=sanitizeUpgrades(p.ownedCars.includes(id)&&raw.cars&&Object.hasOwn(raw.cars,id)?raw.cars[id]:{});
+ if(p.ownedCars.includes(raw.selectedCar))p.selectedCar=raw.selectedCar;
  if(Array.isArray(raw.awardedRuns))p.awardedRuns=[...new Set(raw.awardedRuns.slice(-256).filter(validRunId))];return p;
 }
-export function getCarModifiers(profile,carId){const p=validateProfile(profile),u=p.cars[CAR_IDS.includes(carId)?carId:'red'];return{upgrades:{...u},...getUpgradeStats(u)};}
+export function isCarOwned(profile,carId){return validCar(carId)&&validateProfile(profile).ownedCars.includes(carId);}
+export function selectOwnedCar(profile,carId){const p=validateProfile(profile);if(!validCar(carId))return{ok:false,profile:p,reason:'invalid-car'};if(!p.ownedCars.includes(carId))return{ok:false,profile:p,reason:'car-locked'};p.selectedCar=carId;return{ok:true,profile:p,reason:null};}
+export function purchaseCar(profile,carId){
+ const p=validateProfile(profile);if(!validCar(carId))return{ok:false,profile:p,reason:'invalid-car',cost:0};
+ const cost=CAR_CATALOG[carId].price;if(p.ownedCars.includes(carId))return{ok:false,profile:p,reason:'already-owned',cost:0};
+ if(p.credits<cost)return{ok:false,profile:p,reason:'insufficient-credits',cost};
+ p.credits-=cost;p.ownedCars.push(carId);p.selectedCar=carId;return{ok:true,profile:p,reason:null,cost,carId};
+}
+export function getCarModifiers(profile,carId){const p=validateProfile(profile),id=validCar(carId)?carId:'red',u=p.cars[id];return{upgrades:{...u},...getUpgradeStats(u,id)};}
 export function purchaseUpgrade(profile,carId,stat){
- const p=validateProfile(profile);if(!CAR_IDS.includes(carId)||!Object.hasOwn(UPGRADE_CATALOG,stat))return{ok:false,profile:p,reason:'invalid-upgrade',cost:0,level:0};
+ const p=validateProfile(profile);if(!validCar(carId)||!Object.hasOwn(UPGRADE_CATALOG,stat))return{ok:false,profile:p,reason:'invalid-upgrade',cost:0,level:0};
+ if(!p.ownedCars.includes(carId))return{ok:false,profile:p,reason:'car-locked',cost:0,level:0};
  const level=p.cars[carId][stat];if(level>=MAX_UPGRADE_LEVEL)return{ok:false,profile:p,reason:'max-level',cost:0,level};
  const cost=UPGRADE_COSTS[level];if(p.credits<cost)return{ok:false,profile:p,reason:'insufficient-credits',cost,level};
  p.credits-=cost;p.cars[carId][stat]++;return{ok:true,profile:p,reason:null,cost,level:level+1};
@@ -38,8 +63,12 @@ export function rewardForResult(result){
  return(result.position===1?500:350)+(result.scenario==='hot-pursuit'?100:0);
 }
 export function awardResult(profile,result,runId){
- const p=validateProfile(profile);if(!validRunId(runId))return{ok:false,profile:p,reward:0,reason:'invalid-run'};
- if(p.awardedRuns.includes(runId))return{ok:false,profile:p,reward:0,reason:'already-awarded'};
- const reward=rewardForResult(result);if(!reward)return{ok:false,profile:p,reward:0,reason:'no-reward'};
- const credited=Math.min(reward,999999-p.credits);p.credits+=credited;p.awardedRuns=[...p.awardedRuns,runId].slice(-256);return{ok:true,profile:p,reward:credited,reason:null};
+ const p=validateProfile(profile),none=reason=>({ok:false,profile:p,reward:0,finishReward:0,collectedReward:0,reason});
+ if(!validRunId(runId))return none('invalid-run');if(p.awardedRuns.includes(runId))return none('already-awarded');
+ const finish=rewardForResult(result);if(!finish)return none('no-reward');
+ // Pickups are banked only with a valid completed race. Recovery never pays or
+ // resets their run ledger. The local profile is not trusted by multiplayer.
+ const collected=bounded(result.collectedCoins,0,600),capacity=999999-p.credits;
+ const finishReward=Math.min(finish,capacity),collectedReward=Math.min(collected,capacity-finishReward),reward=finishReward+collectedReward;
+ p.credits+=reward;p.awardedRuns=[...p.awardedRuns,runId].slice(-256);return{ok:true,profile:p,reward,finishReward,collectedReward,reason:null};
 }

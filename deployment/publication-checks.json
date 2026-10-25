@@ -1,0 +1,24 @@
+{
+  "release": "V17 R3.4",
+  "checked_utc": "2026-10-25",
+  "full_npm_test": "PASS on restored exact source and again on sanitized publication tree",
+  "command_stages": 53,
+  "javascript_syntax_files": 120,
+  "python_syntax_files": 131,
+  "standalone": {
+    "result": "PASS",
+    "scope": "Built bytes and embedded inventory; no rendering or GPU assertion",
+    "standalone_bytes": 72240512,
+    "standalone_sha256": "e6a4c07ddb440a00b99840d337395a8678394a117389cb0a44b4b7f7c9405cdc",
+    "embedded_assets_byte_identical": 106,
+    "font_embedded_exact": true,
+    "bundle_embedded_exact": true,
+    "third_party_notices_preserved": true
+  },
+  "public_static_files_byte_identical": 151,
+  "frozen_runtime_files_byte_identical": 147,
+  "protected_baseline_files_byte_identical": 138,
+  "native_source_files_byte_identical_to_archive": 45,
+  "native_privacy_audit": "All 45 scenes reopened with scripts disabled; no private references, secrets, linked libraries or embedded text scripts.",
+  "no_external_deployment_changes": true
+}

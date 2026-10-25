@@ -1,0 +1,28 @@
+{
+  "source_glb_sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+  "images": {
+    "front": {
+      "path": "assets/cars/midnight/preview_front.png",
+      "sha256": "20752a567daa488679e6f2575c74634fafa43b2d53ab85826898bb0608a82441",
+      "samples": 48,
+      "denoising": false,
+      "visual_inspection": "PASS"
+    },
+    "rear": {
+      "path": "assets/cars/midnight/preview_rear.png",
+      "sha256": "090f02ad466a2b7918eb4e718e53bade1368d887c369c013aae1d4f013b4e771",
+      "samples": 64,
+      "denoising": false,
+      "visual_inspection": "PASS"
+    },
+    "thumb": {
+      "path": "assets/cars/midnight/car_thumb_midnight.png",
+      "sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae",
+      "samples": 128,
+      "denoising": false,
+      "visual_inspection": "PASS"
+    }
+  },
+  "source": "Actual final GLB imported into Blender; CPU Cycles studio renders, not gameplay. No reference images or AI painting.",
+  "reconstruction": true
+}

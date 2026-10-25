@@ -1,0 +1,77 @@
+{
+  "result": "PASS",
+  "scope": "Actual GLB geometry/rig comparison; no GPU or browser render claim.",
+  "checks": [
+    {
+      "name": "Every existing rig/root/socket retained without transform or parent changes",
+      "result": "PASS"
+    },
+    {
+      "name": "Existing wheel positions and all wheel mesh vertices unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "Finite unit normals and nonzero-area float32 triangle indices",
+      "result": "PASS"
+    },
+    {
+      "name": "Bounds retain footprint and ground contact",
+      "result": "PASS"
+    },
+    {
+      "name": "Exact paint API and neutral authored glazing exported",
+      "result": "PASS"
+    },
+    {
+      "name": "Four wheel spin axes retain fixed calipers",
+      "result": "PASS"
+    }
+  ],
+  "sha256": "5a9cfbd45b85378bbacabd6a191556cb2b6ce950e6fdb5b1d9ac4cbe0d0b192f",
+  "triangles": 34460,
+  "draws": 30,
+  "materials": [
+    "Silver concept | satin carbon aero",
+    "Crimson multi-coat | original fan concept",
+    "Silver concept | laser white running light",
+    "Silver concept | shadow panel gaps",
+    "Silver concept | neutral smoked glazing",
+    "Silver concept | charcoal sport upholstery",
+    "Silver concept | ceramic rear plate",
+    "Silver concept | machined nozzle titanium",
+    "Silver concept | rear red ribbon",
+    "Brake caliper red",
+    "Carbon ceramic rotor",
+    "Machined graphite aluminum",
+    "Diamond cut rim edges",
+    "Tire rubber"
+  ],
+  "degenerateTriangles": 0,
+  "invalidNormals": 0,
+  "bounds": {
+    "before": {
+      "min": [
+        -2.2799999713897705,
+        0.001954197883605957,
+        -1.135156512260437
+      ],
+      "max": [
+        2.3399999141693115,
+        1.3428335189819336,
+        1.135156512260437
+      ]
+    },
+    "after": {
+      "min": [
+        -2.2799999713897705,
+        0.001954197883605957,
+        -1.135156512260437
+      ],
+      "max": [
+        2.3399999141693115,
+        1.3428335189819336,
+        1.135156512260437
+      ]
+    }
+  }
+}

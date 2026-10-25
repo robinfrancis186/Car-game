@@ -1,0 +1,48 @@
+{
+  "id": "helicopter_rotor_blur",
+  "purpose": "Optional transparent main/tail rotor annuli, no motion or default visibility baked. Align root with base helicopter.",
+  "native_source": "assets/helicopter/Rotor_Blur_LOD.blend",
+  "provenance": "Original project geometry; reuse license not selected by owner.",
+  "file": "helicopter_rotor_blur.glb",
+  "sha256": "6bd44d31943050364b82f882bac602c29cc613a46923d7b2a9300c75be38e127",
+  "bytes": 10180,
+  "triangles": 192,
+  "draw_calls": 2,
+  "materials": 1,
+  "material_names": [
+    "Helicopter optional rotor blur"
+  ],
+  "rigid_groups": {
+    "HelicopterBlurRoot": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "MainRotorBlur": {
+      "source_parts": 1,
+      "triangles": 128,
+      "draw_calls": 1
+    },
+    "TailRotorBlur": {
+      "source_parts": 1,
+      "triangles": 64,
+      "draw_calls": 1
+    }
+  },
+  "degenerate_triangles_removed": 0,
+  "bounds_three_m": {
+    "min": [
+      -7.389999866485596,
+      1.3600000143051147,
+      -5.119999885559082
+    ],
+    "max": [
+      4.769999980926514,
+      3.3499999046325684,
+      5.119999885559082
+    ]
+  },
+  "float32_degenerate_triangles_removed": 0,
+  "invalid_runtime_corner_normals_repaired_from_incident_faces": 0,
+  "unused_normal_repairs": 0
+}

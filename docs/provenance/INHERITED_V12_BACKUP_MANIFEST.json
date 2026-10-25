@@ -1,0 +1,2773 @@
+{
+  "kind": "Complete reconstructed source backup, not public publication authorization",
+  "private_user_reference_images_included": false,
+  "dependencies": "npm ci --ignore-scripts from pinned web/package-lock.json; vendored runtime Three/font files are included",
+  "generated_dist_omitted": "Reproduce via npm run build; frozen expected standalone hash in tests/release/V12_REBUILD_RELEASE.json",
+  "files": [
+    {
+      "path": "web/build-standalone.mjs",
+      "bytes": 2225,
+      "sha256": "086c9275a5bcd391b6d6d1f56b3a70bd9f11fa19395015b4592eb036d2d1fd65"
+    },
+    {
+      "path": "web/build-ui-frame.mjs",
+      "bytes": 5287,
+      "sha256": "96a25a6d8d6aa0ac0dfc874046bd9541c835816ffe34de9c41f4ea9a959cf43e"
+    },
+    {
+      "path": "web/build-ui-preview.mjs",
+      "bytes": 21564,
+      "sha256": "dffd2e42b2c34b1e8eb1efb3c0f02b51b4ed7fab5e0f4c6fa349f3f954bcc80b"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 27130,
+      "sha256": "cc06c0d0f43966cd475534b673e4007b3e9ca817cc06c8f27ec045e4c3d26f24"
+    },
+    {
+      "path": "web/package-lock.json",
+      "bytes": 16961,
+      "sha256": "7b430377827053f4f17ae6fc7d66eba7e89822604a27a05159896e31472c252b"
+    },
+    {
+      "path": "web/package.json",
+      "bytes": 1324,
+      "sha256": "ee3432648ec75e29c203aaff55faf3f8bce343a275b209baef66d7477f02608c"
+    },
+    {
+      "path": "web/public/assets/ArcadeBoostNozzle.glb",
+      "bytes": 20100,
+      "sha256": "e8abbd20c0f3f58aa19362a46e24a3304d3c489cad0ded8a748eb45a58e7373a"
+    },
+    {
+      "path": "web/public/assets/ArcadeCoin.glb",
+      "bytes": 78592,
+      "sha256": "f8bc943f206e8d65df4b76ce7e3bdf682b4ea8d4262cca739994e3822bb8219d"
+    },
+    {
+      "path": "web/public/assets/BeachSandPatch.glb",
+      "bytes": 6008,
+      "sha256": "e245aeb570e66e2b102a87ebada2875088405d15f1b6ad6272d83e01e27786a6"
+    },
+    {
+      "path": "web/public/assets/BirdRockLookout.glb",
+      "bytes": 851348,
+      "sha256": "fc56f83750391acd9130c1ff6fb174863c53d617faf176bbe90ec755a9936c29"
+    },
+    {
+      "path": "web/public/assets/CanalRainTree.glb",
+      "bytes": 896688,
+      "sha256": "eeeb6fa9b3daa71a96544b8509e83bd41da156da0c50697ea232d0d048c7840c"
+    },
+    {
+      "path": "web/public/assets/CanalRainTreeFar.glb",
+      "bytes": 343648,
+      "sha256": "03514da6bf2bde6a411a96447087eb5dc77c050fd409792773023b3e68207b83"
+    },
+    {
+      "path": "web/public/assets/CanalShikara.glb",
+      "bytes": 388464,
+      "sha256": "2b4dc502eb3556a9a242843b08e1296903bd2d0c20a20584ebfb1eeebbc01f9d"
+    },
+    {
+      "path": "web/public/assets/CheckpointGate.glb",
+      "bytes": 18420,
+      "sha256": "ec6cac7fd5719511c55cb9486e203259706b278adf4415f03e489912c24ea5eb"
+    },
+    {
+      "path": "web/public/assets/CheckpointGate_manifest.json",
+      "bytes": 888,
+      "sha256": "e975931a99c9f84cea48cebfecc28b3fcf47e935c83d075e03035d911db98f48"
+    },
+    {
+      "path": "web/public/assets/ChineseFishingNet.glb",
+      "bytes": 50592,
+      "sha256": "06bd5c254021ea19de75425a1bd9a04bf2fc1188b629df917ed29dd0438966da"
+    },
+    {
+      "path": "web/public/assets/CoconutPalm_A.glb",
+      "bytes": 224516,
+      "sha256": "951687c70bf508edd8ce8e18a92dfaf940f1c4f812a58a85342a29787450b756"
+    },
+    {
+      "path": "web/public/assets/CoconutPalm_A_LOD1.glb",
+      "bytes": 80596,
+      "sha256": "0e1a429bcf97354b8e75bd89f6391c4f79b773232abf7a09685535ce1889b2c0"
+    },
+    {
+      "path": "web/public/assets/CoconutPalm_B.glb",
+      "bytes": 224520,
+      "sha256": "194f42c0bd580d560f161fcc212653c811f742846e2916af973ae60638c97929"
+    },
+    {
+      "path": "web/public/assets/CoconutPalm_B_LOD1.glb",
+      "bytes": 80448,
+      "sha256": "1877656fb8483aff4f5e24fbd57dbaa7b42282026142121ef3f441074620aa08"
+    },
+    {
+      "path": "web/public/assets/Course_Furniture.glb",
+      "bytes": 2463984,
+      "sha256": "d669e76ebdb97d0c7d54afbd22120ad0691e3f42e349357adb419a08eea0b419"
+    },
+    {
+      "path": "web/public/assets/Course_Road.glb",
+      "bytes": 587484,
+      "sha256": "b738a94a13a3092f1bb3f38692d7095b5ebf2d3b806d49e4f83d72d14768d0d4"
+    },
+    {
+      "path": "web/public/assets/Course_Terrain.glb",
+      "bytes": 46800,
+      "sha256": "8316812e396a0037f31e8939c2b032f62f3baed2ade821aa9c0fb579a1751ef5"
+    },
+    {
+      "path": "web/public/assets/Course_Water.glb",
+      "bytes": 101696,
+      "sha256": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678"
+    },
+    {
+      "path": "web/public/assets/FishingBoat.glb",
+      "bytes": 82276,
+      "sha256": "5f2324b7d85b119c6be6075aceba39a60a8d01d300fb72b33c3bc2fcf5a06815"
+    },
+    {
+      "path": "web/public/assets/HighlandGateway.glb",
+      "bytes": 44588,
+      "sha256": "ae28c1b8aa25caa114394f1521b233137b3e93db6a8d669fcd9b810d45d6727b"
+    },
+    {
+      "path": "web/public/assets/HighlandShadeTree.glb",
+      "bytes": 28136,
+      "sha256": "d296a0d3bbee7882d416692cfddb16db8d5358b678ad1273aaf865ba5547d887"
+    },
+    {
+      "path": "web/public/assets/HighlandShadeTreeNear.glb",
+      "bytes": 603220,
+      "sha256": "bc3424361b0a3c9049d28d7ef87f0faa892f38de99b110f8b14dc3659f20b640"
+    },
+    {
+      "path": "web/public/assets/Highlands_Furniture.glb",
+      "bytes": 1997244,
+      "sha256": "cf42589d69f7f84dada88aeb114bf14444b4e4fef86e430e9c29d7a6e7ccb33a"
+    },
+    {
+      "path": "web/public/assets/Highlands_Road.glb",
+      "bytes": 1349040,
+      "sha256": "3d16cf6fb9258002e81b35015beca7fe5195a2324a3e7114360acdb6a13bffd1"
+    },
+    {
+      "path": "web/public/assets/Highlands_Tea.glb",
+      "bytes": 5242768,
+      "sha256": "776d39a52fe9a44d439ee58bf117f5d763a5bbb0041ba7bb5c556bf08622fbdc"
+    },
+    {
+      "path": "web/public/assets/Highlands_Terrain.glb",
+      "bytes": 4205060,
+      "sha256": "72485921b4ec72da499fc1d2b0bdda8ebac5678d2ad92c4574d93c0e3a9ad5c8"
+    },
+    {
+      "path": "web/public/assets/KeralaApartment_A.glb",
+      "bytes": 115304,
+      "sha256": "69513c6040528422e9ac31004c1186d539059a5184dc90ee8a26d374ccc046e6"
+    },
+    {
+      "path": "web/public/assets/KeralaHouse.glb",
+      "bytes": 382716,
+      "sha256": "ac29c493be0079ae4fa548dcbb14e29e9f7d262b0341826b98fb030f84178eef"
+    },
+    {
+      "path": "web/public/assets/KeralaHouseboat.glb",
+      "bytes": 260220,
+      "sha256": "2153db39d79b9738f7c5dfb0caa79a9e2d92ccdec6ffa415354de2ce791f54b5"
+    },
+    {
+      "path": "web/public/assets/KeralaOffice_A.glb",
+      "bytes": 65980,
+      "sha256": "d05616e4d0d35fb804d8502f3e02298b03aba52e8dba9b9e4b65297a0f807756"
+    },
+    {
+      "path": "web/public/assets/KeralaShopRow_A.glb",
+      "bytes": 66532,
+      "sha256": "a44bb678067c14b0184426f0b546dbddc8155dced337805c41308e5f8b20b819"
+    },
+    {
+      "path": "web/public/assets/KeralaShopRow_B.glb",
+      "bytes": 32180,
+      "sha256": "3c4184ea08cdf010b19260bc21c340c8d4d66f534d6844089f59ac60d37556da"
+    },
+    {
+      "path": "web/public/assets/KeralaTeaStall.glb",
+      "bytes": 24584,
+      "sha256": "2897ac5ced8aac9ebbd583ae70bceb4bec3560a99b6b87fc600e777bf1caf8c0"
+    },
+    {
+      "path": "web/public/assets/MetroStation.glb",
+      "bytes": 316972,
+      "sha256": "bbfaf1e07ef93750ee8e2264294b900cd262b7b977d2a318931625d81698cf45"
+    },
+    {
+      "path": "web/public/assets/MetroViaductSpan.glb",
+      "bytes": 39728,
+      "sha256": "e926f137d5f9f7442bdd75672a5827714b737aa3ba846195bec2787156eee517"
+    },
+    {
+      "path": "web/public/assets/OceanPatch.glb",
+      "bytes": 24260,
+      "sha256": "823886f06af807fb3d63155d3c9073d7aa36a9b3e5694f109812aa338bec4f33"
+    },
+    {
+      "path": "web/public/assets/PromenadeSegment.glb",
+      "bytes": 74016,
+      "sha256": "69ff431f082bb13908106ee7e23da458bf2017b039aa2e5eea0b8ce249680e55"
+    },
+    {
+      "path": "web/public/assets/RoadReflector.glb",
+      "bytes": 13640,
+      "sha256": "af64fdca0e4fe52a03a8efc6444cc114675fb290b60f0fff24891e8c1ea914fa"
+    },
+    {
+      "path": "web/public/assets/RoadSegment.glb",
+      "bytes": 20376,
+      "sha256": "c30b0208c4d39ce72f00de222fb8e8cf749ff109733acac8cbd9477c86c3ccc1"
+    },
+    {
+      "path": "web/public/assets/RouteEndMarker.glb",
+      "bytes": 19136,
+      "sha256": "f4e90d1d2c76bf09164ae55f5843ab9db37dce838506c8b3236d5d957c2c4faa"
+    },
+    {
+      "path": "web/public/assets/SeaWallRock.glb",
+      "bytes": 13060,
+      "sha256": "4ce4fd41e4db6a30b7192b6e82e2cf395ca4760af5eb7b774d218d7d9c261bf1"
+    },
+    {
+      "path": "web/public/assets/ServiceShowroomBay.glb",
+      "bytes": 585896,
+      "sha256": "6b32547cd521f44f50956281aa8cb82eb6448f00321e29937bde9352488e9bc9"
+    },
+    {
+      "path": "web/public/assets/ServiceShowroomLoft.glb",
+      "bytes": 1322220,
+      "sha256": "20a0fd0d15743da3b92de1d91bb5bc3834995af3ff7d0f4049afbab907899b2f"
+    },
+    {
+      "path": "web/public/assets/SideStreetSegment.glb",
+      "bytes": 8580,
+      "sha256": "1506de80718b9e26a4ec61d89afabda8de32ca896c766761fcea7df47e0c2283"
+    },
+    {
+      "path": "web/public/assets/Streetlight.glb",
+      "bytes": 9496,
+      "sha256": "0893ae036935c10039743600f68bd1c4e512df9a33a857f31daa7dee548172be"
+    },
+    {
+      "path": "web/public/assets/TeaLeafCluster.glb",
+      "bytes": 13024,
+      "sha256": "2331f29f75e1ad9e3ef7cabc0e3c2321bed9628a919feef1961abe985d33eed6"
+    },
+    {
+      "path": "web/public/assets/TropicalGrass.glb",
+      "bytes": 15628,
+      "sha256": "1b0baf9d212e943943ad7391a4cf6d876e298b881c1d2cbbd1e560687bf91e01"
+    },
+    {
+      "path": "web/public/assets/WaterTransitTerminal.glb",
+      "bytes": 143584,
+      "sha256": "c7cf660eb9714723f8324092d5a3185c910e2805cd335b212de482a1081cdebf"
+    },
+    {
+      "path": "web/public/assets/boost_nozzle_manifest.json",
+      "bytes": 2133,
+      "sha256": "be36d71ef98519363ddb89fb257cecf05f90d5c0ed84e409e8ce01c7b573ac6f"
+    },
+    {
+      "path": "web/public/assets/canal_far_manifest.json",
+      "bytes": 895,
+      "sha256": "3b2c74b10b31a8d8b1ebceae1bb5f87855ca6818b05ea53d7a7542f7b437a39e"
+    },
+    {
+      "path": "web/public/assets/car.glb",
+      "bytes": 904716,
+      "sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9"
+    },
+    {
+      "path": "web/public/assets/car_bronze.glb",
+      "bytes": 2446632,
+      "sha256": "7d18612a3a01c4cbbbbe2cbc6a61a671efeec152c71a0427591c967f8a3dba0c"
+    },
+    {
+      "path": "web/public/assets/car_manifest.json",
+      "bytes": 21079,
+      "sha256": "a1cf2aae4798254f5e3c1c6c163a5634a5806c7772d3f69cc4ce1db85c26988c"
+    },
+    {
+      "path": "web/public/assets/car_midnight.glb",
+      "bytes": 3151648,
+      "sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00"
+    },
+    {
+      "path": "web/public/assets/car_midnight_manifest.json",
+      "bytes": 5294,
+      "sha256": "749a49aa882da135658d6819b59b89e9daf2f649af775ae5404845bf0a2bb734"
+    },
+    {
+      "path": "web/public/assets/car_silver.glb",
+      "bytes": 1332188,
+      "sha256": "3bec86298c9c22a7e1e91deeff4ef2a614744cadf170e9abea2855f2ec82a749"
+    },
+    {
+      "path": "web/public/assets/car_thumb_bronze.png",
+      "bytes": 190341,
+      "sha256": "51a4ab6f0cee153ab4f2c11237a4a07c3aceac8475fd2804e862c78aa6035b4f"
+    },
+    {
+      "path": "web/public/assets/car_thumb_midnight.png",
+      "bytes": 192976,
+      "sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae"
+    },
+    {
+      "path": "web/public/assets/car_thumb_red.png",
+      "bytes": 158866,
+      "sha256": "2568e2b053637b1b76155cf4956f36815366db8b7d7f4e0f42a0c764d5d5356c"
+    },
+    {
+      "path": "web/public/assets/car_thumb_silver.png",
+      "bytes": 160381,
+      "sha256": "f52ae954e2aa1d4c493c91c84caec5edd24c0bbc07efc1554ca9c7be4b69bb20"
+    },
+    {
+      "path": "web/public/assets/car_thumb_touring.png",
+      "bytes": 197014,
+      "sha256": "d2b128c488340110ab8c58624352a49a89afdf4fed8af7a2f671e61a82569617"
+    },
+    {
+      "path": "web/public/assets/car_thumb_verdant.png",
+      "bytes": 179941,
+      "sha256": "cf69c2e16656c42e04dd8debc492db896ca58155f61a2f1d5e9efc28cb059a3e"
+    },
+    {
+      "path": "web/public/assets/car_thumb_vermilion.png",
+      "bytes": 185767,
+      "sha256": "196827a272434fc89b16166ab59dd75d5a846f704edaf520780d3f66160a4571"
+    },
+    {
+      "path": "web/public/assets/car_touring.glb",
+      "bytes": 2402740,
+      "sha256": "dc6d4bc67ad61ef7c9f74ce4f5e92bf64cf491373c19b75b998a8ccc889bc8d7"
+    },
+    {
+      "path": "web/public/assets/car_verdant.glb",
+      "bytes": 2978272,
+      "sha256": "3673317b5c67c99dab5c8797de58ab3431af2edb13b393e70110c49903175b29"
+    },
+    {
+      "path": "web/public/assets/car_vermilion.glb",
+      "bytes": 2784412,
+      "sha256": "dd0b4111fd14951c995365dd89ed0adf5ee5857dabcfd84ccc864d27d34f9efe"
+    },
+    {
+      "path": "web/public/assets/coast_metro_train.glb",
+      "bytes": 782076,
+      "sha256": "328cef4fe7116c07ab59b80acc44357702b0273bde1a44a666858d43af7ee8d8"
+    },
+    {
+      "path": "web/public/assets/coastal_map_data.json",
+      "bytes": 254232,
+      "sha256": "6c1e134884013b8663ca1564cfb7d523621893c104dccc205248353d8086cf1c"
+    },
+    {
+      "path": "web/public/assets/course_runtime.json",
+      "bytes": 442544,
+      "sha256": "96d724670505739dbd2b282dbea2de677ab4ccd0e36893d863f68a6828ded789"
+    },
+    {
+      "path": "web/public/assets/course_runtime_highlands.json",
+      "bytes": 920745,
+      "sha256": "8fe09f1bf01855bc897c7024d46c26c720791e413e0c9eee91e68f9be5765e24"
+    },
+    {
+      "path": "web/public/assets/environment_web_manifest.json",
+      "bytes": 11254,
+      "sha256": "0fcb86cc5622f352e34252f478ebcea0514eeb381d0d7054c46c5aecad21e730"
+    },
+    {
+      "path": "web/public/assets/foliage_detail_manifest.json",
+      "bytes": 1960,
+      "sha256": "d797a6c4c731e169e40e8af28e678825f9fde4b3b7fd02643857390d55a2bc6b"
+    },
+    {
+      "path": "web/public/assets/fonts/OFL.txt",
+      "bytes": 4377,
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "path": "web/public/assets/fonts/display.ttf",
+      "bytes": 112592,
+      "sha256": "e1ed5d7e50c6a4498454d40509ce2362384a2c7870df3418fdbd010f81dffad3"
+    },
+    {
+      "path": "web/public/assets/furniture_colliders.json",
+      "bytes": 31824,
+      "sha256": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611"
+    },
+    {
+      "path": "web/public/assets/gameplay_props_manifest.json",
+      "bytes": 2818,
+      "sha256": "02091b460c8a9da54577102f1769c75869bbfe04ee09de03c14cf832fd65d63b"
+    },
+    {
+      "path": "web/public/assets/highland_prop_manifest.json",
+      "bytes": 2485,
+      "sha256": "19a3f9db9c6ec5560c4abb06a15fd8e5f7a551f54081615f4ef4619644ee7e55"
+    },
+    {
+      "path": "web/public/assets/highlands_furniture_colliders.json",
+      "bytes": 240829,
+      "sha256": "037b9ebc166d6f56d2cc5a665f7943f42d69934dfbf37ce3ea8dd4d645722d90"
+    },
+    {
+      "path": "web/public/assets/highlands_infrastructure_colliders.json",
+      "bytes": 150902,
+      "sha256": "4a9f3d72101cac639fdba0583eabe4cfa05e4b9501553b2ef90b7eef2b3c0975"
+    },
+    {
+      "path": "web/public/assets/highlands_manifest.json",
+      "bytes": 1489,
+      "sha256": "e7d50b09e73a2fe88fec881d6354e9778d1293df5c9940ec642094b9fa3e626b"
+    },
+    {
+      "path": "web/public/assets/highlands_terrain_grid.json",
+      "bytes": 787942,
+      "sha256": "4d23bd2b1a7fcf26883298c3c5791fec71d44f52d90b38b2270c753ce891e52b"
+    },
+    {
+      "path": "web/public/assets/houseboat_manifest.json",
+      "bytes": 1521,
+      "sha256": "5ad733c820dccf52674b3681af392ae9970b6e0d6150a30953166c58daa1e8d7"
+    },
+    {
+      "path": "web/public/assets/infrastructure_colliders.json",
+      "bytes": 163022,
+      "sha256": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48"
+    },
+    {
+      "path": "web/public/assets/police_lightbar.glb",
+      "bytes": 18356,
+      "sha256": "9c1ca73f4b5f110ac6a72a8b03d41c3504d922b96bc6c9cee5ba5b598865a10c"
+    },
+    {
+      "path": "web/public/assets/showroom_loft_manifest.json",
+      "bytes": 1854,
+      "sha256": "722e979d1f57b81afa842e93f098e932bbd5d1d5f68ebff1d93762658248ff1d"
+    },
+    {
+      "path": "web/public/assets/showroom_manifest.json",
+      "bytes": 1345,
+      "sha256": "b053f48202df16a8a692a5b1aff33084e5a8f2808ea4d017187f4d5544fc8934"
+    },
+    {
+      "path": "web/public/assets/tea_detail_rows.json",
+      "bytes": 320544,
+      "sha256": "4b840eb67cd9ccdf8caac780bf84c66982a23251e96ca834cb658089cbbd2c1a"
+    },
+    {
+      "path": "web/public/assets/transit_infrastructure_manifest.json",
+      "bytes": 7984,
+      "sha256": "7b37fb1794fa4891d8a2f1c01d219b9964893807036b4bdfe241b60395911cc8"
+    },
+    {
+      "path": "web/public/assets/transit_vehicle_manifest.json",
+      "bytes": 2521,
+      "sha256": "d436ee11a86021300df43b2dcca29002c091e21dd06a8ec10ad486b413038524"
+    },
+    {
+      "path": "web/public/assets/urban_assets_manifest.json",
+      "bytes": 9123,
+      "sha256": "0dc9557f19f9d8e8ca4baa0d77632c918c2df38523b9b0e8c9c6de3c4d955c17"
+    },
+    {
+      "path": "web/public/assets/water_transit_ferry.glb",
+      "bytes": 567392,
+      "sha256": "b160cffaacf1a753d144bc71fb6bbfbcb749d585855fdcce9a6c6a185f0904c2"
+    },
+    {
+      "path": "web/public/vendor/THREE_LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+    },
+    {
+      "path": "web/public/vendor/addons/environments/RoomEnvironment.js",
+      "bytes": 3606,
+      "sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014"
+    },
+    {
+      "path": "web/public/vendor/addons/loaders/GLTFLoader.js",
+      "bytes": 110273,
+      "sha256": "45139faddd5aaf48ed2d62203d976e5cbd703db1a592de40527f9f6cf58abd44"
+    },
+    {
+      "path": "web/public/vendor/addons/utils/BufferGeometryUtils.js",
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    },
+    {
+      "path": "web/public/vendor/three.module.js",
+      "bytes": 691648,
+      "sha256": "08fd7545d13d2c7fb65ab691530a802dafefd638596501854f267d0fb13c39e7"
+    },
+    {
+      "path": "web/src/audio.js",
+      "bytes": 23988,
+      "sha256": "f286d4ce5e4d1f16206a2f4fbf4b8090e9ecfdd660f9fadb05704593c9947d6e"
+    },
+    {
+      "path": "web/src/boost-fire.js",
+      "bytes": 5579,
+      "sha256": "5bb3009ca6ba451ffaf31ff99231427c3d0a762cd1987e245f6438a5b2f71c85"
+    },
+    {
+      "path": "web/src/collectibles.js",
+      "bytes": 1590,
+      "sha256": "9dcf84d22f58a083fc262bee704bbb4b5692fdfb33a3d98af08e46fd78cac3e1"
+    },
+    {
+      "path": "web/src/detail-lod.js",
+      "bytes": 5995,
+      "sha256": "b7f74f6850fd76454b22b7593452036f9e0b9a0f53de7fcc1d2b708d5a45bb9d"
+    },
+    {
+      "path": "web/src/finish-fx.js",
+      "bytes": 12965,
+      "sha256": "a8c11f92b406746c574a8b82bf1b031765e60ce5abe10c949bf2a789b8913f7c"
+    },
+    {
+      "path": "web/src/gameplay.js",
+      "bytes": 62551,
+      "sha256": "f1464350b943632dffeb321b50632e3524e03f356018c5005392de1fda89620f"
+    },
+    {
+      "path": "web/src/garage.js",
+      "bytes": 7756,
+      "sha256": "2ef65dd3131a5d7d8d71db79e472bb362ab57c56e043bef8a130f8fec102aefb"
+    },
+    {
+      "path": "web/src/main.js",
+      "bytes": 43946,
+      "sha256": "c7bc3dba57d446ab953cdccf12523ab974904b2d81623d543998f0dc71bab2c9"
+    },
+    {
+      "path": "web/src/profile-storage.js",
+      "bytes": 3146,
+      "sha256": "156a8b8ac1c26d943bdd5025ff6fd2fbafc6ce830873b7f7582d71cb493609f2"
+    },
+    {
+      "path": "web/src/scene.js",
+      "bytes": 37081,
+      "sha256": "54c44cfa4585d43d2df1cdbeed00f8165f54c054d69b5d05b4bd8fab7b82478e"
+    },
+    {
+      "path": "web/src/style.css",
+      "bytes": 85816,
+      "sha256": "44e73bcb96535b26bb05602542fc9dcb85b29635a834eb662be07ce298a7d1c1"
+    },
+    {
+      "path": "web/src/tea-placement.js",
+      "bytes": 4110,
+      "sha256": "110799212574b2c42c976585f625d24ab59d0a5129cb5be2a0fafaa10e70d84f"
+    },
+    {
+      "path": "web/src/tracks.js",
+      "bytes": 1848,
+      "sha256": "ac0a8659be0d96f209a44ad5d93671d57c75a7200d53f4d357de57ba57f49d6f"
+    },
+    {
+      "path": "web/src/transit.js",
+      "bytes": 7832,
+      "sha256": "b89f7a545514b5f34b5a62d3f6f684d58aea30a714903adb7b2b3a28a095714d"
+    },
+    {
+      "path": "web/tests/audio.test.mjs",
+      "bytes": 24401,
+      "sha256": "371d1aa3892a9c2c7ce338490d2c47da35ba3129bcd1bcf4c9550a0dd7c6ff3b"
+    },
+    {
+      "path": "web/tests/boost-fire.test.mjs",
+      "bytes": 3878,
+      "sha256": "398deff27bf6f4f486be808d314fd4e2edd566166c90b7c58b0d405b3fc9c4ea"
+    },
+    {
+      "path": "web/tests/coin_vehicle_metrics.json",
+      "bytes": 3035,
+      "sha256": "98d25f260f3160429fe97af639175bf6eaffc23498dfc4e567a15147df171f59"
+    },
+    {
+      "path": "web/tests/coins-vehicle.test.mjs",
+      "bytes": 8304,
+      "sha256": "5619708a0beff39c093f59ab9a8cc464d86006fc5aacd4402eac96a802f913e2"
+    },
+    {
+      "path": "web/tests/collectibles.test.mjs",
+      "bytes": 2878,
+      "sha256": "0da88796af57ac56573e176716670938850c8854b48e6f0cb6ed02c3059a8652"
+    },
+    {
+      "path": "web/tests/controller.test.mjs",
+      "bytes": 11049,
+      "sha256": "4a7abffa638e1fedbacff40d38eeeafed4cc8b9fe5de6f531eee24dacfb6387d"
+    },
+    {
+      "path": "web/tests/detail-lod.test.mjs",
+      "bytes": 2596,
+      "sha256": "a47aa81932bdb2a9a5d863443b4be3c9585499510a8d8d32371047697c210aca"
+    },
+    {
+      "path": "web/tests/explore-asphalt.test.mjs",
+      "bytes": 4533,
+      "sha256": "df4d8953c24c34c20bdef907dd3c9de9cca1e2317289e7feee0a649e853e1dc4"
+    },
+    {
+      "path": "web/tests/explore_asphalt_metrics.json",
+      "bytes": 31628,
+      "sha256": "68aeb01fc46c690041942f49df804b495bd3a344c8b71ce474ff0c1a758fbab0"
+    },
+    {
+      "path": "web/tests/finish-fx.test.mjs",
+      "bytes": 3780,
+      "sha256": "bed1c7aea486c62c7dfee6fb4e0c5e139834b9e59787a361534a481cdd218cbe"
+    },
+    {
+      "path": "web/tests/gameplay.test.mjs",
+      "bytes": 60865,
+      "sha256": "c7f4198906300ce50d420dcb8650ecb7119d4632b9a94b077b7effca0d720c9c"
+    },
+    {
+      "path": "web/tests/garage.test.mjs",
+      "bytes": 23415,
+      "sha256": "37de48eda5860e17744df286bd800044fd547e7f38a69b94bd3b2e3436a1ddbf"
+    },
+    {
+      "path": "web/tests/garage_metrics.json",
+      "bytes": 30196,
+      "sha256": "33811b0e9c51deee1d5989eff09122555c70f9dd52f16e1f7d2410c529dd5441"
+    },
+    {
+      "path": "web/tests/handling-recovery.test.mjs",
+      "bytes": 13808,
+      "sha256": "f1b53f1079e9c4e3c86ad507cb2282ecb3edbb0ae6279dc9b59aaa5c1efd3fb9"
+    },
+    {
+      "path": "web/tests/handling_recovery_metrics.json",
+      "bytes": 163089,
+      "sha256": "60a75978c2e57d4ef34f0565e5664cc5237027d17bd15c75dc180dacd8c9a8ff"
+    },
+    {
+      "path": "web/tests/physics_metrics.json",
+      "bytes": 91899,
+      "sha256": "7086c08e5995e381b4f5ae2d2fd3ae7ee80f06ab61da74e0e1321cb654200f33"
+    },
+    {
+      "path": "web/tests/profile-storage.test.mjs",
+      "bytes": 7519,
+      "sha256": "4b230b106e0921977a1e7505b16f3618bec8b7a0258190ad57fdce5ffd65f271"
+    },
+    {
+      "path": "web/tests/render-audio-demo.mjs",
+      "bytes": 6102,
+      "sha256": "38e96a67b1617a940c3adec5f9ee9933970e6343948930797e72d9f3a5c467fb"
+    },
+    {
+      "path": "web/tests/reverse-crawl.test.mjs",
+      "bytes": 4278,
+      "sha256": "19dea5c9767c9da98f175378e4bf492515cef5106cd3680a5a4d49ba0aa94caa"
+    },
+    {
+      "path": "web/tests/reverse_crawl_metrics.json",
+      "bytes": 55978,
+      "sha256": "d6c32998aff0ecc262e33b337813cdc13ac447976c6f2c10027d09562e7265b5"
+    },
+    {
+      "path": "web/tests/scene-contract.test.mjs",
+      "bytes": 16333,
+      "sha256": "97f931898687d5dc7f35570b8cfdea370ab7fbcb082b402a5640c4289382679d"
+    },
+    {
+      "path": "web/tests/smoke.mjs",
+      "bytes": 1454,
+      "sha256": "02cbc968bd78c30acd92937dfdd272ad6a2d06c20e1dfc250a24a61d2b0954ec"
+    },
+    {
+      "path": "web/tests/tracks.test.mjs",
+      "bytes": 1680,
+      "sha256": "dcce59bf5f615ced32f447aa6a197dc8aecc1dec0313fbeeaf1329b83b9c037e"
+    },
+    {
+      "path": "web/tests/transit.test.mjs",
+      "bytes": 3522,
+      "sha256": "aac73a9a45bb7626ead20b839ccdb384a792624f82b1aca693a6a887f05b2446"
+    },
+    {
+      "path": "web/tests/ui-controller.test.mjs",
+      "bytes": 31842,
+      "sha256": "829a519e344e8fd338294a556a9584cbaa6665f47d0dbbebaf03eb8ef9f52e84"
+    },
+    {
+      "path": "web/tests/ui-preview.test.mjs",
+      "bytes": 4415,
+      "sha256": "c40f6047402df99fbee5780383f7e23b70216bc9858822689f4301d3d7ab93c0"
+    },
+    {
+      "path": "web/tests/world-load.test.mjs",
+      "bytes": 4793,
+      "sha256": "88efac7120cd1c6b0f60c4d48357c57f62658e5bf103df3e616546e837b80d8d"
+    },
+    {
+      "path": "assets/audio/Coastal_Ambience.wav",
+      "bytes": 529244,
+      "sha256": "4235e6d167fb9f27621cfe050e30de689c41152f8c3f8367fe24f96740df695b"
+    },
+    {
+      "path": "assets/audio/EV_Loop.wav",
+      "bytes": 176444,
+      "sha256": "0fd39c0d54c69afc5cc73eacb2a3fa3b65c9fb6d0b44dc0b357cf6c071e46cb9"
+    },
+    {
+      "path": "assets/boost/ArcadeBoostNozzle.blend",
+      "bytes": 98571,
+      "sha256": "7c1e6cfd41d67f6de78803d8b527a646e43586058a34ec340854e554d1892d23"
+    },
+    {
+      "path": "assets/car/README.md",
+      "bytes": 5949,
+      "sha256": "db670c208a900837dd3e9b26359a444098227b3fb5368b6d33e98887d094a9bd"
+    },
+    {
+      "path": "assets/car/manifest.json",
+      "bytes": 73574,
+      "sha256": "e5e211e865cc4e686476d4be11ae0460c9390fac71a52c8c2f402e6211e04063"
+    },
+    {
+      "path": "assets/car/materials.json",
+      "bytes": 4292,
+      "sha256": "e35d258292fc7cc03d623fd21031733943cf2a6901799ff1d3cf4eec6b2f90ba"
+    },
+    {
+      "path": "assets/car/roadster_concept.blend",
+      "bytes": 2338688,
+      "sha256": "20fc2ef1255ad9ce403a075cce14fd16a77d0aeb3797702eae15be0d0a2950bd"
+    },
+    {
+      "path": "assets/car_touring/azure_touring_gt.blend",
+      "bytes": 364510,
+      "sha256": "344f841c0d2578cee19b4c2c6f87cbd3043ee17a1e9e9e18ed60496f113a2c4f"
+    },
+    {
+      "path": "assets/cars/bronze/README.md",
+      "bytes": 1753,
+      "sha256": "3d8a4f873001f27f992a3cc770c9221cb2a4ee5ecb2abdde2ff6b378a72bdb16"
+    },
+    {
+      "path": "assets/cars/bronze/brake_validation.json",
+      "bytes": 269,
+      "sha256": "95123c8d6dbcc2fd1bbd2f0303cc99f07cebada5c017f273adac181d80dee72d"
+    },
+    {
+      "path": "assets/cars/bronze/bronze_apex.blend",
+      "bytes": 407081,
+      "sha256": "aab8a6c4dbd12eee2ab0768da2354eda5cff90a46063451a2f8a2e1b4c76fa00"
+    },
+    {
+      "path": "assets/cars/bronze/manifest.json",
+      "bytes": 4281,
+      "sha256": "52319281b15516a88a673e94cb191d29c032f539738d36d89549a26706cb5182"
+    },
+    {
+      "path": "assets/cars/bronze/pose_validation.json",
+      "bytes": 332,
+      "sha256": "df1052fce1957f94e389dc0790ba9b670dff0e213474cbf7390394f999180675"
+    },
+    {
+      "path": "assets/cars/bronze/preview_front.png",
+      "bytes": 1362950,
+      "sha256": "c9e0d9d46fbef773bce9d579492144f8fad64b2f08b470a0f3b4dbb102c6a755"
+    },
+    {
+      "path": "assets/cars/bronze/preview_rear.png",
+      "bytes": 1356828,
+      "sha256": "ae401eff55d44bffebb5f6d3831147b3d63710f560de0446265867c8e96f3d0d"
+    },
+    {
+      "path": "assets/cars/bronze/render_provenance.json",
+      "bytes": 717,
+      "sha256": "71eff70c1ad6212c292cce54e092c6a1aa7a837216f026bb192514cdab269d07"
+    },
+    {
+      "path": "assets/cars/bronze/source_validation.json",
+      "bytes": 766,
+      "sha256": "4bd434de54a4898e19de13cd071fa917a7cc37250a107f0f815b57643972fdfb"
+    },
+    {
+      "path": "assets/cars/bronze/three_validation.json",
+      "bytes": 1759,
+      "sha256": "e486b772fa058cc9f8a2404c95881dbf1d504911fc247399fa24ac4d2305a7d1"
+    },
+    {
+      "path": "assets/cars/bronze/wing_validation.json",
+      "bytes": 285,
+      "sha256": "f473a39780b3815dc692a11d749052cdf4286de19f1decd5bd5013adb8c8c125"
+    },
+    {
+      "path": "assets/cars/midnight/Midnight_Meridian_GT.blend",
+      "bytes": 4368272,
+      "sha256": "512166ed11291e920538d18eecfb3190cb2f891aee002fdfa742cd95f5a72bcd"
+    },
+    {
+      "path": "assets/cars/midnight/README.md",
+      "bytes": 3248,
+      "sha256": "b28822b998ee4e958d0b4a9a29c3cf2b75d3c790701f18d755e1a6e7b4331491"
+    },
+    {
+      "path": "assets/cars/midnight/brake_distance_validation.json",
+      "bytes": 1204,
+      "sha256": "9b40cf210fc510e0f3f8dce5c338f52c7e8ce9e6f742ca680f3909de690f5161"
+    },
+    {
+      "path": "assets/cars/midnight/brake_validation.json",
+      "bytes": 269,
+      "sha256": "521ac6de98ea27253569a4ea4ae2deb557a554bfb0d4bc027e10763d0c1dab6c"
+    },
+    {
+      "path": "assets/cars/midnight/car_midnight.glb",
+      "bytes": 3151648,
+      "sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00"
+    },
+    {
+      "path": "assets/cars/midnight/car_thumb_midnight.png",
+      "bytes": 192976,
+      "sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae"
+    },
+    {
+      "path": "assets/cars/midnight/clean_export.py",
+      "bytes": 3496,
+      "sha256": "8d105a2bcec47b2ca17de1e67d2a0bf9c8cf42ecc5239b8868917712fb9204a0"
+    },
+    {
+      "path": "assets/cars/midnight/freeze.json",
+      "bytes": 4879,
+      "sha256": "b58e907b64ed0ff6a8c8c02416d915919d2884034834404206d94904c0c415ff"
+    },
+    {
+      "path": "assets/cars/midnight/glb_validation.json",
+      "bytes": 2367,
+      "sha256": "8467377876d83825b4652b30dd2fc9ab68ef2b8d8800bd6cff574a10e3510010"
+    },
+    {
+      "path": "assets/cars/midnight/inspection_validation.json",
+      "bytes": 4827,
+      "sha256": "4e9648618e6fcafeb6332acd1e6cb38a4ccbc93a0ebdeca84c11d25175a8b53f"
+    },
+    {
+      "path": "assets/cars/midnight/manifest.json",
+      "bytes": 5294,
+      "sha256": "749a49aa882da135658d6819b59b89e9daf2f649af775ae5404845bf0a2bb734"
+    },
+    {
+      "path": "assets/cars/midnight/pose_validation.json",
+      "bytes": 332,
+      "sha256": "c60fd3ee935b1cd48c31bb1a5facb93d932b7147e1278e71ba06a78e03aa0826"
+    },
+    {
+      "path": "assets/cars/midnight/preview_front.png",
+      "bytes": 1533506,
+      "sha256": "20752a567daa488679e6f2575c74634fafa43b2d53ab85826898bb0608a82441"
+    },
+    {
+      "path": "assets/cars/midnight/preview_rear.png",
+      "bytes": 1383396,
+      "sha256": "090f02ad466a2b7918eb4e718e53bade1368d887c369c013aae1d4f013b4e771"
+    },
+    {
+      "path": "assets/cars/midnight/render_provenance.json",
+      "bytes": 1003,
+      "sha256": "8460b84b90109e2d65ba73567b9f02df312c7ebfa480fcb564cb90cc69c72174"
+    },
+    {
+      "path": "assets/cars/midnight/source_validation.json",
+      "bytes": 766,
+      "sha256": "da146c6c5babfd2e4951f7af0c3737e25d5d3bb629b101079afbaf9df2d1027a"
+    },
+    {
+      "path": "assets/cars/midnight/thumbnail_manifest.json",
+      "bytes": 800,
+      "sha256": "4041944d60eb5d869dd331317690ad7bcd721b226b8f6a34c9841b9c4db2cfbf"
+    },
+    {
+      "path": "assets/cars/midnight/validate_glb.mjs",
+      "bytes": 4051,
+      "sha256": "45b64a9aa5123141342aa3a8dafd75c1c335a08656eaa366352899765bc492e4"
+    },
+    {
+      "path": "assets/cars/midnight/wing_validation.json",
+      "bytes": 285,
+      "sha256": "a884a1383ad2ad782377306a5434c1a6f162173b65c5a53138921e878403ed3d"
+    },
+    {
+      "path": "assets/cars/verdant/README.md",
+      "bytes": 3860,
+      "sha256": "de5caf45df48e0d3c584a6e04c470498af5cb3e5b6765acdd65615ba3be7cf55"
+    },
+    {
+      "path": "assets/cars/verdant/brake_validation.json",
+      "bytes": 269,
+      "sha256": "c4a4bc1351bce175165812ec1570eac00dcf767afde08f088c17838e9836a64a"
+    },
+    {
+      "path": "assets/cars/verdant/build.log",
+      "bytes": 4399,
+      "sha256": "b16c07620d5b2a3673bcfda03b9db43de75b9de64169e7556b8f6d6d7536f1fa"
+    },
+    {
+      "path": "assets/cars/verdant/manifest.json",
+      "bytes": 7247,
+      "sha256": "7388ebc4103ff8c567aad97fe5fa54f10c5ca24d6ad3304f8a44b7c96ccb0832"
+    },
+    {
+      "path": "assets/cars/verdant/pose_validation.json",
+      "bytes": 332,
+      "sha256": "25c2ed36537e6afe2b52abff1912ce10167392c9440c7310ff93e41cbb058682"
+    },
+    {
+      "path": "assets/cars/verdant/preview_front.png",
+      "bytes": 1341163,
+      "sha256": "a2038545c3147d7700f1b40cb7cc78122e711aebd17afc37aba451444286e01e"
+    },
+    {
+      "path": "assets/cars/verdant/preview_rear.png",
+      "bytes": 1331428,
+      "sha256": "3bb305706dbe0e43b9baabc8fe435acff33663aa4718ad0d3c9bdf079eb1f588"
+    },
+    {
+      "path": "assets/cars/verdant/render.log",
+      "bytes": 22606,
+      "sha256": "b43af91bf08a73690fe802a569b1a9d1e711856960b1769f631c9032cb3eddeb"
+    },
+    {
+      "path": "assets/cars/verdant/render_provenance.json",
+      "bytes": 720,
+      "sha256": "9338a756222bf4e30b91373377238b9f17ebdeef4959c62082c6a2672a2da2a8"
+    },
+    {
+      "path": "assets/cars/verdant/source_validation.json",
+      "bytes": 766,
+      "sha256": "8fb53903435378467644278c3d66967fd105395d679ace3cbe426f7a274063b5"
+    },
+    {
+      "path": "assets/cars/verdant/three_validation.json",
+      "bytes": 1796,
+      "sha256": "707918853f4a61f98dc01d886defc42d5718620e50a7f19e9493a124d8d3c7ae"
+    },
+    {
+      "path": "assets/cars/verdant/three_validation.log",
+      "bytes": 1797,
+      "sha256": "79417e9e57ab631299d9eead3a77564d947cd50593e62a395ff075676a4d21f8"
+    },
+    {
+      "path": "assets/cars/verdant/validation.log",
+      "bytes": 1280,
+      "sha256": "a39cd592f599c88ae55285b87a47920a5c81b59ec4e7d3b53a98526f0273098d"
+    },
+    {
+      "path": "assets/cars/verdant/verdant.blend",
+      "bytes": 4797176,
+      "sha256": "1d405695581155ef0f90ecf483ed5590bb6fbcedf73e121143008f145c668835"
+    },
+    {
+      "path": "assets/cars/verdant/wing_validation.json",
+      "bytes": 285,
+      "sha256": "48d5ac72ea6ecf50deb0d17bba0882afd4f2a6150b85683143258b82089778cb"
+    },
+    {
+      "path": "assets/cars/vermilion/README.md",
+      "bytes": 4290,
+      "sha256": "8f12c76f2fff6f4960244ad58c67a2f1e8aa26f9dc8aad0bad50a106a3e2f2b7"
+    },
+    {
+      "path": "assets/cars/vermilion/base_preservation_validation.json",
+      "bytes": 966,
+      "sha256": "82ca52377a9189010101fa8dc8ec88e06d84a99fea8b9a0e227bd33d79ec81de"
+    },
+    {
+      "path": "assets/cars/vermilion/brake_validation.json",
+      "bytes": 269,
+      "sha256": "321bf8b4be33fdc60ee267645e00201eccb072c37202a6ee4bf9722f4ab55d19"
+    },
+    {
+      "path": "assets/cars/vermilion/build.log",
+      "bytes": 4684,
+      "sha256": "a2d2e54c42bb16c38b39f1cd8e4471b99f49639330ecf475b042b39260beaed4"
+    },
+    {
+      "path": "assets/cars/vermilion/door_validation.json",
+      "bytes": 2433,
+      "sha256": "b07fc6ccd29d6e9f28175b4f7f4fe4359648a832f50860af65b19af7f1e1e411"
+    },
+    {
+      "path": "assets/cars/vermilion/door_validation.log",
+      "bytes": 2916,
+      "sha256": "2750fa8c6feb11c02086a322a476602aad758bc7b44a1d3c8922de93e61b3606"
+    },
+    {
+      "path": "assets/cars/vermilion/helper_smoke.glb",
+      "bytes": 1417724,
+      "sha256": "67763b563ac2303c547ae48259a798303660d87939f9e9d60e46aafb926648dd"
+    },
+    {
+      "path": "assets/cars/vermilion/helper_smoke.py",
+      "bytes": 736,
+      "sha256": "6e2d9b1e764a57c8361c4c103f4372a6694ef1ee48f36fccd8bcafe899dbc807"
+    },
+    {
+      "path": "assets/cars/vermilion/manifest.json",
+      "bytes": 8272,
+      "sha256": "977751bc9214de10e084934358b875951dc5399f3073ad2fdde9a823f89341a3"
+    },
+    {
+      "path": "assets/cars/vermilion/pose_validation.json",
+      "bytes": 332,
+      "sha256": "500ca25042923899864fc8d99530c724e37dde1db82405641d6e18bf01e84a4f"
+    },
+    {
+      "path": "assets/cars/vermilion/preview_front.png",
+      "bytes": 1396272,
+      "sha256": "446d69cbaecdb3b818a0ced4fba3a3bbbd5d522686d5f6f9d6c4c0de4de21a04"
+    },
+    {
+      "path": "assets/cars/vermilion/preview_rear.png",
+      "bytes": 1377910,
+      "sha256": "e31b29038548578a6da004bb365b41fefb54f4024f37ef28739cec3364012913"
+    },
+    {
+      "path": "assets/cars/vermilion/render.log",
+      "bytes": 21997,
+      "sha256": "f5c03661cf11d4bbb0582f9bf25fbf61403f75b05fb5c0549bc291dbcc2bc517"
+    },
+    {
+      "path": "assets/cars/vermilion/render_provenance.json",
+      "bytes": 726,
+      "sha256": "8ced82b2151ea07d9dbbb3425d6cd5fa28fba0a2dad480d0abfa3dc9e4a39f7f"
+    },
+    {
+      "path": "assets/cars/vermilion/source_validation.json",
+      "bytes": 766,
+      "sha256": "b27b5f148f18f6b568884cbec60ca2cd13808b86aa9178fd437c3067c0736b13"
+    },
+    {
+      "path": "assets/cars/vermilion/test_doors.py",
+      "bytes": 1998,
+      "sha256": "fd4fe5bf0f7a7b1cb05ce8a05a5fecbe18d8e82765f53239743c0bbec4aa5544"
+    },
+    {
+      "path": "assets/cars/vermilion/three_validation.json",
+      "bytes": 1733,
+      "sha256": "65df66ef2dd4fad581e730e1294588f18d51ba61e29f5c167ace3edded52e9b8"
+    },
+    {
+      "path": "assets/cars/vermilion/three_validation.log",
+      "bytes": 1734,
+      "sha256": "9155bb1c87e37b1b729f81cf1787827e26eb8ce338cff48b4e7b6f518081f6cd"
+    },
+    {
+      "path": "assets/cars/vermilion/validation.log",
+      "bytes": 1292,
+      "sha256": "ec0cd63f2709a6b20c2bb84d94ddea80fcca3825cfd6eceaa2e90dac698d85a9"
+    },
+    {
+      "path": "assets/cars/vermilion/validator_diagnostics_validation.json",
+      "bytes": 463,
+      "sha256": "2c3e14235f411c53ccab816cee38664a7d746cfa03c75cf517bc1d44e7891f5a"
+    },
+    {
+      "path": "assets/cars/vermilion/vermilion.blend",
+      "bytes": 4524288,
+      "sha256": "608ac4c0436ad031e33ca3c87c70b8ad3c1d349ea39767c0747696655a90c382"
+    },
+    {
+      "path": "assets/cars/vermilion/wing_validation.json",
+      "bytes": 285,
+      "sha256": "d98dbd73df217f70263f73ca2735eba687319b6c0a37ddbbe54493cf34fe91bb"
+    },
+    {
+      "path": "assets/course/Kappil_Coast.blend",
+      "bytes": 4277373,
+      "sha256": "edd9b4f044d4ce9ad91c0eb3bc38028955fdf897307debb0f499fb4b5d3a8a65"
+    },
+    {
+      "path": "assets/course/audit_terrain_coverage.py",
+      "bytes": 4326,
+      "sha256": "ff337e9aff7477b6cb994869864caf58d29e4d5614b0dbfad84d59d8f00fecc2"
+    },
+    {
+      "path": "assets/course/coastal_v8_base_colliders.json",
+      "bytes": 114083,
+      "sha256": "f558de6b6573be312a415b2c4bcef3f565725243de45c04bc983602c60e4bf90"
+    },
+    {
+      "path": "assets/course/coastal_v8_base_runtime.json",
+      "bytes": 637815,
+      "sha256": "c73fe08c96fd89d9bdffe1ac26c20bfe170ff62536965ae84e7c413348224b2c"
+    },
+    {
+      "path": "assets/course/manifest.json",
+      "bytes": 637669,
+      "sha256": "4002cb817be36ece1b7be62aed926259fbdc8abade160b8aa5b502d23e9abe5d"
+    },
+    {
+      "path": "assets/course/render_terrain_repair_diagnostic.py",
+      "bytes": 2927,
+      "sha256": "59298ff8f87bbbc3b062d77c231e64badfd506c2f7e446b60f8ede3c2c4f5db9"
+    },
+    {
+      "path": "assets/course/terrain_coverage_repaired.json",
+      "bytes": 272850,
+      "sha256": "39de5aac3791bd0930e3984fdada88fb57b67c8c8bc1d70b7befdb4a85e5c639"
+    },
+    {
+      "path": "assets/course/v8_assembly_report.json",
+      "bytes": 5080,
+      "sha256": "428d7adf15ada51baeaa5e87448834a97e147591fb4987ccf096bdc9b5ff0784"
+    },
+    {
+      "path": "assets/course/v8_world_layout.json",
+      "bytes": 319184,
+      "sha256": "91846bb8ed7afb02a6ceee2235ad9c7fd244db6ad93d2f79387c02a6446eda9f"
+    },
+    {
+      "path": "assets/course/validate_terrain_repair.py",
+      "bytes": 5821,
+      "sha256": "1edaf311dab350ba903cb2742ca3db31388514ed46f5bf9edb55ffbf7fa9f5e0"
+    },
+    {
+      "path": "assets/environment/Kerala_Coastal_Assets.blend",
+      "bytes": 997980,
+      "sha256": "ab6e234b97aee18eca1570788915b7ff8c71b94870d69224a5c8f8517ebb732f"
+    },
+    {
+      "path": "assets/environment/LICENSE.txt",
+      "bytes": 519,
+      "sha256": "cf803b06c19d975c402149df8112aafb81232f3738fa78c70824a9a57ede3f50"
+    },
+    {
+      "path": "assets/environment/README.md",
+      "bytes": 3919,
+      "sha256": "42e68b6f87867db25157952708b56cf7e90fd4b3529077a174ddd46fd7aaa213"
+    },
+    {
+      "path": "assets/environment/asset_sha256.json",
+      "bytes": 2670,
+      "sha256": "2468e6311a18f5821f8e0e1059ebbc381b5a1b12cc75730bf0fa3cddb713bac4"
+    },
+    {
+      "path": "assets/environment/manifest.json",
+      "bytes": 23754,
+      "sha256": "2b69cc99367debb861ba1bea5a8ad65f39c6b0f981ce22f8fb6ecfa94d1ec2af"
+    },
+    {
+      "path": "assets/environment/render_details.py",
+      "bytes": 1536,
+      "sha256": "303de4501d3d8e5cb3fcab0f111091e6ae427afbe18c16198b40bb3a96ab3ece"
+    },
+    {
+      "path": "assets/environment/validate_exports.py",
+      "bytes": 1809,
+      "sha256": "5d22e768832e087f57c52e41259601e2ec7393b59d24ffefd424e89f577c110f"
+    },
+    {
+      "path": "assets/foliage_detail/CanalRainTreeFar.blend",
+      "bytes": 223781,
+      "sha256": "071639a12365c318a9f837f07a13b24d897e2a7ce44765708bc02a4af4a43e9a"
+    },
+    {
+      "path": "assets/foliage_detail/Highland_Foliage_Detail.blend",
+      "bytes": 309495,
+      "sha256": "f411c86b269f7128cd18e3dd0673445f512aa62418f3eea15d576f8a28ce05b4"
+    },
+    {
+      "path": "assets/foliage_detail/README.md",
+      "bytes": 4152,
+      "sha256": "c23a45c6d4befc6b0ef867c1148353e9b1cc47ba627a84c548bde87ed33df0c4"
+    },
+    {
+      "path": "assets/foliage_detail/canal_far_manifest.json",
+      "bytes": 895,
+      "sha256": "3b2c74b10b31a8d8b1ebceae1bb5f87855ca6818b05ea53d7a7542f7b437a39e"
+    },
+    {
+      "path": "assets/foliage_detail/foliage_detail_manifest.json",
+      "bytes": 1960,
+      "sha256": "d797a6c4c731e169e40e8af28e678825f9fde4b3b7fd02643857390d55a2bc6b"
+    },
+    {
+      "path": "assets/foliage_detail/original_trunk_geometry.json",
+      "bytes": 7800,
+      "sha256": "0ccd83439c8cfe781385022fc237881ce91f86ec164137de0ddb8174195dd205"
+    },
+    {
+      "path": "assets/foliage_detail/tea_detail_rows.json",
+      "bytes": 320544,
+      "sha256": "4b840eb67cd9ccdf8caac780bf84c66982a23251e96ca834cb658089cbbd2c1a"
+    },
+    {
+      "path": "assets/foliage_detail/tea_placement_fixture.json",
+      "bytes": 6470,
+      "sha256": "80f865b324c5636747b16dc54e2152bbba376a3f90b97eb3995bf947392cec32"
+    },
+    {
+      "path": "assets/foliage_detail/tea_placements_reference.js",
+      "bytes": 4110,
+      "sha256": "110799212574b2c42c976585f625d24ab59d0a5129cb5be2a0fafaa10e70d84f"
+    },
+    {
+      "path": "assets/gallery_thumbnails/car_thumb_bronze.png",
+      "bytes": 190341,
+      "sha256": "51a4ab6f0cee153ab4f2c11237a4a07c3aceac8475fd2804e862c78aa6035b4f"
+    },
+    {
+      "path": "assets/gallery_thumbnails/car_thumb_midnight.png",
+      "bytes": 192976,
+      "sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae"
+    },
+    {
+      "path": "assets/gallery_thumbnails/car_thumb_verdant.png",
+      "bytes": 179941,
+      "sha256": "cf69c2e16656c42e04dd8debc492db896ca58155f61a2f1d5e9efc28cb059a3e"
+    },
+    {
+      "path": "assets/gallery_thumbnails/car_thumb_vermilion.png",
+      "bytes": 185767,
+      "sha256": "196827a272434fc89b16166ab59dd75d5a846f704edaf520780d3f66160a4571"
+    },
+    {
+      "path": "assets/gameplay_props/ArcadeCoin.blend",
+      "bytes": 143105,
+      "sha256": "66c10722bd9a67b3a1576c3c6a08b7cb7b849406c66af34fbcc80980998da000"
+    },
+    {
+      "path": "assets/gameplay_props/RouteEndMarker.blend",
+      "bytes": 102020,
+      "sha256": "154a6ad93efed472cfff2df4fd09d5bc3b96028c3146e03e843cbb4c6ab1e3f2"
+    },
+    {
+      "path": "assets/gameplay_props/coin_brushed_micro_normal.png",
+      "bytes": 12779,
+      "sha256": "01c48586513023a974179f94b4eb071311e65530f5857128776738b01eacf567"
+    },
+    {
+      "path": "assets/highlands/Highland_Props.blend",
+      "bytes": 128173,
+      "sha256": "b4a16e5b8b0ac1e19fc49971344086ec2cb4e90663451e4389f93ce7cf399868"
+    },
+    {
+      "path": "assets/highlands/Highland_Run.blend",
+      "bytes": 8550312,
+      "sha256": "6aff60f62f19cbe036dbd05e78b70292a09cbbac46bbfc97b93823dbe0f4bd3a"
+    },
+    {
+      "path": "assets/highlands/README.md",
+      "bytes": 5847,
+      "sha256": "ea3c3ce97a504142317d3c2fed3911c7c4b16ee750d2020e0b18d524b2dcdd2b"
+    },
+    {
+      "path": "assets/highlands/bird_manifest_input.json",
+      "bytes": 2716,
+      "sha256": "43ab057920261189f36f765564184ef2d0b7cf496090b92e14a7393d832b346c"
+    },
+    {
+      "path": "assets/highlands/course_runtime_highlands.json",
+      "bytes": 920149,
+      "sha256": "08e6bdac59f00f61010f99eb840bca87998b57fad613b01cea1835a7f6d0e0a3"
+    },
+    {
+      "path": "assets/highlands/highland_prop_manifest.json",
+      "bytes": 2485,
+      "sha256": "19a3f9db9c6ec5560c4abb06a15fd8e5f7a551f54081615f4ef4619644ee7e55"
+    },
+    {
+      "path": "assets/highlands/highlands_furniture_colliders.json",
+      "bytes": 240829,
+      "sha256": "037b9ebc166d6f56d2cc5a665f7943f42d69934dfbf37ce3ea8dd4d645722d90"
+    },
+    {
+      "path": "assets/highlands/highlands_infrastructure_colliders.json",
+      "bytes": 148239,
+      "sha256": "0ea2af907864a962533bebece1e0e8305469a98b944ecd1e245b949454b10c01"
+    },
+    {
+      "path": "assets/highlands/highlands_manifest.json",
+      "bytes": 1489,
+      "sha256": "e7d50b09e73a2fe88fec881d6354e9778d1293df5c9940ec642094b9fa3e626b"
+    },
+    {
+      "path": "assets/highlands/highlands_plan.json",
+      "bytes": 861636,
+      "sha256": "9e939431634f169bfe564165a2ee879f1b2910e2b32794b7f4118e42583aaab6"
+    },
+    {
+      "path": "assets/highlands/highlands_terrain_grid.json",
+      "bytes": 787942,
+      "sha256": "4d23bd2b1a7fcf26883298c3c5791fec71d44f52d90b38b2270c753ce891e52b"
+    },
+    {
+      "path": "assets/highlands/tea_rows.json",
+      "bytes": 424235,
+      "sha256": "36aee20b30f9ef38873150864a476d496c85fad8cc5f142570683adb057ae685"
+    },
+    {
+      "path": "assets/highlands/terrain_grid.json",
+      "bytes": 787942,
+      "sha256": "4d23bd2b1a7fcf26883298c3c5791fec71d44f52d90b38b2270c753ce891e52b"
+    },
+    {
+      "path": "assets/infrastructure/README_V8.md",
+      "bytes": 7520,
+      "sha256": "7b0a2fd08ab750ced6c2852dc5cb4bbe31d5c2f9cf606e412fe71a31cf7b1a73"
+    },
+    {
+      "path": "assets/infrastructure/backwater/KeralaHouseboat.blend",
+      "bytes": 180701,
+      "sha256": "27d848db16333ca0de6623ef8c683208c8386ccc33cac77e133e05e01c42d476"
+    },
+    {
+      "path": "assets/infrastructure/backwater/README.md",
+      "bytes": 2487,
+      "sha256": "efe951871c1e171ee5d2757842ff79aef3e51dbdd5670a62b602f45f256da323"
+    },
+    {
+      "path": "assets/infrastructure/backwater/houseboat_manifest.json",
+      "bytes": 1521,
+      "sha256": "5ad733c820dccf52674b3681af392ae9970b6e0d6150a30953166c58daa1e8d7"
+    },
+    {
+      "path": "assets/infrastructure/backwater/verify_houseboat.py",
+      "bytes": 2451,
+      "sha256": "c8af67e2361c08261a2914d5db916738e75711683baca5f975b59dbdb3367049"
+    },
+    {
+      "path": "assets/infrastructure/transit/Kerala_Transit_Infrastructure.blend",
+      "bytes": 237330,
+      "sha256": "39603d8dc7c4353c20e79b7664b921df20667a7a33bb26434417cf410ce56650"
+    },
+    {
+      "path": "assets/infrastructure/transit/LICENSE.txt",
+      "bytes": 367,
+      "sha256": "b796c8dcd4856d1ef086336f8c5c0105be2990338a05184776707b8995c4026d"
+    },
+    {
+      "path": "assets/infrastructure/transit/manifest.json",
+      "bytes": 7984,
+      "sha256": "7b37fb1794fa4891d8a2f1c01d219b9964893807036b4bdfe241b60395911cc8"
+    },
+    {
+      "path": "assets/infrastructure/urban/README.md",
+      "bytes": 3397,
+      "sha256": "7679605b87c4f1d43a151253134ea713894c717ec521c819b76180ec77796cb1"
+    },
+    {
+      "path": "assets/infrastructure/urban/native/ChineseFishingNet.blend",
+      "bytes": 108645,
+      "sha256": "dda9049dc8b9e0ced0952c884bfe134833cb4f6cbf82a3a41367083a9203e69f"
+    },
+    {
+      "path": "assets/infrastructure/urban/native/KeralaApartment_A.blend",
+      "bytes": 127475,
+      "sha256": "553cbaea974e802305c76373447f1a01ae9ea0251a948c849034cb89342dfd8b"
+    },
+    {
+      "path": "assets/infrastructure/urban/native/KeralaOffice_A.blend",
+      "bytes": 112430,
+      "sha256": "b1ef4f4ea11bfd9ec171a622562af5c99c340f0f12f7be29df6eb99343a09254"
+    },
+    {
+      "path": "assets/infrastructure/urban/native/KeralaShopRow_A.blend",
+      "bytes": 112694,
+      "sha256": "056f5ccbf642cbb7b9f1a74d2f9726db3d962b0b144498e4da896ca0f502f564"
+    },
+    {
+      "path": "assets/infrastructure/urban/native/KeralaShopRow_B.blend",
+      "bytes": 103197,
+      "sha256": "3e7da3cf2f2dab3d6666a994474de3097e29a5b1ea2c3bbd1d6b0a3fb8a9ffe5"
+    },
+    {
+      "path": "assets/infrastructure/urban/native/KeralaTeaStall.blend",
+      "bytes": 100994,
+      "sha256": "7b5f5c644863e014621e4d8112b1f907c839469ffa6dd8267fdb59e2b932c051"
+    },
+    {
+      "path": "assets/infrastructure/urban/urban_assets_manifest.json",
+      "bytes": 9123,
+      "sha256": "0dc9557f19f9d8e8ca4baa0d77632c918c2df38523b9b0e8c9c6de3c4d955c17"
+    },
+    {
+      "path": "assets/infrastructure/urban/verify_urban_assets.py",
+      "bytes": 3365,
+      "sha256": "a5086dc5a5d58e45cc7737b1cc6d9850c734fb2ed5f38785d0577aad7dfb19c9"
+    },
+    {
+      "path": "assets/infrastructure/vehicles/README.md",
+      "bytes": 8823,
+      "sha256": "5649b347c3d6788e981ffed36bb1d20b069e949caafec5c86f5cb6228eea9d82"
+    },
+    {
+      "path": "assets/infrastructure/vehicles/coast_metro_train_manifest.json",
+      "bytes": 1646,
+      "sha256": "10ad15c284dab528c0f20a31ab586c9f64b3c5e093f43eff51117639b819e5a7"
+    },
+    {
+      "path": "assets/infrastructure/vehicles/manifest.json",
+      "bytes": 4887,
+      "sha256": "3d4a10e95f5b11f382c65eeb0e9ae1c84471eefcaa37e4909b619b22d80da3ba"
+    },
+    {
+      "path": "assets/infrastructure/vehicles/transit_vehicle_manifest.json",
+      "bytes": 2521,
+      "sha256": "d436ee11a86021300df43b2dcca29002c091e21dd06a8ec10ad486b413038524"
+    },
+    {
+      "path": "assets/infrastructure/vehicles/transit_vehicles.blend",
+      "bytes": 247238,
+      "sha256": "e8a395c24980506592d7d24189db11d1c10cac8b6fb91896f72c0c3274eae35c"
+    },
+    {
+      "path": "assets/infrastructure/vehicles/validate_train_gauge.mjs",
+      "bytes": 3725,
+      "sha256": "56b86454b30ecd712b16eb8ca5a0a03887fd46d1dc61e999de77d4524c36839b"
+    },
+    {
+      "path": "assets/infrastructure/vehicles/validate_transit_three.mjs",
+      "bytes": 2953,
+      "sha256": "925c08f6347a6b566ca4a82b9be3242436b78111a789aef2013f1183d1f11c73"
+    },
+    {
+      "path": "assets/infrastructure/vehicles/water_transit_ferry_manifest.json",
+      "bytes": 1981,
+      "sha256": "b03eaa9c62b5b356a9fa92ad7e12ca6e2cbf21a2c170c6fa1701c0914eb813e9"
+    },
+    {
+      "path": "assets/landscape_reference_kit/BirdRockLookout.blend",
+      "bytes": 277427,
+      "sha256": "630379990c9b7b18027591b96ea158903b8f4653385a516db13e8ddfda2e5f86"
+    },
+    {
+      "path": "assets/landscape_reference_kit/BirdRockLookout_manifest.json",
+      "bytes": 2716,
+      "sha256": "43ab057920261189f36f765564184ef2d0b7cf496090b92e14a7393d832b346c"
+    },
+    {
+      "path": "assets/landscape_reference_kit/CanalRainTree.blend",
+      "bytes": 371598,
+      "sha256": "988b61c70ed7ae1ad34a5bdd8ebce471c50d5d82c9a0795a987aff8396a6b575"
+    },
+    {
+      "path": "assets/landscape_reference_kit/CanalRainTree_manifest.json",
+      "bytes": 2282,
+      "sha256": "76de91a2007675084a57a6e228e9daebe7cf13e78aada080e939bcf5bcfd863d"
+    },
+    {
+      "path": "assets/landscape_reference_kit/CanalShikara.blend",
+      "bytes": 154435,
+      "sha256": "902e6ddc568015ac13312220e20951e0b9ec85f8b49ff37d5e10688a0ea32289"
+    },
+    {
+      "path": "assets/landscape_reference_kit/CanalShikara_manifest.json",
+      "bytes": 1751,
+      "sha256": "b324a1b4ef80d6f9fde93081d5107c4773626fffd792f0713b42a4d142a4f773"
+    },
+    {
+      "path": "assets/landscape_reference_kit/README.md",
+      "bytes": 4203,
+      "sha256": "696dedeefc5186e0da582055ffed3103f65c0addb7fbe6578acbb17a4648a757"
+    },
+    {
+      "path": "assets/landscape_reference_kit/manifest.json",
+      "bytes": 8045,
+      "sha256": "f1019c848951bd66a9704d909a8063716b52779973571f2b2c88a0f4fae59fce"
+    },
+    {
+      "path": "assets/landscape_reference_kit/original_stone_normal.png",
+      "bytes": 129672,
+      "sha256": "88543ab6f38d41a15e4ec118212979efd15bc4fd56177a4da43dfcfded7ba1f8"
+    },
+    {
+      "path": "assets/landscape_reference_kit/validate_landscape_kit.mjs",
+      "bytes": 4930,
+      "sha256": "1377e1fe3127de4df0a266b5310bd44caf8c387f816953d63d64d6d283c0f441"
+    },
+    {
+      "path": "assets/showroom/README.md",
+      "bytes": 2051,
+      "sha256": "32ef0366a06c4625f39acc9e4b7478e6f975f2356982a9d6121f38a21daa985f"
+    },
+    {
+      "path": "assets/showroom/README_Loft.md",
+      "bytes": 1890,
+      "sha256": "3668bc4ec2f76a2eb37082609920c30ec980a17bf8142414dc6d038d9c0de44a"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomBay.blend",
+      "bytes": 185983,
+      "sha256": "5899642017fe66910e15d4dd025d4f8dd5033750908204b503add43b96520720"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft.blend",
+      "bytes": 9416180,
+      "sha256": "e47843433182d45bbddfba5347612dafceaea45e3517c864a5591df2ee6e4cfe"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft_architecture.png",
+      "bytes": 1768469,
+      "sha256": "f77263cedfe2d49890592b7afea1f5214b413ff4701abac68687733c007edc5c"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft_home_desktop.blend",
+      "bytes": 12638340,
+      "sha256": "6da08887522d255f87737061cf7ea5458354fa50d4c0b17ffdc6bcd946518acb"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft_home_desktop.png",
+      "bytes": 1706067,
+      "sha256": "67c427e91895a85a20d046aeab825e943c8b8cb49ea9a206b2d879bb970beca5"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft_home_portrait.blend",
+      "bytes": 12638340,
+      "sha256": "2f5b13f7b9d396204c317beece0e84a2f5681aa1155d141f589c8e9aa197362d"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft_home_portrait.png",
+      "bytes": 2493316,
+      "sha256": "c50ddeee9b2a8128925fea5a044f68f652baf14a6404ceab6a8e2d0ef18cc049"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft_preview.png",
+      "bytes": 1633009,
+      "sha256": "c0696826ee8784344546190cdb1654081c780884924880752717229907032075"
+    },
+    {
+      "path": "assets/showroom/home_desktop_provenance.json",
+      "bytes": 504,
+      "sha256": "0c5453d6f3e1f2d983c37f170663ebae356fea0cb93f9ec4536a211c682732cf"
+    },
+    {
+      "path": "assets/showroom/home_portrait_provenance.json",
+      "bytes": 656,
+      "sha256": "571024a9027bbab66a8c319d2005f92b06fb242351b1186deee04abc5e9fd726"
+    },
+    {
+      "path": "assets/showroom/loft_freeze.json",
+      "bytes": 1830,
+      "sha256": "d861d4a2636cc5a1575fba13371e694769c403471faf483e562b4d9f83976a2e"
+    },
+    {
+      "path": "assets/showroom/loft_manifest.json",
+      "bytes": 1854,
+      "sha256": "722e979d1f57b81afa842e93f098e932bbd5d1d5f68ebff1d93762658248ff1d"
+    },
+    {
+      "path": "assets/showroom/loft_validation.json",
+      "bytes": 14517,
+      "sha256": "7a9b834c9fd5a1dbc93d09a83aaeb67a9bb21364138fff4b469b2aeb7b4f8df3"
+    },
+    {
+      "path": "assets/showroom/showroom_manifest.json",
+      "bytes": 1345,
+      "sha256": "b053f48202df16a8a692a5b1aff33084e5a8f2808ea4d017187f4d5544fc8934"
+    },
+    {
+      "path": "assets/showroom/validate_loft.mjs",
+      "bytes": 2681,
+      "sha256": "9d2fd270080acea681375d8a2497e0297a5587a00e00fdb8125a7808c75b6485"
+    },
+    {
+      "path": "assets/web/CAR_README.md",
+      "bytes": 5498,
+      "sha256": "5e65b5cd8af8f19cf4f7027ca3f1b45686fae2d76492f04ad63eab04ef734b9c"
+    },
+    {
+      "path": "assets/web/CheckpointGate.blend",
+      "bytes": 95981,
+      "sha256": "8a938f794f4739faa41bc93e8a11d2169e285cfd2500da718e7f0e5c02097c3b"
+    },
+    {
+      "path": "assets/web/CheckpointGate_manifest.json",
+      "bytes": 888,
+      "sha256": "e975931a99c9f84cea48cebfecc28b3fcf47e935c83d075e03035d911db98f48"
+    },
+    {
+      "path": "assets/web/ENVIRONMENT_WEB_README.md",
+      "bytes": 7178,
+      "sha256": "de8d045d2dbeef66b1cc402642660d1b7bb397008ada336a2b944e9dd34ee87c"
+    },
+    {
+      "path": "assets/web/ServiceShowroomLoft.glb",
+      "bytes": 1322220,
+      "sha256": "20a0fd0d15743da3b92de1d91bb5bc3834995af3ff7d0f4049afbab907899b2f"
+    },
+    {
+      "path": "assets/web/canal_far_manifest.json",
+      "bytes": 895,
+      "sha256": "3b2c74b10b31a8d8b1ebceae1bb5f87855ca6818b05ea53d7a7542f7b437a39e"
+    },
+    {
+      "path": "assets/web/car_bronze.glb",
+      "bytes": 2446632,
+      "sha256": "7d18612a3a01c4cbbbbe2cbc6a61a671efeec152c71a0427591c967f8a3dba0c"
+    },
+    {
+      "path": "assets/web/car_bronze_manifest.json",
+      "bytes": 4281,
+      "sha256": "52319281b15516a88a673e94cb191d29c032f539738d36d89549a26706cb5182"
+    },
+    {
+      "path": "assets/web/car_manifest.json",
+      "bytes": 21079,
+      "sha256": "a1cf2aae4798254f5e3c1c6c163a5634a5806c7772d3f69cc4ce1db85c26988c"
+    },
+    {
+      "path": "assets/web/car_midnight.glb",
+      "bytes": 3151648,
+      "sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00"
+    },
+    {
+      "path": "assets/web/car_midnight_manifest.json",
+      "bytes": 5294,
+      "sha256": "749a49aa882da135658d6819b59b89e9daf2f649af775ae5404845bf0a2bb734"
+    },
+    {
+      "path": "assets/web/car_overlap_debug.json",
+      "bytes": 7805,
+      "sha256": "9412b6b7a6430ec1e323b9423ed37c6cc91464ed1269a48d56c508c4f19d012d"
+    },
+    {
+      "path": "assets/web/car_silver.blend",
+      "bytes": 599340,
+      "sha256": "9056620ea3f5a26dc75fa2752b59065fad05d78a5d10e00c1fbee2126c09ed12"
+    },
+    {
+      "path": "assets/web/car_silver_README.md",
+      "bytes": 6395,
+      "sha256": "05f26079b3905da8b52d878123163b81bf275fa3a8d3a8a79404fcf176edd648"
+    },
+    {
+      "path": "assets/web/car_silver_manifest.json",
+      "bytes": 2782,
+      "sha256": "c7b98c6ce42b5b0df7a3788da4766f383fbed1f59f5513249a84eeed504fe663"
+    },
+    {
+      "path": "assets/web/car_silver_render_final.py",
+      "bytes": 2127,
+      "sha256": "48aa6db47c5fa8fdecd1a47c456014f6d1d6aa6fb3d807752cdeae11d85d318c"
+    },
+    {
+      "path": "assets/web/car_silver_validate_three.mjs",
+      "bytes": 3382,
+      "sha256": "f31321c406896dc88801f0a690de4f3a7b8fa1e0a5939d2240a56218d19f1fb5"
+    },
+    {
+      "path": "assets/web/car_thumb_bronze.png",
+      "bytes": 190341,
+      "sha256": "51a4ab6f0cee153ab4f2c11237a4a07c3aceac8475fd2804e862c78aa6035b4f"
+    },
+    {
+      "path": "assets/web/car_thumb_midnight.png",
+      "bytes": 192976,
+      "sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae"
+    },
+    {
+      "path": "assets/web/car_thumb_verdant.png",
+      "bytes": 179941,
+      "sha256": "cf69c2e16656c42e04dd8debc492db896ca58155f61a2f1d5e9efc28cb059a3e"
+    },
+    {
+      "path": "assets/web/car_thumb_vermilion.png",
+      "bytes": 185767,
+      "sha256": "196827a272434fc89b16166ab59dd75d5a846f704edaf520780d3f66160a4571"
+    },
+    {
+      "path": "assets/web/car_verdant.glb",
+      "bytes": 2978272,
+      "sha256": "3673317b5c67c99dab5c8797de58ab3431af2edb13b393e70110c49903175b29"
+    },
+    {
+      "path": "assets/web/car_verdant_manifest.json",
+      "bytes": 7247,
+      "sha256": "7388ebc4103ff8c567aad97fe5fa54f10c5ca24d6ad3304f8a44b7c96ccb0832"
+    },
+    {
+      "path": "assets/web/car_vermilion.glb",
+      "bytes": 2784412,
+      "sha256": "dd0b4111fd14951c995365dd89ed0adf5ee5857dabcfd84ccc864d27d34f9efe"
+    },
+    {
+      "path": "assets/web/car_vermilion_manifest.json",
+      "bytes": 8272,
+      "sha256": "977751bc9214de10e084934358b875951dc5399f3073ad2fdde9a823f89341a3"
+    },
+    {
+      "path": "assets/web/car_web.blend",
+      "bytes": 748457,
+      "sha256": "88a54c78794c601e74411639f09fe4bfe55085434a34f8adb5e5a9e59be0fa1d"
+    },
+    {
+      "path": "assets/web/course_runtime.json",
+      "bytes": 442544,
+      "sha256": "96d724670505739dbd2b282dbea2de677ab4ccd0e36893d863f68a6828ded789"
+    },
+    {
+      "path": "assets/web/course_runtime_highlands.json",
+      "bytes": 920149,
+      "sha256": "08e6bdac59f00f61010f99eb840bca87998b57fad613b01cea1835a7f6d0e0a3"
+    },
+    {
+      "path": "assets/web/environment_web_manifest.json",
+      "bytes": 11254,
+      "sha256": "0fcb86cc5622f352e34252f478ebcea0514eeb381d0d7054c46c5aecad21e730"
+    },
+    {
+      "path": "assets/web/foliage_detail_manifest.json",
+      "bytes": 1960,
+      "sha256": "d797a6c4c731e169e40e8af28e678825f9fde4b3b7fd02643857390d55a2bc6b"
+    },
+    {
+      "path": "assets/web/furniture_colliders.json",
+      "bytes": 31824,
+      "sha256": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611"
+    },
+    {
+      "path": "assets/web/highland_prop_manifest.json",
+      "bytes": 2485,
+      "sha256": "19a3f9db9c6ec5560c4abb06a15fd8e5f7a551f54081615f4ef4619644ee7e55"
+    },
+    {
+      "path": "assets/web/highlands_furniture_colliders.json",
+      "bytes": 240829,
+      "sha256": "037b9ebc166d6f56d2cc5a665f7943f42d69934dfbf37ce3ea8dd4d645722d90"
+    },
+    {
+      "path": "assets/web/highlands_infrastructure_colliders.json",
+      "bytes": 148239,
+      "sha256": "0ea2af907864a962533bebece1e0e8305469a98b944ecd1e245b949454b10c01"
+    },
+    {
+      "path": "assets/web/highlands_manifest.json",
+      "bytes": 1489,
+      "sha256": "e7d50b09e73a2fe88fec881d6354e9778d1293df5c9940ec642094b9fa3e626b"
+    },
+    {
+      "path": "assets/web/highlands_terrain_grid.json",
+      "bytes": 787942,
+      "sha256": "4d23bd2b1a7fcf26883298c3c5791fec71d44f52d90b38b2270c753ce891e52b"
+    },
+    {
+      "path": "assets/web/houseboat_manifest.json",
+      "bytes": 1521,
+      "sha256": "5ad733c820dccf52674b3681af392ae9970b6e0d6150a30953166c58daa1e8d7"
+    },
+    {
+      "path": "assets/web/infrastructure_colliders.json",
+      "bytes": 159803,
+      "sha256": "76d163a8411d8cf84d79ee97e0b0402ea7713dd3716001cfad7a4e49a5a90a75"
+    },
+    {
+      "path": "assets/web/landscape_reference_manifest.json",
+      "bytes": 8045,
+      "sha256": "f1019c848951bd66a9704d909a8063716b52779973571f2b2c88a0f4fae59fce"
+    },
+    {
+      "path": "assets/web/police_lightbar.blend",
+      "bytes": 94132,
+      "sha256": "85edc77dc2cc64f3112b01a3bcb9d9d1eb861428b6e87dba0e69750f163196aa"
+    },
+    {
+      "path": "assets/web/police_lightbar.json",
+      "bytes": 462,
+      "sha256": "026fc2392bf2d71e95ed42b3becbb2b2f227f7216c1084bc383bfb8ba96d1180"
+    },
+    {
+      "path": "assets/web/render_environment_web.py",
+      "bytes": 1393,
+      "sha256": "ddfcb5651741acddd8a3cede6b54f838507bab1fc09449afab9cc1357532d3bf"
+    },
+    {
+      "path": "assets/web/showroom_loft_manifest.json",
+      "bytes": 1854,
+      "sha256": "722e979d1f57b81afa842e93f098e932bbd5d1d5f68ebff1d93762658248ff1d"
+    },
+    {
+      "path": "assets/web/showroom_manifest.json",
+      "bytes": 1345,
+      "sha256": "b053f48202df16a8a692a5b1aff33084e5a8f2808ea4d017187f4d5544fc8934"
+    },
+    {
+      "path": "assets/web/tea_detail_rows.json",
+      "bytes": 320544,
+      "sha256": "4b840eb67cd9ccdf8caac780bf84c66982a23251e96ca834cb658089cbbd2c1a"
+    },
+    {
+      "path": "assets/web/transit_infrastructure_manifest.json",
+      "bytes": 7984,
+      "sha256": "7b37fb1794fa4891d8a2f1c01d219b9964893807036b4bdfe241b60395911cc8"
+    },
+    {
+      "path": "assets/web/transit_vehicle_manifest.json",
+      "bytes": 2521,
+      "sha256": "d436ee11a86021300df43b2dcca29002c091e21dd06a8ec10ad486b413038524"
+    },
+    {
+      "path": "assets/web/urban_assets_manifest.json",
+      "bytes": 9123,
+      "sha256": "0dc9557f19f9d8e8ca4baa0d77632c918c2df38523b9b0e8c9c6de3c4d955c17"
+    },
+    {
+      "path": "assets/web/validate_checkpoint.py",
+      "bytes": 1218,
+      "sha256": "2fb739ae3c3d4e1d1260038f4e7073a3b3612a3eddcc57a4b1c28782a90621b7"
+    },
+    {
+      "path": "assets/web/validate_environment_web.py",
+      "bytes": 2226,
+      "sha256": "a5018ee2dbeed260f0855b9f15a3c37585fe4c12413a6a364f307d45c7868c41"
+    },
+    {
+      "path": "blender/animate_car.py",
+      "bytes": 696,
+      "sha256": "3c81c7a7a77070e6d86051fc8163aa6c5ad450e97943153eee76c9ca79b98af8"
+    },
+    {
+      "path": "blender/assemble_v8_districts.py",
+      "bytes": 8385,
+      "sha256": "62b6bcdef8eb1a261e25be8fe659371eb6853552deee87b52699d1369980c032"
+    },
+    {
+      "path": "blender/build_bronze.py",
+      "bytes": 10386,
+      "sha256": "a1bd88844dae16255b3faaa003c0fe26938d3b573e1bae8c9636958d938c78f0"
+    },
+    {
+      "path": "blender/build_canal_far_lod.py",
+      "bytes": 5870,
+      "sha256": "675a4f45814538a9dbdc6ba7207eb5d4d885dbc1be5bdf93afac1ecc180542e4"
+    },
+    {
+      "path": "blender/build_car.py",
+      "bytes": 37494,
+      "sha256": "8217312740d494b5c7a242e4702270163d61f03e33c83974f924acc737b3b6c2"
+    },
+    {
+      "path": "blender/build_checkpoint_gate.py",
+      "bytes": 6990,
+      "sha256": "915bdc1f76ba2810c8601a5b25ad8018edd0eb2095e5f95f454d265f08c669ea"
+    },
+    {
+      "path": "blender/build_course.py",
+      "bytes": 19857,
+      "sha256": "6d29f392e49be39d939a837424750e7f68e1eca62a07c96f4b9165807df74e94"
+    },
+    {
+      "path": "blender/build_environment.py",
+      "bytes": 24523,
+      "sha256": "cbda39c7bee0d46b113db61c089a93168eb785ad8c75f2a0abc5e1cd95f43523"
+    },
+    {
+      "path": "blender/build_foliage_detail.py",
+      "bytes": 9505,
+      "sha256": "5c060e40ca5a8e4ca1848d437d761c8e4e3b509f1d1f35ded618cbedf52f0acc"
+    },
+    {
+      "path": "blender/build_highland_props.py",
+      "bytes": 6741,
+      "sha256": "da0fc0b0d7ff81193637f3ccea595ecb14d3d96515effe4b707525b096872d26"
+    },
+    {
+      "path": "blender/build_highlands.py",
+      "bytes": 21638,
+      "sha256": "867ae244d8992b23d0123880fab6b7d8897c8dd61b756e7a4c4cbaf743cff22c"
+    },
+    {
+      "path": "blender/build_houseboat.py",
+      "bytes": 11569,
+      "sha256": "b945e8183182c5e1a71a54428b627a42a02e030341b7e74033c8fa960caf7660"
+    },
+    {
+      "path": "blender/build_landscape_reference_kit.py",
+      "bytes": 29193,
+      "sha256": "a5bc480b897bc5a8d8ed05eb7c8c5600fcca11ca3300f26a49a9476d0bd2fa47"
+    },
+    {
+      "path": "blender/build_midnight.py",
+      "bytes": 14273,
+      "sha256": "5305ff06c5587b738738df15674f8cd3ec40750e9ce0c12fbe0552c3938b4d51"
+    },
+    {
+      "path": "blender/build_police_lightbar.py",
+      "bytes": 2423,
+      "sha256": "939e8acb24a706664a7ceaa4a9710799ce390def9ba4d3665c2d8cd163bd0da3"
+    },
+    {
+      "path": "blender/build_service_showroom.py",
+      "bytes": 11043,
+      "sha256": "94b73fd0136579aa5c6882cc485574417243682395010f256e415e102f45c176"
+    },
+    {
+      "path": "blender/build_showroom_loft.py",
+      "bytes": 13907,
+      "sha256": "da7ae8f1e8366196c9c4b0c07236c277363db64fcb91c281aebdcdb9d2d17101"
+    },
+    {
+      "path": "blender/build_silver_car.py",
+      "bytes": 26250,
+      "sha256": "c10cee36ef7ecf23008ea0990c6e6d7722da88be1a5423726d2db98f2ad0947d"
+    },
+    {
+      "path": "blender/build_transit_infrastructure.py",
+      "bytes": 18171,
+      "sha256": "edb8bc07f76006a90883e7f5fa49b504f25135155829b6abac0781d531a36b6c"
+    },
+    {
+      "path": "blender/build_transit_vehicles.py",
+      "bytes": 31716,
+      "sha256": "570142954d21752849f24809f9d876e5aa71a0a139039a6c3b935efc0136f2b8"
+    },
+    {
+      "path": "blender/build_urban_props.py",
+      "bytes": 20125,
+      "sha256": "1c0dd02adb4ced0252e619759e207f498e748801e29cf3b8227b318505776db1"
+    },
+    {
+      "path": "blender/build_verdant.py",
+      "bytes": 14157,
+      "sha256": "6e3f843d6351d71b2ec8ae4204afad54e2336c82400f15747565a60b3f4cbdac"
+    },
+    {
+      "path": "blender/build_vermilion.py",
+      "bytes": 14486,
+      "sha256": "385926c8d1f1a8e52a50eadd49c419368724697180951dc1ddd7ce55147b8aac"
+    },
+    {
+      "path": "blender/export_furniture_colliders.py",
+      "bytes": 2052,
+      "sha256": "18c0ea219d919926f547ed91fdb6a675f252d3516a1516ac6a4a5e93114802c2"
+    },
+    {
+      "path": "blender/export_web_assets.py",
+      "bytes": 11358,
+      "sha256": "1fb7e1cf8eb7bc0933613ec90849b51fa2eb7ea2807402468fa378e8a15b4802"
+    },
+    {
+      "path": "blender/finalize_car.py",
+      "bytes": 3004,
+      "sha256": "8e18e8766707a960248603b4219d8abce80c13d5ff30124583c27bbda2ec9eea"
+    },
+    {
+      "path": "blender/finalize_rebuilt_car.py",
+      "bytes": 3890,
+      "sha256": "4c8e13d18e192146f8097b84afd64cdb75a9ee7c0857dcc950b322fbf4ca6958"
+    },
+    {
+      "path": "blender/finalize_transit_previews.py",
+      "bytes": 1337,
+      "sha256": "d128c9dbfd2717ecdfe622b709108af29bf9c55f33c48f041bdabd072cfa0966"
+    },
+    {
+      "path": "blender/measure_midnight_brake_gap.py",
+      "bytes": 1734,
+      "sha256": "b4459d975e267fa0fbb3663ebafcf0f362ace376017bebd70ab50a240a0a6059"
+    },
+    {
+      "path": "blender/optimize_web_car.py",
+      "bytes": 7889,
+      "sha256": "eddf8b9f4630e98a5db7697c0a4083dd99153156e774fae17601d3b0e51e235a"
+    },
+    {
+      "path": "blender/plan_highland_tea.py",
+      "bytes": 3395,
+      "sha256": "8225147eae60902fbdcef3853126c551ff73a6bf4a180b01786930f4484c16eb"
+    },
+    {
+      "path": "blender/plan_highlands.py",
+      "bytes": 7438,
+      "sha256": "dcdca922f1ebcdddc7b046fbfae45bbe29f736fa20985c32ba4692041bdc5b82"
+    },
+    {
+      "path": "blender/plan_tea_detail.py",
+      "bytes": 3419,
+      "sha256": "1515978c73d2ee62550e66311af9846294fdd949e8b0f4ec35802f3b63c2f1bf"
+    },
+    {
+      "path": "blender/plan_v8_districts.py",
+      "bytes": 14343,
+      "sha256": "5b1bc252f776718f4d61185d2568213a392fe60c996a2be3d5c6c9090845e04b"
+    },
+    {
+      "path": "blender/preview_car.py",
+      "bytes": 368,
+      "sha256": "a5246a00a69dfa86b42f1a789a9950e08831462ddcfc537dacdb7e3dfc78ad20"
+    },
+    {
+      "path": "blender/rebuild_car_helpers.py",
+      "bytes": 16775,
+      "sha256": "4d3a06f5e4e30e2dee38d54c21ca462b32c163c32943ba04fdba52d47b505ddb"
+    },
+    {
+      "path": "blender/render_car.py",
+      "bytes": 825,
+      "sha256": "4179d9d50416bc8dce629f34db7efcb0499cc4688415c2b58d94027190b9bf0d"
+    },
+    {
+      "path": "blender/render_car_parts.py",
+      "bytes": 2125,
+      "sha256": "876a48a8a22571114b9d825e44d027f797aeb828ab977d7316ad2474a700877b"
+    },
+    {
+      "path": "blender/render_foliage_detail.py",
+      "bytes": 4281,
+      "sha256": "f9dff61e4ebf1adb749bc579b14e92da22ea6327ebc644a57284e3bfcdd98c3a"
+    },
+    {
+      "path": "blender/render_highland_props.py",
+      "bytes": 2175,
+      "sha256": "6ee27e7b6840b97c69d723544df09eca63fbc7867c2882def33cbde206e47d48"
+    },
+    {
+      "path": "blender/render_highlands.py",
+      "bytes": 2757,
+      "sha256": "069a6026dc90159ba0187cfdfdbb94ee23669abd443eb43e93053321007ef144"
+    },
+    {
+      "path": "blender/render_loft_desktop.py",
+      "bytes": 1278,
+      "sha256": "a70e312513d80e3f345d5962a2654eafe666d6a9cc9478350dbd8b4c9db89fae"
+    },
+    {
+      "path": "blender/render_loft_home.py",
+      "bytes": 1717,
+      "sha256": "bbf94afea016d42add25720e7c4fe359a17ff1296367942e2bf107bc632fa87f"
+    },
+    {
+      "path": "blender/render_rebuilt_car.py",
+      "bytes": 3633,
+      "sha256": "cf0ee66db6a489b673436b1bf0cf6630c60ce79c6c37c011208d6a408c10aab2"
+    },
+    {
+      "path": "blender/render_showroom_final.py",
+      "bytes": 590,
+      "sha256": "cf581b5284641ae9a97b4b5878f94868e7489d975e95f99fa9afbe0fc7a73112"
+    },
+    {
+      "path": "blender/render_v8_districts.py",
+      "bytes": 5327,
+      "sha256": "a5f69d426a043670a6cc41b6d64eebd6df808f9cffd93924e13eaf7ecd71e818"
+    },
+    {
+      "path": "blender/render_v8_utilities.py",
+      "bytes": 1685,
+      "sha256": "ad5c5407c569fd6f62ddaf742a80b5a34a16b1a5d415d076180d9cbb4840c7f0"
+    },
+    {
+      "path": "blender/render_v9_canals.py",
+      "bytes": 6188,
+      "sha256": "ab66477a120ec3b94172b046f6278aa685239560dded742953d9d37ef25b4478"
+    },
+    {
+      "path": "blender/sync_v8_final_details.py",
+      "bytes": 1276,
+      "sha256": "7441479ec4cca4566ed84588adbc9ec31e68784115fc303c58768ec38a4e8d3e"
+    },
+    {
+      "path": "blender/test_car.py",
+      "bytes": 5078,
+      "sha256": "c4e55beb74c0fc4abfc16a6f1ce1515c037a4735c308e80699b40c8de5f299d3"
+    },
+    {
+      "path": "blender/test_car_clearance.py",
+      "bytes": 1217,
+      "sha256": "d42e970203a32da7addde62436f60d5d94930f3f3ed806a62aef177fa55780b3"
+    },
+    {
+      "path": "blender/test_car_cosmetic_envelope.py",
+      "bytes": 2521,
+      "sha256": "6d10d6ccc5a7416d9225058a86047c407035c3b07e409d658ee8d61f591c766a"
+    },
+    {
+      "path": "blender/test_car_parts.py",
+      "bytes": 2051,
+      "sha256": "fa5c1bca4bfa6515f7410c4aadaea8f11b635071e5603e9f12b8fc4ab48b40da"
+    },
+    {
+      "path": "blender/test_common_car_cosmetics.py",
+      "bytes": 2631,
+      "sha256": "a91ffc1a580e4a2c2357b623a184abffdc4a7bd5a5071fdbda7e726d82849ab7"
+    },
+    {
+      "path": "blender/test_ferry_reference_revision.py",
+      "bytes": 2191,
+      "sha256": "21daf6dabd5aaaf9494c7a3f5cb8dad7355abaa3d40e67101fdc34f65a5169fc"
+    },
+    {
+      "path": "blender/test_landscape_sources.py",
+      "bytes": 991,
+      "sha256": "e7c352b0f0e24455d3a3c27def325465bdc0107eb9b0c2a26d30fce3e764d397"
+    },
+    {
+      "path": "blender/test_midnight_inspection.py",
+      "bytes": 3329,
+      "sha256": "644cf441405e5d44234941eb0c1aa444a190fc4a1778bedbb9cf72a0d6ac34ed"
+    },
+    {
+      "path": "blender/test_rebuilt_car.py",
+      "bytes": 5747,
+      "sha256": "50dfe552d0b5c5c88e67e14807ba010e658558340326aea65dcf8dfb6a2efa59"
+    },
+    {
+      "path": "blender/test_web_car.py",
+      "bytes": 4385,
+      "sha256": "1dac4392f584b480bbbfb65209c49ee7adc058f887ba76d2300829487591c018"
+    },
+    {
+      "path": "blender/validate_art_native.py",
+      "bytes": 1360,
+      "sha256": "71381503997431763fbb76d1fda8e0535505f31b89c62ed98f9f8b47473b1be7"
+    },
+    {
+      "path": "blender/validate_aux_art.py",
+      "bytes": 5986,
+      "sha256": "48295f6ff1990b24121d6c703c1cfde397cf24da7d8c201f71fb22860983670a"
+    },
+    {
+      "path": "blender/validate_foliage_detail.py",
+      "bytes": 5682,
+      "sha256": "1043c542520e483bc1213d43454a3a20f491b011b82082682e8029ec9819573c"
+    },
+    {
+      "path": "blender/validate_foliage_placements.mjs",
+      "bytes": 2297,
+      "sha256": "da4c0fafe08ea53247ccd759e22fa23363672031d511738df5cb4581fe22a84f"
+    },
+    {
+      "path": "blender/validate_highlands.py",
+      "bytes": 7662,
+      "sha256": "a692975c8d6fb4cf516b9fa7f0d3480d8df66ed869df1f6215e422ff3aa3f565"
+    },
+    {
+      "path": "blender/validate_rebuilt_car.mjs",
+      "bytes": 4337,
+      "sha256": "34229b49e6c7d9f7eaaeb720af19e6eeed38d485129c3e6164790d5a09f9905e"
+    },
+    {
+      "path": "tools/audit_native_metadata.py",
+      "bytes": 1629,
+      "sha256": "e4e574b01bdb8e19cac025917871018b524e2a210cf4f3ad3427dfe374c7f5db"
+    },
+    {
+      "path": "tools/audit_runtime_payload.py",
+      "bytes": 2138,
+      "sha256": "c3c3bed5f2af5a180c577a34a3fa097051ce2718b1f83150b90a45305df24907"
+    },
+    {
+      "path": "tools/build_audio.py",
+      "bytes": 1046,
+      "sha256": "e828fe10890af69ca262119a89316f5889088171c43bb6789e2f4452e17be2ff"
+    },
+    {
+      "path": "tools/build_unreal.sh",
+      "bytes": 1112,
+      "sha256": "16722f4399939eea70026334c8a91a6140ee601cae09c898c3a38073461638b5"
+    },
+    {
+      "path": "tools/checkpoint_reconstruction.py",
+      "bytes": 2975,
+      "sha256": "a346fec8d69bf70965fd0f324d75377fbef7d08cb72d9a4f631f8ce649a54990"
+    },
+    {
+      "path": "tools/correct_original_license.py",
+      "bytes": 3692,
+      "sha256": "d89ed91322cde43c3777aea1de00ca7ec34724b2a661e4d83016ef51a25d63bc"
+    },
+    {
+      "path": "tools/freeze_release.py",
+      "bytes": 2397,
+      "sha256": "9f847e3c6a5cc7360f0de96694a2014d81ab1f1e3c86634825aedd135dad5c71"
+    },
+    {
+      "path": "tools/full_checkpoint.py",
+      "bytes": 2495,
+      "sha256": "d6db1e02977eb19cc53d57c5ed9c9798e717b4c700301f888eee3f2e74dd6c5d"
+    },
+    {
+      "path": "tools/integrate_v9_canals.mjs",
+      "bytes": 10825,
+      "sha256": "53d4a9c919b698953f23426fc9ebce3b21c5ee3cb5ae19115e4ad0efae3097e7"
+    },
+    {
+      "path": "tools/refine_v10_discovery.mjs",
+      "bytes": 2505,
+      "sha256": "4c8df983a67dafac26235ca4f2e81bb1ab6518dd623748bbec1b993c6d1677cc"
+    },
+    {
+      "path": "tests/UI_REBUILD_STATUS.md",
+      "bytes": 3472,
+      "sha256": "2b1e530804cc8e9a1a0472d336b4e49f4a3591ffedc941af571555a4b8e14fe0"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/README.md",
+      "bytes": 2188,
+      "sha256": "5082bf7c580aa0c13396e600e90cb708be4d1d5be9b7c7b7c9ead57a9a89e39f"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/audit_road_transforms.mjs",
+      "bytes": 1896,
+      "sha256": "b269b7381dfc0d353325fc3dc63e980c9e105a85edf003c2d275ce382aead16f"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/audit_runtime.mjs",
+      "bytes": 10497,
+      "sha256": "9c89b0a6c1a4ac4d61499bb80cb1c6d783f7e13efdaa15f53a93cc92ff04290a"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/copied-explore-asphalt.test.mjs",
+      "bytes": 4642,
+      "sha256": "940ca75de0aaf6397f22a1c58769605af3fd31dd2f7c7b67a80aee65eb172cf8"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/copied-scene-contract.test.mjs",
+      "bytes": 16435,
+      "sha256": "950d8a7e60b9c57565794dffbc1bbd3ea2b07ee5bf5337878e5b5201b6f9ae54"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/derived_test_provenance.json",
+      "bytes": 877,
+      "sha256": "7d476dbf3c42473c6da62b777f87d9983a1bf7ba9089397863d502e76d451bf9"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/explore-asphalt.log",
+      "bytes": 151,
+      "sha256": "ab492b1836371d06fcf8daeae1051c53edf63281af432474370598d89f96add3"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/explore_asphalt_metrics.json",
+      "bytes": 31628,
+      "sha256": "e918f6e7d97982a9d6c42c02133c8c66ef2b7dd2a273f6d04e3d2dafeef48769"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/road_transform_report.json",
+      "bytes": 3746,
+      "sha256": "fb053a60027bb8885b8f11857b2c7627b8204479d20e80ccbde7e4a03816dc22"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/runtime.log",
+      "bytes": 221,
+      "sha256": "1519d21465e2d824253dae1453c8fa6d93dc625e2008e2b1bd4a4ad06c9c8af8"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/runtime_initial.log",
+      "bytes": 445,
+      "sha256": "1d0e5c3eaeead4f2a15d384ced5665569c2c34c971b46e557156b7968a9fa6e7"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/runtime_report.json",
+      "bytes": 12164,
+      "sha256": "38c63aba9ca2c43c8245e47d4e3ba12e5fa011b21a173b064bcc3be7328dd9a9"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/runtime_report_initial.json",
+      "bytes": 10660,
+      "sha256": "6cc29b2a7658b7b6b257578f02c220d0d8708f37f25cfca3ca72ea89fcc9ff6a"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/scene-contract.log",
+      "bytes": 1339,
+      "sha256": "d2e2ef7d01b869a843422cd4c2700b533ae888457ac1cd652fc9e56c9ee34772"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/summary.json",
+      "bytes": 3007,
+      "sha256": "ccb19848887a8e553b72bceb59342276ec00ec2da551bf293700c42add3cb4f7"
+    },
+    {
+      "path": "tests/independent_rebuild_asset_audit/test_review.md",
+      "bytes": 3233,
+      "sha256": "37bd91aecea717966d05cd689ec0c1dd1219fb44bdfddb125f88a49694aabd05"
+    },
+    {
+      "path": "tests/rebuild-controller-coast.log",
+      "bytes": 1005,
+      "sha256": "0668bbffd91d1e5f695062df1f2bd984e8f7cdc447822240d92d0c956b384b11"
+    },
+    {
+      "path": "tests/rebuild-controller-highlands.log",
+      "bytes": 1010,
+      "sha256": "5bbd2ac8afe76a234659921a80d80625edd90bbfcc62085d9fed8de34d004c4a"
+    },
+    {
+      "path": "tests/rebuild-navigation-defect.log",
+      "bytes": 58,
+      "sha256": "33217842995bcde7e2f048bee40217af899dc887fd28e90ea67d22dd7fc9e258"
+    },
+    {
+      "path": "tests/rebuild-profile-storage.log",
+      "bytes": 1766,
+      "sha256": "dd87883290252f6493607b9b484e9d4553cebc15a00deef55769cf97eeed7f4f"
+    },
+    {
+      "path": "tests/rebuild-seven-car-profile-storage.log",
+      "bytes": 1766,
+      "sha256": "dd87883290252f6493607b9b484e9d4553cebc15a00deef55769cf97eeed7f4f"
+    },
+    {
+      "path": "tests/rebuild-seven-car-ui-controller.log",
+      "bytes": 2172,
+      "sha256": "16671fd4bd8b38a802dc5c8a75f394bd499b349c2b5aa5f95e7fc3bca59ce0a0"
+    },
+    {
+      "path": "tests/rebuild-ui-controller.log",
+      "bytes": 1996,
+      "sha256": "7110c2d311b1ce5bba35098c86153c2d0c2ff88ae13b7d09780a2429226e5dcb"
+    },
+    {
+      "path": "tests/rebuild-ui-preview-build-r2.json",
+      "bytes": 1056,
+      "sha256": "d87b420bc7d466dd9044abfc8fdbea1c4ae2fa71cfd8aae527db785370b08f6a"
+    },
+    {
+      "path": "tests/rebuild-ui-preview-build-r3.json",
+      "bytes": 1142,
+      "sha256": "a435161a7640d369818848aafce1dc593a4edc8660462f2bdefc22696fa65d44"
+    },
+    {
+      "path": "tests/rebuild-ui-preview-build.json",
+      "bytes": 864,
+      "sha256": "7bae2a1d75d5b312327b89bf9f316bea8dd485d3d45ea28438c69fa4cd670969"
+    },
+    {
+      "path": "tests/rebuild-ui-preview-smoke-r2.log",
+      "bytes": 930,
+      "sha256": "1d6b5e5ccb804a6513f4cb303b1a3471ddd6ded2d668a9de52749e4b6fe59713"
+    },
+    {
+      "path": "tests/rebuild-ui-preview-smoke-r3.log",
+      "bytes": 1524,
+      "sha256": "df8266ba126ea11093c054976381f0cb5e4febf0c67ed0fd82a998dc9f9ec3d4"
+    },
+    {
+      "path": "tests/recovery/ASSET_SOURCE_MANIFEST.json",
+      "bytes": 15637,
+      "sha256": "d7db94b41c2c5ec3d7d6e50012374c29ae315b2eb3df639a2f129c02899d4629"
+    },
+    {
+      "path": "tests/recovery/AUTHORING.md",
+      "bytes": 2104,
+      "sha256": "d9ea95de8a7634199d3164983c5cda77522a7f8932f9e51d6b34c7df5fd88c79"
+    },
+    {
+      "path": "tests/recovery/PROVENANCE.md",
+      "bytes": 2471,
+      "sha256": "14878be352984a0cf06fb18bebb47e1e73598d4f1c777dd9d46634201b625707"
+    },
+    {
+      "path": "tests/recovery/TESTING.md",
+      "bytes": 1630,
+      "sha256": "c1c00062d89ba65219de4e4170c0a3142545b089ac33162f277d2d6ea140ddfa"
+    },
+    {
+      "path": "tests/recovery/audio_reconstructed.log",
+      "bytes": 3250,
+      "sha256": "8cf9268504ac459a4f0e53b4b0aa2dc6ffabb9efdb1b959c965ad079bbc90c21"
+    },
+    {
+      "path": "tests/recovery/audio_seven.log",
+      "bytes": 3250,
+      "sha256": "8cf9268504ac459a4f0e53b4b0aa2dc6ffabb9efdb1b959c965ad079bbc90c21"
+    },
+    {
+      "path": "tests/recovery/bronze_build.log",
+      "bytes": 185,
+      "sha256": "7bcc2e9d545caf86492c9e0d6a209ae9dc1548aba45d7f096bc8d68821785505"
+    },
+    {
+      "path": "tests/recovery/bronze_final_geometry.log",
+      "bytes": 1279,
+      "sha256": "b7f0a7de2b49787105002587f8d941705fa59c1fd34430bec590a14ba172d9d4"
+    },
+    {
+      "path": "tests/recovery/bronze_geometry.log",
+      "bytes": 1279,
+      "sha256": "f5cf9f3bd627f82da5eceaa47c2ab5d3d141c10fb0d0e560e27b9ba94edc7f45"
+    },
+    {
+      "path": "tests/recovery/bronze_loader.log",
+      "bytes": 1760,
+      "sha256": "21d4386f87ae3d0387c37fba907658bcff3b0a7588f19e6757683e05b38be46e"
+    },
+    {
+      "path": "tests/recovery/bronze_parts.log",
+      "bytes": 329,
+      "sha256": "ef181576311ab234f2503476a31676c892f705e7c275c468bfdc90ec6a78c454"
+    },
+    {
+      "path": "tests/recovery/bronze_render.log",
+      "bytes": 20465,
+      "sha256": "f1ab959e3c8bd3df80784563c4d3642c76e25594b31c58707f71de391b71f033"
+    },
+    {
+      "path": "tests/recovery/bronze_render_final.log",
+      "bytes": 22023,
+      "sha256": "9f334ec86fdf6c04b118c8aebaaf1bc65dbcbdb01dcec1f4e117de0f70294dd8"
+    },
+    {
+      "path": "tests/recovery/bronze_render_latest.log",
+      "bytes": 22273,
+      "sha256": "284b59bb2ead9772d9883585e16d2fa277701812d86d600bb3b29d4ff43a3240"
+    },
+    {
+      "path": "tests/recovery/build_final.log",
+      "bytes": 42,
+      "sha256": "d77f1f4646f0ae1d748f025803e78c7586845c3ca90e478c95ef717930e6fcf5"
+    },
+    {
+      "path": "tests/recovery/coins_seven.log",
+      "bytes": 1539,
+      "sha256": "46f313e409dcb0873be1cfff1d5544fbeb1296fa43ac1234f22f673bb55ae05b"
+    },
+    {
+      "path": "tests/recovery/explore_seven_geometry.log",
+      "bytes": 151,
+      "sha256": "ab492b1836371d06fcf8daeae1051c53edf63281af432474370598d89f96add3"
+    },
+    {
+      "path": "tests/recovery/full_gate.log",
+      "bytes": 62537,
+      "sha256": "9219ed163486eea0028626953b717e884418997d9bf08e0bbcd50202bb8517b3"
+    },
+    {
+      "path": "tests/recovery/gameplay_recovered.log",
+      "bytes": 12224,
+      "sha256": "f6007b9e72c0cadc0be723c77a60fab4ccdb75328e8decd28b0e03532d6274f8"
+    },
+    {
+      "path": "tests/recovery/gameplay_seven.log",
+      "bytes": 19636,
+      "sha256": "6222dcdb3cf61773d5374f153dc25e2b86897ba60329230a55c1c2a8b72c52b8"
+    },
+    {
+      "path": "tests/recovery/garage_baseline.log",
+      "bytes": 3562,
+      "sha256": "ed096bb3cf20e965885e289885c682c7e9b4e30a6474636b7165ed83aabf24a8"
+    },
+    {
+      "path": "tests/recovery/garage_seven.log",
+      "bytes": 5622,
+      "sha256": "12d4003f5a62ad3038d3efee1903430673c9f40c462427dbc621ae67dafc015e"
+    },
+    {
+      "path": "tests/recovery/garage_seven_final.log",
+      "bytes": 6046,
+      "sha256": "ff93991e32481527fa2cd374e574cf16451371b91ac9a8394f8c315314dc624e"
+    },
+    {
+      "path": "tests/recovery/glb_license_metadata_audit.json",
+      "bytes": 8700,
+      "sha256": "e5cae1f3d9b40cfe36762e8d537dc7c6d658018145cc386f4ede1be3e913d057"
+    },
+    {
+      "path": "tests/recovery/glb_license_metadata_current.json",
+      "bytes": 9029,
+      "sha256": "60a6e67e9d77e50c8f963a4507a9f5ab3a6ef51bd4697f0512412235877386de"
+    },
+    {
+      "path": "tests/recovery/handling_recovered.log",
+      "bytes": 8795,
+      "sha256": "acae6e9d85f7f9f6ac387d0e8115aa75fb02e3041f7f10de2897121b279e2c25"
+    },
+    {
+      "path": "tests/recovery/handling_seven.log",
+      "bytes": 18931,
+      "sha256": "d79621607527a6a2eb51624b2331f9fe7123d7802d8cfc4dfda18718e37daced"
+    },
+    {
+      "path": "tests/recovery/license_correction_final_manifest.json",
+      "bytes": 20253,
+      "sha256": "f9e20d51c6ea0957b9abcbb190e044864ff73c76c01951b123c117ebb8d447dd"
+    },
+    {
+      "path": "tests/recovery/license_correction_manifest.json",
+      "bytes": 9121,
+      "sha256": "a19550602221fc03a55a708959f42e31548ac3d6bc5988d3199f22fc23acb094"
+    },
+    {
+      "path": "tests/recovery/native_license_audit.log",
+      "bytes": 3351,
+      "sha256": "542e5234ef71bf1b3ed16e7c01001ef3155a9f6502f7310b6d01dddd3be7e013"
+    },
+    {
+      "path": "tests/recovery/native_license_metadata_audit.json",
+      "bytes": 4751,
+      "sha256": "d7d1b04c4de380c389458de3afa30fb6ff8529634570412ed6f37e1b80083ea3"
+    },
+    {
+      "path": "tests/recovery/native_metadata_final.json",
+      "bytes": 9012,
+      "sha256": "871aeb33cb9f5e9750c749d7ef9a86f5f36f6285b99c5906edf476c10d7cf79f"
+    },
+    {
+      "path": "tests/recovery/native_metadata_final.log",
+      "bytes": 4239,
+      "sha256": "c4f354f8d1e92f6ebd9b72c33d83254eda45a46f4c3f2e496b32ec9e53a04fa4"
+    },
+    {
+      "path": "tests/recovery/payload_final.log",
+      "bytes": 105,
+      "sha256": "7589d3f17ed480d444490f8b12da959529db55755c04b1de930e363dd7d0e41e"
+    },
+    {
+      "path": "tests/recovery/preserved_third_party_notices.json",
+      "bytes": 432,
+      "sha256": "bad5e6a877f3a4d4065a7b58a1ddbf0ebd4896b46ae7ed11f4edc056395890e3"
+    },
+    {
+      "path": "tests/recovery/reconstruction_milestone.json",
+      "bytes": 1094,
+      "sha256": "4134055070017ebe421c2584ba8262f1638cb0908f4820782981a20e813d742d"
+    },
+    {
+      "path": "tests/recovery/recovered_thumbnail_receipt.json",
+      "bytes": 438,
+      "sha256": "8cf6c738f1bb2aeda8cd091e7e5f3a249517c13b7576dec31f30faf7ed5beed2"
+    },
+    {
+      "path": "tests/recovery/reverse_recovered.log",
+      "bytes": 192,
+      "sha256": "50fa21d67bbfef2183d37e10d5bce4c42784d820ef55e580c16c2ade4b28e568"
+    },
+    {
+      "path": "tests/recovery/reverse_seven.log",
+      "bytes": 194,
+      "sha256": "47e27ce2891510f215889f78df83b50e364c6d5d8fa379a78d6eabec963d2d58"
+    },
+    {
+      "path": "tests/recovery/runtime_payload_audit.json",
+      "bytes": 20381,
+      "sha256": "779099f2d72a5711a13261b4072fc17735657898aa287369f1796d33b70706d8"
+    },
+    {
+      "path": "tests/recovery/scene_actual_loft.log",
+      "bytes": 1242,
+      "sha256": "52e529eb62a06f829a8718a431c71f2a934d402acb18664771c74ace64e35632"
+    },
+    {
+      "path": "tests/recovery/scene_home.log",
+      "bytes": 1242,
+      "sha256": "52e529eb62a06f829a8718a431c71f2a934d402acb18664771c74ace64e35632"
+    },
+    {
+      "path": "tests/recovery/scene_home_catalog.log",
+      "bytes": 1242,
+      "sha256": "52e529eb62a06f829a8718a431c71f2a934d402acb18664771c74ace64e35632"
+    },
+    {
+      "path": "tests/recovery/scene_initial.log",
+      "bytes": 1087,
+      "sha256": "ecdfbfad9d94b100551aab32eb05d0b15a6618c7c2e59a502fcaa9dd58102584"
+    },
+    {
+      "path": "tests/recovery/scene_seven.log",
+      "bytes": 1250,
+      "sha256": "f5bdae8f2acbea60577260042a4a251cf7712ce8180883ad8fc291b080630a4d"
+    },
+    {
+      "path": "tests/recovery/scene_seven_final.log",
+      "bytes": 1339,
+      "sha256": "d2e2ef7d01b869a843422cd4c2700b533ae888457ac1cd652fc9e56c9ee34772"
+    },
+    {
+      "path": "tests/recovery/standalone_integrity.json",
+      "bytes": 14247,
+      "sha256": "347530557c04ba113035248a08f620e4a9604e036eb9d15091b4cb4c22b00012"
+    },
+    {
+      "path": "tests/recovery/storage_seven.log",
+      "bytes": 1766,
+      "sha256": "dd87883290252f6493607b9b484e9d4553cebc15a00deef55769cf97eeed7f4f"
+    },
+    {
+      "path": "tests/recovery/world_loft_load.log",
+      "bytes": 404,
+      "sha256": "f3389d6da12c503bee142c9763cd961fd09f075f999f57815331d57dd0d81e34"
+    },
+    {
+      "path": "tests/recovery/world_seven.log",
+      "bytes": 404,
+      "sha256": "a3a378f4a0936604c8e2adef08d8914cc0acd13d13a28fc789fde7b7d6e5741b"
+    },
+    {
+      "path": "tests/release/V12_REBUILD_RELEASE.json",
+      "bytes": 22614,
+      "sha256": "c9f235f23851dd6c98080202e23467d2c2f33a43f8b413371077211e0921d887"
+    },
+    {
+      "path": "tests/ui-r1-browser/01-home-390x844.png",
+      "bytes": 88832,
+      "sha256": "423f614ecb1480522b13a8ab38d58ccfccde3bfd585418a104f356efc588674f"
+    },
+    {
+      "path": "tests/ui-r1-browser/02-events-390x844.png",
+      "bytes": 81365,
+      "sha256": "ad878e75e650ab3596aab25e5f5537188c55d27f2d82f2ea5e2cb521ced26491"
+    },
+    {
+      "path": "tests/ui-r1-browser/03-home-320x568.png",
+      "bytes": 78369,
+      "sha256": "4441464ab942ae1712168e38000e788ac4be9c2ad44f01a3e14f64c22b854df6"
+    },
+    {
+      "path": "tests/ui-r1-browser/04-home-1180x757.png",
+      "bytes": 113524,
+      "sha256": "7e8be506547213c4ef337ad5075b55a3ea9897c847b73282fdba9866528a8774"
+    },
+    {
+      "path": "tests/ui-r1-browser/05-workshop-320x568.png",
+      "bytes": 36998,
+      "sha256": "782d64754d6e7dd2f80970718cb32ad43cb7e1164f2ab60737c760bf444006d6"
+    },
+    {
+      "path": "tests/ui-r1-browser/README.md",
+      "bytes": 2265,
+      "sha256": "ad6485721c8ba367a333f05949e6388d19ce88806013f61f5ce2571ee9626ee0"
+    },
+    {
+      "path": "tests/ui-r1-frozen/SHA256SUMS.txt",
+      "bytes": 230,
+      "sha256": "cbefa18d8f6f672a23a6b3db2e9b83b6e591c68143661292a54cd81b2ae2425e"
+    },
+    {
+      "path": "tests/ui-r1-frozen/v12-rebuild-ui-frame.html",
+      "bytes": 4850,
+      "sha256": "10da00c63557c10dbe0da59fc8dff4e724b83c31c1a4f01d6bd22930f4d8b99f"
+    },
+    {
+      "path": "tests/ui-r1-frozen/v12-rebuild-ui-preview.html",
+      "bytes": 1139571,
+      "sha256": "c7c7f53ad8e03f44b17dfd6731f4d86c416bdccc1070e5284e9a003e883aee26"
+    },
+    {
+      "path": "tests/ui-r2-browser/01-home-390x844.png",
+      "bytes": 99284,
+      "sha256": "32e83369dcaaf0e0e04d0e054eb47c055f88a63e9cafeeaa650bc9d7be91841b"
+    },
+    {
+      "path": "tests/ui-r2-browser/02-events-390x844.png",
+      "bytes": 77340,
+      "sha256": "4bf0c88165bc59802758cd21b742c81eefd4bcfba603790eb29a26763a7f45cf"
+    },
+    {
+      "path": "tests/ui-r2-browser/03-home-320x568.png",
+      "bytes": 78759,
+      "sha256": "36e9c6bd3aaa47092a7ef8e6c86a7a3e0e858b4c2a6b9fbc7c30b5a1e5c0dda8"
+    },
+    {
+      "path": "tests/ui-r2-browser/04-workshop-320x568.png",
+      "bytes": 61222,
+      "sha256": "7b3255fc90f0c853409e6187736339f74e47418fab751252627623194ce5395c"
+    },
+    {
+      "path": "tests/ui-r2-browser/05-home-1180x757.png",
+      "bytes": 155447,
+      "sha256": "25f17f965677d1f85b74f8f2d76f6cadab52c016b79830b6b64ae09500f05113"
+    },
+    {
+      "path": "tests/ui-r2-browser/06-wallet-5300-320x568.png",
+      "bytes": 43331,
+      "sha256": "af6f01b5906372738c01c97ce46da2d087d6f4b918e5e9d4b81384ae0a803573"
+    },
+    {
+      "path": "tests/ui-r2-browser/07-hud-568x320.png",
+      "bytes": 68042,
+      "sha256": "7ad13f19ef4dcb592c5d9367aa99cc649b5d762e8077fa841e136f6b5364e0da"
+    },
+    {
+      "path": "tests/ui-r2-browser/README.md",
+      "bytes": 2399,
+      "sha256": "25e67494234f67917ef8f324c5e97ec230ede80b984a6363cb2bd5ea9b2a696b"
+    },
+    {
+      "path": "tests/ui-r2-frozen/SOURCE_SHA256SUMS.txt",
+      "bytes": 324,
+      "sha256": "d2aaa45113a6f866a6352d7d6d04906cd0922e3265ea0d002efc3d0d847c973c"
+    },
+    {
+      "path": "tests/ui-r2-frozen/v12-rebuild-ui-frame.html",
+      "bytes": 4850,
+      "sha256": "10da00c63557c10dbe0da59fc8dff4e724b83c31c1a4f01d6bd22930f4d8b99f"
+    },
+    {
+      "path": "tests/ui-r2-frozen/v12-rebuild-ui-preview.html",
+      "bytes": 6745109,
+      "sha256": "c4ea14dade2b42f978cf413ac526729621caebf9396bd673ee2e61efcc5a30ea"
+    },
+    {
+      "path": "tests/ui-r3-frozen/SHA256SUMS.txt",
+      "bytes": 230,
+      "sha256": "db9254b3ededdec3ebd5ad8ee87ffc3039d06ff5c23fa6f0aa4ba9a96304b5a4"
+    },
+    {
+      "path": "tests/ui-r3-frozen/SOURCE_SHA256SUMS.txt",
+      "bytes": 688,
+      "sha256": "e371b02e59106cc701ca9293462189df46ec6f5f3b5c00f2998add7d9cfda9c5"
+    },
+    {
+      "path": "tests/ui-r3-frozen/v12-rebuild-ui-frame.html",
+      "bytes": 4850,
+      "sha256": "10da00c63557c10dbe0da59fc8dff4e724b83c31c1a4f01d6bd22930f4d8b99f"
+    },
+    {
+      "path": "tests/ui-r3-frozen/v12-rebuild-ui-preview.html",
+      "bytes": 7745664,
+      "sha256": "91a254c399d7583bd2bcd3cf32e327782ce845a31d5bee571b7df03f7a18281b"
+    },
+    {
+      "path": "references/route/README.md",
+      "bytes": 3520,
+      "sha256": "ed21b045aa934b3aa358d567a0e70194cc7e1d2e6e2797815972e6ec14f57904"
+    },
+    {
+      "path": "references/route/kappil_osm_environment.geojson",
+      "bytes": 420462,
+      "sha256": "5d35e67fe086989ad4f2fd1c8b34c4d76f720007d02e35d7b2253e945544eef3"
+    },
+    {
+      "path": "references/route/kappil_osm_roads.geojson",
+      "bytes": 9811,
+      "sha256": "d7802b122d0a77528eed280573e74d529043dd086e4fa68fbd900132cdc9b462"
+    },
+    {
+      "path": "references/route/kappil_osm_route.geojson",
+      "bytes": 6634,
+      "sha256": "2cc4b5a942b6ca45b02b4afad216afedd2b31168550bb9e119088f473faf944d"
+    },
+    {
+      "path": "references/route/kappil_route_local_meters.json",
+      "bytes": 8512,
+      "sha256": "5f5e20c12c9f926d67e24df4b07e0f43336f4ece6e19d40bc479992e18bf68bf"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2578,
+      "sha256": "c39877da5dd190673e3993ed6a21e6825a5b89b59bea0f0679003ed7637df47b"
+    },
+    {
+      "path": "LICENSES.md",
+      "bytes": 4766,
+      "sha256": "381205661659ef9c2bf4566af12b91b707027b2673f0805b88dc6938c152758b"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 2235,
+      "sha256": "006ac5a4a691382b4fd3995358c8ed179a1bca2f3b3c1b1c080cacdace963f0f"
+    }
+  ]
+}

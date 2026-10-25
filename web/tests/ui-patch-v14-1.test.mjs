@@ -1,0 +1,8 @@
+/** Patch scope and copy/style contracts only. Browser and GPU evidence remain separate. */
+import fs from'node:fs/promises';import assert from'node:assert/strict';import{createHash}from'node:crypto';
+const root=new URL('../../',import.meta.url),read=p=>fs.readFile(new URL(p,root),'utf8'),baseline=JSON.parse(await read('tests/ui_audit_v14_1/BASELINE.json'));
+const changed=[];for(const f of baseline.files){const b=await fs.readFile(new URL(f.path,root));if(createHash('sha256').update(b).digest('hex')!==f.sha256)changed.push(f.path);}assert.deepEqual(changed.sort(),['web/src/main.js','web/src/style.css']);
+const main=await read('web/src/main.js'),normalized=main.replace('`${(cost-profile.credits).toLocaleString()} more coins`','`NEED ${(cost-profile.credits).toLocaleString()}`');assert.notEqual(main,normalized);assert.equal(createHash('sha256').update(normalized).digest('hex'),baseline.files.find(f=>f.path==='web/src/main.js').sha256);
+const css=await read('web/src/style.css');assert(css.includes('(max-aspect-ratio:89/100)'));assert(css.includes('margin-top:max(104px,calc(100vh - 636px))'));assert(css.includes('.checkpoint-label{margin-top:4px;font-size:10px;line-height:1.25;letter-spacing:0;color:#f2f5f5;}'));assert(css.includes('#hud:has(#landmark-button:not([hidden])) .pursuit-display{display:none}'));
+assert(css.includes('#hud:has(#landmark-button:not([hidden])) .race-progress{width:31vw;left:calc(50% + 10px)}'));
+console.log('PASS V14.1 only main shortage literal + scoped CSS changed; protected renderer/assets/gameplay/stores exact; tall phone spacing excludes near-square camera branch; route text >=10px contract.');

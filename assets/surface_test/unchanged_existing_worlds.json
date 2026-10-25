@@ -1,0 +1,65 @@
+{
+  "result": "PASS",
+  "files": [
+    {
+      "file": "course_runtime.json",
+      "identical_v15_v16": true,
+      "sha256_v15": "3c327a4ca3445d2dbf583168dc06162e2c18c80f6093394d00e98d9bac07aed6",
+      "sha256_v16": "3c327a4ca3445d2dbf583168dc06162e2c18c80f6093394d00e98d9bac07aed6"
+    },
+    {
+      "file": "course_runtime_highlands.json",
+      "identical_v15_v16": true,
+      "sha256_v15": "1e395296596d5053716cff73ebffbff64b1466cc32ec50351685667aad50b225",
+      "sha256_v16": "1e395296596d5053716cff73ebffbff64b1466cc32ec50351685667aad50b225"
+    },
+    {
+      "file": "Course_Road.glb",
+      "identical_v15_v16": true,
+      "sha256_v15": "b738a94a13a3092f1bb3f38692d7095b5ebf2d3b806d49e4f83d72d14768d0d4",
+      "sha256_v16": "b738a94a13a3092f1bb3f38692d7095b5ebf2d3b806d49e4f83d72d14768d0d4"
+    },
+    {
+      "file": "Course_Terrain.glb",
+      "identical_v15_v16": true,
+      "sha256_v15": "8316812e396a0037f31e8939c2b032f62f3baed2ade821aa9c0fb579a1751ef5",
+      "sha256_v16": "8316812e396a0037f31e8939c2b032f62f3baed2ade821aa9c0fb579a1751ef5"
+    },
+    {
+      "file": "Course_Furniture.glb",
+      "identical_v15_v16": true,
+      "sha256_v15": "d669e76ebdb97d0c7d54afbd22120ad0691e3f42e349357adb419a08eea0b419",
+      "sha256_v16": "d669e76ebdb97d0c7d54afbd22120ad0691e3f42e349357adb419a08eea0b419"
+    },
+    {
+      "file": "Course_Water.glb",
+      "identical_v15_v16": true,
+      "sha256_v15": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678",
+      "sha256_v16": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678"
+    },
+    {
+      "file": "furniture_colliders.json",
+      "identical_v15_v16": true,
+      "sha256_v15": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611",
+      "sha256_v16": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611"
+    },
+    {
+      "file": "infrastructure_colliders.json",
+      "identical_v15_v16": true,
+      "sha256_v15": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48",
+      "sha256_v16": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48"
+    },
+    {
+      "file": "Highlands_Road.glb",
+      "identical_v15_v16": true,
+      "sha256_v15": "3d16cf6fb9258002e81b35015beca7fe5195a2324a3e7114360acdb6a13bffd1",
+      "sha256_v16": "3d16cf6fb9258002e81b35015beca7fe5195a2324a3e7114360acdb6a13bffd1"
+    },
+    {
+      "file": "Highlands_Terrain.glb",
+      "identical_v15_v16": true,
+      "sha256_v15": "72485921b4ec72da499fc1d2b0bdda8ebac5678d2ad92c4574d93c0e3a9ad5c8",
+      "sha256_v16": "72485921b4ec72da499fc1d2b0bdda8ebac5678d2ad92c4574d93c0e3a9ad5c8"
+    }
+  ]
+}

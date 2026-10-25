@@ -1,0 +1,565 @@
+[
+  {
+    "path": "assets/airtime/Coast_AirtimeRamp.blend",
+    "sha256": "ba398a2946436c542af74a270498e800545dd0bdc1f3fb5f17b49f1d12a2c25e",
+    "bytes": 566728,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/airtime/Highland_AirtimeRamp.blend",
+    "sha256": "624a46b36d5cc6eeac395c9bf7d8724fd99f4de3a154a9f7a5ae26447a27c1b1",
+    "bytes": 566728,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/boost/ArcadeBoostNozzle.blend",
+    "sha256": "7c1e6cfd41d67f6de78803d8b527a646e43586058a34ec340854e554d1892d23",
+    "bytes": 98571,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/car/roadster_concept.blend",
+    "sha256": "20fc2ef1255ad9ce403a075cce14fd16a77d0aeb3797702eae15be0d0a2950bd",
+    "bytes": 2338688,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/car_touring/azure_touring_gt.blend",
+    "sha256": "344f841c0d2578cee19b4c2c6f87cbd3043ee17a1e9e9e18ed60496f113a2c4f",
+    "bytes": 364510,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/cars/bronze/bronze_apex.blend",
+    "sha256": "aab8a6c4dbd12eee2ab0768da2354eda5cff90a46063451a2f8a2e1b4c76fa00",
+    "bytes": 407081,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/cars/midnight/Midnight_Meridian_GT.blend",
+    "sha256": "512166ed11291e920538d18eecfb3190cb2f891aee002fdfa742cd95f5a72bcd",
+    "bytes": 4368272,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/cars/silver_refinement/baseline/car_silver.blend",
+    "sha256": "9056620ea3f5a26dc75fa2752b59065fad05d78a5d10e00c1fbee2126c09ed12",
+    "bytes": 599340,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/cars/silver_refinement/silver_editable.blend",
+    "sha256": "d92172cfc86575c38c5d21c5a69a42770c17379eefec25aebdf89068a86e42fa",
+    "bytes": 468042,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/cars/verdant/verdant.blend",
+    "sha256": "1d405695581155ef0f90ecf483ed5590bb6fbcedf73e121143008f145c668835",
+    "bytes": 4797176,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/cars/vermilion/vermilion.blend",
+    "sha256": "608ac4c0436ad031e33ca3c87c70b8ad3c1d349ea39767c0747696655a90c382",
+    "bytes": 4524288,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/course/Kappil_Coast.blend",
+    "sha256": "edd9b4f044d4ce9ad91c0eb3bc38028955fdf897307debb0f499fb4b5d3a8a65",
+    "bytes": 4277373,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/environment/Kerala_Coastal_Assets.blend",
+    "sha256": "ab6e234b97aee18eca1570788915b7ff8c71b94870d69224a5c8f8517ebb732f",
+    "bytes": 997980,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/foliage_detail/CanalRainTreeFar.blend",
+    "sha256": "071639a12365c318a9f837f07a13b24d897e2a7ce44765708bc02a4af4a43e9a",
+    "bytes": 223781,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/foliage_detail/Highland_Foliage_Detail.blend",
+    "sha256": "f411c86b269f7128cd18e3dd0673445f512aa62418f3eea15d576f8a28ce05b4",
+    "bytes": 309495,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/gameplay_props/ArcadeCoin.blend",
+    "sha256": "66c10722bd9a67b3a1576c3c6a08b7cb7b849406c66af34fbcc80980998da000",
+    "bytes": 143105,
+    "images": [
+      {
+        "name": "Original_Coin_Brushed_Micro_Normal",
+        "source": "FILE",
+        "packed": true,
+        "packed_files": [
+          {
+            "sha256": "01c48586513023a974179f94b4eb071311e65530f5857128776738b01eacf567",
+            "matches_source_asset": "assets/gameplay_props/coin_brushed_micro_normal.png"
+          }
+        ],
+        "filepath_relative": true,
+        "has_local_path": false
+      }
+    ],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/gameplay_props/RouteEndMarker.blend",
+    "sha256": "154a6ad93efed472cfff2df4fd09d5bc3b96028c3146e03e843cbb4c6ab1e3f2",
+    "bytes": 102020,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/helicopter/Rotor_Blur_LOD.blend",
+    "sha256": "eb5b5870ac720a229fcb771dd88a8e2910ef4a07b5cc12e7210176127361303e",
+    "bytes": 443636,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/helicopter/civilian/Coastal_Twin_Civilian.blend",
+    "sha256": "7819d384a212f34db6d967408c3f5ca352dfb6dbe7608f819b648c82575f2b41",
+    "bytes": 2184892,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/helicopter/police/Coastal_Twin_Police.blend",
+    "sha256": "4bfcd916d3101ca670ef386fa2b5b77923c52813bc7fb6c166807089befcc94e",
+    "bytes": 2239160,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/highlands/Highland_Props.blend",
+    "sha256": "b4a16e5b8b0ac1e19fc49971344086ec2cb4e90663451e4389f93ce7cf399868",
+    "bytes": 128173,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/highlands/Highland_Run.blend",
+    "sha256": "6aff60f62f19cbe036dbd05e78b70292a09cbbac46bbfc97b93823dbe0f4bd3a",
+    "bytes": 8550312,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/infrastructure/backwater/KeralaHouseboat.blend",
+    "sha256": "27d848db16333ca0de6623ef8c683208c8386ccc33cac77e133e05e01c42d476",
+    "bytes": 180701,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/infrastructure/transit/Kerala_Transit_Infrastructure.blend",
+    "sha256": "39603d8dc7c4353c20e79b7664b921df20667a7a33bb26434417cf410ce56650",
+    "bytes": 237330,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/infrastructure/urban/native/ChineseFishingNet.blend",
+    "sha256": "dda9049dc8b9e0ced0952c884bfe134833cb4f6cbf82a3a41367083a9203e69f",
+    "bytes": 108645,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/infrastructure/urban/native/KeralaApartment_A.blend",
+    "sha256": "553cbaea974e802305c76373447f1a01ae9ea0251a948c849034cb89342dfd8b",
+    "bytes": 127475,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/infrastructure/urban/native/KeralaOffice_A.blend",
+    "sha256": "b1ef4f4ea11bfd9ec171a622562af5c99c340f0f12f7be29df6eb99343a09254",
+    "bytes": 112430,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/infrastructure/urban/native/KeralaShopRow_A.blend",
+    "sha256": "056f5ccbf642cbb7b9f1a74d2f9726db3d962b0b144498e4da896ca0f502f564",
+    "bytes": 112694,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/infrastructure/urban/native/KeralaShopRow_B.blend",
+    "sha256": "3e7da3cf2f2dab3d6666a994474de3097e29a5b1ea2c3bbd1d6b0a3fb8a9ffe5",
+    "bytes": 103197,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/infrastructure/urban/native/KeralaTeaStall.blend",
+    "sha256": "7b5f5c644863e014621e4d8112b1f907c839469ffa6dd8267fdb59e2b932c051",
+    "bytes": 100994,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/infrastructure/vehicles/transit_vehicles.blend",
+    "sha256": "e8a395c24980506592d7d24189db11d1c10cac8b6fb91896f72c0c3274eae35c",
+    "bytes": 247238,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/landscape_reference_kit/BirdRockLookout.blend",
+    "sha256": "630379990c9b7b18027591b96ea158903b8f4653385a516db13e8ddfda2e5f86",
+    "bytes": 277427,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/landscape_reference_kit/CanalRainTree.blend",
+    "sha256": "988b61c70ed7ae1ad34a5bdd8ebce471c50d5d82c9a0795a987aff8396a6b575",
+    "bytes": 371598,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/landscape_reference_kit/CanalShikara.blend",
+    "sha256": "902e6ddc568015ac13312220e20951e0b9ec85f8b49ff37d5e10688a0ea32289",
+    "bytes": 154435,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/showroom/ServiceShowroomBay.blend",
+    "sha256": "5899642017fe66910e15d4dd025d4f8dd5033750908204b503add43b96520720",
+    "bytes": 185983,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/showroom/ServiceShowroomLoft.blend",
+    "sha256": "6f52b61fb2b18663a49618041f0bd7d08285050d8fc342f2918bb2e8dbeaaa6f",
+    "bytes": 19415824,
+    "images": [
+      {
+        "name": "Loft_Basalt_Micro_Normal",
+        "source": "FILE",
+        "packed": true,
+        "packed_files": [
+          {
+            "sha256": "4c7d517a64f07494b566d06a3aac00496045adc8fab71cc29f750f247adc5230",
+            "matches_source_asset": "assets/showroom/materials/Loft_Basalt_Micro_Normal.png"
+          }
+        ],
+        "filepath_relative": true,
+        "has_local_path": false
+      },
+      {
+        "name": "Loft_Basalt_Roughness",
+        "source": "FILE",
+        "packed": true,
+        "packed_files": [
+          {
+            "sha256": "a571e3c72ae752d15dcd27e6fa20bd056a6173d8b4a32973f4fdc009da3aca79",
+            "matches_source_asset": "assets/showroom/materials/Loft_Basalt_Roughness.png"
+          }
+        ],
+        "filepath_relative": true,
+        "has_local_path": false
+      }
+    ],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/showroom/ServiceShowroomLoft_V13_after.blend",
+    "sha256": "4a079166caf5a95f7deda04191afd772accf2ea0dfc0931dc54f6300942eac32",
+    "bytes": 8147853,
+    "images": [
+      {
+        "name": "Loft_Basalt_Micro_Normal",
+        "source": "FILE",
+        "packed": true,
+        "packed_files": [
+          {
+            "sha256": "4c7d517a64f07494b566d06a3aac00496045adc8fab71cc29f750f247adc5230",
+            "matches_source_asset": "assets/showroom/materials/Loft_Basalt_Micro_Normal.png"
+          }
+        ],
+        "filepath_relative": false,
+        "has_local_path": false
+      },
+      {
+        "name": "Loft_Basalt_Roughness",
+        "source": "FILE",
+        "packed": true,
+        "packed_files": [
+          {
+            "sha256": "95f282a7e0738c810d9e202b0f4aa0430d79c14ece96253036e31c8af83832c6",
+            "matches_source_asset": null
+          }
+        ],
+        "filepath_relative": false,
+        "has_local_path": false
+      }
+    ],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/showroom/ServiceShowroomLoft_V13_before.blend",
+    "sha256": "7589370964ab60ce7730f95d8d2ed665404007921389c457d7c337343a6c1071",
+    "bytes": 6195140,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/showroom/ServiceShowroomLoft_home_desktop.blend",
+    "sha256": "6da08887522d255f87737061cf7ea5458354fa50d4c0b17ffdc6bcd946518acb",
+    "bytes": 12638340,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/showroom/ServiceShowroomLoft_home_portrait.blend",
+    "sha256": "2f5b13f7b9d396204c317beece0e84a2f5681aa1155d141f589c8e9aa197362d",
+    "bytes": 12638340,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/surface_test/Surface_Test_Route.blend",
+    "sha256": "3458d2e887eb8945f0d67d4ca15480a5cd9de52f95728c93e2ec9354f1b8ec37",
+    "bytes": 5366272,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/web/CheckpointGate.blend",
+    "sha256": "8a938f794f4739faa41bc93e8a11d2169e285cfd2500da718e7f0e5c02097c3b",
+    "bytes": 95981,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/web/car_silver.blend",
+    "sha256": "4e12170bafc5d6e9e3b158f40e052910ac4d56d589b2f6a64381adca8415ecea",
+    "bytes": 3641620,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/web/car_web.blend",
+    "sha256": "88a54c78794c601e74411639f09fe4bfe55085434a34f8adb5e5a9e59be0fa1d",
+    "bytes": 748457,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  },
+  {
+    "path": "assets/web/police_lightbar.blend",
+    "sha256": "85edc77dc2cc64f3112b01a3bcb9d9d1eb861428b6e87dba0e69750f163196aa",
+    "bytes": 94132,
+    "images": [],
+    "linked_libraries": 0,
+    "embedded_texts": 0,
+    "flags": [],
+    "flag_counts": {},
+    "source_unchanged": true
+  }
+]

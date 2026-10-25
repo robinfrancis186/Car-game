@@ -1,0 +1,213 @@
+{
+  "interior_skin_containment": [
+    {
+      "part": "Anti torque pedal",
+      "max_elliptic_skin_fraction": 0.8794599377760897,
+      "pass": true
+    },
+    {
+      "part": "Anti torque pedal.001",
+      "max_elliptic_skin_fraction": 0.5883271892403037,
+      "pass": true
+    },
+    {
+      "part": "Anti torque pedal.002",
+      "max_elliptic_skin_fraction": 0.5883271892403037,
+      "pass": true
+    },
+    {
+      "part": "Anti torque pedal.003",
+      "max_elliptic_skin_fraction": 0.8794599377760897,
+      "pass": true
+    },
+    {
+      "part": "Cabin flat interior floor",
+      "max_elliptic_skin_fraction": 0.9613270587696559,
+      "pass": true
+    },
+    {
+      "part": "Cyclic flight control",
+      "max_elliptic_skin_fraction": 0.8365483946526636,
+      "pass": true
+    },
+    {
+      "part": "Cyclic flight control.001",
+      "max_elliptic_skin_fraction": 0.8365483946526636,
+      "pass": true
+    },
+    {
+      "part": "Fitted aft cabin bulkhead",
+      "max_elliptic_skin_fraction": 0.9203837381037104,
+      "pass": true
+    },
+    {
+      "part": "Individual seat cushion",
+      "max_elliptic_skin_fraction": 0.8997629799123628,
+      "pass": true
+    },
+    {
+      "part": "Individual seat cushion.001",
+      "max_elliptic_skin_fraction": 0.8997629799123628,
+      "pass": true
+    },
+    {
+      "part": "Individual seat cushion.002",
+      "max_elliptic_skin_fraction": 0.8277402951499536,
+      "pass": true
+    },
+    {
+      "part": "Individual seat cushion.003",
+      "max_elliptic_skin_fraction": 0.8277402951499536,
+      "pass": true
+    },
+    {
+      "part": "Individual seat cushion.004",
+      "max_elliptic_skin_fraction": 0.8953937191730141,
+      "pass": true
+    },
+    {
+      "part": "Individual seat cushion.005",
+      "max_elliptic_skin_fraction": 0.8953937191730141,
+      "pass": true
+    },
+    {
+      "part": "Instrument panel housing",
+      "max_elliptic_skin_fraction": 0.7579925336006548,
+      "pass": true
+    },
+    {
+      "part": "Seat head restraint",
+      "max_elliptic_skin_fraction": 0.47442693393384344,
+      "pass": true
+    },
+    {
+      "part": "Seat head restraint.001",
+      "max_elliptic_skin_fraction": 0.47442693393384344,
+      "pass": true
+    },
+    {
+      "part": "Seat head restraint.002",
+      "max_elliptic_skin_fraction": 0.41179007759610714,
+      "pass": true
+    },
+    {
+      "part": "Seat head restraint.003",
+      "max_elliptic_skin_fraction": 0.41179007759610714,
+      "pass": true
+    },
+    {
+      "part": "Seat head restraint.004",
+      "max_elliptic_skin_fraction": 0.4389630022452395,
+      "pass": true
+    },
+    {
+      "part": "Seat head restraint.005",
+      "max_elliptic_skin_fraction": 0.4389630022452395,
+      "pass": true
+    },
+    {
+      "part": "Seat mounting pedestal",
+      "max_elliptic_skin_fraction": 0.8892226365176333,
+      "pass": true
+    },
+    {
+      "part": "Seat mounting pedestal.001",
+      "max_elliptic_skin_fraction": 0.8892226365176333,
+      "pass": true
+    },
+    {
+      "part": "Seat mounting pedestal.002",
+      "max_elliptic_skin_fraction": 0.8183174445098607,
+      "pass": true
+    },
+    {
+      "part": "Seat mounting pedestal.003",
+      "max_elliptic_skin_fraction": 0.8183174445098607,
+      "pass": true
+    },
+    {
+      "part": "Seat mounting pedestal.004",
+      "max_elliptic_skin_fraction": 0.8632036330031299,
+      "pass": true
+    },
+    {
+      "part": "Seat mounting pedestal.005",
+      "max_elliptic_skin_fraction": 0.8632036330031299,
+      "pass": true
+    },
+    {
+      "part": "Unbranded glass flight display",
+      "max_elliptic_skin_fraction": 0.5538107620348287,
+      "pass": true
+    },
+    {
+      "part": "Unbranded glass flight display.001",
+      "max_elliptic_skin_fraction": 0.06545257986654124,
+      "pass": true
+    },
+    {
+      "part": "Unbranded glass flight display.002",
+      "max_elliptic_skin_fraction": 0.5538107620348287,
+      "pass": true
+    },
+    {
+      "part": "Upholstered seat back",
+      "max_elliptic_skin_fraction": 0.8274335567671178,
+      "pass": true
+    },
+    {
+      "part": "Upholstered seat back.001",
+      "max_elliptic_skin_fraction": 0.8274335567671178,
+      "pass": true
+    },
+    {
+      "part": "Upholstered seat back.002",
+      "max_elliptic_skin_fraction": 0.762954193439026,
+      "pass": true
+    },
+    {
+      "part": "Upholstered seat back.003",
+      "max_elliptic_skin_fraction": 0.762954193439026,
+      "pass": true
+    },
+    {
+      "part": "Upholstered seat back.004",
+      "max_elliptic_skin_fraction": 0.7782360238688912,
+      "pass": true
+    },
+    {
+      "part": "Upholstered seat back.005",
+      "max_elliptic_skin_fraction": 0.7782360238688912,
+      "pass": true
+    }
+  ],
+  "result": "PASS",
+  "native_sha256": "4bfcd916d3101ca670ef386fa2b5b77923c52813bc7fb6c166807089befcc94e",
+  "source_glb_sha256": "7f8cdcb032c8f1f9fb08fc19a5b785b2957596aae7532bc7cc84d7e9f96b999b",
+  "editable_mesh_parts": 153,
+  "generic_text_objects": 2,
+  "native_root": "HELICOPTER_ROOT",
+  "native_forward": "+X",
+  "native_up": "+Z",
+  "independent_rotor_motion": [
+    {
+      "node": "MainRotor",
+      "half_radian_vertex_motion_m": 2.531464979673548,
+      "pass": true
+    },
+    {
+      "node": "TailRotor",
+      "half_radian_vertex_motion_m": 0.3159249701453739,
+      "pass": true
+    }
+  ],
+  "static_airframe_and_restored_tail_unchanged": true,
+  "external_or_packed_images": [],
+  "tail_duct_clearance": {
+    "conservative_inner_48gon_apothem_m": 0.6885226570346363,
+    "measured_blade_swept_radius_m": 0.6384798343676051,
+    "radial_gap_m": 0.050042822667031195,
+    "scope": "Radial aperture clearance; combined actual mesh motion tested separately."
+  },
+  "provenance": "Original procedural geometry with Blender built-in generic text outlines; no imported geometry/font/image files; reuse license not selected by owner."
+}

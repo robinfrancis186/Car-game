@@ -45,7 +45,7 @@ for a in assets.values():
   if bad:bmesh.ops.delete(bm,geom=bad,context='FACES')
   bm.to_mesh(o.data);bm.free()
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'Highland_Props.blend'))
-report={'license':'Original procedural geometry, CC0 dedication. No external geometry/photo textures.','axes':'Blender X forward,Y left,Z up; GLB X forward,Y up,-Z left.','assets':{}}
+report={'license':'Original procedural geometry. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. No external geometry/photo textures.','axes':'Blender X forward,Y left,Z up; GLB X forward,Y up,-Z left.','assets':{}}
 for name,a in assets.items():
  groups={};copies=[]
  for original in a['collection'].objects:

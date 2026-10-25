@@ -1,0 +1,109 @@
+{
+  "result": "FAIL",
+  "sha256": "dd0b4111fd14951c995365dd89ed0adf5ee5857dabcfd84ccc864d27d34f9efe",
+  "checks": [
+    {
+      "door": "Left",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0,
+      "intersection_pairs": 25,
+      "parts": [
+        "CarBody <-> Door_Left"
+      ]
+    },
+    {
+      "door": "Left",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0.1,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Left",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0.25,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Left",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0.45,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Left",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0.65,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Left",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0.85,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Left",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 1.1,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Right",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0,
+      "intersection_pairs": 27,
+      "parts": [
+        "CarBody <-> Door_Right"
+      ]
+    },
+    {
+      "door": "Right",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0.1,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Right",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0.25,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Right",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0.45,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Right",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0.65,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Right",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 0.85,
+      "intersection_pairs": 0,
+      "parts": []
+    },
+    {
+      "door": "Right",
+      "outward_pretravel_m": 0.1,
+      "angle_rad": 1.1,
+      "intersection_pairs": 0,
+      "parts": []
+    }
+  ],
+  "scope": "Actual GLB display opening after declared outward translation, seven sampled angles through1.10rad, versus all fixed car components. Closed seal seating excluded. Not an engineered mechanism or gameplay implementation."
+}

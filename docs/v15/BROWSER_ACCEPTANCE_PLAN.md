@@ -1,0 +1,14 @@
+# V15 bounded native acceptance plan (not yet run)
+
+Preserve the user's current save and coin balance. No unlock purchases, reset, top-up or save manipulation. Choose an already-owned car. Source tests do not substitute for these observations.
+
+1. Load the exact new version; open Help → Performance and verify `V15 PROTOTYPE`. Verify no asset/GLSL/JS errors, then hide diagnostics for normal view. Retain V14.1 layout, pause/help/focus behavior.
+2. Hot Coast → Explore → Skyline Flyover. Drive forward to the marked ramp (~145 m after start) without flight/flip inputs. Observe wheels/body following the incline, actual airborne arc, landing, markings and return to normal road. Compare chase/bonnet only when stationary/safe. If charge was full, a true zero delivered refill must say full; a tiny positive amount says `<1%` rather than `+0%`.
+3. Repeat ramp only by lawful driving/recovery: do not receive a second refill for the same ramp this run. Pause in air: vehicle/rotors/timers/charge must freeze; resume continues. Recovery cancels the airborne reward, preserves its used-ramp record and places the car on safe support.
+4. Highland Run → Explore → Divided Highway: drive the second ramp. The hill Sprint starts later and does not cross it. Check reverse entry into the visible lip/side wall blocks without popping up through the mesh; reverse away should remain possible.
+5. Start a race and drive normally: civilian pass starts after 12 s, anchored ahead once; look for the original aircraft/rotor motion. Explore intentionally has no ambient aircraft. Record view/quality/point FPS/draw counts, not a sustained benchmark claim. Coast Midnight Run portrait is a specific recognizability target: the scripted source fixture had only 0.65 s of clear in-frustum aircraft center (1.22 s mesh-bounds overlap); this is not a GPU/pixel observation.
+6. Hot Pursuit: sustained high heat and failed ground capture can dispatch one police helicopter. In clear view, verify its physical pod and searchlight follow the car, aircraft stays above roofs/terrain, beam does not pass through the flyover. If natural play does not reach dispatch, report it unverified; do not introduce a production debug bypass or pretend a synthetic fixture was gameplay.
+7. Menu/results/restart remove aircraft/light and rotor sound. Mute/pause/Help sound toggle and user gesture unlock must still work. Listen only if an actual audio path is available; running audio-context state alone is not auditory acceptance.
+8. Confirm the original save balance/ownership remains intact after reload. No online/multiplayer change is part of V15.
+
+Diagnostics additionally show police/civilian phase, actual rendered beam/visible actor count, airtime and last delivered refill. They are opt-in and not a substitute for viewing the scene.

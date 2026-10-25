@@ -1,0 +1,19 @@
+{
+  "source_glb_sha256": "3673317b5c67c99dab5c8797de58ab3431af2edb13b393e70110c49903175b29",
+  "images": {
+    "front": {
+      "path": "assets/cars/verdant/preview_front.png",
+      "sha256": "a2038545c3147d7700f1b40cb7cc78122e711aebd17afc37aba451444286e01e"
+    },
+    "rear": {
+      "path": "assets/cars/verdant/preview_rear.png",
+      "sha256": "3bb305706dbe0e43b9baabc8fe435acff33663aa4718ad0d3c9bdf079eb1f588"
+    },
+    "thumb": {
+      "path": "assets/gallery_thumbnails/car_thumb_verdant.png",
+      "sha256": "cf69c2e16656c42e04dd8debc492db896ca58155f61a2f1d5e9efc28cb059a3e"
+    }
+  },
+  "source": "Actual final GLB imported into Blender. These are studio renders, not gameplay.",
+  "reconstruction": true
+}

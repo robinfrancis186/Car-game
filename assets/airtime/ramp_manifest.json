@@ -1,0 +1,38 @@
+[
+  {
+    "id": "skyline-rise",
+    "startS": 2675,
+    "lipS": 2710,
+    "rise": 2.6,
+    "centerOffset": 0,
+    "halfWidth": 3.6,
+    "asset": "Coast_AirtimeRamp.glb",
+    "native": "assets/airtime/Coast_AirtimeRamp.blend",
+    "generator": "blender/build_airtime_ramps.py",
+    "coordinate_contract": "World-space glTF +Y up; no extra transform",
+    "triangles": 328,
+    "draws": 5,
+    "bytes": 20620,
+    "sha256": "2f7e266c7e06462e0fcdd411425417ae7f508fc79cd989740cfd1b824fd13663",
+    "collision": "Actual graded support and authored lip/side handling in gameplay; painted guidance is non-solid",
+    "source": "Original authored arcade geometry; coastal location uses attributed OSM route. No reuse license selected for original material."
+  },
+  {
+    "id": "highway-rise",
+    "startS": 330,
+    "lipS": 365,
+    "rise": 2.3,
+    "centerOffset": 0,
+    "halfWidth": 5.25,
+    "asset": "Highland_AirtimeRamp.glb",
+    "native": "assets/airtime/Highland_AirtimeRamp.blend",
+    "generator": "blender/build_airtime_ramps.py",
+    "coordinate_contract": "World-space glTF +Y up; no extra transform",
+    "triangles": 328,
+    "draws": 5,
+    "bytes": 17968,
+    "sha256": "aff8209e164208548b2a20354da49938508a9fbf3c10b669cc9b76a5ffb48c8d",
+    "collision": "Actual graded support and authored lip/side handling in gameplay; painted guidance is non-solid",
+    "source": "Original authored arcade geometry; coastal location uses attributed OSM route. No reuse license selected for original material."
+  }
+]

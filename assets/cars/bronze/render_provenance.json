@@ -1,0 +1,19 @@
+{
+  "source_glb_sha256": "7d18612a3a01c4cbbbbe2cbc6a61a671efeec152c71a0427591c967f8a3dba0c",
+  "images": {
+    "front": {
+      "path": "assets/cars/bronze/preview_front.png",
+      "sha256": "c9e0d9d46fbef773bce9d579492144f8fad64b2f08b470a0f3b4dbb102c6a755"
+    },
+    "rear": {
+      "path": "assets/cars/bronze/preview_rear.png",
+      "sha256": "ae401eff55d44bffebb5f6d3831147b3d63710f560de0446265867c8e96f3d0d"
+    },
+    "thumb": {
+      "path": "assets/gallery_thumbnails/car_thumb_bronze.png",
+      "sha256": "51a4ab6f0cee153ab4f2c11237a4a07c3aceac8475fd2804e862c78aa6035b4f"
+    }
+  },
+  "source": "Actual final GLB imported into Blender. These are studio renders, not gameplay.",
+  "reconstruction": true
+}

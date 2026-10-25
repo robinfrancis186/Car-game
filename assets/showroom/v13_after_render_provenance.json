@@ -1,0 +1,24 @@
+{
+  "source_loft_sha256": "c456852c1ea395381f133777affc2c1685938b2d434c02b191cc2da19b2b0fef",
+  "source_car_sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9",
+  "image": "assets/showroom/ServiceShowroomLoft_V13_after.png",
+  "image_sha256": "76a48a838bf665dacd2ab41c0854145877ca50ad43aa2c70b445e1830487cd8a",
+  "samples": 64,
+  "denoising": false,
+  "camera_native": [
+    7.5,
+    -8.5,
+    2.5
+  ],
+  "target_native": [
+    0,
+    0,
+    0.78
+  ],
+  "lens_mm": 35,
+  "resolution": [
+    1100,
+    760
+  ],
+  "scope": "Blender CPU Cycles of actual GLB; matched lighting/camera/materials; not runtime gameplay. No reference pixels."
+}

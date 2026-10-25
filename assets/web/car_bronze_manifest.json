@@ -1,0 +1,170 @@
+{
+  "id": "bronze",
+  "name": "BRONZE APEX",
+  "reconstruction": "New original geometry reconstructed 2026-10-23 from visual references; not the missing former V12 bytes.",
+  "source": "blender/build_bronze.py",
+  "license": "No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses.",
+  "axes": "Blender X forward,Y left,Z up; GLB X forward,Y up,-Z left.",
+  "steer_limit_rad": 0.45,
+  "wheel_radius_m": 0.366,
+  "boost_mounts_three": [
+    [
+      -2.4,
+      0.26,
+      -0.56
+    ],
+    [
+      -2.4,
+      0.26,
+      0.56
+    ]
+  ],
+  "fixed_wing": "RearWing",
+  "paint_material": "Crimson multi-coat | original fan concept",
+  "file": "car_bronze.glb",
+  "sha256": "7d18612a3a01c4cbbbbe2cbc6a61a671efeec152c71a0427591c967f8a3dba0c",
+  "bytes": 2446632,
+  "triangles": 62002,
+  "draw_calls": 24,
+  "materials": 8,
+  "material_names": [
+    "Bronze Apex | brushed gunmetal alloy",
+    "Crimson multi-coat | original fan concept",
+    "Bronze Apex | graphite aerodynamic composite",
+    "Bronze Apex | charcoal cockpit leather",
+    "Bronze Apex | smoked transparent glass",
+    "Bronze Apex | ice white LED",
+    "LED ruby red | Bronze Apex rear lamps",
+    "Bronze Apex | Tire rubber"
+  ],
+  "rigid_groups": {
+    "CAR_ROOT": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "CarBody": {
+      "source_parts": 185,
+      "triangles": 23884,
+      "draw_calls": 7
+    },
+    "RearWing": {
+      "source_parts": 5,
+      "triangles": 878,
+      "draw_calls": 2
+    },
+    "Hood": {
+      "source_parts": 1,
+      "triangles": 2132,
+      "draw_calls": 1
+    },
+    "Door_Right": {
+      "source_parts": 1,
+      "triangles": 490,
+      "draw_calls": 1
+    },
+    "Door_Left": {
+      "source_parts": 1,
+      "triangles": 490,
+      "draw_calls": 1
+    },
+    "Steer_Front_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Front_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Front_Left": {
+      "source_parts": 30,
+      "triangles": 8024,
+      "draw_calls": 2
+    },
+    "Caliper_Front_Left": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Front_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Front_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Front_Right": {
+      "source_parts": 30,
+      "triangles": 8024,
+      "draw_calls": 2
+    },
+    "Caliper_Front_Right": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Rear_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Rear_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Rear_Left": {
+      "source_parts": 30,
+      "triangles": 8024,
+      "draw_calls": 2
+    },
+    "Caliper_Rear_Left": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Rear_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Rear_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Rear_Right": {
+      "source_parts": 30,
+      "triangles": 8024,
+      "draw_calls": 2
+    },
+    "Caliper_Rear_Right": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    }
+  },
+  "degenerate_triangles_removed": 606,
+  "bounds_three_m": {
+    "min": [
+      -2.4620001316070557,
+      0.001896888017654419,
+      -1.1775000095367432
+    ],
+    "max": [
+      2.4750001430511475,
+      1.3049999475479126,
+      1.1775000095367432
+    ]
+  },
+  "source_sha256": "aab8a6c4dbd12eee2ab0768da2354eda5cff90a46063451a2f8a2e1b4c76fa00",
+  "thumbnail": "car_thumb_bronze.png",
+  "thumbnail_sha256": "51a4ab6f0cee153ab4f2c11237a4a07c3aceac8475fd2804e862c78aa6035b4f",
+  "status": "Frozen reconstructed asset; source/actual-GLB geometry and rendered preview checks passed. Runtime browser acceptance remains separate.",
+  "door_opening_status": "Separate closed rigid panels; no runtime door-opening animation or validated opening path."
+}

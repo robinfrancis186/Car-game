@@ -1,413 +1,231 @@
 {
-  "note": "Native Blender 4.3.2 files saved with native compression; geometry fingerprint verified after reopening. Render-output paths made relative. Frozen runtime exports are unchanged.",
+  "version": "V17 R3.4",
+  "note": "45 original native scenes; read-only reopen privacy audit, bytes unchanged. Historical V10 geometry/compression receipts remain in docs/provenance/v10/.",
   "files": [
     {
+      "path": "assets/airtime/Coast_AirtimeRamp.blend",
+      "bytes": 566728,
+      "sha256": "ba398a2946436c542af74a270498e800545dd0bdc1f3fb5f17b49f1d12a2c25e"
+    },
+    {
+      "path": "assets/airtime/Highland_AirtimeRamp.blend",
+      "bytes": 566728,
+      "sha256": "624a46b36d5cc6eeac395c9bf7d8724fd99f4de3a154a9f7a5ae26447a27c1b1"
+    },
+    {
+      "path": "assets/boost/ArcadeBoostNozzle.blend",
+      "bytes": 98571,
+      "sha256": "7c1e6cfd41d67f6de78803d8b527a646e43586058a34ec340854e554d1892d23"
+    },
+    {
       "path": "assets/car/roadster_concept.blend",
-      "original_sha256": "084b171caef1d7dfe231f2b92e72c63da4efa2a0e12fae71bfccfcd50bd74879",
-      "published_sha256": "20fc2ef1255ad9ce403a075cce14fd16a77d0aeb3797702eae15be0d0a2950bd",
-      "original_bytes": 20522004,
-      "published_bytes": 2338688,
-      "geometry": {
-        "objects": 519,
-        "meshes": 509,
-        "vertices": 183061,
-        "polygons": 171677,
-        "geometry_sha256": "607867113ea25d14a0491590a7fd39c799300fb98e8b406ba090eb4f9476e4be"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 2338688,
+      "sha256": "20fc2ef1255ad9ce403a075cce14fd16a77d0aeb3797702eae15be0d0a2950bd"
+    },
+    {
+      "path": "assets/car_touring/azure_touring_gt.blend",
+      "bytes": 364510,
+      "sha256": "344f841c0d2578cee19b4c2c6f87cbd3043ee17a1e9e9e18ed60496f113a2c4f"
+    },
+    {
+      "path": "assets/cars/bronze/bronze_apex.blend",
+      "bytes": 407081,
+      "sha256": "aab8a6c4dbd12eee2ab0768da2354eda5cff90a46063451a2f8a2e1b4c76fa00"
+    },
+    {
+      "path": "assets/cars/midnight/Midnight_Meridian_GT.blend",
+      "bytes": 4368272,
+      "sha256": "512166ed11291e920538d18eecfb3190cb2f891aee002fdfa742cd95f5a72bcd"
+    },
+    {
+      "path": "assets/cars/silver_refinement/baseline/car_silver.blend",
+      "bytes": 599340,
+      "sha256": "9056620ea3f5a26dc75fa2752b59065fad05d78a5d10e00c1fbee2126c09ed12"
+    },
+    {
+      "path": "assets/cars/silver_refinement/silver_editable.blend",
+      "bytes": 468042,
+      "sha256": "d92172cfc86575c38c5d21c5a69a42770c17379eefec25aebdf89068a86e42fa"
+    },
+    {
+      "path": "assets/cars/verdant/verdant.blend",
+      "bytes": 4797176,
+      "sha256": "1d405695581155ef0f90ecf483ed5590bb6fbcedf73e121143008f145c668835"
+    },
+    {
+      "path": "assets/cars/vermilion/vermilion.blend",
+      "bytes": 4524288,
+      "sha256": "608ac4c0436ad031e33ca3c87c70b8ad3c1d349ea39767c0747696655a90c382"
     },
     {
       "path": "assets/course/Kappil_Coast.blend",
-      "original_sha256": "7c1c51afb937c71f88c62992ab4109787ce2e6c98917a830edab562981dd04cf",
-      "published_sha256": "edd9b4f044d4ce9ad91c0eb3bc38028955fdf897307debb0f499fb4b5d3a8a65",
-      "original_bytes": 42763044,
-      "published_bytes": 4277373,
-      "geometry": {
-        "objects": 4422,
-        "meshes": 2557,
-        "vertices": 296397,
-        "polygons": 261373,
-        "geometry_sha256": "2a57e73d9a84e23b5f9274f7f7cd41391a6b18f8f5843f83f8549f002b50c075"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 4277373,
+      "sha256": "edd9b4f044d4ce9ad91c0eb3bc38028955fdf897307debb0f499fb4b5d3a8a65"
     },
     {
       "path": "assets/environment/Kerala_Coastal_Assets.blend",
-      "original_sha256": "8d45ba7bf3b62429bf67c14cf16f34080bb1e807fc8adad072eca71256a7122b",
-      "published_sha256": "ab6e234b97aee18eca1570788915b7ff8c71b94870d69224a5c8f8517ebb732f",
-      "original_bytes": 6614748,
-      "published_bytes": 997980,
-      "geometry": {
-        "objects": 364,
-        "meshes": 297,
-        "vertices": 68311,
-        "polygons": 43895,
-        "geometry_sha256": "f1d3164e13a51255bd9f8d204d445f837c07a1b879b6d5ea79d75c6edb3123de"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 997980,
+      "sha256": "ab6e234b97aee18eca1570788915b7ff8c71b94870d69224a5c8f8517ebb732f"
     },
     {
       "path": "assets/foliage_detail/CanalRainTreeFar.blend",
-      "original_sha256": "32114210fee4154d237e49aba69bafed9d26f230b4e84a7d2e52b3dc38e662cf",
-      "published_sha256": "071639a12365c318a9f837f07a13b24d897e2a7ce44765708bc02a4af4a43e9a",
-      "original_bytes": 1281016,
-      "published_bytes": 223781,
-      "geometry": {
-        "objects": 2,
-        "meshes": 2,
-        "vertices": 8904,
-        "polygons": 3496,
-        "geometry_sha256": "4a64b1ff8fa4951009686f59c64a578f1cd374a35e3427db8641b7c56fa758dc"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 223781,
+      "sha256": "071639a12365c318a9f837f07a13b24d897e2a7ce44765708bc02a4af4a43e9a"
     },
     {
       "path": "assets/foliage_detail/Highland_Foliage_Detail.blend",
-      "original_sha256": "f2c59a64064fb21ddab7b1621f5bfb85ab00b77568294fedc56f43d8ddee1df9",
-      "published_sha256": "f411c86b269f7128cd18e3dd0673445f512aa62418f3eea15d576f8a28ce05b4",
-      "original_bytes": 1222524,
-      "published_bytes": 309495,
-      "geometry": {
-        "objects": 20,
-        "meshes": 20,
-        "vertices": 7624,
-        "polygons": 6976,
-        "geometry_sha256": "0251c2ef31262ff2fc5e7ee6adf717a6b053b5a775969a34028be331874bd2da"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 309495,
+      "sha256": "f411c86b269f7128cd18e3dd0673445f512aa62418f3eea15d576f8a28ce05b4"
+    },
+    {
+      "path": "assets/gameplay_props/ArcadeCoin.blend",
+      "bytes": 143105,
+      "sha256": "66c10722bd9a67b3a1576c3c6a08b7cb7b849406c66af34fbcc80980998da000"
+    },
+    {
+      "path": "assets/gameplay_props/RouteEndMarker.blend",
+      "bytes": 102020,
+      "sha256": "154a6ad93efed472cfff2df4fd09d5bc3b96028c3146e03e843cbb4c6ab1e3f2"
+    },
+    {
+      "path": "assets/helicopter/Rotor_Blur_LOD.blend",
+      "bytes": 443636,
+      "sha256": "eb5b5870ac720a229fcb771dd88a8e2910ef4a07b5cc12e7210176127361303e"
+    },
+    {
+      "path": "assets/helicopter/civilian/Coastal_Twin_Civilian.blend",
+      "bytes": 2184892,
+      "sha256": "7819d384a212f34db6d967408c3f5ca352dfb6dbe7608f819b648c82575f2b41"
+    },
+    {
+      "path": "assets/helicopter/police/Coastal_Twin_Police.blend",
+      "bytes": 2239160,
+      "sha256": "4bfcd916d3101ca670ef386fa2b5b77923c52813bc7fb6c166807089befcc94e"
     },
     {
       "path": "assets/highlands/Highland_Props.blend",
-      "original_sha256": "65473fe851564543f2a9c78c41fead56869d37436c7aa7d2ea91ca64135781e6",
-      "published_sha256": "b4a16e5b8b0ac1e19fc49971344086ec2cb4e90663451e4389f93ce7cf399868",
-      "original_bytes": 789868,
-      "published_bytes": 128173,
-      "geometry": {
-        "objects": 22,
-        "meshes": 22,
-        "vertices": 1604,
-        "polygons": 2080,
-        "geometry_sha256": "7b55aaaa3d7da0d1a4e3e80c2143fb14ac42ee945daecd29b563b98b4afcd66e"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 128173,
+      "sha256": "b4a16e5b8b0ac1e19fc49971344086ec2cb4e90663451e4389f93ce7cf399868"
     },
     {
       "path": "assets/highlands/Highland_Run.blend",
-      "original_sha256": "2fbd5f80914e7251fe038b2d5111b7ddc763bb332b56cece75a19f907a3689cf",
-      "published_sha256": "6aff60f62f19cbe036dbd05e78b70292a09cbbac46bbfc97b93823dbe0f4bd3a",
-      "original_bytes": 41688808,
-      "published_bytes": 8550312,
-      "geometry": {
-        "objects": 1209,
-        "meshes": 655,
-        "vertices": 371819,
-        "polygons": 597376,
-        "geometry_sha256": "efdcb20e6bc151341960304ee5a7618dff1fae3778bc3d44263f16e93db1c6f1"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 8550312,
+      "sha256": "6aff60f62f19cbe036dbd05e78b70292a09cbbac46bbfc97b93823dbe0f4bd3a"
     },
     {
       "path": "assets/infrastructure/backwater/KeralaHouseboat.blend",
-      "original_sha256": "c455dc0f7b2803e5fb9470cef9eee87337d7be8b25fc14c2f5dfc66a8bb0d890",
-      "published_sha256": "27d848db16333ca0de6623ef8c683208c8386ccc33cac77e133e05e01c42d476",
-      "original_bytes": 824300,
-      "published_bytes": 180701,
-      "geometry": {
-        "objects": 5,
-        "meshes": 4,
-        "vertices": 4076,
-        "polygons": 4812,
-        "geometry_sha256": "660af6ae1f57f958321d0b3f27d9dfbe551a0ed05ff97c4880e10c09d36d0fed"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 180701,
+      "sha256": "27d848db16333ca0de6623ef8c683208c8386ccc33cac77e133e05e01c42d476"
     },
     {
       "path": "assets/infrastructure/transit/Kerala_Transit_Infrastructure.blend",
-      "original_sha256": "6d71a7fb6a9a4c6b7095a747418a1ebf62018392bc6075c4f1006bb265813621",
-      "published_sha256": "39603d8dc7c4353c20e79b7664b921df20667a7a33bb26434417cf410ce56650",
-      "original_bytes": 3732108,
-      "published_bytes": 237330,
-      "geometry": {
-        "objects": 563,
-        "meshes": 563,
-        "vertices": 7169,
-        "polygons": 9873,
-        "geometry_sha256": "f325db3af02eb3d150cf915cbdff8a872f0cfbca9d9fe0ad5b49fe19a23d06e3"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 237330,
+      "sha256": "39603d8dc7c4353c20e79b7664b921df20667a7a33bb26434417cf410ce56650"
     },
     {
       "path": "assets/infrastructure/urban/native/ChineseFishingNet.blend",
-      "original_sha256": "1290cc100c41e875e979ee86a47d96a045ec7f5a9da32e36c6e1bf9a20a5ea32",
-      "published_sha256": "dda9049dc8b9e0ced0952c884bfe134833cb4f6cbf82a3a41367083a9203e69f",
-      "original_bytes": 534384,
-      "published_bytes": 108645,
-      "geometry": {
-        "objects": 3,
-        "meshes": 2,
-        "vertices": 1148,
-        "polygons": 900,
-        "geometry_sha256": "b25de09fd0931d1e75c021baae588e5c64cec55e81cd034f193bc6c33881dfb8"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 108645,
+      "sha256": "dda9049dc8b9e0ced0952c884bfe134833cb4f6cbf82a3a41367083a9203e69f"
     },
     {
       "path": "assets/infrastructure/urban/native/KeralaApartment_A.blend",
-      "original_sha256": "78c8704734666298378ed70379c7d2e84573b368a167d96d7de7c03c611a9c3f",
-      "published_sha256": "553cbaea974e802305c76373447f1a01ae9ea0251a948c849034cb89342dfd8b",
-      "original_bytes": 680624,
-      "published_bytes": 127475,
-      "geometry": {
-        "objects": 6,
-        "meshes": 5,
-        "vertices": 2172,
-        "polygons": 2048,
-        "geometry_sha256": "868253f7b2709f2983365257a2f495d9018e99e957bc0a6a86f0328ec7d66e70"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 127475,
+      "sha256": "553cbaea974e802305c76373447f1a01ae9ea0251a948c849034cb89342dfd8b"
     },
     {
       "path": "assets/infrastructure/urban/native/KeralaOffice_A.blend",
-      "original_sha256": "8e188944a05149131dbaff89c1db4b9342f1ac2731a15f0576b677348b8c87c7",
-      "published_sha256": "b1ef4f4ea11bfd9ec171a622562af5c99c340f0f12f7be29df6eb99343a09254",
-      "original_bytes": 605064,
-      "published_bytes": 112430,
-      "geometry": {
-        "objects": 5,
-        "meshes": 4,
-        "vertices": 1325,
-        "polygons": 1179,
-        "geometry_sha256": "b864e6b00711df46f9075d401d3becf67fdd5c17a2b2f76714ccfa6cc76cdeef"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 112430,
+      "sha256": "b1ef4f4ea11bfd9ec171a622562af5c99c340f0f12f7be29df6eb99343a09254"
     },
     {
       "path": "assets/infrastructure/urban/native/KeralaShopRow_A.blend",
-      "original_sha256": "987129ef74362a2c37b693f1755132d0866d2930894f3dbfee5cfd05b03dbcad",
-      "published_sha256": "056f5ccbf642cbb7b9f1a74d2f9726db3d962b0b144498e4da896ca0f502f564",
-      "original_bytes": 628000,
-      "published_bytes": 112694,
-      "geometry": {
-        "objects": 6,
-        "meshes": 5,
-        "vertices": 1032,
-        "polygons": 1206,
-        "geometry_sha256": "85e9f3cfb718716866de97e51585ca4c1abb73a246fc23f4c12f7bb6d7112a06"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 112694,
+      "sha256": "056f5ccbf642cbb7b9f1a74d2f9726db3d962b0b144498e4da896ca0f502f564"
     },
     {
       "path": "assets/infrastructure/urban/native/KeralaShopRow_B.blend",
-      "original_sha256": "a924531f493dd48952279e3c38a9d19454ef692838586b5103c0845523514834",
-      "published_sha256": "3e7da3cf2f2dab3d6666a994474de3097e29a5b1ea2c3bbd1d6b0a3fb8a9ffe5",
-      "original_bytes": 593400,
-      "published_bytes": 103197,
-      "geometry": {
-        "objects": 6,
-        "meshes": 5,
-        "vertices": 524,
-        "polygons": 554,
-        "geometry_sha256": "f9e72644c21287f8d0c0e6a951d47f93249f04520d023fe78e7ce139045caacf"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 103197,
+      "sha256": "3e7da3cf2f2dab3d6666a994474de3097e29a5b1ea2c3bbd1d6b0a3fb8a9ffe5"
     },
     {
       "path": "assets/infrastructure/urban/native/KeralaTeaStall.blend",
-      "original_sha256": "e5e0c5259eaa35abe13191b01f62bf30f647462330d55d5835d5f9aa1c665572",
-      "published_sha256": "7b5f5c644863e014621e4d8112b1f907c839469ffa6dd8267fdb59e2b932c051",
-      "original_bytes": 583892,
-      "published_bytes": 100994,
-      "geometry": {
-        "objects": 6,
-        "meshes": 5,
-        "vertices": 317,
-        "polygons": 417,
-        "geometry_sha256": "0be97eb41f090c393152dc7eef8baa5cc060df264065cbac95e3add9b3fde82f"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 100994,
+      "sha256": "7b5f5c644863e014621e4d8112b1f907c839469ffa6dd8267fdb59e2b932c051"
     },
     {
       "path": "assets/infrastructure/vehicles/transit_vehicles.blend",
-      "original_sha256": "336e674e88ebdba4a15ff2e13bede61951a2b858cf9cf9b325719ee8782bf75f",
-      "published_sha256": "e8a395c24980506592d7d24189db11d1c10cac8b6fb91896f72c0c3274eae35c",
-      "original_bytes": 4288360,
-      "published_bytes": 247238,
-      "geometry": {
-        "objects": 592,
-        "meshes": 579,
-        "vertices": 10501,
-        "polygons": 5350,
-        "geometry_sha256": "b996b0c3929df9c654567cdba739fce9fd2e400220394a1413e6dd5391112384"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 247238,
+      "sha256": "e8a395c24980506592d7d24189db11d1c10cac8b6fb91896f72c0c3274eae35c"
     },
     {
       "path": "assets/landscape_reference_kit/BirdRockLookout.blend",
-      "original_sha256": "754a2fb6f5a6c55b21e5fe92aa6ad1300ae4b1bb730a3817a931671831318044",
-      "published_sha256": "630379990c9b7b18027591b96ea158903b8f4653385a516db13e8ddfda2e5f86",
-      "original_bytes": 2529108,
-      "published_bytes": 277427,
-      "geometry": {
-        "objects": 226,
-        "meshes": 225,
-        "vertices": 9768,
-        "polygons": 9825,
-        "geometry_sha256": "1de282ac042e6ed5a5bdd4d348c8caf693136c3f75a71c4ea93246f656875d57"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 277427,
+      "sha256": "630379990c9b7b18027591b96ea158903b8f4653385a516db13e8ddfda2e5f86"
     },
     {
       "path": "assets/landscape_reference_kit/CanalRainTree.blend",
-      "original_sha256": "0c83bf2b187c0f4dad5890539a5e276987b426572bbdcaa5d6ef61b31888c3cc",
-      "published_sha256": "988b61c70ed7ae1ad34a5bdd8ebce471c50d5d82c9a0795a987aff8396a6b575",
-      "original_bytes": 2368208,
-      "published_bytes": 371598,
-      "geometry": {
-        "objects": 150,
-        "meshes": 149,
-        "vertices": 22540,
-        "polygons": 12315,
-        "geometry_sha256": "6b60488d0aebd4beb8610696ce4da1d298be85b4bbecafb353863d03376d0baa"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 371598,
+      "sha256": "988b61c70ed7ae1ad34a5bdd8ebce471c50d5d82c9a0795a987aff8396a6b575"
     },
     {
       "path": "assets/landscape_reference_kit/CanalShikara.blend",
-      "original_sha256": "54886203c88ed9e830e87c499e3f59b23464e01ce81a283aebdf545fa0ce798b",
-      "published_sha256": "902e6ddc568015ac13312220e20951e0b9ec85f8b49ff37d5e10688a0ea32289",
-      "original_bytes": 1709956,
-      "published_bytes": 154435,
-      "geometry": {
-        "objects": 105,
-        "meshes": 104,
-        "vertices": 2163,
-        "polygons": 1804,
-        "geometry_sha256": "2bc0b9a9cd8606f3829e8a91589a37a40743696244a4190c0163c246bce96321"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 154435,
+      "sha256": "902e6ddc568015ac13312220e20951e0b9ec85f8b49ff37d5e10688a0ea32289"
     },
     {
       "path": "assets/showroom/ServiceShowroomBay.blend",
-      "original_sha256": "230946d1d06585b77ee835d9b5921229c8adbec4561b33ba10ca826fca428246",
-      "published_sha256": "5899642017fe66910e15d4dd025d4f8dd5033750908204b503add43b96520720",
-      "original_bytes": 2484516,
-      "published_bytes": 185983,
-      "geometry": {
-        "objects": 327,
-        "meshes": 327,
-        "vertices": 5573,
-        "polygons": 4700,
-        "geometry_sha256": "e048893a148c51f10edce87ac4157285813d3966f428fe1c09846150963dafd7"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 185983,
+      "sha256": "5899642017fe66910e15d4dd025d4f8dd5033750908204b503add43b96520720"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft.blend",
+      "bytes": 19415824,
+      "sha256": "6f52b61fb2b18663a49618041f0bd7d08285050d8fc342f2918bb2e8dbeaaa6f"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft_V13_after.blend",
+      "bytes": 8147853,
+      "sha256": "4a079166caf5a95f7deda04191afd772accf2ea0dfc0931dc54f6300942eac32"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft_V13_before.blend",
+      "bytes": 6195140,
+      "sha256": "7589370964ab60ce7730f95d8d2ed665404007921389c457d7c337343a6c1071"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft_home_desktop.blend",
+      "bytes": 12638340,
+      "sha256": "6da08887522d255f87737061cf7ea5458354fa50d4c0b17ffdc6bcd946518acb"
+    },
+    {
+      "path": "assets/showroom/ServiceShowroomLoft_home_portrait.blend",
+      "bytes": 12638340,
+      "sha256": "2f5b13f7b9d396204c317beece0e84a2f5681aa1155d141f589c8e9aa197362d"
+    },
+    {
+      "path": "assets/surface_test/Surface_Test_Route.blend",
+      "bytes": 5366272,
+      "sha256": "3458d2e887eb8945f0d67d4ca15480a5cd9de52f95728c93e2ec9354f1b8ec37"
     },
     {
       "path": "assets/web/CheckpointGate.blend",
-      "original_sha256": "c2df8405dd83987753e880a6b4a6b9457d0a0b6b7e5d28c5d09480d65a12091f",
-      "published_sha256": "8a938f794f4739faa41bc93e8a11d2169e285cfd2500da718e7f0e5c02097c3b",
-      "original_bytes": 516708,
-      "published_bytes": 95981,
-      "geometry": {
-        "objects": 3,
-        "meshes": 2,
-        "vertices": 160,
-        "polygons": 112,
-        "geometry_sha256": "79d8583bf47fac9ff2f594498a15c70c106ff79ea13351fd9bf38f90a2ff202d"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 95981,
+      "sha256": "8a938f794f4739faa41bc93e8a11d2169e285cfd2500da718e7f0e5c02097c3b"
     },
     {
       "path": "assets/web/car_silver.blend",
-      "original_sha256": "e8a197944fc0c1291d55b687074e09f3e6e91f84194091c675a85c90cc188aa8",
-      "published_sha256": "9056620ea3f5a26dc75fa2752b59065fad05d78a5d10e00c1fbee2126c09ed12",
-      "original_bytes": 3137828,
-      "published_bytes": 599340,
-      "geometry": {
-        "objects": 26,
-        "meshes": 10,
-        "vertices": 15920,
-        "polygons": 23156,
-        "geometry_sha256": "aef7f03ac8594986374d35ab244e6ff067840ad48b8a74c47fc6c4cbf9bab0e6"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 3641620,
+      "sha256": "4e12170bafc5d6e9e3b158f40e052910ac4d56d589b2f6a64381adca8415ecea"
     },
     {
       "path": "assets/web/car_web.blend",
-      "original_sha256": "644c43f51f2485b1490bc36171d5c915e319ae2d36282363e0348efcf9665004",
-      "published_sha256": "88a54c78794c601e74411639f09fe4bfe55085434a34f8adb5e5a9e59be0fa1d",
-      "original_bytes": 3124820,
-      "published_bytes": 748457,
-      "geometry": {
-        "objects": 18,
-        "meshes": 9,
-        "vertices": 16650,
-        "polygons": 27731,
-        "geometry_sha256": "7e719f464c6f6fc71bc854ccadcca98e9a47840a548acd2dee6e75e0eae54daa"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 748457,
+      "sha256": "88a54c78794c601e74411639f09fe4bfe55085434a34f8adb5e5a9e59be0fa1d"
     },
     {
       "path": "assets/web/police_lightbar.blend",
-      "original_sha256": "0b64664a7b43f559dc9a64ee66f2965e9203dcea4628fb6084ddaba2f27adf1e",
-      "published_sha256": "85edc77dc2cc64f3112b01a3bcb9d9d1eb861428b6e87dba0e69750f163196aa",
-      "original_bytes": 535280,
-      "published_bytes": 94132,
-      "geometry": {
-        "objects": 4,
-        "meshes": 3,
-        "vertices": 24,
-        "polygons": 18,
-        "geometry_sha256": "44c4593fe9818281dbebfe4580b51b4ad580fcf3ad3a62177d0bbce1e6bb8e8d"
-      },
-      "packed_reference_images": 0,
-      "embedded_scripts": 0,
-      "linked_libraries": 0
+      "bytes": 94132,
+      "sha256": "85edc77dc2cc64f3112b01a3bcb9d9d1eb861428b6e87dba0e69750f163196aa"
     }
   ]
 }

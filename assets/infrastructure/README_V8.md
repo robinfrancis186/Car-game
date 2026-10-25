@@ -41,7 +41,7 @@ Urban module details are in `urban/urban_assets_manifest.json`; train/ferry in `
 
 ## Sources and rights
 
-All shipped infrastructure, urban modules, vehicles and houseboat geometry is original procedural Blender work, with CC0 dedication recorded in the respective asset manifests/licenses. No external model geometry, logos or photo textures are shipped in the runtime. Official architecture references are listed in `research/KERALA_INFRASTRUCTURE_REFERENCES.md`; user-provided photographs informed silhouette revisions and are kept only as project reference material.
+All shipped infrastructure, urban modules, vehicles and houseboat geometry is original procedural Blender work. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. No external model geometry, logos or photo textures are shipped in the runtime. Official architecture references are listed in `research/KERALA_INFRASTRUCTURE_REFERENCES.md`; user-provided photographs informed silhouette revisions and are kept only as project reference material.
 
 Route, coastline and water geometry remain derived from OpenStreetMap: **© OpenStreetMap contributors**, ODbL. See `references/route/README.md`. Artistic elevation, road widths, transit alignments, buildings and race furniture are not survey data.
 

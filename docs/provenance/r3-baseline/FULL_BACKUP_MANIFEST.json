@@ -1,0 +1,8 @@
+{
+  "kind": "Source-root pointer (not an archive manifest)",
+  "candidate": "MALABAR V17 UI CANDIDATE R3",
+  "authoritative_candidate_manifest": "tests/v17/CANDIDATE_MANIFEST.json",
+  "runtime_tree_sha256": "22abd73887e5035992486afc17fc511311dee8cf3d37ceae96ce178eb27c5013",
+  "historical_manifest": "docs/provenance/INHERITED_V12_BACKUP_MANIFEST.json",
+  "note": "The full ZIP has its own generated complete-file FULL_BACKUP_MANIFEST.json. This pointer replaces misleading inherited V12 metadata."
+}

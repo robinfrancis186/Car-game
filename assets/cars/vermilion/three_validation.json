@@ -1,0 +1,69 @@
+{
+  "result": "PASS",
+  "file": "car_vermilion.glb",
+  "sha256": "dd0b4111fd14951c995365dd89ed0adf5ee5857dabcfd84ccc864d27d34f9efe",
+  "checks": [
+    {
+      "name": "root and distinct body part hierarchy",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Front_Left",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Front_Right",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Rear_Left",
+      "result": "PASS"
+    },
+    {
+      "name": "independent wheel axis and fixed-caliper contract Rear_Right",
+      "result": "PASS"
+    },
+    {
+      "name": "finite geometry and model budget",
+      "result": "PASS"
+    },
+    {
+      "name": "every indexed triangle nondegenerate; normals finite/unit length",
+      "result": "PASS"
+    },
+    {
+      "name": "metre bounds and ground contact",
+      "result": "PASS"
+    }
+  ],
+  "triangles": 76992,
+  "draw_calls": 29,
+  "material_names": [
+    "Vermilion | machined forged alloy",
+    "Vermilion | satin aero carbon",
+    "Vermilion | white blade optics",
+    "Vermilion | charcoal suede",
+    "Vermilion | smoke curved glazing",
+    "Crimson multi-coat | original fan concept",
+    "LED ruby red | vermilion tail lamps",
+    "Tire rubber | vermilion compound"
+  ],
+  "nondegenerate_triangles_checked": 76992,
+  "bounds": {
+    "min": [
+      -2.4056291580200195,
+      0.001896888017654419,
+      -1.1357767879962921
+    ],
+    "max": [
+      2.4000000953674316,
+      1.193243145942688,
+      1.1357767879962921
+    ],
+    "size": [
+      4.805629253387451,
+      1.1913462579250336,
+      2.2715535759925842
+    ]
+  }
+}

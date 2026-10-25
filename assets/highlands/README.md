@@ -51,4 +51,4 @@ Gameplay worker reported six event/car completions with zero damage, four safe d
 
 ## License / reference boundary
 
-New procedural geometry and scripts are dedicated CC0. User photographs are visual references only, not redistributed as game textures. The track is not real NH66, a real tea estate or the exact Jatayu sculpture. No real infrastructure operator endorsement is implied. Existing project asset licenses and coastal OSM attribution remain in their own source manifests; no OSM geometry is used for this fictional Highland route.
+New procedural geometry and scripts were created for this project. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. User photographs are visual references only, not redistributed as game textures. The track is not real NH66, a real tea estate or the exact Jatayu sculpture. No real infrastructure operator endorsement is implied. Existing project asset licenses and coastal OSM attribution remain in their own source manifests; no OSM geometry is used for this fictional Highland route.

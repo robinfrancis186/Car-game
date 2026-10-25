@@ -5,7 +5,7 @@
  * Original game mechanics, not a Tesla engineering/production simulation.
  *
  * API: new GameModel(route, {startS, endS, seed, obstacles, elevatedCorridors,
- * terrainGrid, roadSections, upgrades}).start(scenarioId)
+ * terrainGrid, roadSections, upgrades, vehicleId}).start(scenarioId)
  * update(elapsedSeconds, {throttle, steer, brake, boost, ultraBoost, flight, lift}).
  * Throttle/steer/lift are -1..1; the other controls are booleans.
  * Obstacles support circles, capsules and oriented boxes with world Y/height.
@@ -18,6 +18,9 @@
  * bodyRoll/bodyPitch/suspension are cosmetic radians/radians/metres.
  */
 import {sanitizeUpgrades,getUpgradeStats} from './garage.js';
+import {normalizeRamps,rampSupport,rampLaunch} from './ramp-surfaces.js';
+import {AirtimeRewards} from './airtime-rewards.js';
+import {PoliceAirSupport,CivilianAirTraffic} from './police-air-support.js';
 export const SCENARIOS = Object.freeze([
   Object.freeze({id:'coast-sprint',name:'Coast Sprint',title:'COAST SPRINT',tag:'RACE / PURSUIT',description:'Three rivals. One coastal road. Patrols watch the bridge.',rivals:3,police:2,lighting:'golden',goal:'Finish ahead of the pack. Outrun patrols if they spot the race.',difficulty:'STREET'}),
   Object.freeze({id:'hot-pursuit',name:'Hot Pursuit',title:'HOT PURSUIT',tag:'ESCAPE / SURVIVE',description:'They already know your car. Break contact and reach the safehouse.',rivals:2,police:2,lighting:'blue',goal:'Lose the patrol for eight seconds, then reach the finish.',difficulty:'WANTED'}),
@@ -54,7 +57,13 @@ const closestSegments=(a,b,c,d)=>{
  return {a:pa,b:pb,distance:Math.hypot(pa.x-pb.x,pa.z-pb.z)};
 };
 const carSegment=p=>{const x=Math.cos(p.heading)*1.25,z=Math.sin(p.heading)*1.25;return [{x:p.x-x,z:p.z-z},{x:p.x+x,z:p.z+z}];};
-const steeringEnvelope=(speed,maxSteer=.57,grip=14.5)=>Math.min(maxSteer,Math.atan(2.7*grip/(speed*speed+16)));
+// Comfort envelope is separate from available tire grip: binary arrow keys must
+// not command the full lateral grip limit on every long press. Keep parking
+// authority, blend road-speed authority continuously, never snap to road heading.
+const steeringEnvelope=(speed,maxSteer=.57,grip=14.5)=>{
+ const smooth=v=>v*v*(3-2*v),park=smooth(clamp(Math.abs(speed)/10,0,1)),road=smooth(clamp((Math.abs(speed)-3)/15,0,1));
+ return Math.min(maxSteer*(1-.28*park),Math.atan(2.7*grip*(1-.28*road)/(speed*speed+16)));
+};
 const normalizeTerrainGrid=g=>{
  if(!g)return null;const origin=g.origin,step=g.step||[g.cell_size_m,g.cell_size_m],count=g.count||[g.columns,g.rows];
  if(!Array.isArray(origin)||!origin.every(Number.isFinite)||origin.length!==2||!Array.isArray(step)||step.length!==2||!step.every(v=>Number.isFinite(v)&&v>0)||!Array.isArray(count)||count.length!==2||!count.every(v=>Number.isInteger(v)&&v>=2)||!Array.isArray(g.heights)||g.heights.length!==count[0]*count[1]||!g.heights.every(Number.isFinite))throw new TypeError('Invalid terrain grid: finite origin/step, integer count and row-major heights required');
@@ -71,6 +80,11 @@ const sampleTerrainGrid=(g,x,z)=>{
  return {y,gradientX:gx,gradientZ:gz,grade:Math.hypot(gx,gz),heading:Math.atan2(gz,gx),inside,outsideDistance:Math.hypot(Math.max(0,-ux,ux-(nx-1))*dx,Math.max(0,-vz,vz-(nz-1))*dz),layer:'terrain'};
 };
 const obstacleBounds=o=>o.shape==='box'?{minX:o.x-o.radius,maxX:o.x+o.radius,minZ:o.z-o.radius,maxZ:o.z+o.radius}:{minX:Math.min(o.x,o.endX??o.x)-o.radius,maxX:Math.max(o.x,o.endX??o.x)+o.radius,minZ:Math.min(o.z,o.endZ??o.z)-o.radius,maxZ:Math.max(o.z,o.endZ??o.z)+o.radius};
+const obstacleCovers=(o,x,z,margin=0)=>{
+ if(o.shape==='box'){const c=Math.cos(finite(o.heading)),s=Math.sin(finite(o.heading)),dx=x-o.x,dz=z-o.z;return Math.abs(dx*c+dz*s)<=finite(o.halfLength,1)+margin&&Math.abs(-dx*s+dz*c)<=finite(o.halfWidth,1)+margin;}
+ const dx=finite(o.endX,o.x)-o.x,dz=finite(o.endZ,o.z)-o.z,len=dx*dx+dz*dz,t=len?clamp(((x-o.x)*dx+(z-o.z)*dz)/len,0,1):0;return Math.hypot(x-o.x-dx*t,z-o.z-dz*t)<=o.radius+margin;
+};
+
 
 export class GameModel {
  constructor(route,options={}) {
@@ -87,14 +101,14 @@ export class GameModel {
    const a=this.route[i],b=this.route[i+1],len=distance(a,b),tx=(b.x-a.x)/len,tz=(b.z-a.z)/len;
    this.segments.push({a,b,length:len,s:sum,tx,tz,heading:Math.atan2(tz,tx),grade:(b.y-a.y)/len,roadPitch:Math.atan2(b.y-a.y,len),index:i});sum+=len;
   }
-  this.routeLength=sum;
+  this.routeLength=sum;this.airTraffic=options.airTraffic===true;this.ramps=normalizeRamps(options.ramps,sum);
   this.startS=clamp(finite(options.startS),0,Math.max(0,sum-25));
   this.endS=clamp(finite(options.endS,sum),Math.min(sum,this.startS+20),sum);
   this.length=this.endS-this.startS;
   this.terrainY=finite(options.terrainY,-.04);this.terrainGrid=normalizeTerrainGrid(options.terrainGrid||options.terrainHeightfield);this.roadSections=Array.isArray(options.roadSections||options.roadWidthSegments)?(options.roadSections||options.roadWidthSegments):[];this.elevatedCorridors=Array.isArray(options.elevatedCorridors)?options.elevatedCorridors:[];
   this.seed=(options.seed??1337)>>>0;this._randomState=this.seed;
-  this.upgrades=sanitizeUpgrades(options.upgrades);this.vehicleStats=getUpgradeStats(this.upgrades);
-  this.roadHalfWidth=3.6;this.maxSteer=clamp(finite(options.maxSteer,.57),.2,.65);this.scenario=SCENARIOS[0];this.state='menu';this.paused=false;
+  this.upgrades=sanitizeUpgrades(options.upgrades);this.vehicleStats=getUpgradeStats(this.upgrades,options.vehicleId);
+  this.roadHalfWidth=3.6;this.maxSteer=clamp(finite(options.maxSteer,this.vehicleStats.maxSteer),.2,.65);this.scenario=SCENARIOS[0];this.state='menu';this.paused=false;
   this.obstacles=(Array.isArray(options.obstacles)?options.obstacles:[]).filter(o=>o&&Number.isFinite(o.x)&&Number.isFinite(o.z)&&Number.isFinite(o.radius)&&o.radius>0).map((o,i)=>({...o,id:o.id??'obstacle-'+i,radius:o.shape==='box'?Math.hypot(finite(o.halfLength,1),finite(o.halfWidth,1)):Math.min(120,o.radius)}));
   this._dynamicObstacles=[];this._obstacleGrid=new Map();
   for(const o of this.obstacles){const b=obstacleBounds(o);for(let gx=Math.floor(b.minX/32);gx<=Math.floor(b.maxX/32);gx++)for(let gz=Math.floor(b.minZ/32);gz<=Math.floor(b.maxZ/32);gz++){const key=gx+','+gz;if(!this._obstacleGrid.has(key))this._obstacleGrid.set(key,[]);this._obstacleGrid.get(key).push(o);}}
@@ -106,7 +120,7 @@ export class GameModel {
   this.checkpoints=[this.sampleRoute(this.startS)];
   const spacing=Math.min(125,Math.max(25,this.length/10));
   for(let s=this.startS+spacing;s<this.endS-10;s+=spacing)this.checkpoints.push(this.sampleRoute(s));
-  this.checkpoints.push(this.sampleRoute(this.endS));this.totalCheckpoints=this.checkpoints.length-1;
+  this.checkpoints.push(this.sampleRoute(this.endS));for(const q of this.checkpoints){const surface=rampSupport(this.ramps,q,this.scenario.id);if(surface){q.y=surface.y;q.grade=surface.grade;q.roadPitch=Math.atan(surface.grade);}}this.totalCheckpoints=this.checkpoints.length-1;
  }
  sampleRoute(s){
   s=finite(s);let lo=0,hi=this.segments.length-1;
@@ -137,11 +151,12 @@ export class GameModel {
  }
  _vehicle(id,s,lane,color){
   const p=this.sampleRoute(s),bounds=this._aiRoadBounds(p,p.heading);if(bounds)lane=clamp(lane,bounds.min,bounds.max);
-  const v={id,x:p.x+p.nx*lane,z:p.z+p.nz*lane,y:p.y,heading:p.heading,s,roadPitch:p.roadPitch,roadRoll:0,groundPitch:p.roadPitch,groundHeading:p.heading,groundNormalX:-p.grade*p.tx/Math.hypot(1,p.grade),groundNormalY:1/Math.hypot(1,p.grade),groundNormalZ:-p.grade*p.tz/Math.hypot(1,p.grade),groundY:p.y,grounded:true,onRoadDeck:true,flightCeiling:p.y+7.5,speed:0,steer:0,steerInput:0,yawRate:0,collisionYaw:0,velocityX:0,velocityZ:0,lateralSpeed:0,lateralVelocity:0,impactShake:0,mass:id==='player'?1450:1550,wheelAngle:0,energy:1,ultraCharge:1,ultraCooldown:0,ultraRemaining:0,ultraBoosting:false,damage:0,lane,targetLane:lane,color,active:true,visible:true,finished:false,finishTime:null,altitude:0,vz:0,offRoad:false,boosting:false,flying:false,thrusting:false,flipActive:false,flipTime:0,stuntRoll:0,stuntPhase:null,landingAssist:false,bodyRoll:0,bodyPitch:0,suspension:0};
-  if(id!=='player')this._supportOffRouteAI(v);return v;
+  const v={id,x:p.x+p.nx*lane,z:p.z+p.nz*lane,y:p.y,heading:p.heading,s,roadPitch:p.roadPitch,roadRoll:0,groundPitch:p.roadPitch,groundHeading:p.heading,groundNormalX:-p.grade*p.tx/Math.hypot(1,p.grade),groundNormalY:1/Math.hypot(1,p.grade),groundNormalZ:-p.grade*p.tz/Math.hypot(1,p.grade),groundY:p.y,grounded:true,onRoadDeck:true,flightCeiling:p.y+7.5,speed:0,steer:0,steerInput:0,yawRate:0,collisionYaw:0,velocityX:0,velocityZ:0,lateralSpeed:0,lateralVelocity:0,impactShake:0,mass:id==='player'?this.vehicleStats.mass:1550,wheelAngle:0,energy:1,ultraCharge:1,ultraCooldown:0,ultraRemaining:0,ultraBoosting:false,damage:0,lane,targetLane:lane,color,active:true,visible:true,finished:false,finishTime:null,altitude:0,vz:0,offRoad:false,boosting:false,flying:false,thrusting:false,flipActive:false,flipTime:0,stuntRoll:0,stuntPhase:null,landingAssist:false,bodyRoll:0,bodyPitch:0,suspension:0};
+  if(id!=='player')this._supportOffRouteAI(v);const ramp=rampSupport(this.ramps,{...p,offset:lane},this.scenario.id);if(ramp)this._setRampGround(v,ramp);if(this.ramps.length&&id!=='player')v._rampPreviousS=s;return v;
  }
  _initialize(){
-  this._randomState=this.seed;this._accumulator=0;this._flightLocked=false;this._boostLocked=false;this._ultraLocked=false;this._ultraSpeedCarry=false;this._flipLocked=false;this._collisionCooldowns=new Map();
+  this._randomState=this.seed;this._accumulator=0;this._flightLocked=false;this._boostLocked=false;this.recoveryWarning=null;this.recoveryCooldown=0;this.automaticRecoveries=0;this._recoveryReason=null;this._recoveryElapsed=0;this._stuckAnchor=null;this._lastSolidContactAt=-Infinity;this._lastAnyContactAt=-Infinity;this._damageAssistRetryAt=0;this._ultraLocked=false;this._ultraSpeedCarry=false;this._flipLocked=false;this._collisionCooldowns=new Map();
+  this._airtime=new AirtimeRewards();this.airtime=this._airtime.state;this._policeAir=new PoliceAirSupport();this.helicopter=this._policeAir.state;this._civilianAir=new CivilianAirTraffic();this.civilianHelicopter=this._civilianAir.state;
   this.player=this._vehicle('player',this.startS+8,-1.65,'#b82632');this.player.name='YOU';
   const rivalNames=['NILA','RAHUL','DEV'];const colors=['#e2bb52','#499cbd','#e6e7dc'];
   this.rivals=Array.from({length:this.scenario.rivals},(_,i)=>{
@@ -160,12 +175,17 @@ export class GameModel {
   this._detectionAfter=Math.min(30,this.length/55);this._offRoadTime=0;this._allGatesPassed=false;this._terminalAnnounced=false;
   this.timeLimit=this.scenario.id==='time-attack'?Math.max(35,this.length/22+25):Infinity;
   this.timeRemaining=this.timeLimit;this.result=null;this.wrongWay=false;this.paused=false;
+  this.coinsCollected=0;this.collectedCoinIds=new Set();this.coins=[];
+  if(this.scenario.id!=='free-drive')for(let group=this.startS+80;group<=this.endS-40&&this.coins.length<120;group+=180)for(let n=0;n<3&&group+n*8<=this.endS-40&&this.coins.length<120;n++){
+   const q=this.sampleRoute(group+n*8),section=this._roadSection(q.s),strips=section?.driveableStrips||[{centerOffset:0,halfWidth:section?.halfWidth??3.6}],strip=strips.reduce((a,b)=>Math.abs(finite(b.centerOffset))<Math.abs(finite(a.centerOffset))?b:a),lane=finite(strip.centerOffset)+clamp(-1.65,-finite(strip.halfWidth,3.6)+1,finite(strip.halfWidth,3.6)-1);
+   const support=rampSupport(this.ramps,{...q,offset:lane},this.scenario.id);this.coins.push({id:'coin-'+this.coins.length,s:q.s,x:q.x+q.nx*lane,y:(support?.y??q.y)+.65,z:q.z+q.nz*lane,value:5,collected:false});
+  }
   this.events=[];this.message='READY';this.messageUntil=0;this._eventSequence=0;
  }
  start(id='coast-sprint'){
   const scenario=SCENARIOS.find(s=>s.id===id);
   if(!scenario)throw new RangeError('Unknown scenario: '+id);
-  this.scenario=scenario;this._initialize();this.state=id==='free-drive'?'racing':'countdown';this._emit('start',scenario.name);return this;
+  this.scenario=scenario;this._buildCheckpoints();this._initialize();this.state=id==='free-drive'?'racing':'countdown';this._emit('start',scenario.name);return this;
  }
  restart(){return this.start(this.scenario.id);}
  reset(){return this.restart();}
@@ -175,14 +195,74 @@ export class GameModel {
   this.message=text;this.messageUntil=this.timer+4;return e;
  }
  consumeEvents(){const e=this.events.slice();this.events.length=0;return e;}
- recover(){
+ _recoveryPose(baseS,{reverse=false}={}){
+  // Search behind the eligible position; never skip a gate to find empty asphalt.
+  // Check the full car capsule against pavement, solid proxies and nearby cars.
+  for(const back of [0,5,10,18,28,42,60])for(const lane of (reverse?[1.65,-1.65,0]:[-1.65,1.65,0])){
+   const q=this.sampleRoute(clamp(baseS-back,Math.min(3,this.routeLength/3),this.routeLength-3));
+   const ramp=rampSupport(this.ramps,{...q,offset:lane},this.scenario.id);if(ramp){q.y=ramp.y;q.grade=ramp.grade;q.roadPitch=Math.atan(ramp.grade);}
+   const pose={...q,x:q.x+q.nx*lane,z:q.z+q.nz*lane,lane,heading:angle(q.heading+(reverse?PI:0)),groundHeading:q.heading,groundPitch:q.roadPitch,roadPitch:reverse?-q.roadPitch:q.roadPitch,flipActive:false};
+   if(carSegment(pose).some(point=>{const zone=this._roadZone(this.projectToRoute(point.x,point.z,q.s));return zone.distance+.98>zone.halfWidth-.025;}))continue;
+   const gx=Math.floor(pose.x/32),gz=Math.floor(pose.z/32),near=[...this._dynamicObstacles],seen=new Set();
+   for(let x=gx-1;x<=gx+1;x++)for(let z=gz-1;z<=gz+1;z++)near.push(...(this._obstacleGrid.get(x+','+z)||[]));
+   let blocked=false;
+   for(const o of near){if(seen.has(o.id))continue;seen.add(o.id);const bottom=finite(o.y,.18),top=bottom+finite(o.height,1.2);if(pose.y+1.2>bottom&&pose.y<top&&this._obstacleContact(o,pose).depth>-.12){blocked=true;break;}}
+   if(blocked)continue;
+   if([...this.rivals,...this.police].some(v=>v.visible&&pose.y+1.2>v.y&&pose.y<v.y+1.2&&closestSegments(...carSegment(pose),...carSegment(v)).distance<2.26))continue;
+   return pose;
+  }
+  return null;
+ }
+ _clearRecoveryWarning(){this.recoveryWarning=null;this._recoveryReason=null;this._recoveryElapsed=0;}
+ _updateAutoRecovery(dt,input){
+  this.recoveryCooldown=Math.max(0,this.recoveryCooldown-dt);
+  const p=this.player;
+  // An intentional flight/flip must never be mistaken for leaving the road.
+  // Ground-only world-boundary recovery also waits for a real touchdown.
+  if(this.state!=='racing'||this.recoveryCooldown>0||!p.grounded||p.altitude>.15||p.flying||p.flipActive||input.flight||p.damage>=1){this._clearRecoveryWarning();this._stuckAnchor=null;return;}
+  const local=this.projectToRoute(p.x,p.z,p.s),localZone=this._roadZone(local),nearest=localZone.distance<=localZone.shoulderHalfWidth+8?local:this.projectToRoute(p.x,p.z),zone=this._roadZone(nearest),beyond=Math.max(0,zone.distance-zone.shoulderHalfWidth),free=this.scenario.id==='free-drive';
+  const boxed=this.wanted&&this.police.some(v=>v.visible&&v.active&&Math.abs(v.y-p.y)<1.5&&distance(v,p)<12);
+  if(boxed||this.arrestProgress>.05){this._clearRecoveryWarning();this._stuckAnchor=null;return;}
+  const outside=this.terrainGrid&&this.sampleTerrain(p.x,p.z).outsideDistance>100;
+  const wantsMotion=Math.abs(input.throttle)>.35&&!input.brake;
+  const impeded=this.timer-this._lastSolidContactAt<.3||beyond>.5;
+  const slow=Math.hypot(p.velocityX,p.velocityZ)<1.0;
+  let stuck=false;
+  if(wantsMotion&&impeded&&slow){if(!this._stuckAnchor||distance(p,this._stuckAnchor)>.75)this._stuckAnchor={x:p.x,z:p.z,time:this.timer};stuck=this.timer-this._stuckAnchor.time>1.5;}
+  else this._stuckAnchor=null;
+  const first=this.sampleRoute(0),last=this.sampleRoute(this.routeLength);
+  const pastStart=-((p.x-first.x)*first.tx+(p.z-first.z)*first.tz),pastEnd=(p.x-last.x)*last.tx+(p.z-last.z)*last.tz;
+  const outwardEnd=p.velocityX*last.tx+p.velocityZ*last.tz,outwardStart=-(p.velocityX*first.tx+p.velocityZ*first.tz);
+  const endpoint=free&&((nearest.s<1&&pastStart>8&&outwardStart>-.8)?'start':(nearest.s>this.routeLength-1&&pastEnd>8&&outwardEnd>-.8)?'end':null);
+  const approaching=free&&((nearest.s<45&&Math.cos(p.heading-first.heading)<-.35)?'start':(nearest.s>this.routeLength-45&&Math.cos(p.heading-last.heading)>.35)?'end':null);
+  const far=beyond>(free?60:25),reason=outside?'world-boundary':endpoint?'route-end':far?'far-offroad':stuck?'stuck':null;
+  if(!reason&&approaching){
+   if(this._recoveryReason!=='approach-'+approaching)this._emit('recovery-warning','ROAD ENDS AHEAD / TURN BACK',{reason:'route-end',endpoint:approaching,warningOnly:true});
+   this._recoveryReason='approach-'+approaching;this._recoveryElapsed=0;this.recoveryWarning={reason:'route-end',endpoint:approaching,warningOnly:true,secondsRemaining:null,distanceMetres:approaching==='end'?Math.max(0,this.routeLength-nearest.s):Math.max(0,nearest.s)};return;
+  }
+  if(!reason){this._clearRecoveryWarning();return;}
+  const grace=outside||endpoint?2:reason==='stuck'?2.5:free?5:3;
+  if(reason!==this._recoveryReason){this._recoveryReason=reason;this._recoveryElapsed=0;this._emit('recovery-warning',reason==='stuck'?'STUCK / ROADSIDE ASSIST SOON':endpoint?'ROAD ENDS / RETURNING TO FACE BACK':'RETURN TO THE ROAD / AUTO RETURN SOON',{reason});}
+  this._recoveryElapsed+=dt;this.recoveryWarning={reason,endpoint,warningOnly:false,secondsRemaining:Math.max(0,grace-this._recoveryElapsed),distanceMetres:zone.distance};
+  if(this._recoveryElapsed>=grace-1e-8){if(!this.recover({automatic:true,reason})){this.recoveryCooldown=2;this._clearRecoveryWarning();}}
+ }
+ recover({automatic=false,reason='manual'}={}){
   if(this.paused||!['racing','countdown'].includes(this.state))return false;
   const free=this.scenario.id==='free-drive',gate=this.checkpoints[clamp(this.nextCheckpoint-1,0,this.checkpoints.length-2)];
-  const p=this.sampleRoute(free?clamp(this.projectToRoute(this.player.x,this.player.z).s,0,this.routeLength-5):Math.min(gate.s+4,this.endS-5));
-  this._stopUltra('recovery');this._ultraSpeedCarry=false;
-  Object.assign(this.player,{x:p.x-p.nx*1.65,z:p.z-p.nz*1.65,y:p.y,heading:p.heading,s:p.s,roadPitch:p.roadPitch,roadRoll:0,groundPitch:p.roadPitch,groundHeading:p.heading,groundNormalX:-p.grade*p.tx/Math.hypot(1,p.grade),groundNormalY:1/Math.hypot(1,p.grade),groundNormalZ:-p.grade*p.tz/Math.hypot(1,p.grade),groundY:p.y,grounded:true,onRoadDeck:true,flightCeiling:p.y+7.5,speed:0,steer:0,steerInput:0,yawRate:0,collisionYaw:0,velocityX:0,velocityZ:0,lateralSpeed:0,lane:-1.65,altitude:0,vz:0,offRoad:false,boosting:false,flying:false,thrusting:false,flipActive:false,flipTime:0,stuntRoll:0,stuntPhase:null,landingAssist:false,bodyRoll:0,bodyPitch:0,suspension:0});
-  this._offRoadTime=0;this._flightLocked=true;this.arrestProgress=0;
-  if(this.state==='racing'){this.recoveries++;if(free){this.player.damage=0;this.damage=0;this._emit('recovery','BACK ON THE ROAD / REPAIRED');}else{this.timer+=5;this.penalties+=5;this._emit('recovery','BACK ON THE ROAD  +5 SEC');}}
+  const nearest=free?this.projectToRoute(this.player.x,this.player.z):null;
+  const travelReverse=free&&Math.cos(this.player.heading-nearest.heading)<0;
+  const first=free?this.sampleRoute(0):null,last=free?this.sampleRoute(this.routeLength):null;
+  const beyondEnd=free&&((this.player.x-last.x)*last.tx+(this.player.z-last.z)*last.tz)>0;
+  const beyondStart=free&&((this.player.x-first.x)*first.tx+(this.player.z-first.z)*first.tz)<0;
+  const fromEnd=free&&nearest.s>this.routeLength-6&&(beyondEnd||!travelReverse),fromStart=free&&nearest.s<6&&(beyondStart||travelReverse);
+  const reverse=fromEnd?true:fromStart?false:travelReverse;
+  const baseS=free?(fromEnd?this.routeLength-14:fromStart?14:clamp(nearest.s,0,this.routeLength-5)):Math.min(gate.s+4,this.endS-5);
+  const p=this._recoveryPose(baseS,{reverse});
+  if(!p){this._emit('recovery-blocked','RETURN BLOCKED / BRAKE OR REVERSE',{automatic,reason});return false;}
+  this._airtime.cancel('recovery');this._policeAir.recovery();this._stopUltra('recovery');this._ultraSpeedCarry=false;
+  Object.assign(this.player,{x:p.x,z:p.z,y:p.y,heading:p.heading,s:p.s,roadPitch:p.roadPitch,roadRoll:0,groundPitch:p.groundPitch??p.roadPitch,groundHeading:p.groundHeading??p.heading,groundNormalX:-p.grade*p.tx/Math.hypot(1,p.grade),groundNormalY:1/Math.hypot(1,p.grade),groundNormalZ:-p.grade*p.tz/Math.hypot(1,p.grade),groundY:p.y,grounded:true,onRoadDeck:true,flightCeiling:p.y+7.5,speed:0,steer:0,steerInput:0,yawRate:0,collisionYaw:0,velocityX:0,velocityZ:0,lateralSpeed:0,lane:p.lane,altitude:0,vz:0,offRoad:false,boosting:false,flying:false,thrusting:false,flipActive:false,flipTime:0,stuntRoll:0,stuntPhase:null,landingAssist:false,bodyRoll:0,bodyPitch:0,suspension:0});
+  this._offRoadTime=0;this._flightLocked=true;this.arrestProgress=0;this.recoveryCooldown=6;this._clearRecoveryWarning();this._stuckAnchor=null;if(automatic)this.automaticRecoveries++;
+  if(this.state==='racing'){this.recoveries++;if(free){this.player.damage=0;this.damage=0;this._emit('recovery',automatic?'ROADSIDE ASSIST / BACK ON THE ROAD':'BACK ON THE ROAD / REPAIRED',{automatic,reason});}else{this.timer+=5;this.penalties+=5;this._emit('recovery',automatic?'AUTO RETURN / +5 SEC':'BACK ON THE ROAD  +5 SEC',{automatic,reason});}}
   this.timeRemaining=Math.max(0,this.timeLimit-this.timer);this.progress=clamp(free?p.s/this.routeLength:(p.s-this.startS)/this.length,0,1);this.distanceRemaining=Math.max(0,(free?this.routeLength:this.endS)-p.s);this.position=1+this.rivals.filter(v=>v.finished||v.s>p.s).length;this.wrongWay=false;
   if(this.state==='racing'&&this.timeRemaining<=0)this._end('failed','TIME EXPIRED');
   return true;
@@ -205,10 +285,16 @@ export class GameModel {
    return;
   }
   this.timer+=dt;this.timeRemaining=Math.max(0,this.timeLimit-this.timer);
-  const old={x:this.player.x,z:this.player.z,y:this.player.y,heading:this.player.heading,height:this.player.flipActive?3:1.2,flipActive:this.player.flipActive};
-  this._drivePlayer(dt,input);this._updateRivals(dt);this._updatePolice(dt);this._vehicleContacts(dt);this._obstacleContacts(dt,old);this._deckContacts();
-  this._updateRace(old,dt);
-  if(this.player.damage>=1&&this.state==='racing'){if(this.scenario.id==='free-drive'){this.recover();this._emit('roadside-assist','ROADSIDE ASSIST / REPAIRED');}else this._end('failed','VEHICLE DISABLED');}
+  const old={x:this.player.x,z:this.player.z,y:this.player.y,heading:this.player.heading,height:this.player.flipActive?3:1.2,flipActive:this.player.flipActive,grounded:this.player.grounded,altitude:this.player.altitude,s:this.player.s};
+  const eventStart=this._eventSequence;
+  this._drivePlayer(dt,input);this._updateRivals(dt);this._updatePolice(dt);this._vehicleContacts(dt);this._obstacleContacts(dt,old);this._deckContacts();this._rampContacts(old);
+  this._updateAirtime(dt,input,eventStart);this._updateAirTraffic(dt);
+  this._updateCoins(old);this._updateRace(old,dt);this._updateAutoRecovery(dt,input);
+  if(this.player.damage>=1&&this.state==='racing'){
+   if(this.scenario.id==='free-drive'){
+    if(this.timer>=this._damageAssistRetryAt){if(this.recover())this._emit('roadside-assist','ROADSIDE ASSIST / REPAIRED');else this._damageAssistRetryAt=this.timer+2;}
+   }else this._end('failed','VEHICLE DISABLED');
+  }
   if(this.timeRemaining<=0&&this.state==='racing')this._end('failed','TIME EXPIRED');
  }
  _stopUltra(reason='depleted'){
@@ -233,10 +319,11 @@ export class GameModel {
  _drivePlayer(dt,input){
   const p=this.player,projection=this.projectToRoute(p.x,p.z,p.s);
   p.s=projection.s;const roadZone=this._roadZone(this._supportProjection(projection));p.offRoad=roadZone.distance>roadZone.halfWidth+.45;
-  const deepOffroad=roadZone.distance>roadZone.halfWidth+3.4;
+  let deepOffroad=roadZone.distance>roadZone.halfWidth+3.4;
   const wasGrounded=p.grounded&&p.altitude<.01;
   const surfaceBefore=this._surfaceAt(projection,p.y,wasGrounded&&p.onRoadDeck);
   const ground=surfaceBefore.y;
+  if(surfaceBefore.rampId){p.offRoad=false;deepOffroad=false;}
   this._bodyVelocity(p);
   const speedAbs=Math.abs(p.speed),previousSpeed=p.speed,previousAltitude=p.altitude;
   if(!input.flip)this._flipLocked=false;
@@ -255,25 +342,32 @@ export class GameModel {
   // Rack travel is rate-limited in normalized space. The speed envelope is derived
   // from tire grip, so a 10% input remains 10%-ish curvature, not instant full yaw.
   const shaped=Math.sign(input.steer)*Math.pow(Math.abs(input.steer),1.35);
-  p.steerInput=approach(p.steerInput,shaped,dt*(Math.abs(shaped)>Math.abs(p.steerInput)?2.7:4.6));
+  p.steerInput=approach(p.steerInput,shaped,dt*(p.steerInput*shaped<0||Math.abs(shaped)<Math.abs(p.steerInput)?6.5:2.7));
   const grip=p.offRoad&&p.altitude<.5?8.5:14.5*this.vehicleStats.gripMultiplier;
   p.steer=p.steerInput*steeringEnvelope(speedAbs,this.maxSteer,grip);
   let acceleration=input.throttle*(input.throttle>=0?11.7*this.vehicleStats.accelerationMultiplier:5.8)*(p.ultraBoosting?2.1:p.boosting?1.5:1);
   if(input.throttle<0&&p.speed>.5)acceleration=-21;
   if(input.throttle>0&&p.speed<-.5)acceleration=19;
   if(input.brake)acceleration=0;
-  if(p.offRoad&&p.altitude<.5)acceleration*=deepOffroad?.38:.65;
+  if(p.offRoad&&p.altitude<.5){
+   // A low reverse crawl gear must overcome the 3.2 m/s² rough-ground rolling
+   // loss: the old deep-grass factor made full reverse weaker than drag and
+   // pinned an otherwise free car at rest. Preserve forward traction, braking
+   // from forward speed, airborne motion and lateral grip unchanged.
+   const terrainScale=deepOffroad?.38:.65,reverseCrawl=wasGrounded&&input.throttle<0&&p.speed<=.5&&!input.brake;
+   acceleration*=reverseCrawl?Math.max(terrainScale,.85):terrainScale;
+  }
   if(wasGrounded)acceleration-=9.81*.85*Math.sin(Math.atan(surfaceBefore.gradientX*Math.cos(p.heading)+surfaceBefore.gradientZ*Math.sin(p.heading)));
   const drag=.00165*p.speed*Math.abs(p.speed);
   let longitudinal=p.speed+(acceleration-drag)*dt;
-  longitudinal=approach(longitudinal,0,dt*(input.brake?24:(p.offRoad&&p.altitude<.5?3.2:.32)));
+  longitudinal=approach(longitudinal,0,dt*(input.brake?(wasGrounded?this.vehicleStats.brakeDecelerationMps2:24):(p.offRoad&&p.altitude<.5?3.2:.32)));
   const maxSpeed=deepOffroad&&p.altitude<.5?21:(p.ultraBoosting?this.vehicleStats.ultraBoostMaxSpeedMps:p.boosting?this.vehicleStats.regularBoostMaxSpeedMps:this.vehicleStats.topSpeedMps);
   if(longitudinal>maxSpeed)longitudinal=Math.max(maxSpeed,longitudinal-14*dt);
   const normalHardLimit=88*this.vehicleStats.topSpeedMps/68;
   if(!p.ultraBoosting&&p.speed<=normalHardLimit)this._ultraSpeedCarry=false;
   longitudinal=clamp(longitudinal,-10,this._ultraSpeedCarry?this.vehicleStats.ultraBoostMaxSpeedMps+5:normalHardLimit);
   const desiredYaw=longitudinal/2.7*Math.tan(p.steer)*(p.flipActive?.2:p.altitude>.45?.72:1);
-  p.yawRate=lerp(p.yawRate,desiredYaw,1-Math.exp(-8*dt));
+  p.yawRate=lerp(p.yawRate,desiredYaw,1-Math.exp(-(shaped*p.yawRate<=0?14:10)*dt));
   p.collisionYaw*=Math.exp(-3.7*dt);p.impactShake*=Math.exp(-5*dt);
   const yaw=p.yawRate+p.collisionYaw,previousHeading=p.heading;
   p.heading=angle(p.heading+yaw*dt);
@@ -282,15 +376,20 @@ export class GameModel {
   const vx=Math.cos(previousHeading)*longitudinal-Math.sin(previousHeading)*lateral;
   const vz=Math.sin(previousHeading)*longitudinal+Math.cos(previousHeading)*lateral;
   const fx=Math.cos(p.heading),fz=Math.sin(p.heading);
-  const forward=vx*fx+vz*fz,slip=(-vx*fz+vz*fx)*Math.exp(-(p.altitude>.45?.45:p.offRoad?4.2:10.5*this.vehicleStats.gripMultiplier)*dt);
+  // Tire relaxation is faster near zero slip, but its per-step correction is
+  // bounded by available lateral acceleration so impact momentum is not erased.
+  const forward=vx*fx+vz*fz,rawSlip=-vx*fz+vz*fx,slipDecay=1-Math.exp(-(p.altitude>.45?.45:p.offRoad?6:12.5*this.vehicleStats.gripMultiplier)*dt),sideDelta=rawSlip*slipDecay,slip=rawSlip-(p.altitude>.45?sideDelta:clamp(sideDelta,-grip*dt,grip*dt));
   p.velocityX=fx*forward-fz*slip;p.velocityZ=fz*forward+fx*slip;p.speed=forward;p.lateralSpeed=slip;
   p.x+=p.velocityX*dt;p.z+=p.velocityZ*dt;
   this._deckContacts();
   const afterGround=this.projectToRoute(p.x,p.z,p.s);
-  const surface=this._surfaceAt(afterGround,p.y,wasGrounded&&p.onRoadDeck&&surfaceBefore.layer==='road');
+  const surface=this._surfaceAt(afterGround,p.y,wasGrounded&&p.onRoadDeck&&surfaceBefore.layer==='road',wasGrounded?surfaceBefore.rampId:null);
   const floor=surface.y,oldY=p.y;
+  const launch=wasGrounded&&!input.flight&&!input.flip&&!p.flipActive?rampLaunch(surfaceBefore,afterGround,p.velocityX,p.velocityZ,p.heading):null;
+  if(launch){p.vz=launch.verticalSpeed;p.flightCeiling=p.y+launch.verticalSpeed*launch.verticalSpeed/(2*9.81)+1;this._airtime.begin({rampId:launch.rampId,player:p,time:this.timer});this._emit('ramp-launch','RAMP / BALLISTIC AIR',launch);}
+
   p.landingAssist=false;
-  const followGround=wasGrounded&&!flyingThrust&&!p.flipActive&&Math.abs(floor-p.y)<.65;
+  const followGround=wasGrounded&&!launch&&!flyingThrust&&!p.flipActive&&Math.abs(floor-p.y)<.65;
   if(followGround){p.y=floor;p.vz=0;p.grounded=true;p.onRoadDeck=surface.layer==='road';}
   else{
    if(wasGrounded&&flyingThrust){p.flightCeiling=p.y+7.5;p.vz=Math.max(p.vz,surfaceBefore.grade*p.speed*Math.cos(p.heading-projection.heading));}
@@ -308,7 +407,7 @@ export class GameModel {
    if(nextY>=p.flightCeiling&&p.vz>0){nextY=Math.max(oldY,p.flightCeiling);p.vz=0;}
    if(nextY<=floor&&(oldY>=floor-.65||surface.layer==='terrain'||surface.layer==='road'&&!this._deckAt(afterGround))){
     p.y=floor;p.vz=0;p.grounded=true;p.onRoadDeck=surface.layer==='road';
-    if(previousAltitude>.001||oldY-floor>.01){const hard=impactSpeed>6;p.damage=clamp(p.damage+(hard?(impactSpeed-6)*.015:0),0,1);this._emit('landing',hard?'HARD LANDING':'TOUCHDOWN',{intensity:clamp(impactSpeed/12,.1,1),verticalSpeed:impactSpeed,x:p.x,y:floor,z:p.z});}
+    if(previousAltitude>.001||oldY-floor>.01||this.airtime.active){const hard=impactSpeed>6;p.damage=clamp(p.damage+(hard?(impactSpeed-6)*.015:0),0,1);this._emit('landing',hard?'HARD LANDING':'TOUCHDOWN',{intensity:clamp(impactSpeed/12,.1,1),verticalSpeed:impactSpeed,x:p.x,y:floor,z:p.z});}
    }else{p.y=nextY;p.grounded=false;p.onRoadDeck=false;}
   }
   p.groundY=floor;p.groundPitch=Math.atan(surface.grade);p.groundHeading=surface.heading;const norm=Math.hypot(1,surface.gradientX,surface.gradientZ);p.groundNormalX=-surface.gradientX/norm;p.groundNormalY=1/norm;p.groundNormalZ=-surface.gradientZ/norm;p.altitude=Math.max(0,p.y-floor);p.flying=p.altitude>.08;
@@ -320,9 +419,82 @@ export class GameModel {
   p.suspension=p.altitude>.05?0:Math.sin(this.timer*(p.offRoad?28:18))*Math.min(p.offRoad?.018:.006,Math.abs(p.speed)*.0004);
   const after=this.projectToRoute(p.x,p.z,p.s);p.s=after.s;p.lane=after.offset;
   this.wrongWay=p.speed>3&&Math.abs(angle(p.heading-after.heading))>PI*.6;
-  const outsideWorld=this.terrainGrid&&this.sampleTerrain(p.x,p.z).outsideDistance>100;
-  this._offRoadTime=outsideWorld||(this.scenario.id!=='free-drive'&&after.distance>65)?this._offRoadTime+dt:0;
-  if(this._offRoadTime>(outsideWorld?1.5:4))this.recover();
+ }
+ _setRampGround(v,surface){
+  const norm=Math.hypot(1,surface.gradientX,surface.gradientZ);v.y=v.groundY=surface.y;v.grounded=true;v.onRoadDeck=surface.layer==='road';v.offRoad=surface.layer!=='road';v.altitude=0;v.vz=0;v.flying=false;v.groundHeading=surface.heading;v.groundPitch=Math.atan(surface.grade);v.roadPitch=Math.atan(surface.gradientX*Math.cos(v.heading)+surface.gradientZ*Math.sin(v.heading));v.groundNormalX=-surface.gradientX/norm;v.groundNormalY=1/norm;v.groundNormalZ=-surface.gradientZ/norm;v.flightCeiling=v.y+7.5;
+ }
+ _applyAIRamp(v,dt,{oldY,oldS,wasAirborne}){
+  if(!wasAirborne&&!this.ramps.some(r=>v.s>=r.startS-1&&v.s<=r.lipS+.5))return;
+  const q=this.sampleRoute(v.s),old=this.sampleRoute(oldS),before=rampSupport(this.ramps,{...old,offset:v.lane},this.scenario.id),surface=this._surfaceAt({...q,offset:v.lane,worldX:v.x,worldZ:v.z,distance:Math.abs(v.lane),distanceSq:v.lane*v.lane},oldY,!wasAirborne,before&&oldY>=before.y-.12?before.rampId:null),launch=!wasAirborne?rampLaunch(before,{...q,offset:v.lane},Math.cos(v.heading)*v.speed,Math.sin(v.heading)*v.speed,v.heading):null;
+  if(launch)v.vz=launch.verticalSpeed;
+  if(wasAirborne||launch||oldY>surface.y+.65){v.vz-=9.81*dt;const y=oldY+v.vz*dt;if(y>surface.y){v.y=y;v.groundY=surface.y;v.grounded=false;v.onRoadDeck=false;v.altitude=y-surface.y;v._rampAirborne=true;v.flying=true;v.roadPitch=lerp(v.roadPitch,0,1-Math.exp(-4*dt));return;}}
+  v._rampAirborne=false;this._setRampGround(v,surface);
+ }
+ _rampContacts(old){
+  if(!this.ramps.length)return;
+  const p=this.player,oldQ=this.projectToRoute(old.x,old.z,old.s),supported=rampSupport(this.ramps,oldQ,this.scenario.id);
+  // Cars already on the wedge may leave its lip/edge. An approaching car below
+  // the deck meets the actual vertical face, not an invisible convex ramp hull.
+  for(const r of this.ramps){
+   if(r.enabledScenarios&&!r.enabledScenarios.includes(this.scenario.id)||p.s<r.startS-5||p.s>r.lipS+5||supported?.rampId===r.id&&old.y>=supported.y-.12)continue;
+   const walls=[],count=Math.ceil((r.lipS-r.startS)/3),point=(s,side)=>{const q=this.sampleRoute(s),offset=r.centerOffset+side*r.halfWidth;return {x:q.x+q.nx*offset,z:q.z+q.nz*offset,y:q.y,top:q.y+r.rise*(s-r.startS)/(r.lipS-r.startS)};};
+   for(const side of [-1,1])for(let i=0;i<count;i++)walls.push([point(r.startS+(r.lipS-r.startS)*i/count,side),point(r.startS+(r.lipS-r.startS)*(i+1)/count,side)]);
+   walls.push([point(r.lipS,-1),point(r.lipS,1)]);
+   for(let pass=0;pass<3;pass++)for(const [a,b] of walls){
+    const [ca,cb]=carSegment(p),hit=closestSegments(ca,cb,a,b),depth=.98-hit.distance;if(depth<=0)continue;
+    const lengthSq=sq(b.x-a.x)+sq(b.z-a.z),t=lengthSq?clamp(((hit.b.x-a.x)*(b.x-a.x)+(hit.b.z-a.z)*(b.z-a.z))/lengthSq,0,1):0,top=lerp(a.top,b.top,t),bottom=lerp(a.y,b.y,t);
+    if(p.y>=top-.12||p.y+(p.flipActive?3:1.2)<bottom)continue;
+    let nx=(hit.a.x-hit.b.x)/(hit.distance||1),nz=(hit.a.z-hit.b.z)/(hit.distance||1);
+    if(hit.distance<1e-8){const d=Math.hypot(b.x-a.x,b.z-a.z)||1;nx=-(b.z-a.z)/d;nz=(b.x-a.x)/d;const side=(old.x-hit.b.x)*nx+(old.z-hit.b.z)*nz;if(side<0){nx=-nx;nz=-nz;}}
+    this._resolveContact(null,{nx,nz,depth,cx:hit.b.x,cz:hit.b.z},'ramp-wall-'+r.id);
+   }
+  }
+ }
+ _updateAirtime(dt,input,eventStart){
+  if(!this.airtime.active)return;
+  const recent=this.events.filter(e=>e.id>eventStart),landing=recent.find(e=>e.type==='landing');
+  const result=this._airtime.update(dt,{player:this.player,input,time:this.timer,contact:this._lastAnyContactAt===this.timer||recent.some(e=>e.type==='contact'||e.type==='obstacle-contact'),landingSpeed:landing?.verticalSpeed??null});
+  if(result&&!result.reason)this._emit('airtime-reward',result.actualEnergyAdded>0?(result.actualEnergyAdded<.005?'BIG AIR / <1% BOOST ADDED':'BIG AIR / +'+Math.round(result.actualEnergyAdded*100)+'% BOOST'):'BIG AIR / BOOST FULL',result);
+ }
+ _airGroundAt(x,z,margin=9.2){
+  let ground=this.sampleTerrain(x,z).y;
+  const q=this.projectToRoute(x,z,this.player.s),zone=this._roadZone(q);if(zone.distance<=zone.shoulderHalfWidth+margin)ground=Math.max(ground,q.y);
+  const ramp=rampSupport(this.ramps,q,this.scenario.id);if(ramp)ground=Math.max(ground,ramp.y);
+  const minX=Math.floor((x-margin)/32),maxX=Math.floor((x+margin)/32),minZ=Math.floor((z-margin)/32),maxZ=Math.floor((z+margin)/32),seen=new Set(),near=[...this._dynamicObstacles];
+  for(let gx=minX;gx<=maxX;gx++)for(let gz=minZ;gz<=maxZ;gz++)near.push(...(this._obstacleGrid.get(gx+','+gz)||[]));
+  for(const o of near){if(seen.has(o.id))continue;seen.add(o.id);if(obstacleCovers(o,x,z,margin))ground=Math.max(ground,finite(o.y,.18)+finite(o.height,1.2));}
+  return ground;
+ }
+ _airDeckOccluded(a,b){
+  const dx=b.x-a.x,dy=b.y-a.y,dz=b.z-a.z;
+  for(const deck of this.elevatedCorridors){
+   const first=this.sampleRoute(deck.startS).index,last=this.sampleRoute(deck.endS).index;
+   for(let i=first;i<=last;i++){
+    const seg=this.segments[i],u=(a.x-seg.a.x)*seg.tx+(a.z-seg.a.z)*seg.tz,du=dx*seg.tx+dz*seg.tz,w=-(a.x-seg.a.x)*seg.tz+(a.z-seg.a.z)*seg.tx,dw=-dx*seg.tz+dz*seg.tx;
+    const relativeY=a.y-seg.a.y-seg.grade*u,relativeDY=dy-seg.grade*du,half=deck.deckHalfWidth??4.8;
+    let enter=0,leave=1;for(const [origin,direction,lo,hi] of [[u,du,Math.max(0,deck.startS-seg.s),Math.min(seg.length,deck.endS-seg.s)],[w,dw,-half,half],[relativeY,relativeDY,-deckDepth(deck),-finite(deck.deckTopBelowRoad)]]){
+     if(Math.abs(direction)<1e-10){if(origin<lo||origin>hi){leave=-1;break;}}else{let t0=(lo-origin)/direction,t1=(hi-origin)/direction;if(t0>t1)[t0,t1]=[t1,t0];enter=Math.max(enter,t0);leave=Math.min(leave,t1);}
+    }
+    if(leave>=enter&&leave>.00001&&enter<.99999)return true;
+   }
+  }return false;
+ }
+ _airLineOfSight(a,b){
+  // A roof/deck directly above the target blocks the beam even though it is not
+  // the car's current support floor (e.g. driving beneath a flyover).
+  if(this._airGroundAt(b.x,b.z,0)>b.y+.2||this._airDeckOccluded(a,b))return false;
+  const dx=b.x-a.x,dy=b.y-a.y,dz=b.z-a.z,steps=Math.min(100,Math.max(2,Math.ceil(Math.hypot(dx,dz)/4)));
+  for(let i=1;i<steps;i++){const t=i/steps;if(this.sampleTerrain(a.x+dx*t,a.z+dz*t).y>a.y+dy*t-.2)return false;}
+  const minX=Math.floor(Math.min(a.x,b.x)/32),maxX=Math.floor(Math.max(a.x,b.x)/32),minZ=Math.floor(Math.min(a.z,b.z)/32),maxZ=Math.floor(Math.max(a.z,b.z)/32),seen=new Set(),near=[...this._dynamicObstacles];
+  for(let gx=minX;gx<=maxX;gx++)for(let gz=minZ;gz<=maxZ;gz++)near.push(...(this._obstacleGrid.get(gx+','+gz)||[]));
+  for(const o of near){if(seen.has(o.id))continue;seen.add(o.id);const bounds=obstacleBounds(o),c=Math.cos(finite(o.heading)),s=Math.sin(finite(o.heading)),axes=o.shape==='box'?[[((a.x-o.x)*c+(a.z-o.z)*s),dx*c+dz*s,-finite(o.halfLength,1),finite(o.halfLength,1)],[(-(a.x-o.x)*s+(a.z-o.z)*c),-dx*s+dz*c,-finite(o.halfWidth,1),finite(o.halfWidth,1)]]:[[a.x,dx,bounds.minX,bounds.maxX],[a.z,dz,bounds.minZ,bounds.maxZ]];let enter=0,leave=1;for(const [origin,direction,lo,hi] of [...axes,[a.y,dy,finite(o.y,.18),finite(o.y,.18)+finite(o.height,1.2)]]){if(Math.abs(direction)<1e-10){if(origin<lo||origin>hi){leave=-1;break;}}else{let t0=(lo-origin)/direction,t1=(hi-origin)/direction;if(t0>t1)[t0,t1]=[t1,t0];enter=Math.max(enter,t0);leave=Math.min(leave,t1);}}
+   if(leave>=enter&&leave>.01&&enter<.99)return false;
+  }return true;
+ }
+ _updateAirTraffic(dt){
+  const active=this.airTraffic&&this.state==='racing',floorAt=(x,z)=>this._airGroundAt(x,z),event=this._policeAir.update(dt,{eligible:active&&this.police.length>0,player:this.player,wanted:this.wanted,heat:this.heat,arrestProgress:this.arrestProgress,groundPoliceDistance:this.policeDistance,floorAt,lineOfSight:(a,b)=>this._airLineOfSight(a,b)});
+  this._civilianAir.update(dt,{eligible:active&&this.scenario.id!=='free-drive',player:this.player,floorAt,anchor:()=>this.sampleRoute(clamp(this.player.s+clamp(Math.abs(this.player.speed)*8,100,600),0,this.routeLength))});
+  if(event)this._emit(event,event==='air-support-dispatched'?'AIR SUPPORT / SEARCHLIGHT INBOUND':'AIR SUPPORT / WITHDRAWING');
  }
  _curveSpeed(s,base,cornerGrip=9.5){
   let limit=base;
@@ -344,13 +516,22 @@ export class GameModel {
   v.onRoadDeck=false;v.offRoad=true;v.flightCeiling=t.y+7.5;
  }
  _placeAI(v,dt){
-  const oldX=v.x,oldZ=v.z;const p=this.sampleRoute(v.s);
+  const oldX=v.x,oldZ=v.z,oldY=v.y,oldLane=v.lane,oldS=v._rampPreviousS??v.s,wasAirborne=!!v._rampAirborne;const p=this.sampleRoute(v.s);
   v.lane=clamp(lerp(v.lane,v.targetLane,1-Math.exp(-2.1*dt))+v.lateralVelocity*dt,-4.6,4.6);v.lateralVelocity*=Math.exp(-4*dt);this._constrainAIDeck(v,p);
+  // AI path followers may not merge through a raised wedge's vertical side.
+  // Keep a full capsule outside until the lip is behind them or they are above it.
+  for(const r of this.ramps){
+   if(r.enabledScenarios&&!r.enabledScenarios.includes(this.scenario.id)||v.s<r.startS||v.s>r.lipS)continue;
+   const oldQ=this.sampleRoute(oldS),oldSupport=rampSupport([r],{...oldQ,offset:oldLane},this.scenario.id),top=p.y+r.rise*(v.s-r.startS)/(r.lipS-r.startS);
+   if(oldSupport&&oldY>=oldSupport.y-.12||oldY>=top-.12)continue;
+   const side=Math.sign(oldLane-r.centerOffset)||1,extent=.98+1.25*Math.abs(Math.sin(v.heading-p.heading))+.02,limit=r.centerOffset+side*(r.halfWidth+extent);
+   if(side*(v.lane-limit)<0){v.lane=limit;if(side*v.lateralVelocity<0)v.lateralVelocity=0;}
+  }
   v.x=p.x+p.nx*v.lane;v.z=p.z+p.nz*v.lane;v.y=p.y;v.groundY=p.y;v.roadPitch=p.roadPitch;v.groundPitch=p.roadPitch;v.groundHeading=p.heading;v.groundNormalX=-p.grade*p.tx/Math.hypot(1,p.grade);v.groundNormalY=1/Math.hypot(1,p.grade);v.groundNormalZ=-p.grade*p.tz/Math.hypot(1,p.grade);v.roadRoll=0;v.grounded=true;v.onRoadDeck=true;v.offRoad=false;
   const desired=p.heading;const diff=angle(desired-v.heading);
   v.heading=angle(v.heading+clamp(diff,-2.5*dt,2.5*dt));
   v.steer=clamp(diff*.8,-.35,.35);v.wheelAngle=angle(v.wheelAngle+v.speed*dt/.366);
-  v.movement=Math.hypot(v.x-oldX,v.z-oldZ);v.velocityX=(v.x-oldX)/dt;v.velocityZ=(v.z-oldZ)/dt;this._supportOffRouteAI(v);
+  v.movement=Math.hypot(v.x-oldX,v.z-oldZ);v.velocityX=(v.x-oldX)/dt;v.velocityZ=(v.z-oldZ)/dt;this._supportOffRouteAI(v);if(this.ramps.length)this._applyAIRamp(v,dt,{oldY,oldS,wasAirborne});if(this.ramps.length)v._rampPreviousS=v.s;
  }
  _updateRivals(dt){
   for(let i=0;i<this.rivals.length;i++){
@@ -441,7 +622,7 @@ export class GameModel {
   // still uses its continuous hinted projection and ordered checkpoints.
   return !this._deckAt(near)&&zone.distance<=zone.shoulderHalfWidth?near:q;
  }
- _surfaceAt(q,worldY,followingRoad=false){
+ _surfaceAt(q,worldY,followingRoad=false,previousRampId=null){
   q=this._supportProjection(q);const deck=this._deckAt(q),x=q.worldX??q.x+q.nx*(q.offset||0),z=q.worldZ??q.z+q.nz*(q.offset||0),terrain=this.sampleTerrain(x,z),zone=this._roadZone(q);
   let surface,roadY=q.y-.06*clamp((q.distance-3.55)/.15,0,1);
   if(deck)surface=q.distance<=(deck.deckHalfWidth??4.8)&&(followingRoad||worldY>=roadY-.45)?{y:roadY,grade:q.grade,heading:q.heading,gradientX:q.grade*q.tx,gradientZ:q.grade*q.tz,layer:'road'}:terrain;
@@ -449,6 +630,7 @@ export class GameModel {
    const shoulderDrop=finite(zone.shoulderDrop,finite(zone.section?.shoulderDrop,.06));roadY=q.y-shoulderDrop*clamp((zone.distance-zone.halfWidth)/Math.max(.01,zone.shoulderHalfWidth-zone.halfWidth),0,1);
    surface=zone.distance<=zone.shoulderHalfWidth?{y:roadY,grade:q.grade,heading:q.heading,gradientX:q.grade*q.tx,gradientZ:q.grade*q.tz,layer:'road'}:terrain;
   }else surface={y:roadY-.16*clamp((q.distance-4.5)/.3,0,1),grade:q.distance<4.5?q.grade:0,heading:q.heading,gradientX:q.distance<4.5?q.grade*q.tx:0,gradientZ:q.distance<4.5?q.grade*q.tz:0,layer:q.distance<4.5?'road':'terrain'};
+  const ramp=rampSupport(this.ramps,q,this.scenario.id);if(ramp&&(worldY>=ramp.y-.12||followingRoad&&previousRampId===ramp.rampId))surface=ramp;
   // Flat-top OBB proxies are solid roofs/decks, not sideways ejection volumes.
   const gx=Math.floor(x/32),gz=Math.floor(z/32),seen=new Set(),nearby=[...(this._obstacleGrid.get(gx+','+gz)||[]),...this._dynamicObstacles];
   for(const o of nearby){if(o.shape!=='box'||o.support===false||seen.has(o.id))continue;seen.add(o.id);const top=finite(o.y,.18)+finite(o.height,1.2);if(top<=surface.y||worldY<top-.20)continue;
@@ -510,6 +692,7 @@ export class GameModel {
  _resolveContact(other,contact,key){
   const a=this.player,b=other,invA=1/a.mass,invB=b?1/b.mass:0,total=invA+invB;
   const {nx,nz,depth,cx,cz}=contact;
+  if(depth>=-.001){this._lastAnyContactAt=this.timer;if(!b)this._lastSolidContactAt=this.timer;}
   if(depth>0){const correction=Math.min(.38,Math.max(0,depth-.003)*.78);this._translateBody(a,nx*correction*invA/total,nz*correction*invA/total);if(b)this._translateBody(b,-nx*correction*invB/total,-nz*correction*invB/total);}
   const va=this._bodyVelocity(a),vb=b?this._bodyVelocity(b):{x:finite(contact.velocityX),z:finite(contact.velocityZ)};
   const closing=-((va.x-vb.x)*nx+(va.z-vb.z)*nz);if(closing<=.02)return;
@@ -586,6 +769,20 @@ export class GameModel {
   for(let pass=0;pass<4;pass++)for(const o of near){const c=this._obstacleContact(o);if(c.depth>0)this._resolveContact(null,{...c,velocityX:o.velocityX,velocityZ:o.velocityZ},'static-'+o.id);}
   this.damage=p.damage;
  }
+ _updateCoins(old){
+  const p=this.player;
+  // Only normal, grounded travel can sweep a pickup. Recovery does not call this
+  // routine; the run ledger survives all returns and pays only after race finish.
+  if(this.state!=='racing'||this.scenario.id==='free-drive'||!old.grounded||!p.grounded||old.altitude>.15||p.altitude>.15||p.flipActive||p.flying||distance(old,p)>2||Math.abs(p.s-old.s)>4)return;
+  const zone=this._roadZone(this.projectToRoute(p.x,p.z,p.s));if(zone.distance>zone.halfWidth+.1)return;
+  for(const coin of this.coins){
+   if(coin.collected||Math.abs(coin.s-p.s)>5||Math.abs(p.y-(coin.y-.65))>.4||!this._checkpointCarriageway(this.sampleRoute(coin.s),old))continue;
+   if(segmentNear(old.x,old.z,p.x,p.z,coin.x,coin.z,1.85)){
+    coin.collected=true;this.collectedCoinIds.add(coin.id);this.coinsCollected+=coin.value;
+    this._emit('coin-collected','+'+coin.value+' COINS / BANK ON FINISH',{coinId:coin.id,value:coin.value,total:this.coinsCollected,x:coin.x,y:coin.y,z:coin.z});
+   }
+  }
+ }
  _checkpointCarriageway(gate,old){
   const section=this._roadSection(gate.s);if(!section)return true;
   const strips=section.driveableStrips||[{centerOffset:0,halfWidth:section.halfWidth??3.6}],raceStrip=strips.reduce((a,b)=>Math.abs(finite(b.centerOffset))<Math.abs(finite(a.centerOffset))?b:a);
@@ -613,7 +810,7 @@ export class GameModel {
  _end(state,title){
   if(this.state!=='racing')return;
   if(state==='finished'){this.progress=1;this.distanceRemaining=0;}
-  this._stopUltra('event-ended');this.state=state;this.result={state,title,time:this.timer,position:this.position,totalCars:1+this.rivals.length,penalties:this.penalties,damage:this.player.damage,escaped:this.escaped,scenario:this.scenario.id};
+  this._airtime.cancel('event-ended');this._policeAir.stop();this._civilianAir.stop();this._stopUltra('event-ended');this.state=state;this.result={state,title,time:this.timer,position:this.position,totalCars:1+this.rivals.length,penalties:this.penalties,damage:this.player.damage,escaped:this.escaped,scenario:this.scenario.id,collectedCoins:this.coinsCollected};
   this._emit(state,title);
  }
 }

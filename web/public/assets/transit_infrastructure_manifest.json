@@ -1,7 +1,7 @@
 {
   "generator": "blender/build_transit_infrastructure.py",
   "blender": "4.3.2",
-  "license": "Original procedural geometry, CC0 dedication; no third-party model/texture data. Architectural cues from official sources in research/KERALA_INFRASTRUCTURE_REFERENCES.md. Generic names, no affiliation.",
+  "license": "Original procedural geometry. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses.  no third-party model/texture data. Architectural cues from official sources in research/KERALA_INFRASTRUCTURE_REFERENCES.md. Generic names, no affiliation.",
   "axes": "Source Blender X forward,Y left,Z up. GLB X forward,Y up,-Z left; root transforms identity.",
   "assets": {
     "MetroViaductSpan": {

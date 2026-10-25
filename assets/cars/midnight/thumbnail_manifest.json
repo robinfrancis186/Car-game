@@ -1,0 +1,21 @@
+{
+  "id": "midnight",
+  "file": "car_thumb_midnight.png",
+  "source_glb_sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+  "sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae",
+  "bytes": 192976,
+  "dimensions": [
+    512,
+    320
+  ],
+  "mode": "RGBA",
+  "decoded_rgba_sha256": "0d4f36db1a54c13a0d496d4b8a44348cf8c9b0384d5f0d30a3e7430b425d49d1",
+  "samples": 128,
+  "engine": "Blender 4.3.2 CPU Cycles",
+  "denoising": false,
+  "encoding": "Original Blender PNG; no additional optimization required",
+  "budget_bytes": 220000,
+  "budget_pass": true,
+  "visual_inspection": "Pass: full car contained, smooth repaired fender shading, original modeled geometry, no reference pixels. Studio render, not gameplay.",
+  "staged_public_identical": true
+}

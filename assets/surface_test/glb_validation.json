@@ -1,0 +1,86 @@
+{
+  "result": "PASS",
+  "scope": "Actual GLTFLoader geometry and analytic-normal ray sampling; no WebGL or continuous-surface equality claim.",
+  "canonical_profile_sha256": "ab19f552d0dca7bec8aa93b8c03773d9fa42fd4f81dbbc0176e98d5a563e6698",
+  "assets": [
+    {
+      "file": "SurfaceTest_Road.glb",
+      "sha256": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32",
+      "triangles": 25348,
+      "draws": 4
+    },
+    {
+      "file": "SurfaceTest_Furniture.glb",
+      "sha256": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d",
+      "triangles": 3850,
+      "draws": 4
+    },
+    {
+      "file": "SurfaceTest_Terrain.glb",
+      "sha256": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986",
+      "triangles": 98,
+      "draws": 2
+    }
+  ],
+  "triangles": 29296,
+  "draws": 10,
+  "nonfinite": 0,
+  "degenerate": 0,
+  "max_vertex_normal_unit_error": 1.1586589021561622e-7,
+  "rays": {
+    "samples": 9960,
+    "miss": 0,
+    "structural_intrusions": 0,
+    "max_contact_distance_m": 0.006999969482421875,
+    "max_geometric_normal_error_degrees": 0.3629678456249092,
+    "worst": {
+      "s": 706.5960000000006,
+      "l": -5.91,
+      "error": 0.000345932100527226,
+      "geometric_normal": [
+        -0.020614734963550943,
+        0.9982020955224943,
+        -0.05628151736479801
+      ],
+      "analytic_normal": [
+        -0.0269430671225857,
+        0.9980657321804367,
+        -0.056025577918987345
+      ]
+    }
+  },
+  "joints": [
+    {
+      "s": 160,
+      "angle_jump_rad": 1.9634952631011886e-21,
+      "derivative_jump": 5.890485640171695e-16
+    },
+    {
+      "s": 360,
+      "angle_jump_rad": 2.220446049250313e-15,
+      "derivative_jump": 5.890485617151766e-16
+    },
+    {
+      "s": 540,
+      "angle_jump_rad": 0,
+      "derivative_jump": 5.890485606688162e-16
+    },
+    {
+      "s": 740,
+      "angle_jump_rad": 2.220446049250313e-15,
+      "derivative_jump": 5.890485617151766e-16
+    }
+  ],
+  "wall_uv": {
+    "triangles": 108,
+    "degenerate": 0,
+    "contract": "(s*.5,l*.5)"
+  },
+  "paint_clearance": {
+    "samples": 827,
+    "miss": 0,
+    "min_m": 0.0050211350131860455,
+    "max_m": 0.008560493506168582
+  },
+  "geometric_normal_target_met": true
+}

@@ -1,0 +1,241 @@
+{
+  "id": "midnight",
+  "name": "Midnight Meridian GT",
+  "reconstructed": true,
+  "generator": "blender/build_midnight.py",
+  "native_source": "assets/cars/midnight/Midnight_Meridian_GT.blend",
+  "forward": "+X",
+  "up": "+Y",
+  "left": "-Z",
+  "units": "metres",
+  "paint_material": "Crimson multi-coat | original fan concept",
+  "wheel_radius_m": 0.366,
+  "wheelbase_m": 2.7,
+  "hub_height_m": 0.368,
+  "wheel_centers_three": {
+    "Front_Left": [
+      1.350000023841858,
+      0.36800000071525574,
+      -0.9240000247955322
+    ],
+    "Front_Right": [
+      1.350000023841858,
+      0.36800000071525574,
+      0.9240000247955322
+    ],
+    "Rear_Left": [
+      -1.350000023841858,
+      0.36800000071525574,
+      -0.9240000247955322
+    ],
+    "Rear_Right": [
+      -1.350000023841858,
+      0.36800000071525574,
+      0.9240000247955322
+    ]
+  },
+  "max_steer_rad": 0.45,
+  "body_visual_envelope": {
+    "roll": 0.008,
+    "pitch": 0.005,
+    "heave": 0.002
+  },
+  "door_open_rad": 0.7,
+  "door_axes_three": {
+    "Left": [
+      0,
+      -1,
+      0
+    ],
+    "Right": [
+      0,
+      1,
+      0
+    ]
+  },
+  "hood_open_rad": 0.6,
+  "hood_axis_three": [
+    0,
+    0,
+    1
+  ],
+  "rear_wing": "Fixed RearWing, not animated; supports and blade are one rigid assembly.",
+  "boost_mounts_three": [
+    [
+      -2.4,
+      0.255,
+      -0.56
+    ],
+    [
+      -2.4,
+      0.255,
+      0.56
+    ]
+  ],
+  "cockpit_eye_three": [
+    -0.25,
+    1.045,
+    0.36
+  ],
+  "provenance": "Original reconstructed project geometry; reuse license not selected by owner. No manufacturer logos, photo textures or downloaded geometry.",
+  "limitations": [
+    "Fictional design and game mechanics, not a verified manufacturer replica/specification.",
+    "Preview is Blender CPU; actual browser integration is a separate test."
+  ],
+  "file": "car_midnight.glb",
+  "sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+  "bytes": 3151648,
+  "triangles": 75670,
+  "draw_calls": 30,
+  "materials": 9,
+  "material_names": [
+    "Midnight champagne forged alloy",
+    "Midnight satin carbon structure",
+    "Crimson multi-coat | original fan concept",
+    "Midnight espresso leather",
+    "Midnight clear smoke glazing",
+    "Midnight coastal cyan lower accents",
+    "Midnight cool running lights",
+    "Midnight rear vermilion lights",
+    "Tire rubber | original project"
+  ],
+  "rigid_groups": {
+    "CAR_ROOT": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "CarBody": {
+      "source_parts": 133,
+      "triangles": 30850,
+      "draw_calls": 8
+    },
+    "Hood": {
+      "source_parts": 7,
+      "triangles": 3232,
+      "draw_calls": 2
+    },
+    "DoorHinge_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Door_Right": {
+      "source_parts": 11,
+      "triangles": 2440,
+      "draw_calls": 3
+    },
+    "DoorHinge_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Door_Left": {
+      "source_parts": 11,
+      "triangles": 2440,
+      "draw_calls": 3
+    },
+    "RearWing": {
+      "source_parts": 7,
+      "triangles": 980,
+      "draw_calls": 2
+    },
+    "Steer_Front_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Front_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Front_Left": {
+      "source_parts": 34,
+      "triangles": 8424,
+      "draw_calls": 2
+    },
+    "Caliper_Front_Left": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Front_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Front_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Front_Right": {
+      "source_parts": 34,
+      "triangles": 8424,
+      "draw_calls": 2
+    },
+    "Caliper_Front_Right": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Rear_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Rear_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Rear_Left": {
+      "source_parts": 34,
+      "triangles": 8424,
+      "draw_calls": 2
+    },
+    "Caliper_Rear_Left": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Rear_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Rear_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Rear_Right": {
+      "source_parts": 34,
+      "triangles": 8424,
+      "draw_calls": 2
+    },
+    "Caliper_Rear_Right": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    }
+  },
+  "degenerate_triangles_removed": 5351,
+  "bounds_three_m": {
+    "min": [
+      -2.4200000762939453,
+      0.001896888017654419,
+      -1.1600000858306885
+    ],
+    "max": [
+      2.440000057220459,
+      1.2701785564422607,
+      1.1600000858306885
+    ]
+  },
+  "float32_degenerate_triangles_removed": 1,
+  "invalid_runtime_corner_normals_repaired_from_incident_faces": 63,
+  "unused_normal_repairs": 0,
+  "native_mesh_parts": 317
+}

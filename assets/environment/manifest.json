@@ -4,7 +4,7 @@
   "blender": "4.3.2",
   "units": "meters",
   "axes": "X forward, Y left, Z up. FBX export uses -Z forward/Y up conversion.",
-  "license": "Original generated geometry and textures: CC0-1.0 dedication. No third-party meshes.",
+  "license": "Original generated geometry and textures. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. No third-party meshes.",
   "materials_note": "GLB carries Principled base PBR values; Blender procedural noise and bump are not baked. Recreate procedural surfaces or use the included material palette in Unreal.",
   "assets": {
     "CoconutPalm_A": {

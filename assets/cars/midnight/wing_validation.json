@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+  "intersection_pairs": 0,
+  "parts": [],
+  "scope": "Fixed wing blade/endplates at rest versus all other native meshes. Intentional support attachment omitted; no active-wing API."
+}

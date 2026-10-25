@@ -1,0 +1,90 @@
+{
+  "license": "Original geometry/materials; no reference photos or external assets. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses.",
+  "coordinates": "glTF +X forward / +Y up; sign/coin face normal +X",
+  "assets": {
+    "ArcadeCoin": {
+      "role": "animated sensor pickup only; never a physics obstacle",
+      "origin": "disk centre",
+      "radius_m": 0.28,
+      "total_thickness_m": 0.07,
+      "mark": "Original generic M-like geometric zigzag, now raised and bevelled; no trademark/logo",
+      "suggested_rotation_axis_three": [
+        0,
+        1,
+        0
+      ],
+      "detail": "40 reeded-edge grooves; rolled rim; concentric physical inset channels; 32 fine radial machining marks; smooth continuous outer lips; bevelled emblem on both faces",
+      "normal_texture": {
+        "name": "Original_Coin_Brushed_Micro_Normal",
+        "dimensions": [
+          128,
+          128
+        ],
+        "source": "Original mathematical directional micro-normal; not a photograph",
+        "embedded": true,
+        "normal_scale": 0.32
+      },
+      "native_file": "assets/gameplay_props/ArcadeCoin.blend",
+      "native_collection": "ArcadeCoin",
+      "root": "ArcadeCoin",
+      "file": "ArcadeCoin.glb",
+      "triangles": 1492,
+      "draws": 2,
+      "bytes": 78592,
+      "sha256": "f8bc943f206e8d65df4b76ce7e3bdf682b4ea8d4262cca739994e3822bb8219d",
+      "bounds_three": {
+        "min": [
+          -0.03500000014901161,
+          -0.2800000011920929,
+          -0.2800000011920929
+        ],
+        "max": [
+          0.03500000014901161,
+          0.2800000011920929,
+          0.2800000011920929
+        ]
+      },
+      "front_normal": [
+        1,
+        0,
+        0
+      ],
+      "images": 1
+    },
+    "RouteEndMarker": {
+      "role": "roadside visual warning only; place outside pavement, no blocking road barrier",
+      "origin": "ground centre",
+      "total_width_m": 2.5,
+      "total_height_m": 2.2,
+      "text": "END",
+      "symbol": "U-turn arrow",
+      "orientation_note": "Rotate front normal toward approaching driver; default +X.",
+      "native_file": "assets/gameplay_props/RouteEndMarker.blend",
+      "native_collection": "RouteEndMarker",
+      "root": "RouteEndMarker",
+      "file": "RouteEndMarker.glb",
+      "triangles": 324,
+      "draws": 2,
+      "bytes": 19136,
+      "sha256": "f4e90d1d2c76bf09164ae55f5843ab9db37dce838506c8b3236d5d957c2c4faa",
+      "bounds_three": {
+        "min": [
+          -0.047499995678663254,
+          0.0,
+          -1.25
+        ],
+        "max": [
+          0.057999998331069946,
+          2.200000047683716,
+          1.25
+        ]
+      },
+      "front_normal": [
+        1,
+        0,
+        0
+      ],
+      "images": 0
+    }
+  }
+}

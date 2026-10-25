@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "sha256": "3673317b5c67c99dab5c8797de58ab3431af2edb13b393e70110c49903175b29",
+  "checks": 756,
+  "body_poses": 27,
+  "max_steer_rad": 0.45,
+  "failed_checks": 0,
+  "failures": [],
+  "scope": "Sampled actual GLB tires versus all closed body/hood/doors/wing at combined cosmetic poses. Not continuous proof."
+}

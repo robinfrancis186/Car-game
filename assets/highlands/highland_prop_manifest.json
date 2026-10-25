@@ -1,5 +1,5 @@
 {
-  "license": "Original procedural geometry, CC0 dedication. No external geometry/photo textures.",
+  "license": "Original procedural geometry. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. No external geometry/photo textures.",
   "axes": "Blender X forward,Y left,Z up; GLB X forward,Y up,-Z left.",
   "assets": {
     "HighlandShadeTree": {

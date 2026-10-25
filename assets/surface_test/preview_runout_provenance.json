@@ -1,0 +1,23 @@
+{
+  "scope": "Actual exported GLBs imported into CPU Blender; original studio/environment preview, not gameplay. No reference pixels.",
+  "source_glb_sha256": {
+    "SurfaceTest_Road.glb": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32",
+    "SurfaceTest_Furniture.glb": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d",
+    "SurfaceTest_Terrain.glb": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986"
+  },
+  "image": "assets/surface_test/preview_runout.png",
+  "sha256": "41248400f0d2cf42a87b2feb0143cdb767b48e3aae8d1ad136455995d57f8d1f",
+  "samples": 48,
+  "denoising": false,
+  "camera_blender": [
+    670,
+    38,
+    20
+  ],
+  "target_blender": [
+    757,
+    0,
+    8
+  ],
+  "lens_mm": 42
+}

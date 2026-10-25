@@ -1,15 +1,13 @@
 # Provenance and publication scope
 
-- Game code, interface, procedural Blender geometry/materials, fictional arcade systems and synthesized audio were authored for this project. No purchased/extracted commercial game assets or manufacturer CAD are included.
-- Vehicle and Kerala scenery references informed original stylized designs. No reference images, video frames, photo textures, official logos or user-uploaded material are distributed. Original geometry does not imply manufacturer/operator endorsement or clearance of trademark/design rights.
-- Coastal route data derives from OpenStreetMap near Kappil–Edava and is adapted artistically. The highland route is authored. Preserve the ODbL attribution/data offer in `references/route/`, `web/public/assets/coastal_map_data.json` and the game UI.
-- Public reference sources included Kerala Tourism (`https://www.keralatourism.org/destination/kappil-beach-backwaters-varkala/427/`), Kochi Metro (`https://kochimetro.org/completed-projects/`) and the vehicle manufacturer's Roadster page (`https://www.tesla.com/roadster`). Reference use is not a license to redistribute their photographs, models or marks.
-- Runtime dependencies: Three.js 0.170.0 (MIT); Barlow Condensed font (SIL OFL 1.1). Full notices are included at `web/public/vendor/THREE_LICENSE.txt` and `web/public/assets/fonts/OFL.txt`. Build/test dependencies are pinned in the npm lockfile.
+The R3.4 source release preserves original project game code, procedural Blender geometry/materials, fictional arcade systems and synthesized audio. No purchased/extracted commercial assets, manufacturer CAD, private user reference photographs/videos, external reference textures or browser saves are committed. Original stylized designs do not imply manufacturer/operator endorsement or trademark/design clearance.
 
-## Rights
+The coast route derives from OpenStreetMap near Kappil–Edava; the highland route is authored. Preserve ODbL attribution/data offers in `references/route/`, `web/public/assets/coastal_map_data.json` and the interface. Three.js 0.170.0 and Barlow Condensed retain MIT/OFL notices. Build dependencies are pinned in `web/package-lock.json`.
 
-No new blanket open-source license has been chosen for the original project. `web/package.json` intentionally says `UNLICENSED`; public availability alone is not an added reuse license. Existing scoped CC0 notices for the original environment/transit asset packages are preserved, as are third-party licenses and ODbL attribution. See `LICENSES.md` and individual asset notices. The repository owner can select a broader original-code/assets license separately.
+## Source/deployment traceability
 
-## Clean publication
+`SOURCE_MANIFEST.json` identifies the exact frozen runtime and deployment. The 151-file production verification receipt and release metadata are under `deployment/`. Source synchronization does not redeploy identical game bytes or change hosting settings. The previous R3.2 deployment remains available as a rollback candidate.
 
-The release upload excludes user reference media/identifiers, private work notes, research downloads, hosting metadata, credentials, dependency caches, Blender backups, preview renders, generated distributions and historical test/debug reports. Public runtime source/assets are byte-identical to the frozen V10 manifest. Native Blender scene copies use built-in compression with unchanged geometry and portable render-output paths. Reference-filename metadata in two generators and three authoring manifests was anonymized; this does not change generated geometry.
+All intended current source, runtime assets, editable Blender scenes, generator/test scripts, essential fixtures and authoring documentation are included. No file exceeds GitHub's individual-file limit. The full historical source archives remain separate backups; this repository intentionally omits node_modules/caches, generated standalone bundles, packaging archives, redundant preview renders/screenshots/logs, private references and Library/executor receipt metadata. A few historical non-runtime documents have private delivery identifiers replaced with neutral placeholders; runtime and native scene bytes are unchanged.
+
+The V10 provenance and compression manifests are archived in `docs/provenance/v10/`. Later license corrections are recorded in `LICENSES.md`; publication does not erase earlier public dedications or grant a new blanket project license. Preserve existing scoped notices and third-party obligations.

@@ -1,0 +1,8 @@
+import bpy,json,hashlib
+from pathlib import Path
+R=Path(__file__).resolve().parents[1];O=R/'assets/showroom';p=O/'ServiceShowroomLoft.blend';bpy.ops.wm.open_mainfile(filepath=str(p))
+meshes=[o for o in bpy.data.objects if o.type=='MESH'];slab=next(o for o in meshes if o.name.startswith('Continuous dark polished stone slab'));uv=slab.data.uv_layers.active
+images=[{'name':i.name,'size':list(i.size),'packed':bool(i.packed_file),'source_path':i.filepath}for i in bpy.data.images if i.type=='IMAGE']
+uv_error=max(abs(uv.data[li].uv[k]-slab.data.vertices[slab.data.loops[li].vertex_index].co[k]/.38)for q in slab.data.polygons for li in q.loop_indices for k in (0,1))
+report={'result':'PASS' if len(images)==2 and all(i['packed'] for i in images) and uv_error<1e-5 and not bpy.data.objects.get('CAR_ROOT') else 'FAIL','source_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'editable_mesh_parts':len(meshes),'palm_trunks':len([o for o in meshes if o.name.startswith('Palm curved tapered')]),'palm_rachises':len([o for o in meshes if o.name.startswith('Arched palm rachis')]),'individual_folded_palm_leaflets':len([o for o in meshes if o.name.startswith('Folded narrow coconut leaflet')]),'stage_floor_slab_top_m':max((slab.matrix_world@v.co).z for v in slab.data.vertices),'floor_uv_max_error_to_metres_divided_by_point38':uv_error,'packed_original_images':images,'images_are_original_math_maps_not_references':True,'car_baked_in_native':bool(bpy.data.objects.get('CAR_ROOT')),'provenance':'Original project geometry and mathematical microstructure maps; reuse license not selected by owner.'}
+(O/'loft_native_validation.json').write_text(json.dumps(report,indent=2));print(json.dumps(report),flush=True)

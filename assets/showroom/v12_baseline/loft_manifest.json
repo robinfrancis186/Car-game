@@ -1,0 +1,85 @@
+{
+  "asset": "ServiceShowroomLoft",
+  "file": "ServiceShowroomLoft.glb",
+  "reconstructed": true,
+  "sha256": "20a0fd0d15743da3b92de1d91bb5bc3834995af3ff7d0f4049afbab907899b2f",
+  "bytes": 1322220,
+  "triangles": 23222,
+  "draws": 11,
+  "native_source": "assets/showroom/ServiceShowroomLoft.blend",
+  "native_collection": "ServiceShowroomLoft",
+  "native_parts": 1689,
+  "degenerate_bevel_triangles_removed": 72,
+  "floor_y": 0,
+  "stage_y": 0,
+  "interior_footprint_m": [
+    20,
+    16
+  ],
+  "roof_y_m": [
+    6.25,
+    6.65
+  ],
+  "open_front_axis": "+Z",
+  "car_forward": "+X",
+  "car_included": false,
+  "hero_camera_three": [
+    7.5,
+    2.5,
+    8.5
+  ],
+  "hero_target_three": [
+    0,
+    0.75,
+    0
+  ],
+  "portrait_camera_three": [
+    8,
+    2.7,
+    9.2
+  ],
+  "lamp_anchors_three": [
+    {
+      "position": [
+        1,
+        5.6,
+        2
+      ],
+      "color": "#ffd2a0",
+      "intensity_hint": 1500
+    },
+    {
+      "position": [
+        -4,
+        4.7,
+        -3
+      ],
+      "color": "#d8edff",
+      "intensity_hint": 1700
+    },
+    {
+      "position": [
+        5,
+        5.5,
+        -4
+      ],
+      "color": "#fff2dc",
+      "intensity_hint": 1100
+    }
+  ],
+  "materials": [
+    "Loft_Polished_Basalt",
+    "Loft_Graphite_Steel",
+    "Loft_Pale_Limestone",
+    "Loft_Warm_Timber",
+    "Loft_Clear_Coastal_Glass",
+    "Loft_Warm_Luminous_Strips",
+    "Loft_Brushed_Brass",
+    "Loft_Palm_Leaf",
+    "Loft_Palm_Trunk",
+    "Loft_Coastal_Grass",
+    "Loft_Arabian_Sea"
+  ],
+  "purpose": "Menu-only coastal loft with modeled exterior. No gameplay collision. Strip emission is decorative; runtime needs scene lights. Actual interactive car must be loaded independently.",
+  "provenance": "Original project geometry; reuse license not selected by owner. No images, downloaded geometry or reference pixels embedded."
+}

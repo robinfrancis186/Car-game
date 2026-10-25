@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "native_sha256": "3458d2e887eb8945f0d67d4ca15480a5cd9de52f95728c93e2ec9354f1b8ec37",
+  "editable_mesh_parts": 564,
+  "editable_text_parts": 8,
+  "named_roots": [
+    "SurfaceTest_Road",
+    "SurfaceTest_Furniture",
+    "SurfaceTest_Terrain"
+  ],
+  "native_axes": "+X forward/+Z up/-Y right",
+  "surface_vertex_count": 23832,
+  "max_analytic_surface_vertex_error_m": 3.198720899820027e-06,
+  "native_metric_uv_layer_count": 1,
+  "external_or_packed_images": [],
+  "scope": "Editable native source and analytic vertex equality within stored-float tolerance. No gameplay/continuous-mesh equality claim."
+}

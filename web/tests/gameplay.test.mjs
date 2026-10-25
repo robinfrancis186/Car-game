@@ -1,3 +1,4 @@
+import {CAR_IDS,CAR_CATALOG} from '../src/garage.js';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
@@ -11,9 +12,9 @@ let count=0,failures=0;const metrics={generatedAt:new Date().toISOString(),scope
 const test=(name,fn)=>{try{fn();count++;metrics.tests.push({name,status:'pass'});console.log('PASS',name);}catch(error){failures++;metrics.tests.push({name,status:'fail',error:error.message});console.error('FAIL',name,error.message);}};
 metrics.exploreDepartures=[];
 function testExploreDepartures(trackId,world,route,obstacles){
- for(const destination of world.explore_starts||[])for(const [variant,maxSteer] of [['red',.57],['silver',.4]])test('actual UI Explore departure stays clear for3 seconds: '+trackId+' / '+destination.name+' / '+variant,()=>{
+ for(const destination of world.explore_starts||[])for(const [variant,maxSteer] of CAR_IDS.map(id=>[id,CAR_CATALOG[id].maxSteer]))test('actual UI Explore departure stays clear for3 seconds: '+trackId+' / '+destination.name+' / '+variant,()=>{
   const selectedS=destination.s??destination.start_s??destination.startS??destination.start??0,slice=eventSlice(TRACKS[trackId],world,'free-drive',routeLength(route),selectedS);
-  const m=new GameModel(route,{...slice,...worldPhysicsOptions(world),obstacles,seed:267,maxSteer}).start('free-drive'),p=m.player,spawnS=p.s,heading=p.heading,q=m.sampleRoute(spawnS);assert.equal(spawnS,slice.startS+8);assert.equal(heading,q.heading);assert.equal(p.y,q.y);
+  const m=new GameModel(route,{...slice,...worldPhysicsOptions(world),obstacles,seed:267,maxSteer,vehicleId:variant}).start('free-drive'),p=m.player,spawnS=p.s,heading=p.heading,q=m.sampleRoute(spawnS);assert.equal(spawnS,slice.startS+8);assert.equal(heading,q.heading);assert.equal(p.y,q.y);
   for(const o of m.obstacles){const bottom=o.y??.18,top=bottom+(o.height??1.2);if(p.y+1.2>bottom&&p.y<top)assert(m._obstacleContact(o).depth<=.003,'initial overlap with '+o.id);}
   let minPavementMargin=Infinity,maxLateral=0;
   for(let i=0;i<360;i++){m.update(1/120,{throttle:1,steer:0});const center=m.projectToRoute(p.x,p.z,p.s);maxLateral=Math.max(maxLateral,center.distance);
@@ -255,7 +256,7 @@ test('divided highway race gates cannot be scored from the opposing carriageway'
 });
 test('Explore starts immediately, has no pursuit or gate terminal, and recovers locally',()=>{
  const m=new GameModel(hillRoute,{...hillOptions,startS:350}).start('free-drive');assert.equal(m.state,'racing');assert.equal(m.countdown,0);assert.equal(m.rivals.length,0);assert.equal(m.police.length,0);assert.equal(m.totalCheckpoints,0);assert.equal(m.timeLimit,Infinity);assert(m.progress>.5);
- Object.assign(m.player,{x:500,z:80,s:500,y:62.4,groundY:62.4,altitude:0,grounded:true,onRoadDeck:false,speed:0});advance(m,5,{brake:true});assert.equal(m.recoveries,0);const timer=m.timer;m.player.damage=.3;assert(m.recover());assert(Math.abs(m.player.s-500)<.01);assert.equal(m.timer,timer);assert.equal(m.penalties,0);assert.equal(m.player.damage,0);assert(Math.abs(m.player.y-60.18)<.01);
+ Object.assign(m.player,{x:500,z:80,s:500,y:62.4,groundY:62.4,altitude:0,grounded:true,onRoadDeck:false,speed:0});advance(m,5.1,{brake:true});assert.equal(m.automaticRecoveries,1);const timer=m.timer;m.player.damage=.3;assert(m.recover());assert(Math.abs(m.player.s-500)<.01);assert.equal(m.timer,timer);assert.equal(m.penalties,0);assert.equal(m.player.damage,0);assert(Math.abs(m.player.y-60.18)<.01);
  Object.assign(m.player,{x:600,z:0,s:600,y:68.18});advance(m,.05,{brake:true});assert.equal(m.state,'racing');assert.equal(m.progress,1);assert.equal(m.distanceRemaining,0);assert.equal(m.nextCheckpoint,0);assert.equal(m.wanted,0);
 });
 test('a disabled Explore car receives local roadside recovery instead of ending exploration',()=>{
@@ -279,19 +280,19 @@ metrics.geometry={routePoints:actualRoute.length,minY:Math.min(...actualRoute.ma
 metrics.sha256={gameplay:createHash('sha256').update(source).digest('hex'),course:createHash('sha256').update(readFileSync(new URL('../public/assets/course_runtime.json',import.meta.url))).digest('hex'),furniture:createHash('sha256').update(readFileSync(new URL('../public/assets/furniture_colliders.json',import.meta.url))).digest('hex'),infrastructure:infrastructureURL&&existsSync(infrastructureURL)?createHash('sha256').update(readFileSync(infrastructureURL)).digest('hex'):null};
 metrics.geometry.newElevatedExportValidated=metrics.geometry.maxY>5&&metrics.geometry.elevatedCorridors>0&&metrics.geometry.infrastructureColliders>0;
 testExploreDepartures('coast',course,actualRoute,actualObstacles);
-for(const [scenario,startS,endS,base,maxSteer,variant] of [['coast-sprint',2200,3350,38],['hot-pursuit',2200,4350,68],['time-attack',0,4539,38]].flatMap(v=>[[...v,.57,'red'],[...v,.4,'silver']])){
- test('actual smoothed Kappil route is drivable and winnable: '+scenario+' / '+variant,()=>{
-  const m=new GameModel(actualRoute,{startS,endS,maxSteer,obstacles:actualObstacles,elevatedCorridors:course.elevated_corridors||[]}).start(scenario);let detected=false,maxOff=0,lane=-1.65,laneGoal=-1.65,laneLock=0,peakY=m.player.y,maxVerticalStep=0,maxPitch=0,maxPlanarStep=0,maxProgressStep=0,maxAIGroundError=0;
+for(const [scenario,startS,endS,base,maxSteer,variant] of [['coast-sprint',2200,3350,38],['hot-pursuit',2200,4350,68],['time-attack',0,4539,38]].flatMap(v=>CAR_IDS.map(id=>[...v,CAR_CATALOG[id].maxSteer,id]))){
+ test('actual smoothed Kappil route permits a complete race: '+scenario+' / '+variant,()=>{
+  const m=new GameModel(actualRoute,{startS,endS,maxSteer,vehicleId:variant,obstacles:actualObstacles,elevatedCorridors:course.elevated_corridors||[]}).start(scenario);let detected=false,maxOff=0,lane=-1.65,laneGoal=-1.65,laneLock=0,peakY=m.player.y,maxVerticalStep=0,maxPitch=0,maxPlanarStep=0,maxProgressStep=0,maxAIGroundError=0;
   for(let i=0;i<120*280&&['countdown','racing'].includes(m.state);i++){
    const p=m.player,look=Math.max(10,Math.abs(p.speed)*.60),ahead=m.sampleRoute(p.s+look);
    let target=m._curveSpeed(p.s,base);const lead=m.rivals.filter(v=>v.s>p.s&&v.s-p.s<38&&Math.abs(v.lane-laneGoal)<1.95).sort((a,b)=>a.s-b.s)[0];
-   if(lead){const other=laneGoal<0?1.65:-1.65;if(m.timer>laneLock&&!m.rivals.some(v=>Math.abs(v.s-p.s)<13&&Math.abs(v.lane-other)<1.95)){laneGoal=other;laneLock=m.timer+3.5;}else target=Math.min(target,Math.max(8,lead.speed-2));}
-   lane+=Math.max(-1.1/120,Math.min(1.1/120,laneGoal-lane));
-   const traffic=m.rivals.find(v=>v.s>p.s&&v.s-p.s<26&&Math.abs(v.lane-p.lane)<1.95);if(traffic)target=Math.min(target,Math.max(5,traffic.speed+(traffic.s-p.s-11)*.7));
+   if(lead){const other=laneGoal<0?1.65:-1.65;if(m.timer>laneLock&&!m.rivals.some(v=>Math.abs(v.s-p.s)<(scenario==='hot-pursuit'?8:13)&&Math.abs(v.lane-other)<1.95)){laneGoal=other;laneLock=m.timer+(scenario==='hot-pursuit'?2:3.5);}else target=Math.min(target,Math.max(8,lead.speed-2));}
+   const laneRate=scenario==='hot-pursuit'?1.8:1.1;lane+=Math.max(-laneRate/120,Math.min(laneRate/120,laneGoal-lane));
+   const traffic=m.rivals.find(v=>v.s>p.s&&v.s-p.s<(scenario==='hot-pursuit'?20:26)&&Math.abs(v.lane-p.lane)<1.95);if(traffic)target=Math.min(target,Math.max(5,traffic.speed+(traffic.s-p.s-11)*.7));
    const err=__testing.angle(Math.atan2(ahead.z+ahead.nz*lane-p.z,ahead.x+ahead.nx*lane-p.x)-p.heading);
-   const ratio=Math.atan(2.7*2*Math.sin(err)/look)/__testing.steeringEnvelope(p.speed,maxSteer);
+   const ratio=Math.atan(2.7*2*Math.sin(err)/look)/__testing.steeringEnvelope(p.speed,maxSteer,14.5*m.vehicleStats.gripMultiplier);
    const steer=Math.sign(ratio)*Math.pow(Math.min(1,Math.abs(ratio)),1/1.35);
-   assert(Number.isFinite(steer)&&Math.abs(steer)<=1.000001&&Number.isFinite(target),'test controller inputs must be finite');const previousY=p.y,previousX=p.x,previousZ=p.z,previousS=p.s;m.update(1/120,{throttle:p.speed<target?1:-.2,steer,brake:p.speed>target+3,boost:target>48});maxPlanarStep=Math.max(maxPlanarStep,Math.hypot(p.x-previousX,p.z-previousZ));maxProgressStep=Math.max(maxProgressStep,Math.abs(p.s-previousS));for(const v of [...m.rivals,...m.police]){assert([v.x,v.y,v.z,v.speed,v.heading].every(Number.isFinite));maxAIGroundError=Math.max(maxAIGroundError,Math.abs(v.y-(m.terrainGrid&&(v.s<0||v.s>m.routeLength)?m.sampleTerrain(v.x,v.z).y:m.sampleRoute(v.s).y)));}peakY=Math.max(peakY,p.y);maxVerticalStep=Math.max(maxVerticalStep,Math.abs(p.y-previousY));maxPitch=Math.max(maxPitch,Math.abs(p.groundPitch));
+   assert(Number.isFinite(steer)&&Math.abs(steer)<=1.000001&&Number.isFinite(target),'test controller inputs must be finite');const previousY=p.y,previousX=p.x,previousZ=p.z,previousS=p.s;m.update(1/120,{throttle:p.speed<target?1:-.2,steer,brake:p.speed>target+3,boost:target>48,ultraBoost:target>48&&p.speed>35&&p.ultraCharge>=.999});maxPlanarStep=Math.max(maxPlanarStep,Math.hypot(p.x-previousX,p.z-previousZ));maxProgressStep=Math.max(maxProgressStep,Math.abs(p.s-previousS));for(const v of [...m.rivals,...m.police]){assert([v.x,v.y,v.z,v.speed,v.heading].every(Number.isFinite));maxAIGroundError=Math.max(maxAIGroundError,Math.abs(v.y-(m.terrainGrid&&(v.s<0||v.s>m.routeLength)?m.sampleTerrain(v.x,v.z).y:m.sampleRoute(v.s).y)));}peakY=Math.max(peakY,p.y);maxVerticalStep=Math.max(maxVerticalStep,Math.abs(p.y-previousY));maxPitch=Math.max(maxPitch,Math.abs(p.groundPitch));
    maxOff=Math.max(maxOff,m.projectToRoute(p.x,p.z,p.s).distance);detected||=m.wanted>0;
   }
   assert.equal(m.state,'finished',`${scenario}: ${m.message}, damage ${m.damage}, progress ${m.progress}`);
@@ -299,7 +300,7 @@ for(const [scenario,startS,endS,base,maxSteer,variant] of [['coast-sprint',2200,
   if(scenario==='coast-sprint')assert(detected,'coastal race should trigger police detection');
   if(scenario==='hot-pursuit'){assert(m.escaped);assert.equal(m.wanted,0);}
   if(scenario==='time-attack')assert(!detected);
-  metrics.routes.push({scenario,variant,lengthMetres:m.length,state:m.state,timeSeconds:m.timer,damage:m.damage,maxLateralMetres:maxOff,escaped:m.escaped,policeDetected:detected,maxRoadY:Math.max(...actualRoute.map(p=>p.y)),maxPlayerY:peakY,maxVerticalStepMetres:maxVerticalStep,maxGroundPitchRadians:maxPitch,maxPlanarStepMetres:maxPlanarStep,maxProgressStepMetres:maxProgressStep,maxAIGroundErrorMetres:maxAIGroundError,finiteControllerInputs:true});
+  metrics.routes.push({scenario,variant,lengthMetres:m.length,state:m.state,timeSeconds:m.timer,damage:m.damage,maxLateralMetres:maxOff,escaped:m.escaped,policeDetected:detected,maxRoadY:Math.max(...actualRoute.map(p=>p.y)),maxPlayerY:peakY,maxVerticalStepMetres:maxVerticalStep,maxGroundPitchRadians:maxPitch,maxPlanarStepMetres:maxPlanarStep,maxProgressStepMetres:maxProgressStep,maxAIGroundErrorMetres:maxAIGroundError,finiteControllerInputs:true,position:m.position,recoveries:m.recoveries,collectedCoins:m.coinsCollected});
   console.log(`  ${m.length.toFixed(0)} m / ${m.timer.toFixed(2)} s / damage ${(m.damage*100).toFixed(0)}% / maximum lateral offset ${maxOff.toFixed(2)} m`);
  });
 }
@@ -331,19 +332,19 @@ if(existsSync(highlandURL)){
   for(let i=0;i<highlandRoute.length;i+=7){const p=highlandRoute[i],terrain=m.sampleTerrain(p.x,p.z);assert(terrain.inside);maxError=Math.max(maxError,Math.abs(p.y-terrain.y-.18));assert.equal(m._deckAt(m.projectToRoute(p.x,p.z)),null);}
   assert(maxError<.015,'road is fitted to exact triangle terrain +18cm');metrics.highlands.maxRoadTerrainErrorMetres=maxError;
  });
-for(const [scenario,startS,endS,base,maxSteer,variant] of Object.entries(highlands.event_slices).filter(([id])=>id!=='free-drive').map(([id,v])=>[id,v.startS,v.endS,id==='hot-pursuit'?68:38]).flatMap(v=>[[...v,.57,'red'],[...v,.4,'silver']])){
- test('actual authored Highland route is drivable and winnable: '+scenario+' / '+variant,()=>{
-  const m=new GameModel(highlandRoute,{...highlandOptions,startS,endS,maxSteer}).start(scenario);let detected=false,maxOff=0,lane=-1.65,laneGoal=-1.65,laneLock=0,peakY=m.player.y,maxVerticalStep=0,maxPitch=0,maxPlanarStep=0,maxProgressStep=0,maxAIGroundError=0;
+for(const [scenario,startS,endS,base,maxSteer,variant] of Object.entries(highlands.event_slices).filter(([id])=>id!=='free-drive').map(([id,v])=>[id,v.startS,v.endS,id==='hot-pursuit'?68:38]).flatMap(v=>CAR_IDS.map(id=>[...v,CAR_CATALOG[id].maxSteer,id]))){
+ test('actual authored Highland route permits a complete race: '+scenario+' / '+variant,()=>{
+  const m=new GameModel(highlandRoute,{...highlandOptions,startS,endS,maxSteer,vehicleId:variant}).start(scenario);let detected=false,maxOff=0,lane=-1.65,laneGoal=-1.65,laneLock=0,peakY=m.player.y,maxVerticalStep=0,maxPitch=0,maxPlanarStep=0,maxProgressStep=0,maxAIGroundError=0;
   for(let i=0;i<120*280&&['countdown','racing'].includes(m.state);i++){
    const p=m.player,look=Math.max(10,Math.abs(p.speed)*.60),ahead=m.sampleRoute(p.s+look);
    let target=m._curveSpeed(p.s,base);const lead=m.rivals.filter(v=>v.s>p.s&&v.s-p.s<38&&Math.abs(v.lane-laneGoal)<1.95).sort((a,b)=>a.s-b.s)[0];
-   if(lead){const other=laneGoal<0?1.65:-1.65;if(m.timer>laneLock&&!m.rivals.some(v=>Math.abs(v.s-p.s)<13&&Math.abs(v.lane-other)<1.95)){laneGoal=other;laneLock=m.timer+3.5;}else target=Math.min(target,Math.max(8,lead.speed-2));}
-   lane+=Math.max(-1.1/120,Math.min(1.1/120,laneGoal-lane));
-   const traffic=m.rivals.find(v=>v.s>p.s&&v.s-p.s<26&&Math.abs(v.lane-p.lane)<1.95);if(traffic)target=Math.min(target,Math.max(5,traffic.speed+(traffic.s-p.s-11)*.7));
+   if(lead){const other=laneGoal<0?1.65:-1.65;if(m.timer>laneLock&&!m.rivals.some(v=>Math.abs(v.s-p.s)<(scenario==='hot-pursuit'?8:13)&&Math.abs(v.lane-other)<1.95)){laneGoal=other;laneLock=m.timer+(scenario==='hot-pursuit'?2:3.5);}else target=Math.min(target,Math.max(8,lead.speed-2));}
+   const laneRate=scenario==='hot-pursuit'?1.8:1.1;lane+=Math.max(-laneRate/120,Math.min(laneRate/120,laneGoal-lane));
+   const traffic=m.rivals.find(v=>v.s>p.s&&v.s-p.s<(scenario==='hot-pursuit'?20:26)&&Math.abs(v.lane-p.lane)<1.95);if(traffic)target=Math.min(target,Math.max(5,traffic.speed+(traffic.s-p.s-11)*.7));
    const err=__testing.angle(Math.atan2(ahead.z+ahead.nz*lane-p.z,ahead.x+ahead.nx*lane-p.x)-p.heading);
-   const ratio=Math.atan(2.7*2*Math.sin(err)/look)/__testing.steeringEnvelope(p.speed,maxSteer);
+   const ratio=Math.atan(2.7*2*Math.sin(err)/look)/__testing.steeringEnvelope(p.speed,maxSteer,14.5*m.vehicleStats.gripMultiplier);
    const steer=Math.sign(ratio)*Math.pow(Math.min(1,Math.abs(ratio)),1/1.35);
-   assert(Number.isFinite(steer)&&Math.abs(steer)<=1.000001&&Number.isFinite(target),'test controller inputs must be finite');const previousY=p.y,previousX=p.x,previousZ=p.z,previousS=p.s;m.update(1/120,{throttle:p.speed<target?1:-.2,steer,brake:p.speed>target+3,boost:target>48});maxPlanarStep=Math.max(maxPlanarStep,Math.hypot(p.x-previousX,p.z-previousZ));maxProgressStep=Math.max(maxProgressStep,Math.abs(p.s-previousS));for(const v of [...m.rivals,...m.police]){assert([v.x,v.y,v.z,v.speed,v.heading].every(Number.isFinite));maxAIGroundError=Math.max(maxAIGroundError,Math.abs(v.y-(m.terrainGrid&&(v.s<0||v.s>m.routeLength)?m.sampleTerrain(v.x,v.z).y:m.sampleRoute(v.s).y)));}peakY=Math.max(peakY,p.y);maxVerticalStep=Math.max(maxVerticalStep,Math.abs(p.y-previousY));maxPitch=Math.max(maxPitch,Math.abs(p.groundPitch));
+   assert(Number.isFinite(steer)&&Math.abs(steer)<=1.000001&&Number.isFinite(target),'test controller inputs must be finite');const previousY=p.y,previousX=p.x,previousZ=p.z,previousS=p.s;m.update(1/120,{throttle:p.speed<target?1:-.2,steer,brake:p.speed>target+3,boost:target>48,ultraBoost:target>48&&p.speed>35&&p.ultraCharge>=.999});maxPlanarStep=Math.max(maxPlanarStep,Math.hypot(p.x-previousX,p.z-previousZ));maxProgressStep=Math.max(maxProgressStep,Math.abs(p.s-previousS));for(const v of [...m.rivals,...m.police]){assert([v.x,v.y,v.z,v.speed,v.heading].every(Number.isFinite));maxAIGroundError=Math.max(maxAIGroundError,Math.abs(v.y-(m.terrainGrid&&(v.s<0||v.s>m.routeLength)?m.sampleTerrain(v.x,v.z).y:m.sampleRoute(v.s).y)));}peakY=Math.max(peakY,p.y);maxVerticalStep=Math.max(maxVerticalStep,Math.abs(p.y-previousY));maxPitch=Math.max(maxPitch,Math.abs(p.groundPitch));
    maxOff=Math.max(maxOff,m.projectToRoute(p.x,p.z,p.s).distance);detected||=m.wanted>0;
   }
   assert.equal(m.state,'finished',`${scenario}: ${m.message}, damage ${m.damage}, progress ${m.progress}`);
@@ -351,7 +352,7 @@ for(const [scenario,startS,endS,base,maxSteer,variant] of Object.entries(highlan
   if(scenario==='coast-sprint')assert(detected,'coastal race should trigger police detection');
   if(scenario==='hot-pursuit'){assert(m.escaped);assert.equal(m.wanted,0);}
   if(scenario==='time-attack')assert(!detected);
-  metrics.highlands.routes.push({scenario,variant,lengthMetres:m.length,state:m.state,timeSeconds:m.timer,damage:m.damage,maxLateralMetres:maxOff,escaped:m.escaped,policeDetected:detected,maxRoadY:Math.max(...highlandRoute.map(p=>p.y)),maxPlayerY:peakY,maxVerticalStepMetres:maxVerticalStep,maxGroundPitchRadians:maxPitch,maxPlanarStepMetres:maxPlanarStep,maxProgressStepMetres:maxProgressStep,maxAIGroundErrorMetres:maxAIGroundError,finiteControllerInputs:true});
+  metrics.highlands.routes.push({scenario,variant,lengthMetres:m.length,state:m.state,timeSeconds:m.timer,damage:m.damage,maxLateralMetres:maxOff,escaped:m.escaped,policeDetected:detected,maxRoadY:Math.max(...highlandRoute.map(p=>p.y)),maxPlayerY:peakY,maxVerticalStepMetres:maxVerticalStep,maxGroundPitchRadians:maxPitch,maxPlanarStepMetres:maxPlanarStep,maxProgressStepMetres:maxProgressStep,maxAIGroundErrorMetres:maxAIGroundError,finiteControllerInputs:true,position:m.position,recoveries:m.recoveries,collectedCoins:m.coinsCollected});
   console.log(`  ${m.length.toFixed(0)} m / ${m.timer.toFixed(2)} s / damage ${(m.damage*100).toFixed(0)}% / maximum lateral offset ${maxOff.toFixed(2)} m`);
  });
 }

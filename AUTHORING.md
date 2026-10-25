@@ -1,18 +1,11 @@
-# Editable Blender sources
+# Editable game sources
 
-Open any `.blend` under `assets/` directly in **Blender 4.3.2 or a compatible later version**. They use Blender's native compression, not a ZIP wrapper. No external models/textures, user reference photographs, external linked libraries or embedded scripts are required to open them.
+The repository includes **45 native Blender scenes** under `assets/`, plus the generator/export/validation scripts in `blender/` and asset subfolders. Open scenes in Blender 4.3.2 or a compatible later version. `ASSET_SOURCE_MANIFEST.json` lists current hashes; the original V10 publication receipts remain under `docs/provenance/v10/`.
 
-Main scenes: `assets/car/roadster_concept.blend`, `assets/web/car_web.blend`, `assets/web/car_silver.blend`, `assets/course/Kappil_Coast.blend`, `assets/highlands/Highland_Run.blend`, `assets/environment/Kerala_Coastal_Assets.blend`, and the infrastructure, landscape, foliage and showroom source scenes. `ASSET_SOURCE_MANIFEST.json` lists all 24.
+23 of the original 24 Blender scenes are byte-identical to V10, the silver-car scene reflects its later authored update, and 21 additional native scenes cover the newer cars, showroom variants, gameplay props, aircraft, ramps and surface-test route. All 45 were reopened read-only with script execution disabled: no linked libraries, embedded text scripts, private-reference identifiers or secret-bearing metadata were found. A few scenes pack original procedural normal/roughness images; these are authored textures, not user reference photographs.
 
-Generators and exporters in `blender/` are normal source scripts. Inspect them before running: they regenerate files and some run CPU renders. Run from a **working copy**, not over a release snapshot. Examples from the repository root:
+Work in a copy before running generators: they can overwrite assets and render outputs. The browser uses the frozen `web/public/assets/` exports; no Blender installation is needed to play or build the browser package. Full re-authoring is not a single-command pipeline: generators have ordering dependencies and later refinement/export steps. Planning tools may also need NumPy/SciPy. Preserve manifests, procedural textures and route data when editing.
 
-```sh
-blender --background --factory-startup --python blender/build_car.py
-blender --background --factory-startup --python blender/export_web_assets.py
-```
+`assets/` retains authoring exports, source scenes, manifests, validation evidence and required textures. Redundant rendered previews are omitted. `assets/showroom/*before*` and other baseline scenes are historical authoring checkpoints, not current browser scene definitions. The current coastal pavilion is authored in `web/src/showroom-scene.js`; its optional proof renderer lives in `tools/scene-proof-r3/`.
 
-The committed `web/public/assets/` exports are the exact frozen V10 runtime assets and are ready to use. A complete re-authoring/export pipeline is not a single-command build: generators have ordering dependencies and later refinement/export steps. Existing native sources are the safest starting point for editing. Planning scripts may require Python packages such as NumPy/SciPy; the browser build does not.
-
-`assets/` omits redundant FBX/GLB exports and preview images; frozen runtime GLBs are under `web/public/assets/`. Exporters may recreate working GLB/FBX files under `assets/`. The optional Unreal import scaffold needs those regenerated exports plus a separately installed/licensed compatible Unreal Engine; it has not been compiled or runtime-validated.
-
-The original geometry and materials are procedural project work. The bird-rock runtime texture is an original procedural stone normal map, not a reference photograph. Coast route-derived data retains OpenStreetMap attribution/ODbL obligations. See `LICENSES.md` and `PROVENANCE.md`.
+The inherited `unreal/` scaffold remains for continuity; it is not the current browser implementation, is not compiled or runtime-validated here, and requires a separately installed/licensed compatible Unreal Engine. See `LICENSES.md` for source and third-party rights.

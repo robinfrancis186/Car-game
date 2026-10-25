@@ -1,0 +1,90 @@
+{
+  "status": "FROZEN",
+  "revision": "V13 bounded coastal showroom realism pass",
+  "utc": "2026-10-23T06:42:09.325428+00:00",
+  "glb_sha256": "c456852c1ea395381f133777affc2c1685938b2d434c02b191cc2da19b2b0fef",
+  "triangles": 33802,
+  "draws": 13,
+  "bytes": 2571276,
+  "native_editable_parts": 3810,
+  "staged_public_identical": true,
+  "camera_stage_tests": "81 clear car-camera sightlines;9 stage rays. Exact floor/steel/glass/timber/strips/brass triangle positions match V12.",
+  "textures": "Two original mathematical128px maps, packed native+embeddedGLB. PNG data fully decoded by Pillow; Three loader wiring tested. No GPU claim.",
+  "visual_verdict": "Inspected matched actual-GLB before/after renders. Dense tiered palms, low coastal headlands, rounded bench planters, restrained isotropic floor microstructure. CPU Cycles64 samples/no denoising. Not gameplay.",
+  "provenance": "Original project geometry and mathematical microstructure maps; reuse license not selected by owner. No reference images shipped.",
+  "limits": "Mobile-budget stylization remains; this is not a photoreal/AAA claim. Runtime browser lighting/performance require separate integration testing.",
+  "files": {
+    "assets/showroom/ServiceShowroomLoft.blend": {
+      "bytes": 19415824,
+      "sha256": "6f52b61fb2b18663a49618041f0bd7d08285050d8fc342f2918bb2e8dbeaaa6f"
+    },
+    "assets/web/ServiceShowroomLoft.glb": {
+      "bytes": 2571276,
+      "sha256": "c456852c1ea395381f133777affc2c1685938b2d434c02b191cc2da19b2b0fef"
+    },
+    "assets/showroom/loft_manifest.json": {
+      "bytes": 2343,
+      "sha256": "56a802a36ccf5c876013a16fb28f270b7c99ab780e6e51cbcec23ef16b37f42c"
+    },
+    "assets/showroom/README_Loft.md": {
+      "bytes": 3601,
+      "sha256": "413fa751b29ae11fd1aff1b1e5d7b84194910964989c05484f4ee9adc9db5802"
+    },
+    "blender/build_showroom_loft.py": {
+      "bytes": 20773,
+      "sha256": "6f0df9eb02a7e2db9db356d1209c2a2fc23555782761bfcb532b374b4abac070"
+    },
+    "blender/render_loft_v13_comparison.py": {
+      "bytes": 2897,
+      "sha256": "41ddbe793d7988378fafac14e02d1a49eb00e1a6157f657f951b3c39ab5231ed"
+    },
+    "blender/audit_loft_v13_native.py": {
+      "bytes": 1706,
+      "sha256": "4160ec7b61a529cf4fae4488e12142787368f79b57062683bc9361eb8995ae85"
+    },
+    "assets/showroom/validate_loft.mjs": {
+      "bytes": 3626,
+      "sha256": "bfa6ad455d1348399df280bb37396dee1048d7457a3aff0fc1e27a96b66bc551"
+    },
+    "assets/showroom/validate_loft_v13_binary.py": {
+      "bytes": 2862,
+      "sha256": "046d202a325ae71c8d17943bcfdcd3d32495a590ca3844a1f8ec2a9d9d0c9801"
+    },
+    "assets/showroom/loft_validation.json": {
+      "bytes": 14898,
+      "sha256": "eb405c24346aa96a28b50f52a86f35df06e9cd832c79f491d2d562b349cefcb5"
+    },
+    "assets/showroom/loft_native_validation.json": {
+      "bytes": 952,
+      "sha256": "8ea19e1bd5b01dec20e5f7837c418df570cf02a83a1b48f5012e5a4f7ab48755"
+    },
+    "assets/showroom/loft_v13_binary_validation.json": {
+      "bytes": 1852,
+      "sha256": "1a7a96feaa6306bc146c7f101c1c603c6e49de19f6c2a50af0c2863c86d5207e"
+    },
+    "assets/showroom/ServiceShowroomLoft_V13_before.png": {
+      "bytes": 1577892,
+      "sha256": "b7c25c27ca1408939916717fabc7d50c6153571dd8f61830a59fe46b355d56ec"
+    },
+    "assets/showroom/ServiceShowroomLoft_V13_after.png": {
+      "bytes": 1589171,
+      "sha256": "76a48a838bf665dacd2ab41c0854145877ca50ad43aa2c70b445e1830487cd8a"
+    },
+    "assets/showroom/v13_before_render_provenance.json": {
+      "bytes": 661,
+      "sha256": "2f9a9edb2d6346b83da6d41c0a2422b7fde348f62083fc675dbd1182032e6260"
+    },
+    "assets/showroom/v13_after_render_provenance.json": {
+      "bytes": 660,
+      "sha256": "651fa89e30a6a61f5782eb3ce61a98865d738960a439bba43e252165c51da07d"
+    },
+    "assets/showroom/materials/Loft_Basalt_Roughness.png": {
+      "bytes": 9832,
+      "sha256": "a571e3c72ae752d15dcd27e6fa20bd056a6173d8b4a32973f4fdc009da3aca79"
+    },
+    "assets/showroom/materials/Loft_Basalt_Micro_Normal.png": {
+      "bytes": 17553,
+      "sha256": "4c7d517a64f07494b566d06a3aac00496045adc8fab71cc29f750f247adc5230"
+    }
+  }
+}

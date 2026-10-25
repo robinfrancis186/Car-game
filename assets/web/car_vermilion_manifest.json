@@ -1,0 +1,295 @@
+{
+  "asset": "Vermilion Butterfly GT",
+  "vehicle_id": "vermilion",
+  "reconstruction": true,
+  "coordinates": "metres; +X forward,+Y up,-Z left",
+  "car_root": "CAR_ROOT",
+  "body_mesh": "CarBody",
+  "paint_material": "Crimson multi-coat | original fan concept",
+  "glass_material": "Vermilion | smoke curved glazing",
+  "wheelbase_m": 2.7,
+  "wheel_radius_m": 0.366,
+  "wheel_centers_three": {
+    "Front_Left": [
+      1.350000023841858,
+      0.36800000071525574,
+      -0.9240000247955322
+    ],
+    "Front_Right": [
+      1.350000023841858,
+      0.36800000071525574,
+      0.9240000247955322
+    ],
+    "Rear_Left": [
+      -1.350000023841858,
+      0.36800000071525574,
+      -0.9240000247955322
+    ],
+    "Rear_Right": [
+      -1.350000023841858,
+      0.36800000071525574,
+      0.9240000247955322
+    ]
+  },
+  "steer_nodes": [
+    "Steer_Front_Left",
+    "Steer_Front_Right",
+    "Steer_Rear_Left",
+    "Steer_Rear_Right"
+  ],
+  "spin_nodes": [
+    "Spin_Front_Left",
+    "Spin_Front_Right",
+    "Spin_Rear_Left",
+    "Spin_Rear_Right"
+  ],
+  "steer_axis": "Three local +Y",
+  "spin_axis_for_forward": "Three local -Z",
+  "max_visual_steer_rad": 0.45,
+  "chassis_pose_limits": {
+    "roll_rad": 0.008,
+    "pitch_rad": 0.005,
+    "heave_m": 0.002
+  },
+  "boost_mounts_three_m": [
+    [
+      -2.4,
+      0.255,
+      -0.56
+    ],
+    [
+      -2.4,
+      0.255,
+      0.56
+    ]
+  ],
+  "wing_type": "Fixed RearWing, not AeroWing_Hinge",
+  "door_hinges": {
+    "Left": {
+      "name": "DoorHinge_Left",
+      "native_axis": [
+        -0.45,
+        1,
+        0
+      ]
+    },
+    "Right": {
+      "name": "DoorHinge_Right",
+      "native_axis": [
+        0.45,
+        1,
+        0
+      ]
+    }
+  },
+  "door_opening_status": "Optional static open display pose only:100mm outward offset then1.10rad about declared native axis clears. Intermediate translation/opening path has body contacts; no continuous animation or gameplay mechanism validated. Keep runtime doors closed.",
+  "source": "assets/cars/vermilion/vermilion.blend",
+  "source_sha256": "608ac4c0436ad031e33ca3c87c70b8ad3c1d349ea39767c0747696655a90c382",
+  "generator": "blender/build_vermilion.py",
+  "rights": "No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses.",
+  "provenance": "Original reconstructed geometry/materials. References inform silhouette only; no logos or image textures embedded. Not a licensed replica or exact prior source recovery.",
+  "status": "FROZEN reconstructed asset: source/actual GLB/sampled clearances validated; studio previews visually inspected. Not gameplay certification.",
+  "file": "car_vermilion.glb",
+  "sha256": "dd0b4111fd14951c995365dd89ed0adf5ee5857dabcfd84ccc864d27d34f9efe",
+  "bytes": 2784412,
+  "triangles": 76992,
+  "draw_calls": 29,
+  "materials": 8,
+  "material_names": [
+    "Vermilion | machined forged alloy",
+    "Vermilion | satin aero carbon",
+    "Vermilion | white blade optics",
+    "Vermilion | charcoal suede",
+    "Vermilion | smoke curved glazing",
+    "Crimson multi-coat | original fan concept",
+    "LED ruby red | vermilion tail lamps",
+    "Tire rubber | vermilion compound"
+  ],
+  "rigid_groups": {
+    "CAR_ROOT": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "CarBody": {
+      "source_parts": 128,
+      "triangles": 25364,
+      "draw_calls": 7
+    },
+    "Hood": {
+      "source_parts": 15,
+      "triangles": 5048,
+      "draw_calls": 2
+    },
+    "RearWing": {
+      "source_parts": 5,
+      "triangles": 1444,
+      "draw_calls": 2
+    },
+    "DoorHinge_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Door_Left": {
+      "source_parts": 13,
+      "triangles": 5504,
+      "draw_calls": 3
+    },
+    "DoorHinge_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Door_Right": {
+      "source_parts": 13,
+      "triangles": 5504,
+      "draw_calls": 3
+    },
+    "Steer_Front_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Front_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Front_Left": {
+      "source_parts": 30,
+      "triangles": 8024,
+      "draw_calls": 2
+    },
+    "Caliper_Front_Left": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Front_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Front_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Front_Right": {
+      "source_parts": 30,
+      "triangles": 8024,
+      "draw_calls": 2
+    },
+    "Caliper_Front_Right": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Rear_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Rear_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Rear_Left": {
+      "source_parts": 30,
+      "triangles": 8024,
+      "draw_calls": 2
+    },
+    "Caliper_Rear_Left": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Rear_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Rear_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Rear_Right": {
+      "source_parts": 30,
+      "triangles": 8024,
+      "draw_calls": 2
+    },
+    "Caliper_Rear_Right": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    }
+  },
+  "degenerate_triangles_removed": 672,
+  "bounds_three_m": {
+    "min": [
+      -2.4056291580200195,
+      0.001896888017654419,
+      -1.1357767581939697
+    ],
+    "max": [
+      2.4000000953674316,
+      1.193243145942688,
+      1.1357767581939697
+    ]
+  },
+  "thumbnail": "car_thumb_vermilion.png",
+  "thumbnail_sha256": "196827a272434fc89b16166ab59dd75d5a846f704edaf520780d3f66160a4571",
+  "thumbnail_bytes": 185767,
+  "dimensions_three_m": [
+    4.805629253387451,
+    1.1913462579250336,
+    2.2715535759925842
+  ],
+  "cockpit_camera_suggested_three_m": [
+    -0.28,
+    1,
+    0.325
+  ],
+  "validation": {
+    "actual_three_loader": "PASS",
+    "nondegenerate_finite_geometry": "PASS",
+    "body_tire_samples": 756,
+    "brake_rotor_samples": 364,
+    "editable_native_mesh_parts": 306,
+    "fixed_wing_rest": "PASS",
+    "scope": "Sampled actual exported mesh and editable source checks; not continuous collision proof or browser gameplay."
+  },
+  "preview_images": {
+    "rear": {
+      "path": "assets/cars/vermilion/preview_rear.png",
+      "sha256": "e31b29038548578a6da004bb365b41fefb54f4024f37ef28739cec3364012913"
+    },
+    "front": {
+      "path": "assets/cars/vermilion/preview_front.png",
+      "sha256": "446d69cbaecdb3b818a0ced4fba3a3bbbd5d522686d5f6f9d6c4c0de4de21a04"
+    },
+    "thumb": {
+      "path": "assets/gallery_thumbnails/car_thumb_vermilion.png",
+      "sha256": "196827a272434fc89b16166ab59dd75d5a846f704edaf520780d3f66160a4571"
+    }
+  },
+  "limitations": [
+    "Fresh reconstruction after source loss, not recovery of previous V12 source bytes or old hashes.",
+    "Original stylized interpretation, not licensed manufacturer CAD or exact branded replica.",
+    "No image textures, brand emblems or photographic pixels embedded.",
+    "Common game collider remains an arcade approximation; manifest gives actual mirror-inclusive bounds.",
+    "Cosmetic body motion was tested only at roll\u00b1.008rad,pitch\u00b1.005rad,heave\u00b1.002m with wheel steering\u00b1.45rad.",
+    "RearWing is fixed; do not animate it as AeroWing_Hinge.",
+    "Cockpit-camera appearance and runtime behavior require parent integration/rendered testing.",
+    "Optional static open display pose only:100mm outward offset then1.10rad about declared native axis clears. Intermediate translation/opening path has body contacts; no continuous animation or gameplay mechanism validated. Keep runtime doors closed."
+  ],
+  "door_display_pose": {
+    "outward_offset_m": 0.1,
+    "angle_rad": 1.1,
+    "endpoint_clearance": "PASS",
+    "continuous_path_clearance": "FAIL / unsupported"
+  }
+}

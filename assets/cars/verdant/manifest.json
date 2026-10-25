@@ -1,0 +1,261 @@
+{
+  "asset": "Verdant Canopy GT",
+  "vehicle_id": "verdant",
+  "reconstruction": true,
+  "coordinates": "metres; +X forward,+Y up,-Z left",
+  "car_root": "CAR_ROOT",
+  "body_mesh": "CarBody",
+  "paint_material": "Crimson multi-coat | original fan concept",
+  "glass_material": "Verdant | curved smoke canopy glazing",
+  "wheelbase_m": 2.7,
+  "wheel_radius_m": 0.366,
+  "wheel_centers_three": {
+    "Front_Left": [
+      1.350000023841858,
+      0.36800000071525574,
+      -0.9240000247955322
+    ],
+    "Front_Right": [
+      1.350000023841858,
+      0.36800000071525574,
+      0.9240000247955322
+    ],
+    "Rear_Left": [
+      -1.350000023841858,
+      0.36800000071525574,
+      -0.9240000247955322
+    ],
+    "Rear_Right": [
+      -1.350000023841858,
+      0.36800000071525574,
+      0.9240000247955322
+    ]
+  },
+  "steer_nodes": [
+    "Steer_Front_Left",
+    "Steer_Front_Right",
+    "Steer_Rear_Left",
+    "Steer_Rear_Right"
+  ],
+  "spin_nodes": [
+    "Spin_Front_Left",
+    "Spin_Front_Right",
+    "Spin_Rear_Left",
+    "Spin_Rear_Right"
+  ],
+  "steer_axis": "Three local +Y",
+  "spin_axis_for_forward": "Three local -Z",
+  "max_visual_steer_rad": 0.45,
+  "chassis_pose_limits": {
+    "roll_rad": 0.008,
+    "pitch_rad": 0.005,
+    "heave_m": 0.002
+  },
+  "boost_mounts_three_m": [
+    [
+      -2.4,
+      0.255,
+      -0.56
+    ],
+    [
+      -2.4,
+      0.255,
+      0.56
+    ]
+  ],
+  "wing_type": "Fixed RearWing, not AeroWing_Hinge",
+  "doors": "Separate fixed closed glazed panels; no opening mechanism supplied.",
+  "source": "assets/cars/verdant/verdant.blend",
+  "source_sha256": "1d405695581155ef0f90ecf483ed5590bb6fbcedf73e121143008f145c668835",
+  "generator": "blender/build_verdant.py",
+  "rights": "No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses.",
+  "provenance": "Original reconstructed geometry/materials. User photograph and prior preview inform silhouette only; no logos/photo textures embedded. Not licensed CAD or exact prior source recovery.",
+  "status": "FROZEN reconstructed asset: source/actual GLB/sampled clearances validated; studio previews visually inspected. Not gameplay certification.",
+  "file": "car_verdant.glb",
+  "sha256": "3673317b5c67c99dab5c8797de58ab3431af2edb13b393e70110c49903175b29",
+  "bytes": 2978272,
+  "triangles": 80162,
+  "draw_calls": 30,
+  "materials": 9,
+  "material_names": [
+    "Verdant | dark champagne forged alloy",
+    "Verdant | curved smoke canopy glazing",
+    "Verdant | satin exposed aero carbon",
+    "Verdant | forest charcoal suede",
+    "Crimson multi-coat | original fan concept",
+    "Verdant | white projector light guides",
+    "LED ruby red | verdant rear lamps",
+    "Verdant | projector optical cover",
+    "Tire rubber | verdant compound"
+  ],
+  "rigid_groups": {
+    "CAR_ROOT": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "CarBody": {
+      "source_parts": 152,
+      "triangles": 32414,
+      "draw_calls": 8
+    },
+    "Hood": {
+      "source_parts": 3,
+      "triangles": 4112,
+      "draw_calls": 2
+    },
+    "Door_Left": {
+      "source_parts": 9,
+      "triangles": 2634,
+      "draw_calls": 3
+    },
+    "Door_Right": {
+      "source_parts": 9,
+      "triangles": 2634,
+      "draw_calls": 3
+    },
+    "RearWing": {
+      "source_parts": 5,
+      "triangles": 1040,
+      "draw_calls": 2
+    },
+    "Steer_Front_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Front_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Front_Left": {
+      "source_parts": 38,
+      "triangles": 8824,
+      "draw_calls": 2
+    },
+    "Caliper_Front_Left": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Front_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Front_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Front_Right": {
+      "source_parts": 38,
+      "triangles": 8824,
+      "draw_calls": 2
+    },
+    "Caliper_Front_Right": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Rear_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Rear_Left": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Rear_Left": {
+      "source_parts": 38,
+      "triangles": 8824,
+      "draw_calls": 2
+    },
+    "Caliper_Rear_Left": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    },
+    "Steer_Rear_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Spin_Rear_Right": {
+      "source_parts": 0,
+      "triangles": 0,
+      "draw_calls": 0
+    },
+    "Wheel_Rear_Right": {
+      "source_parts": 38,
+      "triangles": 8824,
+      "draw_calls": 2
+    },
+    "Caliper_Rear_Right": {
+      "source_parts": 3,
+      "triangles": 508,
+      "draw_calls": 1
+    }
+  },
+  "degenerate_triangles_removed": 624,
+  "bounds_three_m": {
+    "min": [
+      -2.4056291580200195,
+      0.001896888017654419,
+      -1.1306406259536743
+    ],
+    "max": [
+      2.4000000953674316,
+      1.231824517250061,
+      1.1306406259536743
+    ]
+  },
+  "thumbnail": "car_thumb_verdant.png",
+  "thumbnail_sha256": "cf69c2e16656c42e04dd8debc492db896ca58155f61a2f1d5e9efc28cb059a3e",
+  "thumbnail_bytes": 179941,
+  "dimensions_three_m": [
+    4.805629253387451,
+    1.2299276292324066,
+    2.2612812519073486
+  ],
+  "cockpit_camera_suggested_three_m": [
+    -0.28,
+    1,
+    0.325
+  ],
+  "validation": {
+    "actual_three_loader": "PASS",
+    "nondegenerate_finite_geometry": "PASS",
+    "body_tire_samples": 756,
+    "brake_rotor_samples": 364,
+    "editable_native_mesh_parts": 342,
+    "fixed_wing_rest": "PASS",
+    "scope": "Sampled actual exported mesh and editable source checks; not continuous collision proof or browser gameplay."
+  },
+  "preview_images": {
+    "front": {
+      "path": "assets/cars/verdant/preview_front.png",
+      "sha256": "a2038545c3147d7700f1b40cb7cc78122e711aebd17afc37aba451444286e01e"
+    },
+    "rear": {
+      "path": "assets/cars/verdant/preview_rear.png",
+      "sha256": "3bb305706dbe0e43b9baabc8fe435acff33663aa4718ad0d3c9bdf079eb1f588"
+    },
+    "thumb": {
+      "path": "assets/gallery_thumbnails/car_thumb_verdant.png",
+      "sha256": "cf69c2e16656c42e04dd8debc492db896ca58155f61a2f1d5e9efc28cb059a3e"
+    }
+  },
+  "limitations": [
+    "Fresh reconstruction after source loss, not recovery of previous V12 source bytes or old hashes.",
+    "Original stylized interpretation, not licensed manufacturer CAD or exact branded replica.",
+    "No image textures, brand emblems or photographic pixels embedded.",
+    "Common game collider remains an arcade approximation; manifest gives actual mirror-inclusive bounds.",
+    "Cosmetic body motion was tested only at roll\u00b1.008rad,pitch\u00b1.005rad,heave\u00b1.002m with wheel steering\u00b1.45rad.",
+    "RearWing is fixed; do not animate it as AeroWing_Hinge.",
+    "Cockpit-camera appearance and runtime behavior require parent integration/rendered testing."
+  ]
+}

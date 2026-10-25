@@ -1,18 +1,11 @@
-# Testing
+# Testing and release identity
 
-From `web/`, run `npm ci && npm test` with Node.js 20+.
+From `web/`, run `npm ci --ignore-scripts --no-audit --no-fund`, `npm test`, and `npm run build` with Node.js 20+. Then run `python3 tools/verify-standalone.py` from the repository root. The full test chain has 53 command stages covering routes, physics, collisions, vehicle upgrades, saves, Story, aircraft, airtime, surface geometry, rendering state, menu/controller behavior and the local leaderboard. Fixtures and frozen baselines required by the chain are committed.
 
-The test chain covers deterministic fixed-step driving/collision/recovery and race gates; both track catalogues; exported GLB scene/rig/camera contracts; both world loaders; audio controls/lifecycle; transit animation; actual game-controller wiring for both tracks; local garage upgrades/ultra boost; detail/LOD budgets; visual-effect state; and UI-controller behavior.
+The release evidence records 93 JavaScript syntax checks, exact verification of 106 embedded assets and all 138 protected baseline files. `node tools/build-static.mjs` reproduces the public split deployment; `python3 tools/verify-publication.py` checks all 151 production files and all 45 native source hashes.
 
-Physics fixtures drive actual routes with bounded inputs. Model metrics are regenerated locally by the tests. Passing fixtures do not guarantee a human will win races or that every untested visual condition is correct. Renderer/DOM/audio stubs are used by portions of the suite: it is not a real GPU, hardware, listening or full end-to-end browser acceptance test.
+Automated fixtures include synthetic renderer/DOM/audio implementations and do not imply GPU, listening or full human-driving acceptance. The exact R3.4 native menu review covered 1222×619 desktop and 390×844 mobile, menu/navigation/theme/dock clearance. Actual completed-race name persistence, actual GPU-loss/restore, performance, audio listening and mobile driving remain native-acceptance limits as recorded in `deployment/release.json`.
 
-`npm run build` must also succeed and produces `dist/malabar-hot-coast.html`. Open the game on an actual WebGL2 device, check both tracks/cars, start/finish all modes, drive flyover/highland grade transitions, inspect landmarks, test pause/recovery, audio unlock/mute, and touch layout. V10 GPU/human-driving acceptance and real iOS/listening checks are not claimed by this source upload.
+All 45 editable `.blend` files were opened read-only with Blender auto-execution disabled during publication privacy checks. No linked libraries, embedded scripts or private/secret metadata were found; source bytes were unchanged.
 
-Optional independent C++ driving-model check (the old Unreal scaffold, not the browser physics):
-
-```sh
-c++ -std=c++17 tests/test_drive_model.cpp -o /tmp/malabar-drive-test
-/tmp/malabar-drive-test
-```
-
-Native asset geometry fingerprints were checked after reopening every published `.blend` with Blender 4.3.2. Audit found no packed reference photographs, linked external libraries or embedded scripts in those 24 native source files.
+Historical QA documents describe their own snapshots. Generated metrics, logs, previews and distributions are excluded from Git. Re-running tests regenerates some of these local outputs.

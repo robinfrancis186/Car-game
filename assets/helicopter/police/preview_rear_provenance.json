@@ -1,0 +1,25 @@
+{
+  "scope": "Actual GLB imported into Blender CPU Cycles; studio render, not gameplay. No reference pixels.",
+  "image": {
+    "file": "assets/helicopter/police/preview_rear.png",
+    "sha256": "6631a45aba33fdb107fea225e2a62bf97227b2577c0a93ae577de48649f7667b",
+    "source_glb_sha256": "7f8cdcb032c8f1f9fb08fc19a5b785b2957596aae7532bc7cc84d7e9f96b999b",
+    "samples": 64,
+    "denoising": false,
+    "camera_native": [
+      -13,
+      -12,
+      6.3
+    ],
+    "target_native": [
+      -2.1,
+      0,
+      1.7
+    ],
+    "lens_mm": 46,
+    "resolution": [
+      1200,
+      800
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "removed_zero_area_triangles": 348,
+  "details": [
+    {
+      "mesh": "Wedge_Body_Shell_Geometry.001",
+      "material": "Silver concept | satin carbon aero",
+      "removed": 96
+    },
+    {
+      "mesh": "Wedge_Body_Shell_Geometry.001",
+      "material": "Silver concept | shadow panel gaps",
+      "removed": 64
+    },
+    {
+      "mesh": "Wedge_Body_Shell_Geometry.001",
+      "material": "Silver concept | neutral smoked glazing",
+      "removed": 96
+    },
+    {
+      "mesh": "Cube.001",
+      "material": "Brake caliper red",
+      "removed": 23
+    },
+    {
+      "mesh": "Cube.049",
+      "material": "Brake caliper red",
+      "removed": 23
+    },
+    {
+      "mesh": "Cube.050",
+      "material": "Brake caliper red",
+      "removed": 23
+    },
+    {
+      "mesh": "Cube.051",
+      "material": "Brake caliper red",
+      "removed": 23
+    }
+  ],
+  "scope": "Only degenerate index triples removed after float32 export; positions/normals/materials/rig are unmodified."
+}

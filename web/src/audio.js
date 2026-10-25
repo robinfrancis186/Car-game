@@ -1,9 +1,25 @@
+import {rotorAudioTargets} from './rotor-audio-targets.js';
 /** Original procedural audio. No recordings, network requests, or licensed samples.
  * Levels are perceptual arcade mix controls, not Tesla motor/acoustic measurements.
  */
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,Number.isFinite(v)?v:0));
 const finite=(v,fallback=0)=>Number.isFinite(v)?v:fallback;
 const TAU=Math.PI*2;
+// Original synthesis identities, not sampled/authentic manufacturer recordings.
+const ELECTRIC=Object.freeze({wave:'sine',harmonicWave:'triangle',idle:62,slope:4.1,loadHz:18,ratio:2.01,harmonic:.23,whine:.11,filter:1100});
+export const ENGINE_PROFILES=Object.freeze({
+ red:ELECTRIC,silver:ELECTRIC,
+ touring:Object.freeze({wave:'triangle',harmonicWave:'triangle',idle:45,slope:2.1,loadHz:31,ratio:3,harmonic:.24,whine:.018,filter:780}),
+ vermilion:Object.freeze({wave:'triangle',harmonicWave:'sawtooth',idle:69,slope:2.8,loadHz:37,ratio:2.98,harmonic:.15,whine:.027,filter:1300}),
+ bronze:Object.freeze({wave:'triangle',harmonicWave:'sawtooth',idle:39,slope:1.9,loadHz:27,ratio:2.02,harmonic:.23,whine:.035,filter:700}),
+ verdant:Object.freeze({wave:'triangle',harmonicWave:'triangle',idle:64,slope:3.05,loadHz:33,ratio:4.01,harmonic:.14,whine:.022,filter:1150}),
+ midnight:Object.freeze({wave:'triangle',harmonicWave:'sawtooth',idle:34,slope:1.75,loadHz:24,ratio:4.02,harmonic:.18,whine:.042,filter:680})
+});
+export function motorTargets(vehicleId,speed,load){
+ const id=Object.hasOwn(ENGINE_PROFILES,vehicleId)?vehicleId:'red',p=ENGINE_PROFILES[id],s=clamp(Math.abs(finite(speed)),0,120),l=clamp(load);
+ return {id,...p,base:p.idle+s*p.slope+l*p.loadHz,whineHz:520+s*12.8+l*150,filterHz:p.filter+s*24};
+}
+
 /** Perceptual contact strength from the simulation's actual impulse (N s).
  * This is an arcade sound mapping, not a calibrated acoustic/structural model.
  */
@@ -43,16 +59,19 @@ export class GameAudio {
     this._seed=seed>>>0;this._loops=[];this._voices=new Set();this._lastEventId=0;this._model=null;
     this._lastState=null;this._lastCountdown=null;this._lastFlying=false;this._lastVz=0;this._lastDistance=Infinity;
     this._mix={};this._nextBird=9;this._lastUltra=false;this._lastUltraCue=-Infinity;this._ultraCues=0;this._lastImpact=null;this.disposed=false;
+    this._paused=false;this._uiCueCount=0;this._lastUICue=null;this._airtimeCues=0;this._rotorTargets=[];
     const Context=globalThis.AudioContext||globalThis.webkitAudioContext;
     try{
       this.context=context||(Context?new Context({latencyHint:'interactive'}):null);
       this._ownsContext=!context;if(!this.context)return;
       this._build();this.available=true;
+      this._contextStateHandler=()=>{if(this.context.state!=='running'){this._stopUI(true);this._silenceRotors(true);}this._syncUI();};
+      this.context.addEventListener?.('statechange',this._contextStateHandler);
     }catch(error){this.error=String(error);this.available=false;}
   }
   get enabled(){return this._enabled;}
-  set enabled(value){this._enabled=!!value;if(this.available)this._target(this.master.gain,this._enabled&&this.active?.62:0,.05);}
-  get diagnostics(){return {available:this.available,contextState:this.context?.state||'unavailable',unlocked:this.unlocked,enabled:this.enabled,active:this.active,oneShotVoices:this._voices.size,lastEventId:this._lastEventId,ultraActivationCues:this._ultraCues,lastImpact:this._lastImpact?{...this._lastImpact}:null,mix:{...this._mix},error:this.error};}
+  set enabled(value){this._enabled=!!value;if(this.available&&!this.disposed){this._target(this.master.gain,this._enabled&&this.active?.62:0,.05);if(!this._enabled){this._stopUI();this._silenceRotors();}this._syncUI();}}
+  get diagnostics(){return {airtimeRewardCues:this._airtimeCues,rotors:this._rotorTargets.map(t=>({...t})),engineProfile:this.engineProfile||'red',available:this.available,contextState:this.context?.state||'unavailable',unlocked:this.unlocked,enabled:this.enabled,active:this.active,oneShotVoices:this._voices.size,uiVoices:this._countUI(),uiCueCount:this._uiCueCount,lastUICue:this._lastUICue,lastEventId:this._lastEventId,ultraActivationCues:this._ultraCues,lastImpact:this._lastImpact?{...this._lastImpact}:null,mix:{...this._mix},error:this.error};}
   _random(){this._seed=(1664525*this._seed+1013904223)>>>0;return this._seed/4294967296;}
   _gain(value=0){const n=this.context.createGain();n.gain.value=value;return n;}
   _filter(type,hz,q=.7){const n=this.context.createBiquadFilter();n.type=type;n.frequency.value=hz;n.Q.value=q;return n;}
@@ -77,6 +96,12 @@ export class GameAudio {
     this.compressor.threshold.value=-10;this.compressor.knee.value=5;this.compressor.ratio.value=12;
     this.compressor.attack.value=.003;this.compressor.release.value=.18;
     this.compressor.connect(this.master).connect(ctx.destination);
+    // Workshop confirmations bypass only the gameplay mute, never the user's mute.
+    // Independent limiting + six UI voices maximum keeps menu audio bounded.
+    this.uiBus=this._gain(1);this.uiCompressor=ctx.createDynamicsCompressor();this.uiMaster=this._gain();
+    this.uiCompressor.threshold.value=-16;this.uiCompressor.knee.value=6;this.uiCompressor.ratio.value=8;
+    this.uiCompressor.attack.value=.002;this.uiCompressor.release.value=.1;
+    this.uiBus.connect(this.uiCompressor).connect(this.uiMaster).connect(ctx.destination);
     this.motorBus=this._filter('lowpass',1800,.7);this.motorBus.connect(this.compressor);
     this.roadBus=this._gain(1);this.roadBus.connect(this.compressor);
     this.fxBus=this._gain(1);this.fxBus.connect(this.compressor);
@@ -100,11 +125,63 @@ export class GameAudio {
     this.surfFoam=this._noiseLoop(this.noise.white,this.ambienceBus,'bandpass',2400,.5);
     this.sirenA=this._osc('sine',650,this.sirenBus);
     this.sirenB=this._osc('triangle',975,this.sirenBus);
+    // Exactly two persistent actors, three sources each. No frame/event allocations.
+    // One triangle drives both audible blade body and audio-rate wash modulation.
+    this.rotorVoices=Array.from({length:2},()=>{
+      const bus=this._gain(),pan=typeof ctx.createStereoPanner==='function'?ctx.createStereoPanner():this._gain(1);
+      bus.connect(pan).connect(this.compressor);
+      const rotor=this._osc('triangle',400*4/60,bus),turbine=this._osc('sine',1120,bus);
+      const wash=this._noiseLoop(this.noise.pink,bus,'lowpass',1200,.65),modulation=this._gain();
+      rotor.osc.connect(modulation);modulation.connect(wash.gain.gain);
+      return {bus,pan,rotor,turbine,wash,modulation};
+    });
+  }
+  _silenceRotors(hard=false){
+    for(const voice of this.rotorVoices||[]){const gain=voice.bus.gain;if(hard){gain.cancelScheduledValues?.(this.context.currentTime);gain.setValueAtTime(0,this.context.currentTime);}else this._target(gain,0,.04);}
+    this._rotorTargets=this._rotorTargets.map(t=>({...t,active:false,gain:0}));
+  }
+  _updateRotors(model,options){
+    const targets=rotorAudioTargets(model||{},{...options,enabled:this.enabled,contextRunning:this.context.state==='running'});this._rotorTargets=targets;
+    for(let i=0;i<2;i++){const target=targets[i],voice=this.rotorVoices[i];
+      this._target(voice.bus.gain,target.gain,target.gain>0?.14:.04);if(voice.pan.pan)this._target(voice.pan.pan,target.pan,.1);
+      this._target(voice.rotor.osc.frequency,target.bladePassHz,.14);this._target(voice.rotor.gain.gain,target.rotorGain,.12);
+      this._target(voice.turbine.osc.frequency,target.turbineHz,.14);this._target(voice.turbine.gain.gain,target.turbineGain,.12);
+      this._target(voice.wash.filter.frequency,target.washCutoffHz,.2);this._target(voice.wash.gain.gain,target.washGain,.12);this._target(voice.modulation.gain,target.modulationDepth,.12);
+    }
   }
   async resume(){
     if(!this.available||this.disposed)return false;
-    try{if(this.context.state!=='running'&&typeof this.context.resume==='function')await this.context.resume();this.unlocked=this.context.state==='running';if(this.unlocked)this.error=null;return this.unlocked;}
+    try{if(this.context.state!=='running'&&typeof this.context.resume==='function')await this.context.resume();this.unlocked=this.context.state==='running';if(this.unlocked)this.error=null;this._syncUI();return this.unlocked;}
     catch(error){this.error='Audio unlock pending: '+String(error);return false;}
+  }
+  _countUI(){let count=0;for(const voice of this._voices)if(voice.kind==='ui')count++;return count;}
+  _syncUI(){if(this.available&&!this.disposed)this._target(this.uiMaster.gain,this.enabled&&!this._paused&&this.context.state==='running'?.5:0,.008);}
+  _stopUI(immediate=false){
+    const now=finite(this.context?.currentTime),hard=immediate||this.context?.state!=='running';
+    for(const voice of this._voices){if(voice.kind!=='ui'||voice.stopping&&!hard)continue;voice.stopping=true;
+      try{
+        if(hard){voice.source.onended=null;voice.source.stop();voice.source.disconnect();for(const node of voice.chain)node.disconnect();this._voices.delete(voice);}
+        else{const gain=voice.envelope.gain;if(typeof gain.cancelAndHoldAtTime==='function')gain.cancelAndHoldAtTime(now);else{const value=finite(gain.value);gain.cancelScheduledValues?.(now);gain.setValueAtTime(value,now);}gain.setTargetAtTime(.0001,now,.004);voice.source.stop(now+.025);}
+      }catch{this._voices.delete(voice);}
+    }
+  }
+  /** Call only AFTER a successful transaction, after gesture-driven resume().
+   * Returns false rather than queueing on mute/pause/suspension or voice saturation.
+   * This never changes the gameplay master or starts engine/ambient sound in menus.
+   */
+  playUI(kind){
+    if(!['upgrade','unlock'].includes(kind)||!this.available||this.disposed||!this.enabled||this._paused||this.context.state!=='running')return false;
+    if(this._countUI()>4||this._voices.size>10)return false;
+    const now=this.context.currentTime,unlock=kind==='unlock';
+    const notes=unlock?[[440,0,.1],[659.25,.11,.1],[880,.22,.1],[1318.51,.33,.3]]:[[659.25,0,.085],[830.61,.095,.085],[1108.73,.19,.21]];
+    const end=notes[notes.length-1][1]+notes[notes.length-1][2]+.03;
+    for(const [type,ratio,level] of [['sine',1,unlock?.105:.09],['triangle',2,unlock?.018:.014]]){
+      const source=this.context.createOscillator(),gain=this._gain();source.type=type;source.frequency.value=notes[0][0]*ratio;gain.gain.setValueAtTime(0,now);
+      for(const [hz,delay,duration]of notes){const t=now+delay;source.frequency.setValueAtTime(hz*ratio,t);gain.gain.setValueAtTime(.0001,t);gain.gain.linearRampToValueAtTime(level,t+.008);gain.gain.exponentialRampToValueAtTime(.0001,t+duration);}
+      source.connect(gain).connect(this.uiBus);const voice={kind:'ui',source,chain:[gain],envelope:gain};this._voices.add(voice);
+      source.onended=()=>{this._voices.delete(voice);source.disconnect();gain.disconnect();};source.start(now);source.stop(now+end);
+    }
+    this._uiCueCount++;this._lastUICue=kind;this._syncUI();return true;
   }
   _voice(source,chain,duration){
     if(this._voices.size>=12)return false;
@@ -152,6 +229,7 @@ export class GameAudio {
       }
       else if(event.type==='landing')this._impact(clamp(Number.isFinite(event.verticalSpeed)?event.verticalSpeed/12:event.intensity??.35,.1,1),true);
       else if(event.type==='ultra-start')this._ultraActivation();
+      else if(event.type==='airtime-reward'&&!model.paused&&finite(event.actualEnergyAdded)>0&&this.context.state==='running'&&this._voices.size<=10){this._tone(1046.5,.10,.025);this._tone(1568,.15,.02,.055);this._airtimeCues++;}
       else if(event.type==='checkpoint'){this._tone(880,.12,.035);this._tone(1320,.16,.026,.08);}
       else if(event.type==='go'){this._tone(880,.25,.065);this._tone(1320,.3,.03);}
       else if(event.type==='escaped'||event.type==='finished'){[660,880,1100].forEach((hz,i)=>this._tone(hz,.3,.045,i*.11));}
@@ -159,12 +237,13 @@ export class GameAudio {
       else if(event.type==='water-contact')this._impact(.45,true);
     }return {suppressFallback,ultraActivation};
   }
-  _clearVoices(){
-    for(const voice of this._voices){voice.source.onended=null;try{voice.source.stop();voice.source.disconnect();for(const node of voice.chain)node.disconnect();}catch{}}
-    this._voices.clear();
+  _clearVoices(includeUI=false){
+    for(const voice of this._voices){if(!includeUI&&voice.kind==='ui')continue;voice.source.onended=null;try{voice.source.stop();voice.source.disconnect();for(const node of voice.chain)node.disconnect();}catch{}this._voices.delete(voice);}
   }
   update(model,time=0,options={}){
-    if(!this.available||this.disposed||!model?.player)return;
+    if(!this.available||this.disposed)return;
+    this._paused=!!options.paused;if(this._paused||this.context.state!=='running')this._stopUI();this._syncUI();this._updateRotors(model,options);
+    if(!model?.player)return;
     const state=audioState(model,time,options),dt=clamp(options.dt??1/60,.001,.1);
     const eventsList=model.events||[],eventTail=eventsList[eventsList.length-1];
     // Explore can restart the same model directly into racing, without a countdown.
@@ -177,11 +256,13 @@ export class GameAudio {
     this._target(this.master.gain,canSound?.62:0,.05);
     const s=state.speed,travel=state.running?clamp(s/80):0,load=state.load;
     const motor=state.running?(.012+.045*load+.035*travel)*(state.airborne?.7:1):0;
-    const base=62+s*4.1+load*18;
-    this._target(this.motorFundamental.osc.frequency,base,.055);this._target(this.motorFundamental.gain.gain,motor,.07);
-    this._target(this.motorHarmonic.osc.frequency,base*2.01,.055);this._target(this.motorHarmonic.gain.gain,motor*.23,.07);
-    this._target(this.motorWhine.osc.frequency,520+s*12.8+load*150,.08);this._target(this.motorWhine.gain.gain,motor*.11,.08);
-    this._target(this.motorBus.frequency,1100+s*24,.1);
+    const tone=motorTargets(model.vehicleStats?.vehicleId,s,load);this.engineProfile=tone.id;
+    if(this.motorFundamental.osc.type!==tone.wave)this.motorFundamental.osc.type=tone.wave;
+    if(this.motorHarmonic.osc.type!==tone.harmonicWave)this.motorHarmonic.osc.type=tone.harmonicWave;
+    this._target(this.motorFundamental.osc.frequency,tone.base,.055);this._target(this.motorFundamental.gain.gain,motor,.07);
+    this._target(this.motorHarmonic.osc.frequency,tone.base*tone.ratio,.055);this._target(this.motorHarmonic.gain.gain,motor*tone.harmonic,.07);
+    this._target(this.motorWhine.osc.frequency,tone.whineHz,.08);this._target(this.motorWhine.gain.gain,motor*tone.whine,.08);
+    this._target(this.motorBus.frequency,tone.filterHz,.1);
     this._target(this.wind.gain.gain,.105*travel**1.7,.18);this._target(this.wind.filter.frequency,700+s*20,.2);
     this._target(this.road.gain.gain,state.grounded?travel*(state.offRoad?.2:.075):0,.1);this._target(this.road.filter.frequency,state.offRoad?145:230+s*2,.15);
     this._target(this.skid.gain.gain,state.skid*.075,.04);this._target(this.skid.filter.frequency,1250+state.skid*850,.08);
@@ -212,9 +293,11 @@ export class GameAudio {
     this._mix={motor,coast:state.coastAmount,wind:.105*travel**1.7,skid:state.skid,siren:state.siren,sirenDistance:Number.isFinite(state.distance)?state.distance:null,pan:state.pan,boost:state.boost?1:0,ultra:state.ultra?1:0,thrust:state.thrust?1:0,master:canSound?.62:0};
   }
   dispose(){
-    if(this.disposed)return;this.disposed=true;
+    if(this.disposed)return;this.disposed=true;this._silenceRotors(true);
     for(const source of this._loops)try{source.stop();source.disconnect();}catch{}
-    this._clearVoices();try{this.master?.disconnect();}catch{}
+    this._clearVoices(true);for(const voice of this.rotorVoices||[])for(const node of [voice.bus,voice.pan,voice.rotor.gain,voice.turbine.gain,voice.wash.filter,voice.wash.gain,voice.modulation])try{node.disconnect();}catch{}
+    try{this.master?.disconnect();this.uiMaster?.disconnect();this.uiBus?.disconnect();this.uiCompressor?.disconnect();}catch{}
+    this.context?.removeEventListener?.('statechange',this._contextStateHandler);
     if(this._ownsContext&&this.context?.close)this.context.close().catch(()=>{});
   }
 }

@@ -1,70 +1,35 @@
-# MALABAR — Hot Coast / Highland Run
+# MALABAR — Hot Coast · V17 R3.4
 
-An original Blender-built, Three.js **arcade racing prototype** with two selectable Kerala-inspired courses, two concept-inspired cars, Sprint / Pursuit / Time Attack races, free Explore, fictional flight, upgrades and synthesized audio.
+Play: **https://malabar-hot-coast.vercel.app/**
 
-**[Play the game](https://malabar-hot-coast.robin186x.chatgpt.site)**
+This repository contains the exact R3.4 browser game currently published on Vercel, its original editable Blender scenes, generators, tests and asset/license documentation. R3.4 unifies the desktop/mobile orange-dark interface, removes duplicate menu routes, fixes bounded HUD/dock overlap and adds **Leaderboard — On this device**. Leaderboard names and records stay in the current browser/origin; there is no global online leaderboard. Existing cars, credits and Story saves are preserved.
 
-This repository contains the frozen **V10 / 0.10.0** game source and original editable asset sources. It is a stylized prototype, not an AAA release, an exact geographic reconstruction or a manufacturer engineering simulation. No Tesla, transit-operator or other brand endorsement is implied.
+## Run and build
 
-## Run locally
-
-Requirements: a modern WebGL2 browser; Python 3 for the simple local server; Node.js 20+ and npm for rebuilding/tests. Blender is **not** required to play.
-
-```sh
-git clone https://github.com/robinfrancis186/Car-game.git
-cd Car-game/web
-npm ci
-npm run serve
-```
-
-Open **http://localhost:8080**. `npm run serve` binds only to your computer. The game has no server, login, paid currency, analytics integration or network API dependency. Workshop credits/preferences are stored in your browser; no real purchases exist.
-
-### Build a self-contained playable HTML file
-
-```sh
-cd web  # from the repository root
-npm ci
-npm run build
-```
-
-Open the generated `dist/malabar-hot-coast.html` in a desktop browser, or serve it over HTTP/HTTPS. The file embeds code, both tracks, models and font. iOS file-preview apps may not execute HTML; use an HTTP/HTTPS server instead. Generated bundles and dependency caches are deliberately not committed.
-
-### Test
+Requires Node.js 20+ and Python 3; driving requires a WebGL2 browser.
 
 ```sh
 cd web
+npm ci --ignore-scripts --no-audit --no-fund
 npm test
+npm run build
+python3 ../tools/verify-standalone.py
+npm run serve
 ```
 
-See [TESTING.md](TESTING.md) for coverage and evidence boundaries. These deterministic tests do **not** establish real GPU rendering, human handling quality, mobile hardware performance or audible sound quality.
+Open http://localhost:8080. `npm run build` creates the self-contained `dist/malabar-hot-coast.html` with original assets and third-party notices embedded. To reproduce the exact 151-file static production package:
 
-## Play
+```sh
+node tools/build-static.mjs
+python3 tools/verify-publication.py
+```
 
-- Select **HOT COAST** (coastal villages, metro, canal garden, flyover, harbor) or **HIGHLAND RUN** (divided highway, tea bends, switchbacks, bird-rock ridge).
-- **EXPLORE** starts in a selected district, without a clock, opponents, police or mandatory gates. Recovery is free. Races require gates in order and apply damage/recovery rules.
-- **W/S** accelerate / brake into reverse; **A/D** steer; **Space** brake; **Shift** boost; **B** ultra burst; **F** fictional flight; **Q/E** lower / raise flight target; **X** controlled kickflip; **C** camera; **L** inspect an Explore landmark while parked; **R** recover; **Escape** pause. Drag to orbit the chase camera. Touch controls are provided; landscape is recommended.
-- Workshop upgrades change speed, acceleration, grip and boost efficiency independently for each car. Credits are fictional and local to the browser.
+The output is `dist/vercel/`. Generated distributions, dependencies, private reference media and caches are intentionally not committed.
 
-## Repository layout
+## Verification and limits
 
-| Directory | Contents |
-| --- | --- |
-| `web/src/`, `web/index.html` | Game, UI, physics and synthesized audio source |
-| `web/public/assets/` | Frozen runtime GLB geometry, route/collision data and font |
-| `web/public/vendor/` | Pinned Three.js runtime modules and license |
-| `web/tests/` | Portable automated model/controller/scene-contract tests |
-| `blender/` | Original procedural generators, exporters and asset validators |
-| `assets/` | **24 editable native `.blend` files**, source plans/manifests and authoring data |
-| `references/route/` | Attributed OSM source/derived geographic database |
-| `unreal/` | Optional earlier Unreal source scaffold; **not compiled or shipped as a game** |
-| `tools/` | Authoring utilities; not required for the browser game |
+`deployment/production-verification.json` records a fresh HTTP/SHA-256 comparison of all 151 published files. `SOURCE_MANIFEST.json` connects the 147 frozen runtime files to the READY production deployment. `ASSET_SOURCE_MANIFEST.json` inventories all 45 editable native asset scenes. Read `TESTING.md`, `AUTHORING.md`, `PROVENANCE.md` and `LICENSES.md` for scope.
 
-See [AUTHORING.md](AUTHORING.md) for editable Blender files and regeneration notes; [PROVENANCE.md](PROVENANCE.md) and [LICENSES.md](LICENSES.md) for attribution and rights.
+The exact artifact passed bounded native desktop/mobile menu checks and automated controller/model checks. This is a solo arcade prototype: actual completed-race name persistence, GPU-loss/restore, performance, listening and mobile-driving acceptance are not all natively verified. Historical documents retain their original stage-specific caveats and are not the current release status.
 
-## Version and limitations
-
-`SOURCE_MANIFEST.json` records the exact frozen runtime hashes. Native Blender files were losslessly saved with Blender's built-in compression and relative preview-output paths; reopening verified unchanged mesh geometry. `ASSET_SOURCE_MANIFEST.json` records their original/published hashes and geometry fingerprints. Source generators remain editable; small reference-filename metadata was removed before public publication.
-
-V10 automated source, model and scene-contract checks pass. Full V10 WebGL/human-driving acceptance, a real iOS hardware pass and sound-listening review remain separate checks. Prior-version FPS observations are not V10 performance guarantees. Art/collision proxies remain simplified; most boats are static props; visual flight/water/foliage effects are arcade approximations.
-
-No user reference photos/videos, private notes, hosting configuration, credentials, cached dependencies, Blender backup files or historical debug reports are included.
+No new blanket reuse license is granted by publication. Preserve third-party licenses, OpenStreetMap attribution and prior scoped notices.

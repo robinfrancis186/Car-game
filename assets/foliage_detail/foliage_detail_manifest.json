@@ -1,5 +1,5 @@
 {
-  "license": "Original procedural meshes and per-vertex colors, CC0. No photos, imported geometry, image textures or alpha cutouts.",
+  "license": "Original procedural meshes and per-vertex colors. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. No photos, imported geometry, image textures or alpha cutouts.",
   "axes": "Blender X forward/Y left/Z up; glTF X forward/Y up/-Z left.",
   "assets": {
     "HighlandShadeTreeNear": {

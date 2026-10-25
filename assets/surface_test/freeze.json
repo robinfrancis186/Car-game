@@ -1,0 +1,284 @@
+{
+  "status": "ASSET_FREEZE_PASS",
+  "date": "2026-10-23",
+  "scope": "Original isolated course assets/native and measured geometry QA. Runtime gameplay, WebGL, chase camera and solo end-to-end acceptance remain separate.",
+  "course_id": "surface-test",
+  "canonical_profile_id": "harbour-wall-run",
+  "triangles": 29296,
+  "draws": 10,
+  "max_measured_contact_error_m": 0.006999969482421875,
+  "max_measured_geometric_normal_error_degrees": 0.3629678456249092,
+  "rays": 9960,
+  "structural_intrusions": 0,
+  "visual_review": "All four final actual-GLB Blender previews inspected; removed coarse underside penetration and fixed paint-to-road sampling. CPU48 samples, no denoise, not gameplay.",
+  "collision_limits": "Zero-thickness analytic driving ribbon, no closed underside; edge rails are non-solid guidance. Separate box proxies only for visible piers/signs.",
+  "previews": [
+    {
+      "scope": "Actual exported GLBs imported into CPU Blender; original studio/environment preview, not gameplay. No reference pixels.",
+      "source_glb_sha256": {
+        "SurfaceTest_Road.glb": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32",
+        "SurfaceTest_Furniture.glb": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d",
+        "SurfaceTest_Terrain.glb": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986"
+      },
+      "image": "assets/surface_test/preview_overview.png",
+      "sha256": "414b72a973ae6c5474b3169bac5c456a57b02ebdd53ba7ab77a01cec59af0117",
+      "samples": 48,
+      "denoising": false,
+      "camera_blender": [
+        390,
+        700,
+        460
+      ],
+      "target_blender": [
+        450,
+        0,
+        6
+      ],
+      "lens_mm": 28
+    },
+    {
+      "scope": "Actual exported GLBs imported into CPU Blender; original studio/environment preview, not gameplay. No reference pixels.",
+      "source_glb_sha256": {
+        "SurfaceTest_Road.glb": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32",
+        "SurfaceTest_Furniture.glb": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d",
+        "SurfaceTest_Terrain.glb": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986"
+      },
+      "image": "assets/surface_test/preview_bank_entry.png",
+      "sha256": "1fb6624ea07f6a15c508548054f6315f3490cf54f15d3d9c8c6da8123fff6069",
+      "samples": 48,
+      "denoising": false,
+      "camera_blender": [
+        190,
+        38,
+        22
+      ],
+      "target_blender": [
+        265,
+        0,
+        8
+      ],
+      "lens_mm": 42
+    },
+    {
+      "scope": "Actual exported GLBs imported into CPU Blender; original studio/environment preview, not gameplay. No reference pixels.",
+      "source_glb_sha256": {
+        "SurfaceTest_Road.glb": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32",
+        "SurfaceTest_Furniture.glb": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d",
+        "SurfaceTest_Terrain.glb": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986"
+      },
+      "image": "assets/surface_test/preview_wall_hold.png",
+      "sha256": "46f0ada214dd153add198e446575b0a9ab09a551d2655f2c4443566caf881d3d",
+      "samples": 48,
+      "denoising": false,
+      "camera_blender": [
+        375,
+        57,
+        21
+      ],
+      "target_blender": [
+        450,
+        0,
+        8
+      ],
+      "lens_mm": 42
+    },
+    {
+      "scope": "Actual exported GLBs imported into CPU Blender; original studio/environment preview, not gameplay. No reference pixels.",
+      "source_glb_sha256": {
+        "SurfaceTest_Road.glb": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32",
+        "SurfaceTest_Furniture.glb": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d",
+        "SurfaceTest_Terrain.glb": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986"
+      },
+      "image": "assets/surface_test/preview_runout.png",
+      "sha256": "41248400f0d2cf42a87b2feb0143cdb767b48e3aae8d1ad136455995d57f8d1f",
+      "samples": 48,
+      "denoising": false,
+      "camera_blender": [
+        670,
+        38,
+        20
+      ],
+      "target_blender": [
+        757,
+        0,
+        8
+      ],
+      "lens_mm": 42
+    }
+  ],
+  "provenance": "Original project geometry/materials; reuse license not selected by owner. No source-video pixels, photo textures, logos or downloaded meshes.",
+  "hashes": {
+    "assets/surface_test/README.md": {
+      "sha256": "01db66abbd6d9c497a09179d81a9afd7e1a9003887ac23c2df2ad197342bef9e",
+      "bytes": 4420
+    },
+    "assets/surface_test/Surface_Test_Route.blend": {
+      "sha256": "3458d2e887eb8945f0d67d4ca15480a5cd9de52f95728c93e2ec9354f1b8ec37",
+      "bytes": 5366272
+    },
+    "assets/surface_test/course_runtime_surface_test.json": {
+      "sha256": "697cf6b2065d7490a269e511bd75beb0ccad296e9fc4467f459f2659cc9bf671",
+      "bytes": 44657
+    },
+    "assets/surface_test/freeze_surface_test.py": {
+      "sha256": "20617ed4e92f98a87aaccbc76137bf742d263b7bb3fbc583c974e270449d0d91",
+      "bytes": 3263
+    },
+    "assets/surface_test/glb_validation.json": {
+      "sha256": "31d8473cf60fd1374fb855a4126544da97fa349462cf2ed437bb056b2021e356",
+      "bytes": 2238
+    },
+    "assets/surface_test/manifest.json": {
+      "sha256": "777492aeb82871c3aded97429652912aa18ce63c98aa7d90b954b7a98548c270",
+      "bytes": 56909
+    },
+    "assets/surface_test/native_validation.json": {
+      "sha256": "45e52a2b61239006116997116a6e0691af3058b8461a7017b176b8653b398858",
+      "bytes": 627
+    },
+    "assets/surface_test/preview_bank_entry.blend": {
+      "sha256": "2ead44fbd90366cc70f1f2f60cec5626d493a29d627be7b5f69a6b7f381ea427",
+      "bytes": 4444488
+    },
+    "assets/surface_test/preview_bank_entry.png": {
+      "sha256": "1fb6624ea07f6a15c508548054f6315f3490cf54f15d3d9c8c6da8123fff6069",
+      "bytes": 1439242
+    },
+    "assets/surface_test/preview_bank_entry_provenance.json": {
+      "sha256": "dc89558fbec602f40d41840bc9ca0394e985088300ccacd948292fe84a91d7dd",
+      "bytes": 755
+    },
+    "assets/surface_test/preview_overview.blend": {
+      "sha256": "c8847a9717360b1f858413105984cfb9389520e80a59df66fd96376253312eea",
+      "bytes": 4444488
+    },
+    "assets/surface_test/preview_overview.png": {
+      "sha256": "414b72a973ae6c5474b3169bac5c456a57b02ebdd53ba7ab77a01cec59af0117",
+      "bytes": 1150930
+    },
+    "assets/surface_test/preview_overview_provenance.json": {
+      "sha256": "2899886224d62ee48f8b21692425a025bcad8e888988b8547b4720e82ca1040f",
+      "bytes": 755
+    },
+    "assets/surface_test/preview_runout.blend": {
+      "sha256": "58b1db5979da01efa0ef6b47466aaed959b8e181c85230dcd03da27c360a5ce0",
+      "bytes": 4444488
+    },
+    "assets/surface_test/preview_runout.png": {
+      "sha256": "41248400f0d2cf42a87b2feb0143cdb767b48e3aae8d1ad136455995d57f8d1f",
+      "bytes": 1384382
+    },
+    "assets/surface_test/preview_runout_provenance.json": {
+      "sha256": "d9484bea345be7ca3e21f2d4821884552a476c853fd3782677775863c8ed135b",
+      "bytes": 751
+    },
+    "assets/surface_test/preview_wall_hold.blend": {
+      "sha256": "67e2fe4a9d3c8139ab3ed77b08dc74cc9107ccc7b1f77bd671b145e4f3d8a71d",
+      "bytes": 4444488
+    },
+    "assets/surface_test/preview_wall_hold.png": {
+      "sha256": "46f0ada214dd153add198e446575b0a9ab09a551d2655f2c4443566caf881d3d",
+      "bytes": 1389197
+    },
+    "assets/surface_test/preview_wall_hold_provenance.json": {
+      "sha256": "74befa9117a93db9235960e8e3a172723ef4a8af43d69fbd0980ce9c8bda9de6",
+      "bytes": 754
+    },
+    "assets/surface_test/surface_test_colliders.json": {
+      "sha256": "153ef23c924feb3ea00427e3eb8c997b7c5e141ba5cf84b3562260f8d7009a55",
+      "bytes": 17973
+    },
+    "assets/surface_test/surface_test_furniture_colliders.json": {
+      "sha256": "1f7a7ef979a25eb33e4d3d12276a5264484307c363ee5594dc747852c237a577",
+      "bytes": 126
+    },
+    "assets/surface_test/surface_test_profile.json": {
+      "sha256": "4ff76000113099638215844dcae2f12cc634821895a05f9cdeffbda0b0f8e658",
+      "bytes": 719
+    },
+    "assets/surface_test/unchanged_existing_worlds.json": {
+      "sha256": "c8e9cb017858290670ff8d0fba29f6a74fb47b2ceac3b3c7e643567da0bced2c",
+      "bytes": 2639
+    },
+    "assets/surface_test/validate_surface_test.mjs": {
+      "sha256": "8c6758023158bf0c2e453590f7585e0a7eee2e15861dde6c1f973f60b6bca0a3",
+      "bytes": 5702
+    },
+    "assets/web/SurfaceTest_Furniture.glb": {
+      "sha256": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d",
+      "bytes": 170164
+    },
+    "assets/web/SurfaceTest_Road.glb": {
+      "sha256": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32",
+      "bytes": 2621360
+    },
+    "assets/web/SurfaceTest_Terrain.glb": {
+      "sha256": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986",
+      "bytes": 8056
+    },
+    "assets/web/course_runtime_surface_test.json": {
+      "sha256": "697cf6b2065d7490a269e511bd75beb0ccad296e9fc4467f459f2659cc9bf671",
+      "bytes": 44657
+    },
+    "assets/web/surface_test_colliders.json": {
+      "sha256": "153ef23c924feb3ea00427e3eb8c997b7c5e141ba5cf84b3562260f8d7009a55",
+      "bytes": 17973
+    },
+    "assets/web/surface_test_furniture_colliders.json": {
+      "sha256": "1f7a7ef979a25eb33e4d3d12276a5264484307c363ee5594dc747852c237a577",
+      "bytes": 126
+    },
+    "assets/web/surface_test_profile.json": {
+      "sha256": "4ff76000113099638215844dcae2f12cc634821895a05f9cdeffbda0b0f8e658",
+      "bytes": 719
+    },
+    "blender/build_surface_test_route.py": {
+      "sha256": "9e6b69112e4e55eb6f074f9a7d745dbf413e0aae6261ced79a9b0f2051ee3d1c",
+      "bytes": 14630
+    },
+    "blender/rebuild_car_helpers.py": {
+      "sha256": "4d3a06f5e4e30e2dee38d54c21ca462b32c163c32943ba04fdba52d47b505ddb",
+      "bytes": 16775
+    },
+    "blender/render_surface_test_route.py": {
+      "sha256": "3ae6980011709822d8cba0e89d328ba79891d70a5af45f11ced3225c7b926ad5",
+      "bytes": 2987
+    },
+    "blender/test_surface_test_native.py": {
+      "sha256": "41f4e65a66b2c3f66342cf24c21557027f98818994c73571bb5517f346066d56",
+      "bytes": 1917
+    },
+    "docs/v16/surface_profile.json": {
+      "sha256": "ab19f552d0dca7bec8aa93b8c03773d9fa42fd4f81dbbc0176e98d5a563e6698",
+      "bytes": 595
+    },
+    "web/public/assets/SurfaceTest_Furniture.glb": {
+      "sha256": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d",
+      "bytes": 170164
+    },
+    "web/public/assets/SurfaceTest_Road.glb": {
+      "sha256": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32",
+      "bytes": 2621360
+    },
+    "web/public/assets/SurfaceTest_Terrain.glb": {
+      "sha256": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986",
+      "bytes": 8056
+    },
+    "web/public/assets/course_runtime_surface_test.json": {
+      "sha256": "697cf6b2065d7490a269e511bd75beb0ccad296e9fc4467f459f2659cc9bf671",
+      "bytes": 44657
+    },
+    "web/public/assets/surface_test_colliders.json": {
+      "sha256": "153ef23c924feb3ea00427e3eb8c997b7c5e141ba5cf84b3562260f8d7009a55",
+      "bytes": 17973
+    },
+    "web/public/assets/surface_test_furniture_colliders.json": {
+      "sha256": "1f7a7ef979a25eb33e4d3d12276a5264484307c363ee5594dc747852c237a577",
+      "bytes": 126
+    },
+    "web/public/assets/surface_test_profile.json": {
+      "sha256": "4ff76000113099638215844dcae2f12cc634821895a05f9cdeffbda0b0f8e658",
+      "bytes": 719
+    }
+  }
+}

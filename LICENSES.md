@@ -1,7 +1,7 @@
 # Distribution notices
 
 ## Original project work
-The original project code, procedural Blender generators, vehicle/environment geometry, parameterized materials, audio synthesis and interface were created for this project; no purchased or extracted commercial game models, textures, sounds, logos or Need for Speed assets are included. See individual asset README files for authoring scope and limitations. The environment asset package separately carries a CC0 dedication.
+The original project code, procedural Blender generators, vehicle/environment geometry, parameterized materials, audio synthesis and interface were created for this project; no purchased or extracted commercial game models, textures, sounds, logos or Need for Speed assets are included. See individual asset README files for authoring scope and limitations. No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses.
 
 A Roadster-inspired design and Tesla references do not imply trademark, design-right or manufacturer permission/endorsement. No manufacturer CAD is supplied. Reference photographs/HTML in research and user-reference directories are for study only and are excluded from playable distributions.
 
@@ -25,3 +25,14 @@ The Highland course, bird-rock sculpture, broadleaf tree, shikara and procedural
 
 ## V10 finish pass
 The additional folded-leaf trees, tea shrub, distant canopy and service-bay geometry are original procedural Blender work. Cloud atmosphere, material grain, contact particles, turn guidance and boost trails are original code-based effects, not copied racing-game artwork. Workshop credits have no monetary value and remain in local browser storage. No uploaded finish-quality reference images, game logos, purchased audio or commercial game effects are distributed.
+
+## Reconstructed V12 models and showroom
+The four additional original arcade vehicle interpretations, coastal loft and model-rendered gallery thumbnails were built anew after the unpublished workspace was lost. They are not recovered copies of the former V12 files. Their private reference photographs are excluded, and no operator/manufacturer logos or downloaded commercial geometry are embedded. Procedural per-car sound profiles are original synthesis, not authentic manufacturer recordings. Exact editable-source, exported-mesh and thumbnail provenance is recorded in `assets/cars/*/manifest.json` and asset QA reports.
+
+No project-wide reuse license has been selected for original project material; third-party components retain their stated licenses. The authorized correction to mistaken original-asset CC0 wording is forward-looking only: it does not erase earlier public versions or establish that any earlier dedication was legally reversed.
+
+## V15 aircraft and airtime infrastructure
+The two fictional light-twin helicopter variants, articulated rotor/searchlight kit, rotor blur geometry and route-aligned ramp decks are original Blender work. Public primary aircraft images informed broad proportions only; no manufacturer branding, CAD, downloaded mesh or photographic texture is included. Audio is original synthesis. The user's shared race video was analyzed outside the game tree; neither the video nor its frames are distributed. The bounded ramp/airtime reward implementation is original, not a claim to reproduce that video's undisclosed formula. Existing OSM attribution still applies to coastal positioning.
+
+## V17 coastal pavilion UI candidate
+`web/src/showroom-scene.js` is original procedural project geometry/material code, with existing original palm models reused without modifying their source assets. `web/src/showroom-reflector.js` is the Reflector helper from the pinned Three.js 0.170.0 package under the existing Three.js MIT license (`web/public/vendor/THREE_LICENSE.txt`); its attribution is preserved. Private uploaded UI references and their local inspection derivatives are not included as textures, source assets, or archive entries.

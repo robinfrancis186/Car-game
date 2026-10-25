@@ -1,0 +1,169 @@
+{
+  "result": "PASS",
+  "actual_glb_reimport": true,
+  "wheel_hierarchy": [
+    {
+      "wheel": "Front_Left",
+      "steer_present": true,
+      "spin_parent_correct": true,
+      "wheel_spins": true,
+      "caliper_does_not_spin": true,
+      "hub_blender": [
+        1.350000023841858,
+        0.9240000247955322,
+        0.36800000071525574
+      ]
+    },
+    {
+      "wheel": "Front_Right",
+      "steer_present": true,
+      "spin_parent_correct": true,
+      "wheel_spins": true,
+      "caliper_does_not_spin": true,
+      "hub_blender": [
+        1.350000023841858,
+        -0.9240000247955322,
+        0.36800000071525574
+      ]
+    },
+    {
+      "wheel": "Rear_Left",
+      "steer_present": true,
+      "spin_parent_correct": true,
+      "wheel_spins": true,
+      "caliper_does_not_spin": true,
+      "hub_blender": [
+        -1.350000023841858,
+        0.9240000247955322,
+        0.36800000071525574
+      ]
+    },
+    {
+      "wheel": "Rear_Right",
+      "steer_present": true,
+      "spin_parent_correct": true,
+      "wheel_spins": true,
+      "caliper_does_not_spin": true,
+      "hub_blender": [
+        -1.350000023841858,
+        -0.9240000247955322,
+        0.36800000071525574
+      ]
+    }
+  ],
+  "bounds_blender": {
+    "min": [
+      -2.2799999713897705,
+      -1.135156512260437,
+      0.001954197883605957
+    ],
+    "max": [
+      2.3399999141693115,
+      1.135156512260437,
+      1.3428335189819336
+    ],
+    "dimensions": [
+      4.619999885559082,
+      2.270313024520874,
+      1.3408793210983276
+    ]
+  },
+  "aero_hinge_present": true,
+  "socket_count": 6,
+  "render_engine": "Cycles CPU, no denoising",
+  "limitations": [
+    "Approximate fan concept based on user-supplied visual references; not an accurate manufacturer model.",
+    "Neutral smoked alpha glazing with a compact original cockpit; not a separately validated interior-camera experience.",
+    "Flight, active aero behavior and nozzle arrangement are fictional game mechanics, not production claims.",
+    "Materials use compact PBR values rather than photographic textures."
+  ],
+  "wheel_rotation_tests": [
+    {
+      "wheel": "Front_Left",
+      "spin_test_rad": 0.7,
+      "tire_vertex_movement_m": 0.25100115644427917,
+      "caliper_matrix_delta": 0.0,
+      "hub_movement_m": 0.0
+    },
+    {
+      "wheel": "Front_Right",
+      "spin_test_rad": 0.7,
+      "tire_vertex_movement_m": 0.25100115644427917,
+      "caliper_matrix_delta": 0.0,
+      "hub_movement_m": 0.0
+    },
+    {
+      "wheel": "Rear_Left",
+      "spin_test_rad": 0.7,
+      "tire_vertex_movement_m": 0.25100118056208215,
+      "caliper_matrix_delta": 0.0,
+      "hub_movement_m": 0.0
+    },
+    {
+      "wheel": "Rear_Right",
+      "spin_test_rad": 0.7,
+      "tire_vertex_movement_m": 0.25100118056208215,
+      "caliper_matrix_delta": 0.0,
+      "hub_movement_m": 0.0
+    }
+  ],
+  "wheel_rotation_pass": true,
+  "wing_rotation_test": {
+    "angle_rad": 0.18,
+    "wing_vertex_movement_m": 0.052103720402678924,
+    "passes": true
+  },
+  "browser_budget_pass": true,
+  "static_tire_surface_checks": [
+    {
+      "wheel": "Front_Left",
+      "steer_rad": 0,
+      "surface_triangle_overlap_pairs": 0,
+      "overlap_materials": {}
+    },
+    {
+      "wheel": "Front_Left",
+      "steer_rad": -0.4,
+      "surface_triangle_overlap_pairs": 0,
+      "overlap_materials": {}
+    },
+    {
+      "wheel": "Front_Left",
+      "steer_rad": 0.4,
+      "surface_triangle_overlap_pairs": 0,
+      "overlap_materials": {}
+    },
+    {
+      "wheel": "Front_Right",
+      "steer_rad": 0,
+      "surface_triangle_overlap_pairs": 0,
+      "overlap_materials": {}
+    },
+    {
+      "wheel": "Front_Right",
+      "steer_rad": -0.4,
+      "surface_triangle_overlap_pairs": 0,
+      "overlap_materials": {}
+    },
+    {
+      "wheel": "Front_Right",
+      "steer_rad": 0.4,
+      "surface_triangle_overlap_pairs": 0,
+      "overlap_materials": {}
+    },
+    {
+      "wheel": "Rear_Left",
+      "steer_rad": 0,
+      "surface_triangle_overlap_pairs": 0,
+      "overlap_materials": {}
+    },
+    {
+      "wheel": "Rear_Right",
+      "steer_rad": 0,
+      "surface_triangle_overlap_pairs": 0,
+      "overlap_materials": {}
+    }
+  ],
+  "static_tire_check_pass": true,
+  "test_note": "Static BVH tire/body surface tests only; does not assert dynamic suspension, contact or engineering accuracy."
+}

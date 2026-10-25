@@ -1,0 +1,27 @@
+{
+  "scope": "Original Blender rendered composition preview, NOT gameplay/WebGL. Layout-adjusted desktop camera, not a claimed runtime screenshot. No UI or reference pixels.",
+  "resolution": [
+    1180,
+    757
+  ],
+  "samples": 64,
+  "denoising": false,
+  "camera_three": [
+    7,
+    2.1,
+    7.65
+  ],
+  "look_at_three": [
+    0,
+    0.65,
+    0
+  ],
+  "sensor_fit": "HORIZONTAL",
+  "sensor_width_mm": 36,
+  "lens_mm": 45,
+  "camera_shift": [
+    -0.16,
+    -0.045
+  ],
+  "car_native_yaw_rad": 0.18
+}

@@ -1,0 +1,32 @@
+{
+  "source_sha256": "1d405695581155ef0f90ecf483ed5590bb6fbcedf73e121143008f145c668835",
+  "editable_mesh_parts": 342,
+  "independent_spin_checks": [
+    {
+      "wheel": "Front_Left",
+      "vertex_motion_m": 0.18878117588081542,
+      "caliper_matrix_delta": 0.0,
+      "pass": true
+    },
+    {
+      "wheel": "Front_Right",
+      "vertex_motion_m": 0.18878117588081542,
+      "caliper_matrix_delta": 0.0,
+      "pass": true
+    },
+    {
+      "wheel": "Rear_Left",
+      "vertex_motion_m": 0.188781257280982,
+      "caliper_matrix_delta": 0.0,
+      "pass": true
+    },
+    {
+      "wheel": "Rear_Right",
+      "vertex_motion_m": 0.188781257280982,
+      "caliper_matrix_delta": 0.0,
+      "pass": true
+    }
+  ],
+  "image_dependencies": [],
+  "result": "PASS"
+}

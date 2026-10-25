@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "scope": "Negative diagnostic test only; deliberately misparented in-memory RearWing, no asset file edits.",
+  "process_exit_code": 1,
+  "stdout_bytes": 1784,
+  "stderr_bytes": 0,
+  "expected_failure": [
+    {
+      "name": "root and distinct body part hierarchy",
+      "result": "FAIL",
+      "error": "RearWing parent must be CarBody"
+    }
+  ],
+  "validator_sha256": "34229b49e6c7d9f7eaaeb720af19e6eeed38d485129c3e6164790d5a09f9905e"
+}

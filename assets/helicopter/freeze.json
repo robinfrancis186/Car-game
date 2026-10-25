@@ -1,0 +1,239 @@
+{
+  "status": "PASS_AND_FROZEN",
+  "date": "2026-10-23",
+  "kit_manifest": "assets/helicopter/helicopter_kit_manifest.json",
+  "reports": [
+    "assets/helicopter/civilian/glb_validation.json",
+    "assets/helicopter/civilian/mechanics_validation.json",
+    "assets/helicopter/civilian/native_validation.json",
+    "assets/helicopter/police/glb_validation.json",
+    "assets/helicopter/police/mechanics_validation.json",
+    "assets/helicopter/police/native_validation.json",
+    "assets/helicopter/blur_validation.json"
+  ],
+  "previews": [
+    {
+      "file": "assets/helicopter/civilian/preview_front.png",
+      "provenance": "assets/helicopter/civilian/preview_front_provenance.json",
+      "sha256": "7f899cd338ece5b664f1e989c2377ce9d0e4a711f514b86cc799c07b5ddfeb0d",
+      "scope": "Actual GLB imported into Blender CPU Cycles; studio render, not gameplay. No reference pixels."
+    },
+    {
+      "file": "assets/helicopter/civilian/preview_rear.png",
+      "provenance": "assets/helicopter/civilian/preview_rear_provenance.json",
+      "sha256": "5a76716da35b66c1e3731cfee46cf6594726f6b9b7e5ab632a401ceb847a5603",
+      "scope": "Actual GLB imported into Blender CPU Cycles; studio render, not gameplay. No reference pixels."
+    },
+    {
+      "file": "assets/helicopter/police/preview_front.png",
+      "provenance": "assets/helicopter/police/preview_front_provenance.json",
+      "sha256": "bcb0f17bfc8094062c80952c6ebac37713a9cd605a2da73b882a9ae10c753727",
+      "scope": "Actual GLB imported into Blender CPU Cycles; studio render, not gameplay. No reference pixels."
+    },
+    {
+      "file": "assets/helicopter/police/preview_rear.png",
+      "provenance": "assets/helicopter/police/preview_rear_provenance.json",
+      "sha256": "6631a45aba33fdb107fea225e2a62bf97227b2577c0a93ae577de48649f7667b",
+      "scope": "Actual GLB imported into Blender CPU Cycles; studio render, not gameplay. No reference pixels."
+    },
+    {
+      "file": "assets/helicopter/police/preview_detail.png",
+      "provenance": "assets/helicopter/police/preview_detail_provenance.json",
+      "sha256": "ea7c91c8f250b7869b4289330f641611752c4edba9a5afaeb0bc2e29d480e8ac",
+      "scope": "Actual GLB imported into Blender CPU Cycles; studio render, not gameplay. No reference pixels."
+    }
+  ],
+  "identical_staged_public_files": [
+    "assets/web/helicopter_civilian.glb",
+    "web/public/assets/helicopter_civilian.glb",
+    "assets/web/helicopter_civilian_manifest.json",
+    "web/public/assets/helicopter_civilian_manifest.json",
+    "assets/web/helicopter_police.glb",
+    "web/public/assets/helicopter_police.glb",
+    "assets/web/helicopter_police_manifest.json",
+    "web/public/assets/helicopter_police_manifest.json"
+  ],
+  "checks": {
+    "every_exported_triangle_finite_and_nondegenerate": true,
+    "unit_normals": true,
+    "independent_native_and_exported_rotors": true,
+    "rotor_sweep_samples_per_variant": 144,
+    "gimbal_pose_samples_per_variant": 25,
+    "sampled_unintended_blade_and_gimbal_intersections": 0,
+    "native_interior_parts_checked_per_variant": 36,
+    "tail_aperture_conservative_radial_gap_m": 0.050042822667031195,
+    "no_image_dependencies": true,
+    "runtime_webgl_claim": false,
+    "continuous_mechanical_or_airworthiness_claim": false
+  },
+  "hashes": {
+    "assets/helicopter/README.md": {
+      "sha256": "d90adb985767094b90c55be2c7b271bc673abfc071a897f27a4aa159dc899501",
+      "bytes": 5525
+    },
+    "assets/helicopter/REFERENCE_NOTES.md": {
+      "sha256": "ff5d7a829469347bc942d930f9bbbc3abe622d3d6655f21166ad812b5f74dbd3",
+      "bytes": 1712
+    },
+    "assets/helicopter/Rotor_Blur_LOD.blend": {
+      "sha256": "eb5b5870ac720a229fcb771dd88a8e2910ef4a07b5cc12e7210176127361303e",
+      "bytes": 443636
+    },
+    "assets/helicopter/blur_validation.json": {
+      "sha256": "4d519c0bfeef0e918b3105149215623a1fde2fa505d5cf2853e915b166f119e4",
+      "bytes": 192
+    },
+    "assets/helicopter/civilian/Coastal_Twin_Civilian.blend": {
+      "sha256": "7819d384a212f34db6d967408c3f5ca352dfb6dbe7608f819b648c82575f2b41",
+      "bytes": 2184892
+    },
+    "assets/helicopter/civilian/glb_validation.json": {
+      "sha256": "a1ae2c2cc6750c6ba5612068ce4ed2ad39a89d2657ae40c70bfac8940d72d21b",
+      "bytes": 1363
+    },
+    "assets/helicopter/civilian/helicopter_civilian.glb": {
+      "sha256": "4531ce2759904352ed0ee4f976c5ddaaeb5a49073789ca588b0838c4d95a022b",
+      "bytes": 1183288
+    },
+    "assets/helicopter/civilian/manifest.json": {
+      "sha256": "e3f5fbb778b85fadb653f563e9072102dfa9978a2d26713b9d353793d88aad26",
+      "bytes": 4905
+    },
+    "assets/helicopter/civilian/mechanics_validation.json": {
+      "sha256": "0ec39ce420b2ebb0398151e7171fafcfd590f273d647694c5bd43484b2e35ae1",
+      "bytes": 15846
+    },
+    "assets/helicopter/civilian/native_validation.json": {
+      "sha256": "e611f0333b4ee7e3fe8bbca79593d607377e03e05485720488f9f6e09c6680eb",
+      "bytes": 5894
+    },
+    "assets/helicopter/civilian/preview_front.blend": {
+      "sha256": "306cc45206983e69396a9157360f8e173e04204cb09e41a13d28b15ad28b3c97",
+      "bytes": 3079312
+    },
+    "assets/helicopter/civilian/preview_front.png": {
+      "sha256": "7f899cd338ece5b664f1e989c2377ce9d0e4a711f514b86cc799c07b5ddfeb0d",
+      "bytes": 1372321
+    },
+    "assets/helicopter/civilian/preview_front_provenance.json": {
+      "sha256": "987d7f3dbac64504ffac4616a038060781f542e2ed61e0707a872250d858fdc5",
+      "bytes": 595
+    },
+    "assets/helicopter/civilian/preview_rear.blend": {
+      "sha256": "3c9d1baaa9c564cbee58fd2bfd214d5dfed05d50bb75ce8be8b641345cd36e85",
+      "bytes": 3082024
+    },
+    "assets/helicopter/civilian/preview_rear.png": {
+      "sha256": "5a76716da35b66c1e3731cfee46cf6594726f6b9b7e5ab632a401ceb847a5603",
+      "bytes": 1409759
+    },
+    "assets/helicopter/civilian/preview_rear_provenance.json": {
+      "sha256": "05b7b3bd362c9b4de6dc12da5f935ba3d8c11b55b3cc1ac98f760e8977fb8985",
+      "bytes": 596
+    },
+    "assets/helicopter/cleanup_helicopter_glb.py": {
+      "sha256": "8e4ad5bce875f746f532cda7aa8e615224c59350c80ec84ed9eee6ff4345d277",
+      "bytes": 3232
+    },
+    "assets/helicopter/helicopter_kit_manifest.json": {
+      "sha256": "8348804b4ce6a25a3230e4a50b93517c5561a3d12f0c923c83a88aaad42aa093",
+      "bytes": 7196
+    },
+    "assets/helicopter/helicopter_rotor_blur.glb": {
+      "sha256": "6bd44d31943050364b82f882bac602c29cc613a46923d7b2a9300c75be38e127",
+      "bytes": 10180
+    },
+    "assets/helicopter/police/Coastal_Twin_Police.blend": {
+      "sha256": "4bfcd916d3101ca670ef386fa2b5b77923c52813bc7fb6c166807089befcc94e",
+      "bytes": 2239160
+    },
+    "assets/helicopter/police/glb_validation.json": {
+      "sha256": "fdd6dbeb39f30d475572bf8419b3e2bcee51ecd5361216145f8f055b80357643",
+      "bytes": 1363
+    },
+    "assets/helicopter/police/helicopter_police.glb": {
+      "sha256": "7f8cdcb032c8f1f9fb08fc19a5b785b2957596aae7532bc7cc84d7e9f96b999b",
+      "bytes": 1180800
+    },
+    "assets/helicopter/police/manifest.json": {
+      "sha256": "c1d1c1c64a899b9f6a755609d3f5e3403d6ffe513fdbde156a1e08bc65c1a4ce",
+      "bytes": 4923
+    },
+    "assets/helicopter/police/mechanics_validation.json": {
+      "sha256": "c5556b284e6f693f25ad5e183a7350553e31992702a1b2e1be57c507e9c33934",
+      "bytes": 15846
+    },
+    "assets/helicopter/police/native_validation.json": {
+      "sha256": "0a205c398139f9caa363ba5e4ba75e5a8a0b2df8f0b2ed5cd78ddf1e32d52db4",
+      "bytes": 5894
+    },
+    "assets/helicopter/police/preview_detail.blend": {
+      "sha256": "85d349b64c0bd00b1691274532c4d815ccb7322d6a5667388ce1a703140099f5",
+      "bytes": 3104392
+    },
+    "assets/helicopter/police/preview_detail.png": {
+      "sha256": "ea7c91c8f250b7869b4289330f641611752c4edba9a5afaeb0bc2e29d480e8ac",
+      "bytes": 1558273
+    },
+    "assets/helicopter/police/preview_detail_provenance.json": {
+      "sha256": "fbaffbba9d62a90d388bb2f9b1e92893d8e6a38f4698467fc89fd1504d8d6775",
+      "bytes": 593
+    },
+    "assets/helicopter/police/preview_front.blend": {
+      "sha256": "57e644f9a57bc58df9d9adee34cf8926cd15d2aa2c89a8a30819ac0ddef2ab67",
+      "bytes": 3104392
+    },
+    "assets/helicopter/police/preview_front.png": {
+      "sha256": "bcb0f17bfc8094062c80952c6ebac37713a9cd605a2da73b882a9ae10c753727",
+      "bytes": 1377390
+    },
+    "assets/helicopter/police/preview_front_provenance.json": {
+      "sha256": "285eae840905068b320bc84f5cd25c22ac30cedc2530d1908f93be7f81dd5553",
+      "bytes": 593
+    },
+    "assets/helicopter/police/preview_rear.blend": {
+      "sha256": "8eb97d695168dd5212f4db40aec7abcc0000c840b287ff27033a16e433151021",
+      "bytes": 3107104
+    },
+    "assets/helicopter/police/preview_rear.png": {
+      "sha256": "6631a45aba33fdb107fea225e2a62bf97227b2577c0a93ae577de48649f7667b",
+      "bytes": 1413456
+    },
+    "assets/helicopter/police/preview_rear_provenance.json": {
+      "sha256": "5ed64e18f66cac512111775d1b6aa2c93d642b594c11d078c3ef7c5627a831ee",
+      "bytes": 594
+    },
+    "assets/helicopter/rotor_blur_manifest.json": {
+      "sha256": "1b4f5c4be27c78ea393d5e3f1825a3f2b9b40c7dd8d2358d3cba8270c09d4b4b",
+      "bytes": 1298
+    },
+    "assets/helicopter/validate_helicopter.mjs": {
+      "sha256": "00498e9e84581964166b15dbf095d70c4661e4bc5aadbaea3e861d2e68d9bae2",
+      "bytes": 5079
+    },
+    "blender/build_helicopter.py": {
+      "sha256": "b2a826ef8d9f72426466a4c6ff4dc9e08565d9e0325a44b5d5369d9bfa124a3f",
+      "bytes": 18402
+    },
+    "blender/freeze_helicopter.py": {
+      "sha256": "dfbc7b3d51bdc6091721372cc08376ecf73579432524d5b62a0475dceac67590",
+      "bytes": 5076
+    },
+    "blender/rebuild_car_helpers.py": {
+      "sha256": "4d3a06f5e4e30e2dee38d54c21ca462b32c163c32943ba04fdba52d47b505ddb",
+      "bytes": 16775
+    },
+    "blender/render_helicopter.py": {
+      "sha256": "769cd7a942e560403b37d4d1ea612a7f9e72f8889cf7863b9e3e507294c995fd",
+      "bytes": 3020
+    },
+    "blender/test_helicopter_mechanics.py": {
+      "sha256": "c7835e2f6438f98f73236622cf3cfeb6f2dc3ef99c5bb42862f8b5a8e9045402",
+      "bytes": 3072
+    },
+    "blender/test_helicopter_native.py": {
+      "sha256": "bc81f8be0202cc1c8e863ae53d609668a1ff12a705f7b4016cb21a27adcf1611",
+      "bytes": 3649
+    }
+  }
+}

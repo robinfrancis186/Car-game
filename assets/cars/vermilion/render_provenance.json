@@ -1,0 +1,19 @@
+{
+  "source_glb_sha256": "dd0b4111fd14951c995365dd89ed0adf5ee5857dabcfd84ccc864d27d34f9efe",
+  "images": {
+    "rear": {
+      "path": "assets/cars/vermilion/preview_rear.png",
+      "sha256": "e31b29038548578a6da004bb365b41fefb54f4024f37ef28739cec3364012913"
+    },
+    "front": {
+      "path": "assets/cars/vermilion/preview_front.png",
+      "sha256": "446d69cbaecdb3b818a0ced4fba3a3bbbd5d522686d5f6f9d6c4c0de4de21a04"
+    },
+    "thumb": {
+      "path": "assets/gallery_thumbnails/car_thumb_vermilion.png",
+      "sha256": "196827a272434fc89b16166ab59dd75d5a846f704edaf520780d3f66160a4571"
+    }
+  },
+  "source": "Actual final GLB imported into Blender. These are studio renders, not gameplay.",
+  "reconstruction": true
+}

@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00",
+  "checks": 364,
+  "failed_checks": [],
+  "scope": "Actual GLB fixed caliper versus alloy spokes/barrel/hub and ventilated rotor at4degree intervals over360degrees."
+}
