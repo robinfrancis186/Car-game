@@ -712,3 +712,7 @@ body.surface-test .pursuit-display{display:none;}
  .home-view .home-shortcuts .home-tile{gap:4px;padding:5px 3px}
  .home-view .home-shortcuts strong{font-size:8px}
 }
+
+/* Keep touch/keyboard pause available while the visible capture replaces driving. */
+.race-hud.capture-hud > :not(.race-actions):not(#status-message){display:none}
+.capture-hud #camera-button{display:none}
