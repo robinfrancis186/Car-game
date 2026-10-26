@@ -1,0 +1,47 @@
+[
+  {
+    "path": "assets/capture_humans/capture_officer_garment_fix.public.blend",
+    "bytes": 4980223,
+    "sha256": "b1be6d1dd76bffd80321959a8ca341e3867bba2ba6b6f603272f1737b1ec96d4",
+    "original_authoring_sha256": "76009ba6965adf5f67cac3c5bf39d4870a31f60a0cea54e282e45a6bd9e238b4",
+    "changed_fields": 2,
+    "changes": "NUL-terminated absolute metadata paths only; all other decompressed bytes identical",
+    "private_markers_remaining": 0
+  },
+  {
+    "path": "assets/capture_humans/exports/CaptureDriverMobile.public.blend",
+    "bytes": 4446807,
+    "sha256": "84f65bf035923015606200c5955fd0a54db06e074ca0475204199f5d9383596d",
+    "original_authoring_sha256": "a267578c5ef9a25e51cd241c161c59a8627ea55b6422ee81731b25edd943a5a3",
+    "changed_fields": 2,
+    "changes": "NUL-terminated absolute metadata paths only; all other decompressed bytes identical",
+    "private_markers_remaining": 0
+  },
+  {
+    "path": "assets/capture_humans/exports/CaptureDriverNear.public.blend",
+    "bytes": 5373832,
+    "sha256": "a4e7b5144858ac5e3ed4f3a84292479fb7ba5b98e213d93856153e5076fa48d0",
+    "original_authoring_sha256": "590fd998a9b2eb48d16ba2ab65897156e97af91ff9fb488edf4b6fae08096470",
+    "changed_fields": 2,
+    "changes": "NUL-terminated absolute metadata paths only; all other decompressed bytes identical",
+    "private_markers_remaining": 0
+  },
+  {
+    "path": "assets/capture_humans/exports/CaptureOfficerMobile.public.blend",
+    "bytes": 4490390,
+    "sha256": "c4d0cda954f34e6c244f53922eb589b4da989a947d628980815cb0da69bdd14b",
+    "original_authoring_sha256": "ce2d07c444eaf829d4e6fcb85ba99812cd770ca0ed2ebd1f4dee80787e9aff75",
+    "changed_fields": 2,
+    "changes": "NUL-terminated absolute metadata paths only; all other decompressed bytes identical",
+    "private_markers_remaining": 0
+  },
+  {
+    "path": "assets/capture_humans/exports/CaptureOfficerNear.public.blend",
+    "bytes": 5470632,
+    "sha256": "0e7b0cca18fc2a9a89c2bcdb2d9f8b0826a71316bc20edd8c5bfb39917f00a89",
+    "original_authoring_sha256": "88d85552669ecd56d73bcdd1241eef74191fff4c375f3b7da0c260d20a5e42d6",
+    "changed_fields": 2,
+    "changes": "NUL-terminated absolute metadata paths only; all other decompressed bytes identical",
+    "private_markers_remaining": 0
+  }
+]

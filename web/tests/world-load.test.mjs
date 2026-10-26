@@ -1,3 +1,4 @@
+import {imageHeader} from './capture-assets.mjs';
 // Full shipped-world loader and instance graph, without a GPU or browser.
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -5,7 +6,7 @@ import * as THREE from 'three';
 const directory=new URL('../public/assets/',import.meta.url);
 globalThis.document={baseURI:'http://localhost/'};globalThis.self=globalThis;
 // PNG header/dimension shim only: actual texture decoding is checked in Blender/browser.
-globalThis.createImageBitmap??=async(blob)=>{const b=Buffer.from(await blob.arrayBuffer());assert.equal(b.toString('hex',0,8),'89504e470d0a1a0a');return {width:b.readUInt32BE(16),height:b.readUInt32BE(20),close(){}};};
+globalThis.createImageBitmap??=imageHeader;
 globalThis.ProgressEvent=class ProgressEvent{constructor(type,fields){this.type=type;Object.assign(this,fields);}};
 const assets={};for(const name of await fs.readdir(directory)){if(!/\.(glb|json)$/.test(name))continue;const b=await fs.readFile(new URL(name,directory));assets[name]=`data:${name.endsWith('.glb')?'model/gltf-binary':'application/json'};base64,${b.toString('base64')}`;}
 globalThis.window={__MALABAR_ASSETS__:assets};

@@ -1,9 +1,11 @@
+import {captureAssets} from './capture-assets.mjs';
 // Real model + actual aircraft/car GLBs + current CoastRenderer camera, no GPU.
 import assert from 'node:assert/strict';import fs from 'node:fs/promises';import * as THREE from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 globalThis.document={baseURI:'http://localhost/'};globalThis.window={};
 const {CoastRenderer}=await import('../src/scene.js'),{GameModel}=await import('../src/gameplay.js'),{AirTrafficRenderer}=await import('../src/air-traffic.js');
 const root=new URL('../public/assets/',import.meta.url),loader=new GLTFLoader(),load=async name=>{const b=await fs.readFile(new URL(name,root));return(await loader.parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'')).scene;};
 const models=Object.fromEntries(await Promise.all(['car.glb','ArcadeBoostNozzle.glb','helicopter_civilian.glb','helicopter_police.glb','helicopter_rotor_blur.glb'].map(async n=>[n,await load(n)]))),carInfo=JSON.parse(await fs.readFile(new URL('car_manifest.json',root))),evidence=[];
+Object.assign(models,await captureAssets());
 function renderer(aspect){const r=Object.create(CoastRenderer.prototype);Object.assign(r,{models,carInfo,scene:new THREE.Scene(),cars:[],waterShaders:[],windShaders:[],environmentChunks:[],clock:0,world:{},camera:new THREE.PerspectiveCamera(63,aspect,.12,6500),sun:new THREE.DirectionalLight(),sky:new THREE.Object3D(),cameraMode:0,cameraReset:true,orbitYaw:0,orbitPitch:0,quality:'high',renderer:{render(){}}});r.addCar('#b61920',false);r.makeEffects();r.airTraffic=new AirTrafficRenderer(r.scene,{civilian:models['helicopter_civilian.glb'],police:models['helicopter_police.glb'],blur:models['helicopter_rotor_blur.glb']});return r;}
 for(const speed of [20,45,70])for(const aspect of [390/844,16/9]){
  const r=renderer(aspect),m=new GameModel([{x:0,y:.18,z:0},{x:10000,y:.18,z:0}],{airTraffic:true}).start('time-attack');m.state='racing';m.player.grounded=true;let visible=0,center=0,active=0;const frustum=new THREE.Frustum(),matrix=new THREE.Matrix4(),box=new THREE.Box3();

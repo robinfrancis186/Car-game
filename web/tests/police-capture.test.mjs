@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import * as THREE from 'three';
+import {captureAssets,captureTemplates} from './capture-assets.mjs';
 import {CaptureGameModel,CAPTURE_DURATION,capturePhase,sampleCapturePath,captureWalkPath,captureSegmentBlocked} from '../src/police-capture.js';
 import {PoliceCaptureScene} from '../src/police-capture-scene.js';
 import {refineCarPaint,refineFacade} from '../src/capture-materials.js';
@@ -28,7 +29,7 @@ for(const heading of [0,Math.PI/2,Math.PI,-Math.PI/2])for(const door of [-1,1]){
 }
 console.log('PASS vehicle-clear officer paths from both doors at four patrol headings.');
 for(const scenario of ['coast-sprint','time-attack','free-drive']){const q=new CaptureGameModel(route).start(scenario);assert.equal(q.capture,null);assert.equal(q.scenario.id,scenario);}
-const scene=new THREE.Scene(),visual=new PoliceCaptureScene(scene);const game=make();Object.assign(game.police[0],{x:game.player.x-5,z:game.player.z+2,y:game.player.y,speed:0});game._end('busted','BUSTED');
+const scene=new THREE.Scene(),visual=new PoliceCaptureScene(scene,captureTemplates(await captureAssets()));const game=make();Object.assign(game.police[0],{x:game.player.x-5,z:game.player.z+2,y:game.player.y,speed:0});game._end('busted','BUSTED');
 for(const aspect of [1440/900,390/844,320/568]){
  for(const elapsed of [.7,2.8,4.7,6.7,7.6]){
   game.capture.elapsed=elapsed;visual.update(game);assert(visual.group.visible);assert.equal(visual.officers.filter(o=>o.root.visible).length,2);assert.equal(visual.driver.root.visible,elapsed>3.3);
@@ -36,9 +37,10 @@ for(const aspect of [1440/900,390/844,320/568]){
   visual.group.traverse(o=>{if(o.isMesh){assert(o.geometry.attributes.position.array.every(Number.isFinite));assert(o.matrixWorld.elements.every(Number.isFinite));}});
   for(const actor of visual.officers){const p=actor.root.position.clone();p.y+=.9;p.project(camera);assert(Math.abs(p.x)<.95&&Math.abs(p.y)<.95,`officers remain in frame: aspect=${aspect}, t=${elapsed}, point=${p.toArray()}`);}
   assert.equal(visual.cuffs.visible,elapsed>=6.35);
-  if(elapsed>=6.7){visual.group.updateMatrixWorld(true);const cuff=visual.driver.root.localToWorld(new THREE.Vector3(0,.99,-.27));for(const arm of visual.officers[0].arms){const hand=arm.elbow.children.at(-1).getWorldPosition(new THREE.Vector3());assert(hand.distanceTo(cuff)<.07,'arresting officer visibly reaches the secured wrists');}}
+  if(elapsed>=6.7)for(const error of visual.diagnostics.contactErrors)assert(error<.025,`actual skinned wrists contact: ${error}`);
  }
 }
+for(const quality of ['high','balanced'])for(let t=.2;t<8;t+=.125){game.capture.elapsed=t;visual.update(game,{quality});assert.equal(visual.diagnostics.lod,quality==='high'?'near':'mobile');for(const actor of [...visual.officers,visual.driver])for(const bone of Object.values(actor.rig.bones))assert(bone.matrixWorld.elements.every(Number.isFinite));if(t>=6.7)for(const error of visual.diagnostics.contactErrors)assert(error<.025,`sampled wrist contact ${t}: ${error}`);}
 const count=visual.group.children.length;game._end('busted','repeat');visual.update(game);assert.equal(visual.group.children.length,count);
 visual.update(game,{menu:true});assert(!visual.group.visible);game.restart();visual.update(game);assert(!visual.group.visible);visual.dispose();assert(!scene.children.length);
 for(const t of [-1,0,.2,1,2])assert(Object.values(sampleCapturePath([{x:0,y:.18,z:0},{x:4,y:.6,z:5}],t)).every(Number.isFinite));

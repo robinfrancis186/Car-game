@@ -1,0 +1,146 @@
+[
+  {
+    "file": "CaptureOfficerNear.glb",
+    "bytes": 2549732,
+    "sha256": "527dea00518b96194b778f230ad748701dad8ecf813c885d06c10b564d01fdd9",
+    "triangles": 59799,
+    "draws": 12,
+    "vertices": 34738,
+    "bones": 53,
+    "texture_size": 1024,
+    "role": "Officer",
+    "lod": "Near",
+    "skin_base_color_factor": [
+      0.56,
+      0.37,
+      0.26,
+      1
+    ],
+    "protected_garments": [
+      {
+        "garment": "CPO fitted black leather belt",
+        "protected_vertices": 512,
+        "max_seam_drift_m": 0.0,
+        "pelvis_waist_vertices": 256
+      },
+      {
+        "garment": "Original short-sleeve uniform shirt",
+        "protected_vertices": 6345,
+        "max_seam_drift_m": 0.0,
+        "pelvis_waist_vertices": 512
+      },
+      {
+        "garment": "Original tailored uniform trousers",
+        "protected_vertices": 195,
+        "max_seam_drift_m": 0.0,
+        "pelvis_waist_vertices": 96
+      }
+    ],
+    "garment_lod_strategy": "near subdivided / mobile connected base; no garment edge collapse"
+  },
+  {
+    "file": "CaptureOfficerMobile.glb",
+    "bytes": 1099552,
+    "sha256": "5f35e80edb380e8a8d6e4a5501b15ee4fb724a9835ab6b78c3c7e9ebd46336ec",
+    "triangles": 23799,
+    "draws": 12,
+    "vertices": 15039,
+    "bones": 53,
+    "texture_size": 512,
+    "role": "Officer",
+    "lod": "Mobile",
+    "skin_base_color_factor": [
+      0.56,
+      0.37,
+      0.26,
+      1
+    ],
+    "protected_garments": [
+      {
+        "garment": "CPO fitted black leather belt",
+        "protected_vertices": 512,
+        "max_seam_drift_m": 0.0,
+        "pelvis_waist_vertices": 256
+      },
+      {
+        "garment": "Original short-sleeve uniform shirt",
+        "protected_vertices": 1641,
+        "max_seam_drift_m": 0.0,
+        "pelvis_waist_vertices": 158
+      },
+      {
+        "garment": "Original tailored uniform trousers",
+        "protected_vertices": 195,
+        "max_seam_drift_m": 0.0,
+        "pelvis_waist_vertices": 96
+      }
+    ],
+    "garment_lod_strategy": "near subdivided / mobile connected base; no garment edge collapse"
+  },
+  {
+    "file": "CaptureDriverNear.glb",
+    "bytes": 2252696,
+    "sha256": "6c1f70a57a5bf503f2e1a635a0da26f521901fed1dfe450cc26f164fde5ec514",
+    "triangles": 56308,
+    "draws": 9,
+    "vertices": 30207,
+    "bones": 53,
+    "texture_size": 1024,
+    "role": "Driver",
+    "lod": "Near",
+    "skin_base_color_factor": [
+      0.56,
+      0.37,
+      0.26,
+      1
+    ],
+    "protected_garments": [
+      {
+        "garment": "Original short-sleeve uniform shirt",
+        "protected_vertices": 6345,
+        "max_seam_drift_m": 0.0,
+        "pelvis_waist_vertices": 512
+      },
+      {
+        "garment": "Original tailored uniform trousers",
+        "protected_vertices": 195,
+        "max_seam_drift_m": 0.0,
+        "pelvis_waist_vertices": 96
+      }
+    ],
+    "garment_lod_strategy": "near subdivided / mobile connected base; no garment edge collapse"
+  },
+  {
+    "file": "CaptureDriverMobile.glb",
+    "bytes": 920196,
+    "sha256": "eeee87ac5389a043c858c5b2e6f29c625c95fd759cf8d6bb7eed0076127507b7",
+    "triangles": 21870,
+    "draws": 9,
+    "vertices": 12313,
+    "bones": 53,
+    "texture_size": 512,
+    "role": "Driver",
+    "lod": "Mobile",
+    "skin_base_color_factor": [
+      0.56,
+      0.37,
+      0.26,
+      1
+    ],
+    "protected_garments": [
+      {
+        "garment": "Original short-sleeve uniform shirt",
+        "protected_vertices": 1641,
+        "max_seam_drift_m": 0.0,
+        "pelvis_waist_vertices": 158
+      },
+      {
+        "garment": "Original tailored uniform trousers",
+        "protected_vertices": 195,
+        "max_seam_drift_m": 0.0,
+        "pelvis_waist_vertices": 96
+      }
+    ],
+    "garment_lod_strategy": "near subdivided / mobile connected base; no garment edge collapse"
+  }
+]

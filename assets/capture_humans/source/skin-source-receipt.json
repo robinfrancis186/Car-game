@@ -1,0 +1,24 @@
+[
+  {
+    "name": "skins/middleage_asian_male/middleage_asian_male.mhmat",
+    "compressed": 704,
+    "bytes": 1463,
+    "method": 8,
+    "crc": 496763690,
+    "offset": 11886602,
+    "sha256": "341a041eeb9c4bb51133fafb4d61e859a36dbd142c75c7cef4531606143c4e22",
+    "archive_url": "https://files2.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip",
+    "license_scope": "Publisher system assets CC0; inspect accompanying mhmat before use"
+  },
+  {
+    "name": "skins/middleage_asian_male/middleage_lightskinned_male_diffuse2.png",
+    "compressed": 3726706,
+    "bytes": 3730636,
+    "method": 8,
+    "crc": 838396536,
+    "offset": 11887417,
+    "sha256": "e897c4cc1b6ad5d10a7d2b2be92402feda4e772e6582dfaf0a1e8fc4621d8097",
+    "archive_url": "https://files2.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip",
+    "license_scope": "Publisher system assets CC0; inspect accompanying mhmat before use"
+  }
+]

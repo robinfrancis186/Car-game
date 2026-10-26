@@ -1,3 +1,4 @@
+import {imageHeader} from './capture-assets.mjs';
 // Actual shipped GLBs, analytic contact model and renderer scene graph; no GPU.
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -5,7 +6,7 @@ import * as THREE from 'three';
 import {StuntGameModel} from '../src/stunt-model.js';
 import {CAR_IDS} from '../src/garage.js';
 globalThis.document={baseURI:'http://localhost/'};globalThis.self=globalThis;
-globalThis.createImageBitmap??=async blob=>{const b=Buffer.from(await blob.arrayBuffer());assert.equal(b.toString('hex',0,8),'89504e470d0a1a0a');return{width:b.readUInt32BE(16),height:b.readUInt32BE(20),close(){}};};
+globalThis.createImageBitmap??=imageHeader;
 globalThis.ProgressEvent=class{constructor(type,fields){this.type=type;Object.assign(this,fields);}};
 const directory=new URL('../public/assets/',import.meta.url),assets={};
 for(const n of await fs.readdir(directory)){if(!/\.(glb|json)$/.test(n))continue;const b=await fs.readFile(new URL(n,directory));assets[n]=`data:${n.endsWith('.glb')?'model/gltf-binary':'application/json'};base64,${b.toString('base64')}`;}

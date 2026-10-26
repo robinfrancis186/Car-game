@@ -1,0 +1,44 @@
+[
+  {
+    "path": "LICENSE.md",
+    "url": "https://raw.githubusercontent.com/makehumancommunity/mpfb2/v2.0.18/LICENSE.md",
+    "bytes": 3188,
+    "sha256": "5cefb60680cb9efd4550a2e65d719021cfbec9dad3658481d11d48ae863ce04d"
+  },
+  {
+    "path": "LICENSE.ASSETS.md",
+    "url": "https://raw.githubusercontent.com/makehumancommunity/mpfb2/v2.0.18/LICENSE.ASSETS.md",
+    "bytes": 6962,
+    "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c"
+  },
+  {
+    "path": "src/mpfb/data/3dobjs/base.obj",
+    "url": "https://raw.githubusercontent.com/makehumancommunity/mpfb2/v2.0.18/src/mpfb/data/3dobjs/base.obj",
+    "bytes": 1749303,
+    "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c"
+  },
+  {
+    "path": "src/mpfb/data/mesh_metadata/basemesh_vertex_groups.json",
+    "url": "https://raw.githubusercontent.com/makehumancommunity/mpfb2/v2.0.18/src/mpfb/data/mesh_metadata/basemesh_vertex_groups.json",
+    "bytes": 81984,
+    "sha256": "8cb1417bc55ae5ec8aa99f90734e81ed5fbb556511ff6a2c00e0534b70911444"
+  },
+  {
+    "path": "src/mpfb/data/rigs/standard/rig.game_engine.json",
+    "url": "https://raw.githubusercontent.com/makehumancommunity/mpfb2/v2.0.18/src/mpfb/data/rigs/standard/rig.game_engine.json",
+    "bytes": 40936,
+    "sha256": "b324ddb4b707721c19630bfadb87c3e3b38eed3b6e4590bb3cead43ea918f799"
+  },
+  {
+    "path": "src/mpfb/data/rigs/standard/weights.game_engine.json",
+    "url": "https://raw.githubusercontent.com/makehumancommunity/mpfb2/v2.0.18/src/mpfb/data/rigs/standard/weights.game_engine.json",
+    "bytes": 3026778,
+    "sha256": "9f4a773e74ce5ba08415b4f30070338e9f75bae5971b5075b10cd6b9caa58473"
+  },
+  {
+    "path": "src/mpfb/data/targets/macrodetails/asian-male-young.target.gz",
+    "url": "https://raw.githubusercontent.com/makehumancommunity/mpfb2/v2.0.18/src/mpfb/data/targets/macrodetails/asian-male-young.target.gz",
+    "bytes": 130005,
+    "sha256": "0928ed8b9f08f60afb9884cf9e9f33a939ed3a85d7f136de9ccc88a76981d6d7"
+  }
+]

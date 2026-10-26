@@ -64,7 +64,7 @@ export class CoastRenderer{
   const hasHighlandDetail=this.world.id==='highlands';
   if(hasHighlandDetail)this.teaDetail=await(await fetch(assetURL('tea_detail_rows.json'))).json();
   const propNames=[...new Set(this.world.prop_instances.map(p=>p.asset))];const hasCanalDetail=propNames.includes('CanalRainTree');
-  const files=[...new Set([...this.world.course_meshes.map(p=>p.file),...propNames.map(n=>n+'.glb'),...Object.values(CAR_CATALOG).map(c=>c.asset),'police_lightbar.glb','CheckpointGate.glb','ServiceShowroomLoft.glb','CoconutPalm_A.glb','CoconutPalm_B.glb','ArcadeBoostNozzle.glb','ArcadeCoin.glb',...(hasCanalDetail?['CanalRainTreeFar.glb']:[]),...(hasHighlandDetail?['HighlandShadeTreeNear.glb','TeaLeafCluster.glb']:[]),...(this.world.transit_routes||[]).map(r=>r.asset+'.glb'),...(this.world.air_traffic?['helicopter_civilian.glb','helicopter_police.glb','helicopter_rotor_blur.glb']:[])])];
+  const files=[...new Set([...this.world.course_meshes.map(p=>p.file),...propNames.map(n=>n+'.glb'),...Object.values(CAR_CATALOG).map(c=>c.asset),'CaptureOfficerNear.glb','CaptureOfficerMobile.glb','CaptureDriverNear.glb','CaptureDriverMobile.glb','police_lightbar.glb','CheckpointGate.glb','ServiceShowroomLoft.glb','CoconutPalm_A.glb','CoconutPalm_B.glb','ArcadeBoostNozzle.glb','ArcadeCoin.glb',...(hasCanalDetail?['CanalRainTreeFar.glb']:[]),...(hasHighlandDetail?['HighlandShadeTreeNear.glb','TeaLeafCluster.glb']:[]),...(this.world.transit_routes||[]).map(r=>r.asset+'.glb'),...(this.world.air_traffic?['helicopter_civilian.glb','helicopter_police.glb','helicopter_rotor_blur.glb']:[])])];
   const loads=await Promise.all(files.map(async file=>[file,(await loader.loadAsync(assetURL(file))).scene]));
   this.models=Object.fromEntries(loads);
   for(const entry of this.world.course_meshes){
@@ -174,7 +174,7 @@ export class CoastRenderer{
   }
  }
  makeEffects(){
-  this.captureScene=new PoliceCaptureScene(this.scene);
+  this.captureScene=new PoliceCaptureScene(this.scene,{officer:{near:this.models['CaptureOfficerNear.glb'],mobile:this.models['CaptureOfficerMobile.glb']},driver:{near:this.models['CaptureDriverNear.glb'],mobile:this.models['CaptureDriverMobile.glb']}});
   this.attachJets(this.cars[0]);
   const texels=new Uint8Array(32*32*4);for(let y=0;y<32;y++)for(let x=0;x<32;x++){const i=(y*32+x)*4,r=Math.hypot((x-15.5)/15.5,(y-15.5)/15.5);texels[i]=texels[i+1]=texels[i+2]=255;texels[i+3]=Math.round(255*Math.pow(Math.max(0,1-r),1.4));}this.particleMap=new THREE.DataTexture(texels,32,32);this.particleMap.magFilter=THREE.LinearFilter;this.particleMap.minFilter=THREE.LinearFilter;this.particleMap.needsUpdate=true;
   const geo=new THREE.BufferGeometry();this.dustPositions=new Float32Array(45*3);geo.setAttribute('position',new THREE.BufferAttribute(this.dustPositions,3));this.dust=new THREE.Points(geo,new THREE.PointsMaterial({color:'#d1bc93',size:.25,map:this.particleMap,transparent:true,opacity:.24,depthWrite:false}));this.dust.frustumCulled=false;this.scene.add(this.dust);
@@ -186,7 +186,7 @@ export class CoastRenderer{
   const worldDt=menu||!model.paused?dt:0;this.clock+=worldDt;if(this.effectModel!==model||(model.state==='countdown'&&this.effectState!=='countdown')){this.effectModel=model;this.lastEffectId=0;this.vaporAge=10;}this.effectState=model.state;for(const event of model.events||[]){if(event.id<=this.lastEffectId)continue;this.lastEffectId=event.id;if(event.type==='landing'){this.vaporAge=0;this.vaporCenter.set(event.x,event.y,event.z);}}this.vaporAge+=worldDt;this.vapor.visible=!menu&&this.vaporAge<1.35;if(this.vapor.visible){const age=this.vaporAge;for(let i=0;i<64;i++){const a=i*2.39996,r=(.4+age*4)*(1+(i%5)*.12);this.vaporPositions[i*3]=this.vaporCenter.x+Math.cos(a)*r;this.vaporPositions[i*3+1]=this.vaporCenter.y+.06+age*.22+(i%7)*.03;this.vaporPositions[i*3+2]=this.vaporCenter.z+Math.sin(a)*r;}this.vapor.geometry.attributes.position.needsUpdate=true;this.vapor.material.opacity=.24*(1-age/1.35);}
   if(this.sky.material?.uniforms?.cloudTime){this.sky.material.uniforms.cloudTime.value=this.clock;this.sky.material.uniforms.night.value=this.night?1:0;}
   this.collectibles?.update(model,dt,{menu});
-  this.captureScene?.update(model,{menu});
+  this.captureScene?.update(model,{menu,quality:this.quality});
   this.waterShaders.forEach(s=>s.uniforms.waterTime.value=this.clock);this.windShaders.forEach(s=>s.uniforms.windTime.value=this.clock);
   if(!menu&&this.cars[0])applyUpgradeVisuals(this.cars[0],model.upgrades);
   let states=[model.player,...model.rivals,...model.police];
