@@ -1,12 +1,21 @@
 {
-  "release": "V17 R3.6",
+  "release": "V17 R3.7",
   "deployment_owner": "parent thread",
   "project_id": "prj_wpjGOHOOw8yWEFnoKJeBe8ZTu6d5",
   "production_url": "https://malabar-hot-coast.vercel.app/",
   "build_command": "node tools/build-static.mjs",
   "output_directory": "dist/vercel",
-  "deployment_status": "Not deployed by this executor",
-  "rollback_deployment_id": "dpl_4w3s2tzYtKpaJMrdL6dvbx7iEmkD",
+  "deployment_status": "Awaiting parent publication and live verification; not deployed by this executor",
+  "source_base_commit": "b04f65632fba1abdc2aec685126f8e17879bed83",
+  "runtime_files": 175,
+  "runtime_tree_sha256": "c2368a5b23dc9c67b84da25a6917c82ce11391148af61c2d684ed9e3cca25016",
+  "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
+  "full_runtime_tree_sha256": "179f42df05303440170cbb81ccfa32f9bcd663843085ec7ca3bce539ac1b83d2",
+  "full_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, including release.json",
+  "rollback_release": "V17 R3.6",
+  "rollback_source_commit": "b04f65632fba1abdc2aec685126f8e17879bed83",
+  "rollback_deployment_id": null,
+  "rollback_owner": "parent thread; retain current verified R3.6 deployment",
   "mapping": [
     {
       "public_path": "LICENSES.md",
@@ -17,8 +26,8 @@
     {
       "public_path": "index.html",
       "source_path": "web/index.html",
-      "bytes": 39438,
-      "sha256": "2f89e4dc6548e3bfd16e5495af3184eb8ffba39203d4edb22cbd24d310ce3097"
+      "bytes": 41022,
+      "sha256": "323b125dc9ab545dab450eb5607db5440cbf40cf0035923995e964718487276b"
     },
     {
       "public_path": "licenses/OFL.txt",
@@ -645,6 +654,78 @@
       "sha256": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48"
     },
     {
+      "public_path": "public/assets/map-previews/bird-rock.png",
+      "source_path": "web/public/assets/map-previews/bird-rock.png",
+      "bytes": 278912,
+      "sha256": "9551660b0b7e1e3b65333a1446ff4093646ddfc139c30c7580506b4fef0029e5"
+    },
+    {
+      "public_path": "public/assets/map-previews/canal-garden.png",
+      "source_path": "web/public/assets/map-previews/canal-garden.png",
+      "bytes": 218577,
+      "sha256": "76c23738b918a726d11690662112b68f22a29c94a5989d244b27ab09a3626315"
+    },
+    {
+      "public_path": "public/assets/map-previews/coastal-villages.png",
+      "source_path": "web/public/assets/map-previews/coastal-villages.png",
+      "bytes": 304631,
+      "sha256": "754d6f50ddf9f9ee2d767499ffb973864f8fed101fcdf4bbaad468685400d368"
+    },
+    {
+      "public_path": "public/assets/map-previews/divided-highway.png",
+      "source_path": "web/public/assets/map-previews/divided-highway.png",
+      "bytes": 228428,
+      "sha256": "753028ef16fb0e74b4bee7b221e16725a092f39089e94521fccfb214ed1fac54"
+    },
+    {
+      "public_path": "public/assets/map-previews/estate-switchbacks.png",
+      "source_path": "web/public/assets/map-previews/estate-switchbacks.png",
+      "bytes": 369463,
+      "sha256": "429a710b20fe5a3f02d357e03429699cf851d26f4c16c70d258f510b7bbf9a0d"
+    },
+    {
+      "public_path": "public/assets/map-previews/harbour-avenue.png",
+      "source_path": "web/public/assets/map-previews/harbour-avenue.png",
+      "bytes": 261858,
+      "sha256": "34f2e89815d2efec46571815572c0bad647d903d0e6cccf995d52baac66e5cc0"
+    },
+    {
+      "public_path": "public/assets/map-previews/harbour-wall-run.png",
+      "source_path": "web/public/assets/map-previews/harbour-wall-run.png",
+      "bytes": 79019,
+      "sha256": "5032871b0634b6f251c06ff286b5cfa9c445ddad1097fcaed7f667d72913cd90"
+    },
+    {
+      "public_path": "public/assets/map-previews/metro-market.png",
+      "source_path": "web/public/assets/map-previews/metro-market.png",
+      "bytes": 220576,
+      "sha256": "5cb3ad4f77912cb065cbd4505f87ed7a0cb5818fbaa59b5da3629666e18ae6b9"
+    },
+    {
+      "public_path": "public/assets/map-previews/provenance.json",
+      "source_path": "web/public/assets/map-previews/provenance.json",
+      "bytes": 5321,
+      "sha256": "909b505aa617e77f4044bd7108cde4f34f6c70f46a1483a5ca2c6ecb852ab398"
+    },
+    {
+      "public_path": "public/assets/map-previews/skyline-flyover.png",
+      "source_path": "web/public/assets/map-previews/skyline-flyover.png",
+      "bytes": 310112,
+      "sha256": "1235cf2137b4d6abc864df12c7ed3ebd7c929f9010dee49d7bafd9500059505f"
+    },
+    {
+      "public_path": "public/assets/map-previews/tea-bends.png",
+      "source_path": "web/public/assets/map-previews/tea-bends.png",
+      "bytes": 323970,
+      "sha256": "c0d9658f8795ff65c7813a8eecc7a46a7d565d057ab7fe36800356720932319f"
+    },
+    {
+      "public_path": "public/assets/map-previews/water-transit.png",
+      "source_path": "web/public/assets/map-previews/water-transit.png",
+      "bytes": 175011,
+      "sha256": "11b1bd651f30bee6422f1229d63573b47e5c40a98b614f348d4f25f0db6869ef"
+    },
+    {
       "public_path": "public/assets/police_lightbar.glb",
       "source_path": "web/public/assets/police_lightbar.glb",
       "bytes": 18356,
@@ -755,8 +836,8 @@
     {
       "public_path": "release.json",
       "source_path": "deployment/release.json",
-      "bytes": 1206,
-      "sha256": "e32c42e3252af164d5a65a93a561a3fb648653aa5b02a3deefbc9dc49208857a"
+      "bytes": 2055,
+      "sha256": "e2767217dd60051ee81ad507c4a6422dc61316f4fb57ad4b1fece39dfa5adc7a"
     },
     {
       "public_path": "src/air-traffic.js",
@@ -845,8 +926,14 @@
     {
       "public_path": "src/main.js",
       "source_path": "web/src/main.js",
-      "bytes": 74725,
-      "sha256": "bd4bc091c26cf88955526ad8b2255e9e93f172f38b558404957d1698c2f267b6"
+      "bytes": 77384,
+      "sha256": "66c40e75156f94f84adad3f4a514748949d10ed59c7d0c924fd873e4eb1b14e8"
+    },
+    {
+      "public_path": "src/map-destinations.js",
+      "source_path": "web/src/map-destinations.js",
+      "bytes": 994,
+      "sha256": "70b05a1c39d7e01a3a86693b6b7990f4608b092bc474a65011e38838f0d91701"
     },
     {
       "public_path": "src/police-air-support.js",
@@ -929,8 +1016,8 @@
     {
       "public_path": "src/style.css",
       "source_path": "web/src/style.css",
-      "bytes": 111445,
-      "sha256": "e7b5fafdeb214362b3374f942b172e538f467c6c2f8a8acb02343093d079b22a"
+      "bytes": 115230,
+      "sha256": "6e175c75ee6ab127f8042296318819ba8eacd04e028914d8e4d3386f6d2b9109"
     },
     {
       "public_path": "src/surface-camera.js",

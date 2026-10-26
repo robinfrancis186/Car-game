@@ -1,0 +1,42 @@
+{
+  "release": "V17 R3.6",
+  "status": "Local validation passed; Git publication and production verification recorded separately",
+  "aggregate_stages": 58,
+  "aggregate_exit_code": 0,
+  "grip_poses": 220,
+  "deformed_skin_comparisons": 56,
+  "final_skin_proximity_mm": [
+    0.9,
+    5.2
+  ],
+  "sampled_skin_penetrations": 0,
+  "browser": "Installed Chrome on Apple M1; desktop1440x900 and portrait390x844; both roadside staging orientations",
+  "browser_errors": 0,
+  "browser_warnings": 0,
+  "natural_eight_second_capture_and_replay_interruption": "PASS",
+  "runtime_tree_sha256": "1e1615baa305655ea0c99f4b62994a9b54520c27900dbf57c9c0a657e229c81b",
+  "standalone_bytes": 81362084,
+  "standalone_sha256": "10c7afccbf75cbac13f84f94754786a7b949f2cfd7519b60971fbcfd96d82a34",
+  "assets_embedded": 111,
+  "capture_triangles": {
+    "near": 176206,
+    "mobile": 69768
+  },
+  "added_draws": 36,
+  "observed_frame_interval_ms": {
+    "median": 16.7,
+    "p95_range": [
+      16.7,
+      16.8
+    ]
+  },
+  "pose_cpu_median_ms_range": [
+    0.5,
+    0.6
+  ],
+  "performance_limits": "Pose CPU is separate from frame cadence. Phone hardware/Safari untested; mobile budget provisional.",
+  "reference_photos_distributed": false,
+  "native_sources": "Public copies changed absolute metadata strings only; runtime GLBs unchanged from validated candidate.",
+  "pinned_licence_preserved_exact": true,
+  "diff_check_exception": "Unmodified upstream source/LICENSE.md heading underline and whitespace; exact publisher SHA-256 verified."
+}

@@ -1,0 +1,14 @@
+{
+  "game": "MALABAR: Hot Coast",
+  "version": "V17 R3.6",
+  "change": "Exactly two rigged CPO officers exit a patrol, approach and gently secure the driver before the existing Caught result. Connected garment LODs and authored skin tint are preserved.",
+  "leaderboard_scope": "This device/browser only; not an online global leaderboard.",
+  "runtime_tree_sha256": "1e1615baa305655ea0c99f4b62994a9b54520c27900dbf57c9c0a657e229c81b",
+  "tested_standalone_sha256": "10c7afccbf75cbac13f84f94754786a7b949f2cfd7519b60971fbcfd96d82a34",
+  "runtime_format": "Byte-preserving split runtime; build with node tools/build-static.mjs",
+  "local_checks": "58 aggregate stages passed; 220 near/mobile grip poses;56 actual deformed-skin comparisons; desktop/portrait Chrome natural capture, replay and interruption passed without errors/warnings.",
+  "limitations": "No physical-phone, Safari or audible-audio acceptance. Sampled contact is not continuous full-character collision physics. Art remains stylized.",
+  "production_state": "Validated source; production deployment owned by parent and pending verification.",
+  "rollback_release": "V17 R3.5",
+  "rollback_deployment_id": "dpl_4w3s2tzYtKpaJMrdL6dvbx7iEmkD"
+}

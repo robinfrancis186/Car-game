@@ -1,0 +1,139 @@
+{
+  "release": "V17 R3.7",
+  "scope": "Exact tested Maps source bytes before publication bookkeeping; no private reference media",
+  "base_commit": "b04f65632fba1abdc2aec685126f8e17879bed83",
+  "tested_package_sha256": "f47d2ac1af5e8c39663fa54c7f7e72b256ad54c35411a9fc2bd9fb98e9095297",
+  "source_tree_sha256": "162aa0994dd63adf1b030cc393565bc7f8debcd4038a4933e7201487ecca2204",
+  "files": [
+    {
+      "path": "tools/audit_standalone.py",
+      "bytes": 1648,
+      "sha256": "fa5daef52a6c83b06044888c72cf3f91978a8a05464f49ee004899853089a163"
+    },
+    {
+      "path": "tools/ui-review-r3-1/preview-smoke-harness.mjs",
+      "bytes": 11994,
+      "sha256": "c0bd56ac949c1f0c1ee2a0f8acce041e82b98ef4b07b7b386138c4820dbb77e2"
+    },
+    {
+      "path": "tools/verify-standalone.py",
+      "bytes": 2729,
+      "sha256": "9ba1e98162ef3a8534d87fdc5265e0fa4410273ad5ff93ea3e60a7c470f07a00"
+    },
+    {
+      "path": "web/build-standalone.mjs",
+      "bytes": 2482,
+      "sha256": "c4ed060d5644878ed65d28595830e689099d4c43cb360c9b4a80b81680b6ba1e"
+    },
+    {
+      "path": "web/build-ui-preview.mjs",
+      "bytes": 38234,
+      "sha256": "55d18f6ae9264cce5cbe68c6d2062fe76467e58275f3adaa971901bac168c21c"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 41022,
+      "sha256": "323b125dc9ab545dab450eb5607db5440cbf40cf0035923995e964718487276b"
+    },
+    {
+      "path": "web/package.json",
+      "bytes": 2820,
+      "sha256": "9b9f362a877362d4ddea0a59ce1710d67b7577b76d5ab5df6d5e148cfb1a325d"
+    },
+    {
+      "path": "web/public/assets/map-previews/bird-rock.png",
+      "bytes": 278912,
+      "sha256": "9551660b0b7e1e3b65333a1446ff4093646ddfc139c30c7580506b4fef0029e5"
+    },
+    {
+      "path": "web/public/assets/map-previews/canal-garden.png",
+      "bytes": 218577,
+      "sha256": "76c23738b918a726d11690662112b68f22a29c94a5989d244b27ab09a3626315"
+    },
+    {
+      "path": "web/public/assets/map-previews/coastal-villages.png",
+      "bytes": 304631,
+      "sha256": "754d6f50ddf9f9ee2d767499ffb973864f8fed101fcdf4bbaad468685400d368"
+    },
+    {
+      "path": "web/public/assets/map-previews/divided-highway.png",
+      "bytes": 228428,
+      "sha256": "753028ef16fb0e74b4bee7b221e16725a092f39089e94521fccfb214ed1fac54"
+    },
+    {
+      "path": "web/public/assets/map-previews/estate-switchbacks.png",
+      "bytes": 369463,
+      "sha256": "429a710b20fe5a3f02d357e03429699cf851d26f4c16c70d258f510b7bbf9a0d"
+    },
+    {
+      "path": "web/public/assets/map-previews/harbour-avenue.png",
+      "bytes": 261858,
+      "sha256": "34f2e89815d2efec46571815572c0bad647d903d0e6cccf995d52baac66e5cc0"
+    },
+    {
+      "path": "web/public/assets/map-previews/harbour-wall-run.png",
+      "bytes": 79019,
+      "sha256": "5032871b0634b6f251c06ff286b5cfa9c445ddad1097fcaed7f667d72913cd90"
+    },
+    {
+      "path": "web/public/assets/map-previews/metro-market.png",
+      "bytes": 220576,
+      "sha256": "5cb3ad4f77912cb065cbd4505f87ed7a0cb5818fbaa59b5da3629666e18ae6b9"
+    },
+    {
+      "path": "web/public/assets/map-previews/provenance.json",
+      "bytes": 5321,
+      "sha256": "909b505aa617e77f4044bd7108cde4f34f6c70f46a1483a5ca2c6ecb852ab398"
+    },
+    {
+      "path": "web/public/assets/map-previews/skyline-flyover.png",
+      "bytes": 310112,
+      "sha256": "1235cf2137b4d6abc864df12c7ed3ebd7c929f9010dee49d7bafd9500059505f"
+    },
+    {
+      "path": "web/public/assets/map-previews/tea-bends.png",
+      "bytes": 323970,
+      "sha256": "c0d9658f8795ff65c7813a8eecc7a46a7d565d057ab7fe36800356720932319f"
+    },
+    {
+      "path": "web/public/assets/map-previews/water-transit.png",
+      "bytes": 175011,
+      "sha256": "11b1bd651f30bee6422f1229d63573b47e5c40a98b614f348d4f25f0db6869ef"
+    },
+    {
+      "path": "web/src/main.js",
+      "bytes": 77384,
+      "sha256": "66c40e75156f94f84adad3f4a514748949d10ed59c7d0c924fd873e4eb1b14e8"
+    },
+    {
+      "path": "web/src/map-destinations.js",
+      "bytes": 994,
+      "sha256": "70b05a1c39d7e01a3a86693b6b7990f4608b092bc474a65011e38838f0d91701"
+    },
+    {
+      "path": "web/src/style.css",
+      "bytes": 115230,
+      "sha256": "6e175c75ee6ab127f8042296318819ba8eacd04e028914d8e4d3386f6d2b9109"
+    },
+    {
+      "path": "web/tests/home-layout.test.mjs",
+      "bytes": 6618,
+      "sha256": "b3e8249f3c8cbfdc4e586965b7296412516b6a621a801016abde9da6c90062f0"
+    },
+    {
+      "path": "web/tests/home-setup-controller.test.mjs",
+      "bytes": 20661,
+      "sha256": "b7fb6832c28a6a21e171838678077b2af5d580c24916b1d2b6d3b5ff9bd65290"
+    },
+    {
+      "path": "web/tests/map-destinations.test.mjs",
+      "bytes": 2013,
+      "sha256": "deff68af3cfb3501d91186ba23bef222635b99f522872f04935a26601c420a97"
+    },
+    {
+      "path": "web/tests/ui-controller.test.mjs",
+      "bytes": 35353,
+      "sha256": "820fdba658fa75a4ee2b1ac881d8794d658cb33aead6ec9c237e7ec5a15a4598"
+    }
+  ]
+}

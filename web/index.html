@@ -115,6 +115,17 @@
     <a class="race-attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>
   </section>
 
+  <section id="maps-panel" class="modal-screen maps-screen" role="dialog" aria-modal="true" aria-labelledby="maps-title" hidden>
+    <div class="maps-shell">
+      <header class="maps-heading"><div><p class="maps-kicker">MALABAR / EXPLORE</p><h2 id="maps-title">Maps</h2></div><button id="maps-close" class="text-button" type="button" aria-label="Close maps and return Home">BACK</button></header>
+      <p class="maps-intro">Choose a destination. Explore the places within each world.</p>
+      <section class="maps-group" aria-labelledby="maps-coast-title"><div class="maps-group-heading"><h3 id="maps-coast-title">Hot Coast</h3><span>6 DESTINATIONS</span></div><div id="maps-coast" class="maps-grid" role="group" aria-label="Hot Coast destinations"></div></section>
+      <section class="maps-group" aria-labelledby="maps-highlands-title"><div class="maps-group-heading"><h3 id="maps-highlands-title">Highland Run</h3><span>4 DESTINATIONS</span></div><div id="maps-highlands" class="maps-grid" role="group" aria-label="Highland Run destinations"></div></section>
+      <section class="maps-group" aria-labelledby="maps-surface-title"><div class="maps-group-heading"><h3 id="maps-surface-title">Harbour Wall Run</h3><span>EXPERIMENTAL</span></div><p id="maps-surface-note" class="maps-experimental-note">Solo surface test. No races, coins or rewards.</p><div id="maps-surface-test" class="maps-grid" role="group" aria-label="Experimental solo destination"></div></section>
+      <p class="maps-footnote">Choose a destination, then press Play from Home.</p>
+    </div>
+  </section>
+
   <section id="story-panel" class="modal-screen story-screen" role="dialog" aria-modal="true" aria-labelledby="story-title" hidden>
     <div class="story-shell">
       <header class="story-heading"><div><p class="story-kicker">MALABAR</p><h2 id="story-title">Story</h2></div><button id="story-close" class="text-button" type="button" aria-label="Close story and return Home">BACK</button></header>

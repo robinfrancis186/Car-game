@@ -1,0 +1,230 @@
+{
+  "generation": "destination-preview-4-canal-waterfront",
+  "base": "b04f65632fba1abdc2aec685126f8e17879bed83",
+  "method": "Actual game geometry/materials, canonical Explore start and explicit real-scene camera, installed Chrome at 512×512. No invented scenery, lighting experiment or external assets.",
+  "previews": [
+    {
+      "id": "coastal-villages",
+      "track": "coast",
+      "startS": 165,
+      "name": "Coastal Villages",
+      "world": "Kappil Coast",
+      "canonicalStart": "Coastal Villages",
+      "position": [
+        90,
+        48,
+        2
+      ],
+      "target": [
+        30,
+        3,
+        -70
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/coastal-villages.png"
+    },
+    {
+      "id": "metro-market",
+      "track": "coast",
+      "startS": 2008,
+      "name": "Metro Market / Station",
+      "world": "Kappil Coast",
+      "canonicalStart": "Metro Market / Station",
+      "position": [
+        -939.886,
+        40,
+        -1582.97
+      ],
+      "target": [
+        -897.886,
+        15,
+        -1630.97
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/metro-market.png"
+    },
+    {
+      "id": "skyline-flyover",
+      "track": "coast",
+      "startS": 2530,
+      "name": "Skyline Flyover",
+      "world": "Kappil Coast",
+      "canonicalStart": "Skyline Flyover",
+      "position": [
+        -1354.207959170481,
+        36,
+        -1932.7553625332794
+      ],
+      "target": [
+        -1399.207959170481,
+        12,
+        -1962.7553625332794
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/skyline-flyover.png"
+    },
+    {
+      "id": "water-transit",
+      "track": "coast",
+      "startS": 3180,
+      "name": "Water Transit / Harbor",
+      "world": "Kappil Coast",
+      "canonicalStart": "Water Transit / Harbor",
+      "position": [
+        -1490,
+        24.5,
+        -2348
+      ],
+      "target": [
+        -1530,
+        2.5,
+        -2380
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/water-transit.png"
+    },
+    {
+      "id": "harbour-avenue",
+      "track": "coast",
+      "startS": 4035,
+      "name": "Harbour Avenue",
+      "world": "Kappil Coast",
+      "canonicalStart": "Harbour Avenue",
+      "position": [
+        -1748.0436318442705,
+        17.180000007152557,
+        -3191.6780060737397
+      ],
+      "target": [
+        -1770.0436318442705,
+        2.1800000071525574,
+        -3219.6780060737397
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/harbour-avenue.png"
+    },
+    {
+      "id": "divided-highway",
+      "track": "highlands",
+      "startS": 30,
+      "name": "Divided Highway",
+      "world": "Highland Run",
+      "canonicalStart": "Divided Highway",
+      "position": [
+        230,
+        26.18,
+        35
+      ],
+      "target": [
+        250,
+        2.18,
+        0
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/divided-highway.png"
+    },
+    {
+      "id": "tea-bends",
+      "track": "highlands",
+      "startS": 1105,
+      "name": "Lower Tea Bends",
+      "world": "Highland Run",
+      "canonicalStart": "Lower Tea Bends",
+      "position": [
+        684.1371658873632,
+        35.40354276414958,
+        -168
+      ],
+      "target": [
+        644.1371658873632,
+        9.403542764149574,
+        -200
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/tea-bends.png"
+    },
+    {
+      "id": "estate-switchbacks",
+      "track": "highlands",
+      "startS": 1880,
+      "name": "Estate Switchbacks",
+      "world": "Highland Run",
+      "canonicalStart": "Estate Switchbacks",
+      "position": [
+        726.692921137103,
+        103.55824558304155,
+        -255
+      ],
+      "target": [
+        641.692921137103,
+        48.55824558304156,
+        -330
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/estate-switchbacks.png"
+    },
+    {
+      "id": "bird-rock",
+      "track": "highlands",
+      "startS": 3650,
+      "name": "Bird Rock Ridge",
+      "world": "Highland Run",
+      "canonicalStart": "Bird Rock Ridge",
+      "position": [
+        530,
+        125,
+        -820
+      ],
+      "target": [
+        490,
+        107,
+        -850
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/bird-rock.png"
+    },
+    {
+      "id": "harbour-wall-run",
+      "track": "surface-test",
+      "startS": 50,
+      "name": "Flat Approach",
+      "world": "Harbour Wall Run — Solo Surface Proof",
+      "canonicalStart": "Flat Approach",
+      "modelStartS": 0,
+      "position": [
+        335,
+        16,
+        -45
+      ],
+      "target": [
+        435,
+        8,
+        0
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/harbour-wall-run.png"
+    },
+    {
+      "id": "canal-garden",
+      "track": "coast",
+      "startS": 2430,
+      "name": "Canal Garden / Shikaras",
+      "world": "Kappil Coast",
+      "canonicalStart": "Canal Garden / Shikaras",
+      "modelStartS": 2430,
+      "physicalStartS": 2438,
+      "position": [
+        -1167.823,
+        7.5,
+        -1730.367
+      ],
+      "target": [
+        -1193.823,
+        1.5,
+        -1727.367
+      ],
+      "fov": 50,
+      "file": "web/public/assets/map-previews/canal-garden.png"
+    }
+  ]
+}

@@ -18,11 +18,18 @@ expected = {
     p.name for p in source_dir.iterdir()
     if p.suffix in {".glb", ".json"} or re.fullmatch(r"car_thumb_[a-z]+\.png", p.name)
 }
+expected.update("map-previews/" + p.name for p in (source_dir / "map-previews").glob("*.png"))
 assert set(assets) == expected, "Embedded inventory differs from build source"
 for name, uri in assets.items():
     prefix, encoded = uri.split(",", 1)
     assert prefix.endswith(";base64"), name
     assert base64.b64decode(encoded, validate=True) == (source_dir / name).read_bytes(), name
+previews = sorted((source_dir / "map-previews").glob("*.png"))
+assert len(previews) == 11, "Expected all canonical destination previews"
+for preview in previews:
+    uri = "data:image/png;base64," + base64.b64encode(preview.read_bytes()).decode()
+    assert assets.get('map-previews/' + preview.name) == uri, "Destination preview not embedded exactly: " + preview.name
+# Runtime prefers these embedded keys; raw source retains its split-runtime fallback.
 font = base64.b64encode((source_dir / "fonts/display.ttf").read_bytes()).decode()
 assert "data:font/ttf;base64," + font in html
 assert '<script type="importmap">' not in html
@@ -36,7 +43,7 @@ for license_path in [source_dir / "fonts/OFL.txt", root / "web/public/vendor/THR
 result = {
     "result": "PASS", "scope": "Built bytes and embedded inventory; no rendering or GPU assertion",
     "standalone_bytes": len(raw), "standalone_sha256": hashlib.sha256(raw).hexdigest(),
-    "embedded_assets_byte_identical": len(assets), "font_embedded_exact": True,
+    "embedded_assets_byte_identical": len(assets), "map_previews_embedded_exact": len(previews), "font_embedded_exact": True,
     "bundle_embedded_exact": True, "third_party_notices_preserved": True,
 }
 output = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else root / "tests/v17/r3-2-evidence/standalone-integrity.json"

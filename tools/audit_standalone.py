@@ -8,6 +8,7 @@ for name,url in sorted(assets.items()):
  b=base64.b64decode(url.split(',',1)[1]);p=R/'web/public/assets'/name;assert b==p.read_bytes(),name
  rows.append({'file':name,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()})
 expected={p.name for p in(R/'web/public/assets').iterdir()if p.suffix in('.glb','.json')or re.fullmatch(r'car_thumb_[a-z]+\.png',p.name)}
+expected.update("map-previews/"+p.name for p in(R/'web/public/assets/map-previews').glob("*.png"))
 assert set(assets)==expected
 for notice in ['web/public/vendor/THREE_LICENSE.txt','web/public/assets/fonts/OFL.txt']:
  assert(R/notice).read_text().replace('-->','-- >')in html,notice
