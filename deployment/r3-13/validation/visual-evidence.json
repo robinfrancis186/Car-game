@@ -1,0 +1,60 @@
+{
+  "state": "Local evidence only; no Library upload or public delivery claimed",
+  "inspected": [
+    "regroup-desktop.png",
+    "regroup-landscape.png",
+    "regroup-portrait.png",
+    "realtime-1-traffic.png",
+    "realtime-1-escaped-result.png",
+    "realtime-2-escaped-result.png",
+    "realtime-brake-caught.png"
+  ],
+  "limits": "Regroup stills are real application renders with accelerated regression frame clock. Native touch race result stills come from unmodified real-time rAF runs. Existing stylized scenery is unchanged; no new visual assets or photorealism claim.",
+  "images": [
+    {
+      "file": "regroup-desktop.png",
+      "bytes": 1212676,
+      "sha256": "33dd0f0b042b885f976c23b62401d57b0a5d884f38c0babf386ae20a923a6f17"
+    },
+    {
+      "file": "regroup-landscape.png",
+      "bytes": 364602,
+      "sha256": "ddf81e2ee892d95bf53d4a7afea883f276fbee21402c07d2c9c9ecf7d811d7db"
+    },
+    {
+      "file": "regroup-portrait.png",
+      "bytes": 331132,
+      "sha256": "441392b57e65f2080d7fcd3bb93c27db025f373ebc7a9382a993a70323ca76c2"
+    },
+    {
+      "file": "realtime-1-traffic.png",
+      "bytes": 328446,
+      "sha256": "3556ed840c3c05ec396f16596e2ef30087ebe8dac8b056bddb01fe735946f395"
+    },
+    {
+      "file": "realtime-1-escaped-result.png",
+      "bytes": 168131,
+      "sha256": "ab4b198ebb4faedc02e9f91c2bc5c513f66a0e088fdf9e877481089cb21d87d2"
+    },
+    {
+      "file": "realtime-2-escaped-result.png",
+      "bytes": 198106,
+      "sha256": "a2c00394a1da5a60f590c7dfbbf00d4fa9ea2f3f59768f289b35f43a5b98f3ac"
+    },
+    {
+      "file": "realtime-brake-caught.png",
+      "bytes": 172634,
+      "sha256": "eb69202ebe0ec2be52fceef4de4b96e82eee94f97d50f511e4967114015f663f"
+    },
+    {
+      "file": "boost-rearm-844.png",
+      "bytes": 349538,
+      "sha256": "f4e63cb5e687546f55986f8af328051c66ef468561926ec4c200bbd2031f91d6"
+    },
+    {
+      "file": "boost-rearm-390.png",
+      "bytes": 387817,
+      "sha256": "da99956ff77b998689b36b4eb8bd1285f251a78eaf43d2ec36b236d8f044514a"
+    }
+  ]
+}

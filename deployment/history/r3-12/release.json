@@ -1,0 +1,19 @@
+{
+  "game": "MALABAR: Hot Coast",
+  "version": "V17 R3.12",
+  "change": "Phone driving usability: compact touch-only HUD, grouped primary controls, optional More tray, touch Boost+Go, independent pointer tracking, orientation pause/release and dismissible landscape tip. Desktop/Home preserved.",
+  "source_base_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
+  "preserved": "All 11 destinations, Manual/Auto, camera/audio, driving physics, capture/race rules, wallet/saves, server validation, existing art and public licences. Separate race/patrol experiment is excluded.",
+  "tested_standalone_sha256": "55c200421a5f0671b0151c9e16eda4871cbf923a43ec06a83f9f76e328dc4f7b",
+  "runtime_format": "Byte-preserving split runtime; node tools/build-static.mjs",
+  "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
+  "local_checks": "67/67 aggregate with final controller; six affected checks after final landscape CSS alignment and hidden-pedal release fix, 40 layout/safe-area/Manual-Auto/tray cases, five native Chrome multi-touch/orientation cases, eight genuine simulated route completion/capture/failure browser cases, Home and desktop pixel identity, standalone build/integrity and bounded moving-route performance.",
+  "performance_limits": "Bounded Mac Chrome paired samples, not phone hardware/Safari, listening, thermal, new-player or GPU-timer acceptance. rAF measures observed cadence; rendering CPU alone is not overall FPS.",
+  "limitations": "No physical-phone, Safari, human listening or new-player acceptance. Short portrait/landscape tested through Chrome emulation. Rotate hint changes layout only; no orientation lock or tilt-steering permission. Legacy unchanged CC0 payload-audit exception retained.",
+  "public_licences": "Existing NVIDIA CC BY 4.0, MakeHuman CC0, Three and font notices retained byte-identically. No new assets/dependencies.",
+  "production_state": "Local frozen candidate; parent owns Git publication and Vercel deployment.",
+  "rollback_release": "V17 R3.11",
+  "rollback_source_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
+  "rollback_deployment_id": null,
+  "runtime_tree_sha256": "b0b2adae38836ee217dd17bf9b2d673b34cc45a5de50bda9bcd0746fffbdee39"
+}

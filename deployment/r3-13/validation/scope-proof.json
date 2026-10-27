@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "base": "eff8ea2",
+  "protected_hashes": {
+    "web/src/style.css": "095a4ef0a379857b4bc7db965c35a3beffba556f2ca0b4ef5f0902c5e847272f",
+    "web/src/map-destinations.js": "70b05a1c39d7e01a3a86693b6b7990f4608b092bc474a65011e38838f0d91701",
+    "web/src/audio.js": "e0b6ee0718d6169904c094e2b34eef99aed9c1915e24df412884936ce44849b2",
+    "web/src/garage.js": "e971705a77df3f3d58f846ab8ff14a510ba17acc14249b65b0181e7f5f0ee6b6",
+    "web/src/profile-storage.js": "31388e106082522905c832f3ba4db02345e55a0800fbdadd28b9948e48facb4d",
+    "web/src/leaderboard.js": "b8b7c0ee0a54d1a67b488036b3817ecbc276ca84e9409ec4437b9c49f6c247d9",
+    "web/src/leaderboard-store.js": "61ec5d277c59de1f10b759920e0d9597b487cf1314f98b446c57605b1d3906b2",
+    "web/src/story.js": "edfad22da3e3bddcfc7746be57d571208e77637cc3de70a0e279561a819dcc6e",
+    "web/src/story-store.js": "d122f884a0724798eddf30ae311a58e8bdd4e349814319e6eb98a0e7c9d4252f"
+  },
+  "public_assets_and_licences_unchanged": true,
+  "frozen_mobile_clean": true,
+  "original_54_gameplay_method_hash_guards_retained": true,
+  "changed_source_files": [
+    "web/index.html",
+    "web/package.json",
+    "web/src/auto-drive.js",
+    "web/src/gameplay.js",
+    "web/src/main.js",
+    "web/src/race-feedback.js",
+    "web/tests/polish-gameplay-scope.json",
+    "web/tests/polish-preservation-scope.mjs",
+    "web/tests/ui-controller.test.mjs"
+  ]
+}

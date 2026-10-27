@@ -21,6 +21,7 @@ import {sanitizeUpgrades,getUpgradeStats} from './garage.js';
 import {normalizeRamps,rampSupport,rampLaunch} from './ramp-surfaces.js';
 import {AirtimeRewards} from './airtime-rewards.js';
 import {PoliceAirSupport,CivilianAirTraffic} from './police-air-support.js';
+export const PURSUIT_REGROUP=Object.freeze({start:32,end:52,speed:18});
 export const SCENARIOS = Object.freeze([
   Object.freeze({id:'coast-sprint',name:'Coast Sprint',title:'COAST SPRINT',tag:'RACE / PURSUIT',description:'Three rivals. One coastal road. Patrols watch the bridge.',rivals:3,police:2,lighting:'golden',goal:'Finish ahead of the pack. Outrun patrols if they spot the race.',difficulty:'STREET'}),
   Object.freeze({id:'hot-pursuit',name:'Hot Pursuit',title:'HOT PURSUIT',tag:'ESCAPE / SURVIVE',description:'They already know your car. Break contact and reach the safehouse.',rivals:2,police:2,lighting:'blue',goal:'Lose the patrol for eight seconds, then reach the finish.',difficulty:'WANTED'}),
@@ -171,7 +172,7 @@ export class GameModel {
   this.timer=0;this.countdown=this.scenario.id==='free-drive'?0:3;this.progress=this.scenario.id==='free-drive'?this.player.s/this.routeLength:0;this.position=1+this.rivals.length;this.nextCheckpoint=this.scenario.id==='free-drive'?0:1;this.totalCheckpoints=this.scenario.id==='free-drive'?0:this.checkpoints.length-1;
   this.distanceRemaining=this.scenario.id==='free-drive'?this.routeLength-this.player.s:this.length;this.penalties=0;this.recoveries=0;this.damage=0;
   this.wanted=this.scenario.id==='hot-pursuit'?2:0;this.heat=this.wanted?.45:0;this.arrestProgress=0;
-  this.escapeTimer=0;this.escaped=false;this.pursuit=this.wanted?'pursuit':'clear';this.policeDistance=Infinity;
+  this.escapeTimer=0;this.pursuitRecoveryS=null;this.escaped=false;this.pursuit=this.wanted?'pursuit':'clear';this.policeDistance=Infinity;
   this._detectionAfter=Math.min(30,this.length/55);this._offRoadTime=0;this._allGatesPassed=false;this._terminalAnnounced=false;
   this.timeLimit=this.scenario.id==='time-attack'?Math.max(35,this.length/22+25):Infinity;
   this.timeRemaining=this.timeLimit;this.result=null;this.wrongWay=false;this.paused=false;
@@ -248,6 +249,7 @@ export class GameModel {
  }
  recover({automatic=false,reason='manual'}={}){
   if(this.paused||!['racing','countdown'].includes(this.state))return false;
+  if(this.state==='racing'&&this.wanted&&(this.arrestProgress>.05||this.police.some(c=>c.active&&Math.abs(c.y-this.player.y)<1.5&&this._patrolSeesPlayer(c,12)))){this._emit('recovery-blocked','RETURN BLOCKED / PATROL TOO CLOSE');return false;}
   const free=this.scenario.id==='free-drive',gate=this.checkpoints[clamp(this.nextCheckpoint-1,0,this.checkpoints.length-2)];
   const nearest=free?this.projectToRoute(this.player.x,this.player.z):null;
   const travelReverse=free&&Math.cos(this.player.heading-nearest.heading)<0;
@@ -261,6 +263,7 @@ export class GameModel {
   if(!p){this._emit('recovery-blocked','RETURN BLOCKED / BRAKE OR REVERSE',{automatic,reason});return false;}
   this._airtime.cancel('recovery');this._policeAir.recovery();this._stopUltra('recovery');this._ultraSpeedCarry=false;
   Object.assign(this.player,{x:p.x,z:p.z,y:p.y,heading:p.heading,s:p.s,roadPitch:p.roadPitch,roadRoll:0,groundPitch:p.groundPitch??p.roadPitch,groundHeading:p.groundHeading??p.heading,groundNormalX:-p.grade*p.tx/Math.hypot(1,p.grade),groundNormalY:1/Math.hypot(1,p.grade),groundNormalZ:-p.grade*p.tz/Math.hypot(1,p.grade),groundY:p.y,grounded:true,onRoadDeck:true,flightCeiling:p.y+7.5,speed:0,steer:0,steerInput:0,yawRate:0,collisionYaw:0,velocityX:0,velocityZ:0,lateralSpeed:0,lane:p.lane,altitude:0,vz:0,offRoad:false,boosting:false,flying:false,thrusting:false,flipActive:false,flipTime:0,stuntRoll:0,stuntPhase:null,landingAssist:false,bodyRoll:0,bodyPitch:0,suspension:0});
+  if(this.wanted){this.pursuitRecoveryS=p.s;this.escapeTimer=0;}
   this._offRoadTime=0;this._flightLocked=true;this.arrestProgress=0;this.recoveryCooldown=6;this._clearRecoveryWarning();this._stuckAnchor=null;if(automatic)this.automaticRecoveries++;
   if(this.state==='racing'){this.recoveries++;if(free){this.player.damage=0;this.damage=0;this._emit('recovery',automatic?'ROADSIDE ASSIST / BACK ON THE ROAD':'BACK ON THE ROAD / REPAIRED',{automatic,reason});}else{this.timer+=5;this.penalties+=5;this._emit('recovery',automatic?'AUTO RETURN / +5 SEC':'BACK ON THE ROAD  +5 SEC',{automatic,reason});}}
   this.timeRemaining=Math.max(0,this.timeLimit-this.timer);this.progress=clamp(free?p.s/this.routeLength:(p.s-this.startS)/this.length,0,1);this.distanceRemaining=Math.max(0,(free?this.routeLength:this.endS)-p.s);this.position=1+this.rivals.filter(v=>v.finished||v.s>p.s).length;this.wrongWay=false;
@@ -535,7 +538,12 @@ export class GameModel {
  }
  _updateRivals(dt){
   for(let i=0;i<this.rivals.length;i++){
-   const v=this.rivals[i];if(v.finished){v.speed=approach(v.speed,0,10*dt);v.s+=v.speed*dt;this._placeAI(v,dt);continue;}
+   const v=this.rivals[i];if(v.finished){
+    // A wanted driver must be able to clear the safehouse; finishers leave the
+    // scene as moving traffic instead of parking across both escape lanes.
+    const clearing=this.scenario.id==='hot-pursuit'&&this.wanted;
+    v.speed=approach(v.speed,clearing?this._curveSpeed(v.s,24,5.5):0,10*dt);v.s+=v.speed*dt;this._placeAI(v,dt);continue;
+   }
    let target=this._curveSpeed(v.s,v.skill+Math.sin(this.timer*.22+v.phase)*1.3);
    const lead=v.s-this.player.s;target+=clamp(-lead*.015,-3,3);
    const closest=[this.player,...this.rivals.filter(r=>r!==v)].find(o=>o.s>v.s&&o.s-v.s<18&&Math.abs(o.lane-v.lane)<1.7);
@@ -573,11 +581,12 @@ export class GameModel {
    const cop=this.police[i];
    if(cop.active&&this.wanted){
     const gap=player.s-cop.s;
-    // The second unit alternates a signalled closing run with room to regroup.
-    // Keep stopped-car capture and the lead unit unchanged; never spawn/warp a unit.
+    // One advertised opening supplements the second unit cadence; capture stays active.
+    // Apply pace through acceleration only, never spawn or warp a unit.
+    const opening=this.scenario.id==='hot-pursuit'&&this.timer>=PURSUIT_REGROUP.start&&this.timer<PURSUIT_REGROUP.end;
     const cycle=this.timer%24,pressure=i===1&&player.speed>8&&cycle>=8&&cycle<16;
-    const regroup=i===1&&player.speed>8&&cycle>=16;
-    cop.mode=pressure?'pressure':regroup?'regroup':'pursuit';
+    const regroup=opening||i===1&&player.speed>8&&cycle>=16;
+    cop.mode=regroup?'regroup':pressure?'pressure':'pursuit';
     const follow=5.1+i*6.2+(regroup?14:0);
     let target;
     if(gap>20)target=Math.min(43,Math.max(25,player.speed+8+i*1.5));
@@ -587,6 +596,7 @@ export class GameModel {
     if(gap>follow)target=Math.min(target,Math.max(0,player.speed)+Math.sqrt(24*(gap-follow)));
     if(regroup&&gap<40)target=Math.min(target,Math.max(0,player.speed-2));
     target=Math.min(target,this._curveSpeed(cop.s,43,7.6));
+    if(opening)target=Math.min(target,PURSUIT_REGROUP.speed);
     cop.speed=approach(cop.speed,target,dt*(cop.speed<target?8:17));
     cop.targetLane=gap<0?(player.lane<0?2.25:-2.25):clamp(player.lane+(i?(pressure?1.6:regroup?-1.6:.8):-.6),-2.4,2.4);
     cop.s+=cop.speed*dt;
@@ -601,7 +611,8 @@ export class GameModel {
    const contact=this.policeDistance<105&&player.altitude<6;
    this.heat=clamp(this.heat+dt*(contact?.016:-.009),.12,1);
    this.wanted=this.heat>.76?3:this.heat>.42?2:1;
-   const separated=this.policeDistance>130||(this.escapeTimer>0&&this.policeDistance>110);
+   if(Number.isFinite(this.pursuitRecoveryS)&&Math.abs(player.s-this.pursuitRecoveryS)>=130)this.pursuitRecoveryS=null;
+   const separated=!Number.isFinite(this.pursuitRecoveryS)&&(this.policeDistance>130||(this.escapeTimer>0&&this.policeDistance>110));
    if(separated){
     this.escapeTimer+=dt;this.pursuit='evading';
     if(this.escapeTimer>=8){
@@ -815,7 +826,7 @@ export class GameModel {
   this.distanceRemaining=Math.max(0,this.endS-player.s);
   this.position=1+this.rivals.filter(v=>v.finished||v.s>player.s).length;
   if(this._allGatesPassed){
-   if(this.scenario.id!=='hot-pursuit'||this.escaped&&!this.wanted)this._end('finished',this.position===1?'COAST CONQUERED':'FINISH LINE');
+   if(this.scenario.id!=='hot-pursuit'||this.escaped&&!this.wanted&&player.s>=this.endS-11)this._end('finished',this.position===1?'COAST CONQUERED':'FINISH LINE');
    else if(!this._terminalAnnounced){this._terminalAnnounced=true;this._emit('finish-locked','SAFEHOUSE REACHED / SHAKE THE PURSUIT');}
   }
  }

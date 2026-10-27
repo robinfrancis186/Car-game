@@ -1,0 +1,46 @@
+{
+  "scope": "Actual Chrome main/UI/model with accelerated frame clock; mode changes use visible toggle and keyboard/touch controls. Not a human driving evaluation.",
+  "rows": [
+    {
+      "name": "desktop",
+      "position": [
+        -1575.2100548578944,
+        0.18000000715255737,
+        -2193.903648120288
+      ],
+      "speed": 26.00495677038785,
+      "time": 35.9999999999986,
+      "gate": 7,
+      "wanted": 3,
+      "checks": "Auto/Manual pose/time/gate preservation; held versus tapped line input; manual steering; brake override; pause input/clock freeze; explicit resume"
+    },
+    {
+      "name": "portrait",
+      "position": [
+        -1575.2100548578944,
+        0.18000000715255737,
+        -2193.903648120288
+      ],
+      "speed": 26.00495677038785,
+      "time": 35.9999999999986,
+      "gate": 7,
+      "wanted": 3,
+      "checks": "Auto/Manual pose/time/gate preservation; held versus tapped line input; manual steering; brake override; pause input/clock freeze; explicit resume"
+    },
+    {
+      "name": "landscape",
+      "position": [
+        -1575.2100548578944,
+        0.18000000715255737,
+        -2193.903648120288
+      ],
+      "speed": 26.00495677038785,
+      "time": 35.9999999999986,
+      "gate": 7,
+      "wanted": 3,
+      "checks": "Auto/Manual pose/time/gate preservation; held versus tapped line input; manual steering; brake override; pause input/clock freeze; explicit resume"
+    }
+  ],
+  "errors": [],
+  "status": "PASS"
+}

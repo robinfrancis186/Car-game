@@ -1,20 +1,14 @@
 {
-  "release": "V17 R3.12",
+  "release": "V17 R3.13 LOCAL CANDIDATE",
+  "deployment_status": "NOT_AUTHORIZED \u2014 LOCAL ONLY",
   "deployment_owner": "parent thread",
-  "project_id": "prj_wpjGOHOOw8yWEFnoKJeBe8ZTu6d5",
-  "production_url": "https://malabar-hot-coast.vercel.app/",
+  "source_base_commit": "eff8ea2038636f3600bdce09622ec7e421025bda",
+  "runtime_files": 188,
   "build_command": "node tools/build-static.mjs",
   "output_directory": "dist/vercel",
-  "deployment_status": "Local candidate only; not pushed or deployed",
-  "source_base_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
-  "runtime_files": 187,
-  "runtime_tree_sha256": "b0b2adae38836ee217dd17bf9b2d673b34cc45a5de50bda9bcd0746fffbdee39",
-  "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
-  "full_runtime_tree_sha256": "2485ddcde2a5e927499902de69a84c9e693e5f12b840e5510204373eb8b8732f",
-  "full_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, including release.json",
-  "rollback_release": "V17 R3.11",
-  "rollback_source_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
-  "rollback_deployment_id": null,
+  "runtime_tree_sha256": "104231dafd407b0926bc5e6f829c1be735a4b36053193f3726e3067e07e5b8b8",
+  "full_runtime_tree_sha256": "6f6bf2f57c0cbbafd8200e7c5d4faa755c564e1bfc4006fb387165c1c7964bc2",
+  "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json",
   "mapping": [
     {
       "public_path": "LICENSES.md",
@@ -25,8 +19,8 @@
     {
       "public_path": "index.html",
       "source_path": "web/index.html",
-      "bytes": 43744,
-      "sha256": "000894db768b1b1bdc3638e86d1b792068dac2f5f09c6fde5539f6c1022f1b7b"
+      "bytes": 43847,
+      "sha256": "e38c19c761d22727d54bc437b13074bb77ca2d46a6f3946a79da2e20f8acb8e5"
     },
     {
       "public_path": "licenses/OFL.txt",
@@ -865,8 +859,8 @@
     {
       "public_path": "release.json",
       "source_path": "deployment/release.json",
-      "bytes": 2287,
-      "sha256": "0e20059a944fd89a4b900b27e7d501fa94daf540f02b2b9def7709dde228fadd"
+      "bytes": 1639,
+      "sha256": "d9e89b6aabca5ff59f9c071ba211ba2dd6a691bb37b666d177ae33e8e6bf8c5a"
     },
     {
       "public_path": "src/air-traffic.js",
@@ -889,8 +883,8 @@
     {
       "public_path": "src/auto-drive.js",
       "source_path": "web/src/auto-drive.js",
-      "bytes": 8863,
-      "sha256": "99cf4e6bc6463f41f2d35a346f9b6a4f1068ab2bc68c176ca61c7c30fa19690b"
+      "bytes": 10393,
+      "sha256": "aab7a2cb1c76e8f8e9cc16ebf32f7c39827dd6bfce7540f71550f5a4ac31bcb1"
     },
     {
       "public_path": "src/boost-fire.js",
@@ -949,8 +943,8 @@
     {
       "public_path": "src/gameplay.js",
       "source_path": "web/src/gameplay.js",
-      "bytes": 74674,
-      "sha256": "3492a036df080400cc7bf0eb63d2e1cce2675b617d8fdfa0af412b2bb08d44ed"
+      "bytes": 76204,
+      "sha256": "0f7ce56b5889405f2875d5b0484c8395484342ef2aea3c983d687cc592f7d2db"
     },
     {
       "public_path": "src/garage.js",
@@ -973,8 +967,8 @@
     {
       "public_path": "src/main.js",
       "source_path": "web/src/main.js",
-      "bytes": 83927,
-      "sha256": "0aa82644eee2815dd74409157a9777317bccbf92839fc987b5cf0c4839c7e4ad"
+      "bytes": 84212,
+      "sha256": "34c26742739e1f2a095dd2b255ba4e17f889600f7cd07c2157e4f1ef52c24ce1"
     },
     {
       "public_path": "src/map-destinations.js",
@@ -1005,6 +999,12 @@
       "source_path": "web/src/profile-storage.js",
       "bytes": 3291,
       "sha256": "31388e106082522905c832f3ba4db02345e55a0800fbdadd28b9948e48facb4d"
+    },
+    {
+      "public_path": "src/race-feedback.js",
+      "source_path": "web/src/race-feedback.js",
+      "bytes": 2851,
+      "sha256": "84cb19ae91d76ca899fd9d978334d8ed985204f2c0d81eb8995d39c60ffdd9b0"
     },
     {
       "public_path": "src/ramp-surfaces.js",

@@ -26,6 +26,21 @@ function forwardGap(p,o,look){
  if(ahead<=0||lateral>=radius)return Infinity;
  const entry=ahead-Math.sqrt(radius*radius-lateral*lateral);return entry<look?Math.max(0,entry-3):Infinity;
 }
+// Brake for closing speed, not for a stationary copy of traffic that is pulling away.
+function trafficSpeed(p,o){
+ if(!Number.isFinite(o.velocityX)||!Number.isFinite(o.velocityZ))return 0;
+ const along=o.velocityX*Math.cos(p.heading)+o.velocityZ*Math.sin(p.heading);
+ return Math.max(0,Math.min(along,Number.isFinite(o.speed)?Math.max(0,o.speed):80));
+}
+// Compare against the road at the future hit, not today's height on an ascent.
+function drivingHeightOverlap(model,p,o,gap){
+ let y=p.y;
+ if(p.grounded&&p.onRoadDeck&&!p.offRoad&&p.altitude<.5&&typeof model.projectToRoute==='function'){
+  const distance=Math.min(80,gap+3),q=model.projectToRoute(p.x+Math.cos(p.heading)*distance,p.z+Math.sin(p.heading)*distance,p.s+distance);
+  if(q.distance<=model.roadHalfWidth+.5)y=typeof model._surfaceAt==='function'?model._surfaceAt(q,q.y,true).y:q.y;
+ }
+ const bottom=o.y??0,top=bottom+(o.height??1.5);return bottom<=y+1.7&&top>=y+.1;
+}
 export function autoPedals(model,input,enabled,{paused=false}={}){
  if(!enabled)return input;
  if(paused||model.paused||model.state!=='racing')return {...input,throttle:0,brake:false,boost:false,ultraBoost:false};
@@ -42,8 +57,7 @@ export function autoPedals(model,input,enabled,{paused=false}={}){
  const nearby=nearbyObstacles(model,p.x,p.z,look);
  for(const o of [...nearby,...(model.rivals||[]),...(model.police||[])]){
   if(o.visible===false||o.active===false||o===p)continue;
-  const bottom=o.y??0,top=bottom+(o.height??1.5);if(bottom>p.y+1.7||top<p.y+.1)continue;
-  const gap=forwardGap(p,o,look);if(Number.isFinite(gap))target=Math.min(target,Math.sqrt(2*brakeRate*gap));
+  const gap=forwardGap(p,o,look);if(Number.isFinite(gap)&&drivingHeightOverlap(model,p,o,gap))target=Math.min(target,trafficSpeed(p,o)+Math.sqrt(2*brakeRate*gap));
  }
  const brake=speed>target+1.2;
  return {...input,throttle:brake?0:Math.max(0,Math.min(1,(target-speed)/3)),brake};
@@ -71,7 +85,7 @@ function laneOffset(model,q,lane){
 export class RoadAssistController{
  constructor(){this.reset();}
  reset(){this._lane=0;this._clearMotion();return this;}
- _clearMotion(){this._model=null;this._offset=null;this._braking=false;this._brakeTime=0;this._direction=1;this._recoveries=null;this._mode=null;this.blocked=false;}
+ _clearMotion(){this._model=null;this._offset=null;this._braking=false;this._brakeTime=0;this._direction=1;this._recoveries=null;this._mode=null;this.blocked=false;this.trafficAhead=false;}
  get lane(){return this._lane;}
  setLane(lane){if(lane===-1||lane===0||lane===1)this._lane=lane;return this._lane;}
  chooseLane(direction=1){if(direction===-1||direction===1)this._lane=clamp(this._lane+direction,-1,1);return this._lane;}
@@ -87,13 +101,21 @@ export class RoadAssistController{
   const targetX=ahead.x+ahead.nx*this._offset,targetZ=ahead.z+ahead.nz*this._offset,dx=targetX-p.x,dz=targetZ-p.z,distance=Math.max(2,Math.hypot(dx,dz));
   const error=angle(Math.atan2(dz,dx)-p.heading),wheel=Math.atan(2*2.7*Math.sin(error)/distance),steer=steeringInput(wheel,speed,model);
   const boosted=rawInput.ultraBoost||p.ultraBoosting?model.vehicleStats.ultraBoostMaxSpeedMps:rawInput.boost?model.vehicleStats.regularBoostMaxSpeedMps:Math.min(model.vehicleStats.topSpeedMps*.78,model.scenario.id==='free-drive'?22:26);
-  let target=boosted;const comfortBrake=4;let previous=model.sampleRoute(clamp(q.s-direction*2,0,model.routeLength));
-  for(let d=2;d<=64;d+=4){const at=model.sampleRoute(clamp(q.s+direction*d,0,model.routeLength)),curvature=Math.abs(angle(at.heading-previous.heading))/4;if(curvature>.0005)target=Math.min(target,Math.sqrt(3.5/curvature+2*comfortBrake*Math.max(0,d-7)));previous=at;}
+  let target=boosted;const comfortBrake=4;
+  if(model.scenario.id==='free-drive'){
+   let previous=model.sampleRoute(clamp(q.s-direction*2,0,model.routeLength));
+   for(let d=2;d<=64;d+=4){const at=model.sampleRoute(clamp(q.s+direction*d,0,model.routeLength)),curvature=Math.abs(angle(at.heading-previous.heading))/4;if(curvature>.0005)target=Math.min(target,Math.sqrt(3.5/curvature+2*comfortBrake*Math.max(0,d-7)));previous=at;}
+  }else{
+   // Use the same authored-curve envelope as pursuit cars: 7.6 m/s² corner
+   // allowance, 8 m/s hairpin floor, 10 m/s² planned braking (physical brakes: 24+).
+   target=model._curveSpeed(q.s,boosted,7.6);
+  }
   const laneError=Math.abs(q.offset-desiredOffset);if(laneError>5)target=Math.min(target,4);else if(laneError>3)target=Math.min(target,6);else if(Math.abs(error)>.5)target=Math.min(target,8);
-  if(model.scenario.id==='free-drive'){const remaining=direction>0?model.routeLength-q.s:q.s;target=Math.min(target,Math.sqrt(2*comfortBrake*Math.max(0,remaining-5)));}
-  const obstacleLook=Math.min(80,14+speed*2.5);let gap=Infinity;
-  for(const o of [...nearbyObstacles(model,p.x,p.z,obstacleLook),...(model.rivals||[]),...(model.police||[])]){if(o.visible===false||o.active===false||o===p)continue;const bottom=o.y??0,top=bottom+(o.height??1.5);if(bottom>p.y+1.7||top<p.y+.1)continue;gap=Math.min(gap,forwardGap(p,o,obstacleLook));}
-  if(Number.isFinite(gap))target=Math.min(target,Math.sqrt(2*comfortBrake*gap));
+  if(model.scenario.id==='free-drive'||model.scenario.id==='hot-pursuit'&&model.wanted){const remaining=direction>0?model.routeLength-q.s:q.s;target=Math.min(target,Math.sqrt(2*comfortBrake*Math.max(0,remaining-5)));}
+  const obstacleLook=Math.min(80,14+speed*2.5);let gap=Infinity,obstacleLimit=Infinity;
+  for(const o of [...nearbyObstacles(model,p.x,p.z,obstacleLook),...(model.rivals||[]),...(model.police||[])]){if(o.visible===false||o.active===false||o===p)continue;const aheadGap=forwardGap(p,o,obstacleLook);if(!Number.isFinite(aheadGap)||!drivingHeightOverlap(model,p,o,aheadGap))continue;gap=Math.min(gap,aheadGap);if(Number.isFinite(aheadGap))obstacleLimit=Math.min(obstacleLimit,trafficSpeed(p,o)+Math.sqrt(2*comfortBrake*aheadGap));}
+  target=Math.min(target,obstacleLimit);
+  this.trafficAhead=Number.isFinite(gap)&&gap<Math.max(18,speed*2)&&obstacleLimit<speed+.5;
   this.blocked=Number.isFinite(gap)&&gap<10&&target<2;
   if(rawInput.brake){this._braking=true;this._brakeTime=0;return {...rawInput,steer,throttle:0,brake:true};}
   this._brakeTime+=dt;const hold=target<.2&&speed<2;

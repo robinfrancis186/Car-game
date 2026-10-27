@@ -1,13 +1,17 @@
 {
   "path": "web/src/gameplay.js",
-  "approved_scope": "User-authorized Stage2 ground patrol occlusion and recovery consistency. No driving, race, reward, wallet or server validation changes. Stage4 authorized second-unit pressure/regroup cadence and lane spacing, preserving capture, escape, physics and reward rules.",
+  "approved_scope": "User-authorized Stage2 ground patrol occlusion and recovery consistency. No driving, race, reward, wallet or server validation changes. Stage4 authorized second-unit pressure/regroup cadence and lane spacing, preserving capture, escape, physics and reward rules. Authorized local Stage7: safehouse finishers remain moving during pursuit; recovery cannot clear close patrols or manufacture separation; escaped driver returns to safehouse. An explicit advertised Hot Pursuit-only regroup from 32\u201352s caps target speed at 18m/s through normal acceleration; original 43m/s cap outside this opening, capture/escape thresholds, collisions and rewards retained.",
   "source_base_commit": "1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b",
   "original_sha256": "990eb8f21b199e943ccd00bd33de6bf36b7cf484f30a903fe3258d87351ec809",
-  "candidate_sha256": "b4a614d5fec4afea1c298b0538af6f3707666ebcd7decdd862eb1916accfc4e1",
+  "candidate_sha256": "0f7ce56b5889405f2875d5b0484c8395484342ef2aea3c983d687cc592f7d2db",
   "changed_methods": [
     "_updateAutoRecovery",
     "_airLineOfSight",
-    "_updatePolice"
+    "_updatePolice",
+    "_updateRivals",
+    "_initialize",
+    "recover",
+    "_updateRace"
   ],
   "added_methods": [
     "_patrolSeesPlayer"
@@ -20,7 +24,6 @@
     "sampleRoute": "1fc27aa263ab799c8f4a2da40f994c3f90a42dc1ee1f89086c5e4fe6caa7e239",
     "projectToRoute": "c40584302127bdbe1abd2918443bb9bd63a11c0314b93e0248a2c3513d08a39a",
     "_vehicle": "0b378cd3a89b24e6166f4c1cc7b8ff0dc2f61ff34ad3867e119396c0899b7eb7",
-    "_initialize": "0dbd880aae701e96aabe21fb8ce90742b6137ce11af68d83a117d0ccbce8fe48",
     "start": "ebca5a2f02df2a946005e2147905d085ac51582a7300d35529fce6ff3d344cd0",
     "restart": "43f93e499751e78b4a2649421e6cc4c3ddb380e76c77f6438c992e18c7f06fb6",
     "reset": "26ed4dcc5bd7bf94624d133e7f634c38ce17291a97424e978493746de8e465e6",
@@ -29,7 +32,6 @@
     "consumeEvents": "9bf7e7e5b430b7686101b048665789fbb2187be2d376de0e3ccadd70efeb6155",
     "_recoveryPose": "097070b6c9c9910e01a348d96a66844e718833661be262083f2dc7ab2ed6c3ae",
     "_clearRecoveryWarning": "852b52fac14d46f33e93447020d462f0176da46be5ea5dbc176f826b0a2a09dd",
-    "recover": "da714166905c4eb14f9b2e62ac58377ee6525e72fdfdb41abdcd6067e90a9d1f",
     "update": "853096519ada6398697e5f7bc0ec0dfd8f1de7ca7556ba1b00dcfaded427193f",
     "_step": "55b6bcda18677cbf3af765430fe1d568a925e1e042203fce35e780d0150dbeab",
     "_stopUltra": "cc2add978887bf3679dc62fe3a8e79eaf4066372d0abf5913cc52e7f7a3f6950",
@@ -45,7 +47,6 @@
     "_curveSpeed": "9510ab3eb45b9d1802e80664f210b6a2f4bbd5afe512cafcccc8f19919aa36e3",
     "_supportOffRouteAI": "4804eefda3815af4d97eebf6f85b8ff1d6d528aa3e1f0653fa47e8e978c34741",
     "_placeAI": "e5497f3d123522f6570af60c55d79a32066337fd1b2f11ada2df7590330bb520",
-    "_updateRivals": "5e50337f858d333c40f49ea16dbb069c0ed04dbbaac545221c1d73b3bfa1b3de",
     "_activatePolice": "5dac8d88d86b89bbafc9124fdf23a8f712187c01fe40493208b76100c5ac9b8e",
     "_deckAt": "817f9a22cd7da21b5bfc1babd7a4c520fa5e22f55002d9dcd5c53a9964fc94b9",
     "sampleTerrain": "78b6ca8b37481001443c0ba70a57547c3b3c40c9d9ffdba74296255348430370",
@@ -68,15 +69,23 @@
     "_obstacleContacts": "e1cd272a4032eb8d91a336994b2dfa6e187f45c07aa7ce3fde0c6f2eed7679a9",
     "_updateCoins": "a45ce76e353f579c6f944a69530bf19af52044f78dee6415ddb7776420930843",
     "_checkpointCarriageway": "9cefca7ec0aa7571d18c7e13e2da6e6a481f2802a17680ad6bcca8570e773513",
-    "_updateRace": "bd3a81788be64758da88aecde299c21732ef03050ab477d11022dfaf0b2c1080",
     "_end": "971035d72bb2828d9ddaeb1a66ea026acba145e17aa6958f1ae20865486bb356",
     "for": "9cb2b8cd11da193f4764067a5ba52958af0c29ab1b899527f6977acb93301ae3"
   },
   "behavioral_tests": [
     "web/tests/patrol-visibility.test.mjs",
     "web/tests/police-capture.test.mjs",
-    "web/tests/race-feedback.test.mjs"
+    "web/tests/race-feedback.test.mjs",
+    "web/tests/assist-balance.test.mjs"
   ],
   "stage4_base_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
-  "stage2_candidate_sha256": "3492a036df080400cc7bf0eb63d2e1cce2675b617d8fdfa0af412b2bb08d44ed"
+  "stage2_candidate_sha256": "3492a036df080400cc7bf0eb63d2e1cce2675b617d8fdfa0af412b2bb08d44ed",
+  "stage7_base_commit": "eff8ea2038636f3600bdce09622ec7e421025bda",
+  "stage4_candidate_sha256": "b4a614d5fec4afea1c298b0538af6f3707666ebcd7decdd862eb1916accfc4e1",
+  "stage7_original_method_hashes": {
+    "_updateRivals": "5e50337f858d333c40f49ea16dbb069c0ed04dbbaac545221c1d73b3bfa1b3de",
+    "_initialize": "0dbd880aae701e96aabe21fb8ce90742b6137ce11af68d83a117d0ccbce8fe48",
+    "recover": "da714166905c4eb14f9b2e62ac58377ee6525e72fdfdb41abdcd6067e90a9d1f",
+    "_updateRace": "bd3a81788be64758da88aecde299c21732ef03050ab477d11022dfaf0b2c1080"
+  }
 }

@@ -1,0 +1,422 @@
+{
+  "total": 69,
+  "completed": 69,
+  "passed": 69,
+  "failed": 0,
+  "rows": [
+    {
+      "stage": 1,
+      "command": "node tests/police-capture.test.mjs",
+      "exit": 0,
+      "seconds": 0.656
+    },
+    {
+      "stage": 2,
+      "command": "node tests/capture-exports.test.mjs",
+      "exit": 0,
+      "seconds": 0.329
+    },
+    {
+      "stage": 3,
+      "command": "node tests/capture-grip.test.mjs",
+      "exit": 0,
+      "seconds": 35.09
+    },
+    {
+      "stage": 4,
+      "command": "node tests/gameplay.test.mjs",
+      "exit": 0,
+      "seconds": 38.273
+    },
+    {
+      "stage": 5,
+      "command": "node tests/scene-contract.test.mjs",
+      "exit": 0,
+      "seconds": 1.071
+    },
+    {
+      "stage": 6,
+      "command": "node tests/audio.test.mjs",
+      "exit": 0,
+      "seconds": 0.133
+    },
+    {
+      "stage": 7,
+      "command": "node tests/transit.test.mjs",
+      "exit": 0,
+      "seconds": 0.083
+    },
+    {
+      "stage": 8,
+      "command": "node tests/world-load.test.mjs",
+      "exit": 0,
+      "seconds": 2.116
+    },
+    {
+      "stage": 9,
+      "command": "node tests/tracks.test.mjs",
+      "exit": 0,
+      "seconds": 0.054
+    },
+    {
+      "stage": 10,
+      "command": "node tests/controller.test.mjs",
+      "exit": 0,
+      "seconds": 1.083
+    },
+    {
+      "stage": 11,
+      "command": "node tests/controller.test.mjs --track=highlands",
+      "exit": 0,
+      "seconds": 0.847
+    },
+    {
+      "stage": 12,
+      "command": "node tests/garage.test.mjs",
+      "exit": 0,
+      "seconds": 35.745
+    },
+    {
+      "stage": 13,
+      "command": "node tests/detail-lod.test.mjs",
+      "exit": 0,
+      "seconds": 0.106
+    },
+    {
+      "stage": 14,
+      "command": "node tests/finish-fx.test.mjs",
+      "exit": 0,
+      "seconds": 0.093
+    },
+    {
+      "stage": 15,
+      "command": "node tests/ui-controller.test.mjs",
+      "exit": 0,
+      "seconds": 18.132
+    },
+    {
+      "stage": 16,
+      "command": "node tests/handling-recovery.test.mjs",
+      "exit": 0,
+      "seconds": 1.459
+    },
+    {
+      "stage": 17,
+      "command": "node tests/coins-vehicle.test.mjs",
+      "exit": 0,
+      "seconds": 0.153
+    },
+    {
+      "stage": 18,
+      "command": "node tests/boost-fire.test.mjs",
+      "exit": 0,
+      "seconds": 0.07
+    },
+    {
+      "stage": 19,
+      "command": "node tests/collectibles.test.mjs",
+      "exit": 0,
+      "seconds": 0.092
+    },
+    {
+      "stage": 20,
+      "command": "node tests/portrait-menu-projection.test.mjs",
+      "exit": 0,
+      "seconds": 0.899
+    },
+    {
+      "stage": 21,
+      "command": "node build-ui-preview.mjs",
+      "exit": 0,
+      "seconds": 0.166
+    },
+    {
+      "stage": 22,
+      "command": "node tests/ui-preview.test.mjs",
+      "exit": 0,
+      "seconds": 0.633
+    },
+    {
+      "stage": 23,
+      "command": "node tests/reverse-crawl.test.mjs",
+      "exit": 0,
+      "seconds": 14.441
+    },
+    {
+      "stage": 24,
+      "command": "node tests/profile-storage.test.mjs",
+      "exit": 0,
+      "seconds": 0.059
+    },
+    {
+      "stage": 25,
+      "command": "node tests/explore-asphalt.test.mjs",
+      "exit": 0,
+      "seconds": 48.299
+    },
+    {
+      "stage": 26,
+      "command": "node tests/braking-upgrade.test.mjs",
+      "exit": 0,
+      "seconds": 0.579
+    },
+    {
+      "stage": 27,
+      "command": "node tests/story.test.mjs",
+      "exit": 0,
+      "seconds": 17.185
+    },
+    {
+      "stage": 28,
+      "command": "node tests/story-store.test.mjs",
+      "exit": 0,
+      "seconds": 0.054
+    },
+    {
+      "stage": 29,
+      "command": "node tests/story-controller.test.mjs",
+      "exit": 0,
+      "seconds": 1.539
+    },
+    {
+      "stage": 30,
+      "command": "node tests/cinematic-camera.test.mjs",
+      "exit": 0,
+      "seconds": 0.155
+    },
+    {
+      "stage": 31,
+      "command": "node tests/surface-materials.test.mjs",
+      "exit": 0,
+      "seconds": 0.069
+    },
+    {
+      "stage": 32,
+      "command": "node tests/modal-focus.test.mjs",
+      "exit": 0,
+      "seconds": 0.041
+    },
+    {
+      "stage": 33,
+      "command": "node tests/rotor-audio.test.mjs",
+      "exit": 0,
+      "seconds": 0.163
+    },
+    {
+      "stage": 34,
+      "command": "node tests/air-traffic.test.mjs",
+      "exit": 0,
+      "seconds": 0.09
+    },
+    {
+      "stage": 35,
+      "command": "node tests/ramp-geometry.test.mjs",
+      "exit": 0,
+      "seconds": 0.112
+    },
+    {
+      "stage": 36,
+      "command": "node tests/airtime-air-support.test.mjs",
+      "exit": 0,
+      "seconds": 0.278
+    },
+    {
+      "stage": 37,
+      "command": "node tests/v16-1-scope.test.mjs",
+      "exit": 0,
+      "seconds": 1.332
+    },
+    {
+      "stage": 38,
+      "command": "node tests/air-traffic-visibility.test.mjs",
+      "exit": 0,
+      "seconds": 1.107
+    },
+    {
+      "stage": 39,
+      "command": "node tests/airtime-world.test.mjs",
+      "exit": 0,
+      "seconds": 40.114
+    },
+    {
+      "stage": 40,
+      "command": "node tests/surface-model.test.mjs",
+      "exit": 0,
+      "seconds": 0.568
+    },
+    {
+      "stage": 41,
+      "command": "node tests/surface-camera.test.mjs",
+      "exit": 0,
+      "seconds": 0.094
+    },
+    {
+      "stage": 42,
+      "command": "node tests/surface-controller.test.mjs",
+      "exit": 0,
+      "seconds": 0.411
+    },
+    {
+      "stage": 43,
+      "command": "node tests/surface-scene.test.mjs",
+      "exit": 0,
+      "seconds": 2.943
+    },
+    {
+      "stage": 44,
+      "command": "node tests/surface-world.test.mjs",
+      "exit": 0,
+      "seconds": 0.667
+    },
+    {
+      "stage": 45,
+      "command": "node ../assets/surface_test/validate_surface_test.mjs",
+      "exit": 0,
+      "seconds": 35.89
+    },
+    {
+      "stage": 46,
+      "command": "node tests/render-metrics.test.mjs",
+      "exit": 0,
+      "seconds": 0.336
+    },
+    {
+      "stage": 47,
+      "command": "node tests/render-settings.test.mjs",
+      "exit": 0,
+      "seconds": 1.192
+    },
+    {
+      "stage": 48,
+      "command": "node tests/v17-reference-ui.test.mjs",
+      "exit": 0,
+      "seconds": 0.501
+    },
+    {
+      "stage": 49,
+      "command": "node ../tests/v17/preservation.test.mjs",
+      "exit": 0,
+      "seconds": 2.486
+    },
+    {
+      "stage": 50,
+      "command": "node ../tools/scene-proof-r3/verify-menu-isolation.mjs",
+      "exit": 0,
+      "seconds": 0.284
+    },
+    {
+      "stage": 51,
+      "command": "node tests/graphics-context.test.mjs",
+      "exit": 0,
+      "seconds": 1.177
+    },
+    {
+      "stage": 52,
+      "command": "node tests/hud-width.test.mjs",
+      "exit": 0,
+      "seconds": 0.159
+    },
+    {
+      "stage": 53,
+      "command": "node tests/leaderboard.test.mjs",
+      "exit": 0,
+      "seconds": 0.216
+    },
+    {
+      "stage": 54,
+      "command": "node tests/leaderboard-store.test.mjs",
+      "exit": 0,
+      "seconds": 0.076
+    },
+    {
+      "stage": 55,
+      "command": "node tests/leaderboard-controller.test.mjs",
+      "exit": 0,
+      "seconds": 1.372
+    },
+    {
+      "stage": 56,
+      "command": "node tests/home-setup-controller.test.mjs",
+      "exit": 0,
+      "seconds": 0.896
+    },
+    {
+      "stage": 57,
+      "command": "node tests/ui-theme.test.mjs",
+      "exit": 0,
+      "seconds": 0.133
+    },
+    {
+      "stage": 58,
+      "command": "node tests/home-layout.test.mjs",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "stage": 59,
+      "command": "node tests/map-destinations.test.mjs",
+      "exit": 0,
+      "seconds": 0.065
+    },
+    {
+      "stage": 60,
+      "command": "node tests/auto-drive.test.mjs",
+      "exit": 0,
+      "seconds": 0.103
+    },
+    {
+      "stage": 61,
+      "command": "node tests/driving-camera.test.mjs",
+      "exit": 0,
+      "seconds": 0.08
+    },
+    {
+      "stage": 62,
+      "command": "node tests/sound-preferences.test.mjs",
+      "exit": 0,
+      "seconds": 0.055
+    },
+    {
+      "stage": 63,
+      "command": "node tests/road-assist.test.mjs",
+      "exit": 0,
+      "seconds": 38.105
+    },
+    {
+      "stage": 64,
+      "command": "node tests/patrol-visibility.test.mjs",
+      "exit": 0,
+      "seconds": 0.064
+    },
+    {
+      "stage": 65,
+      "command": "node tests/curve-guides.test.mjs",
+      "exit": 0,
+      "seconds": 0.096
+    },
+    {
+      "stage": 66,
+      "command": "node tests/scenery-materials.test.mjs",
+      "exit": 0,
+      "seconds": 0.071
+    },
+    {
+      "stage": 67,
+      "command": "node tests/story-objective.test.mjs",
+      "exit": 0,
+      "seconds": 0.042
+    },
+    {
+      "stage": 68,
+      "command": "node tests/race-feedback.test.mjs",
+      "exit": 0,
+      "seconds": 0.082
+    },
+    {
+      "stage": 69,
+      "command": "node tests/assist-balance.test.mjs",
+      "exit": 0,
+      "seconds": 0.083
+    }
+  ]
+}

@@ -1,0 +1,2104 @@
+{
+  "scope": "Native real-time Mac Chrome. Scripted discrete touch lane/boost/Ultra inputs only; no model/clock/position injection or auto lane selection in product. Viewport emulation, not a phone or human playtest.",
+  "runs": [
+    {
+      "run": 1,
+      "viewport": "844x390",
+      "elapsedSeconds": 90.716,
+      "before": {
+        "state": "countdown",
+        "time": 0,
+        "s": 2208,
+        "speed": 0,
+        "line": 0,
+        "energy": 1,
+        "ultra": 1,
+        "cooldown": 0,
+        "damage": 0,
+        "recoveries": 0,
+        "escaped": false,
+        "wanted": 2,
+        "escapeTimer": 0,
+        "credits": 0,
+        "contexts": 1,
+        "boosting": false,
+        "pressed": [],
+        "traffic": [
+          {
+            "s": 2220,
+            "lane": -1.55
+          },
+          {
+            "s": 2232,
+            "lane": 1.55
+          },
+          {
+            "s": 2175,
+            "lane": -1.4
+          },
+          {
+            "s": 2151,
+            "lane": 1.4
+          }
+        ],
+        "status": "HOLD GO · TAP LEFT / RIGHT · BRAKE TO SLOW",
+        "boost": "ULTRA READY"
+      },
+      "after": {
+        "state": "finished",
+        "time": 87.65000000001582,
+        "s": 4339.224328861739,
+        "speed": 20.19592811842401,
+        "line": -1,
+        "energy": 0.28774999999996204,
+        "ultra": 1,
+        "cooldown": 0,
+        "damage": 0,
+        "recoveries": 0,
+        "escaped": true,
+        "wanted": 0,
+        "escapeTimer": 0,
+        "credits": 630,
+        "contexts": 1,
+        "boosting": false,
+        "pressed": [],
+        "traffic": [
+          {
+            "s": 4390.929119617243,
+            "lane": -1.55
+          },
+          {
+            "s": 4397.424944948346,
+            "lane": 1.55
+          },
+          {
+            "s": 3500.0914970727586,
+            "lane": -2.071345591036439
+          },
+          {
+            "s": 3498.935504910747,
+            "lane": 0.12865440896357294
+          }
+        ],
+        "status": "FINISH LINE",
+        "boost": "ULTRA READY"
+      },
+      "inputs": [
+        {
+          "t": 0.075,
+          "action": "boost-down"
+        },
+        {
+          "t": 0.075,
+          "action": "line",
+          "desired": 1
+        },
+        {
+          "t": 3.1749999999999914,
+          "action": "line",
+          "desired": -1
+        },
+        {
+          "t": 16.858333333333018,
+          "action": "boost-release"
+        },
+        {
+          "t": 23.27499999999932,
+          "action": "boost-down"
+        },
+        {
+          "t": 25.674999999999184,
+          "action": "boost-release"
+        },
+        {
+          "t": 31.308333333332197,
+          "action": "boost-down"
+        },
+        {
+          "t": 38.75833333333178,
+          "action": "boost-release"
+        },
+        {
+          "t": 45.27499999999807,
+          "action": "boost-down"
+        },
+        {
+          "t": 52.508333333330995,
+          "action": "boost-release"
+        },
+        {
+          "t": 59.008333333330626,
+          "action": "boost-down"
+        },
+        {
+          "t": 66.94166666666601,
+          "action": "boost-release"
+        },
+        {
+          "t": 73.3416666666711,
+          "action": "boost-down"
+        },
+        {
+          "t": 85.74166666668097,
+          "action": "boost-release"
+        }
+      ],
+      "samples": [
+        {
+          "state": "racing",
+          "time": 0.075,
+          "s": 2208.02844965376,
+          "speed": 0.7586493547050873,
+          "line": 0,
+          "energy": 1,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 2,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 2220.0234375,
+              "lane": -1.55
+            },
+            {
+              "s": 2232.0234375,
+              "lane": 1.55
+            },
+            {
+              "s": 2175.025,
+              "lane": -1.5238647053394945
+            },
+            {
+              "s": 2151.025,
+              "lane": 1.072122833712377
+            }
+          ],
+          "status": "GO / THE COAST IS YOURS",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 4.124999999999995,
+          "s": 2254.2262804723678,
+          "speed": 5.924064290600412,
+          "line": -1,
+          "energy": 0.8607499999999904,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 2,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 2283.9326115781205,
+              "lane": -1.55
+            },
+            {
+              "s": 2295.9375,
+              "lane": 1.55
+            },
+            {
+              "s": 2239.1397834679165,
+              "lane": 0.9074852359230734
+            },
+            {
+              "s": 2215.7118979667157,
+              "lane": 2.288385712506905
+            }
+          ],
+          "status": "",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 8.175000000000177,
+          "s": 2315.5070310573265,
+          "speed": 25.464068009990037,
+          "line": -1,
+          "energy": 0.5419999999999825,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 2,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 2384.968710248767,
+              "lane": -1.55
+            },
+            {
+              "s": 2392.9996797893637,
+              "lane": 1.55
+            },
+            {
+              "s": 2304.574950724927,
+              "lane": -2.183141619922287
+            },
+            {
+              "s": 2299.2467526028386,
+              "lane": -0.5275059956525864
+            }
+          ],
+          "status": "INTERCEPTOR CLOSING · CHANGE LINE / USE BOOST",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 12.20833333333328,
+          "s": 2381.5081153911237,
+          "speed": 11.139449459070093,
+          "line": -1,
+          "energy": 0.6515833333333034,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 2,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 2492.1037861169216,
+              "lane": -1.55
+            },
+            {
+              "s": 2509.2367771284244,
+              "lane": 1.55
+            },
+            {
+              "s": 2376.4997684629548,
+              "lane": -2.103097456853947
+            },
+            {
+              "s": 2370.0192824078326,
+              "lane": 0.09678840904182055
+            }
+          ],
+          "status": "TRAFFIC AHEAD · CHOOSE A CLEAR LINE / BRAKE",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 16.241666666666386,
+          "s": 2492.9843020901326,
+          "speed": 33.343038069739244,
+          "line": -1,
+          "energy": 0.1414166666666336,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 2,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 2604.9846296721435,
+              "lane": -1.55
+            },
+            {
+              "s": 2630.964585861397,
+              "lane": 1.55
+            },
+            {
+              "s": 2471.402330277008,
+              "lane": -2.111357687386289
+            },
+            {
+              "s": 2465.5796500038823,
+              "lane": -0.908168095974718
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "BOOST LOW · RELEASE TO RECHARGE"
+        },
+        {
+          "state": "racing",
+          "time": 20.308333333332822,
+          "s": 2598.5288221859832,
+          "speed": 25.921369257181954,
+          "line": -1,
+          "energy": 0.4272499999999713,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 2723.2328475322224,
+              "lane": -1.55
+            },
+            {
+              "s": 2759.1568726720916,
+              "lane": 1.55
+            },
+            {
+              "s": 2593.091896752404,
+              "lane": -2.0979509084908683
+            },
+            {
+              "s": 2563.700610491329,
+              "lane": -2.3997083613929875
+            }
+          ],
+          "status": "CHECKPOINT 3 / 18",
+          "boost": "BOOST RECHARGING 43%"
+        },
+        {
+          "state": "racing",
+          "time": 24.341666666665926,
+          "s": 2711.3953102578107,
+          "speed": 41.198728326193276,
+          "line": -1,
+          "energy": 0.46424999999996475,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": true,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 2843.8177307054807,
+              "lane": -1.55
+            },
+            {
+              "s": 2886.103463592486,
+              "lane": 1.55
+            },
+            {
+              "s": 2702.7531702986003,
+              "lane": -2.0993010529015836
+            },
+            {
+              "s": 2667.018919048774,
+              "lane": -1.52923783396168
+            }
+          ],
+          "status": "AIRTIME  0.0 S",
+          "boost": "BOOST ACTIVE"
+        },
+        {
+          "state": "racing",
+          "time": 28.424999999999027,
+          "s": 2869.5402276274062,
+          "speed": 26.022535387642826,
+          "line": -1,
+          "energy": 0.42895833333330324,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 2969.1691996721775,
+              "lane": -1.55
+            },
+            {
+              "s": 3013.482313369591,
+              "lane": 1.55
+            },
+            {
+              "s": 2853.0320157429483,
+              "lane": -2.098416716690493
+            },
+            {
+              "s": 2824.7155051916097,
+              "lane": -0.6985733809137166
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "BOOST RECHARGING 43%"
+        },
+        {
+          "state": "racing",
+          "time": 32.4749999999988,
+          "s": 2985.697077047226,
+          "speed": 44.03905977691547,
+          "line": -1,
+          "energy": 0.43404166666663024,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": true,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 3091.067554843964,
+              "lane": -1.55
+            },
+            {
+              "s": 3135.1067016446295,
+              "lane": 1.55
+            },
+            {
+              "s": 2972.793985469121,
+              "lane": -2.1126997303898216
+            },
+            {
+              "s": 2966.013021634471,
+              "lane": -0.2077399943920469
+            }
+          ],
+          "status": "PATROL REGROUPING · BOOST ON A CLEAR STRAIGHT",
+          "boost": "BOOST ACTIVE"
+        },
+        {
+          "state": "racing",
+          "time": 36.49166666666524,
+          "s": 3134.7180018237336,
+          "speed": 15.266844703185171,
+          "line": -1,
+          "energy": 0.32429166666663245,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": true,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 3202.273657816385,
+              "lane": -1.55
+            },
+            {
+              "s": 3243.9099643398517,
+              "lane": 1.55
+            },
+            {
+              "s": 3046.0268146829794,
+              "lane": -2.0560610768250256
+            },
+            {
+              "s": 3040.618646634509,
+              "lane": 0.14387486016600795
+            }
+          ],
+          "status": "PATROL REGROUPING · BOOST ON A CLEAR STRAIGHT",
+          "boost": "BOOST ACTIVE"
+        },
+        {
+          "state": "racing",
+          "time": 40.52499999999834,
+          "s": 3222.711285692712,
+          "speed": 23.857448331765948,
+          "line": -1,
+          "energy": 0.25520833333329984,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 3316.963299791797,
+              "lane": -1.55
+            },
+            {
+              "s": 3358.8749900253424,
+              "lane": 1.55
+            },
+            {
+              "s": 3118.6268146830234,
+              "lane": -2.133047229545429
+            },
+            {
+              "s": 3113.218646634553,
+              "lane": -1.6096641508965328
+            }
+          ],
+          "status": "PATROL REGROUPING · BOOST ON A CLEAR STRAIGHT",
+          "boost": "BOOST RECHARGING 26%"
+        },
+        {
+          "state": "racing",
+          "time": 44.54166666666478,
+          "s": 3313.8109924036485,
+          "speed": 25.802203386255826,
+          "line": -1,
+          "energy": 0.6367916666666351,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 3421.324441839444,
+              "lane": -1.55
+            },
+            {
+              "s": 3468.5987696902926,
+              "lane": 1.55
+            },
+            {
+              "s": 3190.9268146830673,
+              "lane": -1.9731217302616317
+            },
+            {
+              "s": 3185.5186466345967,
+              "lane": -2.3998283919221706
+            }
+          ],
+          "status": "PATROL REGROUPING · BOOST ON A CLEAR STRAIGHT",
+          "boost": "BOOST RECHARGING 64%"
+        },
+        {
+          "state": "racing",
+          "time": 48.60833333333122,
+          "s": 3384.8796282250983,
+          "speed": 24.159000931452955,
+          "line": -1,
+          "energy": 0.5820416666666244,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": true,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 3532.213510498355,
+              "lane": -1.55
+            },
+            {
+              "s": 3586.5307113521767,
+              "lane": 1.55
+            },
+            {
+              "s": 3264.1268146831117,
+              "lane": -2.334916833299081
+            },
+            {
+              "s": 3258.718646634641,
+              "lane": -2.3999999664522926
+            }
+          ],
+          "status": "PATROL REGROUPING · BOOST ON A CLEAR STRAIGHT",
+          "boost": "BOOST ACTIVE"
+        },
+        {
+          "state": "racing",
+          "time": 52.64166666666432,
+          "s": 3503.0845356344576,
+          "speed": 27.59310782148016,
+          "line": -1,
+          "energy": 0.10537499999996097,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 3.1249999999999916,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 3651.795428664827,
+              "lane": -1.55
+            },
+            {
+              "s": 3711.631342067003,
+              "lane": 1.55
+            },
+            {
+              "s": 3338.395148016482,
+              "lane": -1.9731310849561883
+            },
+            {
+              "s": 3332.9869799680114,
+              "lane": -0.9780195186266423
+            }
+          ],
+          "status": "BREAKING CONTACT · 4.9 S TO ESCAPE",
+          "boost": "BOOST RECHARGING 11%"
+        },
+        {
+          "state": "racing",
+          "time": 56.74166666666409,
+          "s": 3609.66300238649,
+          "speed": 26.00438928009126,
+          "line": -1,
+          "energy": 0.49487499999996765,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 7.225000000000149,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 3774.2896844674056,
+              "lane": -1.55
+            },
+            {
+              "s": 3832.024722788515,
+              "lane": 1.55
+            },
+            {
+              "s": 3448.1410647345538,
+              "lane": -2.0990192850800513
+            },
+            {
+              "s": 3441.9341326749113,
+              "lane": -0.06762274055938744
+            }
+          ],
+          "status": "BREAKING CONTACT · 0.8 S TO ESCAPE",
+          "boost": "BOOST RECHARGING 49%"
+        },
+        {
+          "state": "racing",
+          "time": 60.77499999999719,
+          "s": 3710.72764539273,
+          "speed": 17.577608974784823,
+          "line": -1,
+          "energy": 0.6937916666666213,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": true,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 3888.5144043025393,
+              "lane": -1.55
+            },
+            {
+              "s": 3949.169407173877,
+              "lane": 1.55
+            },
+            {
+              "s": 3500.0914970727586,
+              "lane": -2.071364308995453
+            },
+            {
+              "s": 3498.935504910747,
+              "lane": 0.12860034077734678
+            }
+          ],
+          "status": "CHECKPOINT 12 / 18",
+          "boost": "BOOST ACTIVE"
+        },
+        {
+          "state": "racing",
+          "time": 64.77499999999762,
+          "s": 3807.9044532904404,
+          "speed": 22.108602358815084,
+          "line": -1,
+          "energy": 0.387041666666623,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 4000.1601328430415,
+              "lane": -1.55
+            },
+            {
+              "s": 4063.6371771169843,
+              "lane": 1.55
+            },
+            {
+              "s": 3500.0914970727586,
+              "lane": -2.071345595245484
+            },
+            {
+              "s": 3498.935504910747,
+              "lane": 0.12865439680540536
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 68.80833333333416,
+          "s": 3915.558705510091,
+          "speed": 26.00439254165678,
+          "line": -1,
+          "energy": 0.2732916666666247,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 4108.060935586711,
+              "lane": -1.55
+            },
+            {
+              "s": 4166.696754779957,
+              "lane": 1.55
+            },
+            {
+              "s": 3500.0914970727586,
+              "lane": -2.0713455910373098
+            },
+            {
+              "s": 3498.935504910747,
+              "lane": 0.12865440896102462
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "BOOST RECHARGING 27%"
+        },
+        {
+          "state": "racing",
+          "time": 72.82500000000402,
+          "s": 4012.2973913829233,
+          "speed": 25.226361836397977,
+          "line": -1,
+          "energy": 0.6548749999999587,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 4209.782906092443,
+              "lane": -1.55
+            },
+            {
+              "s": 4282.155544805483,
+              "lane": 1.55
+            },
+            {
+              "s": 3500.0914970727586,
+              "lane": -2.071345591036439
+            },
+            {
+              "s": 3498.935504910747,
+              "lane": 0.12865440896357294
+            }
+          ],
+          "status": "CHECKPOINT 14 / 18",
+          "boost": "BOOST RECHARGING 65%"
+        },
+        {
+          "state": "racing",
+          "time": 76.84166666667389,
+          "s": 4114.959236801693,
+          "speed": 23.09222106998293,
+          "line": -1,
+          "energy": 0.41112499999995444,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 4313.316338080734,
+              "lane": -1.55
+            },
+            {
+              "s": 4383.960633322586,
+              "lane": 1.55
+            },
+            {
+              "s": 3500.0914970727586,
+              "lane": -2.071345591036439
+            },
+            {
+              "s": 3498.935504910747,
+              "lane": 0.12865440896357294
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 80.87500000001043,
+          "s": 4203.256893583029,
+          "speed": 21.47835188821578,
+          "line": -1,
+          "energy": 0.2694583333332911,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 4390.854797556602,
+              "lane": -1.55
+            },
+            {
+              "s": 4397.424944948346,
+              "lane": 1.55
+            },
+            {
+              "s": 3500.0914970727586,
+              "lane": -2.071345591036439
+            },
+            {
+              "s": 3498.935504910747,
+              "lane": 0.12865440896357294
+            }
+          ],
+          "status": "CHECKPOINT 16 / 18",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 84.8916666666803,
+          "s": 4281.701845466994,
+          "speed": 17.856923998278262,
+          "line": -1,
+          "energy": 0.17087499999996192,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 0,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 4390.929119617243,
+              "lane": -1.55
+            },
+            {
+              "s": 4397.424944948346,
+              "lane": 1.55
+            },
+            {
+              "s": 3500.0914970727586,
+              "lane": -2.071345591036439
+            },
+            {
+              "s": 3498.935504910747,
+              "lane": 0.12865440896357294
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "BOOST LOW · RELEASE TO RECHARGE"
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "viewport": "390x844",
+      "elapsedSeconds": 91.185,
+      "before": {
+        "state": "countdown",
+        "time": 0,
+        "s": 2208,
+        "speed": 0,
+        "line": 0,
+        "energy": 1,
+        "ultra": 1,
+        "cooldown": 0,
+        "damage": 0,
+        "recoveries": 0,
+        "escaped": false,
+        "wanted": 2,
+        "escapeTimer": 0,
+        "credits": 630,
+        "contexts": 1,
+        "boosting": false,
+        "pressed": [],
+        "traffic": [
+          {
+            "s": 2220,
+            "lane": -1.55
+          },
+          {
+            "s": 2232,
+            "lane": 1.55
+          },
+          {
+            "s": 2175,
+            "lane": -1.4
+          },
+          {
+            "s": 2151,
+            "lane": 1.4
+          }
+        ],
+        "status": "HOLD GO · TAP LEFT / RIGHT · BRAKE TO SLOW",
+        "boost": "ULTRA READY"
+      },
+      "after": {
+        "state": "finished",
+        "time": 87.98333333334942,
+        "s": 4339.1886020265665,
+        "speed": 19.677232087115954,
+        "line": -1,
+        "energy": 0.3178333333333026,
+        "ultra": 1,
+        "cooldown": 0,
+        "damage": 0,
+        "recoveries": 0,
+        "escaped": true,
+        "wanted": 0,
+        "escapeTimer": 0,
+        "credits": 1260,
+        "contexts": 1,
+        "boosting": false,
+        "pressed": [],
+        "traffic": [
+          {
+            "s": 4391.0803319556135,
+            "lane": -1.55
+          },
+          {
+            "s": 4397.4688626981915,
+            "lane": 1.55
+          },
+          {
+            "s": 3560.560533655519,
+            "lane": -2.2331867564576786
+          },
+          {
+            "s": 3536.303537437146,
+            "lane": -0.033186756457666416
+          }
+        ],
+        "status": "FINISH LINE",
+        "boost": "ULTRA READY"
+      },
+      "inputs": [
+        {
+          "t": 0.025,
+          "action": "boost-down"
+        },
+        {
+          "t": 0.025,
+          "action": "line",
+          "desired": 1
+        },
+        {
+          "t": 3.108333333333325,
+          "action": "line",
+          "desired": -1
+        },
+        {
+          "t": 17.308333333332993,
+          "action": "boost-release"
+        },
+        {
+          "t": 23.724999999999294,
+          "action": "boost-down"
+        },
+        {
+          "t": 26.441666666665807,
+          "action": "boost-release"
+        },
+        {
+          "t": 32.924999999998775,
+          "action": "boost-down"
+        },
+        {
+          "t": 39.624999999998394,
+          "action": "boost-release"
+        },
+        {
+          "t": 45.891666666664705,
+          "action": "boost-down"
+        },
+        {
+          "t": 52.80833333333098,
+          "action": "boost-release"
+        },
+        {
+          "t": 59.30833333333061,
+          "action": "boost-down"
+        },
+        {
+          "t": 67.17499999999953,
+          "action": "boost-release"
+        },
+        {
+          "t": 73.44166666667118,
+          "action": "boost-down"
+        },
+        {
+          "t": 85.82500000001437,
+          "action": "boost-release"
+        }
+      ],
+      "samples": [
+        {
+          "state": "racing",
+          "time": 0.025,
+          "s": 2208.002370832303,
+          "speed": 0.18966654300794,
+          "line": 0,
+          "energy": 1,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 2,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 2220.003125,
+              "lane": -1.55
+            },
+            {
+              "s": 2232.003125,
+              "lane": 1.55
+            },
+            {
+              "s": 2175.003333333333,
+              "lane": -1.4434738270995098
+            },
+            {
+              "s": 2151.003333333333,
+              "lane": 1.2849222223786119
+            }
+          ],
+          "status": "GO / THE COAST IS YOURS",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 4.058333333333325,
+          "s": 2252.7445386219442,
+          "speed": 5.93632696838073,
+          "line": -1,
+          "energy": 0.8607499999999904,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 2,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 2281.8895833333336,
+              "lane": -1.55
+            },
+            {
+              "s": 2293.8895833333336,
+              "lane": 1.55
+            },
+            {
+              "s": 2237.265750822448,
+              "lane": 0.8774994538886286
+            },
+            {
+              "s": 2213.8436805555666,
+              "lane": 2.2689942850379747
+            }
+          ],
+          "status": "",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 8.091666666666848,
+          "s": 2314.436700300887,
+          "speed": 26.759601791792225,
+          "line": -1,
+          "energy": 0.534833333333316,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 2,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 2383.5176280036403,
+              "lane": -1.55
+            },
+            {
+              "s": 2391.3048393302715,
+              "lane": 1.55
+            },
+            {
+              "s": 2303.324489136067,
+              "lane": -2.182493797204316
+            },
+            {
+              "s": 2298.032559279443,
+              "lane": -0.6309629772158707
+            }
+          ],
+          "status": "INTERCEPTOR CLOSING · CHANGE LINE / USE BOOST",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 12.20833333333328,
+          "s": 2381.974375121309,
+          "speed": 11.132337284542462,
+          "line": -1,
+          "energy": 0.6523333333333032,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 2,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 2492.154335744393,
+              "lane": -1.55
+            },
+            {
+              "s": 2509.2779133799145,
+              "lane": 1.55
+            },
+            {
+              "s": 2376.925139598113,
+              "lane": -2.1257222457122755
+            },
+            {
+              "s": 2370.503477443413,
+              "lane": 0.07416362068036028
+            }
+          ],
+          "status": "TRAFFIC AHEAD · CHOOSE A CLEAR LINE / BRAKE",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 16.291666666666384,
+          "s": 2496.2653495016457,
+          "speed": 33.97600920062246,
+          "line": -1,
+          "energy": 0.14133333333330023,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 2,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 2606.5502451638013,
+              "lane": -1.55
+            },
+            {
+              "s": 2632.567759725718,
+              "lane": 1.55
+            },
+            {
+              "s": 2474.7876307466113,
+              "lane": -2.1056755773417635
+            },
+            {
+              "s": 2469.1731107197775,
+              "lane": -1.0559659039079774
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "BOOST LOW · RELEASE TO RECHARGE"
+        },
+        {
+          "state": "racing",
+          "time": 20.341666666666153,
+          "s": 2602.5293955909087,
+          "speed": 25.928172230628807,
+          "line": -1,
+          "energy": 0.38649999999996987,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 2724.5113275970316,
+              "lane": -1.55
+            },
+            {
+              "s": 2760.4166354052627,
+              "lane": 1.55
+            },
+            {
+              "s": 2596.8548094235225,
+              "lane": -2.101971028896423
+            },
+            {
+              "s": 2567.6863428655615,
+              "lane": -2.399727895504036
+            }
+          ],
+          "status": "CHECKPOINT 3 / 18",
+          "boost": "BOOST RECHARGING 39%"
+        },
+        {
+          "state": "racing",
+          "time": 24.374999999999257,
+          "s": 2710.203511945752,
+          "speed": 35.20475332348889,
+          "line": -1,
+          "energy": 0.5630833333332981,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": true,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 2845.248642028944,
+              "lane": -1.55
+            },
+            {
+              "s": 2887.484329449396,
+              "lane": 1.55
+            },
+            {
+              "s": 2703.927165582632,
+              "lane": -2.099394973510556
+            },
+            {
+              "s": 2668.5503793582056,
+              "lane": -1.4731900857614044
+            }
+          ],
+          "status": "AIRTIME  0.0 S",
+          "boost": "BOOST ACTIVE"
+        },
+        {
+          "state": "racing",
+          "time": 28.40833333333236,
+          "s": 2887.6873601660573,
+          "speed": 26.062244127476806,
+          "line": -1,
+          "energy": 0.2750416666666304,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 2969.2340160433787,
+              "lane": -1.55
+            },
+            {
+              "s": 3013.46705367808,
+              "lane": 1.55
+            },
+            {
+              "s": 2855.6292877130177,
+              "lane": -2.09970577177841
+            },
+            {
+              "s": 2826.982121262102,
+              "lane": -0.6998680094558434
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "BOOST RECHARGING 28%"
+        },
+        {
+          "state": "racing",
+          "time": 32.50833333333213,
+          "s": 2994.6653627368228,
+          "speed": 26.05577340786259,
+          "line": -1,
+          "energy": 0.6645416666666306,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 3093.6397411141415,
+              "lane": -1.55
+            },
+            {
+              "s": 3137.5151394657332,
+              "lane": 1.55
+            },
+            {
+              "s": 2987.055453911346,
+              "lane": -2.110136291948859
+            },
+            {
+              "s": 2970.7176320474196,
+              "lane": -0.1852300107267006
+            }
+          ],
+          "status": "PATROL REGROUPING · BOOST ON A CLEAR STRAIGHT",
+          "boost": "BOOST RECHARGING 66%"
+        },
+        {
+          "state": "racing",
+          "time": 36.541666666665236,
+          "s": 3129.000954579918,
+          "speed": 14.88767979747786,
+          "line": -1,
+          "energy": 0.4447083333333003,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 3204.0686764866177,
+              "lane": -1.55
+            },
+            {
+              "s": 3246.5237480242963,
+              "lane": 1.55
+            },
+            {
+              "s": 3059.710749750212,
+              "lane": -2.066799635059224
+            },
+            {
+              "s": 3045.6315035184402,
+              "lane": 0.13314268744281257
+            }
+          ],
+          "status": "TRAFFIC AHEAD · CHOOSE A CLEAR LINE / BRAKE",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 40.558333333331674,
+          "s": 3215.1366010126885,
+          "speed": 25.578673797008715,
+          "line": -1,
+          "energy": 0.20095833333330299,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 3317.788376274244,
+              "lane": -1.55
+            },
+            {
+              "s": 3359.9997633080357,
+              "lane": 1.55
+            },
+            {
+              "s": 3132.010749750256,
+              "lane": -2.163893149068172
+            },
+            {
+              "s": 3117.931503518484,
+              "lane": -1.7012118446746436
+            }
+          ],
+          "status": "PATROL REGROUPING · BOOST ON A CLEAR STRAIGHT",
+          "boost": "BOOST RECHARGING 20%"
+        },
+        {
+          "state": "racing",
+          "time": 44.65833333333144,
+          "s": 3307.8955292602705,
+          "speed": 25.102469625528023,
+          "line": -1,
+          "energy": 0.5904583333333067,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 3423.9900835802305,
+              "lane": -1.55
+            },
+            {
+              "s": 3471.6355064535755,
+              "lane": 1.55
+            },
+            {
+              "s": 3205.8107497503006,
+              "lane": -1.885692897240903
+            },
+            {
+              "s": 3191.731503518529,
+              "lane": -2.3998726291503774
+            }
+          ],
+          "status": "PATROL REGROUPING · BOOST ON A CLEAR STRAIGHT",
+          "boost": "BOOST RECHARGING 59%"
+        },
+        {
+          "state": "racing",
+          "time": 48.67499999999788,
+          "s": 3378.728973969801,
+          "speed": 19.50970479298383,
+          "line": -1,
+          "energy": 0.6370416666666283,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": true,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 3533.862424269887,
+              "lane": -1.55
+            },
+            {
+              "s": 3587.3973873138093,
+              "lane": 1.55
+            },
+            {
+              "s": 3278.1107497503444,
+              "lane": -2.282115261420825
+            },
+            {
+              "s": 3264.0315035185727,
+              "lane": -2.3999999723435717
+            }
+          ],
+          "status": "PATROL REGROUPING · BOOST ON A CLEAR STRAIGHT",
+          "boost": "BOOST ACTIVE"
+        },
+        {
+          "state": "racing",
+          "time": 52.708333333330984,
+          "s": 3494.9330330292246,
+          "speed": 27.263367406782034,
+          "line": -1,
+          "energy": 0.12129166666663088,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 1.6749999999999965,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": true,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 3652.913919921905,
+              "lane": -1.55
+            },
+            {
+              "s": 3712.4520242316885,
+              "lane": 1.55
+            },
+            {
+              "s": 3352.657663719276,
+              "lane": -2.1220088827842796
+            },
+            {
+              "s": 3338.662059074164,
+              "lane": -1.0983357751698772
+            }
+          ],
+          "status": "BREAKING CONTACT · 6.3 S TO ESCAPE",
+          "boost": "BOOST LOW · RELEASE TO RECHARGE"
+        },
+        {
+          "state": "racing",
+          "time": 56.72499999999742,
+          "s": 3599.727083760833,
+          "speed": 26.004410619015562,
+          "line": -1,
+          "energy": 0.4637916666666365,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": false,
+          "wanted": 3,
+          "escapeTimer": 5.691666666666739,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 3772.4198446284,
+              "lane": -1.55
+            },
+            {
+              "s": 3830.539414402878,
+              "lane": 1.55
+            },
+            {
+              "s": 3462.3421530732053,
+              "lane": -2.0992061601738556
+            },
+            {
+              "s": 3446.2307118319227,
+              "lane": -0.07382050531315339
+            }
+          ],
+          "status": "BREAKING CONTACT · 2.3 S TO ESCAPE",
+          "boost": "BOOST RECHARGING 46%"
+        },
+        {
+          "state": "racing",
+          "time": 60.77499999999719,
+          "s": 3704.4612880978757,
+          "speed": 18.989933515153318,
+          "line": -1,
+          "energy": 0.6642916666666256,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 3886.6336845132423,
+              "lane": -1.55
+            },
+            {
+              "s": 3947.9367102530355,
+              "lane": 1.55
+            },
+            {
+              "s": 3556.2613593136775,
+              "lane": -2.2339243002257807
+            },
+            {
+              "s": 3534.6848971509285,
+              "lane": -0.033959651522678554
+            }
+          ],
+          "status": "CHECKPOINT 12 / 18",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 64.77499999999762,
+          "s": 3799.635705151977,
+          "speed": 24.292161288211894,
+          "line": -1,
+          "energy": 0.3463749999999596,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 3997.8741763480066,
+              "lane": -1.55
+            },
+            {
+              "s": 4062.4044801961427,
+              "lane": 1.55
+            },
+            {
+              "s": 3560.560533655519,
+              "lane": -2.233186922307159
+            },
+            {
+              "s": 3536.303537437146,
+              "lane": -0.03318693025651135
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 68.8583333333342,
+          "s": 3904.6637641620105,
+          "speed": 26.004357843527238,
+          "line": -1,
+          "energy": 0.2708749999999622,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 4106.866423737271,
+              "lane": -1.55
+            },
+            {
+              "s": 4166.705233450239,
+              "lane": 1.55
+            },
+            {
+              "s": 3560.560533655519,
+              "lane": -2.2331867564889727
+            },
+            {
+              "s": 3536.303537437146,
+              "lane": -0.03318675649047362
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "BOOST RECHARGING 27%"
+        },
+        {
+          "state": "racing",
+          "time": 72.9250000000041,
+          "s": 4003.253577191179,
+          "speed": 24.163894049823497,
+          "line": -1,
+          "energy": 0.6572083333332961,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [],
+          "traffic": [
+            {
+              "s": 4209.478128179882,
+              "lane": -1.55
+            },
+            {
+              "s": 4283.334432067184,
+              "lane": 1.55
+            },
+            {
+              "s": 3560.560533655519,
+              "lane": -2.2331867564576786
+            },
+            {
+              "s": 3536.303537437146,
+              "lane": -0.03318675645767263
+            }
+          ],
+          "status": "CHECKPOINT 14 / 18",
+          "boost": "BOOST RECHARGING 66%"
+        },
+        {
+          "state": "racing",
+          "time": 76.97500000000733,
+          "s": 4110.632317706729,
+          "speed": 21.856127237323033,
+          "line": -1,
+          "energy": 0.3998749999999599,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": true,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 4313.586524890205,
+              "lane": -1.55
+            },
+            {
+              "s": 4385.322873356732,
+              "lane": 1.55
+            },
+            {
+              "s": 3560.560533655519,
+              "lane": -2.2331867564576786
+            },
+            {
+              "s": 3536.303537437146,
+              "lane": -0.033186756457666416
+            }
+          ],
+          "status": "+5 COINS / BANK ON FINISH",
+          "boost": "BOOST ACTIVE"
+        },
+        {
+          "state": "racing",
+          "time": 80.99166666667719,
+          "s": 4199.0072211703455,
+          "speed": 21.307743437352965,
+          "line": -1,
+          "energy": 0.2566249999999634,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 4390.99129115117,
+              "lane": -1.55
+            },
+            {
+              "s": 4397.4688626981915,
+              "lane": 1.55
+            },
+            {
+              "s": 3560.560533655519,
+              "lane": -2.2331867564576786
+            },
+            {
+              "s": 3536.303537437146,
+              "lane": -0.033186756457666416
+            }
+          ],
+          "status": "CHECKPOINT 16 / 18",
+          "boost": "ULTRA READY"
+        },
+        {
+          "state": "racing",
+          "time": 84.99166666668037,
+          "s": 4277.3013121305175,
+          "speed": 23.230694241553955,
+          "line": -1,
+          "energy": 0.15087499999996823,
+          "ultra": 1,
+          "cooldown": 0,
+          "damage": 0,
+          "recoveries": 0,
+          "escaped": true,
+          "wanted": 0,
+          "escapeTimer": 0,
+          "credits": 630,
+          "contexts": 1,
+          "boosting": false,
+          "pressed": [
+            "boost"
+          ],
+          "traffic": [
+            {
+              "s": 4391.0803319556135,
+              "lane": -1.55
+            },
+            {
+              "s": 4397.4688626981915,
+              "lane": 1.55
+            },
+            {
+              "s": 3560.560533655519,
+              "lane": -2.2331867564576786
+            },
+            {
+              "s": 3536.303537437146,
+              "lane": -0.033186756457666416
+            }
+          ],
+          "status": "TRAFFIC AHEAD · CHOOSE A CLEAR LINE / BRAKE",
+          "boost": "BOOST LOW · RELEASE TO RECHARGE"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failureCase": {
+    "state": "busted",
+    "time": 7.108333333333476,
+    "s": 2208,
+    "speed": 0,
+    "line": 0,
+    "energy": 1,
+    "ultra": 1,
+    "cooldown": 0,
+    "damage": 0,
+    "recoveries": 0,
+    "escaped": false,
+    "wanted": 2,
+    "escapeTimer": 0,
+    "credits": 1260,
+    "contexts": 1,
+    "boosting": false,
+    "pressed": [],
+    "traffic": [
+      {
+        "s": 2365.426292117888,
+        "lane": -1.55
+      },
+      {
+        "s": 2372.902707078885,
+        "lane": 1.55
+      },
+      {
+        "s": 2202.885182953887,
+        "lane": -2.2499997204316324
+      },
+      {
+        "s": 2196.6619149064613,
+        "lane": -0.8499992599660682
+      }
+    ],
+    "status": "BUSTED / PATROL HAS YOUR CAR",
+    "boost": "ULTRA READY"
+  },
+  "status": "PASS"
+}

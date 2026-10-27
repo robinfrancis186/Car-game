@@ -1,0 +1,198 @@
+{
+  "release": "V17 R3.12",
+  "status": "Tested local phone usability candidate; parent coordinates publication",
+  "base_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
+  "aggregate": {
+    "passed": 67,
+    "failed": 0,
+    "seconds": 301.905
+  },
+  "post_aggregate_css_checks": {
+    "status": "PASS",
+    "checks": [
+      {
+        "test": "hud-width",
+        "exit": 0,
+        "seconds": 0.1216004160232842
+      },
+      {
+        "test": "ui-theme",
+        "exit": 0,
+        "seconds": 0.08390587501344271
+      },
+      {
+        "test": "home-layout",
+        "exit": 0,
+        "seconds": 0.03222533399821259
+      },
+      {
+        "test": "v17-reference-ui",
+        "exit": 0,
+        "seconds": 0.2591622080071829
+      },
+      {
+        "test": "ui-controller",
+        "exit": 0,
+        "seconds": 18.948958374996437
+      },
+      {
+        "test": "home-setup-controller",
+        "exit": 0,
+        "seconds": 0.6016354999737814
+      }
+    ]
+  },
+  "touch_cases": 40,
+  "browser_progression_cases": 8,
+  "unchanged_home_pixels": [
+    {
+      "name": "desktop",
+      "pixels": 1296000,
+      "different_pixels": 0
+    },
+    {
+      "name": "portrait",
+      "pixels": 329160,
+      "different_pixels": 0
+    },
+    {
+      "name": "landscape",
+      "pixels": 329160,
+      "different_pixels": 0
+    }
+  ],
+  "desktop_gameplay_pixels": [
+    {
+      "scene": "start",
+      "pixels": 1296000,
+      "different_pixels": 0
+    },
+    {
+      "scene": "pursuit",
+      "pixels": 1296000,
+      "different_pixels": 0
+    }
+  ],
+  "performance": {
+    "scope": "Final right-edge landscape CSS: two paired 15-second moving-route samples. Portrait ABBA and desktop paired runs retained because final landscape-only CSS cannot apply there. The final More-close event branch does not run during these uninterrupted samples. Native Mac Chrome; not a physical phone, thermal soak or GPU-timer result.",
+    "status": "PASS",
+    "summary": [
+      {
+        "name": "portrait",
+        "baseline": {
+          "rafMs": {
+            "n": 1799,
+            "p50": 16.69999999999891,
+            "p95": 16.700000000000728,
+            "max": 33.29999999999927,
+            "mean": 16.67520844913841
+          },
+          "renderCpuMs": {
+            "n": 1801,
+            "p50": 1.5999999940395355,
+            "p95": 2.0999999940395355,
+            "max": 28.799999982118607,
+            "mean": 1.6702942804519763
+          }
+        },
+        "candidate": {
+          "rafMs": {
+            "n": 1798,
+            "p50": 16.69999999999891,
+            "p95": 16.799999999999272,
+            "max": 33.399999999999636,
+            "mean": 16.68453837597331
+          },
+          "renderCpuMs": {
+            "n": 1800,
+            "p50": 1.5,
+            "p95": 2.0999999940395355,
+            "max": 29.599999994039536,
+            "mean": 1.6166111112965478
+          }
+        }
+      },
+      {
+        "name": "desktop",
+        "baseline": {
+          "rafMs": {
+            "n": 600,
+            "p50": 16.69999999999891,
+            "p95": 16.700000000000728,
+            "max": 16.80000000000109,
+            "mean": 16.666
+          },
+          "renderCpuMs": {
+            "n": 601,
+            "p50": 2.7999999821186066,
+            "p95": 3.800000011920929,
+            "max": 14.400000005960464,
+            "mean": 2.9048252907053205
+          }
+        },
+        "candidate": {
+          "rafMs": {
+            "n": 600,
+            "p50": 16.69999999999891,
+            "p95": 16.700000000000728,
+            "max": 16.80000000000109,
+            "mean": 16.666
+          },
+          "renderCpuMs": {
+            "n": 601,
+            "p50": 2.800000011920929,
+            "p95": 3.5,
+            "max": 11.300000011920929,
+            "mean": 2.914475874178818
+          }
+        }
+      },
+      {
+        "name": "landscape",
+        "baseline": {
+          "rafMs": {
+            "n": 899,
+            "p50": 16.69999999999891,
+            "p95": 16.799999999999272,
+            "max": 33.30000000000109,
+            "mean": 16.684538375973304
+          },
+          "renderCpuMs": {
+            "n": 900,
+            "p50": 1.9000000059604645,
+            "p95": 2.5,
+            "max": 39.19999998807907,
+            "mean": 1.9970000004437234
+          }
+        },
+        "candidate": {
+          "rafMs": {
+            "n": 900,
+            "p50": 16.69999999999891,
+            "p95": 16.700000000000728,
+            "max": 16.80000000000109,
+            "mean": 16.665999999999997
+          },
+          "renderCpuMs": {
+            "n": 901,
+            "p50": 2.199999988079071,
+            "p95": 2.5999999940395355,
+            "max": 26,
+            "mean": 2.197780244325295
+          }
+        }
+      }
+    ],
+    "blocks": 8,
+    "limits": "Bounded Mac Chrome paired samples, not phone hardware/Safari, listening, thermal, new-player or GPU-timer acceptance. rAF measures observed cadence; rendering CPU alone is not overall FPS."
+  },
+  "inherited_exception": "Legacy tools/audit_runtime_payload.py rejects unchanged CaptureDriverMobile.glb CC0/public-domain metadata. Licence grants remain intact; not a new candidate failure.",
+  "unrun": [
+    "Physical phone",
+    "Safari: Allow Remote Automation remains disabled",
+    "Human audio listening",
+    "Genuine new-player feedback",
+    "Long-session thermal test for this release"
+  ],
+  "rating": "No 9/10 or photorealism acceptance claim."
+}

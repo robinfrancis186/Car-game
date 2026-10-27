@@ -1,0 +1,113 @@
+{
+  "scope": "Bounded actual Mac Chrome moving Metro-route comparison. ABBA phone-sized views, paired desktop. Same hot-pursuit start/assist/quality; real native rAF clock. Not phone hardware, thermal soak or GPU timer measurement. No other tests concurrent.",
+  "status": "PASS",
+  "summary": [
+    {
+      "name": "landscape",
+      "baseline": {
+        "rafMs": {
+          "n": 1199,
+          "p50": 16.699999999999818,
+          "p95": 16.700000000000728,
+          "max": 33.30000000000109,
+          "mean": 16.67998331943286
+        },
+        "renderCpuMs": {
+          "n": 1201,
+          "p50": 2.0999999940395355,
+          "p95": 2.5,
+          "max": 30.69999998807907,
+          "mean": 2.170940882831092
+        }
+      },
+      "candidate": {
+        "rafMs": {
+          "n": 1200,
+          "p50": 16.699999999999818,
+          "p95": 16.700000000000728,
+          "max": 16.80000000000109,
+          "mean": 16.666083333333304
+        },
+        "renderCpuMs": {
+          "n": 1202,
+          "p50": 2.199999988079071,
+          "p95": 2.5,
+          "max": 26.200000017881393,
+          "mean": 2.2582362730322583
+        }
+      }
+    },
+    {
+      "name": "portrait",
+      "baseline": {
+        "rafMs": {
+          "n": 1200,
+          "p50": 16.699999999999818,
+          "p95": 16.700000000000728,
+          "max": 16.80000000000109,
+          "mean": 16.66616666666665
+        },
+        "renderCpuMs": {
+          "n": 1202,
+          "p50": 2,
+          "p95": 2.5,
+          "max": 28.900000005960464,
+          "mean": 2.066638935574279
+        }
+      },
+      "candidate": {
+        "rafMs": {
+          "n": 1199,
+          "p50": 16.69999999999891,
+          "p95": 16.700000000000728,
+          "max": 33.30000000000109,
+          "mean": 16.67989991659717
+        },
+        "renderCpuMs": {
+          "n": 1201,
+          "p50": 1.9000000059604645,
+          "p95": 2.4000000059604645,
+          "max": 29.599999994039536,
+          "mean": 2.0637801828779447
+        }
+      }
+    },
+    {
+      "name": "desktop",
+      "baseline": {
+        "rafMs": {
+          "n": 599,
+          "p50": 16.69999999999891,
+          "p95": 16.799999999999272,
+          "max": 33.20000000000073,
+          "mean": 16.693989983305507
+        },
+        "renderCpuMs": {
+          "n": 600,
+          "p50": 2.9000000059604645,
+          "p95": 3.5,
+          "max": 30.69999998807907,
+          "mean": 2.992166666537523
+        }
+      },
+      "candidate": {
+        "rafMs": {
+          "n": 600,
+          "p50": 16.69999999999891,
+          "p95": 16.700000000000728,
+          "max": 16.80000000000109,
+          "mean": 16.666
+        },
+        "renderCpuMs": {
+          "n": 601,
+          "p50": 2.899999976158142,
+          "p95": 3.5,
+          "max": 25.400000005960464,
+          "mean": 2.953577370344105
+        }
+      }
+    }
+  ],
+  "limits": "Native Mac Chrome emulated phone viewports; observed rAF cadence and render CPU only, not physical-phone/Safari/GPU-timer/thermal or listening acceptance.",
+  "harness_correction": "All ten browser blocks completed and raw samples were persisted before an out-of-scope mobile variable caused only final summary serialization to fail. Preserved raw receipt/log; corrected summary loop and recomputed aggregates from those exact ten complete samples without rerunning or discarding any block."
+}

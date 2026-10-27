@@ -1,0 +1,35 @@
+{
+  "scope": "Actual native Chrome single-touch Boost/Go hold through depletion, then release; real-time signal/visible-state test, not human listening or phone hardware.",
+  "rows": [
+    {
+      "w": 844,
+      "h": 390,
+      "held": {
+        "label": "RELEASE BOOST TO REARM",
+        "energy": 0.020791666666665796,
+        "locked": true
+      },
+      "released": {
+        "label": "BOOST RECHARGING 4%",
+        "energy": 0.036624999999999144,
+        "locked": false
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "held": {
+        "label": "RELEASE BOOST TO REARM",
+        "energy": 0.021583333333332462,
+        "locked": true
+      },
+      "released": {
+        "label": "BOOST RECHARGING 4%",
+        "energy": 0.037416666666665814,
+        "locked": false
+      }
+    }
+  ],
+  "errors": [],
+  "status": "PASS"
+}

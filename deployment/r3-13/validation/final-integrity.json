@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "runtime_files": 188,
+  "runtime_tree_sha256": "104231dafd407b0926bc5e6f829c1be735a4b36053193f3726e3067e07e5b8b8",
+  "full_runtime_tree_sha256": "6f6bf2f57c0cbbafd8200e7c5d4faa755c564e1bfc4006fb387165c1c7964bc2",
+  "manifest_sha256": "7a4a6e48f64e3d53de510560fa27112a66606753a8a5c71fccb4452423f20773",
+  "standalone_sha256": "615240bbbce38fdc947a1116be0794b159c0dcadb96cdf591047e4043d0dc900",
+  "frozen_mobile_history_byte_identical": 5,
+  "not_deployed": true
+}
