@@ -1,0 +1,260 @@
+{
+  "scope": "Installed Mac Chrome only; mobile viewport emulation, not a physical phone. ABBA matched frozen Highland bend; separate actual-course patrol-update CPU sampling. No other tests concurrent.",
+  "rendering": [
+    {
+      "viewport": "desktop",
+      "baseline": {
+        "rafMs": {
+          "count": 240,
+          "median": 16.699999999999818,
+          "p95": 16.700000000000728,
+          "mean": 16.66583333333333,
+          "min": 16.5,
+          "max": 16.800000000000182
+        },
+        "renderCpuSubmissionMs": {
+          "count": 242,
+          "median": 1.9000000059604645,
+          "p95": 2.4000000059604645,
+          "mean": 1.9466942165755043,
+          "min": 1.4000000059604645,
+          "max": 2.9000000059604645
+        },
+        "gpuRenderMs": {
+          "count": 242,
+          "median": 5.078416,
+          "p95": 6.77425,
+          "mean": 5.267897074380165,
+          "min": 3.857125,
+          "max": 9.106624
+        },
+        "gpuDisjoint": false,
+        "draws": 162,
+        "triangles": 375119
+      },
+      "candidate": {
+        "rafMs": {
+          "count": 240,
+          "median": 16.699999999999818,
+          "p95": 16.799999999999727,
+          "mean": 16.666249999999998,
+          "min": 16.5,
+          "max": 16.800000000000182
+        },
+        "renderCpuSubmissionMs": {
+          "count": 242,
+          "median": 1.699999988079071,
+          "p95": 2,
+          "mean": 1.721900826520171,
+          "min": 1.399999976158142,
+          "max": 2.300000011920929
+        },
+        "gpuRenderMs": {
+          "count": 242,
+          "median": 5.03025,
+          "p95": 7.464958,
+          "mean": 5.130352851239669,
+          "min": 3.844791,
+          "max": 11.706249
+        },
+        "gpuDisjoint": false,
+        "draws": 165,
+        "triangles": 375855
+      },
+      "deltas": {
+        "rafMs": {
+          "median": {
+            "ms": 0,
+            "percent": 0
+          },
+          "p95": {
+            "ms": 0.09999999999899956,
+            "percent": 0.598802395203564
+          },
+          "mean": {
+            "ms": 0.0004166666666662877,
+            "percent": 0.0025001250062480387
+          }
+        },
+        "renderCpuSubmissionMs": {
+          "median": {
+            "ms": -0.20000001788139343,
+            "percent": -10.526316697577688
+          },
+          "p95": {
+            "ms": -0.4000000059604645,
+            "percent": -16.66666687362724
+          },
+          "mean": {
+            "ms": -0.2247933900553334,
+            "percent": -11.547442230078387
+          }
+        },
+        "gpuRenderMs": {
+          "median": {
+            "ms": -0.04816600000000015,
+            "percent": -0.948445342012158
+          },
+          "p95": {
+            "ms": 0.6907079999999999,
+            "percent": 10.196080746946155
+          },
+          "mean": {
+            "ms": -0.13754422314049553,
+            "percent": -2.6109891897741635
+          }
+        }
+      }
+    },
+    {
+      "viewport": "mobile-sized",
+      "baseline": {
+        "rafMs": {
+          "count": 240,
+          "median": 16.699999999999818,
+          "p95": 16.700000000000273,
+          "mean": 16.666249999999998,
+          "min": 16.59999999999991,
+          "max": 16.800000000000182
+        },
+        "renderCpuSubmissionMs": {
+          "count": 242,
+          "median": 1.100000023841858,
+          "p95": 1.300000011920929,
+          "mean": 1.1491735538175283,
+          "min": 0.8999999761581421,
+          "max": 1.5
+        },
+        "gpuRenderMs": {
+          "count": 242,
+          "median": 1.268958,
+          "p95": 1.89225,
+          "mean": 1.3174046446280991,
+          "min": 0.920333,
+          "max": 3.389708
+        },
+        "gpuDisjoint": false,
+        "draws": 93,
+        "triangles": 132989
+      },
+      "candidate": {
+        "rafMs": {
+          "count": 240,
+          "median": 16.699999999999818,
+          "p95": 16.700000000000273,
+          "mean": 16.665416666666665,
+          "min": 16.5,
+          "max": 16.800000000000182
+        },
+        "renderCpuSubmissionMs": {
+          "count": 242,
+          "median": 1.300000011920929,
+          "p95": 1.7000000178813934,
+          "mean": 1.3309917362514607,
+          "min": 0.9000000059604645,
+          "max": 2.4000000059604645
+        },
+        "gpuRenderMs": {
+          "count": 242,
+          "median": 1.489624,
+          "p95": 2.222041,
+          "mean": 1.5750532190082647,
+          "min": 1.001166,
+          "max": 3.699249
+        },
+        "gpuDisjoint": false,
+        "draws": 96,
+        "triangles": 133725
+      },
+      "deltas": {
+        "rafMs": {
+          "median": {
+            "ms": 0,
+            "percent": 0
+          },
+          "p95": {
+            "ms": 0,
+            "percent": 0
+          },
+          "mean": {
+            "ms": -0.0008333333333325754,
+            "percent": -0.005000125003120531
+          }
+        },
+        "renderCpuSubmissionMs": {
+          "median": {
+            "ms": 0.19999998807907104,
+            "percent": 18.181816704017105
+          },
+          "p95": {
+            "ms": 0.4000000059604645,
+            "percent": 30.76923094557587
+          },
+          "mean": {
+            "ms": 0.18181818243393244,
+            "percent": 15.821646941833686
+          }
+        },
+        "gpuRenderMs": {
+          "median": {
+            "ms": 0.22066600000000003,
+            "percent": 17.389543231533274
+          },
+          "p95": {
+            "ms": 0.32979099999999995,
+            "percent": 17.4285110318404
+          },
+          "mean": {
+            "ms": 0.25764857438016553,
+            "percent": 19.557284501065293
+          }
+        }
+      }
+    }
+  ],
+  "patrol_update_cpu": [
+    {
+      "track": "coast",
+      "scenario": "near-boxing",
+      "baseline_mean_ms": 0.0027266666670640316,
+      "candidate_mean_ms": 0.009773333328962335,
+      "delta_mean_ms": 0.007046666661898304
+    },
+    {
+      "track": "coast",
+      "scenario": "detecting",
+      "baseline_mean_ms": 0.0024933333317438775,
+      "candidate_mean_ms": 0.0031733333309491487,
+      "delta_mean_ms": 0.0006799999992052712
+    },
+    {
+      "track": "coast",
+      "scenario": "far",
+      "baseline_mean_ms": 0.003473333334922793,
+      "candidate_mean_ms": 0.0034200000047683735,
+      "delta_mean_ms": -5.3333330154419455e-05
+    },
+    {
+      "track": "highlands",
+      "scenario": "near-boxing",
+      "baseline_mean_ms": 0.0033666666686534893,
+      "candidate_mean_ms": 0.006426666667064042,
+      "delta_mean_ms": 0.003059999998410553
+    },
+    {
+      "track": "highlands",
+      "scenario": "detecting",
+      "baseline_mean_ms": 0.0030666666666666685,
+      "candidate_mean_ms": 0.0036466666638851203,
+      "delta_mean_ms": 0.0005799999972184518
+    },
+    {
+      "track": "highlands",
+      "scenario": "far",
+      "baseline_mean_ms": 0.0026600000003973653,
+      "candidate_mean_ms": 0.002639999997615816,
+      "delta_mean_ms": -2.000000278154935e-05
+    }
+  ],
+  "limits": "No general speedup or phone FPS claim. Desktop GPU p95 increased from 6.77425 to 7.464958 ms. Mobile-sized median GPU time increased from 1.268958 to 1.489624 ms and p95 from 1.89225 to 2.222041 ms; median frame interval remained 16.7 ms. Physical phone, Safari and long-session thermals remain untested."
+}

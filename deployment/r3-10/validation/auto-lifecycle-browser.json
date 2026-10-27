@@ -1,0 +1,27 @@
+{
+  "errors": [],
+  "checks": [
+    {
+      "size": "desktop",
+      "track": "coast",
+      "start": 2008,
+      "noInputAuto": 66.50477571952115,
+      "crossTrack": 0.037360893402690325,
+      "switchPreservedPhysicalState": true,
+      "lanesHeldTapCancel": true,
+      "brakeStopResume": true,
+      "pauseFocusRestartCapture": true
+    },
+    {
+      "size": "mobile",
+      "track": "highlands",
+      "start": 1105,
+      "noInputAuto": 65.88501839041942,
+      "crossTrack": 0.00489674803262119,
+      "switchPreservedPhysicalState": true,
+      "lanesHeldTapCancel": true,
+      "brakeStopResume": true,
+      "pauseFocusRestartCapture": true
+    }
+  ]
+}

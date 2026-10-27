@@ -1,0 +1,214 @@
+{
+  "scope": "Mac Chrome patrol-update CPU only using actual course obstacles/terrain, ABBA and batched calls to reduce timer quantization. Does not measure overall FPS or phone performance.",
+  "results": [
+    {
+      "track": "coast",
+      "results": [
+        {
+          "scenario": "near-boxing",
+          "blocks": [
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.0020000004768371583,
+              "p95Ms": 0.005999999642372131,
+              "meanMs": 0.0028266666690508527
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.01,
+              "p95Ms": 0.01399999976158142,
+              "meanMs": 0.010053333322207142
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.01,
+              "p95Ms": 0.012000000476837159,
+              "meanMs": 0.00949333333571753
+            },
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.0019999998807907105,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.0026266666650772105
+            }
+          ]
+        },
+        {
+          "scenario": "detecting",
+          "blocks": [
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.0019999998807907105,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.002533333329359692
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.0031599999984105445
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.005999999642372131,
+              "meanMs": 0.003186666663487753
+            },
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.0019999998807907105,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.0024533333341280636
+            }
+          ]
+        },
+        {
+          "scenario": "far",
+          "blocks": [
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.005999999642372131,
+              "meanMs": 0.003520000000794732
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.006000000238418579,
+              "meanMs": 0.0034266666730244973
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.005999999642372131,
+              "meanMs": 0.0034133333365122492
+            },
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.005999999642372131,
+              "meanMs": 0.0034266666690508543
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "track": "highlands",
+      "results": [
+        {
+          "scenario": "near-boxing",
+          "blocks": [
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.006000000238418579,
+              "meanMs": 0.0035066666722297674
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.006000000238418579,
+              "p95Ms": 0.00800000011920929,
+              "meanMs": 0.006959999998410552
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.006000000238418579,
+              "p95Ms": 0.00800000011920929,
+              "meanMs": 0.0058933333357175325
+            },
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.0032266666650772116
+            }
+          ]
+        },
+        {
+          "scenario": "detecting",
+          "blocks": [
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.0030666666666666685
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.005999999642372131,
+              "meanMs": 0.0036399999936421756
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.005999999642372131,
+              "meanMs": 0.0036533333341280654
+            },
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.003999999761581421,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.0030666666666666685
+            }
+          ]
+        },
+        {
+          "scenario": "far",
+          "blocks": [
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.0020000004768371583,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.0028800000031789156
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.0019999998807907105,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.002786666663487754
+            },
+            {
+              "version": "candidate",
+              "count": 150,
+              "medianMs": 0.0019999998807907105,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.0024933333317438775
+            },
+            {
+              "version": "baseline",
+              "count": 150,
+              "medianMs": 0.0019999998807907105,
+              "p95Ms": 0.004000000357627868,
+              "meanMs": 0.002439999997615815
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

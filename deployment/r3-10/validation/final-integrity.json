@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "release": "V17 R3.10",
+  "source_base_commit": "1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b",
+  "runtime_files_byte_identical_to_manifest_and_build": 186,
+  "exact_source_build_inventory": true,
+  "runtime_tree_sha256": "09ce24d8a3fcba9f353a4d25d08b5f26c358b214d6825967509fe5b0809585f3",
+  "full_runtime_tree_sha256": "df4c6d60673e70daab2f621dadc4e7d5f8f20d0cb441d6536111d89d32e356d7",
+  "manifest_sha256": "1b553a2815136c4532e919ef7ca31c5d9cf937b062234bf576a031a3b637821d",
+  "release_sha256": "8e8beb926942e805784ee11dedaf24a4ea7f28cdf8a3d82ee2ad61a9f9dc46c3",
+  "standalone_sha256": "240415d9cbcc95e561d704dc5fc8b4f696b68cdcbe20fe6d379d0ee3e17ef92a",
+  "r39_asset_ui_control_audio_camera_files_byte_identical": 146,
+  "public_licences_byte_identical": true,
+  "behavioral_code_unchanged_after_65_stage_aggregate": true,
+  "known_legacy_payload_audit_failure": "Unchanged script rejects preserved CC0 grant metadata in unchanged CaptureDriverMobile.glb. Independent byte/dependency/licence evidence retained; no metadata stripped.",
+  "no_external_publication": true
+}

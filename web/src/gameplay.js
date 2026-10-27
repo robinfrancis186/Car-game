@@ -221,7 +221,7 @@ export class GameModel {
   // Ground-only world-boundary recovery also waits for a real touchdown.
   if(this.state!=='racing'||this.recoveryCooldown>0||!p.grounded||p.altitude>.15||p.flying||p.flipActive||input.flight||p.damage>=1){this._clearRecoveryWarning();this._stuckAnchor=null;return;}
   const local=this.projectToRoute(p.x,p.z,p.s),localZone=this._roadZone(local),nearest=localZone.distance<=localZone.shoulderHalfWidth+8?local:this.projectToRoute(p.x,p.z),zone=this._roadZone(nearest),beyond=Math.max(0,zone.distance-zone.shoulderHalfWidth),free=this.scenario.id==='free-drive';
-  const boxed=this.wanted&&this.police.some(v=>v.visible&&v.active&&Math.abs(v.y-p.y)<1.5&&distance(v,p)<12);
+  const boxed=this.wanted&&this.police.some(v=>v.active&&Math.abs(v.y-p.y)<1.5&&this._patrolSeesPlayer(v,12));
   if(boxed||this.arrestProgress>.05){this._clearRecoveryWarning();this._stuckAnchor=null;return;}
   const outside=this.terrainGrid&&this.sampleTerrain(p.x,p.z).outsideDistance>100;
   const wantsMotion=Math.abs(input.throttle)>.35&&!input.brake;
@@ -479,10 +479,10 @@ export class GameModel {
    }
   }return false;
  }
- _airLineOfSight(a,b){
+ _airLineOfSight(a,b,checkOverhead=true){
   // A roof/deck directly above the target blocks the beam even though it is not
   // the car's current support floor (e.g. driving beneath a flyover).
-  if(this._airGroundAt(b.x,b.z,0)>b.y+.2||this._airDeckOccluded(a,b))return false;
+  if((checkOverhead&&this._airGroundAt(b.x,b.z,0)>b.y+.2)||this._airDeckOccluded(a,b))return false;
   const dx=b.x-a.x,dy=b.y-a.y,dz=b.z-a.z,steps=Math.min(100,Math.max(2,Math.ceil(Math.hypot(dx,dz)/4)));
   for(let i=1;i<steps;i++){const t=i/steps;if(this.sampleTerrain(a.x+dx*t,a.z+dz*t).y>a.y+dy*t-.2)return false;}
   const minX=Math.floor(Math.min(a.x,b.x)/32),maxX=Math.floor(Math.max(a.x,b.x)/32),minZ=Math.floor(Math.min(a.z,b.z)/32),maxZ=Math.floor(Math.max(a.z,b.z)/32),seen=new Set(),near=[...this._dynamicObstacles];
@@ -555,12 +555,18 @@ export class GameModel {
   for(const cop of this.police){cop.active=true;cop.siren=true;cop.mode='pursuit';}
   this._emit('detected','PATROL SPOTTED THE RACE / BREAK CONTACT');
  }
+ _patrolSeesPlayer(cop,range){
+  const player=this.player;
+  if(cop.visible===false||Math.hypot(cop.x-player.x,cop.z-player.z,cop.y-player.y)>=range)return false;
+  // Reuse the existing terrain, solid-prop and deck occlusion at car eye height.
+  return this._airLineOfSight({x:cop.x,y:cop.y+1.1,z:cop.z},{x:player.x,y:player.y+1.1,z:player.z},false);
+ }
  _updatePolice(dt){
   const player=this.player;
   if(!this.police.length){this.policeDistance=Infinity;return;}
   if(!this.wanted){
    const canDetect=this.timer>=this._detectionAfter&&player.speed>11;
-   const inSight=this.police.some(c=>distance(c,player)<90&&player.altitude<5);
+   const inSight=canDetect&&player.altitude<5&&this.police.some(c=>this._patrolSeesPlayer(c,90));
    if(canDetect&&inSight&&(!this.escaped||this.scenario.id==='coast-sprint'))this._activatePolice();
   }
   for(let i=0;i<this.police.length;i++){
@@ -598,7 +604,7 @@ export class GameModel {
      this._emit('escaped','PURSUIT EVADED / THE COAST IS CLEAR');
     }
    }else{this.escapeTimer=0;this.pursuit='pursuit';}
-   const boxed=this.police.some(c=>distance(c,player)<8.2&&Math.abs(c.y-player.y)<1.5)&&Math.abs(player.speed)<5&&player.altitude<1.2;
+   const boxed=Math.abs(player.speed)<5&&player.altitude<1.2&&this.police.some(c=>c.active&&Math.abs(c.y-player.y)<1.5&&this._patrolSeesPlayer(c,8.2));
    this.arrestProgress=clamp(this.arrestProgress+dt*(boxed?.245:-.48),0,1);
    if(this.arrestProgress>=1)this._end('busted','BUSTED / PATROL HAS YOUR CAR');
   }else this.arrestProgress=Math.max(0,this.arrestProgress-dt);

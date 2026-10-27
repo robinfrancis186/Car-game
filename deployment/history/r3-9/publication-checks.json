@@ -1,0 +1,35 @@
+{
+  "release": "V17 R3.9",
+  "status": "Local scoped candidate only",
+  "base_commit": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
+  "aggregate": {
+    "passed": 63,
+    "failed": 0,
+    "not_run": 0,
+    "seconds": 314.514
+  },
+  "post_aggregate_changes": "Only Manual-only wall explanation/UI disable and input-assist module comment; affected Coast/Highland controller, surface, Maps, Home and actual Chrome wall admission checks passed afterward. No physics/audio/assist algorithm changed.",
+  "road_assist": "30 full-course traversals: all 10 normal starts at 30/60/120 Hz, zero off-road/damage/automatic recovery; actual line changes and divided-road rejoin passed. Browser:20 normal Auto starts across 22 destination launches; wall staysManual.",
+  "auto_ui": "Desktop/mobile-sized no-input progress, lane taps/swipes/held-repeat/cancel, brake-stop/resume, immediate physical-state-preserving Manual switch, pause/focus/capture/result/retry passed.",
+  "preservation": {
+    "original_set": 138,
+    "byte_identical": 137,
+    "only_exception": "web/src/audio.js",
+    "scope_receipt": "web/tests/polish-audio-scope.json",
+    "behavioral_tests": "50 original+extended audio-control tests and 21 rotor/airtime tests; guard invokes these suites and requires exact reviewed audio hash. Original baseline JSON is unchanged."
+  },
+  "audio_signal": "Seven native 48 kHz stereo full-volume OfflineAudioContext cases; all finite, zero clipping. Documented native-clock scheduling-state adapter; not listening or gesture validation. Actual Chrome separately verified gesture unlock, persistent settings, one context after retry and pause/focus.",
+  "performance": "ABBA same-scene render comparisons and separate helper CPU cost. No draws/triangles added. First desktop GPU tail increase did not repeat; both runs retained. No general FPS or phone guarantee.",
+  "known_failed_check": {
+    "script": "tools/audit_runtime_payload.py",
+    "reason": "Unchanged audit rejects preserved CC0 grant metadata in unchanged CaptureDriverMobile.glb. No licence grant was removed."
+  },
+  "not_run": [
+    "Physical phone",
+    "Safari",
+    "Human audio listening",
+    "Genuine new-player observations",
+    "Live deployment verification"
+  ],
+  "remaining_ten_area_scope": "Environment consistency, material/art quality, police/race balance, device reliability and human playtesting remain; manual tire/grip physics not broadly retuned. No9/10 claim."
+}

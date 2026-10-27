@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "map_launches": 22,
+  "normal_auto_starts": 20,
+  "auto_ui_viewports": 2,
+  "natural_capture_courses": 2,
+  "errors": [],
+  "temporary_harness_corrections": [
+    "Exact approved R3.9 Manual-only note replaces obsolete shorter note.",
+    "Retry actor cleanup asserted after next rendered frame within1000ms, while capture model resets immediately.",
+    "Restart progress compared exactly to settled initial spawn; unchanged curve projection is1112.96428m rather than rounded1113m."
+  ],
+  "product_code_changed_for_harness": false
+}

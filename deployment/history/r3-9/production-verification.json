@@ -1,0 +1,7 @@
+{
+  "release": "V17 R3.9",
+  "status": "NOT PUBLISHED",
+  "owner": "parent thread",
+  "rollback_source_commit": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
+  "note": "No Git push or Vercel operation performed by this executor."
+}

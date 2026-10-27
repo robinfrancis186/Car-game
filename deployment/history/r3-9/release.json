@@ -1,0 +1,19 @@
+{
+  "game": "MALABAR: Hot Coast",
+  "version": "V17 R3.9",
+  "change": "First scoped polish: original switchable road-following Auto Drive with discrete left/center/right lines and brake override; distinct Pedals-only option; render-only chase smoothing/reduced motion; persistent sound settings and corrected capture sirens/Doppler.",
+  "source_base_commit": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
+  "auto_scope": "Four normal modes and Story use actual road geometry. Manual switching preserves physical race state. New runs startManual. Experimental Harbour Wall Run is explicitlyManual-only in Maps/Help; ground-road steering and speed planning do not model its 3D banked adhesion or minimum attachment speed.",
+  "maps_scope": "All 11 destinations retained;10 normal starts supportAuto. Existing wallet/reward/local leaderboard validation retained; repository has no multiplayer server to change.",
+  "tested_standalone_sha256": "27b560882a06596abd2171b2766bafeb9e2e08699bc71abbf2e824aac56bf292",
+  "runtime_format": "Byte-preserving split runtime; node tools/build-static.mjs",
+  "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
+  "local_checks": "63/63 aggregate,30 rate/destination model traversals,22 Chrome map launches,20 Chrome Auto starts, UI/lifecycle/voice/volume/guard and build/integrity checks. Final wall-explanation-only edits checked by affected suites/browser.",
+  "limitations": "This is the first scoped polish stage, not all ten areas or a 9/10 rating. No physical phone, Safari, human listening or genuine new-player feedback. Road assist is not collision immunity or guaranteed race/pursuit success. Harbour wall assist requires a dedicated surface-frame/adhesion controller and remainsManual. Existing scenery remains stylized. Legacy CC0 payload audit exception retained.",
+  "public_licences": "All existing NVIDIA CC BY 4.0, MakeHuman CC0, Three and font licences/attribution preserved; no new third-party assets/dependencies. Asphalt controls were reference only; no imagery/branding copied.",
+  "production_state": "Local candidate only; parent owns Git publication, Vercel and live verification.",
+  "rollback_release": "V17 R3.8",
+  "rollback_source_commit": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
+  "rollback_deployment_id": null,
+  "runtime_tree_sha256": "c6777ef73de5e5ce1af2e611a66d1c6f105f0500f5e20198588a6d03cd00c977"
+}

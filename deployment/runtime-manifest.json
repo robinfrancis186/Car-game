@@ -1,19 +1,19 @@
 {
-  "release": "V17 R3.9",
+  "release": "V17 R3.10",
   "deployment_owner": "parent thread",
   "project_id": "prj_wpjGOHOOw8yWEFnoKJeBe8ZTu6d5",
   "production_url": "https://malabar-hot-coast.vercel.app/",
   "build_command": "node tools/build-static.mjs",
   "output_directory": "dist/vercel",
   "deployment_status": "Local candidate only; not pushed or deployed",
-  "source_base_commit": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
-  "runtime_files": 185,
-  "runtime_tree_sha256": "c6777ef73de5e5ce1af2e611a66d1c6f105f0500f5e20198588a6d03cd00c977",
+  "source_base_commit": "1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b",
+  "runtime_files": 186,
+  "runtime_tree_sha256": "09ce24d8a3fcba9f353a4d25d08b5f26c358b214d6825967509fe5b0809585f3",
   "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
-  "full_runtime_tree_sha256": "bf250e5fe5f7e6c0188eb81ef6d1f9f2ef660efecd86e4cd8d326e0defe06b87",
+  "full_runtime_tree_sha256": "df4c6d60673e70daab2f621dadc4e7d5f8f20d0cb441d6536111d89d32e356d7",
   "full_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, including release.json",
-  "rollback_release": "V17 R3.8",
-  "rollback_source_commit": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
+  "rollback_release": "V17 R3.9",
+  "rollback_source_commit": "1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b",
   "rollback_deployment_id": null,
   "mapping": [
     {
@@ -865,8 +865,8 @@
     {
       "public_path": "release.json",
       "source_path": "deployment/release.json",
-      "bytes": 2458,
-      "sha256": "8ce735782108456cb7370eabd662fe22913a7d7964876ab040b63513749e7cfe"
+      "bytes": 2148,
+      "sha256": "8e8beb926942e805784ee11dedaf24a4ea7f28cdf8a3d82ee2ad61a9f9dc46c3"
     },
     {
       "public_path": "src/air-traffic.js",
@@ -923,6 +923,12 @@
       "sha256": "9dcf84d22f58a083fc262bee704bbb4b5692fdfb33a3d98af08e46fd78cac3e1"
     },
     {
+      "public_path": "src/curve-guides.js",
+      "source_path": "web/src/curve-guides.js",
+      "bytes": 3490,
+      "sha256": "7d29f19fe5180680e09b8e5f50fa02629632be7216c0c9be3c29103cd18f56b3"
+    },
+    {
       "public_path": "src/detail-lod.js",
       "source_path": "web/src/detail-lod.js",
       "bytes": 5995,
@@ -943,8 +949,8 @@
     {
       "public_path": "src/gameplay.js",
       "source_path": "web/src/gameplay.js",
-      "bytes": 74247,
-      "sha256": "990eb8f21b199e943ccd00bd33de6bf36b7cf484f30a903fe3258d87351ec809"
+      "bytes": 74674,
+      "sha256": "3492a036df080400cc7bf0eb63d2e1cce2675b617d8fdfa0af412b2bb08d44ed"
     },
     {
       "public_path": "src/garage.js",
@@ -1027,8 +1033,8 @@
     {
       "public_path": "src/scene.js",
       "source_path": "web/src/scene.js",
-      "bytes": 43882,
-      "sha256": "007663ce531d01e3c223dbae9ae51d0b613fd1250f689091e0223babe1d658ac"
+      "bytes": 43981,
+      "sha256": "73cf720a719b91d78e67ce0d20021a757617daa76a6ced2be675d0e8b7189fd1"
     },
     {
       "public_path": "src/showroom-reflector.js",

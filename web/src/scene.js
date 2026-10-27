@@ -1,4 +1,5 @@
 import {DrivingCameraFilter} from './driving-camera.js';
+import {installCurveGuides} from './curve-guides.js';
 import {SimReadyPilot} from './simready-pilot.js';
 import {RoadLighting} from './road-lighting.js';
 import * as THREE from 'three';
@@ -88,6 +89,7 @@ export class CoastRenderer{
     im.instanceMatrix.needsUpdate=true;if(im.instanceColor)im.instanceColor.needsUpdate=true;im.computeBoundingSphere();group.add(im);
    });group.userData.center=center;this.environmentChunks.push(group);this.scene.add(group);
   }
+  this.curveGuides=installCurveGuides(this);
   const materials=model=>{const a=[];model.traverse(o=>{if(o.isMesh)a.push(...materialList(o.material));});return a;};
   if(hasCanalDetail)this.detailFields.push(new NearDetailField({name:'trees',model:this.models['CanalRainTree.glb'],placements:this.world.prop_instances.filter(p=>p.asset==='CanalRainTree'),scene:this.scene,styleMaterial:m=>this.styleMaterial(m),farMaterials:materials(this.models['CanalRainTreeFar.glb']),high:{radius:80,budget:12,padding:18,fade:16},balanced:{radius:45,budget:6,padding:18,fade:12}}));
   if(hasHighlandDetail){

@@ -1,0 +1,28 @@
+{
+  "scope": "Installed Mac Chrome; stationary normal-input patrol capture on both actual courses, mobile-sized view not phone hardware.",
+  "results": [
+    {
+      "track": "coast",
+      "naturalTrigger": true,
+      "pauseInputFrozen": true,
+      "twoOfficers": true,
+      "oneTerminal": true,
+      "retryClean": true,
+      "noCreditAward": true,
+      "raceTime": 7.108333333333476,
+      "credits": 0
+    },
+    {
+      "track": "highlands",
+      "naturalTrigger": true,
+      "pauseInputFrozen": true,
+      "twoOfficers": true,
+      "oneTerminal": true,
+      "retryClean": true,
+      "noCreditAward": true,
+      "raceTime": 7.108333333333476,
+      "credits": 0
+    }
+  ],
+  "errors": []
+}
