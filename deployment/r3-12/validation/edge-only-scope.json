@@ -1,0 +1,22 @@
+{
+  "post_aggregate_changes": [
+    "web/src/style.css",
+    "web/src/main.js",
+    "web/tests/ui-controller.test.mjs"
+  ],
+  "scope": "Landscape edge-cluster CSS plus release-held-input branch when closing More and its regression assertion. Exact main/test preimage reconstruction matches the 67-stage source; all other code unchanged.",
+  "main_preimage_sha256": "741173734fd075067876dfeb02b92c3b27089c8204bd688d4781ae1d281d776b",
+  "test_preimage_sha256": "ea3d30bab416f21736befd39345859c096132b496e7d6d0e83326a0bd89814f4",
+  "before": {
+    "web/index.html": "000894db768b1b1bdc3638e86d1b792068dac2f5f09c6fde5539f6c1022f1b7b",
+    "web/src/main.js": "741173734fd075067876dfeb02b92c3b27089c8204bd688d4781ae1d281d776b",
+    "web/src/style.css": "32eff0ff8dc58aba3ee4b9079cd4eaab1e3c5460302c06e383a2a136d0e3c0fc",
+    "web/tests/ui-controller.test.mjs": "ea3d30bab416f21736befd39345859c096132b496e7d6d0e83326a0bd89814f4"
+  },
+  "after": {
+    "web/index.html": "000894db768b1b1bdc3638e86d1b792068dac2f5f09c6fde5539f6c1022f1b7b",
+    "web/src/main.js": "0aa82644eee2815dd74409157a9777317bccbf92839fc987b5cf0c4839c7e4ad",
+    "web/src/style.css": "095a4ef0a379857b4bc7db965c35a3beffba556f2ca0b4ef5f0902c5e847272f",
+    "web/tests/ui-controller.test.mjs": "ec7ffcadca5cb7dbcd5b614dcf35067ca816df81392f51261dcd1f2fd84ac664"
+  }
+}

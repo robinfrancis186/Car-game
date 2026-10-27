@@ -1,1094 +1,198 @@
 {
-  "release": "V17 R3.11",
-  "status": "Local Stage3 candidate only",
-  "base_commit": "cf619bf4de5905590848f2b1f5030541c0b76e6b",
+  "release": "V17 R3.12",
+  "status": "Tested local phone usability candidate; parent coordinates publication",
+  "base_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
   "aggregate": {
-    "passed": 66,
+    "passed": 67,
     "failed": 0,
-    "not_run": 0,
-    "seconds": 310.623,
-    "scope": "Before approved one-sentence Story copy correction; no scenery changes afterward.",
-    "tracked_files_changed_by_tests": []
+    "seconds": 301.905
   },
-  "post_aggregate": {
-    "checks": {
-      "status": "PASS",
-      "checks": [
-        {
-          "test": "web/tests/story-objective.test.mjs",
-          "exit": 0,
-          "seconds": 0.047
-        },
-        {
-          "test": "web/tests/story.test.mjs",
-          "exit": 0,
-          "seconds": 15.653
-        },
-        {
-          "test": "web/tests/story-store.test.mjs",
-          "exit": 0,
-          "seconds": 0.041
-        },
-        {
-          "test": "web/tests/story-controller.test.mjs",
-          "exit": 0,
-          "seconds": 1.321
-        },
-        {
-          "test": "web/tests/v16-1-scope.test.mjs",
-          "exit": 0,
-          "seconds": 1.133
-        },
-        {
-          "test": "tests/v17/preservation.test.mjs",
-          "exit": 0,
-          "seconds": 1.043
-        }
-      ],
-      "scope": "After recorded 66/66 aggregate: one Story objective sentence and exact preservation exception only; no scenery/physics/reward changes."
-    },
-    "registered_suite_stages_now": 67,
-    "full_67_stage_rerun": "NOT RUN; unchanged long suites not repeated per instruction, six affected checks passed.",
-    "only_runtime_change": "One Last Light objective sentence, verified by exact original-source preimage hash."
-  },
-  "runtime_source_sha256": {
-    "web/src/capture-materials.js": "48d5237a0dcc46b42e6d2c131093f2bca355627bcf750500fbf6561c9daa0175",
-    "web/src/surface-ribbon.js": "d3722764ee3a334cf00654f371d8e5405a9ba452cd5c59cc573301e811414780",
-    "web/src/upgrade-visuals.js": "8d2b838796cdcbf577b706ddb80ced1cdfd4fed4e5dce8f05319bfaadeff90e3",
-    "web/src/boost-fire.js": "5bb3009ca6ba451ffaf31ff99231427c3d0a762cd1987e245f6438a5b2f71c85",
-    "web/src/surface-drive.js": "05d9517e469778f572615c7816dd8dcd5bd08705c28c3759eb53f3261e785549",
-    "web/src/ramp-surfaces.js": "e3032720f52c0b13a02d1a757e48d1af67fe096c4b7ee428d35bf999137d2b19",
-    "web/src/tea-placement.js": "110799212574b2c42c976585f625d24ab59d0a5129cb5be2a0fafaa10e70d84f",
-    "web/src/profile-storage.js": "31388e106082522905c832f3ba4db02345e55a0800fbdadd28b9948e48facb4d",
-    "web/src/police-capture.js": "3678121e7eb45a26ae3acd3637977f4206bc9da8b0e229c535cdebbfb5262601",
-    "web/src/scene.js": "63f55c5950fa30b63756fa8341e7a79544c21704090d611ec0d8743384730249",
-    "web/src/story.js": "edfad22da3e3bddcfc7746be57d571208e77637cc3de70a0e279561a819dcc6e",
-    "web/src/curve-guides.js": "7d29f19fe5180680e09b8e5f50fa02629632be7216c0c9be3c29103cd18f56b3",
-    "web/src/map-destinations.js": "70b05a1c39d7e01a3a86693b6b7990f4608b092bc474a65011e38838f0d91701",
-    "web/src/stunt-model.js": "499bb2cc905a816509dbc70e989bb84623cc381f698ef6ba7ab2ee489ec2920b",
-    "web/src/transit.js": "b89f7a545514b5f34b5a62d3f6f684d58aea30a714903adb7b2b3a28a095714d",
-    "web/src/surface-materials.js": "e60bf4469e4436675308830f901e963504c3c0d86b69463fa4ba2f132f1556f0",
-    "web/src/capture-human.js": "571c66b38ee071b9a067d3cb587f58606f2472e06fd84746215fca1791f9b575",
-    "web/src/render-metrics.js": "e0645ed661dacdd4e1beba7e75c4a5e562219edccf7fcaa8fa8f5e1f90e8083c",
-    "web/src/showroom-reflector.js": "ccbf620792e6a348ddbb7b38b4a9c3aa1eb38a11f33f493c70915333211ee2e8",
-    "web/src/sound-preferences.js": "e45a0f944db26a4f8e634385a9a32d890aaedba575332de8ed11258dcb0156da",
-    "web/src/leaderboard.js": "b8b7c0ee0a54d1a67b488036b3817ecbc276ca84e9409ec4437b9c49f6c247d9",
-    "web/src/tracks.js": "1fdf792479f5455fcd36bb75c544add8bd8019150506806e173f28f48a1dd6b7",
-    "web/src/airtime-rewards.js": "73f619b5d9e048793a1f5087572cab2aeb514b669a73561cf8ae8571dfaf9b80",
-    "web/src/story-store.js": "d122f884a0724798eddf30ae311a58e8bdd4e349814319e6eb98a0e7c9d4252f",
-    "web/src/air-traffic.js": "3751b1a941a9ed7592fd305838095d7eaaf9fb8cf2dd15aea12b329dda7737f7",
-    "web/src/main.js": "8eee2f7d386fdb39d904b10dfb9d8047ca68683a6dfacdd952f5ea37fd6225b8",
-    "web/src/finish-fx.js": "a8c11f92b406746c574a8b82bf1b031765e60ce5abe10c949bf2a789b8913f7c",
-    "web/src/detail-lod.js": "b7f74f6850fd76454b22b7593452036f9e0b9a0f53de7fcc1d2b708d5a45bb9d",
-    "web/src/audio.js": "e0b6ee0718d6169904c094e2b34eef99aed9c1915e24df412884936ce44849b2",
-    "web/src/police-air-support.js": "443c88e24d1450dd0a11aba522cda76394ee4182f18358e16ed4f1f537f61ef6",
-    "web/src/leaderboard-store.js": "61ec5d277c59de1f10b759920e0d9597b487cf1314f98b446c57605b1d3906b2",
-    "web/src/garage.js": "e971705a77df3f3d58f846ab8ff14a510ba17acc14249b65b0181e7f5f0ee6b6",
-    "web/src/style.css": "25792042f22dee4abdc47aa130dd7e0f59f09434dfc522d943fe8f1bf1a4fadd",
-    "web/src/auto-drive.js": "99cf4e6bc6463f41f2d35a346f9b6a4f1068ab2bc68c176ca61c7c30fa19690b",
-    "web/src/collectibles.js": "9dcf84d22f58a083fc262bee704bbb4b5692fdfb33a3d98af08e46fd78cac3e1",
-    "web/src/showroom-scene.js": "691d96f1c4a5f5d7365f1c475e78d82eaba742c39e123b09e44cc51a64585634",
-    "web/src/cinematic-camera.js": "cadd2815c1ad4bb1155d30b04a8e537cad57c56fe6e8906bc7dc16c196a747ea",
-    "web/src/gameplay.js": "3492a036df080400cc7bf0eb63d2e1cce2675b617d8fdfa0af412b2bb08d44ed",
-    "web/src/driving-camera.js": "1058ccad99b04c4d65d5d41776ddde800a960983093d1bb00f5786c1d4677670",
-    "web/src/surface-camera.js": "f5297cabb6965c53a7d955b8d6519bbf83f5efe3c9b9b7a33be67ea5ec6fe3af",
-    "web/src/scenery-materials.js": "17a4ae90d853b5cbfc19fd531c2d1b8b689c478b6d573c4bb1a0eccbd9a96836",
-    "web/src/rotor-audio-targets.js": "daf1f51b91ec9770a3a36917a13759a2ceca85428d743aeca7e71692ca8370ce",
-    "web/src/police-capture-scene.js": "4ec5b8f5dfc91259d329012e0762bdb079c39ce7c2f82438f1f1154a678276ef",
-    "web/src/road-lighting.js": "d845d2c35fa10aed884231095b348ba40c130f7091d170daf042bd9d1513e222",
-    "web/src/simready-pilot.js": "d3fc1285c1164066f9bbf0c66d17680b525b149393593b39c35211dd60b126f6"
-  },
-  "materials": {
-    "shared_texture_mipmapped_bytes": 349524,
-    "texture_sha256": "4373ab6a6507b8243dea8540deb032f9968dfb7cf98d711b8a4991adbf720294",
-    "extra_draws": 0,
-    "extra_triangles": 0,
-    "village_houses": 15,
-    "deterministic_colours": 5,
-    "facade_hooks_checked": 155,
-    "facade_instances_checked": 423,
-    "geometry_or_collision_change": false
-  },
-  "visuals": {
-    "matched_views": 16,
-    "browser_errors": 0,
-    "draft1": "REJECTED: flat ground and lost facade clone hook; optional canopy displacement discarded.",
-    "draft2": "Inspected experimental material candidate; geometry/budgets preserved, still stylized.",
-    "home_pixel_identity": [
+  "post_aggregate_css_checks": {
+    "status": "PASS",
+    "checks": [
       {
-        "viewport": "desktop",
-        "different_pixels": 0,
-        "total_pixels": 1296000
+        "test": "hud-width",
+        "exit": 0,
+        "seconds": 0.1216004160232842
       },
       {
-        "viewport": "mobile",
-        "different_pixels": 0,
-        "total_pixels": 329160
+        "test": "ui-theme",
+        "exit": 0,
+        "seconds": 0.08390587501344271
+      },
+      {
+        "test": "home-layout",
+        "exit": 0,
+        "seconds": 0.03222533399821259
+      },
+      {
+        "test": "v17-reference-ui",
+        "exit": 0,
+        "seconds": 0.2591622080071829
+      },
+      {
+        "test": "ui-controller",
+        "exit": 0,
+        "seconds": 18.948958374996437
+      },
+      {
+        "test": "home-setup-controller",
+        "exit": 0,
+        "seconds": 0.6016354999737814
       }
-    ],
-    "night_road_readability": "Inspected matched actual Metro night gameplay views; road/marking geometry and paint unchanged.",
-    "home_proof_note": "Full-frame pixel identity and byte-identical UI/CSS/main are authoritative; the camera receipt also contains an empty optional control selector collector and is not a DOM-coverage assertion."
+    ]
   },
-  "performance": {
-    "scope": "Mac Chrome, ABBA frozen matched village/Metro/harbor/Highland scenes, desktop and mobile-sized. Rendering CPU and GPU timers; no phone or overall-play FPS claim. Other suites finished before measurement.",
-    "cases": [
-      {
-        "scene": "village",
-        "viewport": "desktop",
-        "baseline": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.33208333333334,
-            "min": 33.19999999999982,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 2.600000023841858,
-            "p95": 4.9000000059604645,
-            "mean": 2.939669422743734,
-            "min": 1.800000011920929,
-            "max": 5.800000011920929
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 9.02575,
-            "p95": 11.955374,
-            "mean": 9.2174168429752,
-            "min": 5.089916,
-            "max": 14.545375
-          },
-          "gpuDisjoint": false,
-          "draws": 207,
-          "triangles": 408182
-        },
-        "candidate": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000001455,
-            "mean": 33.33124999999999,
-            "min": 33.19999999999891,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 2.5,
-            "p95": 3.5,
-            "mean": 2.6045454545947146,
-            "min": 1.800000011920929,
-            "max": 4.5999999940395355
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 9.22375,
-            "p95": 12.898499,
-            "mean": 9.571470061983469,
-            "min": 5.438416,
-            "max": 18.023749
-          },
-          "gpuDisjoint": false,
-          "draws": 207,
-          "triangles": 408182
-        },
-        "deltas": {
-          "rafMs": {
-            "median": {
-              "ms": 0,
-              "percent": 0
-            },
-            "p95": {
-              "ms": 9.094947017729282e-13,
-              "percent": 2.72303802926022e-12
-            },
-            "mean": {
-              "ms": -0.0008333333333467863,
-              "percent": -0.002500093753556117
-            }
-          },
-          "renderCpuSubmissionMs": {
-            "median": {
-              "ms": -0.10000002384185791,
-              "percent": -3.8461547278793526
-            },
-            "p95": {
-              "ms": -1.4000000059604645,
-              "percent": -28.57142865831581
-            },
-            "mean": {
-              "ms": -0.33512396814901946,
-              "percent": -11.400056263341074
-            }
-          },
-          "gpuRenderMs": {
-            "median": {
-              "ms": 0.1980000000000004,
-              "percent": 2.193723513281449
-            },
-            "p95": {
-              "ms": 0.9431249999999984,
-              "percent": 7.888711804415307
-            },
-            "mean": {
-              "ms": 0.3540532190082679,
-              "percent": 3.841132771141839
-            }
-          }
-        },
-        "textures_baseline": 15,
-        "textures_candidate": 16
-      },
-      {
-        "scene": "village",
-        "viewport": "mobile-sized",
-        "baseline": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.33166666666666,
-            "min": 33.19999999999982,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 2,
-            "p95": 3.9000000059604645,
-            "mean": 2.276446280031165,
-            "min": 1.199999988079071,
-            "max": 5.0999999940395355
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 4.069125,
-            "p95": 4.908916,
-            "mean": 3.7918400165289263,
-            "min": 1.590125,
-            "max": 7.246249
-          },
-          "gpuDisjoint": false,
-          "draws": 152,
-          "triangles": 287663
-        },
-        "candidate": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.331666666666656,
-            "min": 33.19999999999891,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 1.7999999821186066,
-            "p95": 2.0999999940395355,
-            "mean": 1.7363636359449262,
-            "min": 1.0999999940395355,
-            "max": 3.7000000178813934
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 4.538791,
-            "p95": 4.895499,
-            "mean": 4.345957115702481,
-            "min": 2.174749,
-            "max": 6.150958
-          },
-          "gpuDisjoint": false,
-          "draws": 152,
-          "triangles": 287663
-        },
-        "deltas": {
-          "rafMs": {
-            "median": {
-              "ms": 0,
-              "percent": 0
-            },
-            "p95": {
-              "ms": 0,
-              "percent": 0
-            },
-            "mean": {
-              "ms": -7.105427357601002e-15,
-              "percent": -2.131734794020002e-14
-            }
-          },
-          "renderCpuSubmissionMs": {
-            "median": {
-              "ms": -0.20000001788139343,
-              "percent": -10.000000894069672
-            },
-            "p95": {
-              "ms": -1.800000011920929,
-              "percent": -46.15384638897296
-            },
-            "mean": {
-              "ms": -0.5400826440862387,
-              "percent": -23.724813927032134
-            }
-          },
-          "gpuRenderMs": {
-            "median": {
-              "ms": 0.46966600000000014,
-              "percent": 11.542186588025686
-            },
-            "p95": {
-              "ms": -0.013416999999999568,
-              "percent": -0.27331899751390265
-            },
-            "mean": {
-              "ms": 0.5541170991735545,
-              "percent": 14.613409235572039
-            }
-          }
-        },
-        "textures_baseline": 8,
-        "textures_candidate": 9
-      },
-      {
-        "scene": "metro",
-        "viewport": "desktop",
-        "baseline": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.33166666666667,
-            "min": 33.19999999999982,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 4,
-            "p95": 5.600000023841858,
-            "mean": 4.160743801308072,
-            "min": 2.5,
-            "max": 7.299999982118607
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 10.608874,
-            "p95": 14.832583,
-            "mean": 10.81253102892562,
-            "min": 6.184875,
-            "max": 20.391791
-          },
-          "gpuDisjoint": false,
-          "draws": 295,
-          "triangles": 600977
-        },
-        "candidate": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.33208333333333,
-            "min": 33.19999999999982,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 4.200000017881393,
-            "p95": 5.799999982118607,
-            "mean": 4.379338843517067,
-            "min": 2.5,
-            "max": 7.299999982118607
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 10.222125,
-            "p95": 14.774249,
-            "mean": 10.469284636363637,
-            "min": 6.015041,
-            "max": 19.215374
-          },
-          "gpuDisjoint": false,
-          "draws": 295,
-          "triangles": 600977
-        },
-        "deltas": {
-          "rafMs": {
-            "median": {
-              "ms": 0,
-              "percent": 0
-            },
-            "p95": {
-              "ms": 0,
-              "percent": 0
-            },
-            "mean": {
-              "ms": 0.0004166666666591823,
-              "percent": 0.0012500625031027018
-            }
-          },
-          "renderCpuSubmissionMs": {
-            "median": {
-              "ms": 0.20000001788139343,
-              "percent": 5.000000447034836
-            },
-            "p95": {
-              "ms": 0.19999995827674866,
-              "percent": 3.5714278111652487
-            },
-            "mean": {
-              "ms": 0.21859504220899417,
-              "percent": 5.253749152742145
-            }
-          },
-          "gpuRenderMs": {
-            "median": {
-              "ms": -0.386749,
-              "percent": -3.6455235494360663
-            },
-            "p95": {
-              "ms": -0.05833400000000033,
-              "percent": -0.39328281527229836
-            },
-            "mean": {
-              "ms": -0.34324639256198175,
-              "percent": -3.174524000381881
-            }
-          }
-        },
-        "textures_baseline": 9,
-        "textures_candidate": 10
-      },
-      {
-        "scene": "metro",
-        "viewport": "mobile-sized",
-        "baseline": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.3325,
-            "min": 33.19999999999982,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 2.800000011920929,
-            "p95": 4.5,
-            "mean": 2.929752066731453,
-            "min": 1.5,
-            "max": 5.0999999940395355
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 4.493375,
-            "p95": 6.042249,
-            "mean": 4.484983004132231,
-            "min": 2.426624,
-            "max": 7.93125
-          },
-          "gpuDisjoint": false,
-          "draws": 202,
-          "triangles": 443262
-        },
-        "candidate": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.33208333333334,
-            "min": 33.19999999999982,
-            "max": 33.400000000000546
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 1.7999999821186066,
-            "p95": 4.200000017881393,
-            "mean": 2.164876032836181,
-            "min": 1.300000011920929,
-            "max": 4.9000000059604645
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 4.77075,
-            "p95": 7.438791,
-            "mean": 5.034202276859504,
-            "min": 2.949374,
-            "max": 9.690249
-          },
-          "gpuDisjoint": false,
-          "draws": 202,
-          "triangles": 443262
-        },
-        "deltas": {
-          "rafMs": {
-            "median": {
-              "ms": 0,
-              "percent": 0
-            },
-            "p95": {
-              "ms": 0,
-              "percent": 0
-            },
-            "mean": {
-              "ms": -0.0004166666666662877,
-              "percent": -0.0012500312507801325
-            }
-          },
-          "renderCpuSubmissionMs": {
-            "median": {
-              "ms": -1.0000000298023224,
-              "percent": -35.714286626601705
-            },
-            "p95": {
-              "ms": -0.29999998211860657,
-              "percent": -6.666666269302368
-            },
-            "mean": {
-              "ms": -0.764876033895272,
-              "percent": -26.107193252997615
-            }
-          },
-          "gpuRenderMs": {
-            "median": {
-              "ms": 0.27737499999999926,
-              "percent": 6.172976882632748
-            },
-            "p95": {
-              "ms": 1.3965420000000002,
-              "percent": 23.112950161438235
-            },
-            "mean": {
-              "ms": 0.5492192727272727,
-              "percent": 12.24573810472081
-            }
-          }
-        },
-        "textures_baseline": 8,
-        "textures_candidate": 9
-      },
-      {
-        "scene": "harbor",
-        "viewport": "desktop",
-        "baseline": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.33166666666667,
-            "min": 33.19999999999982,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 5.0999999940395355,
-            "p95": 6.800000011920929,
-            "mean": 5.223140496483519,
-            "min": 2.699999988079071,
-            "max": 7.600000023841858
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 10.719916,
-            "p95": 14.862999,
-            "mean": 10.970341590909094,
-            "min": 6.307708,
-            "max": 15.740666
-          },
-          "gpuDisjoint": false,
-          "draws": 368,
-          "triangles": 874526
-        },
-        "candidate": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.332083333333316,
-            "min": 33.19999999999982,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 5.0999999940395355,
-            "p95": 7.5,
-            "mean": 5.325619834267403,
-            "min": 2.7999999821186066,
-            "max": 8.200000017881393
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 11.219708,
-            "p95": 16.209624,
-            "mean": 11.334036504132234,
-            "min": 6.55025,
-            "max": 17.439541
-          },
-          "gpuDisjoint": false,
-          "draws": 368,
-          "triangles": 874526
-        },
-        "deltas": {
-          "rafMs": {
-            "median": {
-              "ms": 0,
-              "percent": 0
-            },
-            "p95": {
-              "ms": 0,
-              "percent": 0
-            },
-            "mean": {
-              "ms": 0.00041666666664497143,
-              "percent": 0.001250062503060067
-            }
-          },
-          "renderCpuSubmissionMs": {
-            "median": {
-              "ms": 0,
-              "percent": 0
-            },
-            "p95": {
-              "ms": 0.699999988079071,
-              "percent": 10.294117453704656
-            },
-            "mean": {
-              "ms": 0.10247933778388418,
-              "percent": 1.9620252959474942
-            }
-          },
-          "gpuRenderMs": {
-            "median": {
-              "ms": 0.4997920000000011,
-              "percent": 4.66227533872468
-            },
-            "p95": {
-              "ms": 1.3466250000000013,
-              "percent": 9.060250895529236
-            },
-            "mean": {
-              "ms": 0.3636949132231404,
-              "percent": 3.3152560493150665
-            }
-          }
-        },
-        "textures_baseline": 15,
-        "textures_candidate": 16
-      },
-      {
-        "scene": "harbor",
-        "viewport": "mobile-sized",
-        "baseline": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.3325,
-            "min": 33.19999999999982,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 3.399999976158142,
-            "p95": 4.600000023841858,
-            "mean": 3.3586776862459735,
-            "min": 1.5999999940395355,
-            "max": 5.4000000059604645
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 4.495708,
-            "p95": 5.673166,
-            "mean": 4.445347830578513,
-            "min": 2.054416,
-            "max": 7.546499
-          },
-          "gpuDisjoint": false,
-          "draws": 185,
-          "triangles": 524097
-        },
-        "candidate": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.33208333333333,
-            "min": 33.19999999999982,
-            "max": 33.400000000000546
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 3.300000011920929,
-            "p95": 4.5,
-            "mean": 3.253305785665827,
-            "min": 1.4000000059604645,
-            "max": 5
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 4.420791,
-            "p95": 5.994791,
-            "mean": 4.4204872479338855,
-            "min": 1.879999,
-            "max": 8.613874
-          },
-          "gpuDisjoint": false,
-          "draws": 185,
-          "triangles": 524097
-        },
-        "deltas": {
-          "rafMs": {
-            "median": {
-              "ms": 0,
-              "percent": 0
-            },
-            "p95": {
-              "ms": 0,
-              "percent": 0
-            },
-            "mean": {
-              "ms": -0.00041666666667339314,
-              "percent": -0.0012500312508014492
-            }
-          },
-          "renderCpuSubmissionMs": {
-            "median": {
-              "ms": -0.09999996423721313,
-              "percent": -2.941175439366
-            },
-            "p95": {
-              "ms": -0.10000002384185791,
-              "percent": -2.1739135505120983
-            },
-            "mean": {
-              "ms": -0.10537190058014634,
-              "percent": -3.1373031419969784
-            }
-          },
-          "gpuRenderMs": {
-            "median": {
-              "ms": -0.07491699999999923,
-              "percent": -1.6664116085831029
-            },
-            "p95": {
-              "ms": 0.32162500000000005,
-              "percent": 5.669233017331065
-            },
-            "mean": {
-              "ms": -0.024860582644627094,
-              "percent": -0.5592494354123863
-            }
-          }
-        },
-        "textures_baseline": 8,
-        "textures_candidate": 9
-      },
-      {
-        "scene": "highlands",
-        "viewport": "desktop",
-        "baseline": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.3325,
-            "min": 33.19999999999891,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 3.800000011920929,
-            "p95": 5.299999982118607,
-            "mean": 3.7834710748481357,
-            "min": 1.699999988079071,
-            "max": 6.0999999940395355
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 8.770624,
-            "p95": 10.250083,
-            "mean": 8.525166698347103,
-            "min": 4.610624,
-            "max": 10.967208
-          },
-          "gpuDisjoint": false,
-          "draws": 165,
-          "triangles": 389455
-        },
-        "candidate": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.33166666666666,
-            "min": 33.19999999999982,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 3.0999999940395355,
-            "p95": 4.5,
-            "mean": 3.159504132699375,
-            "min": 1.4000000059604645,
-            "max": 5.5999999940395355
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 8.697,
-            "p95": 10.787,
-            "mean": 8.738345743801649,
-            "min": 4.621291,
-            "max": 13.228499
-          },
-          "gpuDisjoint": false,
-          "draws": 165,
-          "triangles": 389455
-        },
-        "deltas": {
-          "rafMs": {
-            "median": {
-              "ms": 0,
-              "percent": 0
-            },
-            "p95": {
-              "ms": 0,
-              "percent": 0
-            },
-            "mean": {
-              "ms": -0.0008333333333396808,
-              "percent": -0.0025000625015815818
-            }
-          },
-          "renderCpuSubmissionMs": {
-            "median": {
-              "ms": -0.7000000178813934,
-              "percent": -18.421053044353496
-            },
-            "p95": {
-              "ms": -0.7999999821186066,
-              "percent": -15.094339336182731
-            },
-            "mean": {
-              "ms": -0.6239669421487606,
-              "percent": -16.49191786602481
-            }
-          },
-          "gpuRenderMs": {
-            "median": {
-              "ms": -0.07362400000000058,
-              "percent": -0.8394385621821273
-            },
-            "p95": {
-              "ms": 0.5369170000000008,
-              "percent": 5.238172217727415
-            },
-            "mean": {
-              "ms": 0.21317904545454525,
-              "percent": 2.500585067689965
-            }
-          }
-        },
-        "textures_baseline": 6,
-        "textures_candidate": 7
-      },
-      {
-        "scene": "highlands",
-        "viewport": "mobile-sized",
-        "baseline": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.33208333333332,
-            "min": 33.19999999999982,
-            "max": 33.5
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 2.800000011920929,
-            "p95": 3.5,
-            "mean": 2.6780991743911398,
-            "min": 1,
-            "max": 4.0999999940395355
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 2.879874,
-            "p95": 3.445291,
-            "mean": 2.7175496115702473,
-            "min": 1.36,
-            "max": 6.059458
-          },
-          "gpuDisjoint": false,
-          "draws": 97,
-          "triangles": 134229
-        },
-        "candidate": {
-          "rafMs": {
-            "count": 240,
-            "median": 33.30000000000018,
-            "p95": 33.400000000000546,
-            "mean": 33.33208333333333,
-            "min": 33.19999999999982,
-            "max": 33.400000000000546
-          },
-          "renderCpuSubmissionMs": {
-            "count": 242,
-            "median": 2.699999988079071,
-            "p95": 3.5,
-            "mean": 2.502892561687911,
-            "min": 0.800000011920929,
-            "max": 4
-          },
-          "gpuRenderMs": {
-            "count": 242,
-            "median": 2.964375,
-            "p95": 3.430499,
-            "mean": 2.805589533057852,
-            "min": 1.669083,
-            "max": 4.441541
-          },
-          "gpuDisjoint": false,
-          "draws": 97,
-          "triangles": 134229
-        },
-        "deltas": {
-          "rafMs": {
-            "median": {
-              "ms": 0,
-              "percent": 0
-            },
-            "p95": {
-              "ms": 0,
-              "percent": 0
-            },
-            "mean": {
-              "ms": 7.105427357601002e-15,
-              "percent": 2.1317081463357887e-14
-            }
-          },
-          "renderCpuSubmissionMs": {
-            "median": {
-              "ms": -0.10000002384185791,
-              "percent": -3.571429407718227
-            },
-            "p95": {
-              "ms": 0,
-              "percent": 0
-            },
-            "mean": {
-              "ms": -0.1752066127032288,
-              "percent": -6.5422003179946335
-            }
-          },
-          "gpuRenderMs": {
-            "median": {
-              "ms": 0.08450099999999994,
-              "percent": 2.9341908708505975
-            },
-            "p95": {
-              "ms": -0.014791999999999916,
-              "percent": -0.4293396406863721
-            },
-            "mean": {
-              "ms": 0.08803992148760464,
-              "percent": 3.2396803764967386
-            }
-          }
-        },
-        "textures_baseline": 5,
-        "textures_candidate": 6
-      }
-    ],
-    "additional_texture_count": 1,
-    "additional_texture_mipmapped_bytes": 349524,
-    "additional_draws": 0,
-    "additional_triangles": 0,
-    "limitations": "This run was paced at approximately 33.3 ms for both baseline and candidate. Do not compare directly to earlier 16.7 ms runs or claim physical-phone performance. Some GPU medians and p95 values regress; all raw blocks retained."
-  },
-  "preservation": {
-    "original_set": 138,
-    "byte_identical": 135,
-    "reviewed_exceptions": [
-      "web/src/audio.js",
-      "web/src/gameplay.js",
-      "web/src/story.js"
-    ],
-    "audio_gameplay": "Existing exact R3.10 reviewed hashes retained, including 58 unchanged gameplay methods.",
-    "story": "Exact one-sentence source-preimage and candidate-hash proof; no logic/timer/reward/unlock changes.",
-    "baseline_json_unchanged": true
-  },
-  "known_failed_check": {
-    "script": "tools/audit_runtime_payload.py",
-    "reason": "Unchanged audit rejects preserved CC0 grant metadata in unchanged CaptureDriverMobile.glb. No grant metadata was stripped."
-  },
-  "not_run": [
-    "Full 67-stage rerun after copy; six affected checks used instead",
-    "Physical phone",
-    "Safari",
-    "Human audio listening",
-    "Genuine new-player observations",
-    "Long-session mobile thermals",
-    "Live deployment verification"
-  ],
-  "ten_area_status": [
+  "touch_cases": 40,
+  "browser_progression_cases": 8,
+  "unchanged_home_pixels": [
     {
-      "area": 1,
-      "name": "Driving feel and Auto",
-      "implemented_tested": "Switchable road-following Auto/Manual, braking override and lifecycle from prior releases preserved; controller/handling/recovery suites passed.",
-      "remaining": "Broader grip/drift/collision tuning and feel acceptance with real players."
+      "name": "desktop",
+      "pixels": 1296000,
+      "different_pixels": 0
     },
     {
-      "area": 2,
-      "name": "Environment consistency",
-      "implemented_tested": "Shared original ground/plaster/foliage surface pass, village colour variation and repaired facade hooks. Sixteen matched renders; same source meshes, placements, collision and draw/triangle budgets.",
-      "remaining": "Building-form variety, more convincing distant canopy silhouettes and richer authored roadside/terrain composition; still stylized."
+      "name": "portrait",
+      "pixels": 329160,
+      "different_pixels": 0
     },
     {
-      "area": 3,
-      "name": "Lighting and materials",
-      "implemented_tested": "Existing lighting retained; filtered roughness/normal microdetail and material variation; night readability inspected.",
-      "remaining": "Broader lighting/material art acceptance across routes and real screens; not photorealism."
-    },
-    {
-      "area": 4,
-      "name": "Audio",
-      "implemented_tested": "Prior motor/tyre/impact/wind/siren/ambience and volume/mute work preserved; audio/rotor signal/control tests passed in aggregate.",
-      "remaining": "Human listening, speaker/headphone and phone audio acceptance."
-    },
-    {
-      "area": 5,
-      "name": "Camera and feedback",
-      "implemented_tested": "Prior frame-independent chase smoothing/reduced-motion/boost presentation preserved; camera tests and Home pixel identity passed.",
-      "remaining": "Real-device comfort and motion feedback."
-    },
-    {
-      "area": 6,
-      "name": "Police encounters",
-      "implemented_tested": "R3.10 obstruction-aware ground sight, capture/recovery rules and two-officer flow preserved; capture/grip/visibility suites passed.",
-      "remaining": "Encounter variation and scenery-aware pedestrian staging beyond car-clear paths; no full scenery navmesh."
-    },
-    {
-      "area": 7,
-      "name": "Race balance and replay",
-      "implemented_tested": "Existing routes/challenges, escape qualification, once-only coins and saved progress preserved; race/Story/reward suites passed. No new modes or rewards.",
-      "remaining": "Player-led challenge/reward/replay balance and evidence of replay value; no speculative retuning."
-    },
-    {
-      "area": 8,
-      "name": "HUD, menus and onboarding",
-      "implemented_tested": "Approved UI/main/CSS unchanged; Home desktop/mobile screenshots have zero differing pixels. Last Light objective now accurately describes an untimed pursuit; exact source-preimage proof and affected tests passed.",
-      "remaining": "Fresh-player onboarding/HUD/touch usability observations."
-    },
-    {
-      "area": 9,
-      "name": "Performance and reliability",
-      "implemented_tested": "66-stage aggregate, six post-copy checks, eight ABBA render cases, builds/integrity and preserved save/error recovery checks. GPU costs and 33.3 ms pacing disclosed.",
-      "remaining": "Physical phone, Safari, startup/long-session thermals and broader interruption/network/device testing."
-    },
-    {
-      "area": 10,
-      "name": "Genuine player feedback",
-      "implemented_tested": "No fabricated players, ratings or acceptance results.",
-      "remaining": "Genuine new-player sessions and resulting iteration; no 9/10 claim."
+      "name": "landscape",
+      "pixels": 329160,
+      "different_pixels": 0
     }
   ],
-  "rating": "No 9/10 or full-photorealism claim."
+  "desktop_gameplay_pixels": [
+    {
+      "scene": "start",
+      "pixels": 1296000,
+      "different_pixels": 0
+    },
+    {
+      "scene": "pursuit",
+      "pixels": 1296000,
+      "different_pixels": 0
+    }
+  ],
+  "performance": {
+    "scope": "Final right-edge landscape CSS: two paired 15-second moving-route samples. Portrait ABBA and desktop paired runs retained because final landscape-only CSS cannot apply there. The final More-close event branch does not run during these uninterrupted samples. Native Mac Chrome; not a physical phone, thermal soak or GPU-timer result.",
+    "status": "PASS",
+    "summary": [
+      {
+        "name": "portrait",
+        "baseline": {
+          "rafMs": {
+            "n": 1799,
+            "p50": 16.69999999999891,
+            "p95": 16.700000000000728,
+            "max": 33.29999999999927,
+            "mean": 16.67520844913841
+          },
+          "renderCpuMs": {
+            "n": 1801,
+            "p50": 1.5999999940395355,
+            "p95": 2.0999999940395355,
+            "max": 28.799999982118607,
+            "mean": 1.6702942804519763
+          }
+        },
+        "candidate": {
+          "rafMs": {
+            "n": 1798,
+            "p50": 16.69999999999891,
+            "p95": 16.799999999999272,
+            "max": 33.399999999999636,
+            "mean": 16.68453837597331
+          },
+          "renderCpuMs": {
+            "n": 1800,
+            "p50": 1.5,
+            "p95": 2.0999999940395355,
+            "max": 29.599999994039536,
+            "mean": 1.6166111112965478
+          }
+        }
+      },
+      {
+        "name": "desktop",
+        "baseline": {
+          "rafMs": {
+            "n": 600,
+            "p50": 16.69999999999891,
+            "p95": 16.700000000000728,
+            "max": 16.80000000000109,
+            "mean": 16.666
+          },
+          "renderCpuMs": {
+            "n": 601,
+            "p50": 2.7999999821186066,
+            "p95": 3.800000011920929,
+            "max": 14.400000005960464,
+            "mean": 2.9048252907053205
+          }
+        },
+        "candidate": {
+          "rafMs": {
+            "n": 600,
+            "p50": 16.69999999999891,
+            "p95": 16.700000000000728,
+            "max": 16.80000000000109,
+            "mean": 16.666
+          },
+          "renderCpuMs": {
+            "n": 601,
+            "p50": 2.800000011920929,
+            "p95": 3.5,
+            "max": 11.300000011920929,
+            "mean": 2.914475874178818
+          }
+        }
+      },
+      {
+        "name": "landscape",
+        "baseline": {
+          "rafMs": {
+            "n": 899,
+            "p50": 16.69999999999891,
+            "p95": 16.799999999999272,
+            "max": 33.30000000000109,
+            "mean": 16.684538375973304
+          },
+          "renderCpuMs": {
+            "n": 900,
+            "p50": 1.9000000059604645,
+            "p95": 2.5,
+            "max": 39.19999998807907,
+            "mean": 1.9970000004437234
+          }
+        },
+        "candidate": {
+          "rafMs": {
+            "n": 900,
+            "p50": 16.69999999999891,
+            "p95": 16.700000000000728,
+            "max": 16.80000000000109,
+            "mean": 16.665999999999997
+          },
+          "renderCpuMs": {
+            "n": 901,
+            "p50": 2.199999988079071,
+            "p95": 2.5999999940395355,
+            "max": 26,
+            "mean": 2.197780244325295
+          }
+        }
+      }
+    ],
+    "blocks": 8,
+    "limits": "Bounded Mac Chrome paired samples, not phone hardware/Safari, listening, thermal, new-player or GPU-timer acceptance. rAF measures observed cadence; rendering CPU alone is not overall FPS."
+  },
+  "inherited_exception": "Legacy tools/audit_runtime_payload.py rejects unchanged CaptureDriverMobile.glb CC0/public-domain metadata. Licence grants remain intact; not a new candidate failure.",
+  "unrun": [
+    "Physical phone",
+    "Safari: Allow Remote Automation remains disabled",
+    "Human audio listening",
+    "Genuine new-player feedback",
+    "Long-session thermal test for this release"
+  ],
+  "rating": "No 9/10 or photorealism acceptance claim."
 }

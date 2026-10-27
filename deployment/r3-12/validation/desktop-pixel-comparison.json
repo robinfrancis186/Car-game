@@ -1,0 +1,12 @@
+[
+  {
+    "scene": "start",
+    "pixels": 1296000,
+    "different_pixels": 0
+  },
+  {
+    "scene": "pursuit",
+    "pixels": 1296000,
+    "different_pixels": 0
+  }
+]

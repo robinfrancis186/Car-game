@@ -1,19 +1,19 @@
 {
-  "release": "V17 R3.11",
+  "release": "V17 R3.12",
   "deployment_owner": "parent thread",
   "project_id": "prj_wpjGOHOOw8yWEFnoKJeBe8ZTu6d5",
   "production_url": "https://malabar-hot-coast.vercel.app/",
   "build_command": "node tools/build-static.mjs",
   "output_directory": "dist/vercel",
   "deployment_status": "Local candidate only; not pushed or deployed",
-  "source_base_commit": "cf619bf4de5905590848f2b1f5030541c0b76e6b",
+  "source_base_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
   "runtime_files": 187,
-  "runtime_tree_sha256": "d207be6a4b3a70ed0977663e83c50eb6ebb55589efb08f8a38a4d6aa46ea234b",
+  "runtime_tree_sha256": "b0b2adae38836ee217dd17bf9b2d673b34cc45a5de50bda9bcd0746fffbdee39",
   "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
-  "full_runtime_tree_sha256": "4dec85859db339409554119143658f1c5e46f044422a183f66593e658f1da226",
+  "full_runtime_tree_sha256": "2485ddcde2a5e927499902de69a84c9e693e5f12b840e5510204373eb8b8732f",
   "full_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, including release.json",
-  "rollback_release": "V17 R3.10",
-  "rollback_source_commit": "cf619bf4de5905590848f2b1f5030541c0b76e6b",
+  "rollback_release": "V17 R3.11",
+  "rollback_source_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
   "rollback_deployment_id": null,
   "mapping": [
     {
@@ -25,8 +25,8 @@
     {
       "public_path": "index.html",
       "source_path": "web/index.html",
-      "bytes": 43379,
-      "sha256": "2e59c0de708d23dbbd348235c62234431045a2824b22582979e1f30a4ad7191e"
+      "bytes": 43744,
+      "sha256": "000894db768b1b1bdc3638e86d1b792068dac2f5f09c6fde5539f6c1022f1b7b"
     },
     {
       "public_path": "licenses/OFL.txt",
@@ -865,8 +865,8 @@
     {
       "public_path": "release.json",
       "source_path": "deployment/release.json",
-      "bytes": 2121,
-      "sha256": "b585d13cda21269761f0f12d08aead420dbfb2b23b31e4684c537713cf025281"
+      "bytes": 2287,
+      "sha256": "0e20059a944fd89a4b900b27e7d501fa94daf540f02b2b9def7709dde228fadd"
     },
     {
       "public_path": "src/air-traffic.js",
@@ -973,8 +973,8 @@
     {
       "public_path": "src/main.js",
       "source_path": "web/src/main.js",
-      "bytes": 82647,
-      "sha256": "8eee2f7d386fdb39d904b10dfb9d8047ca68683a6dfacdd952f5ea37fd6225b8"
+      "bytes": 83927,
+      "sha256": "0aa82644eee2815dd74409157a9777317bccbf92839fc987b5cf0c4839c7e4ad"
     },
     {
       "public_path": "src/map-destinations.js",
@@ -1087,8 +1087,8 @@
     {
       "public_path": "src/style.css",
       "source_path": "web/src/style.css",
-      "bytes": 116619,
-      "sha256": "25792042f22dee4abdc47aa130dd7e0f59f09434dfc522d943fe8f1bf1a4fadd"
+      "bytes": 125800,
+      "sha256": "095a4ef0a379857b4bc7db965c35a3beffba556f2ca0b4ef5f0902c5e847272f"
     },
     {
       "public_path": "src/surface-camera.js",

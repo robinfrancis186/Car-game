@@ -1,0 +1,23 @@
+{
+  "trayClosed": true,
+  "before": {
+    "throttle": -1,
+    "steer": 0,
+    "brake": false,
+    "boost": false,
+    "ultraBoost": false,
+    "flight": false,
+    "flip": false,
+    "lift": 0
+  },
+  "after": {
+    "throttle": 0,
+    "steer": 0,
+    "brake": false,
+    "boost": false,
+    "ultraBoost": false,
+    "flight": false,
+    "flip": false,
+    "lift": 0
+  }
+}

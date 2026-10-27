@@ -1,0 +1,67 @@
+{
+  "base_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
+  "changed_product_files": [
+    "web/index.html",
+    "web/src/main.js",
+    "web/src/style.css"
+  ],
+  "unchanged_protected_subsystems": [
+    "gameplay.js",
+    "auto-drive.js",
+    "police-capture.js",
+    "audio.js",
+    "garage.js",
+    "profile-storage.js",
+    "story.js",
+    "story-store.js",
+    "leaderboard.js",
+    "leaderboard-store.js",
+    "map-destinations.js",
+    "scene.js"
+  ],
+  "source_hashes": {
+    "web/src/gameplay.js": "3492a036df080400cc7bf0eb63d2e1cce2675b617d8fdfa0af412b2bb08d44ed",
+    "web/src/auto-drive.js": "99cf4e6bc6463f41f2d35a346f9b6a4f1068ab2bc68c176ca61c7c30fa19690b",
+    "web/src/police-capture.js": "3678121e7eb45a26ae3acd3637977f4206bc9da8b0e229c535cdebbfb5262601",
+    "web/src/audio.js": "e0b6ee0718d6169904c094e2b34eef99aed9c1915e24df412884936ce44849b2",
+    "web/src/garage.js": "e971705a77df3f3d58f846ab8ff14a510ba17acc14249b65b0181e7f5f0ee6b6",
+    "web/src/profile-storage.js": "31388e106082522905c832f3ba4db02345e55a0800fbdadd28b9948e48facb4d",
+    "web/src/story.js": "edfad22da3e3bddcfc7746be57d571208e77637cc3de70a0e279561a819dcc6e",
+    "web/src/story-store.js": "d122f884a0724798eddf30ae311a58e8bdd4e349814319e6eb98a0e7c9d4252f",
+    "web/src/leaderboard.js": "b8b7c0ee0a54d1a67b488036b3817ecbc276ca84e9409ec4437b9c49f6c247d9",
+    "web/src/leaderboard-store.js": "61ec5d277c59de1f10b759920e0d9597b487cf1314f98b446c57605b1d3906b2",
+    "web/src/map-destinations.js": "70b05a1c39d7e01a3a86693b6b7990f4608b092bc474a65011e38838f0d91701",
+    "web/src/scene.js": "63f55c5950fa30b63756fa8341e7a79544c21704090d611ec0d8743384730249"
+  },
+  "public_assets_unchanged": true,
+  "desktop_gameplay_pixel_comparison": [
+    {
+      "scene": "start",
+      "pixels": 1296000,
+      "different_pixels": 0
+    },
+    {
+      "scene": "pursuit",
+      "pixels": 1296000,
+      "different_pixels": 0
+    }
+  ],
+  "home_pixel_comparison": [
+    {
+      "name": "desktop",
+      "pixels": 1296000,
+      "different_pixels": 0
+    },
+    {
+      "name": "portrait",
+      "pixels": 329160,
+      "different_pixels": 0
+    },
+    {
+      "name": "landscape",
+      "pixels": 329160,
+      "different_pixels": 0
+    }
+  ],
+  "test_fixture_change": "Existing two-finger accelerator/Ultra fixture now uses distinct pointer IDs 1 and 2, as real browser touch does. All existing assertions retained. New tests cover same-button multi-pointer release, cancellation, native keyboard separation, orientation and tip dismissal."
+}

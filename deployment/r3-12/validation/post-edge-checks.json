@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "test": "hud-width",
+      "exit": 0,
+      "seconds": 0.1216004160232842
+    },
+    {
+      "test": "ui-theme",
+      "exit": 0,
+      "seconds": 0.08390587501344271
+    },
+    {
+      "test": "home-layout",
+      "exit": 0,
+      "seconds": 0.03222533399821259
+    },
+    {
+      "test": "v17-reference-ui",
+      "exit": 0,
+      "seconds": 0.2591622080071829
+    },
+    {
+      "test": "ui-controller",
+      "exit": 0,
+      "seconds": 18.948958374996437
+    },
+    {
+      "test": "home-setup-controller",
+      "exit": 0,
+      "seconds": 0.6016354999737814
+    }
+  ]
+}

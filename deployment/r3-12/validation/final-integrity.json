@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "runtime_files": 187,
+  "runtime_tree_sha256": "b0b2adae38836ee217dd17bf9b2d673b34cc45a5de50bda9bcd0746fffbdee39",
+  "full_runtime_tree_sha256": "2485ddcde2a5e927499902de69a84c9e693e5f12b840e5510204373eb8b8732f",
+  "manifest_sha256": "4442f1a53f2474fc4fddfc7cdbd8315e0770c30ec0a2d5be02145ef5b7758a48",
+  "standalone_sha256": "55c200421a5f0671b0151c9e16eda4871cbf923a43ec06a83f9f76e328dc4f7b",
+  "rollback_metadata_byte_identical": 5,
+  "not_deployed": true
+}

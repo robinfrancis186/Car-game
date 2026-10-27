@@ -1,19 +1,15 @@
-# V17 R3.11 — scoped Stage 3 candidate
+# V17 R3.12 — phone driving usability candidate
 
-Local only. Parent owns publication/Vercel/live verification. Preserve R3.10 source cf619bf4de5905590848f2b1f5030541c0b76e6b and its deployment for rollback. Source metadata retained unchanged under history/r3-10/.
+Parent owns publication. No remote push or deployment from this worktree.
 
-Build: `node tools/build-static.mjs` -> `dist/vercel`; exact 187 public-file mapping and hashes are in runtime-manifest.json. Standalone: `npm --prefix web run build`; `python3 tools/verify-standalone.py /tmp/standalone-integrity.json`. Public assets and licence notices are unchanged.
+Base/rollback: b5ee467193537370a4690fb040a048f5da6b61fa (live R3.11).
+Build: `node tools/build-static.mjs` -> `dist/vercel`; exact public-path/source-path/size/SHA mapping is `deployment/runtime-manifest.json` (187 files).
+Standalone: `npm --prefix web run build`; integrity receipt is in validation.
 
-66/66 aggregate stages passed before the approved Story copy correction. Afterward, all six affected Story/storage/controller/preservation checks passed. No scenery, physics, timer, reward or unlock logic changed after aggregate. Package.json now registers 67 stages; this is not a 67/67 aggregate claim. The Story guard restores the old sentence and requires the exact original source hash.
+Only touch gameplay layout and controller pointer bookkeeping change. Primary steering, Go, Brake, Boost and Ultra remain direct; Reverse/Reset/Flight/Flip are in More. Touch Boost also accelerates; keyboard Shift preserves independent throttle. Rotation releases captures and pauses, requiring Resume; browser bar resizes with unchanged orientation do not pause. Portrait remains playable and tip can be dismissed. No sensor or security setting changes.
 
-One shared original mipmapped texture adds 349,524 bytes and one GPU texture. Matched scene renders preserve source geometry, collision, world data, transforms, draw and triangle counts. Five deterministic colours apply to 15 village houses; authored urban palettes remain unchanged. All 155 observed facade material hooks across 423 instances retain detail. Draft 1 is rejected and retained; Draft 2 is the scoped candidate, still stylized.
+67/67 aggregate stages passed with the final controller. Landscape CSS aligned Boost/Ultra with the right edge, and closing More explicitly releases hidden held pedals. Six affected UI/layout/controller checks plus native touch/safe-area, tray-close regression and paired landscape performance passed. Exact main/test preimage hashes and CSS scope record identify these post-aggregate changes. 40 layout cases cover five sizes, Manual/Auto, tray closed/open, and ordinary/large simulated side insets. Actual Chrome touch dispatch validates simultaneous steering/boost/brake and rotation/cancel at all five sizes. Eight accelerated genuine-model browser cases cover complete Coast/Highland time trials, once-only award/name/save/reload, natural police capture and timer failure/retry in both orientations. Model state/position was not injected for completion. Home and matched desktop gameplay pixels are identical. Native paired performance is bounded Mac evidence only.
 
-Sixteen actual before/after renders cover village, Metro, harbor and Highlands on desktop/mobile-sized Chrome. Night road readability was inspected. Full Home frame comparisons have zero differing pixels on both viewports; UI/main/CSS bytes remain unchanged. Camera receipts contain an unused empty control collector; pixel identity and source proof are the Home-preservation evidence.
+The initial progression harness used a 25-character name and expected it unchanged despite the 24-character input limit; corrected names passed with original product validation unchanged. One existing synthetic two-finger fixture had reused pointer ID 1; it now uses IDs 1/2 without removing assertions.
 
-Eight ABBA cases retain all raw samples, including regressions. GPU median baseline→candidate (ms): desktop village 9.026→9.224, Metro 10.609→10.222, harbor 10.720→11.220, Highlands 8.771→8.697; mobile-sized 4.069→4.539, 4.493→4.771, 4.496→4.421, 2.880→2.964 respectively. Mobile Metro GPU p95 rose 6.042→7.439 ms; desktop harbor p95 14.863→16.210 ms. Both versions ran at approximately 33.3 ms frame cadence in this run. No generic speedup, 60-FPS or physical-phone guarantee.
-
-The original 138-path protected baseline remains intact: 135 exact files plus existing exact audio/gameplay scopes and the one-sentence Story exception. All other original checks remain strict.
-
-Known failed check: unchanged legacy payload audit rejects preserved CC0 grant metadata in unchanged CaptureDriverMobile.glb. No metadata stripped; independent byte/licence/build evidence retained.
-
-All ten areas are itemized in r3-11/validation/ten-area-status.json. Remaining work includes vegetation/building forms and authored scenery variety, lighting/art acceptance, encounter/replay/balance/usability review, and real phone/Safari, listening, long-session thermals and genuine new-player feedback. No full photorealism, 9/10 rating or ten-area completion claim.
+No new assets, meshes, collisions, downloads or licences. Existing capture-driver CC0 metadata audit exception is inherited and disclosed. Physical phone/Safari/listening/new-player acceptance remains outstanding. Do not call this a finished 9/10 game. Separate pursuit candidate 1ed00b7 is excluded and requires its own remaining review.

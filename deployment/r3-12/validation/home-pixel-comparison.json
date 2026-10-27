@@ -1,0 +1,17 @@
+[
+  {
+    "name": "desktop",
+    "pixels": 1296000,
+    "different_pixels": 0
+  },
+  {
+    "name": "portrait",
+    "pixels": 329160,
+    "different_pixels": 0
+  },
+  {
+    "name": "landscape",
+    "pixels": 329160,
+    "different_pixels": 0
+  }
+]

@@ -1,7 +1,14 @@
 {
-  "release": "V17 R3.11",
-  "status": "NOT PUBLISHED",
-  "owner": "parent thread",
-  "rollback_source_commit": "cf619bf4de5905590848f2b1f5030541c0b76e6b",
-  "note": "R3.10 is live per parent verification. No Stage3 push/deployment by this executor."
+  "release": "V17 R3.12",
+  "status": "NOT_DEPLOYED",
+  "candidate": "Tested local mobile usability candidate; Git publication and Vercel are owned by the parent thread.",
+  "source_base_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
+  "expected_runtime_files": 187,
+  "current_live_rollback": {
+    "release": "V17 R3.11",
+    "source_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
+    "verification": "Parent reported all 187 runtime files matched before this candidate work."
+  },
+  "production_url": "https://malabar-hot-coast.vercel.app/",
+  "candidate_live_verification": null
 }

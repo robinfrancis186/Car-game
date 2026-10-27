@@ -764,3 +764,116 @@ body.surface-test .pursuit-display{display:none;}
 .touch-steering [data-control=center]{display:none}
 .auto-road .touch-steering [data-control=center]{display:flex}
 .auto-road .touch-steering button[aria-pressed=true]{border-color:var(--orange);color:var(--orange);box-shadow:inset 0 0 0 1px var(--orange)}
+
+/* Touch gameplay only: keep the showroom and fine-pointer desktop unchanged. */
+.rotate-hint{display:none}
+@media(pointer:coarse){
+ .race-hud .touch-controls button{touch-action:none;user-select:none;-webkit-user-select:none;min-height:48px;border-radius:10px;backdrop-filter:none}
+ .race-hud .touch-steering{gap:8px;left:calc(14px + var(--safe-left));bottom:calc(16px + var(--safe-bottom))}
+ .race-hud .touch-steering button{width:66px;min-width:66px;height:68px}
+ .race-hud .touch-steering button[data-control=center]{width:48px;min-width:48px;font-size:14px}
+ .race-hud .touch-pedals{gap:8px;right:calc(14px + var(--safe-right));bottom:calc(16px + var(--safe-bottom))}
+ .race-hud .touch-pedals button[data-control=throttle]{width:70px;min-width:70px;height:78px}
+ .race-hud .touch-pedals button[data-control=brake]{width:64px;min-width:64px;height:68px;font-size:11px}
+ .race-hud .touch-pedals button[data-control=reverse]{width:44px;min-width:44px;height:48px}
+ .race-hud .touch-special{left:calc(14px + var(--safe-left));right:auto;bottom:calc(98px + var(--safe-bottom));transform:none;gap:8px;width:auto;flex-wrap:nowrap}
+ .race-hud .touch-special button{min-width:48px;height:48px;font-size:9px;padding:0 6px}
+ .race-hud .touch-controls .touch-boost{right:calc(222px + var(--safe-right));bottom:calc(16px + var(--safe-bottom));width:68px;min-width:68px;height:68px;font-size:8px}
+ .race-hud .touch-controls .touch-ultra{right:calc(228px + var(--safe-right));bottom:calc(96px + var(--safe-bottom));width:56px;min-width:56px;height:56px;font-size:8px}
+}
+@media(pointer:coarse) and (orientation:portrait){
+ .race-hud .race-position{top:calc(16px + var(--safe-top));left:16px}
+ .race-hud #position{font-size:30px}
+ .race-hud .race-progress{top:calc(116px + var(--safe-top));left:16px;right:16px;width:auto}
+ .race-hud .pursuit-display{top:calc(153px + var(--safe-top));font-size:9px}
+ .race-hud .status-message{top:calc(181px + var(--safe-top));max-width:calc(100vw - 32px);font-size:10px;white-space:normal}
+ .race-hud .rotate-hint:not([hidden]){display:block;position:absolute;top:calc(229px + var(--safe-top));left:50%;transform:translateX(-50%);width:246px;max-width:calc(100vw - 40px);min-height:44px;padding:8px 10px;border:1px solid #f2ede455;border-radius:8px;background:#13242be6;color:var(--paper);font:11px/1.4 var(--mono);pointer-events:auto}
+ .rotate-hint span{padding-left:5px;font-size:16px}
+ .race-hud .minimap-wrap{left:16px;bottom:calc(170px + var(--safe-bottom));width:76px;height:76px}
+ .race-hud .map-label{display:none}
+ .race-hud .speed-cluster{left:16px;right:auto;bottom:calc(268px + var(--safe-bottom));width:145px}
+ .race-hud .instrument-cluster,.race-hud .speed-dial{display:block;width:145px;height:44px}
+ .race-hud .instrument-cluster .speed-line{height:44px;gap:5px}
+ .race-hud .instrument-cluster .speed-line strong{font-size:46px}
+ .race-hud .vehicle-bars{margin-top:6px;width:145px}
+ .race-hud .vehicle-bars>div{margin-top:4px}
+ .race-hud .vehicle-bars span{font-size:7px;width:36px}
+ .race-hud .boost-mode{font-size:7px}
+ .race-hud .touch-steering{gap:6px;left:calc(12px + var(--safe-left))}
+ .race-hud .touch-steering button{width:54px;min-width:54px;height:70px}
+ .race-hud .touch-steering button[data-control=center]{width:44px;min-width:44px}
+ .race-hud .touch-pedals{gap:6px;right:calc(12px + var(--safe-right))}
+ .race-hud .touch-pedals button[data-control=throttle]{width:56px;min-width:56px;height:78px}
+ .race-hud .touch-pedals button[data-control=brake]{width:52px;min-width:52px;height:70px;font-size:10px}
+ .race-hud .touch-special{left:calc(12px + var(--safe-left));bottom:calc(106px + var(--safe-bottom));gap:6px}
+ .race-hud .touch-special button{min-width:44px;padding:0 4px}
+ .race-hud .touch-controls .touch-boost{right:calc(12px + var(--safe-right));bottom:calc(106px + var(--safe-bottom));width:64px;min-width:64px;height:64px}
+ .race-hud .touch-controls .touch-ultra{right:calc(16px + var(--safe-right));bottom:calc(182px + var(--safe-bottom));width:56px;min-width:56px;height:56px}
+}
+@media(pointer:coarse) and (orientation:landscape) and (max-height:650px){
+ .race-hud .race-position{top:calc(10px + var(--safe-top));left:calc(14px + var(--safe-left))}
+ .race-hud #position{font-size:26px}
+ .race-hud .race-timer{margin-top:3px;font-size:10px}
+ .race-hud .race-progress{top:calc(10px + var(--safe-top));width:34vw;padding:5px 8px}
+ .race-hud .progress-meta{font-size:9px}
+ .race-hud .race-actions{top:calc(62px + var(--safe-top));right:calc(14px + var(--safe-right));gap:6px}
+ .race-hud .race-actions .utility-button{height:44px;min-height:44px}
+ .race-hud .pursuit-display{top:calc(68px + var(--safe-top));font-size:9px}
+ .race-hud .status-message{top:calc(96px + var(--safe-top));max-width:38vw;font-size:9px;line-height:1.4}
+ .race-hud .status-message:not(:empty){padding:6px 9px;backdrop-filter:none}
+ .race-hud .minimap-wrap{left:calc(14px + var(--safe-left));bottom:calc(166px + var(--safe-bottom));width:72px;height:72px}
+ .race-hud .map-label{display:none}
+ .race-hud .speed-cluster{left:auto;right:calc(14px + var(--safe-right));bottom:calc(122px + var(--safe-bottom));width:140px}
+ .race-hud .power-dial,.race-hud .dial-face{display:none}
+ .race-hud .instrument-cluster,.race-hud .speed-dial{display:block;width:auto;height:auto;aspect-ratio:auto}
+ .race-hud .instrument-cluster .speed-line{position:static;height:36px;flex-direction:row;align-items:flex-end;justify-content:flex-end;gap:5px}
+ .race-hud .instrument-cluster .speed-line strong{font-size:38px}
+ .race-hud .vehicle-bars{width:140px;margin-top:5px}
+ .race-hud .vehicle-bars>div{margin-top:4px}
+ .race-hud .vehicle-bars span{width:36px;font-size:7px}
+ .race-hud .boost-mode{font-size:7px}
+}
+@media(pointer:coarse) and (orientation:landscape) and (max-width:700px){
+ .race-hud .touch-steering button{width:56px;min-width:56px}
+ .race-hud .touch-steering button[data-control=center]{width:44px;min-width:44px}
+ .race-hud .touch-steering{gap:6px}
+ .race-hud .touch-pedals{gap:6px}
+ .race-hud .touch-pedals button[data-control=throttle]{width:64px;min-width:64px}
+ .race-hud .touch-pedals button[data-control=brake]{width:56px;min-width:56px}
+ .race-hud .touch-controls .touch-boost{right:calc(202px + var(--safe-right));width:60px;min-width:60px;height:68px}
+ .race-hud .touch-controls .touch-ultra{right:calc(204px + var(--safe-right))}
+ .race-hud .status-message{top:calc(112px + var(--safe-top))}
+}
+@media(pointer:coarse) and (orientation:landscape){
+ body:not(.home-view):not(.garage-view) #game-utilities{top:calc(10px + var(--safe-top));right:calc(14px + var(--safe-right))}
+}
+@media(pointer:coarse){
+ .race-hud .touch-tools-toggle{position:absolute;left:calc(14px + var(--safe-left));bottom:calc(98px + var(--safe-bottom));width:52px;min-width:52px;height:48px;font-size:9px}
+ .race-hud .touch-tools-toggle[aria-expanded=true]{border-color:var(--orange);color:var(--orange)}
+ .race-hud .touch-special{left:calc(78px + var(--safe-left));bottom:calc(98px + var(--safe-bottom));display:grid;grid-template-columns:48px 48px;gap:6px;padding:6px;background:#13242bf5;border:1px solid #f2ede455;border-radius:10px;z-index:2}
+ .race-hud .touch-special button{width:48px;min-width:48px;height:48px;margin:0;padding:0;font-size:8px}
+ .race-hud:has(#touch-tools-panel:not([hidden])) .minimap-wrap{visibility:hidden}
+}
+@media(pointer:coarse) and (orientation:portrait){
+ .race-hud .touch-tools-toggle{left:calc(12px + var(--safe-left));bottom:calc(106px + var(--safe-bottom))}
+ .race-hud .touch-special{left:calc(12px + var(--safe-left));bottom:calc(166px + var(--safe-bottom))}
+}
+@media(pointer:coarse) and (orientation:portrait){
+ .race-hud .touch-steering button{width:clamp(44px,calc((100vw - var(--safe-left) - var(--safe-right) - 208px)/2),54px);min-width:44px}
+ .race-hud .touch-pedals button[data-control=throttle]{width:clamp(52px,calc((100vw - var(--safe-left) - var(--safe-right) - 208px)/2),56px);min-width:52px}
+ .race-hud .touch-pedals button[data-control=brake]{width:clamp(48px,calc((100vw - var(--safe-left) - var(--safe-right) - 208px)/2),52px);min-width:48px}
+}
+/* Keep the two primary right-thumb rows at the safe edge in landscape. */
+@media(pointer:coarse) and (orientation:landscape) and (max-height:650px){
+ .race-hud .touch-controls .touch-boost{right:calc(14px + var(--safe-right));bottom:calc(106px + var(--safe-bottom));width:68px;min-width:68px;height:68px}
+ .race-hud .touch-controls .touch-ultra{right:calc(92px + var(--safe-right));bottom:calc(106px + var(--safe-bottom));width:56px;min-width:56px;height:56px}
+ .race-hud .speed-cluster{left:50%;right:auto;bottom:calc(14px + var(--safe-bottom));transform:translateX(-50%);width:140px}
+ .race-hud .instrument-cluster .speed-line{justify-content:center}
+}
+@media(pointer:coarse) and (orientation:landscape) and (max-width:700px){
+ .race-hud .touch-controls .touch-boost{width:64px;min-width:64px;height:68px}
+ .race-hud .touch-controls .touch-ultra{right:calc(84px + var(--safe-right))}
+ .race-hud .speed-cluster,.race-hud .vehicle-bars{width:112px}
+ .race-hud .instrument-cluster .speed-line strong{font-size:32px}
+ .race-hud .instrument-cluster .speed-line{height:32px}
+}

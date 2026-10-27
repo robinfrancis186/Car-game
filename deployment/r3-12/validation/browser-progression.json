@@ -1,0 +1,81 @@
+{
+  "scope": "Actual Chrome UI, actual course/assist/model accelerated without teleport/end-state injection. Isolated browser storage. Not real-time driving or human playtesting.",
+  "rows": [
+    {
+      "name": "portrait",
+      "track": "coast",
+      "before": 0,
+      "awarded": 845,
+      "state": "finished",
+      "time": 230.73333333328782,
+      "recoveries": 0,
+      "damage": 0,
+      "steps": 14024,
+      "checks": "actual finish/result/name/save/duplicate-submit/reload/leaderboard preserved"
+    },
+    {
+      "name": "portrait",
+      "track": "highlands",
+      "before": 845,
+      "awarded": 1645,
+      "state": "finished",
+      "time": 180.15833333333381,
+      "recoveries": 0,
+      "damage": 0,
+      "steps": 10990,
+      "checks": "actual finish/result/name/save/duplicate-submit/reload/leaderboard preserved"
+    },
+    {
+      "name": "portrait",
+      "state": "busted",
+      "sawCapture": true,
+      "time": 7.108333333333476,
+      "checks": "natural police arrival/capture/caught/retry, no finish reward or leaderboard eligibility"
+    },
+    {
+      "name": "portrait",
+      "state": "failed",
+      "time": 231.35833333328725,
+      "checks": "natural time expiration and retry"
+    },
+    {
+      "name": "landscape",
+      "track": "coast",
+      "before": 0,
+      "awarded": 845,
+      "state": "finished",
+      "time": 230.73333333328782,
+      "recoveries": 0,
+      "damage": 0,
+      "steps": 14024,
+      "checks": "actual finish/result/name/save/duplicate-submit/reload/leaderboard preserved"
+    },
+    {
+      "name": "landscape",
+      "track": "highlands",
+      "before": 845,
+      "awarded": 1645,
+      "state": "finished",
+      "time": 180.15833333333381,
+      "recoveries": 0,
+      "damage": 0,
+      "steps": 10990,
+      "checks": "actual finish/result/name/save/duplicate-submit/reload/leaderboard preserved"
+    },
+    {
+      "name": "landscape",
+      "state": "busted",
+      "sawCapture": true,
+      "time": 7.108333333333476,
+      "checks": "natural police arrival/capture/caught/retry, no finish reward or leaderboard eligibility"
+    },
+    {
+      "name": "landscape",
+      "state": "failed",
+      "time": 231.35833333328725,
+      "checks": "natural time expiration and retry"
+    }
+  ],
+  "errors": [],
+  "status": "PASS"
+}

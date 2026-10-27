@@ -1,0 +1,113 @@
+{
+  "scope": "Final right-edge landscape CSS: two paired 15-second moving-route samples. Portrait ABBA and desktop paired runs retained because final landscape-only CSS cannot apply there. The final More-close event branch does not run during these uninterrupted samples. Native Mac Chrome; not a physical phone, thermal soak or GPU-timer result.",
+  "status": "PASS",
+  "summary": [
+    {
+      "name": "portrait",
+      "baseline": {
+        "rafMs": {
+          "n": 1799,
+          "p50": 16.69999999999891,
+          "p95": 16.700000000000728,
+          "max": 33.29999999999927,
+          "mean": 16.67520844913841
+        },
+        "renderCpuMs": {
+          "n": 1801,
+          "p50": 1.5999999940395355,
+          "p95": 2.0999999940395355,
+          "max": 28.799999982118607,
+          "mean": 1.6702942804519763
+        }
+      },
+      "candidate": {
+        "rafMs": {
+          "n": 1798,
+          "p50": 16.69999999999891,
+          "p95": 16.799999999999272,
+          "max": 33.399999999999636,
+          "mean": 16.68453837597331
+        },
+        "renderCpuMs": {
+          "n": 1800,
+          "p50": 1.5,
+          "p95": 2.0999999940395355,
+          "max": 29.599999994039536,
+          "mean": 1.6166111112965478
+        }
+      }
+    },
+    {
+      "name": "desktop",
+      "baseline": {
+        "rafMs": {
+          "n": 600,
+          "p50": 16.69999999999891,
+          "p95": 16.700000000000728,
+          "max": 16.80000000000109,
+          "mean": 16.666
+        },
+        "renderCpuMs": {
+          "n": 601,
+          "p50": 2.7999999821186066,
+          "p95": 3.800000011920929,
+          "max": 14.400000005960464,
+          "mean": 2.9048252907053205
+        }
+      },
+      "candidate": {
+        "rafMs": {
+          "n": 600,
+          "p50": 16.69999999999891,
+          "p95": 16.700000000000728,
+          "max": 16.80000000000109,
+          "mean": 16.666
+        },
+        "renderCpuMs": {
+          "n": 601,
+          "p50": 2.800000011920929,
+          "p95": 3.5,
+          "max": 11.300000011920929,
+          "mean": 2.914475874178818
+        }
+      }
+    },
+    {
+      "name": "landscape",
+      "baseline": {
+        "rafMs": {
+          "n": 899,
+          "p50": 16.69999999999891,
+          "p95": 16.799999999999272,
+          "max": 33.30000000000109,
+          "mean": 16.684538375973304
+        },
+        "renderCpuMs": {
+          "n": 900,
+          "p50": 1.9000000059604645,
+          "p95": 2.5,
+          "max": 39.19999998807907,
+          "mean": 1.9970000004437234
+        }
+      },
+      "candidate": {
+        "rafMs": {
+          "n": 900,
+          "p50": 16.69999999999891,
+          "p95": 16.700000000000728,
+          "max": 16.80000000000109,
+          "mean": 16.665999999999997
+        },
+        "renderCpuMs": {
+          "n": 901,
+          "p50": 2.199999988079071,
+          "p95": 2.5999999940395355,
+          "max": 26,
+          "mean": 2.197780244325295
+        }
+      }
+    }
+  ],
+  "blocks": 8,
+  "limits": "Bounded Mac Chrome paired samples, not phone hardware/Safari, listening, thermal, new-player or GPU-timer acceptance. rAF measures observed cadence; rendering CPU alone is not overall FPS."
+}

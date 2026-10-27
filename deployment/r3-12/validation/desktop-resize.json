@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Native Chrome keyboard held through fine-pointer viewport aspect change; no pause or input reset.",
+  "before": {
+    "paused": false,
+    "speed": 2.843942549318934
+  },
+  "after": {
+    "paused": false,
+    "speed": 5.870097586154045
+  }
+}
