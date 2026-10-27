@@ -1,0 +1,39 @@
+{
+  "errors": [],
+  "camera": [
+    {
+      "version": "baseline",
+      "driftMetres": 2.262946408671315,
+      "rotationRadians": 0.19463347590161317,
+      "fovChange": 1.7195764312847999,
+      "modelTimer": 0
+    },
+    {
+      "version": "candidate",
+      "driftMetres": 0,
+      "rotationRadians": 4.2146848510894035e-8,
+      "fovChange": 0,
+      "modelTimer": 0
+    }
+  ],
+  "audio": {
+    "initialContext": "running",
+    "gestureUnlocked": true,
+    "muteAndVolumePersisted": true,
+    "reducedMotionPersistedAndApplied": true,
+    "chassisAndFov": [
+      0,
+      0,
+      0,
+      61
+    ],
+    "signal": {
+      "peak": 0.032696716487407684,
+      "rms": 0.015459090810600842,
+      "samples": 184320
+    },
+    "contextsAfterRetry": 1,
+    "blurFocusStaysPaused": true,
+    "scope": "Actual Chrome control/signal test; no auditory listening verdict. Mobile viewport emulation only."
+  }
+}

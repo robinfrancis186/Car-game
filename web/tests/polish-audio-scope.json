@@ -1,0 +1,15 @@
+{
+  "path": "web/src/audio.js",
+  "approved_scope": "User-authorized Stage1 audio polish: clamped volume for both buses, radial-relative siren Doppler and capture continuity. All other protected files remain exact.",
+  "source_base_commit": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
+  "original_sha256": "693737b09576816ae56bae9cc86507e8e4678aebb0b6221adeb80c6de5427d43",
+  "candidate_sha256": "e0b6ee0718d6169904c094e2b34eef99aed9c1915e24df412884936ce44849b2",
+  "behavioral_tests": [
+    "web/tests/audio.test.mjs",
+    "web/tests/rotor-audio.test.mjs"
+  ],
+  "additional_coverage": [
+    "web/tests/sound-preferences.test.mjs",
+    "actual Chrome gesture/persistence/pause/retry/signal checks"
+  ]
+}

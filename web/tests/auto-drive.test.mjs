@@ -2,8 +2,9 @@ import assert from 'node:assert/strict';
 import {autoPedals,nearbyObstacles} from '../src/auto-drive.js';
 import {GameModel} from '../src/gameplay.js';
 const route=Array.from({length:101},(_,i)=>({x:i*10,y:0,z:0}));
-const m=new GameModel(route);m.start('free-drive');const input={throttle:-1,brake:true,steer:-.73,boost:true,ultraBoost:false,flight:false,lift:.2};
+const m=new GameModel(route);m.start('free-drive');const input={throttle:-1,brake:false,steer:-.73,boost:true,ultraBoost:false,flight:false,lift:.2};
 assert.equal(autoPedals(m,input,false),input,'manual input remains byte-for-byte the same object');
+const manualBrake={...input,brake:true};assert.equal(autoPedals(m,manualBrake,false),manualBrake);assert.deepEqual(autoPedals(m,manualBrake,true),{...manualBrake,throttle:0},'explicit brake overrides assisted throttle');
 let out=autoPedals(m,input,true);assert(out.throttle>0);assert.equal(out.brake,false);assert.equal(out.steer,input.steer);assert.equal(out.boost,true);
 m.player.speed=100;out=autoPedals(m,input,true);assert(out.brake);assert.equal(out.throttle,0);
 m.player.speed=12;const plain=autoPedals(m,input,true);m.setDynamicObstacles([{id:'ahead',x:m.player.x+6,z:m.player.z,y:0,height:2,radius:1.2}]);assert(autoPedals(m,input,true).brake);m.setDynamicObstacles([{id:'overhead',x:m.player.x+6,z:m.player.z,y:8,height:2,radius:1.2}]);assert.deepEqual(autoPedals(m,input,true),plain);
@@ -21,3 +22,7 @@ m.setDynamicObstacles([{id:'barrier',shape:'box',x:m.player.x+10,z:m.player.z,y:
 m.setDynamicObstacles([]);m.player.speed=30;assert(autoPedals(m,{...input,boost:false},true).brake);assert(!autoPedals(m,{...input,boost:true},true).brake,'boost remains useful on a clear straight');
 // A 30-second straight drive reaches useful cruise without oscillating service braking or overspeed.
 const driving=new GameModel(route);driving.start('free-drive');let peak=0,brakes=0;for(let i=0;i<1800;i++){const pedals=autoPedals(driving,{steer:0},true);if(pedals.brake)brakes++;driving.update(1/60,pedals);peak=Math.max(peak,driving.player.speed);}assert(peak>20&&peak<23);assert(brakes<5);assert.equal(driving.player.damage,0);console.log('PASS accurate box corridor, clear-lane wall rejection, boost retained, 30s cruise without overspeed or brake oscillation.');
+
+const ultra=new GameModel(route).start('free-drive');ultra.player.speed=22;ultra.player.velocityX=22;let burstSeconds=0;for(let n=0;n<120;n++){const pedals=autoPedals(ultra,{steer:0,ultraBoost:n===0},true);ultra.update(1/60,pedals);if(ultra.player.ultraBoosting)burstSeconds+=1/60;}assert(burstSeconds>1.2,'a tapped active Ultra burst retains throttle rather than ending after one frame');console.log('PASS explicit Auto brake override and active tapped Ultra preservation.');
+
+const rail=new GameModel(route,{obstacles:[{id:'crossing-rail',x:20,z:-5,endX:30,endZ:5,y:0,height:1,radius:.3}]}).start('free-drive');rail.player.speed=22;assert(autoPedals(rail,{steer:0},true).brake,'long capsule middle is an obstacle, not just its start cap');console.log('PASS existing long capsule obstacle support.');

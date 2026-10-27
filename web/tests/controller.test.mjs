@@ -36,7 +36,8 @@ __MALABAR__.backToMenu();const district=els.get('district-start');assert(distric
 
 key('KeyF');assert(f.classes.has('active'));__MALABAR__.renderer.cameraReset=false;__MALABAR__.model.player.damage=1;tick(2);assert.equal(__MALABAR__.model.state,'racing');assert.equal(__MALABAR__.model.player.damage,0);assert(!f.classes.has('active'));assert.equal(__MALABAR__.renderer.cameraReset,true);console.log('PASS roadside assistance repairs in Explore, clears flight UI and resets camera history.');
 
-// Pedal assistance belongs to controller input, never the steering or physics model.
+// Preserve explicit pedal-only coverage alongside new road-following assistance.
+__MALABAR__.setAssistMode('pedals');
 __MALABAR__.backToMenu();__MALABAR__.selectScenario('free-drive');__MALABAR__.start();tick(2);assert.equal(__MALABAR__.autoDrive,false);
 const autoButton=els.get('auto-drive-button');assert(!autoButton.hidden);const beforeSave=JSON.stringify([...localStorage.values]);
 for(let i=0;i<10;i++){key('KeyT');events.get('keyup')({code:'KeyT'});assert.equal(__MALABAR__.autoDrive,i%2===0);}

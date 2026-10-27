@@ -1,0 +1,71 @@
+{
+  "scope": "Browser helper CPU cost only, same prescribed actual-road poses; excludes model, DOM and renderer. Not a frame-rate or physical-phone measurement.",
+  "results": [
+    {
+      "track": "coast",
+      "blocks": [
+        {
+          "version": "baseline",
+          "count": 800,
+          "medianMs": 0.009999999403953552,
+          "p95Ms": 0.020000001788139342,
+          "meanMs": 0.009262500002980205
+        },
+        {
+          "version": "candidate",
+          "count": 800,
+          "medianMs": 0.009999999403953552,
+          "p95Ms": 0.020000001788139342,
+          "meanMs": 0.012100000001490039
+        },
+        {
+          "version": "candidate",
+          "count": 800,
+          "medianMs": 0.009999999403953552,
+          "p95Ms": 0.020000001788139342,
+          "meanMs": 0.011737500000744996
+        },
+        {
+          "version": "baseline",
+          "count": 800,
+          "medianMs": 0.009999999403953552,
+          "p95Ms": 0.020000001788139342,
+          "meanMs": 0.009312499999999967
+        }
+      ]
+    },
+    {
+      "track": "highlands",
+      "blocks": [
+        {
+          "version": "baseline",
+          "count": 800,
+          "medianMs": 0,
+          "p95Ms": 0.010000002384185792,
+          "meanMs": 0.003725000001490117
+        },
+        {
+          "version": "candidate",
+          "count": 800,
+          "medianMs": 0.009999999403953552,
+          "p95Ms": 0.019999998807907104,
+          "meanMs": 0.007399999998509857
+        },
+        {
+          "version": "candidate",
+          "count": 800,
+          "medianMs": 0.009999999403953552,
+          "p95Ms": 0.019999998807907104,
+          "meanMs": 0.006875000003725267
+        },
+        {
+          "version": "baseline",
+          "count": 800,
+          "medianMs": 0,
+          "p95Ms": 0.010000002384185792,
+          "meanMs": 0.003150000002235174
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "scope": "Pure model acceptance only, not actual browser or phone/human feel",
+  "owned_files": {
+    "web/src/auto-drive.js": "99cf4e6bc6463f41f2d35a346f9b6a4f1068ab2bc68c176ca61c7c30fa19690b",
+    "web/tests/auto-drive.test.mjs": "aa0daadb29f84c8ddebc5fc2964b6d19c0e987a014f155aae795b30894ea9780",
+    "web/tests/road-assist.test.mjs": "3e6d916b7ad49dd75f03e6174672d18416aa38db6ce6a10a4613b6c0bd77ee8b"
+  },
+  "controller_api": [
+    "reset()",
+    "chooseLane(-1|1)",
+    "setLane(-1|0|1)",
+    "lane getter",
+    "update(model,rawInput,enabled,{dt,paused,mode=road})"
+  ],
+  "real_destination_rate_cases": 30,
+  "max_cross_track_distance_including_spawn": 1.6500013154257036,
+  "zero_offroad_ticks": true,
+  "zero_damage": true,
+  "zero_automatic_recoveries": true,
+  "barrier_stops": [
+    {
+      "hz": 30,
+      "minGap": 2.736700646525901,
+      "transitions": 19
+    },
+    {
+      "hz": 60,
+      "minGap": 2.781668271637426,
+      "transitions": 21
+    },
+    {
+      "hz": 120,
+      "minGap": 2.758197991200558,
+      "transitions": 21
+    }
+  ],
+  "additional_probes": "/tmp/malabar-road-assist-extra-final.txt",
+  "acceptance_results": "/tmp/malabar-road-assist-acceptance-final.txt",
+  "unit_results": "/tmp/malabar-auto-drive-final.txt",
+  "no_model_mutation": true,
+  "notes": [
+    "Does not implement junction choices or obstacle avoidance/path planning.",
+    "Normal existing steering/physics and collisions still run; assist can lose races or be caught.",
+    "Blocked forward corridor can require early lane choice or manual/recovery.",
+    "Root owns UI, lifecycle wiring, package test registration, full aggregate and browser checks."
+  ]
+}

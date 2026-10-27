@@ -749,9 +749,18 @@ body.surface-test .pursuit-display{display:none;}
 /* Auto assists pedals only; steering and boosters remain available. */
 .auto-drive-button{width:80px;font-size:11px;letter-spacing:.04em;padding:6px}
 .auto-drive-button[aria-pressed=true]{background:var(--orange);color:var(--ink);border-color:var(--orange)}
-.auto-pedals .touch-pedals{display:none}
+.auto-pedals .touch-pedals button:not([data-control=brake]){display:none}
 .capture-hud #auto-drive-button{display:none}
 
 .auto-drive-button[aria-pressed=true]:hover:not(:disabled){background:var(--orange);color:var(--ink)}
 /* Keep the clock readable on the smallest portrait screens. */
 @media(max-width:360px) and (orientation:portrait){.race-actions .auto-drive-button{position:fixed;top:calc(24px + var(--safe-top));right:calc(5vw + 104px + var(--safe-right));width:64px;font-size:10px}}
+
+.audio-volume-choice{display:grid;grid-template-columns:1fr minmax(100px,1.4fr) minmax(48px,auto);align-items:center;gap:12px;margin:16px 0;font-size:12px}
+.audio-volume-choice input{width:100%;min-height:44px;accent-color:var(--orange)}
+.audio-volume-choice output{font:11px var(--mono);text-align:right}
+
+.auto-drive-button{white-space:pre-line;font-size:10px;line-height:1.15}
+.touch-steering [data-control=center]{display:none}
+.auto-road .touch-steering [data-control=center]{display:flex}
+.auto-road .touch-steering button[aria-pressed=true]{border-color:var(--orange);color:var(--orange);box-shadow:inset 0 0 0 1px var(--orange)}

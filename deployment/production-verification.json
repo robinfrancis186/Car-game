@@ -1,9 +1,7 @@
 {
-  "release": "V17 R3.8",
-  "status": "NOT DEPLOYED",
-  "git_publication_owner": "parent thread",
-  "vercel_publication_owner": "parent thread",
-  "live_baseline": "R3.7, per parent verification",
-  "rollback_source_commit": "a642f06df4603c2eff6f0f499f92bf3def5bea3f",
+  "release": "V17 R3.9",
+  "status": "NOT PUBLISHED",
+  "owner": "parent thread",
+  "rollback_source_commit": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
   "note": "No Git push or Vercel operation performed by this executor."
 }

@@ -1,13 +1,15 @@
-# V17 R3.8 local release candidate
+# V17 R3.9 scoped first-polish candidate
 
-Parent owns Git publication, Vercel publication and live verification. This branch has not been pushed or deployed. Preserve live R3.7 at a642f06df4603c2eff6f0f499f92bf3def5bea3f for rollback. R3.7 metadata is retained in deployment/history/r3-7/.
+Parent owns Git publication, Vercel and live verification. No push/deploy here. Preserve live R3.8 source 5867a858f98fd4b02d051bb1f23abbab1eaeb75f and its deployment for rollback. Prior metadata is retained under deployment/history/r3-8/.
 
-Build the exact split runtime with `node tools/build-static.mjs`; publish only `dist/vercel`. `deployment/runtime-manifest.json` maps every public byte to committed source and SHA-256. Its content tree excludes release.json to avoid self-reference; the full tree includes it. The standalone is rebuilt with `npm --prefix web run build`, then verified with `python3 tools/verify-standalone.py` (its legacy report directory tests/v17/r3-2-evidence must exist). Dependencies are pinned in web/package-lock.json.
+Build split runtime: `node tools/build-static.mjs`, output `dist/vercel`. Exact public-byte mapping/hashes are in deployment/runtime-manifest.json. Standalone: `npm --prefix web run build`; verifier: `python3 tools/verify-standalone.py` (create its legacy report directory tests/v17/r3-2-evidence first). Public licence/attribution files are unchanged and included.
 
-60/60 aggregate checks, all 11 destination launches on two viewports, stale selections, save/history, Auto/manual keyboard/touch lifecycle, Story/capture and protected-file checks passed. No preservation hash or surface test assertion was weakened. See publication-checks.json and r3-8/validation/. The legacy payload audit still rejects unchanged CC0 character grant metadata; no grant was stripped to satisfy it.
+63/63 aggregate stages passed. Later changes only clarify/disable wall assist in UI and correct a module comment; affected controller, surface, Maps, Home and actual browser checks passed afterward. All 11 map destinations remain, with 20 normal Auto starts tested across two viewports. 30 full route/rate model probes passed. Native audio sampled signals passed; listening is not validated. Exact receipts are under r3-9/validation/.
 
-Auto controls pedals only and resets off for each new run. Normal modes and Story use it; the experimental wall test remains manual. Boost and steering remain player input. This repository currently has local leaderboard validation and no multiplayer server.
+The original 138-file protected baseline remains intact. Only web/src/audio.js has an explicit approved exception: old/current hashes and behavioral suites are checked via web/tests/polish-audio-scope.json/mjs. Other 137 files remain byte-identical. No other protected path is exempted.
 
-The small NVIDIA pilot uses CC BY 4.0 assets, not the full dataset. Genuine USD source dependencies, licences and reproducible Blender conversion are under assets/simready/. Public attribution is in LICENSES.md and Help; the full licence ships in public/licenses/NVIDIA_CC_BY_4.txt. Pilot props are visual-only, with no new collision proxies; measured foot clearance is approximately 4cm under the existing asset convention.
+Auto follows the existing road, offers left/center/right lines and a visible brake override, while Manual remains available without changing physical race progress. Pedals-only is a separate Help option. Harbour Wall Run staysManual: its 3D banked adhesion and minimum attachment speed need a dedicated surface-frame controller. The limitation is explicit in Maps/Help and its assist selector is disabled.
 
-Mac Chrome frame timing is bounded emulation. Visible-pilot mobile-sized rendering includes two extra instanced draws and 26,838 triangles. No physical-phone, Safari or listening tests were run. Current buildings, foliage, vehicles and characters remain stylized; this is not full photorealism.
+No new art/dependencies or third-party media were added. Asphalt is concept reference only; original game art/branding remains. The existing payload audit still rejects unchanged CC0 character grant metadata; independent byte/dependency/licence checks apply, with grants preserved.
+
+No physical-phone/Safari/human listening/new-player validation, no guaranteed collision avoidance, race wins or police evasion, and no 9/10 rating claim. This first candidate does not complete the ten-area plan.

@@ -1,0 +1,20 @@
+{
+  "game": "MALABAR: Hot Coast",
+  "version": "V17 R3.8",
+  "change": "Optional automatic acceleration/braking with player-only steering; refined procedural asphalt and lighting; optimized NVIDIA SimReady fence/crate pilot at three coastal sites. All 11 destinations, approved UI, saves and two-officer capture remain.",
+  "source_base_commit": "a642f06df4603c2eff6f0f499f92bf3def5bea3f",
+  "runtime_format": "Byte-preserving split runtime; build with node tools/build-static.mjs",
+  "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
+  "tested_standalone_sha256": "4f403ba14ab3043be22d6e59184b0b246bc02bc17361993276c680c69ecbc6a3",
+  "local_checks": "60/60 aggregate stages;22 actual Chrome destination launches;6 stale selections;manual/Auto keyboard and real Chrome touch lifecycle;capture/story/preservation;matched desktop and mobile-sized render checks;visible-pilot mobile-sized ABBA timing.",
+  "auto_scope": "Optional pedals only in four normal modes and Story. Off by default for each new run. Steering/boost remain player-controlled. Experimental wall test stays manual. Uses existing physics/collisions; no invulnerability or guaranteed avoidance.",
+  "leaderboard_scope": "Existing local device/browser eligibility and reward validation unchanged; this repository has no multiplayer server path to modify.",
+  "asset_licence": "NVIDIA SimReady barrier_fence_metal_a02 and crate_blue_a01 by NVIDIA; CC BY 4.0. Source, package licences, attribution and modification notices retained. Full licence and attribution included in public runtime.",
+  "limitations": "Stylized scenery remains; pilot props are visual-only with no new collision proxies and follow existing approximately 4cm ground-clearance convention. No physical-phone/Safari or listening validation. Bounded Mac Chrome timings do not establish general phone FPS. Unchanged legacy payload audit rejects preserved CC0 character metadata; independent byte/dependency/licence checks pass.",
+  "production_state": "Local candidate only; parent exclusively owns Git publication, Vercel publication and live verification.",
+  "rollback_release": "V17 R3.7",
+  "rollback_source_commit": "a642f06df4603c2eff6f0f499f92bf3def5bea3f",
+  "rollback_deployment_id": null,
+  "rollback_note": "Parent retains the verified live R3.7 deployment; no deployment operation performed here.",
+  "runtime_tree_sha256": "80273d1bc48ee100e8b857eaf363a9c69065d0032d01002b5c7e40336b4847f2"
+}

@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "scope": "Built bytes and embedded inventory; no rendering or GPU assertion",
+  "standalone_bytes": 89185666,
+  "standalone_sha256": "27b560882a06596abd2171b2766bafeb9e2e08699bc71abbf2e824aac56bf292",
+  "embedded_assets_byte_identical": 126,
+  "map_previews_embedded_exact": 11,
+  "font_embedded_exact": true,
+  "bundle_embedded_exact": true,
+  "third_party_notices_preserved": true
+}

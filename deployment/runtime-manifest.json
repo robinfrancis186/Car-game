@@ -1,21 +1,20 @@
 {
-  "release": "V17 R3.8",
+  "release": "V17 R3.9",
   "deployment_owner": "parent thread",
   "project_id": "prj_wpjGOHOOw8yWEFnoKJeBe8ZTu6d5",
   "production_url": "https://malabar-hot-coast.vercel.app/",
   "build_command": "node tools/build-static.mjs",
   "output_directory": "dist/vercel",
   "deployment_status": "Local candidate only; not pushed or deployed",
-  "source_base_commit": "a642f06df4603c2eff6f0f499f92bf3def5bea3f",
-  "runtime_files": 183,
-  "runtime_tree_sha256": "80273d1bc48ee100e8b857eaf363a9c69065d0032d01002b5c7e40336b4847f2",
+  "source_base_commit": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
+  "runtime_files": 185,
+  "runtime_tree_sha256": "c6777ef73de5e5ce1af2e611a66d1c6f105f0500f5e20198588a6d03cd00c977",
   "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
-  "full_runtime_tree_sha256": "010faf5e0c68a7747b3b4fd241b09906a7e8965791ff843aaefe705c4fb441d3",
+  "full_runtime_tree_sha256": "bf250e5fe5f7e6c0188eb81ef6d1f9f2ef660efecd86e4cd8d326e0defe06b87",
   "full_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, including release.json",
-  "rollback_release": "V17 R3.7",
-  "rollback_source_commit": "a642f06df4603c2eff6f0f499f92bf3def5bea3f",
+  "rollback_release": "V17 R3.8",
+  "rollback_source_commit": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
   "rollback_deployment_id": null,
-  "rollback_owner": "parent thread; preserve verified R3.7 deployment",
   "mapping": [
     {
       "public_path": "LICENSES.md",
@@ -26,8 +25,8 @@
     {
       "public_path": "index.html",
       "source_path": "web/index.html",
-      "bytes": 41837,
-      "sha256": "01258f95997eb1b452eb0a2ad299bda140c377a040db071b31aed0bfe713f858"
+      "bytes": 43379,
+      "sha256": "2e59c0de708d23dbbd348235c62234431045a2824b22582979e1f30a4ad7191e"
     },
     {
       "public_path": "licenses/OFL.txt",
@@ -866,8 +865,8 @@
     {
       "public_path": "release.json",
       "source_path": "deployment/release.json",
-      "bytes": 2522,
-      "sha256": "a211f4b2aaca4da3402abc0519113ec19b8672f7f3fecbcc7ea4d599564af883"
+      "bytes": 2458,
+      "sha256": "8ce735782108456cb7370eabd662fe22913a7d7964876ab040b63513749e7cfe"
     },
     {
       "public_path": "src/air-traffic.js",
@@ -884,14 +883,14 @@
     {
       "public_path": "src/audio.js",
       "source_path": "web/src/audio.js",
-      "bytes": 26597,
-      "sha256": "693737b09576816ae56bae9cc86507e8e4678aebb0b6221adeb80c6de5427d43"
+      "bytes": 27498,
+      "sha256": "e0b6ee0718d6169904c094e2b34eef99aed9c1915e24df412884936ce44849b2"
     },
     {
       "public_path": "src/auto-drive.js",
       "source_path": "web/src/auto-drive.js",
-      "bytes": 3284,
-      "sha256": "60269ce59ebb03c6d431a3b535dc8be428471368a944aa86c6d3eb99601a223a"
+      "bytes": 8863,
+      "sha256": "99cf4e6bc6463f41f2d35a346f9b6a4f1068ab2bc68c176ca61c7c30fa19690b"
     },
     {
       "public_path": "src/boost-fire.js",
@@ -930,6 +929,12 @@
       "sha256": "b7f74f6850fd76454b22b7593452036f9e0b9a0f53de7fcc1d2b708d5a45bb9d"
     },
     {
+      "public_path": "src/driving-camera.js",
+      "source_path": "web/src/driving-camera.js",
+      "bytes": 743,
+      "sha256": "1058ccad99b04c4d65d5d41776ddde800a960983093d1bb00f5786c1d4677670"
+    },
+    {
       "public_path": "src/finish-fx.js",
       "source_path": "web/src/finish-fx.js",
       "bytes": 12965,
@@ -962,8 +967,8 @@
     {
       "public_path": "src/main.js",
       "source_path": "web/src/main.js",
-      "bytes": 78832,
-      "sha256": "fb563c76945380363dbfbbaea06048655561eb935dd412f18f84abcbe3fa1448"
+      "bytes": 82647,
+      "sha256": "8eee2f7d386fdb39d904b10dfb9d8047ca68683a6dfacdd952f5ea37fd6225b8"
     },
     {
       "public_path": "src/map-destinations.js",
@@ -1022,8 +1027,8 @@
     {
       "public_path": "src/scene.js",
       "source_path": "web/src/scene.js",
-      "bytes": 43333,
-      "sha256": "37472fb3bab6f044065504d2be0b134917c199ab5fbc9b6caf751de0fd6ab2dd"
+      "bytes": 43882,
+      "sha256": "007663ce531d01e3c223dbae9ae51d0b613fd1250f689091e0223babe1d658ac"
     },
     {
       "public_path": "src/showroom-reflector.js",
@@ -1042,6 +1047,12 @@
       "source_path": "web/src/simready-pilot.js",
       "bytes": 2159,
       "sha256": "d3fc1285c1164066f9bbf0c66d17680b525b149393593b39c35211dd60b126f6"
+    },
+    {
+      "public_path": "src/sound-preferences.js",
+      "source_path": "web/src/sound-preferences.js",
+      "bytes": 1334,
+      "sha256": "e45a0f944db26a4f8e634385a9a32d890aaedba575332de8ed11258dcb0156da"
     },
     {
       "public_path": "src/story-store.js",
@@ -1064,8 +1075,8 @@
     {
       "public_path": "src/style.css",
       "source_path": "web/src/style.css",
-      "bytes": 115948,
-      "sha256": "cbcef54a22564eb292a7d0c12afaadf6f4e9d0b1a138f80201880f9c1a63b0af"
+      "bytes": 116619,
+      "sha256": "25792042f22dee4abdc47aa130dd7e0f59f09434dfc522d943fe8f1bf1a4fadd"
     },
     {
       "public_path": "src/surface-camera.js",

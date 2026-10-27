@@ -1,0 +1,56 @@
+{
+  "scope": "Read-only R3.8 handling and pedal Auto audit; no implementation or TouchDrive assumption",
+  "base": "5867a858f98fd4b02d051bb1f23abbab1eaeb75f",
+  "files_read": [
+    "web/src/auto-drive.js",
+    "web/src/gameplay.js",
+    "web/src/garage.js",
+    "web/src/main.js",
+    "web/tests/auto-drive.test.mjs"
+  ],
+  "findings": [
+    {
+      "priority": 1,
+      "issue": "Explicit brake input is discarded by pedal Auto",
+      "probe": "22m/s, raw brake:true -> output brake:false",
+      "status": "Reproduced; all implementation paused pending verified TouchDrive direction"
+    },
+    {
+      "priority": 2,
+      "issue": "Ultra tap canceled by pedal Auto",
+      "manual_burst_seconds": 1.25,
+      "auto_burst_seconds": 0.016666666666666666,
+      "auto_end_reason": "throttle",
+      "cause": "Cruise target reads input.ultraBoost only, not existing player.ultraBoosting state"
+    },
+    {
+      "priority": 3,
+      "issue": "Binary stop control chatters and ignores Explore endpoint warnings",
+      "barrier_brake_transitions_at_30_60_120hz": [
+        20,
+        36,
+        72
+      ],
+      "barrier_final_body_gap_metres_at_30_60_120hz": [
+        2.340514587,
+        1.721079457,
+        0.980466752
+      ],
+      "endpoint_max_past_end_metres": 23.776925626,
+      "endpoint_automatic_recoveries": 1,
+      "note": "No collisions or damage in barrier probe; endpoint behavior relies on existing automatic recovery rather than anticipatory pedal stop."
+    }
+  ],
+  "positive_controls": {
+    "straight_cruise_mps": 21.718388246,
+    "straight_brake_transitions": 0,
+    "straight_rate_consistency": "same at 30/60/120Hz",
+    "existing_unit_suite": "PASS"
+  },
+  "input_loss_review": "blur and hidden explicitly clear controls and pause; focus/visible do not resume. Capture gates helper inputs and UI clears Auto. These are code-reviewed plus existing suite coverage, not fresh browser evidence.",
+  "manual_physics_assessment": "No evidence justifying a broad grip/braking/steering retune; current fixed-step steering envelope, rack/yaw smoothing and momentum/grip mechanics should remain until measured playtesting suggests changes.",
+  "edits": "None in repository",
+  "probe_script": "/tmp/malabar-handling-audit.mjs",
+  "probe_results": "/tmp/malabar-handling-audit-results.txt",
+  "unit_results": "/tmp/malabar-handling-unit-results.txt"
+}

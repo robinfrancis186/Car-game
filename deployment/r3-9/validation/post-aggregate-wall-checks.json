@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Post-aggregate wall explanation/selector-only changes and a module comment; no physics/assist/audio algorithm change.",
+  "passed": [
+    "Coast controller",
+    "Highland controller",
+    "Surface controller",
+    "Map destinations",
+    "Home setup controller",
+    "Actual mobile-sized Chrome Maps/Help disabled-assist explanation and wall admission guard",
+    "JavaScript syntax"
+  ],
+  "aggregate_before_copy_only_changes": "63/63 PASS"
+}

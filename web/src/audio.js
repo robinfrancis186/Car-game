@@ -41,23 +41,32 @@ export function audioState(model={},time=0,{menu=false,paused=false,input={},coa
   const lateral=Math.abs(Math.tan(clamp(finite(p.steer),-.65,.65)))*speed*speed/2.7;
   const skid=running&&grounded?clamp((lateral-8)/18+Math.max(0,Math.abs(finite(p.lateralSpeed))-1.3)/7+(braking&&speed>9?.45:0))*clamp(speed/15):0;
   let nearest=null,distance=Infinity;
-  if(running&&model.wanted)for(const cop of model.police||[]){
+  if((running||model.state==='capturing')&&model.wanted)for(const cop of model.police||[]){
     if(cop.active===false||cop.siren===false)continue;
     const d=Math.hypot(finite(cop.x)-finite(p.x),finite(cop.z)-finite(p.z),finite(cop.y)-finite(p.y));
     if(d<distance){nearest=cop;distance=d;}
   }
   let pan=0;if(nearest){const dx=finite(nearest.x)-finite(p.x),dz=finite(nearest.z)-finite(p.z),heading=finite(p.heading);pan=clamp((-dx*Math.sin(heading)+dz*Math.cos(heading))/Math.max(distance,20),-.85,.85);}
   const siren=nearest&&distance<650?1/(1+(distance/72)**2):0;
+  // Relative velocity is history-free: switching patrols or recovering cannot
+  // turn a range discontinuity into a fictitious Doppler pitch jump.
+  let sirenClosingSpeed=0;if(nearest&&distance>1){
+    const vx=finite(p.velocityX,Math.cos(finite(p.heading))*finite(p.speed))-finite(nearest.velocityX,Math.cos(finite(nearest.heading))*finite(nearest.speed));
+    const vz=finite(p.velocityZ,Math.sin(finite(p.heading))*finite(p.speed))-finite(nearest.velocityZ,Math.sin(finite(nearest.heading))*finite(nearest.speed));
+    const vy=finite(p.velocityY,finite(p.vz))-finite(nearest.velocityY,finite(nearest.vz));
+    sirenClosingSpeed=clamp((vx*(finite(nearest.x)-finite(p.x))+vy*(finite(nearest.y)-finite(p.y))+vz*(finite(nearest.z)-finite(p.z)))/distance,-80,80);
+  }
+  const sirenDoppler=clamp(343/(343-sirenClosingSpeed),.88,1.15);
   return {coastAmount:clamp(coastAmount),active:!menu&&!paused&&model.state!=='menu',running,speed,load,skid,braking,grounded,offRoad:!!p.offRoad,
     boost:running&&!!p.boosting&&!p.ultraBoosting,ultra:running&&!!p.ultraBoosting,thrust:running&&!!p.thrusting,airborne:!!p.flying,
-    energy:clamp(p.energy),siren,distance,pan,time:finite(time),altitude:finite(p.altitude),vz:finite(p.vz)};
+    energy:clamp(p.energy),siren,sirenDoppler,sirenClosingSpeed,distance,pan,time:finite(time),altitude:finite(p.altitude),vz:finite(p.vz)};
 }
 
 export class GameAudio {
   constructor({context=null,seed=267}={}){
-    this._enabled=true;this.available=false;this.active=false;this.unlocked=false;this.error=null;
+    this._enabled=true;this._volume=1;this.available=false;this.active=false;this.unlocked=false;this.error=null;
     this._seed=seed>>>0;this._loops=[];this._voices=new Set();this._lastEventId=0;this._model=null;
-    this._lastState=null;this._lastCountdown=null;this._lastFlying=false;this._lastVz=0;this._lastDistance=Infinity;
+    this._lastState=null;this._lastCountdown=null;this._lastFlying=false;this._lastVz=0;
     this._mix={};this._nextBird=9;this._lastUltra=false;this._lastUltraCue=-Infinity;this._ultraCues=0;this._lastImpact=null;this.disposed=false;
     this._paused=false;this._uiCueCount=0;this._lastUICue=null;this._airtimeCues=0;this._rotorTargets=[];
     const Context=globalThis.AudioContext||globalThis.webkitAudioContext;
@@ -70,8 +79,10 @@ export class GameAudio {
     }catch(error){this.error=String(error);this.available=false;}
   }
   get enabled(){return this._enabled;}
-  set enabled(value){this._enabled=!!value;if(this.available&&!this.disposed){this._target(this.master.gain,this._enabled&&this.active?.62:0,.05);if(!this._enabled){this._stopUI();this._silenceRotors();}this._syncUI();}}
-  get diagnostics(){return {airtimeRewardCues:this._airtimeCues,rotors:this._rotorTargets.map(t=>({...t})),engineProfile:this.engineProfile||'red',available:this.available,contextState:this.context?.state||'unavailable',unlocked:this.unlocked,enabled:this.enabled,active:this.active,oneShotVoices:this._voices.size,uiVoices:this._countUI(),uiCueCount:this._uiCueCount,lastUICue:this._lastUICue,lastEventId:this._lastEventId,ultraActivationCues:this._ultraCues,lastImpact:this._lastImpact?{...this._lastImpact}:null,mix:{...this._mix},error:this.error};}
+  set enabled(value){this._enabled=!!value;if(this.available&&!this.disposed){this._target(this.master.gain,this._enabled&&this.active?.62*this.volume:0,.05);if(!this._enabled||this.volume===0){this._stopUI();this._silenceRotors();}this._syncUI();}}
+  get volume(){return this._volume;}
+  set volume(value){this._volume=clamp(value);this.enabled=this.enabled;}
+  get diagnostics(){return {airtimeRewardCues:this._airtimeCues,rotors:this._rotorTargets.map(t=>({...t})),engineProfile:this.engineProfile||'red',available:this.available,contextState:this.context?.state||'unavailable',unlocked:this.unlocked,enabled:this.enabled,volume:this.volume,active:this.active,oneShotVoices:this._voices.size,uiVoices:this._countUI(),uiCueCount:this._uiCueCount,lastUICue:this._lastUICue,lastEventId:this._lastEventId,ultraActivationCues:this._ultraCues,lastImpact:this._lastImpact?{...this._lastImpact}:null,mix:{...this._mix},error:this.error};}
   _random(){this._seed=(1664525*this._seed+1013904223)>>>0;return this._seed/4294967296;}
   _gain(value=0){const n=this.context.createGain();n.gain.value=value;return n;}
   _filter(type,hz,q=.7){const n=this.context.createBiquadFilter();n.type=type;n.frequency.value=hz;n.Q.value=q;return n;}
@@ -141,7 +152,7 @@ export class GameAudio {
     this._rotorTargets=this._rotorTargets.map(t=>({...t,active:false,gain:0}));
   }
   _updateRotors(model,options){
-    const targets=rotorAudioTargets(model||{},{...options,enabled:this.enabled,contextRunning:this.context.state==='running'});this._rotorTargets=targets;
+    const targets=rotorAudioTargets(model||{},{...options,enabled:this.enabled&&this.volume>0,contextRunning:this.context.state==='running'});this._rotorTargets=targets;
     for(let i=0;i<2;i++){const target=targets[i],voice=this.rotorVoices[i];
       this._target(voice.bus.gain,target.gain,target.gain>0?.14:.04);if(voice.pan.pan)this._target(voice.pan.pan,target.pan,.1);
       this._target(voice.rotor.osc.frequency,target.bladePassHz,.14);this._target(voice.rotor.gain.gain,target.rotorGain,.12);
@@ -155,7 +166,7 @@ export class GameAudio {
     catch(error){this.error='Audio unlock pending: '+String(error);return false;}
   }
   _countUI(){let count=0;for(const voice of this._voices)if(voice.kind==='ui')count++;return count;}
-  _syncUI(){if(this.available&&!this.disposed)this._target(this.uiMaster.gain,this.enabled&&!this._paused&&this.context.state==='running'?.5:0,.008);}
+  _syncUI(){if(this.available&&!this.disposed)this._target(this.uiMaster.gain,this.enabled&&!this._paused&&this.context.state==='running'?.5*this.volume:0,.008);}
   _stopUI(immediate=false){
     const now=finite(this.context?.currentTime),hard=immediate||this.context?.state!=='running';
     for(const voice of this._voices){if(voice.kind!=='ui'||voice.stopping&&!hard)continue;voice.stopping=true;
@@ -170,7 +181,7 @@ export class GameAudio {
    * This never changes the gameplay master or starts engine/ambient sound in menus.
    */
   playUI(kind){
-    if(!['upgrade','unlock'].includes(kind)||!this.available||this.disposed||!this.enabled||this._paused||this.context.state!=='running')return false;
+    if(!['upgrade','unlock'].includes(kind)||!this.available||this.disposed||!this.enabled||this.volume===0||this._paused||this.context.state!=='running')return false;
     if(this._countUI()>4||this._voices.size>10)return false;
     const now=this.context.currentTime,unlock=kind==='unlock';
     const notes=unlock?[[440,0,.1],[659.25,.11,.1],[880,.22,.1],[1318.51,.33,.3]]:[[659.25,0,.085],[830.61,.095,.085],[1108.73,.19,.21]];
@@ -244,16 +255,16 @@ export class GameAudio {
     if(!this.available||this.disposed)return;
     this._paused=!!options.paused;if(this._paused||this.context.state!=='running')this._stopUI();this._syncUI();this._updateRotors(model,options);
     if(!model?.player)return;
-    const state=audioState(model,time,options),dt=clamp(options.dt??1/60,.001,.1);
+    const state=audioState(model,time,options);
     const eventsList=model.events||[],eventTail=eventsList[eventsList.length-1];
     // Explore can restart the same model directly into racing, without a countdown.
     const restarted=eventsList[0]?.type==='start'&&eventTail?.id<this._lastEventId;
     if(this._model!==model||restarted||(model.state==='countdown'&&this._lastState!=='countdown')){
       this._clearVoices();
-      this._model=model;this._lastEventId=0;this._lastCountdown=null;this._lastFlying=false;this._lastDistance=Infinity;this._lastUltra=false;this._lastUltraCue=-Infinity;this._lastImpact=null;this._nextBird=state.time+9;
+      this._model=model;this._lastEventId=0;this._lastCountdown=null;this._lastFlying=false;this._lastUltra=false;this._lastUltraCue=-Infinity;this._lastImpact=null;this._nextBird=state.time+9;
     }
-    this.active=state.active;const canSound=state.active&&this.enabled;
-    this._target(this.master.gain,canSound?.62:0,.05);
+    this.active=state.active;const canSound=state.active&&this.enabled&&this.volume>0;
+    this._target(this.master.gain,canSound?.62*this.volume:0,.05);
     const s=state.speed,travel=state.running?clamp(s/80):0,load=state.load;
     const motor=state.running?(.012+.045*load+.035*travel)*(state.airborne?.7:1):0;
     const tone=motorTargets(model.vehicleStats?.vehicleId,s,load);this.engineProfile=tone.id;
@@ -274,8 +285,7 @@ export class GameAudio {
     this._target(this.thruster.gain.gain,state.thrust?.22:0,.035);this._target(this.thrusterHiss.gain.gain,state.thrust?.035:0,.04);
     const swell=.62+.38*Math.sin(state.time*.23)**2;
     this._target(this.surf.gain.gain,.035*swell*state.coastAmount,.5);this._target(this.surfFoam.gain.gain,.012*swell*state.coastAmount,.5);
-    const closing=Number.isFinite(this._lastDistance)&&Number.isFinite(state.distance)?clamp((this._lastDistance-state.distance)/dt,-80,80):0;
-    this._lastDistance=state.distance;const doppler=clamp(343/(343-closing),.88,1.15),wail=670+Math.sin(state.time*TAU*.7)*270;
+    const doppler=state.sirenDoppler,wail=670+Math.sin(state.time*TAU*.7)*270;
     this._target(this.sirenA.osc.frequency,wail*doppler,.035);this._target(this.sirenB.osc.frequency,wail*1.5*doppler,.035);
     this._target(this.sirenA.gain.gain,state.siren*.11,.14);this._target(this.sirenB.gain.gain,state.siren*.023,.14);
     if(this.sirenBus.pan)this._target(this.sirenBus.pan,state.pan,.16);
@@ -290,7 +300,7 @@ export class GameAudio {
     this._lastFlying=state.airborne;this._lastVz=state.vz;
     if(canSound&&state.time>this._nextBird&&state.speed<15&&state.siren<.05){this._tone(1800,.09,.009);this._tone(2300,.11,.007,.11);this._nextBird=state.time+16+this._random()*13;}
     this._lastState=model.state;
-    this._mix={motor,coast:state.coastAmount,wind:.105*travel**1.7,skid:state.skid,siren:state.siren,sirenDistance:Number.isFinite(state.distance)?state.distance:null,pan:state.pan,boost:state.boost?1:0,ultra:state.ultra?1:0,thrust:state.thrust?1:0,master:canSound?.62:0};
+    this._mix={motor,coast:state.coastAmount,wind:.105*travel**1.7,skid:state.skid,siren:state.siren,sirenDoppler:state.sirenDoppler,sirenDistance:Number.isFinite(state.distance)?state.distance:null,pan:state.pan,boost:state.boost?1:0,ultra:state.ultra?1:0,thrust:state.thrust?1:0,master:canSound?.62*this.volume:0};
   }
   dispose(){
     if(this.disposed)return;this.disposed=true;this._silenceRotors(true);

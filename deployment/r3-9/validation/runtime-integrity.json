@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "files": 185,
+  "source_and_build_bytes_exact": true,
+  "full_tree_sha256": "bf250e5fe5f7e6c0188eb81ef6d1f9f2ef660efecd86e4cd8d326e0defe06b87",
+  "original_138_file_baseline_json_unchanged": true,
+  "public_licences_and_assets_preserved": true
+}
