@@ -745,3 +745,13 @@ body.surface-test .pursuit-display{display:none;}
 
 .maps-group{margin-top:28px}.maps-group-heading{display:flex;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:14px}.maps-group-heading h3{font-size:19px;font-weight:700}.maps-group-heading>span{font-size:9px;letter-spacing:.08em;color:var(--muted)}.maps-experimental-note{margin:0 0 14px;color:#ffd4af;font-size:12px;line-height:1.5}.map-caption strong{text-transform:uppercase;font-size:16px}.maps-grid .map-caption small{line-height:1.4}
 @media(max-width:520px){.maps-group-heading h3{font-size:17px}.map-caption strong{font-size:13px}.maps-heading{padding-top:0}.maps-group{margin-top:22px}}
+
+/* Auto assists pedals only; steering and boosters remain available. */
+.auto-drive-button{width:80px;font-size:11px;letter-spacing:.04em;padding:6px}
+.auto-drive-button[aria-pressed=true]{background:var(--orange);color:var(--ink);border-color:var(--orange)}
+.auto-pedals .touch-pedals{display:none}
+.capture-hud #auto-drive-button{display:none}
+
+.auto-drive-button[aria-pressed=true]:hover:not(:disabled){background:var(--orange);color:var(--ink)}
+/* Keep the clock readable on the smallest portrait screens. */
+@media(max-width:360px) and (orientation:portrait){.race-actions .auto-drive-button{position:fixed;top:calc(24px + var(--safe-top));right:calc(5vw + 104px + var(--safe-right));width:64px;font-size:10px}}

@@ -1,0 +1,105 @@
+{
+  "revision": "9eadae061bf3f6fcee629b3286d5593c05415b42",
+  "files": [
+    {
+      "path": "barrier_fence_metal_a02/.metadata/LICENSE.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "barrier_fence_metal_a02/com.nvidia.simready.packaging.json",
+      "bytes": 568,
+      "sha256": "01460d7af4058a3bf89c04fd021625641802fda9c41f70d69a9f69df7f29effc"
+    },
+    {
+      "path": "barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_Albedo.png",
+      "bytes": 3089662,
+      "sha256": "9b5e7159a6c4f7d55e348a6a5f989310be8f48d923b34e9e131eaad6ca6448a2"
+    },
+    {
+      "path": "barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_Normal.png",
+      "bytes": 2615142,
+      "sha256": "b181ebed5b58c901ee914b223cfb035c1886c05892812e9f39407c811a84a2c7"
+    },
+    {
+      "path": "barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_ORM.png",
+      "bytes": 4292624,
+      "sha256": "89ea2486609d57dfd60245143606177d800d8e364cbb5a81678994304a491df6"
+    },
+    {
+      "path": "barrier_fence_metal_a02/simready_usd/payloads/Physics/physics.usda",
+      "bytes": 8253,
+      "sha256": "701a6f089d948816a064a0f205ddbac428879742d9ac138f1a6a2d1255ba463d"
+    },
+    {
+      "path": "barrier_fence_metal_a02/simready_usd/payloads/base.usda",
+      "bytes": 10805,
+      "sha256": "3c285d3a670bdc8644dcec189195c59d737c5666492adede44a95b55d5d7220b"
+    },
+    {
+      "path": "barrier_fence_metal_a02/simready_usd/payloads/geometries.usd",
+      "bytes": 269677,
+      "sha256": "9881aceae428a70a666771fdfdb970735195163f5ae1d76cb921206400f49dca"
+    },
+    {
+      "path": "barrier_fence_metal_a02/simready_usd/payloads/instances.usda",
+      "bytes": 8727,
+      "sha256": "263b6cfce49cabef8c2ce511eb88307827ecdb3a7d5a53b7786fb7dfc009f63f"
+    },
+    {
+      "path": "barrier_fence_metal_a02/simready_usd/payloads/materials.usda",
+      "bytes": 12813,
+      "sha256": "cd12a5d74c3ad69eb0236828df74f03faab803848c18ad26424995d46b092375"
+    },
+    {
+      "path": "crate_blue_a01/.metadata/LICENSE.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "crate_blue_a01/com.nvidia.simready.packaging.json",
+      "bytes": 559,
+      "sha256": "9cb1f33be52cfa033bc4c493095025765e2a8ed1f22d406e90880815656840e0"
+    },
+    {
+      "path": "crate_blue_a01/simready_usd/Textures/T_Plastic_Blue_A_Albedo.png",
+      "bytes": 822814,
+      "sha256": "9a414b0d8551193f129ee80ea61c736a990c130fc19ac256d31dde1749d04e16"
+    },
+    {
+      "path": "crate_blue_a01/simready_usd/Textures/T_Plastic_Blue_A_Normal.png",
+      "bytes": 909580,
+      "sha256": "b276207f782c029f34dfd6034a9c718467e35e5aa6c8ba2dbcba1de25f045559"
+    },
+    {
+      "path": "crate_blue_a01/simready_usd/Textures/T_Plastic_Blue_A_ORM.png",
+      "bytes": 743855,
+      "sha256": "dff7a9ec311c68b779576bbbf7ab1d121fcd784d49d3f1f730a7fe2ac647fbc9"
+    },
+    {
+      "path": "crate_blue_a01/simready_usd/payloads/Physics/physics.usda",
+      "bytes": 6455,
+      "sha256": "caf0f6412c18f09a34189e365df395df588508473b23001175b4c608f5de055f"
+    },
+    {
+      "path": "crate_blue_a01/simready_usd/payloads/base.usda",
+      "bytes": 10281,
+      "sha256": "0c6cd1e58eefacde2a2744bcd2b7d0b92b36ed855dbb8b700103a95c835e497c"
+    },
+    {
+      "path": "crate_blue_a01/simready_usd/payloads/geometries.usd",
+      "bytes": 3464319,
+      "sha256": "1df2fb56b47ca4a9284d89397d1d25cf77a4bbdb5b32b5e63a0ee42ee2248a3b"
+    },
+    {
+      "path": "crate_blue_a01/simready_usd/payloads/instances.usda",
+      "bytes": 6918,
+      "sha256": "557abe9bf9c9f869b0eedc4623e4b40a6a0569a935dc83e01e140320a06a61fa"
+    },
+    {
+      "path": "crate_blue_a01/simready_usd/payloads/materials.usda",
+      "bytes": 11344,
+      "sha256": "ea8fdfc676f83360a823df873d90642953518dde159e3c884c4254d4a0f102a2"
+    }
+  ]
+}

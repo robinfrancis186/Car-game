@@ -1,0 +1,14 @@
+{
+  "errors": [],
+  "checks": [
+    "desktop coast-sprint Auto available",
+    "desktop time-attack Auto available",
+    "desktop hot-pursuit Auto available",
+    "desktop manual/Auto, repeated toggle, steering, pedals/boost, pause/resume, restart/menu, capture pause/result/replay, unchanged wallet",
+    "mobile coast-sprint Auto available",
+    "mobile time-attack Auto available",
+    "mobile hot-pursuit Auto available",
+    "mobile manual/Auto, repeated toggle, steering, pedals/boost, pause/resume, restart/menu, capture pause/result/replay, unchanged wallet",
+    "experimental wall test stays manual"
+  ]
+}

@@ -1,19 +1,9 @@
 {
-  "version": "V17 R3.7",
-  "publication_state": "PENDING parent-owned Vercel publication and live verification",
-  "source_commit": null,
-  "source_base_commit": "b04f65632fba1abdc2aec685126f8e17879bed83",
-  "url": "https://malabar-hot-coast.vercel.app/",
-  "deployment_id": null,
-  "current_verified_baseline": {
-    "version": "V17 R3.6",
-    "source_commit": "b04f65632fba1abdc2aec685126f8e17879bed83",
-    "verification_owner": "parent task",
-    "deployment_id": null
-  },
-  "expected_runtime_tree_sha256": "c2368a5b23dc9c67b84da25a6917c82ce11391148af61c2d684ed9e3cca25016",
-  "expected_full_runtime_tree_sha256": "179f42df05303440170cbb81ccfa32f9bcd663843085ec7ca3bce539ac1b83d2",
-  "runtime_files": 175,
-  "historical_verification": "R3.5 receipts remain at deployment/history/r3-5; R3.6 source manifests archived at deployment/history/r3-6.",
-  "note": "This is pending-source metadata, not proof of a new live deployment."
+  "release": "V17 R3.8",
+  "status": "NOT DEPLOYED",
+  "git_publication_owner": "parent thread",
+  "vercel_publication_owner": "parent thread",
+  "live_baseline": "R3.7, per parent verification",
+  "rollback_source_commit": "a642f06df4603c2eff6f0f499f92bf3def5bea3f",
+  "note": "No Git push or Vercel operation performed by this executor."
 }

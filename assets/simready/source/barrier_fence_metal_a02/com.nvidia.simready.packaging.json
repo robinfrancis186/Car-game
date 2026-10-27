@@ -1,0 +1,19 @@
+{
+  "format_version": "1.0",
+  "package_id": "simready.hf.nvidia.simready-assets.barrier_fence_metal_a02.2026.10.08_220144422240",
+  "license": "CC-BY-4.0",
+  "metadata": [
+    {
+      "name": "com.nvidia.simready.packaging.bom.json",
+      "hash": {
+        "sha256": "060962c86d8ae7e3c813afeeca6857d04413d03d56c4e2ffc2ae710be0c226cf"
+      }
+    }
+  ],
+  "content_hash": {
+    "sha256": "d2020d8100c24fed8cf924e3d0c9ceac68de3053c859c3e8572287623895bed2"
+  },
+  "package_hash": {
+    "sha256": "c0a4b245ae0ed59e42790195b839c330e563350219dac07e2177e5ebb1e8454d"
+  }
+}

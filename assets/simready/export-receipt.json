@@ -1,0 +1,38 @@
+[
+  {
+    "asset": "barrier_fence_metal_a02",
+    "lod": "Near",
+    "triangles": 3388,
+    "vertices": 1892,
+    "bytes": 1011920,
+    "file": "SimReadyFenceNear.glb",
+    "texture_limit": 512
+  },
+  {
+    "asset": "barrier_fence_metal_a02",
+    "lod": "Far",
+    "triangles": 1185,
+    "vertices": 708,
+    "bytes": 294312,
+    "file": "SimReadyFenceFar.glb",
+    "texture_limit": 256
+  },
+  {
+    "asset": "crate_blue_a01",
+    "lod": "Near",
+    "triangles": 13362,
+    "vertices": 6015,
+    "bytes": 1285144,
+    "file": "SimReadyCrateNear.glb",
+    "texture_limit": 512
+  },
+  {
+    "asset": "crate_blue_a01",
+    "lod": "Far",
+    "triangles": 7366,
+    "vertices": 2969,
+    "bytes": 480152,
+    "file": "SimReadyCrateFar.glb",
+    "texture_limit": 256
+  }
+]

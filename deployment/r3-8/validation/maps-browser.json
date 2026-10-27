@@ -1,0 +1,777 @@
+{
+  "scope": "Installed Chrome and actual game/WebGL; mobile viewport emulation, not phone hardware",
+  "errors": [],
+  "warnings": [],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "launches": [
+        {
+          "id": "coastal-villages",
+          "track": "coast",
+          "startS": 165,
+          "name": "Coastal Villages",
+          "world": "Kappil Coast",
+          "physicalS": 173.00000000000003,
+          "position": [
+            -30.628837225392193,
+            0.18000000715255737,
+            -161.02059662277273
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Coastal Villages",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "metro-market",
+          "track": "coast",
+          "startS": 2008,
+          "name": "Metro Market / Station",
+          "world": "Kappil Coast",
+          "physicalS": 2016,
+          "position": [
+            -832.5965038504568,
+            0.18000000715255737,
+            -1660.8662811505574
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Metro Market / Station",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "canal-garden",
+          "track": "coast",
+          "startS": 2430,
+          "name": "Canal Garden / Shikaras",
+          "world": "Kappil Coast",
+          "physicalS": 2438,
+          "position": [
+            -1231.714763388547,
+            0.18000000715255737,
+            -1724.2011221346006
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Canal Garden / Shikaras",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "skyline-flyover",
+          "track": "coast",
+          "startS": 2530,
+          "name": "Skyline Flyover",
+          "world": "Kappil Coast",
+          "physicalS": 2537.9881554449876,
+          "position": [
+            -1283.8687185770893,
+            3.448714687283874,
+            -1809.277599267704
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Skyline Flyover",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "water-transit",
+          "track": "coast",
+          "startS": 3180,
+          "name": "Water Transit / Harbor",
+          "world": "Kappil Coast",
+          "physicalS": 3188,
+          "position": [
+            -1658.1975327882246,
+            0.18000000715255737,
+            -2336.938508377668
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Water Transit / Harbor",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "harbour-avenue",
+          "track": "coast",
+          "startS": 4035,
+          "name": "Harbour Avenue",
+          "world": "Kappil Coast",
+          "physicalS": 4043,
+          "position": [
+            -1771.6377901655342,
+            0.18000000715255737,
+            -3172.7134744503223
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Harbour Avenue",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "divided-highway",
+          "track": "highlands",
+          "startS": 30,
+          "name": "Divided Highway",
+          "world": "Highland Run",
+          "physicalS": 38,
+          "position": [
+            38,
+            0.18,
+            -1.65
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Divided Highway",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "tea-bends",
+          "track": "highlands",
+          "startS": 1105,
+          "name": "Lower Tea Bends",
+          "world": "Highland Run",
+          "physicalS": 1112.9642800358772,
+          "position": [
+            801.1308335791879,
+            3.514729010412676,
+            -198.33860317481026
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Lower Tea Bends",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "estate-switchbacks",
+          "track": "highlands",
+          "startS": 1880,
+          "name": "Estate Switchbacks",
+          "world": "Highland Run",
+          "physicalS": 1887.9977437905063,
+          "position": [
+            369.6906649276096,
+            32.62015131385146,
+            -331.65
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Estate Switchbacks",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "bird-rock",
+          "track": "highlands",
+          "startS": 3650,
+          "name": "Bird Rock Ridge",
+          "world": "Highland Run",
+          "physicalS": 3658,
+          "position": [
+            368.35,
+            100.17977803469627,
+            -799.8733246543643
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Bird Rock Ridge",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "harbour-wall-run",
+          "track": "surface-test",
+          "startS": 0,
+          "name": "Flat Approach",
+          "world": "Harbour Wall Run — Solo Surface Proof",
+          "physicalS": 50,
+          "position": [
+            50,
+            8,
+            0
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Flat Approach",
+          "surface": true,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        }
+      ],
+      "stale": [
+        {
+          "track": "coast",
+          "start": 99999999,
+          "expected": 165,
+          "chosen": "coastal-villages"
+        },
+        {
+          "track": "highlands",
+          "start": 2008,
+          "expected": 30,
+          "chosen": "divided-highway"
+        },
+        {
+          "track": "surface-test",
+          "start": -1,
+          "expected": 50,
+          "chosen": "harbour-wall-run"
+        }
+      ],
+      "layouts": [
+        {
+          "width": 1440,
+          "height": 900,
+          "cards": [
+            {
+              "id": "coastal-villages",
+              "width": 220,
+              "height": 220
+            },
+            {
+              "id": "metro-market",
+              "width": 220,
+              "height": 220
+            },
+            {
+              "id": "canal-garden",
+              "width": 220,
+              "height": 220
+            },
+            {
+              "id": "skyline-flyover",
+              "width": 220,
+              "height": 220
+            },
+            {
+              "id": "water-transit",
+              "width": 220,
+              "height": 220
+            },
+            {
+              "id": "harbour-avenue",
+              "width": 220,
+              "height": 220
+            },
+            {
+              "id": "divided-highway",
+              "width": 220,
+              "height": 220
+            },
+            {
+              "id": "tea-bends",
+              "width": 220,
+              "height": 220
+            },
+            {
+              "id": "estate-switchbacks",
+              "width": 220,
+              "height": 220
+            },
+            {
+              "id": "bird-rock",
+              "width": 220,
+              "height": 220
+            },
+            {
+              "id": "harbour-wall-run",
+              "width": 220,
+              "height": 220
+            }
+          ]
+        }
+      ],
+      "historyRoundtrip": true,
+      "repeatedCloseAndFocus": true,
+      "otherScreensAndSaves": true
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "launches": [
+        {
+          "id": "coastal-villages",
+          "track": "coast",
+          "startS": 165,
+          "name": "Coastal Villages",
+          "world": "Kappil Coast",
+          "physicalS": 173.00000000000003,
+          "position": [
+            -30.628837225392193,
+            0.18000000715255737,
+            -161.02059662277273
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Coastal Villages",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "metro-market",
+          "track": "coast",
+          "startS": 2008,
+          "name": "Metro Market / Station",
+          "world": "Kappil Coast",
+          "physicalS": 2016,
+          "position": [
+            -832.5965038504568,
+            0.18000000715255737,
+            -1660.8662811505574
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Metro Market / Station",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "canal-garden",
+          "track": "coast",
+          "startS": 2430,
+          "name": "Canal Garden / Shikaras",
+          "world": "Kappil Coast",
+          "physicalS": 2438,
+          "position": [
+            -1231.714763388547,
+            0.18000000715255737,
+            -1724.2011221346006
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Canal Garden / Shikaras",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "skyline-flyover",
+          "track": "coast",
+          "startS": 2530,
+          "name": "Skyline Flyover",
+          "world": "Kappil Coast",
+          "physicalS": 2537.9927616432365,
+          "position": [
+            -1283.8714485007956,
+            3.449142546304808,
+            -1809.2813093322409
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Skyline Flyover",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "water-transit",
+          "track": "coast",
+          "startS": 3180,
+          "name": "Water Transit / Harbor",
+          "world": "Kappil Coast",
+          "physicalS": 3188,
+          "position": [
+            -1658.1975327882246,
+            0.18000000715255737,
+            -2336.938508377668
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Water Transit / Harbor",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "harbour-avenue",
+          "track": "coast",
+          "startS": 4035,
+          "name": "Harbour Avenue",
+          "world": "Kappil Coast",
+          "physicalS": 4043,
+          "position": [
+            -1771.6377901655342,
+            0.18000000715255737,
+            -3172.7134744503223
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Harbour Avenue",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "divided-highway",
+          "track": "highlands",
+          "startS": 30,
+          "name": "Divided Highway",
+          "world": "Highland Run",
+          "physicalS": 38,
+          "position": [
+            38,
+            0.18,
+            -1.65
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Divided Highway",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "tea-bends",
+          "track": "highlands",
+          "startS": 1105,
+          "name": "Lower Tea Bends",
+          "world": "Highland Run",
+          "physicalS": 1112.9642800358772,
+          "position": [
+            801.1308335791879,
+            3.514729010412676,
+            -198.33860317481026
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Lower Tea Bends",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "estate-switchbacks",
+          "track": "highlands",
+          "startS": 1880,
+          "name": "Estate Switchbacks",
+          "world": "Highland Run",
+          "physicalS": 1887.9985151435758,
+          "position": [
+            369.69143628067894,
+            32.62018952475413,
+            -331.65
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Estate Switchbacks",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "bird-rock",
+          "track": "highlands",
+          "startS": 3650,
+          "name": "Bird Rock Ridge",
+          "world": "Highland Run",
+          "physicalS": 3658,
+          "position": [
+            368.35,
+            100.17977803469627,
+            -799.8733246543643
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Bird Rock Ridge",
+          "surface": false,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        },
+        {
+          "id": "harbour-wall-run",
+          "track": "surface-test",
+          "startS": 0,
+          "name": "Flat Approach",
+          "world": "Harbour Wall Run — Solo Surface Proof",
+          "physicalS": 50,
+          "position": [
+            50,
+            8,
+            0
+          ],
+          "scenario": "free-drive",
+          "exploreStart": "Flat Approach",
+          "surface": true,
+          "rivals": 0,
+          "police": 0,
+          "coins": 0,
+          "eligible": null,
+          "paused": true
+        }
+      ],
+      "stale": [
+        {
+          "track": "coast",
+          "start": 99999999,
+          "expected": 165,
+          "chosen": "coastal-villages"
+        },
+        {
+          "track": "highlands",
+          "start": 2008,
+          "expected": 30,
+          "chosen": "divided-highway"
+        },
+        {
+          "track": "surface-test",
+          "start": -1,
+          "expected": 50,
+          "chosen": "harbour-wall-run"
+        }
+      ],
+      "layouts": [
+        {
+          "width": 390,
+          "height": 844,
+          "cards": [
+            {
+              "id": "coastal-villages",
+              "width": 171,
+              "height": 171
+            },
+            {
+              "id": "metro-market",
+              "width": 171,
+              "height": 171
+            },
+            {
+              "id": "canal-garden",
+              "width": 171,
+              "height": 171
+            },
+            {
+              "id": "skyline-flyover",
+              "width": 171,
+              "height": 171
+            },
+            {
+              "id": "water-transit",
+              "width": 171,
+              "height": 171
+            },
+            {
+              "id": "harbour-avenue",
+              "width": 171,
+              "height": 171
+            },
+            {
+              "id": "divided-highway",
+              "width": 171,
+              "height": 171
+            },
+            {
+              "id": "tea-bends",
+              "width": 171,
+              "height": 171
+            },
+            {
+              "id": "estate-switchbacks",
+              "width": 171,
+              "height": 171
+            },
+            {
+              "id": "bird-rock",
+              "width": 171,
+              "height": 171
+            },
+            {
+              "id": "harbour-wall-run",
+              "width": 171,
+              "height": 171
+            }
+          ]
+        },
+        {
+          "width": 320,
+          "height": 568,
+          "cards": [
+            {
+              "id": "coastal-villages",
+              "width": 136,
+              "height": 136
+            },
+            {
+              "id": "metro-market",
+              "width": 136,
+              "height": 136
+            },
+            {
+              "id": "canal-garden",
+              "width": 136,
+              "height": 136
+            },
+            {
+              "id": "skyline-flyover",
+              "width": 136,
+              "height": 136
+            },
+            {
+              "id": "water-transit",
+              "width": 136,
+              "height": 136
+            },
+            {
+              "id": "harbour-avenue",
+              "width": 136,
+              "height": 136
+            },
+            {
+              "id": "divided-highway",
+              "width": 136,
+              "height": 136
+            },
+            {
+              "id": "tea-bends",
+              "width": 136,
+              "height": 136
+            },
+            {
+              "id": "estate-switchbacks",
+              "width": 136,
+              "height": 136
+            },
+            {
+              "id": "bird-rock",
+              "width": 136,
+              "height": 136
+            },
+            {
+              "id": "harbour-wall-run",
+              "width": 136,
+              "height": 136
+            }
+          ]
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "cards": [
+            {
+              "id": "coastal-villages",
+              "width": 200,
+              "height": 200
+            },
+            {
+              "id": "metro-market",
+              "width": 200,
+              "height": 200
+            },
+            {
+              "id": "canal-garden",
+              "width": 200,
+              "height": 200
+            },
+            {
+              "id": "skyline-flyover",
+              "width": 200,
+              "height": 200
+            },
+            {
+              "id": "water-transit",
+              "width": 200,
+              "height": 200
+            },
+            {
+              "id": "harbour-avenue",
+              "width": 200,
+              "height": 200
+            },
+            {
+              "id": "divided-highway",
+              "width": 200,
+              "height": 200
+            },
+            {
+              "id": "tea-bends",
+              "width": 200,
+              "height": 200
+            },
+            {
+              "id": "estate-switchbacks",
+              "width": 200,
+              "height": 200
+            },
+            {
+              "id": "bird-rock",
+              "width": 200,
+              "height": 200
+            },
+            {
+              "id": "harbour-wall-run",
+              "width": 200,
+              "height": 200
+            }
+          ]
+        }
+      ],
+      "historyRoundtrip": true,
+      "repeatedCloseAndFocus": true,
+      "otherScreensAndSaves": true
+    }
+  ]
+}

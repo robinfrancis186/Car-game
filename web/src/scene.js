@@ -1,3 +1,5 @@
+import {SimReadyPilot} from './simready-pilot.js';
+import {RoadLighting} from './road-lighting.js';
 import * as THREE from 'three';
 import { createCoastalShowroom,createShowroomReflectionScene } from './showroom-scene.js';
 import {renderPixelRatio,RENDER_RESOLUTIONS,configureOpaqueSky} from './render-metrics.js';
@@ -64,12 +66,13 @@ export class CoastRenderer{
   const hasHighlandDetail=this.world.id==='highlands';
   if(hasHighlandDetail)this.teaDetail=await(await fetch(assetURL('tea_detail_rows.json'))).json();
   const propNames=[...new Set(this.world.prop_instances.map(p=>p.asset))];const hasCanalDetail=propNames.includes('CanalRainTree');
-  const files=[...new Set([...this.world.course_meshes.map(p=>p.file),...propNames.map(n=>n+'.glb'),...Object.values(CAR_CATALOG).map(c=>c.asset),'CaptureOfficerNear.glb','CaptureOfficerMobile.glb','CaptureDriverNear.glb','CaptureDriverMobile.glb','police_lightbar.glb','CheckpointGate.glb','ServiceShowroomLoft.glb','CoconutPalm_A.glb','CoconutPalm_B.glb','ArcadeBoostNozzle.glb','ArcadeCoin.glb',...(hasCanalDetail?['CanalRainTreeFar.glb']:[]),...(hasHighlandDetail?['HighlandShadeTreeNear.glb','TeaLeafCluster.glb']:[]),...(this.world.transit_routes||[]).map(r=>r.asset+'.glb'),...(this.world.air_traffic?['helicopter_civilian.glb','helicopter_police.glb','helicopter_rotor_blur.glb']:[])])];
+  const files=[...new Set([...(this.worldFile==='course_runtime.json'?['SimReadyFenceNear.glb','SimReadyFenceFar.glb','SimReadyCrateNear.glb','SimReadyCrateFar.glb']:[]),...this.world.course_meshes.map(p=>p.file),...propNames.map(n=>n+'.glb'),...Object.values(CAR_CATALOG).map(c=>c.asset),'CaptureOfficerNear.glb','CaptureOfficerMobile.glb','CaptureDriverNear.glb','CaptureDriverMobile.glb','police_lightbar.glb','CheckpointGate.glb','ServiceShowroomLoft.glb','CoconutPalm_A.glb','CoconutPalm_B.glb','ArcadeBoostNozzle.glb','ArcadeCoin.glb',...(hasCanalDetail?['CanalRainTreeFar.glb']:[]),...(hasHighlandDetail?['HighlandShadeTreeNear.glb','TeaLeafCluster.glb']:[]),...(this.world.transit_routes||[]).map(r=>r.asset+'.glb'),...(this.world.air_traffic?['helicopter_civilian.glb','helicopter_police.glb','helicopter_rotor_blur.glb']:[])])];
   const loads=await Promise.all(files.map(async file=>[file,(await loader.loadAsync(assetURL(file))).scene]));
-  this.models=Object.fromEntries(loads);
+  this.models=Object.fromEntries(loads);if(this.worldFile==='course_runtime.json')this.simReadyPilot=new SimReadyPilot(this);
   for(const entry of this.world.course_meshes){
    const group=this.models[entry.file];group.traverse(o=>{if(o.isMesh){o.receiveShadow=true;o.castShadow=/Road|Furniture/.test(entry.file);for(const m of materialList(o.material))this.styleMaterial(m,true);applyRoadMicroSurface(o);}});this.scene.add(group);
   }
+  if(!this.world.surface_profile)this.roadLighting=new RoadLighting(this,{center:{x:0,z:0}});
   // Per-material, spatially chunked instancing keeps a 4.5km coast affordable on mobile.
   const buckets=new Map();
   for(const p of this.world.prop_instances){const key=`${p.asset}|${Math.floor(p.position[0]/160)}|${Math.floor(p.position[2]/160)}`;if(!buckets.has(key))buckets.set(key,[]);buckets.get(key).push(p);}
@@ -237,6 +240,8 @@ export class CoastRenderer{
   this.detailStats={enabled:!!this.detailFields?.length,instances:0,triangles:0,draws:0,teaRadius:0,treeRadius:0};for(const field of this.detailFields||[]){const d=field.stats;this.detailStats.instances+=d.instances;this.detailStats.triangles+=d.triangles;this.detailStats.draws+=d.draws;this.detailStats[d.name==='tea'?'teaRadius':'treeRadius']=d.radius;}
   this.presentation?.update(model,worldDt,{menu:menu||!!state.surfaceFrame,quality:this.quality,camera:this.camera});
   this.airTraffic?.update(model,{menu,quality:this.quality,night:this.night});
+  this.simReadyPilot?.update(this.camera,{menu,quality:this.quality});
+  this.roadLighting?.update(model,{menu});
   this.renderer.render(this.scene,this.camera);
  }
  resize(){const w=this.canvas.clientWidth||innerWidth,h=this.canvas.clientHeight||innerHeight;this.renderer.setPixelRatio(renderPixelRatio(devicePixelRatio||1,this.quality,this.resolutionMode));this.resolutionRevision=(this.resolutionRevision||0)+1;this.renderer.setSize(w,h,false);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();}

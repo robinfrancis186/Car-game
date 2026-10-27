@@ -1,3 +1,4 @@
+import {makeAtmosphere} from '../src/finish-fx.js';
 import {imageHeader} from './capture-assets.mjs';
 // Full shipped-world loader and instance graph, without a GPU or browser.
 import assert from 'node:assert/strict';
@@ -12,7 +13,7 @@ const assets={};for(const name of await fs.readdir(directory)){if(!/\.(glb|json)
 globalThis.window={__MALABAR_ASSETS__:assets};
 const {CoastRenderer}=await import('../src/scene.js');
 const renderer=Object.create(CoastRenderer.prototype);
-Object.assign(renderer,{scene:new THREE.Scene(),onProgress(){},cars:[],environmentChunks:[],waterShaders:[],windShaders:[],windowMaterials:[]});
+Object.assign(renderer,{worldFile:'course_runtime.json',sky:makeAtmosphere(),sun:new THREE.DirectionalLight(),hemisphere:new THREE.HemisphereLight(),renderer:{toneMappingExposure:1.05},scene:new THREE.Scene(),onProgress(){},cars:[],environmentChunks:[],waterShaders:[],windShaders:[],windowMaterials:[]});
 await renderer.load();
 assert(['v8-kerala-infrastructure','v9-canals-and-highlands'].includes(renderer.world.version));
 assert.equal(renderer.world.districts.length,5);assert.equal(renderer.transit.length,2);assert.equal(renderer.cars.length,6);assert(renderer.infrastructureColliders.length>=450);assert.equal(renderer.world.elevated_corridors.length,1);
@@ -24,8 +25,12 @@ assert.equal(renderer.transit.find(t=>t.kind==='metro').carriages.length,3);asse
 console.log(`PASS full actual world.load: ${Object.keys(renderer.models).length} GLBs, ${renderer.world.prop_instances.length} placements, ${meshes} spatial/material instance batches, ${palette.size} facade/accent colors, ${renderer.infrastructureColliders.length} infrastructure proxies, two moving transit rigs. No WebGL rendering.`);
 
 assert(assets['course_runtime_highlands.json'],'The selectable Highland course must actually ship, not silently skip acceptance.');
-const high=Object.create(CoastRenderer.prototype);Object.assign(high,{worldFile:'course_runtime_highlands.json',scene:new THREE.Scene(),onProgress(){},cars:[],environmentChunks:[],waterShaders:[],windShaders:[],windowMaterials:[]});await high.load();
+const high=Object.create(CoastRenderer.prototype);Object.assign(high,{worldFile:'course_runtime_highlands.json',sky:makeAtmosphere(),sun:new THREE.DirectionalLight(),hemisphere:new THREE.HemisphereLight(),renderer:{toneMappingExposure:1.05},scene:new THREE.Scene(),onProgress(){},cars:[],environmentChunks:[],waterShaders:[],windShaders:[],windowMaterials:[]});await high.load();
 assert(high.route.length>100);assert(Math.max(...high.route.map(p=>p.y))>90);assert(high.world.terrain_grid?.heights.length>10000);assert(high.world.road_sections.length>=2);assert(high.world.explore_starts.length>=3);assert.equal(high.cars.length,6);assert.equal(high.transit.length,0);assert.equal(high.waterSurface.length,0);
 assert(high.models['BirdRockLookout.glb'],'The bird landmark must exist in the actual selected world');let normalMaps=0;high.models['BirdRockLookout.glb'].traverse(o=>{if(o.isMesh)for(const m of Array.isArray(o.material)?o.material:[o.material])if(m.normalMap){normalMaps++;assert.equal(m.normalMap.image.width,256);assert.equal(m.normalMap.image.height,256);}});assert(normalMaps>0);
 for(const entry of high.world.course_meshes){let nodes=0;high.models[entry.file].traverse(o=>{if(o.isMesh){nodes++;assert(o.geometry.attributes.position.count>0);for(const value of o.geometry.attributes.position.array)assert(Number.isFinite(value));}});assert(nodes>0);}
 console.log(`PASS actual Highland world.load: ${Object.keys(high.models).length} GLBs, ${high.world.prop_instances.length} placements, ${high.infrastructureColliders.length} proxies, terrain grid, graded route, divided-road metadata, landmark normal-map wiring and no coastal water/transit leak. No WebGL or image decoding.`);
+
+assert.equal(renderer.simReadyPilot.sites.length,3);assert(!high.simReadyPilot,'NVIDIA coastal pilot must not leak into Highlands');
+let pilotTriangles=0;for(const {site}of renderer.simReadyPilot.sites)for(const lod of site.children){assert.equal(lod.autoUpdate,false);assert.equal(lod.levels.length,2);const counts=lod.levels.map(l=>{let n=0;l.object.traverse(mesh=>{if(mesh.isMesh){n+=(mesh.geometry.index?.count||mesh.geometry.attributes.position.count)/3*mesh.count;assert(mesh.material.map);assert(mesh.material.normalMap);assert(mesh.material.roughnessMap);assert(mesh.material.metalnessMap);for(const v of mesh.instanceMatrix.array)assert(Number.isFinite(v));}});return n;});assert(counts[1]<counts[0]);pilotTriangles+=counts[1];}
+assert(pilotTriangles<82000,'three sites retain bounded far mesh budget');renderer.simReadyPilot.update(new THREE.PerspectiveCamera(),{menu:true});assert(renderer.simReadyPilot.sites.every(x=>!x.site.visible));console.log('PASS genuine embedded NVIDIA PBR maps, three instanced coastal sites, finite transforms, cheaper manual mobile LODs, culling and menu/Highlands isolation.');

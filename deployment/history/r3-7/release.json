@@ -1,0 +1,24 @@
+{
+  "game": "MALABAR: Hot Coast",
+  "version": "V17 R3.7",
+  "change": "Maps now offers 11 canonical Explore destinations grouped under Hot Coast, Highland Run and experimental Harbour Wall Run. Metro Market / Station starts at 2008m. Previews are genuine renders of the existing scenes.",
+  "maps_scope": {
+    "worlds": 3,
+    "destinations": 11,
+    "experimental_route": "Harbour Wall Run: solo, no races, coins or rewards"
+  },
+  "leaderboard_scope": "This device/browser only; existing eligibility and rewards unchanged.",
+  "source_base_commit": "b04f65632fba1abdc2aec685126f8e17879bed83",
+  "tested_source_package_sha256": "f47d2ac1af5e8c39663fa54c7f7e72b256ad54c35411a9fc2bd9fb98e9095297",
+  "runtime_tree_sha256": "c2368a5b23dc9c67b84da25a6917c82ce11391148af61c2d684ed9e3cca25016",
+  "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
+  "tested_standalone_sha256": "8deb8141de86f0a103ece56855adc1ca1f2ba3ac8c22543929a55666a8db74dc",
+  "runtime_format": "Byte-preserving split runtime; build with node tools/build-static.mjs",
+  "local_checks": "59/59 aggregate stages;22 actual Chrome destination launches;6 stale-selection cases;save/history roundtrips;desktop/compact/mobile-sized layouts;standalone/static build and byte integrity passed.",
+  "limitations": "No physical-phone, Safari, general frame-time or cold-load validation. Current scenery remains stylized; Harbour is an experimental arcade contact proof. Inherited payload audit rejects unchanged R3.6 CC0 metadata; separate byte/dependency/licence checks pass.",
+  "production_state": "Source release prepared; Vercel publication and live verification owned exclusively by parent task.",
+  "rollback_release": "V17 R3.6",
+  "rollback_source_commit": "b04f65632fba1abdc2aec685126f8e17879bed83",
+  "rollback_deployment_id": null,
+  "rollback_note": "Parent retains the currently verified R3.6 deployment; its deployment ID was not supplied to this executor. No Vercel operation is performed here."
+}

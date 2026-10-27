@@ -41,3 +41,10 @@ The two fictional light-twin helicopter variants, articulated rotor/searchlight 
 The anatomical base mesh, morph, skeleton, weights and skin texture are MakeHuman Community / MPFB CC0 asset data, pinned to MPFB v2.0.18 and the publisher's official CC0 system-assets archive. Data Collection AB, Joel Palmius and Jonas Hauquier are credited by the source. Full asset dedication: `web/public/licenses/MAKEHUMAN_CC0.txt`; original licensing distinction, byte hashes and public source URLs: `assets/capture_humans/source/`. No MPFB application code/add-on was installed or executed, and no application-code licence is applied to the CC0 data.
 
 Uniform/driver clothing, capture staging, skeletal posing, materials, door overlays and wrist restraints are original project work. The CPO uniform manual informed original geometry only; its photographs/PDF and private references are excluded. Original additions retain the existing project rights scope. `web/public/vendor/addons/utils/SkeletonUtils.js` is from pinned Three.js 0.170.0 under the existing MIT notice. No paid or extracted commercial-game assets are included.
+
+## NVIDIA SimReady pilot
+
+NVIDIA SimReady assets **barrier_fence_metal_a02** and **crate_blue_a01**, by NVIDIA.
+Source: https://huggingface.co/datasets/nvidia/simready-assets/tree/9eadae061bf3f6fcee629b3286d5593c05415b42
+Licensed under Creative Commons Attribution 4.0 International: https://creativecommons.org/licenses/by/4.0/ .
+Modified: USD to GLB conversion, geometry reduction and texture resizing. No NVIDIA endorsement implied. Full individual licences, package manifests and original dependency hashes are retained under assets/simready/.

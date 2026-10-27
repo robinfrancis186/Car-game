@@ -1,33 +1,33 @@
 {
-  "release": "V17 R3.7",
+  "release": "V17 R3.8",
   "deployment_owner": "parent thread",
   "project_id": "prj_wpjGOHOOw8yWEFnoKJeBe8ZTu6d5",
   "production_url": "https://malabar-hot-coast.vercel.app/",
   "build_command": "node tools/build-static.mjs",
   "output_directory": "dist/vercel",
-  "deployment_status": "Awaiting parent publication and live verification; not deployed by this executor",
-  "source_base_commit": "b04f65632fba1abdc2aec685126f8e17879bed83",
-  "runtime_files": 175,
-  "runtime_tree_sha256": "c2368a5b23dc9c67b84da25a6917c82ce11391148af61c2d684ed9e3cca25016",
+  "deployment_status": "Local candidate only; not pushed or deployed",
+  "source_base_commit": "a642f06df4603c2eff6f0f499f92bf3def5bea3f",
+  "runtime_files": 183,
+  "runtime_tree_sha256": "80273d1bc48ee100e8b857eaf363a9c69065d0032d01002b5c7e40336b4847f2",
   "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
-  "full_runtime_tree_sha256": "179f42df05303440170cbb81ccfa32f9bcd663843085ec7ca3bce539ac1b83d2",
+  "full_runtime_tree_sha256": "010faf5e0c68a7747b3b4fd241b09906a7e8965791ff843aaefe705c4fb441d3",
   "full_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, including release.json",
-  "rollback_release": "V17 R3.6",
-  "rollback_source_commit": "b04f65632fba1abdc2aec685126f8e17879bed83",
+  "rollback_release": "V17 R3.7",
+  "rollback_source_commit": "a642f06df4603c2eff6f0f499f92bf3def5bea3f",
   "rollback_deployment_id": null,
-  "rollback_owner": "parent thread; retain current verified R3.6 deployment",
+  "rollback_owner": "parent thread; preserve verified R3.7 deployment",
   "mapping": [
     {
       "public_path": "LICENSES.md",
       "source_path": "LICENSES.md",
-      "bytes": 7068,
-      "sha256": "17f586a7a6da0bd91c3feb0a05494844c52dd03cff232dd19a0eaae143b24248"
+      "bytes": 7617,
+      "sha256": "759a2792ba079ca3bef2109ffd1569d886c94b622f4b802dd39e1cb6e65c6461"
     },
     {
       "public_path": "index.html",
       "source_path": "web/index.html",
-      "bytes": 41022,
-      "sha256": "323b125dc9ab545dab450eb5607db5440cbf40cf0035923995e964718487276b"
+      "bytes": 41837,
+      "sha256": "01258f95997eb1b452eb0a2ad299bda140c377a040db071b31aed0bfe713f858"
     },
     {
       "public_path": "licenses/OFL.txt",
@@ -340,6 +340,30 @@
       "source_path": "web/public/assets/SideStreetSegment.glb",
       "bytes": 8580,
       "sha256": "1506de80718b9e26a4ec61d89afabda8de32ca896c766761fcea7df47e0c2283"
+    },
+    {
+      "public_path": "public/assets/SimReadyCrateFar.glb",
+      "source_path": "web/public/assets/SimReadyCrateFar.glb",
+      "bytes": 480152,
+      "sha256": "98f383bb706dbecf24753b8f31776bb724fee879dbff7bfc2945a6d5b3ff3387"
+    },
+    {
+      "public_path": "public/assets/SimReadyCrateNear.glb",
+      "source_path": "web/public/assets/SimReadyCrateNear.glb",
+      "bytes": 1285144,
+      "sha256": "e38a0190a9347eba30a6e3e8067efb02c047806092f93a6cb4577df418ac0802"
+    },
+    {
+      "public_path": "public/assets/SimReadyFenceFar.glb",
+      "source_path": "web/public/assets/SimReadyFenceFar.glb",
+      "bytes": 294312,
+      "sha256": "6f29d23f1de778ee62c84569503e1c37cd828564d96f3451fb4d333f9169c89d"
+    },
+    {
+      "public_path": "public/assets/SimReadyFenceNear.glb",
+      "source_path": "web/public/assets/SimReadyFenceNear.glb",
+      "bytes": 1011920,
+      "sha256": "108c63500092493a4a511408fa29e8a325663a2b4a54c7b31ca93b4807789e8c"
     },
     {
       "public_path": "public/assets/Streetlight.glb",
@@ -798,6 +822,12 @@
       "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c"
     },
     {
+      "public_path": "public/licenses/NVIDIA_CC_BY_4.txt",
+      "source_path": "web/public/licenses/NVIDIA_CC_BY_4.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
       "public_path": "public/vendor/THREE_LICENSE.txt",
       "source_path": "web/public/vendor/THREE_LICENSE.txt",
       "bytes": 1081,
@@ -836,8 +866,8 @@
     {
       "public_path": "release.json",
       "source_path": "deployment/release.json",
-      "bytes": 2055,
-      "sha256": "e2767217dd60051ee81ad507c4a6422dc61316f4fb57ad4b1fece39dfa5adc7a"
+      "bytes": 2522,
+      "sha256": "a211f4b2aaca4da3402abc0519113ec19b8672f7f3fecbcc7ea4d599564af883"
     },
     {
       "public_path": "src/air-traffic.js",
@@ -856,6 +886,12 @@
       "source_path": "web/src/audio.js",
       "bytes": 26597,
       "sha256": "693737b09576816ae56bae9cc86507e8e4678aebb0b6221adeb80c6de5427d43"
+    },
+    {
+      "public_path": "src/auto-drive.js",
+      "source_path": "web/src/auto-drive.js",
+      "bytes": 3284,
+      "sha256": "60269ce59ebb03c6d431a3b535dc8be428471368a944aa86c6d3eb99601a223a"
     },
     {
       "public_path": "src/boost-fire.js",
@@ -926,8 +962,8 @@
     {
       "public_path": "src/main.js",
       "source_path": "web/src/main.js",
-      "bytes": 77384,
-      "sha256": "66c40e75156f94f84adad3f4a514748949d10ed59c7d0c924fd873e4eb1b14e8"
+      "bytes": 78832,
+      "sha256": "fb563c76945380363dbfbbaea06048655561eb935dd412f18f84abcbe3fa1448"
     },
     {
       "public_path": "src/map-destinations.js",
@@ -972,6 +1008,12 @@
       "sha256": "e0645ed661dacdd4e1beba7e75c4a5e562219edccf7fcaa8fa8f5e1f90e8083c"
     },
     {
+      "public_path": "src/road-lighting.js",
+      "source_path": "web/src/road-lighting.js",
+      "bytes": 7408,
+      "sha256": "d845d2c35fa10aed884231095b348ba40c130f7091d170daf042bd9d1513e222"
+    },
+    {
       "public_path": "src/rotor-audio-targets.js",
       "source_path": "web/src/rotor-audio-targets.js",
       "bytes": 3092,
@@ -980,8 +1022,8 @@
     {
       "public_path": "src/scene.js",
       "source_path": "web/src/scene.js",
-      "bytes": 42797,
-      "sha256": "50598bb0ccaa083532efe3a805edc69427af55099279a4d254cd2ab04a196939"
+      "bytes": 43333,
+      "sha256": "37472fb3bab6f044065504d2be0b134917c199ab5fbc9b6caf751de0fd6ab2dd"
     },
     {
       "public_path": "src/showroom-reflector.js",
@@ -994,6 +1036,12 @@
       "source_path": "web/src/showroom-scene.js",
       "bytes": 12650,
       "sha256": "691d96f1c4a5f5d7365f1c475e78d82eaba742c39e123b09e44cc51a64585634"
+    },
+    {
+      "public_path": "src/simready-pilot.js",
+      "source_path": "web/src/simready-pilot.js",
+      "bytes": 2159,
+      "sha256": "d3fc1285c1164066f9bbf0c66d17680b525b149393593b39c35211dd60b126f6"
     },
     {
       "public_path": "src/story-store.js",
@@ -1016,8 +1064,8 @@
     {
       "public_path": "src/style.css",
       "source_path": "web/src/style.css",
-      "bytes": 115230,
-      "sha256": "6e175c75ee6ab127f8042296318819ba8eacd04e028914d8e4d3386f6d2b9109"
+      "bytes": 115948,
+      "sha256": "cbcef54a22564eb292a7d0c12afaadf6f4e9d0b1a138f80201880f9c1a63b0af"
     },
     {
       "public_path": "src/surface-camera.js",

@@ -1,0 +1,115 @@
+{
+  "status": "Validated source prepared for authorized Git publication; parent exclusively owns Vercel publication",
+  "base_commit": "b04f65632fba1abdc2aec685126f8e17879bed83",
+  "branch": "feature/maps-preview-grid",
+  "map_world_files": 3,
+  "canonical_destinations": 11,
+  "aggregate": {
+    "passed": 59,
+    "failed": 0,
+    "not_run": 0,
+    "seconds": 403.561,
+    "tracked_files_changed": []
+  },
+  "actual_browser": {
+    "result": "PASS",
+    "launches": 22,
+    "stale_selection_cases": 6,
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ],
+      [
+        844,
+        390
+      ]
+    ],
+    "errors": 0,
+    "warnings": 0,
+    "history_and_save_roundtrips": true,
+    "other_screen_navigation": true
+  },
+  "surface_constraints": {
+    "experimental_solo": true,
+    "races": false,
+    "rivals": 0,
+    "police": 0,
+    "coins": 0,
+    "physical_start_s": 50
+  },
+  "ordinary_course_spawn": "Configured canonical start preserved; existing player offset is +8 metres. No physics change.",
+  "standalone": {
+    "result": "PASS",
+    "scope": "Built bytes and embedded inventory; no rendering or GPU assertion",
+    "standalone_bytes": 85064971,
+    "standalone_sha256": "8deb8141de86f0a103ece56855adc1ca1f2ba3ac8c22543929a55666a8db74dc",
+    "embedded_assets_byte_identical": 122,
+    "map_previews_embedded_exact": 11,
+    "font_embedded_exact": true,
+    "bundle_embedded_exact": true,
+    "third_party_notices_preserved": true
+  },
+  "standalone_additional_byte_audit": {
+    "result": "PASS",
+    "embedded_assets": 122,
+    "notices": "Three.js and font full notices present; linked OSM/ODbL attribution retained."
+  },
+  "offline_standalone_browser": {
+    "result": "PASS",
+    "loaded_embedded_previews": 11,
+    "network_requests": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "static_build": {
+    "result": "PASS",
+    "files": 175,
+    "source_mapping_exact": true
+  },
+  "baseline_public_files_unchanged": 120,
+  "licences_unchanged": true,
+  "home_scope_verification": {
+    "result": "PASS",
+    "baseline": "b04f65632fba1abdc2aec685126f8e17879bed83",
+    "allOriginalStylesBeforeMapsByteIdentical": true,
+    "onlyWhitespaceBetweenBaselineEndAndMaps": true,
+    "homeHTMLFragmentByteIdentical": true,
+    "allTenHomeChecksPass": true,
+    "deliberateHomeZIndexMutationRejected": true,
+    "reason": "The test now checks the complete original Home stylesheet region. It excludes only the separately appended Maps styles; original Home rules and prohibitions remain active."
+  },
+  "protected_original_lighting_experiment": {
+    "web/src/experiments/arrest-road-lighting.js": "36ea1c8f21c0dd5d7f4cf3ddccdc9f7067a3d1fca00e44e2458eb4d73b274646",
+    "web/tests/experiments/arrest-road-lighting.test.mjs": "42b41d7f4aba4db8ab0c62a7b0f6b2fe6ba010950188af10b25afb00cbd50a51",
+    "docs/candidates/ARREST_ROAD_LIGHTING_DRAFT2.md": "8160e58547ac7ba71e45acdf655933f9aa501a3f8adc7ad3e15ffcf7490fe2ee"
+  },
+  "inherited_audit_exception": {
+    "status": "FAIL_INHERITED_BASELINE_EXCEPTION",
+    "script": "tools/audit_runtime_payload.py",
+    "failure": "CaptureDriverMobile.glb original grant metadata",
+    "reason": "Unmodified legacy script rejects CC0/public-domain text. Its code and the flagged GLB are byte-identical to b04f656; licence metadata was preserved, not removed."
+  },
+  "source_tree_sha256": "162aa0994dd63adf1b030cc393565bc7f8debcd4038a4933e7201487ecca2204",
+  "runtime_tree_sha256": "c2368a5b23dc9c67b84da25a6917c82ce11391148af61c2d684ed9e3cca25016",
+  "not_run": [
+    "physical phone",
+    "Safari",
+    "general frame-time or cold-load benchmark",
+    "standalone cross-world file-URL reload (split runtime all destinations and offline initial loading verified)"
+  ],
+  "remaining_execution_blockers": [],
+  "push": false,
+  "deployment": false,
+  "release": "V17 R3.7",
+  "full_runtime_tree_sha256": "179f42df05303440170cbb81ccfa32f9bcd663843085ec7ca3bce539ac1b83d2",
+  "metadata_note": "Only release bookkeeping added after the exact 26-file,59/59-tested candidate; application source and asset bytes remain identical to approved package."
+}
