@@ -16,7 +16,7 @@ export const STORY_CHAPTERS = Object.freeze([
  chapter({id:'last-light',number:3,title:'Last Light',track:'coast',scenario:'hot-pursuit',startS:2200,endS:4350,
   intro:'Last light on the coast. Lose the patrol.',
   briefing:'One final run remains before the coast goes quiet. Reach the meeting point and lose the patrol without abandoning the car.',
-  objective:'Pass every checkpoint, escape the patrol, and finish before time runs out.',
+  objective:'Pass every checkpoint, escape the patrol, and reach the safehouse.',
   completion:'The crew is together and the coast is clear. Replay any chapter or return to the open road.',
   shortObjective:'FINISH AND ESCAPE THE PATROL'})
 ]);

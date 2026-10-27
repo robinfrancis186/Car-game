@@ -1,0 +1,62 @@
+[
+  {
+    "area": 1,
+    "name": "Driving feel and Auto",
+    "implemented_tested": "Switchable road-following Auto/Manual, braking override and lifecycle from prior releases preserved; controller/handling/recovery suites passed.",
+    "remaining": "Broader grip/drift/collision tuning and feel acceptance with real players."
+  },
+  {
+    "area": 2,
+    "name": "Environment consistency",
+    "implemented_tested": "Shared original ground/plaster/foliage surface pass, village colour variation and repaired facade hooks. Sixteen matched renders; same source meshes, placements, collision and draw/triangle budgets.",
+    "remaining": "Building-form variety, more convincing distant canopy silhouettes and richer authored roadside/terrain composition; still stylized."
+  },
+  {
+    "area": 3,
+    "name": "Lighting and materials",
+    "implemented_tested": "Existing lighting retained; filtered roughness/normal microdetail and material variation; night readability inspected.",
+    "remaining": "Broader lighting/material art acceptance across routes and real screens; not photorealism."
+  },
+  {
+    "area": 4,
+    "name": "Audio",
+    "implemented_tested": "Prior motor/tyre/impact/wind/siren/ambience and volume/mute work preserved; audio/rotor signal/control tests passed in aggregate.",
+    "remaining": "Human listening, speaker/headphone and phone audio acceptance."
+  },
+  {
+    "area": 5,
+    "name": "Camera and feedback",
+    "implemented_tested": "Prior frame-independent chase smoothing/reduced-motion/boost presentation preserved; camera tests and Home pixel identity passed.",
+    "remaining": "Real-device comfort and motion feedback."
+  },
+  {
+    "area": 6,
+    "name": "Police encounters",
+    "implemented_tested": "R3.10 obstruction-aware ground sight, capture/recovery rules and two-officer flow preserved; capture/grip/visibility suites passed.",
+    "remaining": "Encounter variation and scenery-aware pedestrian staging beyond car-clear paths; no full scenery navmesh."
+  },
+  {
+    "area": 7,
+    "name": "Race balance and replay",
+    "implemented_tested": "Existing routes/challenges, escape qualification, once-only coins and saved progress preserved; race/Story/reward suites passed. No new modes or rewards.",
+    "remaining": "Player-led challenge/reward/replay balance and evidence of replay value; no speculative retuning."
+  },
+  {
+    "area": 8,
+    "name": "HUD, menus and onboarding",
+    "implemented_tested": "Approved UI/main/CSS unchanged; Home desktop/mobile screenshots have zero differing pixels. Last Light objective now accurately describes an untimed pursuit; exact source-preimage proof and affected tests passed.",
+    "remaining": "Fresh-player onboarding/HUD/touch usability observations."
+  },
+  {
+    "area": 9,
+    "name": "Performance and reliability",
+    "implemented_tested": "66-stage aggregate, six post-copy checks, eight ABBA render cases, builds/integrity and preserved save/error recovery checks. GPU costs and 33.3 ms pacing disclosed.",
+    "remaining": "Physical phone, Safari, startup/long-session thermals and broader interruption/network/device testing."
+  },
+  {
+    "area": 10,
+    "name": "Genuine player feedback",
+    "implemented_tested": "No fabricated players, ratings or acceptance results.",
+    "remaining": "Genuine new-player sessions and resulting iteration; no 9/10 claim."
+  }
+]

@@ -1,4 +1,5 @@
 import {DrivingCameraFilter} from './driving-camera.js';
+import {refineSceneryMaterial,facadeTintKind,fallbackFacadeColor} from './scenery-materials.js';
 import {installCurveGuides} from './curve-guides.js';
 import {SimReadyPilot} from './simready-pilot.js';
 import {RoadLighting} from './road-lighting.js';
@@ -83,9 +84,9 @@ export class CoastRenderer{
    const name=placements[0].asset;const model=this.models[name==='CanalRainTree'&&hasCanalDetail?'CanalRainTreeFar.glb':name+'.glb'];model.updateMatrixWorld(true);
    const group=new THREE.Group();const center=new THREE.Vector3();placements.forEach(p=>center.add(new THREE.Vector3(...p.position)));center.multiplyScalar(1/placements.length);
    model.traverse(o=>{if(!o.isMesh)return;for(const m of materialList(o.material))this.styleMaterial(m,false);
-    const tintKind=!Array.isArray(o.material)&&/Warm_Lime_Plaster/.test(o.material.name)?'facade_color':!Array.isArray(o.material)&&/Kerala_Teal_Trim/.test(o.material.name)?'accent_color':null;const material=tintKind?o.material.clone():o.material;const originalColor=tintKind?o.material.color.clone():null;if(tintKind)material.color.set('#ffffff');
+    const tintKind=!Array.isArray(o.material)?facadeTintKind(o.material.name):null;const material=tintKind?o.material.clone():o.material;const originalColor=tintKind?o.material.color.clone():null;if(tintKind){material.color.set('#ffffff');material.onBeforeCompile=o.material.onBeforeCompile;material.customProgramCacheKey=o.material.customProgramCacheKey;}
     const im=new THREE.InstancedMesh(o.geometry,material,placements.length);im.castShadow=!name.includes('Grass');im.receiveShadow=true;
-    placements.forEach((p,i)=>{temp.position.set(...p.position);temp.rotation.set(0,p.yaw_rad,0);temp.scale.setScalar(p.scale);temp.updateMatrix();im.setMatrixAt(i,temp.matrix.clone().multiply(o.matrixWorld));if(tintKind)im.setColorAt(i,p[tintKind]?new THREE.Color(p[tintKind]):originalColor);});
+    placements.forEach((p,i)=>{temp.position.set(...p.position);temp.rotation.set(0,p.yaw_rad,0);temp.scale.setScalar(p.scale);temp.updateMatrix();im.setMatrixAt(i,temp.matrix.clone().multiply(o.matrixWorld));if(tintKind)im.setColorAt(i,p[tintKind]?new THREE.Color(p[tintKind]):tintKind==='facade_color'?new THREE.Color(fallbackFacadeColor(p,originalColor)):originalColor);});
     im.instanceMatrix.needsUpdate=true;if(im.instanceColor)im.instanceColor.needsUpdate=true;im.computeBoundingSphere();group.add(im);
    });group.userData.center=center;this.environmentChunks.push(group);this.scene.add(group);
   }
@@ -113,11 +114,11 @@ export class CoastRenderer{
   m.envMapIntensity=n.includes('glass')?.9:.42;
   if(/deep_window|transit_window|station_glaz|terminal_glaz/.test(n)&&m.emissive){m.emissive.set('#6a786c');m.emissiveIntensity=.015;m.userData.nightIntensity=.4;m.userData.dayIntensity=.015;this.windowMaterials?.push(m);}
   if(/v8_lamp/.test(n)&&m.emissive){m.userData.nightIntensity=1.6;m.userData.dayIntensity=.1;this.windowMaterials?.push(m);}
-  if(/leaf|frond|grass/.test(n)){m.side=THREE.DoubleSide;m.roughness=.85;m.color.multiplyScalar(.8);this.windMaterial(m,/grass|tea/.test(n)?.035:n.includes('stem')?.025:.07,/grass|tea/.test(n));}
+  if(/leaf|frond|grass/.test(n)){m.side=THREE.DoubleSide;m.roughness=.85;m.color.multiplyScalar(.8);this.windMaterial(m,/grass|tea/.test(n)?.035:n.includes('stem')?.025:.07,/grass|tea/.test(n));refineSceneryMaterial(m,'foliage');}
   if(/asphalt/.test(n)){m.color.set('#343b3c');m.roughness=.94;this.worldGrain(m,28,.20,'asphalt');}
-  else if(/sand/.test(n)){m.color.set('#c2a77b');m.roughness=.95;this.worldGrain(m,2,.16);}
-  else if(/gravel|shoulder/.test(n)){m.roughness=1;this.worldGrain(m,9,.38,'gravel');}
-  else if(/ground/.test(n)){m.color.set('#607448');m.roughness=1;this.worldGrain(m,.16,.42,'landscape');}
+  else if(/sand/.test(n)){m.color.set('#c2a77b');m.roughness=.95;refineSceneryMaterial(m,'sand');}
+  else if(/gravel|shoulder/.test(n)){m.roughness=1;refineSceneryMaterial(m,'gravel');}
+  else if(/ground/.test(n)){m.color.set('#607448');m.roughness=1;refineSceneryMaterial(m,'ground');}
   else if(/teacanopy/.test(n)){m.roughness=.95;this.worldGrain(m,1.4,.16);}
   else if(course&&/water|ocean/.test(n)){m.color.set('#297f85');m.roughness=.22;m.metalness=.3;m.envMapIntensity=1.1;this.waterMaterial(m);}
   else if(/foam/.test(n)){m.color.set('#d9e1cb');m.roughness=.8;this.worldGrain(m,1.8,.38);}

@@ -1,21 +1,19 @@
-# V17 R3.10 — scoped Stage2 candidate
+# V17 R3.11 — scoped Stage 3 candidate
 
-Local only. Parent owns publication/Vercel/live verification. Preserve live R3.9 commit 1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b and its deployment for rollback. Prior source metadata is retained unchanged under history/r3-9/.
+Local only. Parent owns publication/Vercel/live verification. Preserve R3.10 source cf619bf4de5905590848f2b1f5030541c0b76e6b and its deployment for rollback. Source metadata retained unchanged under history/r3-10/.
 
-Build split runtime: `node tools/build-static.mjs` -> `dist/vercel`. Exact 186-file mapping/hashes are in runtime-manifest.json. Standalone: `npm --prefix web run build`; verifier: `python3 tools/verify-standalone.py /tmp/standalone-integrity.json`. All public licence/attribution and asset bytes are unchanged from R3.9.
+Build: `node tools/build-static.mjs` -> `dist/vercel`; exact 187 public-file mapping and hashes are in runtime-manifest.json. Standalone: `npm --prefix web run build`; `python3 tools/verify-standalone.py /tmp/standalone-integrity.json`. Public assets and licence notices are unchanged.
 
-65/65 aggregate stages passed with no source mutations. All 22 browser destination launches, 20 normal Auto starts, compact navigation/save checks, desktop/mobile-sized Auto controls/lifecycle and natural two-officer police capture on both courses passed. No behavioral code changed after this aggregate. Raw ABBA render timings, patrol CPU costs and browser receipts are under r3-10/validation/.
+66/66 aggregate stages passed before the approved Story copy correction. Afterward, all six affected Story/storage/controller/preservation checks passed. No scenery, physics, timer, reward or unlock logic changed after aggregate. Package.json now registers 67 stages; this is not a 67/67 aggregate claim. The Story guard restores the old sentence and requires the exact original source hash.
 
-Ground patrol sight uses existing world solid/deck/terrain occlusion at car eye height. Cover does not disable an existing chase or bypass its unchanged distance-based escape timer. Valid ground cover above both cars does not hide a visible ground sightline. Existing airborne beam defaults remain unchanged. Visible near patrols still prevent recovery from bypassing arrest; an occluded unit no longer suppresses genuine stuck recovery.
+One shared original mipmapped texture adds 349,524 bytes and one GPU texture. Matched scene renders preserve source geometry, collision, world data, transforms, draw and triangle counts. Five deterministic colours apply to 15 village houses; authored urban palettes remain unchanged. All 155 observed facade material hooks across 423 instances retain detail. Draft 1 is rejected and retained; Draft 2 is the scoped candidate, still stylized.
 
-The original 138-path protected baseline remains intact: 136 exact files plus reviewed exact audio/gameplay exceptions. Audio is identical toR3.9. Gameplay changes are confined to three method bodies and one new helper; 58 other method bodies remain byte-identical, including physics, race progression, coins and terminal rewards. Hash guards also run visibility/capture behaviors; no other protected path is exempted.
+Sixteen actual before/after renders cover village, Metro, harbor and Highlands on desktop/mobile-sized Chrome. Night road readability was inspected. Full Home frame comparisons have zero differing pixels on both viewports; UI/main/CSS bytes remain unchanged. Camera receipts contain an unused empty control collector; pixel identity and source proof are the Home-preservation evidence.
 
-23 original curve markers follow three actual Highland bends. Three instanced batches add 736 triangles, no textures, runtime placement or collision changes. They stay beyond existing guardrails and do not affect the coast/wall worlds. This does not finish environment quality.
+Eight ABBA cases retain all raw samples, including regressions. GPU median baseline→candidate (ms): desktop village 9.026→9.224, Metro 10.609→10.222, harbor 10.720→11.220, Highlands 8.771→8.697; mobile-sized 4.069→4.539, 4.493→4.771, 4.496→4.421, 2.880→2.964 respectively. Mobile Metro GPU p95 rose 6.042→7.439 ms; desktop harbor p95 14.863→16.210 ms. Both versions ran at approximately 33.3 ms frame cadence in this run. No generic speedup, 60-FPS or physical-phone guarantee.
 
-Measured Mac Chrome costs are retained honestly: desktop GPU p95 rose 6.77 to 7.46 ms, mobile-sized median GPU 1.269 to 1.490 ms and CPU submission 1.1 to 1.3 ms. Median rAF stayed 16.7 ms. Near-boxing patrol updates averaged 9.8 us Coast / 6.4 us Highlands. These bounded samples do not establish phone performance.
+The original 138-path protected baseline remains intact: 135 exact files plus existing exact audio/gameplay scopes and the one-sentence Story exception. All other original checks remain strict.
 
-Three temporary browser harness corrections were required, with failed-attempt logs retained in the evidence archive: exact approved Manual-only Wall note; next rendered frame before actor cleanup assertion; settled actual spawn instead of a rounded distance on a curved route. No product change was made to satisfy these assertions.
+Known failed check: unchanged legacy payload audit rejects preserved CC0 grant metadata in unchanged CaptureDriverMobile.glb. No metadata stripped; independent byte/licence/build evidence retained.
 
-The unchanged legacy payload audit still rejects preserved CC0 character grant metadata; the flagged GLB and audit script remain byte-identical. No grants were stripped. Physical phone/Safari, listening, genuine new-player observations and long-session thermals remain unrun.
-
-Remaining ten-area work includes vegetation/terrain/facade/material consistency, encounter/replay/challenge balance, scenery-aware arrest staging, onboarding/HUD review, broader driving feel and human/device validation. No photorealism or 9/10 claim.
+All ten areas are itemized in r3-11/validation/ten-area-status.json. Remaining work includes vegetation/building forms and authored scenery variety, lighting/art acceptance, encounter/replay/balance/usability review, and real phone/Safari, listening, long-session thermals and genuine new-player feedback. No full photorealism, 9/10 rating or ten-area completion claim.

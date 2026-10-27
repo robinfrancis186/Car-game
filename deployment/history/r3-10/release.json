@@ -1,0 +1,19 @@
+{
+  "game": "MALABAR: Hot Coast",
+  "version": "V17 R3.10",
+  "change": "Stage2: occluded ground patrol detection/arrest and recovery consistency; 23 original instanced Highland curve markers behind existing guardrails.",
+  "source_base_commit": "1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b",
+  "preserved": "All 11 destinations, approved UI, Manual/Auto, audio/camera, saves, once-only rewards, server-validation boundaries and public assets remain unchanged. Harbour Wall Run stays explicitly Manual-only.",
+  "tested_standalone_sha256": "240415d9cbcc95e561d704dc5fc8b4f696b68cdcbe20fe6d379d0ee3e17ef92a",
+  "runtime_format": "Byte-preserving split runtime; node tools/build-static.mjs",
+  "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
+  "local_checks": "65/65 aggregate; 22 patrol visibility checks; 22 Chrome map launches; desktop/mobile-sized Auto lifecycle and natural capture on both courses; ABBA rendering/patrol CPU; build/integrity.",
+  "performance_limits": "No general speedup or phone FPS claim. Desktop GPU p95 increased from 6.77425 to 7.464958 ms. Mobile-sized median GPU time increased from 1.268958 to 1.489624 ms and p95 from 1.89225 to 2.222041 ms; median frame interval remained 16.7 ms. Physical phone, Safari and long-session thermals remain untested.",
+  "limitations": "Scoped Stage2 only. Environment still stylized; vegetation, facades, terrain, replay/encounter/onboarding review and real-device/listening/new-player acceptance remain. Legacy CC0 payload-audit exception retained.",
+  "public_licences": "All R3.9 NVIDIA CC BY 4.0, MakeHuman CC0, Three and font licences/attributions preserved unchanged. Curve guides are original procedural geometry; no new dependencies or third-party media.",
+  "production_state": "Local candidate only; no push or deployment. Parent coordinates publication.",
+  "rollback_release": "V17 R3.9",
+  "rollback_source_commit": "1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b",
+  "rollback_deployment_id": null,
+  "runtime_tree_sha256": "09ce24d8a3fcba9f353a4d25d08b5f26c358b214d6825967509fe5b0809585f3"
+}

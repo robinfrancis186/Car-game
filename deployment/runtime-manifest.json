@@ -1,19 +1,19 @@
 {
-  "release": "V17 R3.10",
+  "release": "V17 R3.11",
   "deployment_owner": "parent thread",
   "project_id": "prj_wpjGOHOOw8yWEFnoKJeBe8ZTu6d5",
   "production_url": "https://malabar-hot-coast.vercel.app/",
   "build_command": "node tools/build-static.mjs",
   "output_directory": "dist/vercel",
   "deployment_status": "Local candidate only; not pushed or deployed",
-  "source_base_commit": "1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b",
-  "runtime_files": 186,
-  "runtime_tree_sha256": "09ce24d8a3fcba9f353a4d25d08b5f26c358b214d6825967509fe5b0809585f3",
+  "source_base_commit": "cf619bf4de5905590848f2b1f5030541c0b76e6b",
+  "runtime_files": 187,
+  "runtime_tree_sha256": "d207be6a4b3a70ed0977663e83c50eb6ebb55589efb08f8a38a4d6aa46ea234b",
   "runtime_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, excluding release.json to avoid self-reference",
-  "full_runtime_tree_sha256": "df4c6d60673e70daab2f621dadc4e7d5f8f20d0cb441d6536111d89d32e356d7",
+  "full_runtime_tree_sha256": "4dec85859db339409554119143658f1c5e46f044422a183f66593e658f1da226",
   "full_tree_algorithm": "SHA256 of sorted public_path + NUL + file SHA256 + newline, including release.json",
-  "rollback_release": "V17 R3.9",
-  "rollback_source_commit": "1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b",
+  "rollback_release": "V17 R3.10",
+  "rollback_source_commit": "cf619bf4de5905590848f2b1f5030541c0b76e6b",
   "rollback_deployment_id": null,
   "mapping": [
     {
@@ -865,8 +865,8 @@
     {
       "public_path": "release.json",
       "source_path": "deployment/release.json",
-      "bytes": 2148,
-      "sha256": "8e8beb926942e805784ee11dedaf24a4ea7f28cdf8a3d82ee2ad61a9f9dc46c3"
+      "bytes": 2121,
+      "sha256": "b585d13cda21269761f0f12d08aead420dbfb2b23b31e4684c537713cf025281"
     },
     {
       "public_path": "src/air-traffic.js",
@@ -907,8 +907,8 @@
     {
       "public_path": "src/capture-materials.js",
       "source_path": "web/src/capture-materials.js",
-      "bytes": 1493,
-      "sha256": "2da69c7166e46aa54dcaac2141a04e9bbcabcf6c369b19924054c4faac96bbf7"
+      "bytes": 708,
+      "sha256": "48d5237a0dcc46b42e6d2c131093f2bca355627bcf750500fbf6561c9daa0175"
     },
     {
       "public_path": "src/cinematic-camera.js",
@@ -1033,8 +1033,14 @@
     {
       "public_path": "src/scene.js",
       "source_path": "web/src/scene.js",
-      "bytes": 43981,
-      "sha256": "73cf720a719b91d78e67ce0d20021a757617daa76a6ced2be675d0e8b7189fd1"
+      "bytes": 44203,
+      "sha256": "63f55c5950fa30b63756fa8341e7a79544c21704090d611ec0d8743384730249"
+    },
+    {
+      "public_path": "src/scenery-materials.js",
+      "source_path": "web/src/scenery-materials.js",
+      "bytes": 5187,
+      "sha256": "17a4ae90d853b5cbfc19fd531c2d1b8b689c478b6d573c4bb1a0eccbd9a96836"
     },
     {
       "public_path": "src/showroom-reflector.js",
@@ -1069,8 +1075,8 @@
     {
       "public_path": "src/story.js",
       "source_path": "web/src/story.js",
-      "bytes": 6325,
-      "sha256": "9852ad5748f1ef201cbef177c387f4eaf5546d05e4122d419238963150050d91"
+      "bytes": 6317,
+      "sha256": "edfad22da3e3bddcfc7746be57d571208e77637cc3de70a0e279561a819dcc6e"
     },
     {
       "public_path": "src/stunt-model.js",

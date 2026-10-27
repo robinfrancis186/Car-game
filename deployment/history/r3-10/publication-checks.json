@@ -1,0 +1,387 @@
+{
+  "release": "V17 R3.10",
+  "status": "Local Stage2 candidate only",
+  "base_commit": "1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b",
+  "aggregate": {
+    "passed": 65,
+    "failed": 0,
+    "not_run": 0,
+    "seconds": 309.748,
+    "tracked_files_changed_by_tests": []
+  },
+  "behavioral_code_sha256": {
+    "web/src/capture-materials.js": "2da69c7166e46aa54dcaac2141a04e9bbcabcf6c369b19924054c4faac96bbf7",
+    "web/src/surface-ribbon.js": "d3722764ee3a334cf00654f371d8e5405a9ba452cd5c59cc573301e811414780",
+    "web/src/upgrade-visuals.js": "8d2b838796cdcbf577b706ddb80ced1cdfd4fed4e5dce8f05319bfaadeff90e3",
+    "web/src/boost-fire.js": "5bb3009ca6ba451ffaf31ff99231427c3d0a762cd1987e245f6438a5b2f71c85",
+    "web/src/surface-drive.js": "05d9517e469778f572615c7816dd8dcd5bd08705c28c3759eb53f3261e785549",
+    "web/src/ramp-surfaces.js": "e3032720f52c0b13a02d1a757e48d1af67fe096c4b7ee428d35bf999137d2b19",
+    "web/src/tea-placement.js": "110799212574b2c42c976585f625d24ab59d0a5129cb5be2a0fafaa10e70d84f",
+    "web/src/profile-storage.js": "31388e106082522905c832f3ba4db02345e55a0800fbdadd28b9948e48facb4d",
+    "web/src/police-capture.js": "3678121e7eb45a26ae3acd3637977f4206bc9da8b0e229c535cdebbfb5262601",
+    "web/src/scene.js": "73cf720a719b91d78e67ce0d20021a757617daa76a6ced2be675d0e8b7189fd1",
+    "web/src/story.js": "9852ad5748f1ef201cbef177c387f4eaf5546d05e4122d419238963150050d91",
+    "web/src/curve-guides.js": "7d29f19fe5180680e09b8e5f50fa02629632be7216c0c9be3c29103cd18f56b3",
+    "web/src/map-destinations.js": "70b05a1c39d7e01a3a86693b6b7990f4608b092bc474a65011e38838f0d91701",
+    "web/src/stunt-model.js": "499bb2cc905a816509dbc70e989bb84623cc381f698ef6ba7ab2ee489ec2920b",
+    "web/src/transit.js": "b89f7a545514b5f34b5a62d3f6f684d58aea30a714903adb7b2b3a28a095714d",
+    "web/src/surface-materials.js": "e60bf4469e4436675308830f901e963504c3c0d86b69463fa4ba2f132f1556f0",
+    "web/src/capture-human.js": "571c66b38ee071b9a067d3cb587f58606f2472e06fd84746215fca1791f9b575",
+    "web/src/render-metrics.js": "e0645ed661dacdd4e1beba7e75c4a5e562219edccf7fcaa8fa8f5e1f90e8083c",
+    "web/src/showroom-reflector.js": "ccbf620792e6a348ddbb7b38b4a9c3aa1eb38a11f33f493c70915333211ee2e8",
+    "web/src/sound-preferences.js": "e45a0f944db26a4f8e634385a9a32d890aaedba575332de8ed11258dcb0156da",
+    "web/src/leaderboard.js": "b8b7c0ee0a54d1a67b488036b3817ecbc276ca84e9409ec4437b9c49f6c247d9",
+    "web/src/tracks.js": "1fdf792479f5455fcd36bb75c544add8bd8019150506806e173f28f48a1dd6b7",
+    "web/src/airtime-rewards.js": "73f619b5d9e048793a1f5087572cab2aeb514b669a73561cf8ae8571dfaf9b80",
+    "web/src/story-store.js": "d122f884a0724798eddf30ae311a58e8bdd4e349814319e6eb98a0e7c9d4252f",
+    "web/src/air-traffic.js": "3751b1a941a9ed7592fd305838095d7eaaf9fb8cf2dd15aea12b329dda7737f7",
+    "web/src/main.js": "8eee2f7d386fdb39d904b10dfb9d8047ca68683a6dfacdd952f5ea37fd6225b8",
+    "web/src/finish-fx.js": "a8c11f92b406746c574a8b82bf1b031765e60ce5abe10c949bf2a789b8913f7c",
+    "web/src/detail-lod.js": "b7f74f6850fd76454b22b7593452036f9e0b9a0f53de7fcc1d2b708d5a45bb9d",
+    "web/src/audio.js": "e0b6ee0718d6169904c094e2b34eef99aed9c1915e24df412884936ce44849b2",
+    "web/src/police-air-support.js": "443c88e24d1450dd0a11aba522cda76394ee4182f18358e16ed4f1f537f61ef6",
+    "web/src/leaderboard-store.js": "61ec5d277c59de1f10b759920e0d9597b487cf1314f98b446c57605b1d3906b2",
+    "web/src/garage.js": "e971705a77df3f3d58f846ab8ff14a510ba17acc14249b65b0181e7f5f0ee6b6",
+    "web/src/style.css": "25792042f22dee4abdc47aa130dd7e0f59f09434dfc522d943fe8f1bf1a4fadd",
+    "web/src/auto-drive.js": "99cf4e6bc6463f41f2d35a346f9b6a4f1068ab2bc68c176ca61c7c30fa19690b",
+    "web/src/collectibles.js": "9dcf84d22f58a083fc262bee704bbb4b5692fdfb33a3d98af08e46fd78cac3e1",
+    "web/src/showroom-scene.js": "691d96f1c4a5f5d7365f1c475e78d82eaba742c39e123b09e44cc51a64585634",
+    "web/src/cinematic-camera.js": "cadd2815c1ad4bb1155d30b04a8e537cad57c56fe6e8906bc7dc16c196a747ea",
+    "web/src/gameplay.js": "3492a036df080400cc7bf0eb63d2e1cce2675b617d8fdfa0af412b2bb08d44ed",
+    "web/src/driving-camera.js": "1058ccad99b04c4d65d5d41776ddde800a960983093d1bb00f5786c1d4677670",
+    "web/src/surface-camera.js": "f5297cabb6965c53a7d955b8d6519bbf83f5efe3c9b9b7a33be67ea5ec6fe3af",
+    "web/src/rotor-audio-targets.js": "daf1f51b91ec9770a3a36917a13759a2ceca85428d743aeca7e71692ca8370ce",
+    "web/src/police-capture-scene.js": "4ec5b8f5dfc91259d329012e0762bdb079c39ce7c2f82438f1f1154a678276ef",
+    "web/src/road-lighting.js": "d845d2c35fa10aed884231095b348ba40c130f7091d170daf042bd9d1513e222",
+    "web/src/simready-pilot.js": "d3fc1285c1164066f9bbf0c66d17680b525b149393593b39c35211dd60b126f6"
+  },
+  "post_aggregate_code_changes": false,
+  "patrol_visibility": {
+    "checks_passed": 22,
+    "scope": "Solid wall/deck/terrain occlusion; cover above both cars; existing chase continues; distance escape unchanged; low kerb, resumed capture, hidden/separate-level units, pause, cheap range/countdown/speed gates and recovery consistency."
+  },
+  "curve_guides": {
+    "markers": 23,
+    "bends": 3,
+    "draws_added": 3,
+    "triangles_added": 736,
+    "physics_or_collision_changes": false,
+    "placement": "Behind existing Highland guardrails, terrain-supported and signed from real route curvature. No Coast or wall-course additions."
+  },
+  "browser": {
+    "status": "PASS",
+    "map_launches": 22,
+    "normal_auto_starts": 20,
+    "auto_ui_viewports": 2,
+    "natural_capture_courses": 2,
+    "errors": [],
+    "temporary_harness_corrections": [
+      "Exact approved R3.9 Manual-only note replaces obsolete shorter note.",
+      "Retry actor cleanup asserted after next rendered frame within1000ms, while capture model resets immediately.",
+      "Restart progress compared exactly to settled initial spawn; unchanged curve projection is1112.96428m rather than rounded1113m."
+    ],
+    "product_code_changed_for_harness": false
+  },
+  "preservation": {
+    "original_set": 138,
+    "byte_identical": 136,
+    "reviewed_exceptions": [
+      "web/src/audio.js",
+      "web/src/gameplay.js"
+    ],
+    "audio_exception": "Unchanged reviewed R3.9 scope",
+    "gameplay_exception": "Exact candidate hash and targeted behaviors; 58 other methods byte-identical, including driving/race/coin settlement. Original baseline JSON unchanged.",
+    "approved_r39_asset_ui_control_audio_camera_files_byte_identical": 146
+  },
+  "performance": {
+    "scope": "Installed Mac Chrome only; mobile viewport emulation, not a physical phone. ABBA matched frozen Highland bend; separate actual-course patrol-update CPU sampling. No other tests concurrent.",
+    "rendering": [
+      {
+        "viewport": "desktop",
+        "baseline": {
+          "rafMs": {
+            "count": 240,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000728,
+            "mean": 16.66583333333333,
+            "min": 16.5,
+            "max": 16.800000000000182
+          },
+          "renderCpuSubmissionMs": {
+            "count": 242,
+            "median": 1.9000000059604645,
+            "p95": 2.4000000059604645,
+            "mean": 1.9466942165755043,
+            "min": 1.4000000059604645,
+            "max": 2.9000000059604645
+          },
+          "gpuRenderMs": {
+            "count": 242,
+            "median": 5.078416,
+            "p95": 6.77425,
+            "mean": 5.267897074380165,
+            "min": 3.857125,
+            "max": 9.106624
+          },
+          "gpuDisjoint": false,
+          "draws": 162,
+          "triangles": 375119
+        },
+        "candidate": {
+          "rafMs": {
+            "count": 240,
+            "median": 16.699999999999818,
+            "p95": 16.799999999999727,
+            "mean": 16.666249999999998,
+            "min": 16.5,
+            "max": 16.800000000000182
+          },
+          "renderCpuSubmissionMs": {
+            "count": 242,
+            "median": 1.699999988079071,
+            "p95": 2,
+            "mean": 1.721900826520171,
+            "min": 1.399999976158142,
+            "max": 2.300000011920929
+          },
+          "gpuRenderMs": {
+            "count": 242,
+            "median": 5.03025,
+            "p95": 7.464958,
+            "mean": 5.130352851239669,
+            "min": 3.844791,
+            "max": 11.706249
+          },
+          "gpuDisjoint": false,
+          "draws": 165,
+          "triangles": 375855
+        },
+        "deltas": {
+          "rafMs": {
+            "median": {
+              "ms": 0,
+              "percent": 0
+            },
+            "p95": {
+              "ms": 0.09999999999899956,
+              "percent": 0.598802395203564
+            },
+            "mean": {
+              "ms": 0.0004166666666662877,
+              "percent": 0.0025001250062480387
+            }
+          },
+          "renderCpuSubmissionMs": {
+            "median": {
+              "ms": -0.20000001788139343,
+              "percent": -10.526316697577688
+            },
+            "p95": {
+              "ms": -0.4000000059604645,
+              "percent": -16.66666687362724
+            },
+            "mean": {
+              "ms": -0.2247933900553334,
+              "percent": -11.547442230078387
+            }
+          },
+          "gpuRenderMs": {
+            "median": {
+              "ms": -0.04816600000000015,
+              "percent": -0.948445342012158
+            },
+            "p95": {
+              "ms": 0.6907079999999999,
+              "percent": 10.196080746946155
+            },
+            "mean": {
+              "ms": -0.13754422314049553,
+              "percent": -2.6109891897741635
+            }
+          }
+        }
+      },
+      {
+        "viewport": "mobile-sized",
+        "baseline": {
+          "rafMs": {
+            "count": 240,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000273,
+            "mean": 16.666249999999998,
+            "min": 16.59999999999991,
+            "max": 16.800000000000182
+          },
+          "renderCpuSubmissionMs": {
+            "count": 242,
+            "median": 1.100000023841858,
+            "p95": 1.300000011920929,
+            "mean": 1.1491735538175283,
+            "min": 0.8999999761581421,
+            "max": 1.5
+          },
+          "gpuRenderMs": {
+            "count": 242,
+            "median": 1.268958,
+            "p95": 1.89225,
+            "mean": 1.3174046446280991,
+            "min": 0.920333,
+            "max": 3.389708
+          },
+          "gpuDisjoint": false,
+          "draws": 93,
+          "triangles": 132989
+        },
+        "candidate": {
+          "rafMs": {
+            "count": 240,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000273,
+            "mean": 16.665416666666665,
+            "min": 16.5,
+            "max": 16.800000000000182
+          },
+          "renderCpuSubmissionMs": {
+            "count": 242,
+            "median": 1.300000011920929,
+            "p95": 1.7000000178813934,
+            "mean": 1.3309917362514607,
+            "min": 0.9000000059604645,
+            "max": 2.4000000059604645
+          },
+          "gpuRenderMs": {
+            "count": 242,
+            "median": 1.489624,
+            "p95": 2.222041,
+            "mean": 1.5750532190082647,
+            "min": 1.001166,
+            "max": 3.699249
+          },
+          "gpuDisjoint": false,
+          "draws": 96,
+          "triangles": 133725
+        },
+        "deltas": {
+          "rafMs": {
+            "median": {
+              "ms": 0,
+              "percent": 0
+            },
+            "p95": {
+              "ms": 0,
+              "percent": 0
+            },
+            "mean": {
+              "ms": -0.0008333333333325754,
+              "percent": -0.005000125003120531
+            }
+          },
+          "renderCpuSubmissionMs": {
+            "median": {
+              "ms": 0.19999998807907104,
+              "percent": 18.181816704017105
+            },
+            "p95": {
+              "ms": 0.4000000059604645,
+              "percent": 30.76923094557587
+            },
+            "mean": {
+              "ms": 0.18181818243393244,
+              "percent": 15.821646941833686
+            }
+          },
+          "gpuRenderMs": {
+            "median": {
+              "ms": 0.22066600000000003,
+              "percent": 17.389543231533274
+            },
+            "p95": {
+              "ms": 0.32979099999999995,
+              "percent": 17.4285110318404
+            },
+            "mean": {
+              "ms": 0.25764857438016553,
+              "percent": 19.557284501065293
+            }
+          }
+        }
+      }
+    ],
+    "patrol_update_cpu": [
+      {
+        "track": "coast",
+        "scenario": "near-boxing",
+        "baseline_mean_ms": 0.0027266666670640316,
+        "candidate_mean_ms": 0.009773333328962335,
+        "delta_mean_ms": 0.007046666661898304
+      },
+      {
+        "track": "coast",
+        "scenario": "detecting",
+        "baseline_mean_ms": 0.0024933333317438775,
+        "candidate_mean_ms": 0.0031733333309491487,
+        "delta_mean_ms": 0.0006799999992052712
+      },
+      {
+        "track": "coast",
+        "scenario": "far",
+        "baseline_mean_ms": 0.003473333334922793,
+        "candidate_mean_ms": 0.0034200000047683735,
+        "delta_mean_ms": -5.3333330154419455e-05
+      },
+      {
+        "track": "highlands",
+        "scenario": "near-boxing",
+        "baseline_mean_ms": 0.0033666666686534893,
+        "candidate_mean_ms": 0.006426666667064042,
+        "delta_mean_ms": 0.003059999998410553
+      },
+      {
+        "track": "highlands",
+        "scenario": "detecting",
+        "baseline_mean_ms": 0.0030666666666666685,
+        "candidate_mean_ms": 0.0036466666638851203,
+        "delta_mean_ms": 0.0005799999972184518
+      },
+      {
+        "track": "highlands",
+        "scenario": "far",
+        "baseline_mean_ms": 0.0026600000003973653,
+        "candidate_mean_ms": 0.002639999997615816,
+        "delta_mean_ms": -2.000000278154935e-05
+      }
+    ],
+    "limits": "No general speedup or phone FPS claim. Desktop GPU p95 increased from 6.77425 to 7.464958 ms. Mobile-sized median GPU time increased from 1.268958 to 1.489624 ms and p95 from 1.89225 to 2.222041 ms; median frame interval remained 16.7 ms. Physical phone, Safari and long-session thermals remain untested."
+  },
+  "build": {
+    "result": "PASS",
+    "scope": "Built bytes and embedded inventory; no rendering or GPU assertion",
+    "standalone_bytes": 89188167,
+    "standalone_sha256": "240415d9cbcc95e561d704dc5fc8b4f696b68cdcbe20fe6d379d0ee3e17ef92a",
+    "embedded_assets_byte_identical": 126,
+    "map_previews_embedded_exact": 11,
+    "font_embedded_exact": true,
+    "bundle_embedded_exact": true,
+    "third_party_notices_preserved": true
+  },
+  "known_failed_check": {
+    "script": "tools/audit_runtime_payload.py",
+    "reason": "Unchanged audit rejects preserved CC0 grant metadata in unchanged CaptureDriverMobile.glb; no licence metadata was stripped."
+  },
+  "not_run": [
+    "Physical phone",
+    "Safari",
+    "Human audio listening",
+    "Genuine new-player observations",
+    "Long-session mobile thermals",
+    "Live deployment verification"
+  ],
+  "remaining_scope": [
+    "Consistent vegetation, terrain detail, varied facades and surface material quality across all destinations.",
+    "Police encounter variation and scenery-aware pedestrian staging; current car-clear paths have no full scenery navmesh.",
+    "Race/challenge/reward and replay balance through actual player observations.",
+    "Onboarding and further HUD/touch clarity review while preserving approved screens.",
+    "Broader grip/drift/collision feel evaluation, human listening, phone/Safari and real new-player playtesting."
+  ],
+  "rating": "No 9/10 or photorealism claim; 23 markers do not complete environment quality."
+}

@@ -1,0 +1,924 @@
+{
+  "status": "PASS",
+  "baseline_source_archive_sha256": "a674eeeeb551ca9405931fbd0d2bffaf5462fde663dcdcf7d5b48de265ebdf58",
+  "unchanged_runtime_paths": 182,
+  "unique_source_files": 180,
+  "excluded_reviewed_sources": [
+    "deployment/release.json",
+    "web/src/capture-materials.js",
+    "web/src/scene.js",
+    "web/src/story.js"
+  ],
+  "checked": [
+    {
+      "public_path": "LICENSES.md",
+      "source_path": "LICENSES.md",
+      "sha256": "759a2792ba079ca3bef2109ffd1569d886c94b622f4b802dd39e1cb6e65c6461"
+    },
+    {
+      "public_path": "index.html",
+      "source_path": "web/index.html",
+      "sha256": "2e59c0de708d23dbbd348235c62234431045a2824b22582979e1f30a4ad7191e"
+    },
+    {
+      "public_path": "licenses/OFL.txt",
+      "source_path": "web/public/assets/fonts/OFL.txt",
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "public_path": "licenses/THREE_LICENSE.txt",
+      "source_path": "web/public/vendor/THREE_LICENSE.txt",
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+    },
+    {
+      "public_path": "public/assets/ArcadeBoostNozzle.glb",
+      "source_path": "web/public/assets/ArcadeBoostNozzle.glb",
+      "sha256": "e8abbd20c0f3f58aa19362a46e24a3304d3c489cad0ded8a748eb45a58e7373a"
+    },
+    {
+      "public_path": "public/assets/ArcadeCoin.glb",
+      "source_path": "web/public/assets/ArcadeCoin.glb",
+      "sha256": "f8bc943f206e8d65df4b76ce7e3bdf682b4ea8d4262cca739994e3822bb8219d"
+    },
+    {
+      "public_path": "public/assets/BeachSandPatch.glb",
+      "source_path": "web/public/assets/BeachSandPatch.glb",
+      "sha256": "e245aeb570e66e2b102a87ebada2875088405d15f1b6ad6272d83e01e27786a6"
+    },
+    {
+      "public_path": "public/assets/BirdRockLookout.glb",
+      "source_path": "web/public/assets/BirdRockLookout.glb",
+      "sha256": "fc56f83750391acd9130c1ff6fb174863c53d617faf176bbe90ec755a9936c29"
+    },
+    {
+      "public_path": "public/assets/CanalRainTree.glb",
+      "source_path": "web/public/assets/CanalRainTree.glb",
+      "sha256": "eeeb6fa9b3daa71a96544b8509e83bd41da156da0c50697ea232d0d048c7840c"
+    },
+    {
+      "public_path": "public/assets/CanalRainTreeFar.glb",
+      "source_path": "web/public/assets/CanalRainTreeFar.glb",
+      "sha256": "03514da6bf2bde6a411a96447087eb5dc77c050fd409792773023b3e68207b83"
+    },
+    {
+      "public_path": "public/assets/CanalShikara.glb",
+      "source_path": "web/public/assets/CanalShikara.glb",
+      "sha256": "2b4dc502eb3556a9a242843b08e1296903bd2d0c20a20584ebfb1eeebbc01f9d"
+    },
+    {
+      "public_path": "public/assets/CaptureDriverMobile.glb",
+      "source_path": "web/public/assets/CaptureDriverMobile.glb",
+      "sha256": "eeee87ac5389a043c858c5b2e6f29c625c95fd759cf8d6bb7eed0076127507b7"
+    },
+    {
+      "public_path": "public/assets/CaptureDriverNear.glb",
+      "source_path": "web/public/assets/CaptureDriverNear.glb",
+      "sha256": "6c1f70a57a5bf503f2e1a635a0da26f521901fed1dfe450cc26f164fde5ec514"
+    },
+    {
+      "public_path": "public/assets/CaptureOfficerMobile.glb",
+      "source_path": "web/public/assets/CaptureOfficerMobile.glb",
+      "sha256": "5f35e80edb380e8a8d6e4a5501b15ee4fb724a9835ab6b78c3c7e9ebd46336ec"
+    },
+    {
+      "public_path": "public/assets/CaptureOfficerNear.glb",
+      "source_path": "web/public/assets/CaptureOfficerNear.glb",
+      "sha256": "527dea00518b96194b778f230ad748701dad8ecf813c885d06c10b564d01fdd9"
+    },
+    {
+      "public_path": "public/assets/CheckpointGate.glb",
+      "source_path": "web/public/assets/CheckpointGate.glb",
+      "sha256": "ec6cac7fd5719511c55cb9486e203259706b278adf4415f03e489912c24ea5eb"
+    },
+    {
+      "public_path": "public/assets/CheckpointGate_manifest.json",
+      "source_path": "web/public/assets/CheckpointGate_manifest.json",
+      "sha256": "e975931a99c9f84cea48cebfecc28b3fcf47e935c83d075e03035d911db98f48"
+    },
+    {
+      "public_path": "public/assets/ChineseFishingNet.glb",
+      "source_path": "web/public/assets/ChineseFishingNet.glb",
+      "sha256": "06bd5c254021ea19de75425a1bd9a04bf2fc1188b629df917ed29dd0438966da"
+    },
+    {
+      "public_path": "public/assets/Coast_AirtimeRamp.glb",
+      "source_path": "web/public/assets/Coast_AirtimeRamp.glb",
+      "sha256": "2f7e266c7e06462e0fcdd411425417ae7f508fc79cd989740cfd1b824fd13663"
+    },
+    {
+      "public_path": "public/assets/CoconutPalm_A.glb",
+      "source_path": "web/public/assets/CoconutPalm_A.glb",
+      "sha256": "951687c70bf508edd8ce8e18a92dfaf940f1c4f812a58a85342a29787450b756"
+    },
+    {
+      "public_path": "public/assets/CoconutPalm_A_LOD1.glb",
+      "source_path": "web/public/assets/CoconutPalm_A_LOD1.glb",
+      "sha256": "0e1a429bcf97354b8e75bd89f6391c4f79b773232abf7a09685535ce1889b2c0"
+    },
+    {
+      "public_path": "public/assets/CoconutPalm_B.glb",
+      "source_path": "web/public/assets/CoconutPalm_B.glb",
+      "sha256": "194f42c0bd580d560f161fcc212653c811f742846e2916af973ae60638c97929"
+    },
+    {
+      "public_path": "public/assets/CoconutPalm_B_LOD1.glb",
+      "source_path": "web/public/assets/CoconutPalm_B_LOD1.glb",
+      "sha256": "1877656fb8483aff4f5e24fbd57dbaa7b42282026142121ef3f441074620aa08"
+    },
+    {
+      "public_path": "public/assets/Course_Furniture.glb",
+      "source_path": "web/public/assets/Course_Furniture.glb",
+      "sha256": "d669e76ebdb97d0c7d54afbd22120ad0691e3f42e349357adb419a08eea0b419"
+    },
+    {
+      "public_path": "public/assets/Course_Road.glb",
+      "source_path": "web/public/assets/Course_Road.glb",
+      "sha256": "b738a94a13a3092f1bb3f38692d7095b5ebf2d3b806d49e4f83d72d14768d0d4"
+    },
+    {
+      "public_path": "public/assets/Course_Terrain.glb",
+      "source_path": "web/public/assets/Course_Terrain.glb",
+      "sha256": "8316812e396a0037f31e8939c2b032f62f3baed2ade821aa9c0fb579a1751ef5"
+    },
+    {
+      "public_path": "public/assets/Course_Water.glb",
+      "source_path": "web/public/assets/Course_Water.glb",
+      "sha256": "56cad4032793fff548f7512cb9e60c45b2eabb0cc18b79643fa20ffe03870678"
+    },
+    {
+      "public_path": "public/assets/FishingBoat.glb",
+      "source_path": "web/public/assets/FishingBoat.glb",
+      "sha256": "5f2324b7d85b119c6be6075aceba39a60a8d01d300fb72b33c3bc2fcf5a06815"
+    },
+    {
+      "public_path": "public/assets/HighlandGateway.glb",
+      "source_path": "web/public/assets/HighlandGateway.glb",
+      "sha256": "ae28c1b8aa25caa114394f1521b233137b3e93db6a8d669fcd9b810d45d6727b"
+    },
+    {
+      "public_path": "public/assets/HighlandShadeTree.glb",
+      "source_path": "web/public/assets/HighlandShadeTree.glb",
+      "sha256": "d296a0d3bbee7882d416692cfddb16db8d5358b678ad1273aaf865ba5547d887"
+    },
+    {
+      "public_path": "public/assets/HighlandShadeTreeNear.glb",
+      "source_path": "web/public/assets/HighlandShadeTreeNear.glb",
+      "sha256": "bc3424361b0a3c9049d28d7ef87f0faa892f38de99b110f8b14dc3659f20b640"
+    },
+    {
+      "public_path": "public/assets/Highland_AirtimeRamp.glb",
+      "source_path": "web/public/assets/Highland_AirtimeRamp.glb",
+      "sha256": "aff8209e164208548b2a20354da49938508a9fbf3c10b669cc9b76a5ffb48c8d"
+    },
+    {
+      "public_path": "public/assets/Highlands_Furniture.glb",
+      "source_path": "web/public/assets/Highlands_Furniture.glb",
+      "sha256": "cf42589d69f7f84dada88aeb114bf14444b4e4fef86e430e9c29d7a6e7ccb33a"
+    },
+    {
+      "public_path": "public/assets/Highlands_Road.glb",
+      "source_path": "web/public/assets/Highlands_Road.glb",
+      "sha256": "3d16cf6fb9258002e81b35015beca7fe5195a2324a3e7114360acdb6a13bffd1"
+    },
+    {
+      "public_path": "public/assets/Highlands_Tea.glb",
+      "source_path": "web/public/assets/Highlands_Tea.glb",
+      "sha256": "776d39a52fe9a44d439ee58bf117f5d763a5bbb0041ba7bb5c556bf08622fbdc"
+    },
+    {
+      "public_path": "public/assets/Highlands_Terrain.glb",
+      "source_path": "web/public/assets/Highlands_Terrain.glb",
+      "sha256": "72485921b4ec72da499fc1d2b0bdda8ebac5678d2ad92c4574d93c0e3a9ad5c8"
+    },
+    {
+      "public_path": "public/assets/KeralaApartment_A.glb",
+      "source_path": "web/public/assets/KeralaApartment_A.glb",
+      "sha256": "69513c6040528422e9ac31004c1186d539059a5184dc90ee8a26d374ccc046e6"
+    },
+    {
+      "public_path": "public/assets/KeralaHouse.glb",
+      "source_path": "web/public/assets/KeralaHouse.glb",
+      "sha256": "ac29c493be0079ae4fa548dcbb14e29e9f7d262b0341826b98fb030f84178eef"
+    },
+    {
+      "public_path": "public/assets/KeralaHouseboat.glb",
+      "source_path": "web/public/assets/KeralaHouseboat.glb",
+      "sha256": "2153db39d79b9738f7c5dfb0caa79a9e2d92ccdec6ffa415354de2ce791f54b5"
+    },
+    {
+      "public_path": "public/assets/KeralaOffice_A.glb",
+      "source_path": "web/public/assets/KeralaOffice_A.glb",
+      "sha256": "d05616e4d0d35fb804d8502f3e02298b03aba52e8dba9b9e4b65297a0f807756"
+    },
+    {
+      "public_path": "public/assets/KeralaShopRow_A.glb",
+      "source_path": "web/public/assets/KeralaShopRow_A.glb",
+      "sha256": "a44bb678067c14b0184426f0b546dbddc8155dced337805c41308e5f8b20b819"
+    },
+    {
+      "public_path": "public/assets/KeralaShopRow_B.glb",
+      "source_path": "web/public/assets/KeralaShopRow_B.glb",
+      "sha256": "3c4184ea08cdf010b19260bc21c340c8d4d66f534d6844089f59ac60d37556da"
+    },
+    {
+      "public_path": "public/assets/KeralaTeaStall.glb",
+      "source_path": "web/public/assets/KeralaTeaStall.glb",
+      "sha256": "2897ac5ced8aac9ebbd583ae70bceb4bec3560a99b6b87fc600e777bf1caf8c0"
+    },
+    {
+      "public_path": "public/assets/MetroStation.glb",
+      "source_path": "web/public/assets/MetroStation.glb",
+      "sha256": "bbfaf1e07ef93750ee8e2264294b900cd262b7b977d2a318931625d81698cf45"
+    },
+    {
+      "public_path": "public/assets/MetroViaductSpan.glb",
+      "source_path": "web/public/assets/MetroViaductSpan.glb",
+      "sha256": "e926f137d5f9f7442bdd75672a5827714b737aa3ba846195bec2787156eee517"
+    },
+    {
+      "public_path": "public/assets/OceanPatch.glb",
+      "source_path": "web/public/assets/OceanPatch.glb",
+      "sha256": "823886f06af807fb3d63155d3c9073d7aa36a9b3e5694f109812aa338bec4f33"
+    },
+    {
+      "public_path": "public/assets/PromenadeSegment.glb",
+      "source_path": "web/public/assets/PromenadeSegment.glb",
+      "sha256": "69ff431f082bb13908106ee7e23da458bf2017b039aa2e5eea0b8ce249680e55"
+    },
+    {
+      "public_path": "public/assets/RoadReflector.glb",
+      "source_path": "web/public/assets/RoadReflector.glb",
+      "sha256": "af64fdca0e4fe52a03a8efc6444cc114675fb290b60f0fff24891e8c1ea914fa"
+    },
+    {
+      "public_path": "public/assets/RoadSegment.glb",
+      "source_path": "web/public/assets/RoadSegment.glb",
+      "sha256": "c30b0208c4d39ce72f00de222fb8e8cf749ff109733acac8cbd9477c86c3ccc1"
+    },
+    {
+      "public_path": "public/assets/RouteEndMarker.glb",
+      "source_path": "web/public/assets/RouteEndMarker.glb",
+      "sha256": "f4e90d1d2c76bf09164ae55f5843ab9db37dce838506c8b3236d5d957c2c4faa"
+    },
+    {
+      "public_path": "public/assets/SeaWallRock.glb",
+      "source_path": "web/public/assets/SeaWallRock.glb",
+      "sha256": "4ce4fd41e4db6a30b7192b6e82e2cf395ca4760af5eb7b774d218d7d9c261bf1"
+    },
+    {
+      "public_path": "public/assets/ServiceShowroomBay.glb",
+      "source_path": "web/public/assets/ServiceShowroomBay.glb",
+      "sha256": "6b32547cd521f44f50956281aa8cb82eb6448f00321e29937bde9352488e9bc9"
+    },
+    {
+      "public_path": "public/assets/ServiceShowroomLoft.glb",
+      "source_path": "web/public/assets/ServiceShowroomLoft.glb",
+      "sha256": "c456852c1ea395381f133777affc2c1685938b2d434c02b191cc2da19b2b0fef"
+    },
+    {
+      "public_path": "public/assets/SideStreetSegment.glb",
+      "source_path": "web/public/assets/SideStreetSegment.glb",
+      "sha256": "1506de80718b9e26a4ec61d89afabda8de32ca896c766761fcea7df47e0c2283"
+    },
+    {
+      "public_path": "public/assets/SimReadyCrateFar.glb",
+      "source_path": "web/public/assets/SimReadyCrateFar.glb",
+      "sha256": "98f383bb706dbecf24753b8f31776bb724fee879dbff7bfc2945a6d5b3ff3387"
+    },
+    {
+      "public_path": "public/assets/SimReadyCrateNear.glb",
+      "source_path": "web/public/assets/SimReadyCrateNear.glb",
+      "sha256": "e38a0190a9347eba30a6e3e8067efb02c047806092f93a6cb4577df418ac0802"
+    },
+    {
+      "public_path": "public/assets/SimReadyFenceFar.glb",
+      "source_path": "web/public/assets/SimReadyFenceFar.glb",
+      "sha256": "6f29d23f1de778ee62c84569503e1c37cd828564d96f3451fb4d333f9169c89d"
+    },
+    {
+      "public_path": "public/assets/SimReadyFenceNear.glb",
+      "source_path": "web/public/assets/SimReadyFenceNear.glb",
+      "sha256": "108c63500092493a4a511408fa29e8a325663a2b4a54c7b31ca93b4807789e8c"
+    },
+    {
+      "public_path": "public/assets/Streetlight.glb",
+      "source_path": "web/public/assets/Streetlight.glb",
+      "sha256": "0893ae036935c10039743600f68bd1c4e512df9a33a857f31daa7dee548172be"
+    },
+    {
+      "public_path": "public/assets/SurfaceTest_Furniture.glb",
+      "source_path": "web/public/assets/SurfaceTest_Furniture.glb",
+      "sha256": "e611235f5684b58a89a4ffd6cf479b588e59b6aebba77175e3ad23b3b26c5a2d"
+    },
+    {
+      "public_path": "public/assets/SurfaceTest_Road.glb",
+      "source_path": "web/public/assets/SurfaceTest_Road.glb",
+      "sha256": "00d67f1151c0dd16c2a3cec3158360eb3a1de64f06e26f322b1ecdd153c09f32"
+    },
+    {
+      "public_path": "public/assets/SurfaceTest_Terrain.glb",
+      "source_path": "web/public/assets/SurfaceTest_Terrain.glb",
+      "sha256": "20069b8e413772d274354669047d2947884129ca8f57484376430bd3aaf31986"
+    },
+    {
+      "public_path": "public/assets/TeaLeafCluster.glb",
+      "source_path": "web/public/assets/TeaLeafCluster.glb",
+      "sha256": "2331f29f75e1ad9e3ef7cabc0e3c2321bed9628a919feef1961abe985d33eed6"
+    },
+    {
+      "public_path": "public/assets/TropicalGrass.glb",
+      "source_path": "web/public/assets/TropicalGrass.glb",
+      "sha256": "1b0baf9d212e943943ad7391a4cf6d876e298b881c1d2cbbd1e560687bf91e01"
+    },
+    {
+      "public_path": "public/assets/WaterTransitTerminal.glb",
+      "source_path": "web/public/assets/WaterTransitTerminal.glb",
+      "sha256": "c7cf660eb9714723f8324092d5a3185c910e2805cd335b212de482a1081cdebf"
+    },
+    {
+      "public_path": "public/assets/boost_nozzle_manifest.json",
+      "source_path": "web/public/assets/boost_nozzle_manifest.json",
+      "sha256": "be36d71ef98519363ddb89fb257cecf05f90d5c0ed84e409e8ce01c7b573ac6f"
+    },
+    {
+      "public_path": "public/assets/canal_far_manifest.json",
+      "source_path": "web/public/assets/canal_far_manifest.json",
+      "sha256": "3b2c74b10b31a8d8b1ebceae1bb5f87855ca6818b05ea53d7a7542f7b437a39e"
+    },
+    {
+      "public_path": "public/assets/capture-lod-manifest.json",
+      "source_path": "web/public/assets/capture-lod-manifest.json",
+      "sha256": "38822c637855a1be77b9e58225b921bebd3a00e5c61b2c038d5ccd36461de0d9"
+    },
+    {
+      "public_path": "public/assets/car.glb",
+      "source_path": "web/public/assets/car.glb",
+      "sha256": "4a8b5f4fe463822c9641b48f68233bdb12bea75a37368200c5c164277b2a6bc9"
+    },
+    {
+      "public_path": "public/assets/car_bronze.glb",
+      "source_path": "web/public/assets/car_bronze.glb",
+      "sha256": "7d18612a3a01c4cbbbbe2cbc6a61a671efeec152c71a0427591c967f8a3dba0c"
+    },
+    {
+      "public_path": "public/assets/car_manifest.json",
+      "source_path": "web/public/assets/car_manifest.json",
+      "sha256": "a1cf2aae4798254f5e3c1c6c163a5634a5806c7772d3f69cc4ce1db85c26988c"
+    },
+    {
+      "public_path": "public/assets/car_midnight.glb",
+      "source_path": "web/public/assets/car_midnight.glb",
+      "sha256": "9ad5087a889163b3dfb4f310cd0a10dbaf8b8fc7f8a6e7a9b9a48efad6a5cf00"
+    },
+    {
+      "public_path": "public/assets/car_midnight_manifest.json",
+      "source_path": "web/public/assets/car_midnight_manifest.json",
+      "sha256": "749a49aa882da135658d6819b59b89e9daf2f649af775ae5404845bf0a2bb734"
+    },
+    {
+      "public_path": "public/assets/car_silver.glb",
+      "source_path": "web/public/assets/car_silver.glb",
+      "sha256": "5a9cfbd45b85378bbacabd6a191556cb2b6ce950e6fdb5b1d9ac4cbe0d0b192f"
+    },
+    {
+      "public_path": "public/assets/car_silver_manifest.json",
+      "source_path": "web/public/assets/car_silver_manifest.json",
+      "sha256": "6a091dc60b722ca7fcc41e373695250a9cb4875d2a0fb20dc2542a657269b75d"
+    },
+    {
+      "public_path": "public/assets/car_thumb_bronze.png",
+      "source_path": "web/public/assets/car_thumb_bronze.png",
+      "sha256": "51a4ab6f0cee153ab4f2c11237a4a07c3aceac8475fd2804e862c78aa6035b4f"
+    },
+    {
+      "public_path": "public/assets/car_thumb_midnight.png",
+      "source_path": "web/public/assets/car_thumb_midnight.png",
+      "sha256": "7347d107391a230c8a11e01cc48d0fde86d1c03fd307f7bbe3e6617e717df4ae"
+    },
+    {
+      "public_path": "public/assets/car_thumb_red.png",
+      "source_path": "web/public/assets/car_thumb_red.png",
+      "sha256": "2568e2b053637b1b76155cf4956f36815366db8b7d7f4e0f42a0c764d5d5356c"
+    },
+    {
+      "public_path": "public/assets/car_thumb_silver.png",
+      "source_path": "web/public/assets/car_thumb_silver.png",
+      "sha256": "83fd0745355fbbb4d2fe13bae308464ddb3fb6255dfa10fb7fa8bf86391e16c2"
+    },
+    {
+      "public_path": "public/assets/car_thumb_touring.png",
+      "source_path": "web/public/assets/car_thumb_touring.png",
+      "sha256": "d2b128c488340110ab8c58624352a49a89afdf4fed8af7a2f671e61a82569617"
+    },
+    {
+      "public_path": "public/assets/car_thumb_verdant.png",
+      "source_path": "web/public/assets/car_thumb_verdant.png",
+      "sha256": "cf69c2e16656c42e04dd8debc492db896ca58155f61a2f1d5e9efc28cb059a3e"
+    },
+    {
+      "public_path": "public/assets/car_thumb_vermilion.png",
+      "source_path": "web/public/assets/car_thumb_vermilion.png",
+      "sha256": "196827a272434fc89b16166ab59dd75d5a846f704edaf520780d3f66160a4571"
+    },
+    {
+      "public_path": "public/assets/car_touring.glb",
+      "source_path": "web/public/assets/car_touring.glb",
+      "sha256": "dc6d4bc67ad61ef7c9f74ce4f5e92bf64cf491373c19b75b998a8ccc889bc8d7"
+    },
+    {
+      "public_path": "public/assets/car_verdant.glb",
+      "source_path": "web/public/assets/car_verdant.glb",
+      "sha256": "3673317b5c67c99dab5c8797de58ab3431af2edb13b393e70110c49903175b29"
+    },
+    {
+      "public_path": "public/assets/car_vermilion.glb",
+      "source_path": "web/public/assets/car_vermilion.glb",
+      "sha256": "dd0b4111fd14951c995365dd89ed0adf5ee5857dabcfd84ccc864d27d34f9efe"
+    },
+    {
+      "public_path": "public/assets/coast_metro_train.glb",
+      "source_path": "web/public/assets/coast_metro_train.glb",
+      "sha256": "328cef4fe7116c07ab59b80acc44357702b0273bde1a44a666858d43af7ee8d8"
+    },
+    {
+      "public_path": "public/assets/coastal_map_data.json",
+      "source_path": "web/public/assets/coastal_map_data.json",
+      "sha256": "6c1e134884013b8663ca1564cfb7d523621893c104dccc205248353d8086cf1c"
+    },
+    {
+      "public_path": "public/assets/course_runtime.json",
+      "source_path": "web/public/assets/course_runtime.json",
+      "sha256": "3c327a4ca3445d2dbf583168dc06162e2c18c80f6093394d00e98d9bac07aed6"
+    },
+    {
+      "public_path": "public/assets/course_runtime_highlands.json",
+      "source_path": "web/public/assets/course_runtime_highlands.json",
+      "sha256": "1e395296596d5053716cff73ebffbff64b1466cc32ec50351685667aad50b225"
+    },
+    {
+      "public_path": "public/assets/course_runtime_surface_test.json",
+      "source_path": "web/public/assets/course_runtime_surface_test.json",
+      "sha256": "697cf6b2065d7490a269e511bd75beb0ccad296e9fc4467f459f2659cc9bf671"
+    },
+    {
+      "public_path": "public/assets/environment_web_manifest.json",
+      "source_path": "web/public/assets/environment_web_manifest.json",
+      "sha256": "0fcb86cc5622f352e34252f478ebcea0514eeb381d0d7054c46c5aecad21e730"
+    },
+    {
+      "public_path": "public/assets/foliage_detail_manifest.json",
+      "source_path": "web/public/assets/foliage_detail_manifest.json",
+      "sha256": "d797a6c4c731e169e40e8af28e678825f9fde4b3b7fd02643857390d55a2bc6b"
+    },
+    {
+      "public_path": "public/assets/fonts/OFL.txt",
+      "source_path": "web/public/assets/fonts/OFL.txt",
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "public_path": "public/assets/fonts/display.ttf",
+      "source_path": "web/public/assets/fonts/display.ttf",
+      "sha256": "e1ed5d7e50c6a4498454d40509ce2362384a2c7870df3418fdbd010f81dffad3"
+    },
+    {
+      "public_path": "public/assets/furniture_colliders.json",
+      "source_path": "web/public/assets/furniture_colliders.json",
+      "sha256": "8b2b2f8823fb79fc0407437f1c34f3f4e59ddaa1964ddb5d85978006b52e7611"
+    },
+    {
+      "public_path": "public/assets/gameplay_props_manifest.json",
+      "source_path": "web/public/assets/gameplay_props_manifest.json",
+      "sha256": "02091b460c8a9da54577102f1769c75869bbfe04ee09de03c14cf832fd65d63b"
+    },
+    {
+      "public_path": "public/assets/helicopter_civilian.glb",
+      "source_path": "web/public/assets/helicopter_civilian.glb",
+      "sha256": "4531ce2759904352ed0ee4f976c5ddaaeb5a49073789ca588b0838c4d95a022b"
+    },
+    {
+      "public_path": "public/assets/helicopter_civilian_manifest.json",
+      "source_path": "web/public/assets/helicopter_civilian_manifest.json",
+      "sha256": "e3f5fbb778b85fadb653f563e9072102dfa9978a2d26713b9d353793d88aad26"
+    },
+    {
+      "public_path": "public/assets/helicopter_kit_manifest.json",
+      "source_path": "web/public/assets/helicopter_kit_manifest.json",
+      "sha256": "8348804b4ce6a25a3230e4a50b93517c5561a3d12f0c923c83a88aaad42aa093"
+    },
+    {
+      "public_path": "public/assets/helicopter_police.glb",
+      "source_path": "web/public/assets/helicopter_police.glb",
+      "sha256": "7f8cdcb032c8f1f9fb08fc19a5b785b2957596aae7532bc7cc84d7e9f96b999b"
+    },
+    {
+      "public_path": "public/assets/helicopter_police_manifest.json",
+      "source_path": "web/public/assets/helicopter_police_manifest.json",
+      "sha256": "c1d1c1c64a899b9f6a755609d3f5e3403d6ffe513fdbde156a1e08bc65c1a4ce"
+    },
+    {
+      "public_path": "public/assets/helicopter_rotor_blur.glb",
+      "source_path": "web/public/assets/helicopter_rotor_blur.glb",
+      "sha256": "6bd44d31943050364b82f882bac602c29cc613a46923d7b2a9300c75be38e127"
+    },
+    {
+      "public_path": "public/assets/helicopter_rotor_blur_manifest.json",
+      "source_path": "web/public/assets/helicopter_rotor_blur_manifest.json",
+      "sha256": "1b4f5c4be27c78ea393d5e3f1825a3f2b9b40c7dd8d2358d3cba8270c09d4b4b"
+    },
+    {
+      "public_path": "public/assets/highland_prop_manifest.json",
+      "source_path": "web/public/assets/highland_prop_manifest.json",
+      "sha256": "19a3f9db9c6ec5560c4abb06a15fd8e5f7a551f54081615f4ef4619644ee7e55"
+    },
+    {
+      "public_path": "public/assets/highlands_furniture_colliders.json",
+      "source_path": "web/public/assets/highlands_furniture_colliders.json",
+      "sha256": "037b9ebc166d6f56d2cc5a665f7943f42d69934dfbf37ce3ea8dd4d645722d90"
+    },
+    {
+      "public_path": "public/assets/highlands_infrastructure_colliders.json",
+      "source_path": "web/public/assets/highlands_infrastructure_colliders.json",
+      "sha256": "4a9f3d72101cac639fdba0583eabe4cfa05e4b9501553b2ef90b7eef2b3c0975"
+    },
+    {
+      "public_path": "public/assets/highlands_manifest.json",
+      "source_path": "web/public/assets/highlands_manifest.json",
+      "sha256": "e7d50b09e73a2fe88fec881d6354e9778d1293df5c9940ec642094b9fa3e626b"
+    },
+    {
+      "public_path": "public/assets/highlands_terrain_grid.json",
+      "source_path": "web/public/assets/highlands_terrain_grid.json",
+      "sha256": "4d23bd2b1a7fcf26883298c3c5791fec71d44f52d90b38b2270c753ce891e52b"
+    },
+    {
+      "public_path": "public/assets/houseboat_manifest.json",
+      "source_path": "web/public/assets/houseboat_manifest.json",
+      "sha256": "5ad733c820dccf52674b3681af392ae9970b6e0d6150a30953166c58daa1e8d7"
+    },
+    {
+      "public_path": "public/assets/infrastructure_colliders.json",
+      "source_path": "web/public/assets/infrastructure_colliders.json",
+      "sha256": "3c215a328892a445ac36ddf00eec7684bec63d682fb08efe887c317ef477ff48"
+    },
+    {
+      "public_path": "public/assets/map-previews/bird-rock.png",
+      "source_path": "web/public/assets/map-previews/bird-rock.png",
+      "sha256": "9551660b0b7e1e3b65333a1446ff4093646ddfc139c30c7580506b4fef0029e5"
+    },
+    {
+      "public_path": "public/assets/map-previews/canal-garden.png",
+      "source_path": "web/public/assets/map-previews/canal-garden.png",
+      "sha256": "76c23738b918a726d11690662112b68f22a29c94a5989d244b27ab09a3626315"
+    },
+    {
+      "public_path": "public/assets/map-previews/coastal-villages.png",
+      "source_path": "web/public/assets/map-previews/coastal-villages.png",
+      "sha256": "754d6f50ddf9f9ee2d767499ffb973864f8fed101fcdf4bbaad468685400d368"
+    },
+    {
+      "public_path": "public/assets/map-previews/divided-highway.png",
+      "source_path": "web/public/assets/map-previews/divided-highway.png",
+      "sha256": "753028ef16fb0e74b4bee7b221e16725a092f39089e94521fccfb214ed1fac54"
+    },
+    {
+      "public_path": "public/assets/map-previews/estate-switchbacks.png",
+      "source_path": "web/public/assets/map-previews/estate-switchbacks.png",
+      "sha256": "429a710b20fe5a3f02d357e03429699cf851d26f4c16c70d258f510b7bbf9a0d"
+    },
+    {
+      "public_path": "public/assets/map-previews/harbour-avenue.png",
+      "source_path": "web/public/assets/map-previews/harbour-avenue.png",
+      "sha256": "34f2e89815d2efec46571815572c0bad647d903d0e6cccf995d52baac66e5cc0"
+    },
+    {
+      "public_path": "public/assets/map-previews/harbour-wall-run.png",
+      "source_path": "web/public/assets/map-previews/harbour-wall-run.png",
+      "sha256": "5032871b0634b6f251c06ff286b5cfa9c445ddad1097fcaed7f667d72913cd90"
+    },
+    {
+      "public_path": "public/assets/map-previews/metro-market.png",
+      "source_path": "web/public/assets/map-previews/metro-market.png",
+      "sha256": "5cb3ad4f77912cb065cbd4505f87ed7a0cb5818fbaa59b5da3629666e18ae6b9"
+    },
+    {
+      "public_path": "public/assets/map-previews/provenance.json",
+      "source_path": "web/public/assets/map-previews/provenance.json",
+      "sha256": "909b505aa617e77f4044bd7108cde4f34f6c70f46a1483a5ca2c6ecb852ab398"
+    },
+    {
+      "public_path": "public/assets/map-previews/skyline-flyover.png",
+      "source_path": "web/public/assets/map-previews/skyline-flyover.png",
+      "sha256": "1235cf2137b4d6abc864df12c7ed3ebd7c929f9010dee49d7bafd9500059505f"
+    },
+    {
+      "public_path": "public/assets/map-previews/tea-bends.png",
+      "source_path": "web/public/assets/map-previews/tea-bends.png",
+      "sha256": "c0d9658f8795ff65c7813a8eecc7a46a7d565d057ab7fe36800356720932319f"
+    },
+    {
+      "public_path": "public/assets/map-previews/water-transit.png",
+      "source_path": "web/public/assets/map-previews/water-transit.png",
+      "sha256": "11b1bd651f30bee6422f1229d63573b47e5c40a98b614f348d4f25f0db6869ef"
+    },
+    {
+      "public_path": "public/assets/police_lightbar.glb",
+      "source_path": "web/public/assets/police_lightbar.glb",
+      "sha256": "9c1ca73f4b5f110ac6a72a8b03d41c3504d922b96bc6c9cee5ba5b598865a10c"
+    },
+    {
+      "public_path": "public/assets/showroom_loft_manifest.json",
+      "source_path": "web/public/assets/showroom_loft_manifest.json",
+      "sha256": "56a802a36ccf5c876013a16fb28f270b7c99ab780e6e51cbcec23ef16b37f42c"
+    },
+    {
+      "public_path": "public/assets/showroom_manifest.json",
+      "source_path": "web/public/assets/showroom_manifest.json",
+      "sha256": "b053f48202df16a8a692a5b1aff33084e5a8f2808ea4d017187f4d5544fc8934"
+    },
+    {
+      "public_path": "public/assets/surface_test_colliders.json",
+      "source_path": "web/public/assets/surface_test_colliders.json",
+      "sha256": "153ef23c924feb3ea00427e3eb8c997b7c5e141ba5cf84b3562260f8d7009a55"
+    },
+    {
+      "public_path": "public/assets/surface_test_furniture_colliders.json",
+      "source_path": "web/public/assets/surface_test_furniture_colliders.json",
+      "sha256": "1f7a7ef979a25eb33e4d3d12276a5264484307c363ee5594dc747852c237a577"
+    },
+    {
+      "public_path": "public/assets/surface_test_profile.json",
+      "source_path": "web/public/assets/surface_test_profile.json",
+      "sha256": "4ff76000113099638215844dcae2f12cc634821895a05f9cdeffbda0b0f8e658"
+    },
+    {
+      "public_path": "public/assets/tea_detail_rows.json",
+      "source_path": "web/public/assets/tea_detail_rows.json",
+      "sha256": "4b840eb67cd9ccdf8caac780bf84c66982a23251e96ca834cb658089cbbd2c1a"
+    },
+    {
+      "public_path": "public/assets/transit_infrastructure_manifest.json",
+      "source_path": "web/public/assets/transit_infrastructure_manifest.json",
+      "sha256": "7b37fb1794fa4891d8a2f1c01d219b9964893807036b4bdfe241b60395911cc8"
+    },
+    {
+      "public_path": "public/assets/transit_vehicle_manifest.json",
+      "source_path": "web/public/assets/transit_vehicle_manifest.json",
+      "sha256": "d436ee11a86021300df43b2dcca29002c091e21dd06a8ec10ad486b413038524"
+    },
+    {
+      "public_path": "public/assets/urban_assets_manifest.json",
+      "source_path": "web/public/assets/urban_assets_manifest.json",
+      "sha256": "0dc9557f19f9d8e8ca4baa0d77632c918c2df38523b9b0e8c9c6de3c4d955c17"
+    },
+    {
+      "public_path": "public/assets/water_transit_ferry.glb",
+      "source_path": "web/public/assets/water_transit_ferry.glb",
+      "sha256": "b160cffaacf1a753d144bc71fb6bbfbcb749d585855fdcce9a6c6a185f0904c2"
+    },
+    {
+      "public_path": "public/licenses/MAKEHUMAN_CC0.txt",
+      "source_path": "web/public/licenses/MAKEHUMAN_CC0.txt",
+      "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c"
+    },
+    {
+      "public_path": "public/licenses/NVIDIA_CC_BY_4.txt",
+      "source_path": "web/public/licenses/NVIDIA_CC_BY_4.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "public_path": "public/vendor/THREE_LICENSE.txt",
+      "source_path": "web/public/vendor/THREE_LICENSE.txt",
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+    },
+    {
+      "public_path": "public/vendor/addons/environments/RoomEnvironment.js",
+      "source_path": "web/public/vendor/addons/environments/RoomEnvironment.js",
+      "sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014"
+    },
+    {
+      "public_path": "public/vendor/addons/loaders/GLTFLoader.js",
+      "source_path": "web/public/vendor/addons/loaders/GLTFLoader.js",
+      "sha256": "45139faddd5aaf48ed2d62203d976e5cbd703db1a592de40527f9f6cf58abd44"
+    },
+    {
+      "public_path": "public/vendor/addons/utils/BufferGeometryUtils.js",
+      "source_path": "web/public/vendor/addons/utils/BufferGeometryUtils.js",
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    },
+    {
+      "public_path": "public/vendor/addons/utils/SkeletonUtils.js",
+      "source_path": "web/public/vendor/addons/utils/SkeletonUtils.js",
+      "sha256": "ee412be1aa05f3051c2bda8ea89612c1ba70c5c87de62b56040282120d5eb991"
+    },
+    {
+      "public_path": "public/vendor/three.module.js",
+      "source_path": "web/public/vendor/three.module.js",
+      "sha256": "08fd7545d13d2c7fb65ab691530a802dafefd638596501854f267d0fb13c39e7"
+    },
+    {
+      "public_path": "src/air-traffic.js",
+      "source_path": "web/src/air-traffic.js",
+      "sha256": "3751b1a941a9ed7592fd305838095d7eaaf9fb8cf2dd15aea12b329dda7737f7"
+    },
+    {
+      "public_path": "src/airtime-rewards.js",
+      "source_path": "web/src/airtime-rewards.js",
+      "sha256": "73f619b5d9e048793a1f5087572cab2aeb514b669a73561cf8ae8571dfaf9b80"
+    },
+    {
+      "public_path": "src/audio.js",
+      "source_path": "web/src/audio.js",
+      "sha256": "e0b6ee0718d6169904c094e2b34eef99aed9c1915e24df412884936ce44849b2"
+    },
+    {
+      "public_path": "src/auto-drive.js",
+      "source_path": "web/src/auto-drive.js",
+      "sha256": "99cf4e6bc6463f41f2d35a346f9b6a4f1068ab2bc68c176ca61c7c30fa19690b"
+    },
+    {
+      "public_path": "src/boost-fire.js",
+      "source_path": "web/src/boost-fire.js",
+      "sha256": "5bb3009ca6ba451ffaf31ff99231427c3d0a762cd1987e245f6438a5b2f71c85"
+    },
+    {
+      "public_path": "src/capture-human.js",
+      "source_path": "web/src/capture-human.js",
+      "sha256": "571c66b38ee071b9a067d3cb587f58606f2472e06fd84746215fca1791f9b575"
+    },
+    {
+      "public_path": "src/cinematic-camera.js",
+      "source_path": "web/src/cinematic-camera.js",
+      "sha256": "cadd2815c1ad4bb1155d30b04a8e537cad57c56fe6e8906bc7dc16c196a747ea"
+    },
+    {
+      "public_path": "src/collectibles.js",
+      "source_path": "web/src/collectibles.js",
+      "sha256": "9dcf84d22f58a083fc262bee704bbb4b5692fdfb33a3d98af08e46fd78cac3e1"
+    },
+    {
+      "public_path": "src/curve-guides.js",
+      "source_path": "web/src/curve-guides.js",
+      "sha256": "7d29f19fe5180680e09b8e5f50fa02629632be7216c0c9be3c29103cd18f56b3"
+    },
+    {
+      "public_path": "src/detail-lod.js",
+      "source_path": "web/src/detail-lod.js",
+      "sha256": "b7f74f6850fd76454b22b7593452036f9e0b9a0f53de7fcc1d2b708d5a45bb9d"
+    },
+    {
+      "public_path": "src/driving-camera.js",
+      "source_path": "web/src/driving-camera.js",
+      "sha256": "1058ccad99b04c4d65d5d41776ddde800a960983093d1bb00f5786c1d4677670"
+    },
+    {
+      "public_path": "src/finish-fx.js",
+      "source_path": "web/src/finish-fx.js",
+      "sha256": "a8c11f92b406746c574a8b82bf1b031765e60ce5abe10c949bf2a789b8913f7c"
+    },
+    {
+      "public_path": "src/gameplay.js",
+      "source_path": "web/src/gameplay.js",
+      "sha256": "3492a036df080400cc7bf0eb63d2e1cce2675b617d8fdfa0af412b2bb08d44ed"
+    },
+    {
+      "public_path": "src/garage.js",
+      "source_path": "web/src/garage.js",
+      "sha256": "e971705a77df3f3d58f846ab8ff14a510ba17acc14249b65b0181e7f5f0ee6b6"
+    },
+    {
+      "public_path": "src/leaderboard-store.js",
+      "source_path": "web/src/leaderboard-store.js",
+      "sha256": "61ec5d277c59de1f10b759920e0d9597b487cf1314f98b446c57605b1d3906b2"
+    },
+    {
+      "public_path": "src/leaderboard.js",
+      "source_path": "web/src/leaderboard.js",
+      "sha256": "b8b7c0ee0a54d1a67b488036b3817ecbc276ca84e9409ec4437b9c49f6c247d9"
+    },
+    {
+      "public_path": "src/main.js",
+      "source_path": "web/src/main.js",
+      "sha256": "8eee2f7d386fdb39d904b10dfb9d8047ca68683a6dfacdd952f5ea37fd6225b8"
+    },
+    {
+      "public_path": "src/map-destinations.js",
+      "source_path": "web/src/map-destinations.js",
+      "sha256": "70b05a1c39d7e01a3a86693b6b7990f4608b092bc474a65011e38838f0d91701"
+    },
+    {
+      "public_path": "src/police-air-support.js",
+      "source_path": "web/src/police-air-support.js",
+      "sha256": "443c88e24d1450dd0a11aba522cda76394ee4182f18358e16ed4f1f537f61ef6"
+    },
+    {
+      "public_path": "src/police-capture-scene.js",
+      "source_path": "web/src/police-capture-scene.js",
+      "sha256": "4ec5b8f5dfc91259d329012e0762bdb079c39ce7c2f82438f1f1154a678276ef"
+    },
+    {
+      "public_path": "src/police-capture.js",
+      "source_path": "web/src/police-capture.js",
+      "sha256": "3678121e7eb45a26ae3acd3637977f4206bc9da8b0e229c535cdebbfb5262601"
+    },
+    {
+      "public_path": "src/profile-storage.js",
+      "source_path": "web/src/profile-storage.js",
+      "sha256": "31388e106082522905c832f3ba4db02345e55a0800fbdadd28b9948e48facb4d"
+    },
+    {
+      "public_path": "src/ramp-surfaces.js",
+      "source_path": "web/src/ramp-surfaces.js",
+      "sha256": "e3032720f52c0b13a02d1a757e48d1af67fe096c4b7ee428d35bf999137d2b19"
+    },
+    {
+      "public_path": "src/render-metrics.js",
+      "source_path": "web/src/render-metrics.js",
+      "sha256": "e0645ed661dacdd4e1beba7e75c4a5e562219edccf7fcaa8fa8f5e1f90e8083c"
+    },
+    {
+      "public_path": "src/road-lighting.js",
+      "source_path": "web/src/road-lighting.js",
+      "sha256": "d845d2c35fa10aed884231095b348ba40c130f7091d170daf042bd9d1513e222"
+    },
+    {
+      "public_path": "src/rotor-audio-targets.js",
+      "source_path": "web/src/rotor-audio-targets.js",
+      "sha256": "daf1f51b91ec9770a3a36917a13759a2ceca85428d743aeca7e71692ca8370ce"
+    },
+    {
+      "public_path": "src/showroom-reflector.js",
+      "source_path": "web/src/showroom-reflector.js",
+      "sha256": "ccbf620792e6a348ddbb7b38b4a9c3aa1eb38a11f33f493c70915333211ee2e8"
+    },
+    {
+      "public_path": "src/showroom-scene.js",
+      "source_path": "web/src/showroom-scene.js",
+      "sha256": "691d96f1c4a5f5d7365f1c475e78d82eaba742c39e123b09e44cc51a64585634"
+    },
+    {
+      "public_path": "src/simready-pilot.js",
+      "source_path": "web/src/simready-pilot.js",
+      "sha256": "d3fc1285c1164066f9bbf0c66d17680b525b149393593b39c35211dd60b126f6"
+    },
+    {
+      "public_path": "src/sound-preferences.js",
+      "source_path": "web/src/sound-preferences.js",
+      "sha256": "e45a0f944db26a4f8e634385a9a32d890aaedba575332de8ed11258dcb0156da"
+    },
+    {
+      "public_path": "src/story-store.js",
+      "source_path": "web/src/story-store.js",
+      "sha256": "d122f884a0724798eddf30ae311a58e8bdd4e349814319e6eb98a0e7c9d4252f"
+    },
+    {
+      "public_path": "src/stunt-model.js",
+      "source_path": "web/src/stunt-model.js",
+      "sha256": "499bb2cc905a816509dbc70e989bb84623cc381f698ef6ba7ab2ee489ec2920b"
+    },
+    {
+      "public_path": "src/style.css",
+      "source_path": "web/src/style.css",
+      "sha256": "25792042f22dee4abdc47aa130dd7e0f59f09434dfc522d943fe8f1bf1a4fadd"
+    },
+    {
+      "public_path": "src/surface-camera.js",
+      "source_path": "web/src/surface-camera.js",
+      "sha256": "f5297cabb6965c53a7d955b8d6519bbf83f5efe3c9b9b7a33be67ea5ec6fe3af"
+    },
+    {
+      "public_path": "src/surface-drive.js",
+      "source_path": "web/src/surface-drive.js",
+      "sha256": "05d9517e469778f572615c7816dd8dcd5bd08705c28c3759eb53f3261e785549"
+    },
+    {
+      "public_path": "src/surface-materials.js",
+      "source_path": "web/src/surface-materials.js",
+      "sha256": "e60bf4469e4436675308830f901e963504c3c0d86b69463fa4ba2f132f1556f0"
+    },
+    {
+      "public_path": "src/surface-ribbon.js",
+      "source_path": "web/src/surface-ribbon.js",
+      "sha256": "d3722764ee3a334cf00654f371d8e5405a9ba452cd5c59cc573301e811414780"
+    },
+    {
+      "public_path": "src/tea-placement.js",
+      "source_path": "web/src/tea-placement.js",
+      "sha256": "110799212574b2c42c976585f625d24ab59d0a5129cb5be2a0fafaa10e70d84f"
+    },
+    {
+      "public_path": "src/tracks.js",
+      "source_path": "web/src/tracks.js",
+      "sha256": "1fdf792479f5455fcd36bb75c544add8bd8019150506806e173f28f48a1dd6b7"
+    },
+    {
+      "public_path": "src/transit.js",
+      "source_path": "web/src/transit.js",
+      "sha256": "b89f7a545514b5f34b5a62d3f6f684d58aea30a714903adb7b2b3a28a095714d"
+    },
+    {
+      "public_path": "src/upgrade-visuals.js",
+      "source_path": "web/src/upgrade-visuals.js",
+      "sha256": "8d2b838796cdcbf577b706ddb80ced1cdfd4fed4e5dce8f05319bfaadeff90e3"
+    }
+  ]
+}

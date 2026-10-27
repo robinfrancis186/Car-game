@@ -1,0 +1,12 @@
+[
+  {
+    "viewport": "desktop",
+    "different_pixels": 0,
+    "total_pixels": 1296000
+  },
+  {
+    "viewport": "mobile",
+    "different_pixels": 0,
+    "total_pixels": 329160
+  }
+]

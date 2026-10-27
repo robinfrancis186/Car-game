@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "test": "web/tests/story-objective.test.mjs",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "test": "web/tests/story.test.mjs",
+      "exit": 0,
+      "seconds": 15.653
+    },
+    {
+      "test": "web/tests/story-store.test.mjs",
+      "exit": 0,
+      "seconds": 0.041
+    },
+    {
+      "test": "web/tests/story-controller.test.mjs",
+      "exit": 0,
+      "seconds": 1.321
+    },
+    {
+      "test": "web/tests/v16-1-scope.test.mjs",
+      "exit": 0,
+      "seconds": 1.133
+    },
+    {
+      "test": "tests/v17/preservation.test.mjs",
+      "exit": 0,
+      "seconds": 1.043
+    }
+  ],
+  "scope": "After recorded 66/66 aggregate: one Story objective sentence and exact preservation exception only; no scenery/physics/reward changes."
+}

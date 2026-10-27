@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "release": "V17 R3.11",
+  "source_base_commit": "cf619bf4de5905590848f2b1f5030541c0b76e6b",
+  "runtime_files_byte_identical_to_manifest_and_build": 187,
+  "exact_source_build_inventory": true,
+  "runtime_tree_sha256": "d207be6a4b3a70ed0977663e83c50eb6ebb55589efb08f8a38a4d6aa46ea234b",
+  "full_runtime_tree_sha256": "4dec85859db339409554119143658f1c5e46f044422a183f66593e658f1da226",
+  "manifest_sha256": "ff2a3a45d2ed77b0dc3a3de420d70028a209253a6b4a8391ec3d352f1180b9fa",
+  "release_sha256": "b585d13cda21269761f0f12d08aead420dbfb2b23b31e4684c537713cf025281",
+  "standalone_sha256": "6fbe5c3ff3f8e97198ccdcb82b7f2a605c416deac910e5cd4338480694cb1690",
+  "unchanged_r310_runtime_paths": 182,
+  "unchanged_r310_unique_sources": 180,
+  "public_assets_and_licences_unchanged": true,
+  "original_protected_set": 138,
+  "byte_identical_protected_files": 135,
+  "exact_reviewed_exceptions": [
+    "web/src/audio.js",
+    "web/src/gameplay.js",
+    "web/src/story.js"
+  ],
+  "story_copy_preimage_verified": true,
+  "home_pixel_identity": [
+    {
+      "viewport": "desktop",
+      "different_pixels": 0,
+      "total_pixels": 1296000
+    },
+    {
+      "viewport": "mobile",
+      "different_pixels": 0,
+      "total_pixels": 329160
+    }
+  ],
+  "aggregate_before_copy": {
+    "passed": 66,
+    "failed": 0
+  },
+  "post_copy_affected_checks": {
+    "passed": 6,
+    "failed": 0
+  },
+  "full67aggregate_repeated": false,
+  "known_failed_legacy_audit": "Unchanged CC0 character-grant metadata rejection; no metadata stripped.",
+  "no_external_publication": true
+}

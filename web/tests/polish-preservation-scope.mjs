@@ -7,8 +7,14 @@ const scope=JSON.parse(fs.readFileSync(new URL('./polish-gameplay-scope.json',im
 assert.equal(scope.path,'web/src/gameplay.js');
 assert.deepEqual(scope.changed_methods,['_updateAutoRecovery','_airLineOfSight','_updatePolice']);
 assert.deepEqual(scope.added_methods,['_patrolSeesPlayer']);
-let behaviorsChecked=false;
+const storyScope=JSON.parse(fs.readFileSync(new URL('./polish-story-copy-scope.json',import.meta.url)));
+let behaviorsChecked=false,storyChecked=false;
 export function assertProtectedWithPolishScope(path,originalHash,currentHash){
+ if(path==='web/src/story.js'){
+  assert.equal(storyScope.path,'web/src/story.js');assert.equal(originalHash,storyScope.original_sha256);assert.equal(currentHash,storyScope.candidate_sha256);
+  if(!storyChecked){const result=spawnSync(process.execPath,[new URL('./story-objective.test.mjs',import.meta.url).pathname],{encoding:'utf8'});assert.equal(result.status,0,result.stdout+'\n'+result.stderr);storyChecked=true;console.log('PASS exact Story-copy exception: old-source preimage, untimed pursuit, timed first chapter and unchanged rewards/unlocks');}
+  return;
+ }
  if(path!=='web/src/gameplay.js')return assertProtectedWithAudioScope(path,originalHash,currentHash);
  assert.equal(originalHash,scope.original_sha256,'Original protected gameplay baseline retained');
  assert.equal(currentHash,scope.candidate_sha256,'Gameplay must match the exact Stage2 occlusion patch');

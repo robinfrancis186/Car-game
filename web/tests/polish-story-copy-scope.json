@@ -1,0 +1,9 @@
+{
+  "path": "web/src/story.js",
+  "approved_scope": "Parent-authorized Stage3 onboarding clarity: replace only the incorrect deadline sentence for the untimed Last Light pursuit. No rule, unlock, reward or saved-progress change.",
+  "source_base_commit": "cf619bf4de5905590848f2b1f5030541c0b76e6b",
+  "original_sha256": "9852ad5748f1ef201cbef177c387f4eaf5546d05e4122d419238963150050d91",
+  "candidate_sha256": "edfad22da3e3bddcfc7746be57d571208e77637cc3de70a0e279561a819dcc6e",
+  "original_objective": "Pass every checkpoint, escape the patrol, and finish before time runs out.",
+  "candidate_objective": "Pass every checkpoint, escape the patrol, and reach the safehouse."
+}

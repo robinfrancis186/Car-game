@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {STORY_CHAPTERS,storyResultQualifies} from '../src/story.js';
+import {GameModel} from '../src/gameplay.js';
+import {awardResult,createProfile} from '../src/garage.js';
+const scope=JSON.parse(fs.readFileSync(new URL('./polish-story-copy-scope.json',import.meta.url))),source=fs.readFileSync(new URL('../src/story.js',import.meta.url),'utf8'),hash=s=>createHash('sha256').update(s).digest('hex');
+assert.equal(scope.path,'web/src/story.js');assert.equal(scope.original_sha256,'9852ad5748f1ef201cbef177c387f4eaf5546d05e4122d419238963150050d91');assert.equal(source.split(scope.candidate_objective).length,2);assert.equal(hash(source.replace(scope.candidate_objective,scope.original_objective)),scope.original_sha256,'Only the objective sentence may change');assert.equal(hash(source),scope.candidate_sha256);
+const route=Array.from({length:501},(_,i)=>({x:i*10,y:.18,z:0})),last=STORY_CHAPTERS.find(c=>c.id==='last-light'),first=STORY_CHAPTERS.find(c=>c.id==='village-signal');assert.equal(last.objective,scope.candidate_objective);assert(!/before|time|clock/i.test(last.objective));assert.match(first.objective,/clock/);
+const pursuit=new GameModel(route,last).start(last.scenario),timed=new GameModel(route,first).start(first.scenario);assert.equal(pursuit.timeLimit,Infinity);assert(Number.isFinite(timed.timeLimit));
+const result={state:'finished',scenario:'hot-pursuit',time:95,position:1,collectedCoins:0,escaped:true};assert(storyResultQualifies('last-light',result));assert(!storyResultQualifies('last-light',{...result,escaped:false}));const paid=awardResult(createProfile(),result,'story-copy-regression');assert.equal(paid.finishReward,600);assert.equal(awardResult(paid.profile,result,'story-copy-regression').reward,0);
+console.log('PASS exact one-sentence Story copy change, actual untimed pursuit/timed opening, escape qualification and unchanged once-only reward.');
