@@ -71,7 +71,7 @@ function laneOffset(model,q,lane){
 export class RoadAssistController{
  constructor(){this.reset();}
  reset(){this._lane=0;this._clearMotion();return this;}
- _clearMotion(){this._model=null;this._offset=null;this._braking=false;this._brakeTime=0;this._direction=1;this._recoveries=null;this._mode=null;}
+ _clearMotion(){this._model=null;this._offset=null;this._braking=false;this._brakeTime=0;this._direction=1;this._recoveries=null;this._mode=null;this.blocked=false;}
  get lane(){return this._lane;}
  setLane(lane){if(lane===-1||lane===0||lane===1)this._lane=lane;return this._lane;}
  chooseLane(direction=1){if(direction===-1||direction===1)this._lane=clamp(this._lane+direction,-1,1);return this._lane;}
@@ -94,6 +94,7 @@ export class RoadAssistController{
   const obstacleLook=Math.min(80,14+speed*2.5);let gap=Infinity;
   for(const o of [...nearbyObstacles(model,p.x,p.z,obstacleLook),...(model.rivals||[]),...(model.police||[])]){if(o.visible===false||o.active===false||o===p)continue;const bottom=o.y??0,top=bottom+(o.height??1.5);if(bottom>p.y+1.7||top<p.y+.1)continue;gap=Math.min(gap,forwardGap(p,o,obstacleLook));}
   if(Number.isFinite(gap))target=Math.min(target,Math.sqrt(2*comfortBrake*gap));
+  this.blocked=Number.isFinite(gap)&&gap<10&&target<2;
   if(rawInput.brake){this._braking=true;this._brakeTime=0;return {...rawInput,steer,throttle:0,brake:true};}
   this._brakeTime+=dt;const hold=target<.2&&speed<2;
   if(hold||speed>target+1.2)this._braking=true;

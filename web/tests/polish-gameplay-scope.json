@@ -1,9 +1,9 @@
 {
   "path": "web/src/gameplay.js",
-  "approved_scope": "User-authorized Stage2 ground patrol occlusion and recovery consistency. No driving, race, reward, wallet or server validation changes.",
+  "approved_scope": "User-authorized Stage2 ground patrol occlusion and recovery consistency. No driving, race, reward, wallet or server validation changes. Stage4 authorized second-unit pressure/regroup cadence and lane spacing, preserving capture, escape, physics and reward rules.",
   "source_base_commit": "1aeffc6cc5ce75f8393ce973fbefa129c8b69d3b",
   "original_sha256": "990eb8f21b199e943ccd00bd33de6bf36b7cf484f30a903fe3258d87351ec809",
-  "candidate_sha256": "3492a036df080400cc7bf0eb63d2e1cce2675b617d8fdfa0af412b2bb08d44ed",
+  "candidate_sha256": "b4a614d5fec4afea1c298b0538af6f3707666ebcd7decdd862eb1916accfc4e1",
   "changed_methods": [
     "_updateAutoRecovery",
     "_airLineOfSight",
@@ -74,6 +74,9 @@
   },
   "behavioral_tests": [
     "web/tests/patrol-visibility.test.mjs",
-    "web/tests/police-capture.test.mjs"
-  ]
+    "web/tests/police-capture.test.mjs",
+    "web/tests/race-feedback.test.mjs"
+  ],
+  "stage4_base_commit": "b5ee467193537370a4690fb040a048f5da6b61fa",
+  "stage2_candidate_sha256": "3492a036df080400cc7bf0eb63d2e1cce2675b617d8fdfa0af412b2bb08d44ed"
 }

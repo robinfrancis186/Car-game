@@ -573,16 +573,22 @@ export class GameModel {
    const cop=this.police[i];
    if(cop.active&&this.wanted){
     const gap=player.s-cop.s;
-    const follow=5.1+i*6.2;
+    // The second unit alternates a signalled closing run with room to regroup.
+    // Keep stopped-car capture and the lead unit unchanged; never spawn/warp a unit.
+    const cycle=this.timer%24,pressure=i===1&&player.speed>8&&cycle>=8&&cycle<16;
+    const regroup=i===1&&player.speed>8&&cycle>=16;
+    cop.mode=pressure?'pressure':regroup?'regroup':'pursuit';
+    const follow=5.1+i*6.2+(regroup?14:0);
     let target;
     if(gap>20)target=Math.min(43,Math.max(25,player.speed+8+i*1.5));
     else if(gap>follow)target=Math.min(35,Math.max(0,player.speed)+(gap-follow)*1.3);
     else if(gap<-8)target=Math.max(0,Math.min(18,player.speed*.45));
     else target=Math.max(0,player.speed-3);
     if(gap>follow)target=Math.min(target,Math.max(0,player.speed)+Math.sqrt(24*(gap-follow)));
+    if(regroup&&gap<40)target=Math.min(target,Math.max(0,player.speed-2));
     target=Math.min(target,this._curveSpeed(cop.s,43,7.6));
     cop.speed=approach(cop.speed,target,dt*(cop.speed<target?8:17));
-    cop.targetLane=gap<0?(player.lane<0?2.25:-2.25):clamp(player.lane+(i?.8:-.6),-2.4,2.4);
+    cop.targetLane=gap<0?(player.lane<0?2.25:-2.25):clamp(player.lane+(i?(pressure?1.6:regroup?-1.6:.8):-.6),-2.4,2.4);
     cop.s+=cop.speed*dt;
    }else{
     cop.speed=approach(cop.speed,0,12*dt);cop.s+=cop.speed*dt;
